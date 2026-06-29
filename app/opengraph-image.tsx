@@ -15,8 +15,7 @@ export default function OgImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: 80,
-          background:
-            "radial-gradient(60% 80% at 15% 10%, #CDEFEB 0%, transparent 60%), radial-gradient(60% 80% at 90% 20%, #FBE0D6 0%, transparent 60%), #F4F8F7",
+          backgroundColor: "#F4F8F7",
           fontFamily: "sans-serif",
         }}
       >
@@ -26,7 +25,7 @@ export default function OgImage() {
               width: 56,
               height: 56,
               borderRadius: 999,
-              background: "#22B9AF",
+              backgroundColor: "#22B9AF",
               color: "#F4F8F7",
               display: "flex",
               alignItems: "center",

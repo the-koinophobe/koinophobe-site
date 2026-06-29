@@ -61,3 +61,29 @@ Redeploy after adding them (Deployments → … → Redeploy).
 - A real photo of you on the About page (`app/about/page.tsx`).
 - The three process-card images in `public/process/` (rank / track / prove) — your GA4, SERP, or Search Console screenshots work well.
 - Real prices in `lib/content.ts` (`packages`) if you want figures instead of One-off / Monthly / Custom.
+
+## Pushing updates to Vercel
+
+Vercel redeploys automatically on every push to `main`:
+
+```bash
+git add .
+git commit -m "your message"
+git push
+```
+
+## Troubleshooting
+
+**Build error: `Invalid background image: "#F4F8F7"` on `/opengraph-image`.**
+The social-image generator (Satori) does not accept a solid colour inside the CSS
+`background` shorthand. Use `backgroundColor` for solid fills and only put gradients
+in `backgroundImage`. Fixed in `app/opengraph-image.tsx` (all `background:` values
+are now `backgroundColor:`).
+
+**Warning: `next@14.2.5` has a security vulnerability.**
+`package.json` now uses `"next": "^14.2.5"`, so Vercel installs the latest patched
+14.2.x automatically. To move fully up to date you can later run `npm i next@latest`
+(note: Next 15 may need minor code adjustments).
+
+**After any fix:** commit and push, Vercel rebuilds. Watch the build log; it should
+end with `✓ Generating static pages` and no `Export encountered errors`.
