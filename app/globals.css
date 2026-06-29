@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Clash Grotesk (Fontshare) — embedded so font-family resolves reliably */
+@font-face {
+  font-family: "Clash Grotesk";
+  src: url("https://cdn.fontshare.com/wf/O462VY6O6FTQCS72XVMTQHXAM4NN5CY3/TWF57ITZORMJ3MEWLQQIVO6BMXIB6FUR/MJQFMMOTEGNXDVM7HBBDTQHTVB2M7Y6G.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Clash Grotesk";
+  src: url("https://cdn.fontshare.com/wf/2SAK53YLUN7RMYJU4MYLSBV6SSSJEJZB/RXS4DPGJRKOUFZMF5X5BVUGNNKJT65XZ/DJS4RYGIUYUXJQOHY5VCZPKSTXUSHTSP.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Clash Grotesk";
+  src: url("https://cdn.fontshare.com/wf/MKEEQN57GWBZOSYWCRODNJOOZNPLMAKN/5SPTSZGHEACWWLF34DQ4WAA4OGU6PQIF/KN7DX4F6PXB74R6L2K2Y4NH3CB7FC53Q.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Clash Grotesk";
+  src: url("https://cdn.fontshare.com/wf/P6VJ47S3OYMUC7HYSJLTK7PEIK5O2NPQ/TK62VLUWA76PMTK2XWBNDZB7QVXJGYE3/I5W5NEJGYVFUC5I4XOXVET63OE5PSVHJ.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+:root {
+  /* Teal — light theme */
+  --bg: 244 248 247;        /* cool off-white */
+  --surface: 252 254 253;   /* lifted card */
+  --ink: 18 32 30;          /* deep teal-charcoal */
+  --muted: 90 107 104;      /* teal-grey (AA contrast on bg) */
+  --line: 219 232 229;      /* hairline */
+  --brand: 34 185 175;      /* #22B9AF */
+  --brand-soft: 209 242 239;/* soft teal wash */
+  --accent: 240 122 90;     /* warm coral highlight */
+}
+
+.dark {
+  /* Teal — dark theme */
+  --bg: 13 22 21;           /* near-black teal */
+  --surface: 22 32 31;
+  --ink: 235 244 242;
+  --muted: 147 166 162;
+  --line: 37 50 47;
+  --brand: 45 209 198;      /* brighter teal for dark */
+  --brand-soft: 16 49 46;
+  --accent: 248 142 110;
+}
+
+* {
+  border-color: rgb(var(--line));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Visible keyboard focus everywhere */
+:focus-visible {
+  outline: 2px solid rgb(var(--brand));
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+body {
+  background-color: rgb(var(--bg));
+  color: rgb(var(--ink));
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Creative SVG pattern utilities ---- */
+/* flowing contour waves */
+.pattern-waves {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='32'%3E%3Cpath d='M0 16 Q40 2 80 16 T160 16' fill='none' stroke='%2322B9AF' stroke-opacity='0.11' stroke-width='1.4'/%3E%3C/svg%3E");
+  background-size: 160px 32px;
+}
+/* blueprint cross-marks */
+.pattern-crosses {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M20 14v12M14 20h12' stroke='%2322B9AF' stroke-opacity='0.11' stroke-width='1.2'/%3E%3C/svg%3E");
+  background-size: 40px 40px;
+}
+/* concentric ripples (search signal) */
+.pattern-rings {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cg fill='none' stroke='%2322B9AF' stroke-opacity='0.09' stroke-width='1.2'%3E%3Ccircle cx='45' cy='45' r='10'/%3E%3Ccircle cx='45' cy='45' r='22'/%3E%3Ccircle cx='45' cy='45' r='34'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 90px 90px;
+}
+/* waves in the page background colour, for use on teal brand surfaces */
+.pattern-on-brand {
+  background-image: none;
+}
+
+/* Muted gradient mesh hero wash */
+.hero-wash {
+  background:
+    radial-gradient(45% 55% at 12% 8%, rgb(var(--brand) / 0.22), transparent 60%),
+    radial-gradient(40% 50% at 88% 12%, rgb(var(--accent) / 0.28), transparent 62%),
+    radial-gradient(55% 60% at 75% 85%, rgb(var(--brand) / 0.16), transparent 66%),
+    radial-gradient(50% 55% at 20% 95%, rgb(var(--accent) / 0.14), transparent 64%);
+}
+
+/* Subtle film grain for texture (kills the "flat/dry" look) */
+.grain::after {
+  content: none;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Accent emphasis: serif italic in brand colour */
+.accent {
+  font-family: var(--font-serif), Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  color: rgb(var(--brand));
+}
+
+/* Outlined "ghost" text for big statements */
+.text-outline {
+  -webkit-text-stroke: 1.5px rgb(var(--ink) / 0.85);
+  color: transparent;
+}
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee { animation: none; }
+}
+
+/* Slow drift for decorative ripples */
+@keyframes drift {
+  0% { transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
+  100% { transform: translate3d(26px, -20px, 0) scale(1.08) rotate(6deg); }
+}
+@keyframes drift-alt {
+  0% { transform: translate3d(0, 0, 0) scale(1.04) rotate(0deg); }
+  100% { transform: translate3d(-22px, 18px, 0) scale(1) rotate(-5deg); }
+}
+.drift { animation: drift 6s ease-in-out infinite alternate; }
+.drift-slow { animation: drift-alt 8s ease-in-out infinite alternate; }
+@media (prefers-reduced-motion: reduce) {
+  .drift, .drift-slow { animation: none; }
+}
+
+/* Stacking sections: each section pins, the next slides up over it */
+.stack-sections > section {
+  position: sticky;
+  top: 4rem; /* clear the sticky header so content isn't tucked under it */
+  background-color: rgb(var(--bg));
+}
+@media (max-width: 1023px) {
+  .stack-sections > section {
+    position: static;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stack-sections > section {
+    position: static;
+  }
+}
+
+/* Soft card hover lift */
+.lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px -24px rgb(var(--ink) / 0.35);
+  border-color: rgb(var(--brand) / 0.5);
+}
+
+/* GSAP reveal initial state (only applied when JS + motion allowed) */
+.reveal {
+  opacity: 1;
+}
+.js-anim .reveal {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+.js-anim .js-stagger > * {
+  opacity: 0;
+}
+.js-anim .js-rise > * {
+  transform: translateY(120%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .js-anim .reveal,
+  .js-anim .js-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .js-anim .js-rise > * {
+    transform: none !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+.container-pad {
+  @apply mx-auto w-full max-w-content px-5 sm:px-8;
+}
