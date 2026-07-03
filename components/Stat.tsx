@@ -49,7 +49,7 @@ export function Stat({ value, label }: { value: string; label: string }) {
 
   return (
     <div ref={ref} className="bg-bg p-6">
-      <div className="font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+      <div className="font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
         {display}
       </div>
       <div className="mt-1.5 text-xs text-muted">{label}</div>

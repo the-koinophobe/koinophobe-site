@@ -1,13 +1,10 @@
-"use client";
-
-import { Fragment, useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import { Fragment } from "react";
 
 type Token = { t: string; className?: string };
 
-// Word-by-word masked rise for headlines. Initial hidden state comes from CSS
-// (.js-anim .js-words) so there is no flash before hydration, and reduced
-// motion gets static text.
+// Word-by-word masked rise, pure CSS (see .word-rise in globals.css).
+// No JS required: renders server-side, animates via keyframes with a
+// per-word delay, and goes static under prefers-reduced-motion.
 export function WordRise({
   tokens,
   delay = 0,
@@ -17,35 +14,15 @@ export function WordRise({
   delay?: number;
   className?: string;
 }) {
-  const ref = useRef<HTMLSpanElement | null>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const words = el.querySelectorAll<HTMLElement>("[data-word]");
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) {
-      gsap.set(words, { yPercent: 0 });
-      return;
-    }
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        words,
-        { yPercent: 115 },
-        { yPercent: 0, duration: 0.9, ease: "power4.out", stagger: 0.06, delay }
-      );
-    });
-    return () => ctx.revert();
-  }, [delay]);
-
   return (
-    <span ref={ref} className={`js-words ${className}`}>
+    <span className={`word-rise ${className}`}>
       {tokens.map((w, i) => (
         <Fragment key={i}>
           <span className="inline-block overflow-hidden pb-[0.12em] -mb-[0.12em] align-baseline">
             <span
               data-word
-              className={`inline-block will-change-transform ${w.className ?? ""}`}
+              className={`inline-block ${w.className ?? ""}`}
+              style={{ animationDelay: `${(delay + i * 0.06).toFixed(2)}s` }}
             >
               {w.t}
             </span>

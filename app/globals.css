@@ -225,9 +225,14 @@ body {
 .js-anim .js-rise > * {
   transform: translateY(120%);
 }
-/* Word-mask rise (WordRise) — hidden pre-hydration, like js-rise */
-.js-anim .js-words [data-word] {
+/* Word-mask rise (WordRise) — pure CSS, runs with or without JS */
+.word-rise [data-word] {
   transform: translateY(115%);
+  animation: word-rise-up 0.9s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  will-change: transform;
+}
+@keyframes word-rise-up {
+  to { transform: translateY(0); }
 }
 @media (prefers-reduced-motion: reduce) {
   .js-anim .reveal,
@@ -238,7 +243,8 @@ body {
   .js-anim .js-rise > * {
     transform: none !important;
   }
-  .js-anim .js-words [data-word] {
+  .word-rise [data-word] {
+    animation: none !important;
     transform: none !important;
   }
   html { scroll-behavior: auto; }

@@ -66,7 +66,7 @@ export default function HomePage() {
               </span>
             </Reveal>
 
-            <h1 className="font-display text-[2.6rem] font-semibold leading-[1.02] tracking-tight text-ink sm:text-6xl">
+            <h1 className="font-display text-5xl font-semibold leading-[1.02] tracking-tight text-ink sm:text-6xl lg:text-7xl">
               <WordRise
                 delay={0.1}
                 tokens={[
@@ -83,7 +83,7 @@ export default function HomePage() {
             </h1>
 
             <Reveal delay={0.12}>
-              <p className="mt-6 max-w-xl text-lg text-muted">
+              <p className="mt-6 max-w-xl text-lg text-muted sm:text-xl">
                 I&apos;m Michael, the specialist behind Koinophobe. I grow your
                 organic traffic and wire up the tracking that proves it turns into
                 calls, forms, and revenue.
@@ -126,16 +126,37 @@ export default function HomePage() {
         <Marquee />
       </Reveal>
 
-      {/* STATS */}
-      <section className="container-pad py-16">
-        <GrowthLine className="mb-10" />
+      {/* STATS — dark band */}
+      <section className="dark bg-bg py-16 sm:py-20">
+        <div className="container-pad">
+          <GrowthLine className="mb-10" />
+          <Reveal>
+            <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-line bg-line sm:grid-cols-4">
+              {stats.map((s) => (
+                <Stat key={s.label} value={s.value} label={s.label} />
+              ))}
+            </dl>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* CLIENT WALL */}
+      <section className="container-pad py-14">
         <Reveal>
-          <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-line bg-line sm:grid-cols-4">
-            {stats.map((s) => (
-              <Stat key={s.label} value={s.value} label={s.label} />
-            ))}
-          </dl>
+          <p className="text-center text-xs font-semibold uppercase tracking-wider text-muted">
+            Built for businesses like
+          </p>
         </Reveal>
+        <Stagger className="mx-auto mt-8 flex max-w-4xl flex-wrap items-baseline justify-center gap-x-8 gap-y-3">
+          {projects.map((p) => (
+            <span
+              key={p.name}
+              className="font-display text-xl font-semibold text-muted/50 transition-colors duration-300 hover:text-ink sm:text-2xl"
+            >
+              {p.name}
+            </span>
+          ))}
+        </Stagger>
       </section>
 
       {/* TOOLS STRIP */}
@@ -243,6 +264,25 @@ export default function HomePage() {
         </div>
         <div className="mt-10">
           <Carousel projects={projects.slice(0, 6)} />
+        </div>
+      </section>
+
+      {/* MISSION — the name, writ large */}
+      <section className="dark bg-bg py-20 sm:py-28">
+        <div className="container-pad text-center">
+          <Reveal>
+            <span className="text-xs font-semibold uppercase tracking-wider text-brand">
+              Why &ldquo;Koinophobe&rdquo;
+            </span>
+            <p className="mx-auto mt-5 max-w-4xl font-display text-3xl font-semibold leading-tight text-ink sm:text-5xl lg:text-6xl">
+              Koinophobia: <span className="accent">the fear of being ordinary.</span>
+            </p>
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted">
+              It is the standard every build, every page and every report gets
+              held to. If the work does not move a number that matters, it does
+              not ship.
+            </p>
+          </Reveal>
         </div>
       </section>
 
@@ -357,25 +397,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA BAND */}
-      <section className="container-pad py-20">
-        <Reveal>
-          <div className="grain hero-wash relative isolate overflow-hidden rounded-[2rem] border border-line p-10 text-center sm:p-16">
-            <Ripples className="drift pointer-events-none absolute -right-20 -top-24 -z-10 w-[360px] text-brand/[0.07]" />
-            <Blob className="drift-slow pointer-events-none absolute -bottom-24 -left-20 -z-10 w-[280px] text-accent/[0.05]" />
-            <h2 className="mx-auto max-w-2xl font-display text-3xl font-semibold tracking-tight text-ink sm:text-5xl">
+      {/* CTA BAND — full-bleed, oversized */}
+      <section className="dark relative overflow-hidden bg-bg py-24 sm:py-32">
+        <div className="container-pad relative isolate text-center">
+          <Ripples className="drift pointer-events-none absolute -right-16 -top-28 -z-10 w-[380px] text-brand/[0.1]" />
+          <Blob className="drift-slow pointer-events-none absolute -bottom-28 -left-16 -z-10 w-[300px] text-accent/[0.08]" />
+          <Reveal>
+            <span className="text-xs font-semibold uppercase tracking-wider text-brand">
+              Next step
+            </span>
+            <h2 className="mx-auto mt-4 max-w-4xl font-display text-4xl font-semibold tracking-tight text-ink sm:text-6xl lg:text-7xl">
               Let&apos;s turn your search traffic into{" "}
               <span className="accent">leads</span>.
             </h2>
-            <p className="mx-auto mt-5 max-w-lg text-muted">
+            <p className="mx-auto mt-6 max-w-lg text-muted sm:text-lg">
               Tell me what&apos;s on your plate. I reply quickly, and I&apos;ll tell
               you straight if I&apos;m not the right fit.
             </p>
-            <div className="mt-8 flex justify-center">
+            <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
               <BookCall label="Book a call" />
+              <Link
+                href="/contact"
+                className="group inline-flex items-center gap-2 rounded-full border border-line bg-surface px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-brand"
+              >
+                Get a free teardown
+                <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
+              </Link>
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
       </section>
       </div>
     </>
