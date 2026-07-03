@@ -69,6 +69,7 @@ const jsonLd = {
     "Freelance SEO and conversion tracking. Grows organic traffic and proves it converts with analytics that tie rankings to leads.",
   url: "https://koinophobe.com",
   founder: { "@type": "Person", name: "Michael Edward" },
+  sameAs: [site.github],
   areaServed: "Worldwide (remote, US hours)",
   knowsAbout: [
     "Technical SEO",
@@ -103,7 +104,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
-          href="https://cdn.fontshare.com/wf/O462VY6O6FTQCS72XVMTQHXAM4NN5CY3/TWF57ITZORMJ3MEWLQQIVO6BMXIB6FUR/MJQFMMOTEGNXDVM7HBBDTQHTVB2M7Y6G.woff2"
+          href="https://cdn.fontshare.com/wf/P6VJ47S3OYMUC7HYSJLTK7PEIK5O2NPQ/TK62VLUWA76PMTK2XWBNDZB7QVXJGYE3/I5W5NEJGYVFUC5I4XOXVET63OE5PSVHJ.woff2"
         />
         <script
           type="application/ld+json"

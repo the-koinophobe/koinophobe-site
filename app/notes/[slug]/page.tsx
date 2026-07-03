@@ -38,7 +38,23 @@ export default function NotePage({ params }: { params: { slug: string } }) {
     headline: note.title,
     description: note.excerpt,
     datePublished: note.date,
-    author: { "@type": "Person", name: "Michael Edward" },
+    author: { "@type": "Person", name: "Michael Edward", url: "https://koinophobe.com/about" },
+    mainEntityOfPage: `https://koinophobe.com/notes/${note.slug}`,
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://koinophobe.com" },
+      { "@type": "ListItem", position: 2, name: "Notes", item: "https://koinophobe.com/notes" },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: note.title,
+        item: `https://koinophobe.com/notes/${note.slug}`,
+      },
+    ],
   };
 
   return (
@@ -46,6 +62,10 @@ export default function NotePage({ params }: { params: { slug: string } }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <section className="relative overflow-hidden">
         <div className="hero-wash absolute inset-0 -z-10" />

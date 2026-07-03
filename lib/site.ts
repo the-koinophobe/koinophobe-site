@@ -1,8 +1,9 @@
 export const site = {
   name: "Koinophobe",
   owner: "Michael Edward",
-  // TODO: swap to custom domain email when ready (e.g. hi@koinophobe.com)
-  email: "hi@koinophobe.com",
+  // TODO: swap back to hi@koinophobe.com once the domain inbox is live.
+  // Using the working Gmail so no lead bounces in the meantime.
+  email: "thekoinophobe@gmail.com",
   fallbackEmail: "thekoinophobe@gmail.com",
   github: "https://github.com/airdward",
   tagline: "SEO you can measure.",
@@ -20,6 +21,6 @@ export const site = {
 export const stats = [
   { value: "3.2×", label: "Organic clicks in 6 months (one client)" },
   { value: "787K", label: "Search impressions tracked in 12 months" },
-  { value: "2350", label: "Organic clicks driven in 12 months" },
+  { value: "15+", label: "Client sites built and managed" },
   { value: "6.1%", label: "Peak click-through rate" },
 ];

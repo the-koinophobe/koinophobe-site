@@ -5,13 +5,6 @@
 /* Clash Grotesk (Fontshare) — embedded so font-family resolves reliably */
 @font-face {
   font-family: "Clash Grotesk";
-  src: url("https://cdn.fontshare.com/wf/O462VY6O6FTQCS72XVMTQHXAM4NN5CY3/TWF57ITZORMJ3MEWLQQIVO6BMXIB6FUR/MJQFMMOTEGNXDVM7HBBDTQHTVB2M7Y6G.woff2") format("woff2");
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Clash Grotesk";
   src: url("https://cdn.fontshare.com/wf/2SAK53YLUN7RMYJU4MYLSBV6SSSJEJZB/RXS4DPGJRKOUFZMF5X5BVUGNNKJT65XZ/DJS4RYGIUYUXJQOHY5VCZPKSTXUSHTSP.woff2") format("woff2");
   font-weight: 500;
   font-display: swap;
@@ -191,6 +184,33 @@ body {
   border-color: rgb(var(--brand) / 0.5);
 }
 
+/* Cursor spotlight on cards (desktop hover only) */
+.spot {
+  position: relative;
+}
+.spot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  background: radial-gradient(
+    240px circle at var(--mx, 50%) var(--my, 50%),
+    rgb(var(--brand) / 0.12),
+    transparent 65%
+  );
+}
+.spot:hover::after {
+  opacity: 1;
+}
+@media (hover: none), (prefers-reduced-motion: reduce) {
+  .spot::after {
+    display: none;
+  }
+}
+
 /* GSAP reveal initial state (only applied when JS + motion allowed) */
 .reveal {
   opacity: 1;
@@ -205,6 +225,10 @@ body {
 .js-anim .js-rise > * {
   transform: translateY(120%);
 }
+/* Word-mask rise (WordRise) — hidden pre-hydration, like js-rise */
+.js-anim .js-words [data-word] {
+  transform: translateY(115%);
+}
 @media (prefers-reduced-motion: reduce) {
   .js-anim .reveal,
   .js-anim .js-stagger > * {
@@ -212,6 +236,9 @@ body {
     transform: none !important;
   }
   .js-anim .js-rise > * {
+    transform: none !important;
+  }
+  .js-anim .js-words [data-word] {
     transform: none !important;
   }
   html { scroll-behavior: auto; }

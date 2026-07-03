@@ -2,10 +2,29 @@ import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { BookCall } from "@/components/BookCall";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
   description: "The story behind Koinophobe and how I work.",
+  alternates: { canonical: "/about" },
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Michael Edward",
+  url: "https://koinophobe.com/about",
+  jobTitle: "SEO & Conversion Tracking Specialist",
+  worksFor: { "@type": "Organization", name: "Koinophobe", url: "https://koinophobe.com" },
+  sameAs: [site.github],
+  knowsAbout: [
+    "Technical SEO",
+    "Conversion tracking",
+    "Google Analytics 4",
+    "Google Tag Manager",
+    "Web development",
+  ],
 };
 
 const principles = [
@@ -18,6 +37,10 @@ const principles = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       <section className="relative overflow-hidden">
         <div className="hero-wash absolute inset-0 -z-10" />
         <div className="container-pad pb-12 pt-16 sm:pt-20">

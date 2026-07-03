@@ -26,6 +26,8 @@ import { Carousel } from "@/components/Carousel";
 import { ToolsStrip } from "@/components/ToolsStrip";
 import { GrowthLine } from "@/components/GrowthLine";
 import { Ripples, Blob } from "@/components/Decor";
+import { WordRise } from "@/components/WordRise";
+import { Spotlight } from "@/components/Spotlight";
 import { capabilities, services, projects, faqs, packages, process } from "@/lib/content";
 import { stats } from "@/lib/site";
 
@@ -64,12 +66,21 @@ export default function HomePage() {
               </span>
             </Reveal>
 
-            <Reveal delay={0.05}>
-              <h1 className="font-display text-[2.6rem] font-semibold leading-[1.02] tracking-tight text-ink sm:text-6xl">
-                SEO that proves it, in{" "}
-                <span className="accent text-[1.05em]">leads</span> — not rankings.
-              </h1>
-            </Reveal>
+            <h1 className="font-display text-[2.6rem] font-semibold leading-[1.02] tracking-tight text-ink sm:text-6xl">
+              <WordRise
+                delay={0.1}
+                tokens={[
+                  { t: "SEO" },
+                  { t: "that" },
+                  { t: "proves" },
+                  { t: "it," },
+                  { t: "in" },
+                  { t: "leads,", className: "accent text-[1.05em]" },
+                  { t: "not" },
+                  { t: "rankings." },
+                ]}
+              />
+            </h1>
 
             <Reveal delay={0.12}>
               <p className="mt-6 max-w-xl text-lg text-muted">
@@ -90,6 +101,17 @@ export default function HomePage() {
                   <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
                 </Link>
               </div>
+              <p className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-sm text-muted">
+                <span className="flex items-center gap-1.5">
+                  <Check size={14} strokeWidth={2.5} className="text-accent" /> Free site teardown
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <Check size={14} strokeWidth={2.5} className="text-accent" /> Tracking on every lead
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <Check size={14} strokeWidth={2.5} className="text-accent" /> White-label friendly
+                </span>
+              </p>
             </Reveal>
           </div>
 
@@ -174,13 +196,13 @@ export default function HomePage() {
             const Icon = capIcons[i % capIcons.length];
             return (
               <div key={c.title} className={`col-span-2 ${span}`}>
-                <div className="lift flex h-full flex-col rounded-3xl border border-line bg-surface/60 p-7">
+                <Spotlight className="lift flex h-full flex-col rounded-3xl border border-line bg-surface/60 p-7">
                   <span className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-brand-soft text-brand">
                     <Icon size={22} strokeWidth={1.75} />
                   </span>
                   <h3 className="font-display text-xl font-semibold text-ink">{c.title}</h3>
                   <p className="mt-2 text-sm text-muted">{c.body}</p>
-                </div>
+                </Spotlight>
               </div>
             );
           })}
@@ -277,7 +299,7 @@ export default function HomePage() {
         />
         <Stagger className="mt-10 grid gap-5 lg:grid-cols-3">
           {packages.map((pkg) => (
-            <div
+            <Spotlight
               key={pkg.name}
               className={`lift relative flex h-full flex-col rounded-3xl p-8 ${
                 pkg.highlight
@@ -306,7 +328,7 @@ export default function HomePage() {
               <div className="mt-auto pt-7">
                 <BookCall label={pkg.cta} subtle={!pkg.highlight} />
               </div>
-            </div>
+            </Spotlight>
           ))}
         </Stagger>
         <p className="mt-6 text-center text-sm text-muted">

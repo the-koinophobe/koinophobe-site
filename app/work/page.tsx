@@ -8,6 +8,7 @@ import { BrowserFrame } from "@/components/BrowserFrame";
 export const metadata: Metadata = {
   title: "Work",
   description: "Anonymised results from white-label and direct client work.",
+  alternates: { canonical: "/work" },
 };
 
 export default function WorkPage() {

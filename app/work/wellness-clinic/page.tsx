@@ -10,6 +10,21 @@ export const metadata: Metadata = {
   alternates: { canonical: "/work/wellness-clinic" },
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://koinophobe.com" },
+    { "@type": "ListItem", position: 2, name: "Work", item: "https://koinophobe.com/work" },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Wellness clinic case study",
+      item: "https://koinophobe.com/work/wellness-clinic",
+    },
+  ],
+};
+
 const metrics = [
   { label: "Organic clicks", before: "158", after: "501", delta: "+217%" },
   { label: "Impressions", before: "2.2K", after: "8.7K", delta: "+297%" },
@@ -20,6 +35,10 @@ const metrics = [
 export default function WellnessCaseStudy() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <section className="relative overflow-hidden">
         <div className="hero-wash absolute inset-0 -z-10" />
         <div className="container-pad pb-10 pt-16 sm:pt-20">

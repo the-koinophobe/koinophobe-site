@@ -28,19 +28,63 @@ export function ResultsPanel() {
 
   useEffect(() => {
     const line = lineRef.current;
-    if (!line || !wrapRef.current) return;
+    const wrap = wrapRef.current;
+    if (!line || !wrap) return;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) return;
 
     const len = line.getTotalLength();
+    const rowEls = wrap.querySelectorAll<HTMLElement>("[data-row]");
+    const valEls = wrap.querySelectorAll<HTMLElement>("[data-to]");
+    const deltaEls = wrap.querySelectorAll<HTMLElement>("[data-delta]");
+
     const ctx = gsap.context(() => {
       gsap.set(line, { strokeDasharray: len, strokeDashoffset: len });
       gsap.set(areaRef.current, { opacity: 0 });
       const tl = gsap.timeline({
-        scrollTrigger: { trigger: wrapRef.current, start: "top 80%", once: true },
+        scrollTrigger: { trigger: wrap, start: "top 80%", once: true },
       });
       tl.to(line, { strokeDashoffset: 0, duration: 1.4, ease: "power2.out" })
-        .to(areaRef.current, { opacity: 1, duration: 0.6 }, "-=0.6");
+        .to(areaRef.current, { opacity: 1, duration: 0.6 }, "-=0.6")
+        .fromTo(
+          rowEls,
+          { opacity: 0, y: 10 },
+          { opacity: 1, y: 0, duration: 0.45, stagger: 0.12, ease: "power2.out" },
+          0.15
+        );
+
+      // Count the "after" numbers up in place (501, 8.7K, 6.1%…).
+      valEls.forEach((el, i) => {
+        const final = el.textContent ?? "";
+        const m = final.match(/^([\d.]+)(.*)$/);
+        if (!m) return;
+        const target = parseFloat(m[1]);
+        const suffix = m[2];
+        const decimals = m[1].includes(".") ? 1 : 0;
+        const obj = { v: 0 };
+        tl.to(
+          obj,
+          {
+            v: target,
+            duration: 1.1,
+            ease: "power2.out",
+            onUpdate: () => {
+              el.textContent = obj.v.toFixed(decimals) + suffix;
+            },
+            onComplete: () => {
+              el.textContent = final;
+            },
+          },
+          0.35 + i * 0.12
+        );
+      });
+
+      tl.fromTo(
+        deltaEls,
+        { scale: 0.5, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(2.2)", stagger: 0.12 },
+        1.0
+      );
     });
     return () => ctx.revert();
   }, []);
@@ -84,13 +128,13 @@ export function ResultsPanel() {
 
       <div className="divide-y divide-line">
         {rows.map((r) => (
-          <div key={r.metric} className="flex items-center justify-between py-2.5">
+          <div key={r.metric} data-row className="flex items-center justify-between py-2.5">
             <span className="text-sm text-muted">{r.metric}</span>
             <span className="flex items-center gap-2 font-mono text-sm">
               <span className="text-muted/70">{r.from}</span>
               <span className="text-muted/50">→</span>
-              <span className="font-semibold text-ink">{r.to}</span>
-              <span className="flex items-center gap-0.5 rounded-md bg-accent/15 px-1.5 py-0.5 text-[11px] font-medium text-accent">
+              <span data-to className="font-semibold text-ink">{r.to}</span>
+              <span data-delta className="flex items-center gap-0.5 rounded-md bg-accent/15 px-1.5 py-0.5 text-[11px] font-medium text-accent">
                 <TrendingUp size={11} strokeWidth={2.5} />
                 {r.delta}
               </span>
