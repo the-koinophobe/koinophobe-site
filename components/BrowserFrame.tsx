@@ -31,7 +31,7 @@ export function BrowserFrame({ project }: { project: Project }) {
       loop
       playsInline
       preload="none"
-      className="h-full w-full object-cover object-top"
+      className="h-full w-full object-cover object-top grayscale transition-[filter] duration-500 group-hover:grayscale-0"
     >
       <source src={project.video} type="video/mp4" />
     </video>
@@ -41,7 +41,7 @@ export function BrowserFrame({ project }: { project: Project }) {
       alt={`${project.name} website`}
       fill
       sizes="(min-width: 1024px) 33vw, 100vw"
-      className="object-cover object-top"
+      className="object-cover object-top grayscale transition-[filter] duration-500 group-hover:grayscale-0"
     />
   ) : (
     <div className="hero-wash grain flex h-full w-full items-center justify-center">
@@ -55,7 +55,7 @@ export function BrowserFrame({ project }: { project: Project }) {
     <div
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
-      className="lift flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-bg"
+      className="group lift flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-bg"
     >
       {/* Top chrome bar */}
       <div className="flex items-center gap-2 border-b border-line bg-surface px-4 py-2.5">
