@@ -32,6 +32,15 @@ import { stats } from "@/lib/site";
 
 const capIcons = [Search, MousePointerClick, BarChart3, MapPin];
 
+// Only direct clients get named publicly. Everything else is white-label or
+// under NDA, so it stays anonymous.
+const directClients = [
+  "Over The Table Top",
+  "Tintlordz Auto Spa",
+  "Palm Bay Marketing SEO",
+  "Lumagrid Solar",
+];
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -54,7 +63,7 @@ export default function HomePage() {
       <section className="grain relative overflow-hidden">
         <div className="hero-aurora pointer-events-none" aria-hidden />
         <ShaderAurora className="pointer-events-none absolute inset-0 -z-10 h-full w-full" />
-        <div className="container-pad pb-16 pt-14 sm:pt-20">
+        <div className="container-pad pb-16 pt-40 sm:pt-44">
           <Reveal>
             <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-line bg-surface/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted backdrop-blur">
               <span className="relative flex h-2 w-2">
@@ -188,18 +197,23 @@ export default function HomePage() {
           </p>
         </Reveal>
         <Stagger className="mx-auto mt-8 flex max-w-4xl flex-wrap items-baseline justify-center gap-x-8 gap-y-3">
-          {projects.map((p, i) => (
-            <span
-              key={p.name}
-              className={`${
-                i % 3 === 1
-                  ? "font-serif italic text-brand/60"
-                  : "font-display text-muted/50"
-              } text-xl font-semibold transition-colors duration-300 hover:text-ink sm:text-2xl`}
-            >
-              {p.name}
-            </span>
-          ))}
+          {projects
+            .filter((p) => directClients.includes(p.name))
+            .map((p, i) => (
+              <span
+                key={p.name}
+                className={`${
+                  i % 2 === 1
+                    ? "font-serif italic text-brand/60"
+                    : "font-display text-muted/50"
+                } text-xl font-semibold transition-colors duration-300 hover:text-ink sm:text-2xl`}
+              >
+                {p.name}
+              </span>
+            ))}
+          <span className="font-display text-xl font-semibold text-muted/50 transition-colors duration-300 hover:text-ink sm:text-2xl">
+            and more
+          </span>
         </Stagger>
       </section>
 

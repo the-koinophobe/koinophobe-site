@@ -53,11 +53,13 @@ lib/
 Create `.env.local` in the project root:
 
 ```
-NEXT_PUBLIC_WEB3FORMS_KEY=your-web3forms-access-key   # contact form (get free at web3forms.com)
-NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX                          # your own GA4, to track the site
+CONTACT_SMTP_USER=thekoinophobe@gmail.com   # Gmail address the form sends through
+CONTACT_SMTP_PASS=xxxx xxxx xxxx xxxx        # Gmail App Password (see below)
+CONTACT_TO=thekoinophobe@gmail.com           # optional: where leads land (defaults to SMTP user)
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX               # your own GA4, to track the site
 ```
 
-Without the web3forms key, the contact form gracefully falls back to opening the visitor's email client. Without the GA id, no analytics script loads.
+The contact form posts to the site's own `/api/contact` (no third-party form service). To create the App Password: Google Account → Security → 2-Step Verification → App passwords → generate one for "Mail". Without SMTP vars, the form gracefully falls back to opening the visitor's email client. Without the GA id, no analytics script loads.
 
 ## Pages
 

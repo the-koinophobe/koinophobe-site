@@ -13,7 +13,7 @@ const updated = "June 2026";
 
 export default function PrivacyPage() {
   return (
-    <section className="container-pad py-16 sm:py-20">
+    <section className="container-pad pb-16 pt-36 sm:pb-20 sm:pt-40">
       <div className="mx-auto max-w-3xl">
         <h1 className="font-display text-4xl font-semibold tracking-tight text-ink">
           Privacy Policy

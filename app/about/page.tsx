@@ -47,7 +47,7 @@ export default function AboutPage() {
       <section className="relative overflow-hidden">
         <div className="hero-wash absolute inset-0 -z-10" />
         <TopoField className="pointer-events-none absolute -right-40 top-0 -z-10 h-full w-[640px] text-ink/[0.05]" />
-        <div className="container-pad pb-12 pt-16 sm:pt-20">
+        <div className="container-pad pb-12 pt-36 sm:pt-40">
           <SectionHeading
             titleAs="h1"
             kicker="About"

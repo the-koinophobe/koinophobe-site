@@ -69,6 +69,7 @@ body {
   color: rgb(var(--ink));
   font-family: var(--font-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip; /* decorative SVGs can never cause sideways scroll */
 }
 
 /* Brand-coloured text selection — small craft signal */
@@ -184,10 +185,14 @@ html.lenis body {
 .animate-marquee-slow {
   animation: marquee 50s linear infinite;
 }
-/* Hovering a marquee pauses it so the type can actually be read */
-.marquee-mask:hover .animate-marquee,
-.marquee-mask:hover .animate-marquee-slow {
-  animation-play-state: paused;
+/* Hovering a marquee pauses it so the type can actually be read.
+   Hover-capable pointers only: on touch, :hover sticks after a tap and the
+   marquee would freeze until the user taps elsewhere. */
+@media (hover: hover) {
+  .marquee-mask:hover .animate-marquee,
+  .marquee-mask:hover .animate-marquee-slow {
+    animation-play-state: paused;
+  }
 }
 .marquee-mask {
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);

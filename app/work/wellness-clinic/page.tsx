@@ -43,7 +43,7 @@ export default function WellnessCaseStudy() {
       <section className="relative overflow-hidden">
         <div className="hero-wash absolute inset-0 -z-10" />
         <OrbitRings className="pointer-events-none absolute -right-24 -top-20 -z-10 w-[380px] text-ink/[0.05]" />
-        <div className="container-pad pb-10 pt-16 sm:pt-20">
+        <div className="container-pad pb-10 pt-36 sm:pt-40">
           <Reveal>
             <Link href="/work" className="text-sm font-semibold text-brand">
               ← Back to work

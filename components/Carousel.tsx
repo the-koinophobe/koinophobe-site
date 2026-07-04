@@ -25,7 +25,7 @@ export function Carousel({ projects }: { projects: Project[] }) {
           <div
             key={p.name}
             data-card
-            className="h-[300px] w-[82%] shrink-0 snap-start sm:w-[46%] lg:w-[31.5%]"
+            className="h-[280px] w-[82%] shrink-0 snap-start sm:w-[46%] lg:w-[23.4%]"
           >
             <BrowserFrame project={p} />
           </div>

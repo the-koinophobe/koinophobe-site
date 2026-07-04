@@ -31,7 +31,7 @@ const config: Config = {
         "3xl": "2rem",
       },
       maxWidth: {
-        content: "90rem",
+        content: "80rem",
       },
       keyframes: {
         "fade-up": {

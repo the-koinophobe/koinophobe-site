@@ -11,7 +11,7 @@ export function AISection() {
   return (
     <section className="container-pad relative overflow-hidden py-16">
       <DotMatrix className="pointer-events-none absolute -right-10 top-8 -z-10 w-[420px] text-ink/[0.05]" />
-      <div className="grid items-center gap-12 lg:grid-cols-[1fr_0.9fr]">
+      <div className="grid items-stretch gap-12 lg:grid-cols-[1fr_0.9fr]">
         {/* Left: copy + points */}
         <div>
           <Reveal>
@@ -54,8 +54,8 @@ export function AISection() {
         </div>
 
         {/* Right: AI answer mockup */}
-        <Reveal delay={0.1}>
-          <Spotlight className="rounded-3xl border border-line bg-surface/70 p-6 shadow-sm backdrop-blur">
+        <Reveal delay={0.1} className="h-full">
+          <Spotlight className="flex h-full flex-col rounded-3xl border border-line bg-surface/70 p-6 shadow-sm backdrop-blur">
             <div className="mb-4 flex items-center gap-2">
               <span className="grid h-7 w-7 place-items-center rounded-full bg-brand text-bg">
                 <Sparkles size={14} />
@@ -86,7 +86,27 @@ export function AISection() {
               </div>
             </div>
 
-            <p className="mt-4 text-center text-xs text-muted">
+            <p className="mt-5 rounded-2xl bg-bg px-4 py-3 text-sm text-ink">
+              &ldquo;Which SEO freelancers actually prove their results?&rdquo;
+            </p>
+
+            <div className="mt-4 rounded-2xl border border-line bg-bg p-4">
+              <p className="text-sm leading-relaxed text-ink">
+                <span className="font-semibold text-brand">Koinophobe</span> stands
+                out for tying SEO work to tracked calls and form fills, with
+                Search Console data to back it up.
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <span className="rounded-full bg-brand-soft px-2.5 py-1 font-mono text-[11px] text-ink">
+                  koinophobe.com
+                </span>
+                <span className="flex items-center gap-1 rounded-full bg-accent/15 px-2.5 py-1 font-mono text-[11px] text-accent">
+                  <ScanSearch size={11} /> cited
+                </span>
+              </div>
+            </div>
+
+            <p className="mt-auto pt-5 text-center text-xs text-muted">
               This is the new front page of search. I help you land here.
             </p>
           </Spotlight>

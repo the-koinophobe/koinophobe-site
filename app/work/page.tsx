@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { TrendingUp } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { BookCall } from "@/components/BookCall";
+import { Spotlight } from "@/components/Spotlight";
 import { caseStudies, projects } from "@/lib/content";
 import { BrowserFrame } from "@/components/BrowserFrame";
 import { OrbitRings } from "@/components/Decor";
@@ -18,7 +20,7 @@ export default function WorkPage() {
       <section className="relative overflow-hidden">
         <div className="hero-wash absolute inset-0 -z-10" />
         <OrbitRings className="pointer-events-none absolute -right-28 -top-24 -z-10 w-[420px] text-ink/[0.05]" />
-        <div className="container-pad pb-12 pt-16 sm:pt-20">
+        <div className="container-pad pb-12 pt-36 sm:pt-40">
           <SectionHeading
             titleAs="h1"
             kicker="Work"
@@ -31,33 +33,49 @@ export default function WorkPage() {
       <section className="container-pad py-10">
         <div className="grid gap-5 md:grid-cols-2">
           {caseStudies.map((c, i) => (
-            <Reveal key={c.industry} delay={(i % 2) * 0.08}>
-              <article className="flex h-full flex-col rounded-3xl border border-line bg-surface/60 p-7">
-                <span className="text-xs font-semibold uppercase tracking-wider text-brand">
-                  {c.industry}
-                </span>
-                <dl className="mt-4 space-y-4 text-sm">
+            <Reveal key={c.industry} delay={(i % 2) * 0.08} className="h-full">
+              <Spotlight className="lift group relative flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-surface/60 p-7">
+                <TrendingUp
+                  aria-hidden
+                  strokeWidth={1}
+                  className="pointer-events-none absolute -bottom-6 -right-6 h-32 w-32 text-ink/[0.05]"
+                />
+                <div className="flex items-center justify-between">
+                  <span className="rounded-full border border-line bg-surface px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand">
+                    {c.industry}
+                  </span>
+                  <span className="font-mono text-xs text-muted/50">0{i + 1}</span>
+                </div>
+
+                <p className="mt-6 font-display text-2xl font-semibold leading-snug text-ink sm:text-[1.7rem]">
+                  {c.result}
+                </p>
+
+                <dl className="mt-6 space-y-4 border-t border-line pt-5 text-sm">
                   <div>
-                    <dt className="font-semibold text-ink">The problem</dt>
+                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted/70">
+                      The problem
+                    </dt>
                     <dd className="mt-1 text-muted">{c.problem}</dd>
                   </div>
                   <div>
-                    <dt className="font-semibold text-ink">What I did</dt>
+                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted/70">
+                      What I did
+                    </dt>
                     <dd className="mt-1 text-muted">{c.work}</dd>
                   </div>
                 </dl>
-                <p className="mt-5 rounded-2xl bg-brand-soft p-4 font-display text-base font-semibold text-ink">
-                  {c.result}
-                </p>
+
                 {c.slug && (
                   <a
                     href={`/work/${c.slug}`}
-                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand"
+                    className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold text-brand"
                   >
-                    Read the case study →
+                    Read the full case study
+                    <span className="transition-transform group-hover:translate-x-0.5">→</span>
                   </a>
                 )}
-              </article>
+              </Spotlight>
             </Reveal>
           ))}
         </div>
@@ -70,7 +88,7 @@ export default function WorkPage() {
           title="Sites I've built and run"
           intro="Fifteen of the live sites in my portfolio, across roofing, real estate, wellness, home services and more."
         />
-        <div className="mt-10 grid auto-rows-[220px] grid-cols-2 gap-4 [grid-auto-flow:dense] md:grid-cols-3 lg:grid-cols-4">
+        <div className="mt-10 grid auto-rows-[220px] grid-cols-1 gap-4 [grid-auto-flow:dense] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {projects.map((p, i) => {
             const featuredNames = [
               "Palm Bay Marketing SEO",

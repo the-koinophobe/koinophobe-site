@@ -22,12 +22,14 @@ export function Header() {
   }, []);
 
   return (
-    <header
-      className={`sticky top-0 z-50 transition-all ${
-        scrolled ? "border-b border-line bg-bg/80 backdrop-blur" : "bg-transparent"
-      }`}
-    >
-      <div className="container-pad flex h-16 items-center justify-between gap-4">
+    <header className="sticky top-3 z-50 -mb-[90px] px-5 sm:top-4 sm:px-8">
+      <div
+        className={`mx-auto flex h-[90px] max-w-content items-center justify-between gap-3 rounded-lg border px-4 pl-5 transition-all sm:px-5 sm:pl-6 ${
+          scrolled
+            ? "border-line bg-bg/85 backdrop-blur-md"
+            : "border-line/70 bg-bg/60 backdrop-blur"
+        }`}
+      >
         <Link href="/" className="flex items-center gap-2.5" aria-label={site.name}>
           <Image
             src="/logo.png"
@@ -35,14 +37,14 @@ export function Header() {
             width={36}
             height={35}
             priority
-            className="h-8 w-auto dark:invert"
+            className="h-7 w-auto dark:invert"
           />
           <span className="font-display text-lg font-bold tracking-tight">
             {site.name}
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 rounded-full border border-line bg-surface/60 p-1 md:flex">
+        <nav className="hidden items-center gap-1 md:flex">
           {site.nav.map((item) => {
             const active = pathname === item.href;
             return (
@@ -68,15 +70,15 @@ export function Header() {
           type="button"
           aria-label="Menu"
           onClick={() => setOpen((v) => !v)}
-          className="grid h-10 w-10 place-items-center rounded-full border border-line bg-surface text-ink md:hidden"
+          className="grid h-9 w-9 place-items-center rounded-full border border-line bg-surface text-ink md:hidden"
         >
           {open ? <X size={18} /> : <Menu size={18} />}
         </button>
       </div>
 
       {open && (
-        <div className="container-pad pb-4 md:hidden">
-          <div className="flex flex-col gap-1 rounded-2xl border border-line bg-surface p-3">
+        <div className="mx-auto mt-2 max-w-content md:hidden">
+          <div className="flex flex-col gap-1 rounded-lg border border-line bg-bg/95 p-3 shadow-lg backdrop-blur">
             {site.nav.map((item) => (
               <Link
                 key={item.href}

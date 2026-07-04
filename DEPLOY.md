@@ -33,7 +33,9 @@ In Vercel → your project → Settings → Environment Variables, add:
 
 | Name | Value | What it does |
 |------|-------|--------------|
-| `NEXT_PUBLIC_WEB3FORMS_KEY` | your web3forms access key | makes the contact form send to your inbox |
+| `CONTACT_SMTP_USER` | `thekoinophobe@gmail.com` | Gmail account the contact form sends through |
+| `CONTACT_SMTP_PASS` | a Gmail App Password | Google Account → Security → 2-Step Verification → App passwords |
+| `CONTACT_TO` | optional | where leads land; defaults to `CONTACT_SMTP_USER` |
 | `NEXT_PUBLIC_GA_ID` | `G-XXXXXXXXXX` | turns on your own GA4 tracking |
 
 Redeploy after adding them (Deployments → … → Redeploy).

@@ -4,10 +4,9 @@ import { useState } from "react";
 import { site } from "@/lib/site";
 import { track } from "@/lib/analytics";
 
-// Free service, no backend. Get a key at https://web3forms.com and paste it below
-// (or set NEXT_PUBLIC_WEB3FORMS_KEY in .env.local).
-const ACCESS_KEY =
-  process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "YOUR_WEB3FORMS_ACCESS_KEY";
+// Posts to the site's own /api/contact endpoint (Gmail SMTP, no third-party
+// form service). If the server isn't configured yet, falls back to opening
+// the visitor's email client so no lead is ever lost.
 
 type Status = "idle" | "sending" | "ok" | "error";
 
@@ -21,8 +20,7 @@ export function ContactForm() {
     const data = Object.fromEntries(new FormData(form).entries());
     track("contact_submit", { type: String(data.type || "") });
 
-    // No key configured yet: fall back to opening the user's email client.
-    if (!ACCESS_KEY || ACCESS_KEY === "YOUR_WEB3FORMS_ACCESS_KEY") {
+    const mailtoFallback = () => {
       const body = encodeURIComponent(
         `Name: ${data.name}\nEmail: ${data.email}\nWebsite: ${data.website}\nType: ${data.type}\n\n${data.message}`
       );
@@ -30,17 +28,25 @@ export function ContactForm() {
         "Free SEO teardown request"
       )}&body=${body}`;
       setStatus("ok");
-      return;
-    }
+    };
 
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({ access_key: ACCESS_KEY, ...data }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
       });
-      setStatus(res.ok ? "ok" : "error");
-      if (res.ok) form.reset();
+      if (res.ok) {
+        setStatus("ok");
+        form.reset();
+        return;
+      }
+      if (res.status === 503) {
+        // Endpoint exists but SMTP isn't configured yet.
+        mailtoFallback();
+        return;
+      }
+      setStatus("error");
     } catch {
       setStatus("error");
     }

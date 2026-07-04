@@ -71,7 +71,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
       <section className="relative overflow-hidden">
         <div className="hero-wash absolute inset-0 -z-10" />
         <WaveLines className="pointer-events-none absolute bottom-0 left-0 -z-10 w-full text-ink/[0.05]" />
-        <div className="container-pad pb-8 pt-16 sm:pt-20">
+        <div className="container-pad pb-8 pt-36 sm:pt-40">
           <Reveal>
             <Link href="/notes" className="text-sm font-semibold text-brand">
               ← All notes
