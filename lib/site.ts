@@ -1,9 +1,9 @@
 export const site = {
   name: "Koinophobe",
   owner: "Michael Edward",
-  // TODO: swap back to hi@koinophobe.com once the domain inbox is live.
-  // Using the working Gmail so no lead bounces in the meantime.
-  email: "thekoinophobe@gmail.com",
+  // Domain inbox goes live with the koinophobe.com purchase (next week as of
+  // 2026-07-04). Until then fallbackEmail is the monitored address.
+  email: "michael@koinophobe.com",
   fallbackEmail: "thekoinophobe@gmail.com",
   github: "https://github.com/airdward",
   tagline: "SEO you can measure.",

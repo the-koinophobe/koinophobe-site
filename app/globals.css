@@ -71,6 +71,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Brand-coloured text selection — small craft signal */
+::selection {
+  background: rgb(var(--brand));
+  color: rgb(var(--bg));
+}
+
 /* ---- Creative SVG pattern utilities ---- */
 /* flowing contour waves */
 .pattern-waves {
@@ -92,6 +98,47 @@ body {
   background-image: none;
 }
 
+/* Animated aurora field for the home hero (compositor-only: transform) */
+.hero-aurora {
+  position: absolute;
+  inset: -20%;
+  z-index: -10;
+  filter: blur(64px);
+  background:
+    radial-gradient(35% 45% at 18% 22%, rgb(var(--brand) / 0.3), transparent 65%),
+    radial-gradient(28% 38% at 82% 16%, rgb(var(--accent) / 0.24), transparent 65%),
+    radial-gradient(42% 52% at 62% 82%, rgb(var(--brand) / 0.18), transparent 70%);
+  animation: aurora-shift 16s ease-in-out infinite alternate;
+}
+@keyframes aurora-shift {
+  0% {
+    transform: translate3d(-2%, -1%, 0) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translate3d(2%, 3%, 0) rotate(4deg) scale(1.08);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-aurora {
+    animation: none;
+  }
+}
+
+/* Lenis smooth-scroll integration */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
 /* Muted gradient mesh hero wash */
 .hero-wash {
   background:
@@ -103,7 +150,7 @@ body {
 
 /* Subtle film grain for texture (kills the "flat/dry" look) */
 .grain::after {
-  content: none;
+  content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -134,12 +181,21 @@ body {
 .animate-marquee {
   animation: marquee 32s linear infinite;
 }
+.animate-marquee-slow {
+  animation: marquee 50s linear infinite;
+}
+/* Hovering a marquee pauses it so the type can actually be read */
+.marquee-mask:hover .animate-marquee,
+.marquee-mask:hover .animate-marquee-slow {
+  animation-play-state: paused;
+}
 .marquee-mask {
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
 @media (prefers-reduced-motion: reduce) {
-  .animate-marquee { animation: none; }
+  .animate-marquee,
+  .animate-marquee-slow { animation: none; }
 }
 
 /* Slow drift for decorative ripples */
@@ -155,23 +211,6 @@ body {
 .drift-slow { animation: drift-alt 8s ease-in-out infinite alternate; }
 @media (prefers-reduced-motion: reduce) {
   .drift, .drift-slow { animation: none; }
-}
-
-/* Stacking sections: each section pins, the next slides up over it */
-.stack-sections > section {
-  position: sticky;
-  top: 4rem; /* clear the sticky header so content isn't tucked under it */
-  background-color: rgb(var(--bg));
-}
-@media (max-width: 1023px) {
-  .stack-sections > section {
-    position: static;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .stack-sections > section {
-    position: static;
-  }
 }
 
 /* Soft card hover lift */

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { BookCall } from "@/components/BookCall";
+import { OrbitRings } from "@/components/Decor";
 
 export const metadata: Metadata = {
   title: "Case study: wellness clinic SEO",
@@ -41,6 +42,7 @@ export default function WellnessCaseStudy() {
       />
       <section className="relative overflow-hidden">
         <div className="hero-wash absolute inset-0 -z-10" />
+        <OrbitRings className="pointer-events-none absolute -right-24 -top-20 -z-10 w-[380px] text-ink/[0.05]" />
         <div className="container-pad pb-10 pt-16 sm:pt-20">
           <Reveal>
             <Link href="/work" className="text-sm font-semibold text-brand">

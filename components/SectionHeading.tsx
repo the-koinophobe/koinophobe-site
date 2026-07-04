@@ -1,4 +1,5 @@
 import { Reveal } from "./Reveal";
+import { CharReveal } from "./CharReveal";
 
 type Props = {
   kicker?: string;
@@ -18,7 +19,7 @@ export function SectionHeading({ kicker, title, intro, center = false, titleAs =
         </span>
       )}
       <Title className="font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-        {title}
+        <CharReveal text={title} />
       </Title>
       {intro && <p className="mt-4 text-lg text-muted">{intro}</p>}
     </Reveal>

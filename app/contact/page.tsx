@@ -3,6 +3,7 @@ import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ContactForm } from "@/components/ContactForm";
 import { site } from "@/lib/site";
+import { DotMatrix } from "@/components/Decor";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -22,6 +23,7 @@ export default function ContactPage() {
     <>
       <section className="relative overflow-hidden">
         <div className="hero-wash absolute inset-0 -z-10" />
+        <DotMatrix className="pointer-events-none absolute -right-10 top-6 -z-10 w-[380px] text-ink/[0.05]" />
         <div className="container-pad pb-10 pt-16 sm:pt-20">
           <SectionHeading
             titleAs="h1"

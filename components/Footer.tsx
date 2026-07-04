@@ -66,13 +66,15 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 w-full overflow-hidden">
+        <div className="mt-14 w-full overflow-hidden">
           <a
             href={`mailto:${site.email}`}
-            className="block select-none whitespace-nowrap text-center font-display text-[clamp(1.5rem,7vw,4.5rem)] font-semibold leading-none tracking-tight text-ink/[0.07] transition-colors hover:text-ink/[0.14]"
+            aria-label={`Email ${site.email}`}
+            className="text-outline block select-none whitespace-nowrap text-center font-display text-[clamp(2.5rem,12.5vw,11rem)] font-bold uppercase leading-none tracking-tight transition-colors duration-300 hover:text-brand"
           >
-            {site.email}
+            {site.name}
           </a>
+          <p className="mt-4 text-center font-mono text-sm text-muted">{site.email}</p>
         </div>
       </div>
     </footer>

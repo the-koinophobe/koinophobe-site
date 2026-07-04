@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { notes } from "@/lib/notes";
+import { WaveLines } from "@/components/Decor";
 
 export const metadata: Metadata = {
   title: "Notes",
@@ -25,6 +26,7 @@ export default function NotesPage() {
     <>
       <section className="relative overflow-hidden">
         <div className="hero-wash absolute inset-0 -z-10" />
+        <WaveLines className="pointer-events-none absolute bottom-0 left-0 -z-10 w-full text-ink/[0.05]" />
         <div className="container-pad pb-10 pt-16 sm:pt-20">
           <SectionHeading
             titleAs="h1"

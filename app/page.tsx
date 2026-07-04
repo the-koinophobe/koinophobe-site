@@ -1,13 +1,9 @@
 import Link from "next/link";
-import Image from "next/image";
 import {
   Search,
   MousePointerClick,
   BarChart3,
   MapPin,
-  Crosshair,
-  Activity,
-  BadgeCheck,
   Check,
   ArrowRight,
 } from "lucide-react";
@@ -21,18 +17,20 @@ import { FAQ } from "@/components/FAQ";
 import { Marquee } from "@/components/Marquee";
 import { Stat } from "@/components/Stat";
 import { ResultsPanel } from "@/components/ResultsPanel";
+import { SerpDemo } from "@/components/SerpDemo";
+import { ShaderAurora } from "@/components/ShaderAurora";
 import { AISection } from "@/components/AISection";
 import { Carousel } from "@/components/Carousel";
 import { ToolsStrip } from "@/components/ToolsStrip";
-import { GrowthLine } from "@/components/GrowthLine";
-import { Ripples, Blob } from "@/components/Decor";
+import { OrbitRings, DotMatrix, TopoField, WaveLines } from "@/components/Decor";
 import { WordRise } from "@/components/WordRise";
 import { Spotlight } from "@/components/Spotlight";
-import { capabilities, services, projects, faqs, packages, process } from "@/lib/content";
+import { ProcessPinned } from "@/components/ProcessPinned";
+import { BigMarquee } from "@/components/BigMarquee";
+import { capabilities, services, projects, faqs, packages } from "@/lib/content";
 import { stats } from "@/lib/site";
 
 const capIcons = [Search, MousePointerClick, BarChart3, MapPin];
-const procIcons = [Crosshair, Activity, BadgeCheck];
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -51,73 +49,104 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <div className="stack-sections">
-      {/* HERO — split: message + live results */}
+      <div>
+      {/* HERO — full-width statement + live results */}
       <section className="grain relative overflow-hidden">
-        <div className="container-pad grid items-center gap-12 pb-16 pt-16 sm:pt-24 lg:grid-cols-[1.15fr_0.85fr]">
-          <div>
-            <Reveal>
-              <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-line bg-surface/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted backdrop-blur">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-                </span>
-                Freelance SEO &amp; conversion tracking
+        <div className="hero-aurora pointer-events-none" aria-hidden />
+        <ShaderAurora className="pointer-events-none absolute inset-0 -z-10 h-full w-full" />
+        <div className="container-pad pb-16 pt-14 sm:pt-20">
+          <Reveal>
+            <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-line bg-surface/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted backdrop-blur">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
               </span>
-            </Reveal>
+              Freelance SEO &amp; conversion tracking
+            </span>
+          </Reveal>
 
-            <h1 className="font-display text-5xl font-semibold leading-[1.02] tracking-tight text-ink sm:text-6xl lg:text-7xl">
+          <h1 className="mt-4 font-display text-[clamp(2.75rem,7.2vw,6.75rem)] font-semibold leading-[0.98] tracking-tight text-ink">
+            <span className="block">
               <WordRise
                 delay={0.1}
+                tokens={[{ t: "SEO" }, { t: "that" }, { t: "proves" }, { t: "it," }]}
+              />
+            </span>
+            <span className="block">
+              <WordRise
+                delay={0.34}
                 tokens={[
-                  { t: "SEO" },
-                  { t: "that" },
-                  { t: "proves" },
-                  { t: "it," },
                   { t: "in" },
-                  { t: "leads,", className: "accent text-[1.05em]" },
+                  { t: "leads,", className: "accent" },
                   { t: "not" },
-                  { t: "rankings." },
+                  { t: "rankings.", className: "text-outline" },
                 ]}
               />
-            </h1>
+            </span>
+          </h1>
 
-            <Reveal delay={0.12}>
-              <p className="mt-6 max-w-xl text-lg text-muted sm:text-xl">
-                I&apos;m Michael, the specialist behind Koinophobe. I grow your
-                organic traffic and wire up the tracking that proves it turns into
-                calls, forms, and revenue.
-              </p>
-            </Reveal>
+          <div className="mt-10 grid items-center gap-10 lg:mt-14 lg:grid-cols-[1fr_0.85fr] lg:gap-16">
+            <div>
+              <Reveal delay={0.12}>
+                <p className="max-w-xl text-lg text-muted sm:text-xl">
+                  I&apos;m Michael, the specialist behind Koinophobe. I grow your
+                  organic traffic and wire up the tracking that proves it turns into
+                  calls, forms, and revenue.
+                </p>
+              </Reveal>
 
-            <Reveal delay={0.18}>
-              <div className="mt-8 flex flex-wrap items-center gap-3">
-                <BookCall label="Book a call" />
-                <Link
-                  href="/work"
-                  className="group inline-flex items-center gap-2 rounded-full border border-line bg-surface px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-brand"
-                >
-                  See the proof
-                  <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
-                </Link>
-              </div>
-              <p className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-sm text-muted">
-                <span className="flex items-center gap-1.5">
-                  <Check size={14} strokeWidth={2.5} className="text-accent" /> Free site teardown
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <Check size={14} strokeWidth={2.5} className="text-accent" /> Tracking on every lead
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <Check size={14} strokeWidth={2.5} className="text-accent" /> White-label friendly
-                </span>
-              </p>
+              <Reveal delay={0.18}>
+                <div className="mt-8 flex flex-wrap items-center gap-3">
+                  <BookCall label="Book a call" />
+                  <Link
+                    href="/work"
+                    className="group inline-flex items-center gap-2 rounded-full border border-line bg-surface px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-brand"
+                  >
+                    See the proof
+                    <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
+                  </Link>
+                </div>
+                <p className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-sm text-muted">
+                  <span className="flex items-center gap-1.5">
+                    <Check size={14} strokeWidth={2.5} className="text-accent" /> Free site teardown
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <Check size={14} strokeWidth={2.5} className="text-accent" /> Tracking on every lead
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <Check size={14} strokeWidth={2.5} className="text-accent" /> White-label friendly
+                  </span>
+                </p>
+              </Reveal>
+
+              <Reveal delay={0.24}>
+                <div className="mt-10 flex flex-wrap items-center gap-x-10 gap-y-4 border-t border-line pt-6">
+                  <div>
+                    <div className="font-display text-2xl font-semibold text-ink sm:text-3xl">
+                      3.2×
+                    </div>
+                    <div className="mt-0.5 text-xs text-muted">organic clicks, 6 months</div>
+                  </div>
+                  <div>
+                    <div className="font-display text-2xl font-semibold text-ink sm:text-3xl">
+                      787K
+                    </div>
+                    <div className="mt-0.5 text-xs text-muted">impressions tracked</div>
+                  </div>
+                  <div>
+                    <div className="font-display text-2xl font-semibold text-ink sm:text-3xl">
+                      6.1%
+                    </div>
+                    <div className="mt-0.5 text-xs text-muted">peak CTR</div>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+
+            <Reveal delay={0.1}>
+              <SerpDemo />
             </Reveal>
           </div>
-
-          <Reveal delay={0.1}>
-            <ResultsPanel />
-          </Reveal>
         </div>
       </section>
 
@@ -126,32 +155,47 @@ export default function HomePage() {
         <Marquee />
       </Reveal>
 
-      {/* STATS — dark band */}
-      <section className="dark bg-bg py-16 sm:py-20">
+      {/* STATS — dark band with live results */}
+      <section className="dark relative overflow-hidden bg-bg py-16 sm:py-20">
+        <OrbitRings className="pointer-events-none absolute -right-24 -top-28 w-[440px] text-ink/[0.05]" />
         <div className="container-pad">
-          <GrowthLine className="mb-10" />
-          <Reveal>
-            <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-line bg-line sm:grid-cols-4">
-              {stats.map((s) => (
-                <Stat key={s.label} value={s.value} label={s.label} />
-              ))}
-            </dl>
-          </Reveal>
+          <SectionHeading
+            kicker="Proof"
+            title="Numbers from live client work"
+            intro="Real Search Console data from sites I build, rank and track. No projections, no stock screenshots."
+          />
+          <div className="mt-10 grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
+            <Reveal>
+              <ResultsPanel />
+            </Reveal>
+            <Reveal delay={0.08}>
+              <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-line bg-line">
+                {stats.map((s) => (
+                  <Stat key={s.label} value={s.value} label={s.label} />
+                ))}
+              </dl>
+            </Reveal>
+          </div>
         </div>
       </section>
 
       {/* CLIENT WALL */}
-      <section className="container-pad py-14">
+      <section className="container-pad relative overflow-hidden py-14">
+        <DotMatrix className="pointer-events-none absolute left-1/2 top-1/2 -z-10 w-[560px] -translate-x-1/2 -translate-y-1/2 text-ink/[0.04]" />
         <Reveal>
           <p className="text-center text-xs font-semibold uppercase tracking-wider text-muted">
             Built for businesses like
           </p>
         </Reveal>
         <Stagger className="mx-auto mt-8 flex max-w-4xl flex-wrap items-baseline justify-center gap-x-8 gap-y-3">
-          {projects.map((p) => (
+          {projects.map((p, i) => (
             <span
               key={p.name}
-              className="font-display text-xl font-semibold text-muted/50 transition-colors duration-300 hover:text-ink sm:text-2xl"
+              className={`${
+                i % 3 === 1
+                  ? "font-serif italic text-brand/60"
+                  : "font-display text-muted/50"
+              } text-xl font-semibold transition-colors duration-300 hover:text-ink sm:text-2xl`}
             >
               {p.name}
             </span>
@@ -164,44 +208,10 @@ export default function HomePage() {
         <ToolsStrip />
       </section>
 
-      {/* PROCESS */}
-      <section className="container-pad py-12">
-        <SectionHeading
-          kicker="How I work"
-          title="Rank for buyers. Track it. Prove it converts."
-          intro="The difference between traffic and a business outcome is measurement. I do both halves."
-        />
-        <Stagger className="mt-10 grid gap-5 md:grid-cols-3">
-          {process.map((p, i) => {
-            const Icon = procIcons[i % procIcons.length];
-            return (
-              <div
-                key={p.step}
-                className="lift h-full rounded-3xl border border-line bg-surface/60 p-7"
-              >
-                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-brand-soft text-brand">
-                  <Icon size={22} strokeWidth={1.75} />
-                </span>
-                <h3 className="mt-4 font-display text-xl font-semibold text-ink">
-                  {p.title}
-                </h3>
-                <p className="mt-2 text-sm text-muted">{p.body}</p>
-                {p.image && (
-                  <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-xl border border-line bg-bg">
-                    <Image
-                      src={p.image}
-                      alt={`${p.title} example`}
-                      fill
-                      sizes="(min-width: 768px) 30vw, 100vw"
-                      className="object-cover object-top"
-                    />
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </Stagger>
-      </section>
+      {/* PROCESS — pinned horizontal scroll */}
+      <div className="relative bg-bg">
+        <ProcessPinned />
+      </div>
 
       {/* CAPABILITIES — bento */}
       <section className="container-pad py-12">
@@ -242,6 +252,9 @@ export default function HomePage() {
         </Stagger>
       </section>
 
+      {/* BIG MARQUEE */}
+      <BigMarquee />
+
       {/* AI */}
       <AISection />
 
@@ -268,7 +281,8 @@ export default function HomePage() {
       </section>
 
       {/* MISSION — the name, writ large */}
-      <section className="dark bg-bg py-20 sm:py-28">
+      <section className="dark relative overflow-hidden bg-bg py-20 sm:py-28">
+        <TopoField className="pointer-events-none absolute inset-0 h-full w-full text-ink/[0.05]" />
         <div className="container-pad text-center">
           <Reveal>
             <span className="text-xs font-semibold uppercase tracking-wider text-brand">
@@ -399,9 +413,9 @@ export default function HomePage() {
 
       {/* CTA BAND — full-bleed, oversized */}
       <section className="dark relative overflow-hidden bg-bg py-24 sm:py-32">
+        <OrbitRings className="drift pointer-events-none absolute -right-24 -top-32 w-[460px] text-ink/[0.06]" />
+        <WaveLines className="pointer-events-none absolute -bottom-6 left-0 w-full text-ink/[0.05]" />
         <div className="container-pad relative isolate text-center">
-          <Ripples className="drift pointer-events-none absolute -right-16 -top-28 -z-10 w-[380px] text-brand/[0.1]" />
-          <Blob className="drift-slow pointer-events-none absolute -bottom-28 -left-16 -z-10 w-[300px] text-accent/[0.08]" />
           <Reveal>
             <span className="text-xs font-semibold uppercase tracking-wider text-brand">
               Next step

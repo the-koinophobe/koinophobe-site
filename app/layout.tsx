@@ -5,7 +5,8 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Analytics } from "@/components/Analytics";
-import { ScrollProgress } from "@/components/ScrollProgress";
+import { SmoothScroll } from "@/components/SmoothScroll";
+import { Cursor } from "@/components/Cursor";
 import { CookieConsent } from "@/components/CookieConsent";
 import { site } from "@/lib/site";
 
@@ -113,7 +114,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="js-anim min-h-screen">
         <ThemeProvider>
-          <ScrollProgress />
+          <SmoothScroll />
+          <Cursor />
           <Header />
           <main>{children}</main>
           <Footer />

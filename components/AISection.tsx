@@ -1,15 +1,16 @@
 import { Sparkles, ScanSearch, Bot, LineChart } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { Stagger } from "./Stagger";
-import { Ripples } from "./Decor";
+import { Spotlight } from "./Spotlight";
+import { DotMatrix } from "./Decor";
 import { aiPoints } from "@/lib/content";
 
 const iconMap = { Sparkles, ScanSearch, Bot, LineChart } as const;
 
 export function AISection() {
   return (
-    <section className="container-pad relative overflow-hidden py-12">
-      <Ripples className="drift pointer-events-none absolute -left-32 top-[14%] -z-10 w-[420px] text-brand/[0.03]" />
+    <section className="container-pad relative overflow-hidden py-16">
+      <DotMatrix className="pointer-events-none absolute -right-10 top-8 -z-10 w-[420px] text-ink/[0.05]" />
       <div className="grid items-center gap-12 lg:grid-cols-[1fr_0.9fr]">
         {/* Left: copy + points */}
         <div>
@@ -27,18 +28,25 @@ export function AISection() {
             </p>
           </Reveal>
 
-          <Stagger className="mt-8 grid gap-5 sm:grid-cols-2">
-            {aiPoints.map((p) => {
+          <Stagger className="mt-8 grid gap-4 sm:grid-cols-2">
+            {aiPoints.map((p, i) => {
               const Icon = iconMap[p.icon as keyof typeof iconMap];
               return (
                 <div key={p.title}>
-                  <span className="mb-3 grid h-10 w-10 place-items-center rounded-2xl bg-brand-soft text-brand">
-                    <Icon size={18} strokeWidth={1.75} />
-                  </span>
-                  <h3 className="font-display text-base font-semibold text-ink">
-                    {p.title}
-                  </h3>
-                  <p className="mt-1.5 text-sm text-muted">{p.body}</p>
+                  <Spotlight className="lift h-full rounded-3xl border border-line bg-surface/60 p-5">
+                    <div className="flex items-center justify-between">
+                      <span className="grid h-10 w-10 place-items-center rounded-2xl bg-brand-soft text-brand">
+                        <Icon size={18} strokeWidth={1.75} />
+                      </span>
+                      <span className="font-mono text-xs text-muted/60">
+                        0{i + 1}
+                      </span>
+                    </div>
+                    <h3 className="mt-4 font-display text-base font-semibold text-ink">
+                      {p.title}
+                    </h3>
+                    <p className="mt-1.5 text-sm text-muted">{p.body}</p>
+                  </Spotlight>
                 </div>
               );
             })}
@@ -47,7 +55,7 @@ export function AISection() {
 
         {/* Right: AI answer mockup */}
         <Reveal delay={0.1}>
-          <div className="rounded-3xl border border-line bg-surface/70 p-6 shadow-sm backdrop-blur">
+          <Spotlight className="rounded-3xl border border-line bg-surface/70 p-6 shadow-sm backdrop-blur">
             <div className="mb-4 flex items-center gap-2">
               <span className="grid h-7 w-7 place-items-center rounded-full bg-brand text-bg">
                 <Sparkles size={14} />
@@ -81,7 +89,7 @@ export function AISection() {
             <p className="mt-4 text-center text-xs text-muted">
               This is the new front page of search. I help you land here.
             </p>
-          </div>
+          </Spotlight>
         </Reveal>
       </div>
     </section>

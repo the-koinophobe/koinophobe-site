@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { BookCall } from "@/components/BookCall";
 import { caseStudies, projects } from "@/lib/content";
 import { BrowserFrame } from "@/components/BrowserFrame";
+import { OrbitRings } from "@/components/Decor";
 
 export const metadata: Metadata = {
   title: "Work",
@@ -16,6 +17,7 @@ export default function WorkPage() {
     <>
       <section className="relative overflow-hidden">
         <div className="hero-wash absolute inset-0 -z-10" />
+        <OrbitRings className="pointer-events-none absolute -right-28 -top-24 -z-10 w-[420px] text-ink/[0.05]" />
         <div className="container-pad pb-12 pt-16 sm:pt-20">
           <SectionHeading
             titleAs="h1"

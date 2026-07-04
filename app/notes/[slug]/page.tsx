@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Reveal } from "@/components/Reveal";
 import { BookCall } from "@/components/BookCall";
 import { notes, getNote } from "@/lib/notes";
+import { WaveLines } from "@/components/Decor";
 
 export function generateStaticParams() {
   return notes.map((n) => ({ slug: n.slug }));
@@ -69,6 +70,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
       />
       <section className="relative overflow-hidden">
         <div className="hero-wash absolute inset-0 -z-10" />
+        <WaveLines className="pointer-events-none absolute bottom-0 left-0 -z-10 w-full text-ink/[0.05]" />
         <div className="container-pad pb-8 pt-16 sm:pt-20">
           <Reveal>
             <Link href="/notes" className="text-sm font-semibold text-brand">
@@ -84,9 +86,18 @@ export default function NotePage({ params }: { params: { slug: string } }) {
 
       <section className="container-pad py-6">
         <Reveal className="mx-auto max-w-2xl space-y-5 text-lg leading-relaxed text-muted">
-          {note.body.map((p, i) => (
-            <p key={i}>{p}</p>
-          ))}
+          {note.body.map((p, i) =>
+            p.startsWith("## ") ? (
+              <h2
+                key={i}
+                className="!mt-10 font-display text-2xl font-semibold tracking-tight text-ink"
+              >
+                {p.slice(3)}
+              </h2>
+            ) : (
+              <p key={i}>{p}</p>
+            )
+          )}
         </Reveal>
 
         <div className="mx-auto mt-12 max-w-2xl rounded-3xl border border-line bg-surface/60 p-7 text-center">
