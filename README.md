@@ -56,7 +56,8 @@ Create `.env.local` in the project root:
 CONTACT_SMTP_USER=thekoinophobe@gmail.com   # Gmail address the form sends through
 CONTACT_SMTP_PASS=xxxx xxxx xxxx xxxx        # Gmail App Password (see below)
 CONTACT_TO=thekoinophobe@gmail.com           # optional: where leads land (defaults to SMTP user)
-NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX               # your own GA4, to track the site
+NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX               # Google Tag Manager (recommended; put GA4 inside)
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX               # or GA4 directly, if not using GTM
 ```
 
 The contact form posts to the site's own `/api/contact` (no third-party form service). To create the App Password: Google Account → Security → 2-Step Verification → App passwords → generate one for "Mail". Without SMTP vars, the form gracefully falls back to opening the visitor's email client. Without the GA id, no analytics script loads.

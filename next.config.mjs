@@ -2,6 +2,22 @@
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  // Short branded links for social bios; UTM tags are applied on arrival so
+  // GA4 attributes the visit. Add more here per campaign as needed.
+  async redirects() {
+    return [
+      {
+        source: "/ig",
+        destination: "/?utm_source=instagram&utm_medium=social&utm_campaign=bio",
+        permanent: false,
+      },
+      {
+        source: "/x",
+        destination: "/?utm_source=twitter&utm_medium=social&utm_campaign=bio",
+        permanent: false,
+      },
+    ];
+  },
   async headers() {
     return [
       {

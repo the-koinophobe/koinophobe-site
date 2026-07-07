@@ -2,6 +2,7 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 import { BookCall } from "./BookCall";
 import { CookieSettingsButton } from "./CookieSettingsButton";
+import { SiteVisits } from "./SiteVisits";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -75,6 +76,7 @@ export function Footer() {
             {site.name}
           </a>
           <p className="mt-4 text-center font-mono text-sm text-muted">{site.email}</p>
+          <SiteVisits />
         </div>
       </div>
     </footer>

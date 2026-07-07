@@ -1,91 +1,151 @@
-# Deploying Koinophobe
+# Koinophobe — Deploy & Measurement Runbook
 
-A start-to-finish guide to get the site live on Vercel (free) with your domain, contact form, and analytics.
+Everything to take the site from repo to fully-measured production on
+koinophobe.com. Work top to bottom; each section says what "done" looks like.
 
-## 0. One-time accounts
-- A GitHub account (github.com)
-- A Vercel account (vercel.com) — sign in with GitHub
+---
 
-## 1. Push the project to GitHub
-From the `koinophobe` folder:
+## 1. Build & push
 
 ```bash
-git init
-git add .
-git commit -m "Koinophobe site"
-# create an empty repo on github.com first, then:
-git remote add origin https://github.com/<you>/koinophobe.git
-git branch -M main
-git push -u origin main
+npm install        # lenis + nodemailer since the last deploy
+npm run build      # must pass locally before pushing
+git push origin main
 ```
 
-(Your `.gitignore` already excludes `node_modules` and `.next`.)
+Vercel auto-deploys `main`. Build settings are defaults (Next.js preset), no
+overrides needed.
 
-## 2. Deploy on Vercel
-1. vercel.com → "Add New… → Project" → import your `koinophobe` repo.
-2. Vercel auto-detects Next.js. Leave the defaults.
-3. Click Deploy. In ~1 minute you get a live `*.vercel.app` URL.
+## 2. Domains & DNS (Namecheap)
 
-Every future `git push` to `main` redeploys automatically.
+Nameservers: **Namecheap BasicDNS** (dns1/dns2.registrar-servers.com).
+Ignore Vercel's banner recommending its own nameservers — switching would
+kill Namecheap email forwarding.
 
-## 3. Environment variables (optional but recommended)
-In Vercel → your project → Settings → Environment Variables, add:
+Advanced DNS host records:
 
-| Name | Value | What it does |
-|------|-------|--------------|
-| `CONTACT_SMTP_USER` | `thekoinophobe@gmail.com` | Gmail account the contact form sends through |
-| `CONTACT_SMTP_PASS` | a Gmail App Password | Google Account → Security → 2-Step Verification → App passwords |
-| `CONTACT_TO` | optional | where leads land; defaults to `CONTACT_SMTP_USER` |
-| `NEXT_PUBLIC_GA_ID` | `G-XXXXXXXXXX` | turns on your own GA4 tracking |
+| Type  | Host | Value                  |
+|-------|------|------------------------|
+| A     | @    | 216.198.79.1           |
+| CNAME | www  | cname.vercel-dns.com   |
 
-Redeploy after adding them (Deployments → … → Redeploy).
+Vercel → Project → Settings → Domains: `koinophobe.com` (primary) and
+`www.koinophobe.com` (redirects to apex).
 
-- **web3forms key:** go to web3forms.com, enter your email, copy the access key. Free. Until this is set, the form falls back to opening the visitor's email app.
-- **GA4 ID:** analytics.google.com → Admin → Data Streams → your web stream → "Measurement ID" (starts with `G-`).
+**Done when:** both domains show valid in Vercel and https://www.koinophobe.com
+308-redirects to the apex.
 
-## 4. Connect your domain
-1. Vercel → project → Settings → Domains → add `koinophobe.com` (and `www`).
-2. Vercel shows the DNS records to add. At your domain registrar, add them (usually an `A` record to Vercel's IP and a `CNAME` for `www`). SSL is automatic.
-3. **If your domain is NOT koinophobe.com**, update these three spots to your real domain:
-   - `app/layout.tsx` → `metadataBase` and the Open Graph `url`
-   - `app/sitemap.ts` → `base`
-   - `app/robots.ts` → `sitemap`
-   - `lib/site.ts` → `email` (e.g. `hi@yourdomain.com`)
+## 3. Email
 
-## 5. After it's live
-- **Google Search Console:** add the property, verify, and submit `https://yourdomain.com/sitemap.xml`.
-- **Test the contact form** end to end (check it lands in your inbox).
-- **Preview the social card:** paste the URL into opengraph.xyz or the LinkedIn Post Inspector.
-- **Lighthouse:** Chrome DevTools → Lighthouse → run mobile. You're selling performance, so this should score well.
-- **Phone check:** confirm the work-grid videos play on tap/scroll and the layout holds on a real phone.
+- Namecheap → Advanced DNS → Mail Settings: **Email Forwarding** (creates the
+  five `eforward*.registrar-servers.com` MX records + SPF TXT).
+- Domain tab → Redirect Email: alias `michael` → thekoinophobe@gmail.com.
+  (Alias field takes only the part before the @.)
+- Gmail → Settings → Accounts → Send mail as: `michael@koinophobe.com`,
+  SMTP `smtp.gmail.com`, port 587 TLS, username = the Gmail address,
+  password = a Gmail App Password. Tick "Treat as an alias".
 
-## Still to add (content you supply)
-- A real photo of you on the About page (`app/about/page.tsx`).
-- The three process-card images in `public/process/` (rank / track / prove) — your GA4, SERP, or Search Console screenshots work well.
-- Real prices in `lib/content.ts` (`packages`) if you want figures instead of One-off / Monthly / Custom.
+**Done when:** a test email to michael@ lands in Gmail and you can reply from
+the michael@ identity.
 
-## Pushing updates to Vercel
+## 4. Environment variables (Vercel → Settings → Environment Variables)
 
-Vercel redeploys automatically on every push to `main`:
+| Name | Value | Purpose |
+|------|-------|---------|
+| `CONTACT_SMTP_USER` | thekoinophobe@gmail.com | contact form sender account |
+| `CONTACT_SMTP_PASS` | Gmail App Password | contact form SMTP auth |
+| `CONTACT_TO` | thekoinophobe@gmail.com | where leads land (optional) |
+| `NEXT_PUBLIC_GTM_ID` | GTM-XXXXXXX | loads Tag Manager (consent-gated) |
+| `GA4_PROPERTY_ID` | numeric id | live visits counter in the footer |
+| `GA_SA_CLIENT_EMAIL` | ...@...iam.gserviceaccount.com | GA4 Data API auth |
+| `GA_SA_PRIVATE_KEY` | private key from the SA JSON | GA4 Data API auth |
 
-```bash
-git add .
-git commit -m "your message"
-git push
-```
+Leave `NEXT_PUBLIC_GA_ID` unset when using GTM (GA4 loads inside the
+container; setting both is double-tracking). **Redeploy after adding vars.**
 
-## Troubleshooting
+## 5. GA4 (analytics.google.com)
 
-**Build error: `Invalid background image: "#F4F8F7"` on `/opengraph-image`.**
-The social-image generator (Satori) does not accept a solid colour inside the CSS
-`background` shorthand. Use `backgroundColor` for solid fills and only put gradients
-in `backgroundImage`. Fixed in `app/opengraph-image.tsx` (all `background:` values
-are now `backgroundColor:`).
+1. Admin → Create property "Koinophobe" (your timezone/currency).
+2. Add a **Web** data stream for https://koinophobe.com → note the
+   Measurement ID (`G-…`). You will paste it into GTM, not into the code.
+3. Admin → Data settings → Data retention → **14 months**.
+4. Note the numeric **Property ID** (Admin → Property settings) for
+   `GA4_PROPERTY_ID`.
 
-**Warning: `next@14.2.5` has a security vulnerability.**
-`package.json` now uses `"next": "^14.2.5"`, so Vercel installs the latest patched
-14.2.x automatically. To move fully up to date you can later run `npm i next@latest`
-(note: Next 15 may need minor code adjustments).
+## 6. GTM (tagmanager.google.com)
 
-**After any fix:** commit and push, Vercel rebuilds. Watch the build log; it should
-end with `✓ Generating static pages` and no `Export encountered errors`.
+1. Create account "Koinophobe" → container `koinophobe.com` (Web) → note the
+   `GTM-XXXXXXX` id for the env var.
+2. Tags → New → **Google Tag** → paste the GA4 Measurement ID → trigger:
+   All Pages (Initialization).
+3. Custom events the site already pushes to the dataLayer:
+   - `book_a_call_click` (param `label`)
+   - `contact_submit` (param `type`: Agency / Business / Other)
+
+   For each: Triggers → New → **Custom Event** → event name as above →
+   then Tags → New → **GA4 Event** → same event name → attach the trigger.
+4. Preview mode: accept the site's cookie banner first — GTM is
+   consent-gated and won't load before that.
+5. **Submit/Publish** the container.
+6. In GA4 → Admin → Events: once the events flow, mark `contact_submit` and
+   `book_a_call_click` as **key events**.
+
+**Done when:** Tag Assistant shows the Google Tag plus both custom events
+firing, and GA4 Realtime shows your visit.
+
+## 7. Search Console (search.google.com/search-console)
+
+1. Add property → **Domain** → koinophobe.com.
+2. Copy the TXT record → Namecheap Advanced DNS → add TXT @ … → verify
+   (can take ~15 min).
+3. Sitemaps → submit `https://koinophobe.com/sitemap.xml`.
+4. GA4 → Admin → Product links → Search Console links → link the property.
+5. Optional: Bing Webmaster Tools → import from GSC.
+
+## 8. Social bio links (Instagram / X)
+
+Short branded links (defined in `next.config.mjs` → `redirects()`) that apply
+the UTM tags on arrival:
+
+- Instagram bio: `koinophobe.com/ig`
+- X/Twitter bio: `koinophobe.com/x`
+
+For individual posts/threads add another redirect entry with its own
+`utm_campaign` (e.g. `/clinic` → `?utm_source=twitter&utm_campaign=case-study-clinic`).
+Read results in GA4 → Reports → Acquisition → Traffic acquisition
+(dimension: session source/medium), or filter `source = instagram`.
+
+## 9. Live visits counter (footer)
+
+The footer shows the site's own GA4 page views ("walk the talk"). Setup:
+
+1. console.cloud.google.com → New project "koinophobe" (same Google login,
+   free, no billing needed).
+2. APIs & Services → Enable **Google Analytics Data API**.
+3. IAM → Service accounts → Create ("koinophobe-site") → Keys → Add key →
+   JSON → download.
+4. GA4 → Admin → Property access management → add the service account's
+   email as **Viewer**.
+5. From the JSON, set env vars: `client_email` → `GA_SA_CLIENT_EMAIL`,
+   `private_key` → `GA_SA_PRIVATE_KEY` (paste as-is, escaped \n included),
+   plus `GA4_PROPERTY_ID`.
+6. Redeploy. The counter appears under the footer wordmark once GA4 has
+   data; it renders nothing while unconfigured, so nothing breaks meanwhile.
+   Numbers refresh hourly.
+
+## 10. Smoke test
+
+- [ ] https://koinophobe.com loads with SSL, www redirects to apex
+- [ ] /sitemap.xml and /robots.txt resolve
+- [ ] Contact form delivers to Gmail (check spam first time), reply-to is the visitor
+- [ ] mailto CTAs open with michael@koinophobe.com
+- [ ] Cookie banner → accept → Tag Assistant sees GTM + GA4
+- [ ] `book_a_call_click` and `contact_submit` visible in GA4 Realtime
+- [ ] Social card looks right: paste URL into opengraph.xyz
+- [ ] Lighthouse spot-check on / (mobile)
+
+## 11. Ongoing (monthly, 15 minutes)
+
+GSC: queries growing? pages indexed? GA4: sessions by source (watch the
+instagram/twitter rows), key events by landing page. That's the same review
+you sell — run it on yourself.

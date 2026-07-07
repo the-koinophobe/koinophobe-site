@@ -1,5 +1,10 @@
 import { ImageResponse } from "next/og";
 
+// Edge runtime: avoids @vercel/og's Windows path bug at build time (the image
+// is rendered on request instead of prerendered) and is the runtime this
+// library was built for.
+export const runtime = "edge";
+
 export const alt = "Koinophobe — SEO you can measure";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -54,7 +59,7 @@ export default function OgImage() {
         >
           <span>SEO that proves it,</span>
           <span>
-            in <span style={{ color: "#22B9AF" }}>leads</span> — not rankings.
+            in <span style={{ color: "#22B9AF" }}>leads</span>, not rankings.
           </span>
         </div>
 
