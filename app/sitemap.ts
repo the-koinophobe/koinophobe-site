@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/about`, lastModified: now, changeFrequency: "yearly", priority: 0.6 },
     { url: `${base}/notes`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     ...notePages,
+    { url: `${base}/google-business-profile`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/contact`, lastModified: now, changeFrequency: "yearly", priority: 0.7 },
     { url: `${base}/privacy`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
     { url: `${base}/cookies`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },

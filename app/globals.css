@@ -35,6 +35,8 @@
   --brand: 34 185 175;      /* #22B9AF */
   --brand-soft: 209 242 239;/* soft teal wash */
   --accent: 240 122 90;     /* warm coral highlight */
+  --edge: 18 32 30;         /* hard borders + offset shadows */
+  --deep: 34 185 175;       /* strong colour for text on light grounds */
 }
 
 .dark {
@@ -47,6 +49,8 @@
   --brand: 45 209 198;      /* brighter teal for dark */
   --brand-soft: 16 49 46;
   --accent: 248 142 110;
+  --edge: 235 244 242;
+  --deep: 45 209 198;
 }
 
 * {
@@ -296,4 +300,53 @@ html.lenis body {
 
 .container-pad {
   @apply mx-auto w-full max-w-content px-5 sm:px-8;
+}
+
+/* ---- Landing page palette: greens -----------------------------------------
+   Scoped to /google-business-profile. Light is the default; the page carries
+   its own toggle because it renders without the site header. `--edge` is the
+   hard border and offset-shadow colour and is always the darkest green.
+   `--brand` is the lime FILL only, never text: it is unreadable on white, so
+   text that needs to be green uses `--deep`. Anything sitting on `--accent`
+   uses `text-bg`, which lands light on light mode and dark on dark. */
+.gbp-theme {
+  --bg: 8 22 15;            /* near-black forest */
+  --surface: 23 58 38;      /* card */
+  --ink: 228 245 233;       /* pale mint text */
+  --muted: 154 189 167;
+  --line: 3 12 7;
+  --edge: 3 12 7;           /* darkest green: borders + hard shadows */
+  --brand: 200 242 78;      /* acid lime, fill only */
+  --brand-soft: 20 46 30;
+  --accent: 52 211 153;     /* emerald */
+  --deep: 200 242 78;       /* lime reads fine on forest */
+}
+
+html.gbp-light .gbp-theme {
+  --bg: 228 242 204;        /* pale lime wash: the page itself carries colour */
+  --surface: 255 255 255;   /* cards sit white on top of it */
+  --ink: 11 31 19;          /* deep forest text */
+  --muted: 71 98 80;
+  --line: 8 22 15;
+  --edge: 8 22 15;
+  --brand: 200 242 78;
+  --brand-soft: 216 238 176;
+  --accent: 12 102 51;      /* deep green fill */
+  --deep: 12 102 51;        /* strong green text */
+}
+
+/* Paint the overscroll area so rubber-banding never flashes the site theme. */
+body:has(.gbp-theme) { background-color: rgb(8 22 15); }
+html.gbp-light body:has(.gbp-theme) { background-color: rgb(228 242 204); }
+
+/* The site sets html.dark by default, so the landing page logo can't use the
+   `dark:` variant. It follows the page's own theme instead. */
+.gbp-theme .gbp-logo { filter: invert(1); }
+html.gbp-light .gbp-theme .gbp-logo { filter: none; }
+
+/* Decorative background stars fade out through the middle of the section, so
+   they never sit behind headlines and body copy. */
+.ghost-fade {
+  -webkit-mask-image: radial-gradient(120% 95% at 50% 45%, transparent 0%, transparent 42%, #000 82%);
+  mask-image: radial-gradient(120% 95% at 50% 45%, transparent 0%, transparent 42%, #000 82%);
 }
