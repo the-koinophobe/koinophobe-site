@@ -5,22 +5,25 @@ export const site = {
   // 2026-07-04). Until then fallbackEmail is the monitored address.
   email: "michael@koinophobe.com",
   fallbackEmail: "thekoinophobe@gmail.com",
-  github: "https://github.com/airdward",
-  tagline: "SEO you can measure.",
+  linkedin: "https://www.linkedin.com/in/airdward/",
+  linkedinHandle: "linkedin.com/in/airdward",
+  tagline: "Numbers don't lie.",
   valueProp:
-    "I grow your organic traffic and prove it converts, with tracking that ties rankings to real leads.",
+    "Technical SEO and measurement for local businesses, with the Search Console data to back every claim.",
   nav: [
     { label: "Home", href: "/" },
     { label: "Work", href: "/work" },
+    { label: "Approach", href: "/about" },
     { label: "Notes", href: "/notes" },
-    { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ],
 };
 
+// Superseded by lib/gsc.ts, which carries the verified export figures.
+// Kept because older pages still import it.
 export const stats = [
-  { value: "3.2×", label: "Organic clicks in 6 months (one client)" },
-  { value: "787K", label: "Search impressions tracked in 12 months" },
-  { value: "15+", label: "Client sites built and managed" },
-  { value: "6.1%", label: "Peak click-through rate" },
+  { value: "1.03M", label: "Search impressions across five client properties" },
+  { value: "3,077", label: "Clicks, after subtracting a spam event I found" },
+  { value: "4,981", label: "Queries ranked, 624 of them inside the top 3" },
+  { value: "2 yr", label: "Of freelance SEO work for local businesses" },
 ];

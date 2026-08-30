@@ -2,55 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Clash Grotesk (Fontshare) — embedded so font-family resolves reliably */
-@font-face {
-  font-family: "Clash Grotesk";
-  src: url("https://cdn.fontshare.com/wf/2SAK53YLUN7RMYJU4MYLSBV6SSSJEJZB/RXS4DPGJRKOUFZMF5X5BVUGNNKJT65XZ/DJS4RYGIUYUXJQOHY5VCZPKSTXUSHTSP.woff2") format("woff2");
-  font-weight: 500;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Clash Grotesk";
-  src: url("https://cdn.fontshare.com/wf/MKEEQN57GWBZOSYWCRODNJOOZNPLMAKN/5SPTSZGHEACWWLF34DQ4WAA4OGU6PQIF/KN7DX4F6PXB74R6L2K2Y4NH3CB7FC53Q.woff2") format("woff2");
-  font-weight: 600;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Clash Grotesk";
-  src: url("https://cdn.fontshare.com/wf/P6VJ47S3OYMUC7HYSJLTK7PEIK5O2NPQ/TK62VLUWA76PMTK2XWBNDZB7QVXJGYE3/I5W5NEJGYVFUC5I4XOXVET63OE5PSVHJ.woff2") format("woff2");
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
-}
-
 :root {
-  /* Teal — light theme */
-  --bg: 244 248 247;        /* cool off-white */
-  --surface: 252 254 253;   /* lifted card */
-  --ink: 18 32 30;          /* deep teal-charcoal */
-  --muted: 90 107 104;      /* teal-grey (AA contrast on bg) */
-  --line: 219 232 229;      /* hairline */
-  --brand: 34 185 175;      /* #22B9AF */
-  --brand-soft: 209 242 239;/* soft teal wash */
-  --accent: 240 122 90;     /* warm coral highlight */
-  --edge: 18 32 30;         /* hard borders + offset shadows */
-  --deep: 34 185 175;       /* strong colour for text on light grounds */
+  /* Forest + cream. Primary #032b14 is the light-mode ink and the dark-mode ground. */
+  --bg: 251 247 237;        /* #FBF7ED cream */
+  --surface: 244 239 225;   /* #F4EFE1 lifted */
+  --ink: 3 43 20;           /* #032b14 */
+  --muted: 74 92 80;        /* #4A5C50 */
+  --line: 219 211 195;      /* hairline on cream */
+  --brand: 18 96 61;        /* #12603D data green, passes on cream */
+  --brand-soft: 226 236 227;/* soft green wash */
+  --accent: 160 58 32;      /* #A03A20 flag / anomaly */
+  --edge: 3 43 20;
+  --deep: 18 96 61;
 }
 
 .dark {
-  /* Teal — dark theme */
-  --bg: 13 22 21;           /* near-black teal */
-  --surface: 22 32 31;
-  --ink: 235 244 242;
-  --muted: 147 166 162;
-  --line: 37 50 47;
-  --brand: 45 209 198;      /* brighter teal for dark */
-  --brand-soft: 16 49 46;
-  --accent: 248 142 110;
-  --edge: 235 244 242;
-  --deep: 45 209 198;
+  --bg: 3 43 20;            /* #032b14 */
+  --surface: 6 55 27;       /* #06371B */
+  --ink: 246 242 230;       /* #F6F2E6 */
+  --muted: 174 199 183;     /* #AEC7B7 */
+  --line: 26 76 47;
+  --brand: 126 210 165;     /* #7ED2A5 */
+  --brand-soft: 10 74 38;
+  --accent: 242 161 132;    /* #F2A184 */
+  --edge: 246 242 230;
+  --deep: 126 210 165;
 }
 
 * {
@@ -85,17 +61,17 @@ body {
 /* ---- Creative SVG pattern utilities ---- */
 /* flowing contour waves */
 .pattern-waves {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='32'%3E%3Cpath d='M0 16 Q40 2 80 16 T160 16' fill='none' stroke='%2322B9AF' stroke-opacity='0.11' stroke-width='1.4'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='32'%3E%3Cpath d='M0 16 Q40 2 80 16 T160 16' fill='none' stroke='%2312603D' stroke-opacity='0.11' stroke-width='1.4'/%3E%3C/svg%3E");
   background-size: 160px 32px;
 }
 /* blueprint cross-marks */
 .pattern-crosses {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M20 14v12M14 20h12' stroke='%2322B9AF' stroke-opacity='0.11' stroke-width='1.2'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M20 14v12M14 20h12' stroke='%2312603D' stroke-opacity='0.11' stroke-width='1.2'/%3E%3C/svg%3E");
   background-size: 40px 40px;
 }
 /* concentric ripples (search signal) */
 .pattern-rings {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cg fill='none' stroke='%2322B9AF' stroke-opacity='0.09' stroke-width='1.2'%3E%3Ccircle cx='45' cy='45' r='10'/%3E%3Ccircle cx='45' cy='45' r='22'/%3E%3Ccircle cx='45' cy='45' r='34'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cg fill='none' stroke='%2312603D' stroke-opacity='0.09' stroke-width='1.2'%3E%3Ccircle cx='45' cy='45' r='10'/%3E%3Ccircle cx='45' cy='45' r='22'/%3E%3Ccircle cx='45' cy='45' r='34'/%3E%3C/g%3E%3C/svg%3E");
   background-size: 90px 90px;
 }
 /* waves in the page background colour, for use on teal brand surfaces */
@@ -349,4 +325,46 @@ html.gbp-light .gbp-theme .gbp-logo { filter: none; }
 .ghost-fade {
   -webkit-mask-image: radial-gradient(120% 95% at 50% 45%, transparent 0%, transparent 42%, #000 82%);
   mask-image: radial-gradient(120% 95% at 50% 45%, transparent 0%, transparent 42%, #000 82%);
+}
+
+
+/* ---- Rebuild: Search Console vernacular ---- */
+.eyebrow {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgb(var(--muted));
+}
+.tnum { font-variant-numeric: tabular-nums; }
+
+/* hairline metric row, borrowed from the Search Console header */
+.metric-row { border-top: 1px solid rgb(var(--line)); border-bottom: 1px solid rgb(var(--line)); }
+.metric-cell + .metric-cell { border-left: 1px solid rgb(var(--line)); }
+
+/* availability pulse */
+@keyframes avail-pulse {
+  0%   { transform: scale(0.6); opacity: 0.6; }
+  70%  { transform: scale(1.5); opacity: 0; }
+  100% { opacity: 0; }
+}
+.avail-pip::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  border: 1px solid rgb(var(--brand));
+  opacity: 0.5;
+  animation: avail-pulse 2.6s ease-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .avail-pip::after { animation: none; }
+}
+
+/* ledger index rows slide on hover */
+.ledger-row { transition: padding-left 0.14s ease-out, background 0.14s ease-out; }
+.ledger-row:hover { padding-left: 14px; background: linear-gradient(90deg, rgb(var(--surface)), transparent 60%); }
+@media (prefers-reduced-motion: reduce) {
+  .ledger-row { transition: none; }
+  .ledger-row:hover { padding-left: 0; }
 }

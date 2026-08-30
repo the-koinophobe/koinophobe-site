@@ -158,6 +158,23 @@ export type Review = {
   quote: string;
   name: string;
   role: string;
+  /** Where it was left. Upwork feedback is verifiable; direct clients aren't. */
+  source: "Upwork" | "Direct";
+};
+
+/**
+ * The public Upwork record, including the part that drags the average down.
+ * Taken from the live profile, Aug 2026.
+ */
+export const upwork = {
+  jobSuccess: "100%",
+  rating: "4.3",
+  reviews: 7,
+  jobs: 8,
+  hours: 151,
+  fiveStars: 5,
+  caveat:
+    "Five of the seven are 5.0. The average sits at 4.3 because of a 3.7 on a data-entry job in 2024, outside this niche and outside what I do now. I have left it on the profile.",
 };
 
 export const reviews: Review[] = [
@@ -166,35 +183,41 @@ export const reviews: Review[] = [
       "Michael did a wonderful job. Everything went smoothly, communication was fluent, on time and as expected. I highly recommend working with Michael.",
     name: "Mehdi D.",
     role: "Iteration X",
+    source: "Upwork",
   },
   {
     quote:
       "Michael handles the build and technical side for my agency's clients, and he's the one I trust to just get it done. Fast, reliable, and he keeps the quality tight across a lot of sites. We've come a long way working together.",
     name: "Brian Reid",
     role: "Founder, Palm Bay Marketing SEO",
+    source: "Direct",
   },
   {
     quote:
       "He's been on top of things, not only what I asked, but also outside the scope.",
     name: "Daniel Folks",
     role: "Owner, Over The Table Top",
+    source: "Direct",
   },
   {
     quote:
       "Best to work with, will hire all the time. Straight forward, doesn't waste time. If he can't do something he'll tell you.",
     name: "Johnny Urena",
-    role: "via Upwork",
+    role: "Free estimate page build",
+    source: "Upwork",
   },
   {
     quote:
       "This was not an easy job. It required a lot of research and hard work, and I really appreciate the end result. He was good in communication and skilled.",
     name: "Elmer Blackburn",
-    role: "via Upwork",
+    role: "SEO content project",
+    source: "Upwork",
   },
   {
     quote: "Good guy to work with. Attention to detail.",
-    name: "TintLordz Auto Spa",
-    role: "via Upwork",
+    name: "Tint Lordz Auto Spa",
+    role: "Website rebuild",
+    source: "Upwork",
   },
 ];
 

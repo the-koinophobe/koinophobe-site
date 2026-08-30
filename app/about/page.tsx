@@ -1,143 +1,219 @@
-import type { Metadata } from "next";
-import Image from "next/image";
+import {
+  BarChart3,
+  Code2,
+  Database,
+  Globe,
+  Layers,
+  MapPin,
+  PenLine,
+  Settings2,
+  Store,
+  TriangleAlert,
+  Users,
+} from "lucide-react";
+import { Availability } from "@/components/Availability";
 import { Reveal } from "@/components/Reveal";
-import { SectionHeading } from "@/components/SectionHeading";
-import { BookCall } from "@/components/BookCall";
+import { Spotlight } from "@/components/Spotlight";
+import { Stagger } from "@/components/Stagger";
 import { site } from "@/lib/site";
-import { TopoField } from "@/components/Decor";
 
-export const metadata: Metadata = {
-  title: "About",
-  description: "The story behind Koinophobe and how I work.",
+export const metadata = {
+  title: "Approach",
+  description:
+    "How Michael Edward works and what he actually does: technical SEO, measurement, local search and WordPress for small businesses and the agencies that serve them.",
   alternates: { canonical: "/about" },
 };
 
-const personJsonLd = {
+const PRINCIPLES = [
+  {
+    icon: <Database size={19} aria-hidden />,
+    title: "I start with the export, not the audit.",
+    body: "Most audits are a checklist run against a site that never asked for one. I'd rather read twelve months of your own Search Console and GA4 first, because the site already knows what's wrong with it. The audit comes second and it's shorter.",
+  },
+  {
+    icon: <TriangleAlert size={19} aria-hidden />,
+    title: "You'll hear the bad number from me first.",
+    body: "Every case on the work page has one, and I put it in writing before the client found it. A falling click-through rate, a flat year, a ceiling I can't move. If the only thing I ever send you is up and to the right, you should stop believing me.",
+  },
+  {
+    icon: <Layers size={19} aria-hidden />,
+    title: "I can work under your brand.",
+    body: "Most of what I've done in the last two years has gone out with an agency's name on it. Twenty-plus WordPress sites across roofing, real estate, wellness, legal, lawn care and HOA compliance. I'm comfortable being invisible, and I write reports your account manager can send without editing.",
+  },
+  {
+    icon: <Store size={19} aria-hidden />,
+    title: "Small businesses, real stakes.",
+    body: "A clinic, a tint shop, a game store. Nobody here has a budget to waste on a strategy that takes two years to prove. So I build the measurement first, on your property, and you can check my work whenever you want.",
+  },
+];
+
+const SERVICES = [
+  {
+    icon: <Settings2 size={17} aria-hidden />,
+    title: "Technical SEO",
+    body: "Crawl and index diagnosis, site architecture, internal linking, schema, migrations, Core Web Vitals. The work behind every position change on the work page.",
+  },
+  {
+    icon: <BarChart3 size={17} aria-hidden />,
+    title: "Measurement",
+    body: "GA4 and GTM built properly, Search Console configured, conversion and call tracking wired to the things that make money. If it isn't measured I won't claim it.",
+  },
+  {
+    icon: <MapPin size={17} aria-hidden />,
+    title: "Local search",
+    body: "Location pages that aren't doorway pages, Google Business Profile, review velocity, map pack work. This is where local businesses win or lose.",
+  },
+  {
+    icon: <PenLine size={17} aria-hidden />,
+    title: "Content that ranks",
+    body: "Title and meta rewrites, service page copy, long-form articles built around real query data rather than a keyword tool's guess.",
+  },
+  {
+    icon: <Code2 size={17} aria-hidden />,
+    title: "Build and fix",
+    body: "WordPress, Elementor, AIOSEO and Yoast day to day. Also React, TypeScript, Django and Postgres when a site needs something a plugin can't do.",
+  },
+  {
+    icon: <Users size={17} aria-hidden />,
+    title: "White-label for agencies",
+    body: "I slot in under your brand, work your process, and hand back deliverables your team can ship. Available for retainer or per-project.",
+  },
+];
+
+const WORKING = [
+  {
+    icon: <Layers size={15} aria-hidden />,
+    title: "Retainer or per-project.",
+    body: "Whichever fits the work in front of us.",
+  },
+  {
+    icon: <Users size={15} aria-hidden />,
+    title: "Under your brand or mine.",
+    body: "Agencies get deliverables their team can ship unedited.",
+  },
+  {
+    icon: <Globe size={15} aria-hidden />,
+    title: "US Eastern hours.",
+    body: "Calls, standups and turnaround on your clock.",
+  },
+];
+
+const servicesLd = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Michael Edward",
-  url: "https://koinophobe.com/about",
-  image: "https://koinophobe.com/michael-edward.webp",
-  jobTitle: "SEO & Conversion Tracking Specialist",
-  worksFor: { "@type": "Organization", name: "Koinophobe", url: "https://koinophobe.com" },
-  sameAs: [site.github],
-  knowsAbout: [
-    "Technical SEO",
-    "Conversion tracking",
-    "Google Analytics 4",
-    "Google Tag Manager",
-    "Web development",
-  ],
+  "@type": "ItemList",
+  name: "Services",
+  itemListElement: SERVICES.map((s, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    item: {
+      "@type": "Service",
+      name: s.title,
+      description: s.body,
+      provider: { "@type": "Person", name: site.owner },
+      areaServed: "United States",
+    },
+  })),
 };
 
-const principles = [
-  { title: "Fast and low-drama", body: "Send me the work and access, and I slot in. No long onboarding, no chasing." },
-  { title: "Measured, not vague", body: "I track form fills and calls, so you see the line from work to revenue." },
-  { title: "Detail under pressure", body: "I carry several live sites at once without dropping the small things." },
-  { title: "Honest about fit", body: "If I am not the right person for the job, I will tell you straight." },
-];
+const personLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: site.owner,
+  url: "https://koinophobe.com/about",
+  email: site.email,
+  sameAs: [site.linkedin],
+  jobTitle: "Technical SEO and analytics consultant",
+  knowsAbout: [
+    "Technical SEO",
+    "Local SEO",
+    "Google Analytics 4",
+    "Google Tag Manager",
+    "Google Search Console",
+    "Core Web Vitals",
+    "WordPress",
+  ],
+};
 
 export default function AboutPage() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}
       />
-      <section className="relative overflow-hidden">
-        <div className="hero-wash absolute inset-0 -z-10" />
-        <TopoField className="pointer-events-none absolute -right-40 top-0 -z-10 h-full w-[640px] text-ink/[0.05]" />
-        <div className="container-pad pb-12 pt-36 sm:pt-40">
-          <SectionHeading
-            titleAs="h1"
-            kicker="About"
-            title="I have been into computers since I was 12."
-            intro="Koinophobe is the fear of being ordinary. It is also the standard I hold every result to."
-          />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesLd) }}
+      />
+
+      <section className="pt-32 sm:pt-36">
+        <div className="container-pad grid items-end gap-9 lg:grid-cols-[1.35fr_1fr] lg:gap-14">
+          <Reveal>
+            <p className="eyebrow">[ How I work ]</p>
+            <h1 className="mt-4 max-w-[20ch] font-display text-[clamp(2.2rem,5.4vw,4.05rem)] leading-[1.04] tracking-tight text-balance">
+              Four things you can hold me to.
+            </h1>
+            <p className="mt-6 max-w-[62ch] text-[17.5px] text-muted">
+              There isn&rsquo;t much mystery in this job. There&rsquo;s the data you already own, the
+              parts of the site stopping it from working, and whether the person reporting on it is
+              willing to tell you something you don&rsquo;t want to hear.
+            </p>
+          </Reveal>
+          <Stagger className="border-t border-line">
+            {WORKING.map((r) => (
+              <div
+                key={r.title}
+                className="grid grid-cols-[22px_1fr] items-baseline gap-3.5 border-b border-line py-3.5"
+              >
+                <span className="text-brand">{r.icon}</span>
+                <p className="text-[14.5px] text-muted">
+                  <b className="font-medium text-ink">{r.title}</b> {r.body}
+                </p>
+              </div>
+            ))}
+          </Stagger>
+        </div>
+
+        <div className="container-pad">
+          <Stagger className="mt-12 grid gap-px bg-line md:grid-cols-2">
+            {PRINCIPLES.map((p, i) => (
+              <Spotlight
+                key={p.title}
+                className={`bg-bg py-8 md:pr-8 ${i % 2 === 1 ? "md:pl-8" : ""}`}
+              >
+                <span className="mb-3.5 block text-brand">{p.icon}</span>
+                <h2 className="mb-3 font-display text-[1.4rem] leading-snug tracking-tight text-balance">
+                  {p.title}
+                </h2>
+                <p className="text-[15.5px] text-muted">{p.body}</p>
+              </Spotlight>
+            ))}
+          </Stagger>
         </div>
       </section>
 
-      <section className="container-pad py-10">
-        <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:items-center">
-          <Reveal className="space-y-5 text-lg leading-relaxed text-muted">
-            <p>
-              I started tinkering with computers as a kid, learned design and PC
-              repair as a teen, and went on to study Computer Science, building a
-              machine-learning phishing detector with around 98% accuracy along
-              the way.
-            </p>
-            <p>
-              After front-end and back-end engineering work, I found my lane:
-              technical SEO and web. The engineering background means the parts
-              most people avoid, tag setup, migrations, Core Web Vitals, feel like
-              home turf rather than a hurdle.
-            </p>
-            <p>
-              Today I run a freelance practice powering both agencies and service
-              businesses. For agencies I am the white-label set of hands behind the
-              brand. For business owners I am the calm operator who makes the
-              website actually generate calls. Either way, the goal is the same:
-              nothing mediocre.
-            </p>
-            <p className="text-sm text-ink/70">
-              Based in Port Harcourt, working on US hours with full Eastern and
-              Central overlap.
-            </p>
-            <div className="flex flex-wrap gap-2 pt-1">
-              {[
-                "React · TypeScript",
-                "Django · PostgreSQL · Docker",
-                "WordPress",
-                "GA4 · GTM · Search Console",
-                "Core Web Vitals",
-                "White-label ready",
-              ].map((chip) => (
-                <span
-                  key={chip}
-                  className="rounded-full border border-line bg-surface/60 px-3 py-1.5 text-xs font-medium text-muted"
-                >
-                  {chip}
-                </span>
-              ))}
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <div className="relative mx-auto aspect-[7/8] w-full max-w-sm overflow-hidden rounded-3xl border border-line bg-surface/60 lg:max-w-none">
-              <Image
-                src="/michael-edward.webp"
-                alt="Michael Edward, the SEO and conversion tracking specialist behind Koinophobe"
-                fill
-                sizes="(min-width: 1024px) 34vw, 100vw"
-                className="object-cover object-top"
-              />
-              <span className="absolute bottom-4 left-4 rounded-full border border-line bg-bg/70 px-3 py-1 font-mono text-[11px] text-ink backdrop-blur">
-                Michael Edward · Koinophobe
-              </span>
-            </div>
-          </Reveal>
-        </div>
-
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {principles.map((p) => (
-            <div key={p.title} className="lift rounded-3xl border border-line bg-surface/60 p-6">
-              <h3 className="font-display text-base font-semibold text-ink">{p.title}</h3>
-              <p className="mt-1.5 text-sm text-muted">{p.body}</p>
+      <section className="container-pad pb-24 pt-24">
+        <Reveal>
+        <p className="eyebrow">[ What I actually do ]</p>
+        <h2 className="mt-3.5 max-w-[22ch] font-display text-[clamp(1.85rem,3.9vw,2.95rem)] leading-[1.05] tracking-tight text-balance">
+          Technical, measurable, and mostly in WordPress.
+        </h2>
+        </Reveal>
+        <Stagger className="mt-11 border-t border-line">
+          {SERVICES.map((s) => (
+            <div
+              key={s.title}
+              className="grid grid-cols-[26px_1fr] items-baseline gap-4 border-b border-line py-5 sm:grid-cols-[26px_20ch_1fr] sm:gap-6"
+            >
+              <span className="text-brand">{s.icon}</span>
+              <h3 className="text-base font-semibold tracking-tight">{s.title}</h3>
+              <p className="col-start-2 text-[15.5px] text-muted sm:col-start-3">{s.body}</p>
             </div>
           ))}
-        </div>
+        </Stagger>
       </section>
 
-      <section className="container-pad py-16">
-        <Reveal>
-          <div className="flex flex-col items-center gap-5 rounded-[2rem] border border-line bg-surface/50 p-10 text-center">
-            <h2 className="font-display text-2xl font-bold text-ink sm:text-3xl">
-              Let&apos;s talk about your sites.
-            </h2>
-            <BookCall label="Book a call" />
-          </div>
-        </Reveal>
-      </section>
+      <Availability />
     </>
   );
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Fraunces, JetBrains_Mono } from "next/font/google";
+import { Instrument_Sans, Fraunces, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Header } from "@/components/Header";
@@ -11,13 +11,18 @@ import { Cursor } from "@/components/Cursor";
 import { CookieConsent } from "@/components/CookieConsent";
 import { site } from "@/lib/site";
 
-const sans = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
+const sans = Instrument_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+  weight: ["400", "500", "600"],
+});
 const serif = Fraunces({
   subsets: ["latin"],
   variable: "--font-serif",
   display: "swap",
   style: ["italic", "normal"],
-  weight: ["400", "500"],
+  weight: ["300", "400", "500"],
 });
 const mono = JetBrains_Mono({
   subsets: ["latin"],
@@ -29,11 +34,11 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://koinophobe.com"),
   title: {
-    default: "Koinophobe — SEO you can measure",
+    default: "Koinophobe — technical SEO for local businesses",
     template: `%s — ${site.name}`,
   },
   description:
-    "Freelance SEO and conversion tracking. I grow your organic traffic and prove it converts, with GA4, GTM and reporting that ties rankings to real leads.",
+    "Technical SEO and measurement for local businesses. Eighteen months of live Search Console data across five properties, good rows and bad rows.",
   keywords: [
     "SEO specialist",
     "technical SEO",
@@ -50,15 +55,15 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://koinophobe.com",
     siteName: site.name,
-    title: "Koinophobe — SEO you can measure",
+    title: "Koinophobe — technical SEO for local businesses",
     description:
-      "I grow organic traffic and prove it converts, with tracking that ties rankings to real leads.",
+      "Technical SEO and measurement for local businesses, with the Search Console data to back it up.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Koinophobe — SEO you can measure",
+    title: "Koinophobe — technical SEO for local businesses",
     description:
-      "Freelance SEO and conversion tracking that ties rankings to real leads.",
+      "Technical SEO and measurement for local businesses. Every figure from a live export.",
   },
   robots: { index: true, follow: true },
 };
@@ -71,8 +76,8 @@ const jsonLd = {
     "Freelance SEO and conversion tracking. Grows organic traffic and proves it converts with analytics that tie rankings to leads.",
   url: "https://koinophobe.com",
   founder: { "@type": "Person", name: "Michael Edward" },
-  sameAs: [site.github],
-  areaServed: "Worldwide (remote, US hours)",
+  sameAs: [site.linkedin],
+  areaServed: "United States (remote, US Eastern hours)",
   knowsAbout: [
     "Technical SEO",
     "On-page SEO",
@@ -85,6 +90,15 @@ const jsonLd = {
   serviceType: "Search Engine Optimization",
 };
 
+const siteLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: site.name,
+  url: "https://koinophobe.com",
+  inLanguage: "en",
+  author: { "@type": "Person", name: site.owner, sameAs: [site.linkedin] },
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
@@ -93,24 +107,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${sans.variable} ${serif.variable} ${mono.variable}`}
     >
       <head>
-        <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="anonymous" />
-        <link
-          rel="preload"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-          href="https://cdn.fontshare.com/wf/MKEEQN57GWBZOSYWCRODNJOOZNPLMAKN/5SPTSZGHEACWWLF34DQ4WAA4OGU6PQIF/KN7DX4F6PXB74R6L2K2Y4NH3CB7FC53Q.woff2"
-        />
-        <link
-          rel="preload"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-          href="https://cdn.fontshare.com/wf/P6VJ47S3OYMUC7HYSJLTK7PEIK5O2NPQ/TK62VLUWA76PMTK2XWBNDZB7QVXJGYE3/I5W5NEJGYVFUC5I4XOXVET63OE5PSVHJ.woff2"
-        />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, siteLd]) }}
         />
       </head>
       <body className="js-anim min-h-screen">

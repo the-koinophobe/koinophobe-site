@@ -2,27 +2,23 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { Sun, Moon } from "lucide-react";
+import { SunMoon } from "lucide-react";
 
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
-
   const isDark = mounted && resolvedTheme === "dark";
 
   return (
     <button
       type="button"
-      aria-label="Toggle colour theme"
+      aria-label="Switch theme"
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1.5 text-sm font-medium text-ink transition-colors hover:border-brand"
+      className="ml-2 inline-flex items-center gap-2 rounded-sm border border-line px-2.5 py-1.5 text-muted transition-colors duration-100 hover:border-muted hover:text-ink"
     >
-      <span className="grid h-5 w-5 place-items-center rounded-full bg-brand-soft text-brand">
-        {isDark ? <Moon size={12} /> : <Sun size={12} />}
-      </span>
-      <span className="hidden sm:inline">{isDark ? "Dark" : "Light"}</span>
+      <SunMoon size={14} aria-hidden />
     </button>
   );
 }

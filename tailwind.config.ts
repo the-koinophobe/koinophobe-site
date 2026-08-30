@@ -20,7 +20,7 @@ const config: Config = {
         accent: "rgb(var(--accent) / <alpha-value>)",
       },
       fontFamily: {
-        display: ["'Clash Grotesk'", "var(--font-sans)", "system-ui", "sans-serif"],
+        display: ["var(--font-serif)", "Iowan Old Style", "Georgia", "serif"],
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
         serif: ["var(--font-serif)", "Georgia", "serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
