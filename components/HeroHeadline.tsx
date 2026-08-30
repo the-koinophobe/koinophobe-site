@@ -38,7 +38,7 @@ export function HeroHeadline({
   return (
     <h1 ref={ref} className={className} aria-label={label}>
       {segments.map((seg, si) => (
-        <Fragment key={si}>
+        <span key={si} className="block">
           {seg.text.split(" ").map((w, wi) => (
             <Fragment key={wi}>
               <span className="inline-block overflow-hidden pb-[0.12em] -mb-[0.12em] align-baseline" aria-hidden>
@@ -51,7 +51,7 @@ export function HeroHeadline({
               </span>{" "}
             </Fragment>
           ))}
-        </Fragment>
+        </span>
       ))}
     </h1>
   );

@@ -162,21 +162,6 @@ export type Review = {
   source: "Upwork" | "Direct";
 };
 
-/**
- * The public Upwork record, including the part that drags the average down.
- * Taken from the live profile, Aug 2026.
- */
-export const upwork = {
-  jobSuccess: "100%",
-  rating: "4.3",
-  reviews: 7,
-  jobs: 8,
-  hours: 151,
-  fiveStars: 5,
-  caveat:
-    "Five of the seven are 5.0. The average sits at 4.3 because of a 3.7 on a data-entry job in 2024, outside this niche and outside what I do now. I have left it on the profile.",
-};
-
 export const reviews: Review[] = [
   {
     quote:

@@ -15,8 +15,8 @@ const SECTORS = [
  */
 export function TrustRow() {
   return (
-    <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-3 border-b border-line py-5">
-      <p className="font-mono text-[11px] uppercase tracking-[0.13em] text-muted">
+    <div className="flex flex-col gap-y-2.5 border-b border-line py-5 lg:flex-row lg:items-baseline lg:justify-between lg:gap-x-8">
+      <p className="font-mono text-[10.5px] uppercase leading-relaxed tracking-[0.11em] text-muted sm:text-[11px] sm:tracking-[0.13em]">
         <span className="text-ink">20+ sites</span> across{" "}
         {SECTORS.map((s, i) => (
           <span key={s}>
@@ -25,7 +25,7 @@ export function TrustRow() {
           </span>
         ))}
       </p>
-      <p className="font-mono text-[11px] uppercase tracking-[0.13em] text-muted">
+      <p className="font-mono text-[10.5px] uppercase leading-relaxed tracking-[0.11em] text-muted sm:text-[11px] sm:tracking-[0.13em]">
         Two named on this site &middot; the rest is white-label and stays anonymous
       </p>
     </div>

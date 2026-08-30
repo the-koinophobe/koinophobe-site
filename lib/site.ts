@@ -7,7 +7,9 @@ export const site = {
   fallbackEmail: "thekoinophobe@gmail.com",
   linkedin: "https://www.linkedin.com/in/airdward/",
   linkedinHandle: "linkedin.com/in/airdward",
-  tagline: "Numbers don't lie.",
+  x: "https://x.com/con610t",
+  xHandle: "@con610t",
+  tagline: "Numbers don't lie. I make yours go up.",
   valueProp:
     "Technical SEO and measurement for local businesses, with the Search Console data to back every claim.",
   nav: [

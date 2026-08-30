@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Reveal } from "@/components/Reveal";
-import { BookCall } from "@/components/BookCall";
+import { Availability } from "@/components/Availability";
+import { ArrowLeft } from "lucide-react";
 import { notes, getNote } from "@/lib/notes";
-import { WaveLines } from "@/components/Decor";
 
 export function generateStaticParams() {
   return notes.map((n) => ({ slug: n.slug }));
@@ -22,7 +22,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 }
 
 function fmt(date: string) {
-  return new Date(date).toLocaleDateString("en-US", {
+  return new Date(date).toLocaleDateString("en-GB", {
     year: "numeric",
     month: "short",
     day: "numeric",
@@ -68,29 +68,38 @@ export default function NotePage({ params }: { params: { slug: string } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <section className="relative overflow-hidden">
-        <div className="hero-wash absolute inset-0 -z-10" />
-        <WaveLines className="pointer-events-none absolute bottom-0 left-0 -z-10 w-full text-ink/[0.05]" />
-        <div className="container-pad pb-8 pt-36 sm:pt-40">
+      <section className="pt-28 sm:pt-36">
+        <div className="container-pad">
           <Reveal>
-            <Link href="/notes" className="text-sm font-semibold text-brand">
-              ← All notes
+            <Link
+              href="/notes"
+              className="group inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.12em] text-muted transition-colors duration-100 hover:text-ink"
+            >
+              <ArrowLeft
+                size={15}
+                aria-hidden
+                className="transition-transform duration-150 group-hover:-translate-x-1 motion-reduce:transform-none"
+              />
+              All notes
             </Link>
-            <span className="mt-4 block font-mono text-xs text-muted">{fmt(note.date)}</span>
-            <h1 className="mt-2 max-w-3xl font-display text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl">
+            <span className="mt-8 block font-mono text-[11px] uppercase tracking-[0.1em] text-muted">
+              {fmt(note.date)}
+            </span>
+            <h1 className="mt-3 max-w-[20ch] font-display text-[clamp(2rem,4.8vw,3.5rem)] leading-[1.05] tracking-tight text-balance">
               {note.title}
             </h1>
+            <p className="mt-6 max-w-[58ch] text-[17.5px] text-muted">{note.excerpt}</p>
           </Reveal>
         </div>
       </section>
 
-      <section className="container-pad py-6">
-        <Reveal className="mx-auto max-w-2xl space-y-5 text-lg leading-relaxed text-muted">
+      <section className="container-pad pb-24 pt-14">
+        <Reveal className="max-w-[68ch] space-y-6 text-[17.5px] leading-[1.7] text-muted">
           {note.body.map((p, i) =>
             p.startsWith("## ") ? (
               <h2
                 key={i}
-                className="!mt-10 font-display text-2xl font-semibold tracking-tight text-ink"
+                className="!mt-14 font-display text-[clamp(1.5rem,3vw,2rem)] leading-snug tracking-tight text-ink text-balance"
               >
                 {p.slice(3)}
               </h2>
@@ -99,16 +108,9 @@ export default function NotePage({ params }: { params: { slug: string } }) {
             )
           )}
         </Reveal>
-
-        <div className="mx-auto mt-12 max-w-2xl rounded-3xl border border-line bg-surface/60 p-7 text-center">
-          <p className="font-display text-lg font-semibold text-ink">
-            Want this done on your site?
-          </p>
-          <div className="mt-4 flex justify-center">
-            <BookCall label="Get a free teardown" />
-          </div>
-        </div>
       </section>
+
+      <Availability />
     </>
   );
 }

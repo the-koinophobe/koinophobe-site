@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { agencyPages, positionLadder, spikeDaily, spikeStart } from "@/lib/gsc";
+import { agencyPages, positionLadder } from "@/lib/gsc";
 
 if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger);
 
@@ -293,83 +293,6 @@ export function PageBars({ title, range }: { title: string; range: string }) {
           );
         })}
       </svg>
-    </Frame>
-  );
-}
-
-/* ------------------------------------------------------------- spike chart */
-
-export function SpikeChart({ title, range }: { title: string; range: string }) {
-  const v = useVar();
-  const [hover, setHover] = useState<number | null>(null);
-  const frameRef = useDrawIn((el, tl) => {
-    tl.fromTo(el.querySelectorAll("[data-day]"), { scaleY: 0, transformOrigin: "bottom center" },
-      { scaleY: 1, duration: 0.5, ease: "power2.out", stagger: 0.008 })
-      .fromTo(el.querySelectorAll("[data-anomaly]"), { scaleY: 0, transformOrigin: "bottom center" },
-        { scaleY: 1, duration: 0.7, ease: "power4.out" }, "-=0.15")
-      .fromTo(el.querySelectorAll("[data-anomaly-label]"), { opacity: 0, x: -8 },
-        { opacity: 1, x: 0, duration: 0.45, ease: "power2.out" }, "-=0.3");
-  });
-  const W = 560, H = 230, PL = 40, PR = 14, PT = 16, PB = 30;
-  const plotH = H - PT - PB;
-  const breakY = PT + plotH * 0.3;
-  const y = (val: number) =>
-    val <= 12 ? H - PB - (val / 12) * (plotH * 0.62) : breakY - Math.min(1, (val - 12) / 2200) * (plotH * 0.14);
-  const x = (i: number) => PL + (i * (W - PL - PR)) / (spikeDaily.length - 1);
-  const bw = Math.max(3, (W - PL - PR) / spikeDaily.length - 2);
-  const dateOf = (i: number) =>
-    new Date(spikeStart + i * 86400000).toLocaleDateString("en-GB", {
-      day: "numeric", month: "short", timeZone: "UTC",
-    });
-
-  return (
-    <Frame title={title} range={range} innerRef={frameRef}>
-      <div className="relative">
-        <svg viewBox={`0 0 ${W} ${H}`} className="block w-full overflow-visible" role="img"
-          aria-label="Clicks per day for two months, with one anomalous day at 2,184 clicks">
-          {[0, 6, 12].map((g) => (
-            <g key={g}>
-              <line x1={PL} x2={W - PR} y1={y(g)} y2={y(g)} stroke={v("--line")} strokeWidth={1} />
-              <text x={PL - 9} y={y(g) + 4} textAnchor="end" fill={v("--muted")} fontFamily={MONO} fontSize={10}>{g}</text>
-            </g>
-          ))}
-          <path
-            d={`M${PL - 6} ${breakY + plotH * 0.06 + 5} l 12 -5 M${PL - 6} ${breakY + plotH * 0.06 + 11} l 12 -5`}
-            stroke={v("--muted")} strokeWidth={1.2} fill="none"
-          />
-          {spikeDaily.map((val, i) => {
-            const isSpike = val > 100;
-            const yy = y(val);
-            return (
-              <rect
-                {...(isSpike ? { "data-anomaly": "" } : { "data-day": "" })}
-                key={i} x={x(i) - bw / 2} y={yy} width={bw} height={Math.max(1.5, H - PB - yy)} rx={2}
-                fill={isSpike ? v("--accent") : v("--brand", 0.72)}
-                onPointerEnter={() => setHover(i)} onPointerLeave={() => setHover(null)}
-              />
-            );
-          })}
-          <text data-anomaly-label x={x(30) + 9} y={y(2184) + 11} fill={v("--accent")} fontFamily={MONO} fontSize={11} fontWeight={500}>
-            2,184 &middot; 8 Jul
-          </text>
-          {[["8 Jun", 0], ["8 Jul", 30], ["8 Aug", 61]].map(([lab, i]) => (
-            <text key={lab as string} x={x(i as number)} y={H - 9} textAnchor="middle"
-              fill={v("--muted")} fontFamily={MONO} fontSize={10}>
-              {lab}
-            </text>
-          ))}
-        </svg>
-        {hover !== null && (
-          <div
-            className="pointer-events-none absolute -translate-x-1/2 -translate-y-[124%] whitespace-nowrap rounded-sm bg-ink px-2.5 py-1.5 font-mono text-[11px] leading-snug text-bg"
-            style={{ left: `${(x(hover) / W) * 100}%`, top: `${(y(spikeDaily[hover]) / H) * 100}%` }}
-          >
-            <b>{spikeDaily[hover].toLocaleString("en-US")}</b> clicks
-            <br />
-            {dateOf(hover)} 2026
-          </div>
-        )}
-      </div>
     </Frame>
   );
 }

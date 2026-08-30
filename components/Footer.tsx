@@ -21,6 +21,9 @@ export function Footer() {
             <a href={site.linkedin} className="hover:text-ink">
               LinkedIn
             </a>
+            <a href={site.x} className="hover:text-ink">
+              X
+            </a>
             <Link href="/privacy" className="hover:text-ink">
               Privacy
             </Link>

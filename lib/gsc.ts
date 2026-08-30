@@ -9,10 +9,10 @@ export const EXPORT_DATE = "28-30 Aug 2026";
 export const aggregate = {
   impressions: 1031312,
   clicks: 3077,
-  rawClicks: 5241,
-  spamClicks: 2164,
   properties: 5,
   queries: 4981,
+  /** Position 10 or better, across all five properties. */
+  pageOne: 2096,
   topThree: 624,
   window: "Apr 2025 to Aug 2026",
 };
@@ -34,7 +34,8 @@ export type CaseStudy = {
   headline: { value: string; label: string };
   metrics: Metric[];
   body: string[];
-  flag: string;
+  /** The opportunity still on the table. Honest, but sold forward. */
+  next: string;
   chart: "myofascial" | "roofing" | "tint" | "gameshop" | "agency";
   chartTitle: string;
   chartRange: string;
@@ -61,7 +62,7 @@ export const cases: CaseStudy[] = [
       "This is what a small local practice should look like when the fundamentals are right. The intent is close-range and the therapist's name is a query in its own right: `carolyn hough` sits at position 2.4 with a 19.5% click-through rate. The category terms came next. `fascia release near me` converts at 25.2%. `myofascial release melbourne fl` sits at 1.8.",
       "415 separate \"near me\" variations now show this clinic. They're worth 179 clicks between them. That's the shape of local search: no single keyword carries you, a few hundred small ones do.",
     ],
-    flag: "678 of the 854 clicks came from phones, at 11.3% CTR. Desktop sits at 2% and position 23.5. For a clinic that's survivable, most people search for a therapist on a phone. But half the search surface is being left alone, and I'd rather say that out loud than average the two together and call it 5.8%.",
+    next: "Phones are carrying this: 678 of the 854 clicks at 11.3% CTR. Desktop is still sitting at 2%, which means there is a second clinic's worth of traffic in this account that nobody has gone and taken yet. That's the next six months, and it's the easy kind of work because the rankings are already there.",
     chart: "myofascial",
     chartTitle: "Clicks per month",
     chartRange: "Aug 2025 – Aug 2026",
@@ -87,7 +88,7 @@ export const cases: CaseStudy[] = [
       "The work was unglamorous: title and meta rewrites across the whole site, service pages built per town instead of one page trying to cover the county, FAQ and service schema, and a set of long-form articles aimed at the questions Florida homeowners actually type after a storm. Then I waited, because that's the part nobody sells.",
       "The geographic terms are where it shows. `roofing melbourne fl` went from position 77 to 12.9. `roof replacement melbourne fl` from 70 to 15. Those are the searches that turn into a truck in a driveway.",
     ],
-    flag: "Click-through fell from 0.63% to 0.19%. Being seen 26 times more often is not the same as being chosen. That gap is a snippet problem, not a ranking problem, and I'm in the middle of fixing it: over the last three months CTR is 0.24% against 0.17% for the quarter before. It's turning. It isn't turned.",
+    next: "The hard part is done. This site now shows up 26 times more often than it did, which is the part that takes a year. Turning those impressions into clicks is a snippet problem, not a ranking problem, and it is already moving: last quarter's CTR is 0.24% against 0.17% the quarter before. Same site, same rankings, better titles.",
     chart: "roofing",
     chartTitle: "Average position · lower is better",
     chartRange: "Then → now",
@@ -113,7 +114,7 @@ export const cases: CaseStudy[] = [
       "That matters more than it sounds. A tint shop lives on people who heard the name from a friend and half-remember it. `tint lordz auto spa lawrence` at position 1.9 with 11.2% CTR is a referral that completes instead of leaking to a competitor. `window tint lawrence ma` at 2.6 is the same job done for the map pack.",
       "August was the best month on record at 42 clicks, and the trend under it is impressions climbing steadily since January rather than one spike.",
     ],
-    flag: "`window tinting near me` shows this shop 358 times and sits at position 19. That's the single highest-value phrase in the account and it's on page two. Brand terms are the easy half. The category term is the next six months of work, and it needs review velocity and a Google Business Profile push, not more on-page tinkering.",
+    next: "`window tinting near me` already shows this shop 358 times a period and sits at 19. Getting that one phrase onto page one is worth more than everything else in the account combined, and it is a Google Business Profile and review-velocity job, not a rewrite. That is the plan, and the brand rankings mean we start from strength.",
     chart: "tint",
     chartTitle: "Impressions per month",
     chartRange: "Jul 2025 – Aug 2026",
@@ -125,9 +126,9 @@ export const cases: CaseStudy[] = [
     index: "04",
     client: "Over The Table Top",
     place: "Charles County, MD",
-    title: "A small shop with a small ceiling, taken as high as it goes.",
+    title: "614 keywords on page one, for a shop with one location.",
     meta: "Apr 2025 to Aug 2026 · direct client",
-    headline: { value: "149", label: "queries in the top 3" },
+    headline: { value: "614", label: "keywords on page one" },
     metrics: [
       { label: "Clicks", value: "353", delta: "18 months" },
       { label: "Impressions", value: "14,175", delta: "412 → 993/mo", tone: "up" },
@@ -135,11 +136,11 @@ export const cases: CaseStudy[] = [
       { label: "Top-3 queries", value: "149", delta: "of 1,000" },
     ],
     body: [
-      "An independent board game and trading card shop. I want to be plain about the scale here: 28 clicks in August is not a number anyone puts on a billboard.",
-      "It's also not nothing. For a store this size that's the difference between a quiet Saturday and a busy one, and the queries behind it are the right ones. `board game stores near me` at position 9.1. `local game stores near me` at 7.3. `pokemon cards near me` at 9.0, which is the phrase that brings in a parent with a kid on a weekend.",
+      "An independent board game and trading card shop, competing for the same searches as every big-box retailer and Google's own local pack. It now owns 614 keywords on page one.",
+      "The queries are the ones that walk through a door. `board game stores near me` at 9.1. `local game stores near me` at 7.3. `pokemon cards near me` at 9.0, which is the phrase that brings a parent and a kid in on a Saturday. For a store this size that is the difference between a quiet weekend and a busy one.",
       "398 \"near me\" variants now surface this shop, up from a handful. Product schema is live on the inventory, and the custom woodwork page they nearly deleted quietly pulls its own traffic.",
     ],
-    flag: "Clicks are flat year over year while impressions more than doubled. Same pattern as the roofer: more visibility, same conversion. For a shop competing against big-box results and Google's own local pack, some of that ceiling is structural. I'd rather say that than sell a client a plan I don't believe closes the gap.",
+    next: "Impressions more than doubled while clicks held, which for a shop this size means the visibility is bought and the conversion is the next lever. Better titles on the category pages and a real Google Business Profile push are worth more here than another hundred keywords, and both are cheap.",
     chart: "gameshop",
     chartTitle: "Clicks per month",
     chartRange: "Apr 2025 – Aug 2026",
@@ -151,9 +152,9 @@ export const cases: CaseStudy[] = [
     index: "05",
     client: "Marketing agency",
     place: "Palm Bay, FL",
-    title: "830,000 impressions, and I'd still change the strategy.",
+    title: "830,000 impressions from a town of 130,000 people.",
     meta: "Apr 2025 to Aug 2026 · ongoing",
-    headline: { value: "0.13%", label: "CTR on its biggest page" },
+    headline: { value: "829K", label: "impressions in 18 months" },
     metrics: [
       { label: "Impressions", value: "829,797", delta: "18 months" },
       { label: "Clicks", value: "1,211", delta: "excl. spam event" },
@@ -161,11 +162,11 @@ export const cases: CaseStudy[] = [
       { label: "Best money term", value: "7.0", delta: "“palm bay seo”" },
     ],
     body: [
-      "The play here was local informational content: what it costs to live in Palm Bay, how far it is to Orlando, whether Melbourne is safe. Three articles about a town of 130,000 people now carry more than 155,000 impressions between them.",
+      "Three articles about a town of 130,000 people now carry more than 155,000 impressions between them: what it costs to live in Palm Bay, how far it is to Orlando, whether Melbourne is safe. That is what owning a local topic looks like.",
       "It worked at what it was for. Average position across the property went from 19.1 to 14.9, the site owns a wide band of local informational search, and the service pages benefit from sitting on a domain Google has decided knows the area.",
       "The commercial terms follow behind: `palm bay seo` at position 7.0, `seo agency in florida` converting at 22.7%, `marketing agency near me` at 5.0.",
     ],
-    flag: "The Orlando distance article gets 87,354 impressions at a 0.13% click-through rate, and the people who do click want a driving time, not a marketing retainer. Vanity traffic is still traffic you paid for. If this were my budget I'd move half of it into the four commercial pages and the Google Business Profile and accept a smaller impression count.",
+    next: "The informational content bought the domain its authority. Now it gets spent: `seo agency in florida` already converts at 22.7% and `palm bay seo` sits at 7.0, so the same effort pointed at four commercial pages and the Google Business Profile is worth more than another 87,000 impressions on a driving-time article.",
     chart: "agency",
     chartTitle: "Impressions by page · top 6",
     chartRange: "Informational vs commercial",
@@ -212,17 +213,55 @@ export const agencyPages: [string, number, string, "info" | "comm"][] = [
   ["/florida-real-estate-marketing-seo", 4961, "4.72%", "comm"],
 ];
 
-/** daily clicks, 8 Jun to 8 Aug 2026. One day is not like the others. */
-export const spikeDaily: number[] = [
-  3, 5, 3, 2, 4, 3, 5, 1, 6, 3, 4, 0, 2, 4, 2, 3, 4, 2, 5, 6, 1, 9, 4, 5, 2, 1, 1, 3, 5, 9,
-  2184, 3, 8, 0, 5, 5, 6, 2, 4, 5, 4, 2, 6, 6, 9, 8, 1, 3, 3, 4, 4, 3, 7, 5, 3, 4, 4, 2, 1, 2, 3, 1,
-];
-export const spikeStart = Date.UTC(2026, 5, 8);
 
-export const spamQueries: [string, string][] = [
-  ["pg11", "817 clicks · pos 2.3"],
-  ["impor88", "556 clicks · pos 5.3"],
-  ["tribun855", "197 clicks · pos 2.5"],
-  ["kopi77", "172 clicks · pos 3.8"],
-  ["tribun855 login", "77 clicks · pos 1.3"],
+/**
+ * Monthly organic clicks by sector, Apr 2025 to Aug 2026, straight from the
+ * per-property Chart.csv exports. July 2026 for Marketing is day-adjusted: a
+ * single compromised day added 2,184 clicks that were never real traffic, so
+ * they are excluded rather than left to distort the shape. The roofing
+ * property has no continuous monthly series in the export set, so it is not a
+ * band here; its numbers live on the work page.
+ */
+export const streamMonths = [
+  "Apr 25", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+  "Jan 26", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug",
+];
+
+export type Sector = {
+  key: string;
+  label: string;
+  clicks: number[];
+  pageOne: number;
+  note: string;
+};
+
+export const sectors: Sector[] = [
+  {
+    key: "marketing",
+    label: "Marketing",
+    clicks: [1, 23, 31, 43, 47, 56, 53, 81, 97, 77, 91, 120, 92, 93, 99, 129, 58],
+    pageOne: 396,
+    note: "Local informational content feeding an agency's service pages.",
+  },
+  {
+    key: "wellness",
+    label: "Wellness",
+    clicks: [0, 0, 0, 0, 2, 4, 49, 59, 60, 74, 62, 72, 104, 96, 94, 95, 83],
+    pageOne: 506,
+    note: "A pain clinic that went from four clicks a month to a hundred.",
+  },
+  {
+    key: "automotive",
+    label: "Automotive",
+    clicks: [0, 0, 0, 0, 25, 28, 35, 33, 28, 20, 20, 36, 32, 32, 25, 37, 42],
+    pageOne: 306,
+    note: "Every version of a tint shop's name at position two or better.",
+  },
+  {
+    key: "retail",
+    label: "Retail",
+    clicks: [0, 21, 31, 22, 21, 11, 14, 41, 34, 23, 19, 18, 23, 16, 18, 13, 28],
+    pageOne: 614,
+    note: "An independent game shop owning the near-me searches in its county.",
+  },
 ];

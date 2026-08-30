@@ -34,8 +34,8 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://koinophobe.com"),
   title: {
-    default: "Koinophobe — technical SEO for local businesses",
-    template: `%s — ${site.name}`,
+    default: "Koinophobe · Technical SEO that shows up in the numbers",
+    template: `%s · ${site.name}`,
   },
   description:
     "Technical SEO and measurement for local businesses. Eighteen months of live Search Console data across five properties, good rows and bad rows.",
@@ -55,13 +55,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://koinophobe.com",
     siteName: site.name,
-    title: "Koinophobe — technical SEO for local businesses",
+    title: "Koinophobe · Technical SEO that shows up in the numbers",
     description:
       "Technical SEO and measurement for local businesses, with the Search Console data to back it up.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Koinophobe — technical SEO for local businesses",
+    title: "Koinophobe · Technical SEO that shows up in the numbers",
     description:
       "Technical SEO and measurement for local businesses. Every figure from a live export.",
   },
@@ -76,7 +76,7 @@ const jsonLd = {
     "Freelance SEO and conversion tracking. Grows organic traffic and proves it converts with analytics that tie rankings to leads.",
   url: "https://koinophobe.com",
   founder: { "@type": "Person", name: "Michael Edward" },
-  sameAs: [site.linkedin],
+  sameAs: [site.linkedin, site.x],
   areaServed: "United States (remote, US Eastern hours)",
   knowsAbout: [
     "Technical SEO",
@@ -96,7 +96,7 @@ const siteLd = {
   name: site.name,
   url: "https://koinophobe.com",
   inLanguage: "en",
-  author: { "@type": "Person", name: site.owner, sameAs: [site.linkedin] },
+  author: { "@type": "Person", name: site.owner, sameAs: [site.linkedin, site.x] },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

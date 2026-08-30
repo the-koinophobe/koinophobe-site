@@ -26,22 +26,22 @@ export const metadata = {
 
 const PRINCIPLES = [
   {
-    icon: <Database size={19} aria-hidden />,
+    icon: <Database size={24} aria-hidden />,
     title: "I start with the export, not the audit.",
     body: "Most audits are a checklist run against a site that never asked for one. I'd rather read twelve months of your own Search Console and GA4 first, because the site already knows what's wrong with it. The audit comes second and it's shorter.",
   },
   {
-    icon: <TriangleAlert size={19} aria-hidden />,
+    icon: <TriangleAlert size={24} aria-hidden />,
     title: "You'll hear the bad number from me first.",
     body: "Every case on the work page has one, and I put it in writing before the client found it. A falling click-through rate, a flat year, a ceiling I can't move. If the only thing I ever send you is up and to the right, you should stop believing me.",
   },
   {
-    icon: <Layers size={19} aria-hidden />,
+    icon: <Layers size={24} aria-hidden />,
     title: "I can work under your brand.",
     body: "Most of what I've done in the last two years has gone out with an agency's name on it. Twenty-plus WordPress sites across roofing, real estate, wellness, legal, lawn care and HOA compliance. I'm comfortable being invisible, and I write reports your account manager can send without editing.",
   },
   {
-    icon: <Store size={19} aria-hidden />,
+    icon: <Store size={24} aria-hidden />,
     title: "Small businesses, real stakes.",
     body: "A clinic, a tint shop, a game store. Nobody here has a budget to waste on a strategy that takes two years to prove. So I build the measurement first, on your property, and you can check my work whenever you want.",
   },
@@ -49,32 +49,32 @@ const PRINCIPLES = [
 
 const SERVICES = [
   {
-    icon: <Settings2 size={17} aria-hidden />,
+    icon: <Settings2 size={20} aria-hidden />,
     title: "Technical SEO",
     body: "Crawl and index diagnosis, site architecture, internal linking, schema, migrations, Core Web Vitals. The work behind every position change on the work page.",
   },
   {
-    icon: <BarChart3 size={17} aria-hidden />,
+    icon: <BarChart3 size={20} aria-hidden />,
     title: "Measurement",
     body: "GA4 and GTM built properly, Search Console configured, conversion and call tracking wired to the things that make money. If it isn't measured I won't claim it.",
   },
   {
-    icon: <MapPin size={17} aria-hidden />,
+    icon: <MapPin size={20} aria-hidden />,
     title: "Local search",
     body: "Location pages that aren't doorway pages, Google Business Profile, review velocity, map pack work. This is where local businesses win or lose.",
   },
   {
-    icon: <PenLine size={17} aria-hidden />,
+    icon: <PenLine size={20} aria-hidden />,
     title: "Content that ranks",
     body: "Title and meta rewrites, service page copy, long-form articles built around real query data rather than a keyword tool's guess.",
   },
   {
-    icon: <Code2 size={17} aria-hidden />,
+    icon: <Code2 size={20} aria-hidden />,
     title: "Build and fix",
     body: "WordPress, Elementor, AIOSEO and Yoast day to day. Also React, TypeScript, Django and Postgres when a site needs something a plugin can't do.",
   },
   {
-    icon: <Users size={17} aria-hidden />,
+    icon: <Users size={20} aria-hidden />,
     title: "White-label for agencies",
     body: "I slot in under your brand, work your process, and hand back deliverables your team can ship. Available for retainer or per-project.",
   },
@@ -82,17 +82,17 @@ const SERVICES = [
 
 const WORKING = [
   {
-    icon: <Layers size={15} aria-hidden />,
+    icon: <Layers size={17} aria-hidden />,
     title: "Retainer or per-project.",
     body: "Whichever fits the work in front of us.",
   },
   {
-    icon: <Users size={15} aria-hidden />,
+    icon: <Users size={17} aria-hidden />,
     title: "Under your brand or mine.",
     body: "Agencies get deliverables their team can ship unedited.",
   },
   {
-    icon: <Globe size={15} aria-hidden />,
+    icon: <Globe size={17} aria-hidden />,
     title: "US Eastern hours.",
     body: "Calls, standups and turnaround on your clock.",
   },
@@ -151,7 +151,7 @@ export default function AboutPage() {
           <Reveal>
             <p className="eyebrow">[ How I work ]</p>
             <h1 className="mt-4 max-w-[20ch] font-display text-[clamp(2.2rem,5.4vw,4.05rem)] leading-[1.04] tracking-tight text-balance">
-              Four things you can hold me to.
+              Four promises, and you can hold me to all of them.
             </h1>
             <p className="mt-6 max-w-[62ch] text-[17.5px] text-muted">
               There isn&rsquo;t much mystery in this job. There&rsquo;s the data you already own, the
@@ -163,7 +163,7 @@ export default function AboutPage() {
             {WORKING.map((r) => (
               <div
                 key={r.title}
-                className="grid grid-cols-[22px_1fr] items-baseline gap-3.5 border-b border-line py-3.5"
+                className="grid grid-cols-[24px_1fr] items-start gap-4 border-b border-line py-3.5"
               >
                 <span className="text-brand">{r.icon}</span>
                 <p className="text-[14.5px] text-muted">
