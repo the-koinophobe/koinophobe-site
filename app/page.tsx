@@ -4,6 +4,7 @@ import { AboutStrip } from "@/components/AboutStrip";
 import { Availability } from "@/components/Availability";
 import { CtaBand, EmailCta, TextCta } from "@/components/Cta";
 import { MobileCta } from "@/components/MobileCta";
+import { Pipeline } from "@/components/Pipeline";
 import { SiteWall } from "@/components/SiteWall";
 import { CountUp } from "@/components/CountUp";
 import { HeroHeadline } from "@/components/HeroHeadline";
@@ -144,6 +145,10 @@ export default function HomePage() {
 
       <section className="container-pad pt-24">
         <SiteWall />
+      </section>
+
+      <section className="container-pad pt-28">
+        <Pipeline />
       </section>
 
       <section className="container-pad pt-24">

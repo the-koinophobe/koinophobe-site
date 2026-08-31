@@ -1,4 +1,5 @@
 import { Eye, Search, Sparkles } from "lucide-react";
+import { AISection } from "@/components/AISection";
 import { Availability } from "@/components/Availability";
 import { CtaBand } from "@/components/Cta";
 import { MobileCta } from "@/components/MobileCta";
@@ -117,6 +118,18 @@ export default function WorkPage() {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="container-pad pt-28">
+        <AISection />
+      </section>
+
+      <section className="pt-24">
+        <CtaBand
+          line="Send me the URL. I'll tell you what I'd go after first."
+          from="after_ai"
+          secondary={{ href: "/notes", label: "Read the notes" }}
+        />
       </section>
 
       <Availability />
