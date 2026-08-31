@@ -1,8 +1,10 @@
 import { ImageResponse } from "next/og";
+import { ogFonts } from "@/lib/og-fonts";
 
 // Edge runtime: avoids @vercel/og's Windows path bug at build time (the image
 // is rendered on request instead of prerendered) and is the runtime this
-// library was built for.
+// library was built for. The fonts are inlined as base64 in lib/og-fonts.ts
+// for the same reason: nothing here resolves a file path.
 export const runtime = "edge";
 
 export const alt = "Koinophobe · Technical SEO that shows up in the numbers";
@@ -21,7 +23,7 @@ export default function OgImage() {
           justifyContent: "space-between",
           padding: 80,
           backgroundColor: "#FBF7ED",
-          fontFamily: "sans-serif",
+          fontFamily: "Fraunces",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
@@ -35,39 +37,48 @@ export default function OgImage() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: 34,
-              fontWeight: 700,
+              fontSize: 32,
             }}
           >
             K
           </div>
-          <div style={{ fontSize: 30, fontWeight: 700, color: "#032b14" }}>
-            Koinophobe
-          </div>
+          <div style={{ display: "flex", fontSize: 30, color: "#032b14" }}>Koinophobe</div>
         </div>
 
         <div
           style={{
             display: "flex",
             flexDirection: "column",
-            fontSize: 76,
-            fontWeight: 700,
-            lineHeight: 1.05,
+            fontSize: 78,
+            lineHeight: 1.04,
             color: "#032b14",
             letterSpacing: -2,
           }}
         >
-          <span>Numbers don&rsquo;t lie.</span>
-          <span>
-            I make <span style={{ color: "#12603D" }}> yours </span> go up.
-          </span>
+          <div style={{ display: "flex" }}>Numbers don&rsquo;t lie.</div>
+          {/* Satori strips leading and trailing whitespace inside text nodes,
+              so the spaces around the coloured word come from flex gap. */}
+          <div style={{ display: "flex", gap: 22 }}>
+            <span>I make</span>
+            <span style={{ color: "#12603D" }}>yours</span>
+            <span>go up.</span>
+          </div>
         </div>
 
-        <div style={{ fontSize: 28, color: "#4A5C50" }}>
-          Technical SEO + conversion tracking for local businesses · Michael Edward
+        <div
+          style={{
+            display: "flex",
+            fontFamily: "JetBrains Mono",
+            fontSize: 21,
+            letterSpacing: 1.6,
+            textTransform: "uppercase",
+            color: "#4A5C50",
+          }}
+        >
+          Technical SEO &middot; Local businesses &middot; 30+ sites &middot; koinophobe.com
         </div>
       </div>
     ),
-    { ...size }
+    { ...size, fonts: ogFonts }
   );
 }
