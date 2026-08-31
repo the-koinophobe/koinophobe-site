@@ -59,7 +59,7 @@ export default function OgImage() {
         >
           <span>Numbers don&rsquo;t lie.</span>
           <span>
-            I make <span style={{ color: "#12603D" }}>yours</span> go up.
+            I make <span style={{ color: "#12603D" }}> yours </span> go up.
           </span>
         </div>
 
