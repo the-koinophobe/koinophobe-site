@@ -12,6 +12,8 @@ import {
   Users,
 } from "lucide-react";
 import { Availability } from "@/components/Availability";
+import { CtaBand } from "@/components/Cta";
+import { MobileCta } from "@/components/MobileCta";
 import { Reveal } from "@/components/Reveal";
 import { Spotlight } from "@/components/Spotlight";
 import { Stagger } from "@/components/Stagger";
@@ -38,7 +40,7 @@ const PRINCIPLES = [
   {
     icon: <Layers size={24} aria-hidden />,
     title: "I can work under your brand.",
-    body: "Most of what I've done in the last two years has gone out with an agency's name on it. Twenty-plus WordPress sites across roofing, real estate, wellness, legal, lawn care and HOA compliance. I'm comfortable being invisible, and I write reports your account manager can send without editing.",
+    body: "Most of what I've done in the last two years has gone out with an agency's name on it. Thirty-plus WordPress sites across roofing, real estate, wellness, legal, lawn care and HOA compliance. I'm comfortable being invisible, and I write reports your account manager can send without editing.",
   },
   {
     icon: <Store size={24} aria-hidden />,
@@ -213,7 +215,14 @@ export default function AboutPage() {
         </Stagger>
       </section>
 
+      <CtaBand
+        line="Sound like the way you want this done?"
+        from="after_services"
+        secondary={{ href: "/work", label: "See the numbers" }}
+      />
+
       <Availability />
+      <MobileCta />
     </>
   );
 }

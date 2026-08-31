@@ -238,118 +238,163 @@ export const faqs = [
 ];
 
 export type Project = {
+  /** Real name. Only rendered when `named` is true. */
   name: string;
-  category: string;
+  /** What the business is, safe to show either way. */
+  sector: string;
+  /** Where it trades, safe to show either way. */
+  market: string;
   url: string;
   image: string; // poster, e.g. /work/<slug>.webp
-  video?: string; // optional looping preview, e.g. /work/<slug>.mp4 (plays on hover)
+  video?: string; // looping preview, plays on hover
+  /**
+   * Whether the client can be identified publicly.
+   *
+   * true only for clients Michael has a direct relationship with. Everything
+   * that came through an agency is false and stays that way.
+   *
+   * false withholds the attribution, not the picture: the screenshot and the
+   * hover video still play, but the tile carries no client name, no host in the
+   * address bar, and no link out. Sector and market caption it instead.
+   */
+  named: boolean;
 };
 
-// Sites built/managed. Snapshots + screen-record previews live in public/work/.
+// Sites built and managed. Posters and screen-record previews live in public/work/.
 export const projects: Project[] = [
   {
     name: "Over The Table Top",
-    category: "Custom woodworking shop",
+    sector: "Board game and hobby retail",
+    market: "Charles County, MD",
     url: "https://overthetabletop.shop/",
     image: "/work/overthetabletop.webp",
     video: "/work/overthetabletop.mp4",
+    named: true,
   },
   {
-    name: "Myofascial Pain Brevard",
-    category: "Therapy clinic",
-    url: "https://myofascialpainbrevard.com/",
-    image: "/work/myofascial.webp",
-    video: "/work/myofascial.mp4",
-  },
-  {
-    name: "Tintlordz Auto Spa",
-    category: "Window tint",
+    name: "Tint Lordz Auto Spa",
+    sector: "Window tint and detailing",
+    market: "Lawrence, MA",
     url: "https://tintlordzautospa.com/",
     image: "/work/tintlordz.webp",
     video: "/work/tintlordz.mp4",
-  },
-  {
-    name: "HH Roofing & Repairs",
-    category: "Roofing",
-    url: "https://hhroofingandrepairs.com/",
-    image: "/work/hhroofing.webp",
-    video: "/work/hhroofing.mp4",
+    named: true,
   },
   {
     name: "Palm Bay Marketing SEO",
-    category: "Marketing agency",
+    sector: "Marketing agency",
+    market: "Palm Bay, FL",
     url: "https://palmbaymarketingseo.com/",
     image: "/work/pbseo.webp",
     video: "/work/pbseo.mp4",
-  },
-  {
-    name: "Krupption / Brevard Pool Deck Repair",
-    category: "Pool deck repair",
-    url: "https://brevardpooldeckrepair.com/",
-    image: "/work/krupption.webp",
-    video: "/work/krupption.mp4",
-  },
-  {
-    name: "Atlanta Mobile Detail",
-    category: "Auto detailing",
-    url: "https://atlantamobiledetail.co/",
-    image: "/work/atlantamobiledetail.webp",
-    video: "/work/atlantamobiledetail.mp4",
-  },
-  {
-    name: "Titusville Homes For Sale",
-    category: "Real estate",
-    url: "https://titusvillehomesforsale.com/",
-    image: "/work/titusville.webp",
-    video: "/work/titusville.mp4",
-  },
-  {
-    name: "Pro Star Lawn Service",
-    category: "Lawn & landscaping",
-    url: "https://prostarlawnservice.com/",
-    image: "/work/prostar.webp",
-    video: "/work/prostar.mp4",
-  },
-  {
-    name: "Roof It Brevard",
-    category: "Roofing",
-    url: "https://roofitbrevard.com/",
-    image: "/work/roofit.webp",
-  },
-  {
-    name: "Cocoa Beach Myofascial Release",
-    category: "Myofascial release",
-    url: "https://cocoabeachmyofascialrelease.com/",
-    image: "/work/cocoa.webp",
-    video: "/work/cocoa.mp4",
-  },
-  {
-    name: "Brevard Hurricane Protection",
-    category: "Hurricane protection",
-    url: "https://brevardhurricaneprotection.com/",
-    image: "/work/bhp.webp",
-    video: "/work/bhp.mp4",
-  },
-  {
-    name: "The Dream Property",
-    category: "Real estate",
-    url: "https://thedreamproperty.com/",
-    image: "/work/dreamproperty.webp",
-    video: "/work/dreamproperty.mp4",
-  },
-  {
-    name: "Melbourne Roof Repair",
-    category: "Roofing",
-    url: "https://melbourneroofrepairs.com/",
-    image: "/work/melbourne-roof.webp",
-    video: "/work/melbourne-roof.mp4",
+    named: true,
   },
   {
     name: "Lumagrid Solar",
-    category: "Solar",
+    sector: "Solar installation",
+    market: "Nigeria",
     url: "https://www.lumagridsolar.com/",
     image: "/work/lumagrid.webp",
     video: "/work/lumagrid.mp4",
+    named: true,
+  },
+  {
+    name: "HH Roofing & Repairs",
+    sector: "Roofing contractor",
+    market: "Brevard County, FL",
+    url: "https://hhroofingandrepairs.com/",
+    image: "/work/hhroofing.webp",
+    video: "/work/hhroofing.mp4",
+    named: false,
+  },
+  {
+    name: "Myofascial Pain Brevard",
+    sector: "Myofascial pain clinic",
+    market: "Brevard County, FL",
+    url: "https://myofascialpainbrevard.com/",
+    image: "/work/myofascial.webp",
+    video: "/work/myofascial.mp4",
+    named: false,
+  },
+  {
+    name: "Cocoa Beach Myofascial Release",
+    sector: "Myofascial release clinic",
+    market: "Cocoa Beach, FL",
+    url: "https://cocoabeachmyofascialrelease.com/",
+    image: "/work/cocoa.webp",
+    video: "/work/cocoa.mp4",
+    named: false,
+  },
+  {
+    name: "Brevard Pool Deck Repair",
+    sector: "Pool deck repair",
+    market: "Brevard County, FL",
+    url: "https://brevardpooldeckrepair.com/",
+    image: "/work/krupption.webp",
+    video: "/work/krupption.mp4",
+    named: false,
+  },
+  {
+    name: "Atlanta Mobile Detail",
+    sector: "Mobile auto detailing",
+    market: "Atlanta, GA",
+    url: "https://atlantamobiledetail.co/",
+    image: "/work/atlantamobiledetail.webp",
+    video: "/work/atlantamobiledetail.mp4",
+    named: false,
+  },
+  {
+    name: "Titusville Homes For Sale",
+    sector: "Residential real estate",
+    market: "Titusville, FL",
+    url: "https://titusvillehomesforsale.com/",
+    image: "/work/titusville.webp",
+    video: "/work/titusville.mp4",
+    named: false,
+  },
+  {
+    name: "Pro Star Lawn Service",
+    sector: "Lawn and landscaping",
+    market: "Brevard County, FL",
+    url: "https://prostarlawnservice.com/",
+    image: "/work/prostar.webp",
+    video: "/work/prostar.mp4",
+    named: false,
+  },
+  {
+    name: "Roof It Brevard",
+    sector: "Roofing contractor",
+    market: "Brevard County, FL",
+    url: "https://roofitbrevard.com/",
+    image: "/work/roofit.webp",
+    named: false,
+  },
+  {
+    name: "Brevard Hurricane Protection",
+    sector: "Hurricane shutters and protection",
+    market: "Brevard County, FL",
+    url: "https://brevardhurricaneprotection.com/",
+    image: "/work/bhp.webp",
+    video: "/work/bhp.mp4",
+    named: false,
+  },
+  {
+    name: "The Dream Property",
+    sector: "Residential real estate",
+    market: "Florida",
+    url: "https://thedreamproperty.com/",
+    image: "/work/dreamproperty.webp",
+    video: "/work/dreamproperty.mp4",
+    named: false,
+  },
+  {
+    name: "Melbourne Roof Repair",
+    sector: "Roofing contractor",
+    market: "Melbourne, FL",
+    url: "https://melbourneroofrepairs.com/",
+    image: "/work/melbourne-roof.webp",
+    video: "/work/melbourne-roof.mp4",
+    named: false,
   },
 ];
 
@@ -371,7 +416,7 @@ export const caseStudies: CaseStudy[] = [
   {
     industry: "Multi-client agency portfolio",
     problem: "An agency needed reliable technical execution across many client sites.",
-    work: "Managed 20+ WordPress sites: audits, migrations, GA4/GTM tracking and ongoing care.",
+    work: "Managed 30+ WordPress sites: audits, migrations, GA4/GTM tracking and ongoing care.",
     result: "Drove ~787K search impressions and ~2,350 organic clicks across the portfolio in 12 months.",
   },
   {

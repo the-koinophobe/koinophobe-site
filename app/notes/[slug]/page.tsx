@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Reveal } from "@/components/Reveal";
 import { Availability } from "@/components/Availability";
+import { CtaBand } from "@/components/Cta";
+import { MobileCta } from "@/components/MobileCta";
 import { ArrowLeft } from "lucide-react";
 import { notes, getNote } from "@/lib/notes";
 
@@ -110,7 +112,14 @@ export default function NotePage({ params }: { params: { slug: string } }) {
         </Reveal>
       </section>
 
+      <CtaBand
+        line="Want this done on your site instead of read about?"
+        from="after_note"
+        secondary={{ href: "/work", label: "See it working" }}
+      />
+
       <Availability />
+      <MobileCta />
     </>
   );
 }

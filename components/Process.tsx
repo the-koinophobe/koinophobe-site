@@ -38,7 +38,7 @@ const STEPS = [
     owner:
       "Titles, structure, schema, speed, the pages that should exist and don't. Shipped into your CMS on a schedule you approve, biggest return first, and nothing goes live without you seeing what changed.",
     agency:
-      "I work in your stack and your process. WordPress, Elementor, AIOSEO or Yoast day to day, React, TypeScript or Django when a plugin cannot do it. Twenty-plus sites and counting.",
+      "I work in your stack and your process. WordPress, Elementor, AIOSEO or Yoast day to day, React, TypeScript or Django when a plugin cannot do it. Thirty-plus sites and counting.",
   },
   {
     key: "proof",

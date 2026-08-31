@@ -2,7 +2,7 @@ const PHRASES = [
   "Two years of client work",
   "Technical SEO",
   "GA4 · GTM · Search Console",
-  "20+ WordPress sites",
+  "30+ sites shipped",
   "White-label for agencies",
   "Local search & map pack",
   "Core Web Vitals",

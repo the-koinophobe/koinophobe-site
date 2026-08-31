@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description:
-    "Technical SEO and measurement for local businesses. Eighteen months of live Search Console data across five properties, good rows and bad rows.",
+    "Technical SEO and measurement for local businesses. Thirty-plus sites in two years, with live Search Console data opened up on five of them.",
   keywords: [
     "SEO specialist",
     "technical SEO",

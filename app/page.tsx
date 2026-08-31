@@ -2,6 +2,9 @@ import Link from "next/link";
 import { ArrowRight, Eye, MousePointerClick, Search, Trophy } from "lucide-react";
 import { AboutStrip } from "@/components/AboutStrip";
 import { Availability } from "@/components/Availability";
+import { CtaBand, EmailCta, TextCta } from "@/components/Cta";
+import { MobileCta } from "@/components/MobileCta";
+import { SiteWall } from "@/components/SiteWall";
 import { CountUp } from "@/components/CountUp";
 import { HeroHeadline } from "@/components/HeroHeadline";
 import { MetricStrip } from "@/components/MetricStrip";
@@ -16,7 +19,7 @@ import { aggregate, cases } from "@/lib/gsc";
 
 export const metadata = {
   description:
-    "Michael Edward. Technical SEO for local businesses. 2,096 keywords on page one across five client sites, and every number on this site comes out of their live Search Console data.",
+    "Michael Edward. Technical SEO for local businesses. Thirty-plus sites in two years, five of them opened up here with 2,096 keywords on page one and every figure taken from live Search Console data.",
   alternates: { canonical: "/" },
 };
 
@@ -36,11 +39,16 @@ export default function HomePage() {
             <strong className="font-medium text-ink">
               what Google actually sends you.
             </strong>{" "}
-            Five sites, 2,096 keywords sitting on page one, and a million impressions of receipts
-            below.
+            Thirty-plus sites so far. Five of them are opened up below, data and all, because
+            showing you beats telling you.
           </Reveal>
 
-          <Reveal delay={0.45} className="mt-12">
+          <Reveal delay={0.4} className="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <EmailCta from="hero" />
+            <TextCta href="/work" label="See the numbers" from="hero" />
+          </Reveal>
+
+          <Reveal delay={0.5} className="mt-12">
             <StreamGraph />
           </Reveal>
 
@@ -81,11 +89,12 @@ export default function HomePage() {
         <Reveal>
           <p className="eyebrow">[ The work ]</p>
           <h2 className="mt-4 max-w-[20ch] font-display text-[clamp(1.9rem,4vw,3rem)] leading-[1.05] tracking-tight text-balance">
-            Five businesses. Here&rsquo;s what changed.
+            Thirty-plus sites. Here are five with the numbers left open.
           </h2>
           <p className="mt-5 max-w-[58ch] text-muted">
-            A pain clinic, a roofer, a tint shop, a game shop and a marketing agency. Every number
-            below is pulled from their own Search Console.
+            A pain clinic, a roofer, a tint shop, a game shop and a marketing agency. Not the
+            biggest five, the five I can show you the data for. Every number comes from their own
+            Search Console.
           </p>
         </Reveal>
 
@@ -125,8 +134,28 @@ export default function HomePage() {
         </Stagger>
       </section>
 
+      <section className="pt-14">
+        <CtaBand
+          line="Curious what yours looks like underneath?"
+          from="after_ledger"
+          secondary={{ href: "/work", label: "Read the case studies" }}
+        />
+      </section>
+
+      <section className="container-pad pt-24">
+        <SiteWall />
+      </section>
+
       <section className="container-pad pt-24">
         <Process />
+      </section>
+
+      <section className="pt-20">
+        <CtaBand
+          line="That is the whole process. Starting it costs you an email."
+          label="Start with a call"
+          from="after_process"
+        />
       </section>
 
       <section className="container-pad pt-24">
@@ -138,6 +167,7 @@ export default function HomePage() {
       </section>
 
       <Availability />
+      <MobileCta />
     </>
   );
 }

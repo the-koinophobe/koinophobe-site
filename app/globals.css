@@ -369,3 +369,18 @@ html.gbp-light .gbp-theme .gbp-logo { filter: none; }
   .ledger-row { transition: none; }
   .ledger-row:hover { padding-left: 0; }
 }
+
+
+/* ---- Site wall ---- */
+/* diagonal hatch over sealed tiles: the client is withheld, visibly */
+@keyframes wall-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+.wall-drift { animation: wall-drift 68s linear infinite; }
+.wall-drift-rev { animation-direction: reverse; }
+.marquee-mask:hover .wall-drift { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .wall-drift { animation: none; }
+  .marquee-mask { overflow-x: auto; }
+}

@@ -35,7 +35,7 @@ export function AboutStrip() {
             are worth your money and which thirty-five are not.
           </p>
           <p>
-            Computer science degree, two years freelance, twenty-plus WordPress sites across roofing,
+            Computer science degree, two years freelance, thirty-plus WordPress sites across roofing,
             wellness, retail, automotive, real estate and legal. I write the code when a plugin
             won&rsquo;t do it, which is more often than most SEOs would like to admit.
           </p>

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { site } from "@/lib/site";
 import { ThemeToggle } from "./ThemeToggle";
+import { EmailCta } from "./Cta";
 
 export function Header() {
   const pathname = usePathname();
@@ -40,6 +41,7 @@ export function Header() {
               </Link>
             );
           })}
+          <EmailCta label="Email me" from="header" size="sm" className="ml-2" />
           <ThemeToggle />
         </nav>
 
@@ -66,7 +68,8 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <div className="pt-4">
+            <div className="flex items-center justify-between gap-3 pt-4">
+              <EmailCta label="Email me" from="header_mobile" size="sm" />
               <ThemeToggle />
             </div>
           </div>

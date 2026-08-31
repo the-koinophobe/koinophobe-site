@@ -7,11 +7,18 @@
 export const EXPORT_DATE = "28-30 Aug 2026";
 
 export const aggregate = {
+  /** Sites worked on across two years. The body of work. */
+  sitesWorked: 30,
+  /**
+   * The five properties there are live Search Console exports for. This is the
+   * evidence set, NOT the portfolio. Never let this number stand in for the
+   * work done: every figure below is scoped to these five only.
+   */
+  properties: 5,
   impressions: 1031312,
   clicks: 3077,
-  properties: 5,
   queries: 4981,
-  /** Position 10 or better, across all five properties. */
+  /** Position 10 or better, across the five measured properties. */
   pageOne: 2096,
   topThree: 624,
   window: "Apr 2025 to Aug 2026",

@@ -57,7 +57,7 @@ export const anchors = [
 // The two facts in the floating hero card.
 export const heroFacts = [
   { value: `${DELIVERY_DAYS} days`, label: "Start to verified" },
-  { value: "15+", label: "Client sites managed" },
+  { value: "30+", label: "Client sites managed" },
 ];
 
 // ---------------------------------------------------------------------------
@@ -137,7 +137,7 @@ export const timeline = [
 ];
 
 export const proofStats = [
-  { value: "15+", label: "Client sites built and managed" },
+  { value: "30+", label: "Client sites built and managed" },
   { value: "787K", label: "Search impressions tracked in 12 months" },
   { value: "3.2×", label: "Organic clicks in six months, one client" },
   { value: "Top 3", label: "Local map pack for a client in a hard niche" },

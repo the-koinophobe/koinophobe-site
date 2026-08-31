@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { Stagger } from "@/components/Stagger";
 import { Availability } from "@/components/Availability";
+import { MobileCta } from "@/components/MobileCta";
 import { notes } from "@/lib/notes";
 
 export const metadata: Metadata = {
@@ -71,6 +72,7 @@ export default function NotesPage() {
       <div className="mt-24">
         <Availability />
       </div>
+      <MobileCta />
     </>
   );
 }
