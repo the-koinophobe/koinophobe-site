@@ -330,7 +330,25 @@ html.gbp-light .gbp-theme .gbp-logo { filter: none; }
 
 
 /* ---- Rebuild: Search Console vernacular ---- */
+/* Section eyebrow. The filled button: ink ground, page colour text. Dark
+   green on cream in light mode, cream on dark green in dark mode, exactly
+   like the selected state of the audience toggle. */
 .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 2px;
+  padding: 0.4rem 0.75rem;
+  background: rgb(var(--ink));
+  color: rgb(var(--bg));
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 10.5px;
+  line-height: 1;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+/* Flat variant for chart axis captions, which are labels, not section marks. */
+.eyebrow-flat {
   font-family: var(--font-mono), ui-monospace, monospace;
   font-size: 11px;
   letter-spacing: 0.16em;

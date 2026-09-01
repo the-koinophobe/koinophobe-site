@@ -29,7 +29,7 @@ export default function NotesPage() {
       <section className="pt-28 sm:pt-36">
         <div className="container-pad">
           <Reveal>
-            <p className="eyebrow">[ Notes ]</p>
+            <p className="eyebrow">Notes</p>
             <h1 className="mt-4 max-w-[18ch] font-display text-[clamp(2.2rem,5.4vw,4.05rem)] leading-[1.04] tracking-tight text-balance">
               The things I&rsquo;d tell you on the call anyway.
             </h1>

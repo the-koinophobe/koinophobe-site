@@ -12,7 +12,7 @@ export const mailHref = `mailto:${site.email}?subject=${SUBJECT}`;
 
 /** Solid primary button. Used in the header, the hero and every CTA band. */
 export function EmailCta({
-  label = "Send me your URL",
+  label = "How can I help?",
   from,
   size = "md",
   className = "",
@@ -71,7 +71,7 @@ export function TextCta({
  */
 export function CtaBand({
   line,
-  label = "Send me your URL",
+  label = "How can I help?",
   from,
   secondary,
 }: {

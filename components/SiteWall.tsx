@@ -118,7 +118,7 @@ export function SiteWall() {
 
   return (
     <div>
-      <p className="eyebrow">[ The wall ]</p>
+      <p className="eyebrow">The wall</p>
       <h2 className="mt-4 max-w-[22ch] font-display text-[clamp(1.9rem,4vw,3rem)] leading-[1.05] tracking-tight text-balance">
         Thirty-plus sites. These are the ones I kept the screenshots of.
       </h2>

@@ -109,7 +109,7 @@ export function Process() {
   return (
     <div ref={rootRef}>
       <div className="flex flex-wrap items-center justify-between gap-4">
-        <p className="eyebrow">[ How it goes ]</p>
+        <p className="eyebrow">How it goes</p>
         <div className="inline-flex rounded-sm border border-line p-0.5" role="tablist" aria-label="Who you are">
           {([["owner", "I run the business"], ["agency", "I'm an agency"]] as [Audience, string][]).map(
             ([key, label]) => (

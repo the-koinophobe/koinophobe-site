@@ -99,8 +99,8 @@ export function StreamGraph() {
     <div ref={wrapRef} className="relative">
       <div className="relative overflow-hidden rounded-md border border-line bg-surface">
         <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 px-4 pt-4 sm:px-5">
-          <span className="eyebrow">Organic clicks by sector</span>
-          <span className="eyebrow">{streamMonths[0]} to {streamMonths[N - 1]} 2026</span>
+          <span className="eyebrow-flat">Organic clicks by sector</span>
+          <span className="eyebrow-flat">{streamMonths[0]} to {streamMonths[N - 1]} 2026</span>
         </div>
 
         <svg

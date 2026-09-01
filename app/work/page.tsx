@@ -63,7 +63,7 @@ export default function WorkPage() {
       <section className="pt-32 sm:pt-36">
         <div className="container-pad grid items-end gap-9 lg:grid-cols-[1.35fr_1fr] lg:gap-14">
           <Reveal>
-            <p className="eyebrow">[ The ledger ]</p>
+            <p className="eyebrow">The ledger</p>
             <h1 className="mt-4 max-w-[20ch] font-display text-[clamp(2.2rem,5.4vw,4.05rem)] leading-[1.04] tracking-tight text-balance">
               The wall, and the five I opened up.
             </h1>
@@ -107,7 +107,7 @@ export default function WorkPage() {
       <section className="pt-24">
         <div className="container-pad">
           <Reveal>
-            <p className="eyebrow">[ The numbers ]</p>
+            <p className="eyebrow">The numbers</p>
             <h2 className="mt-4 max-w-[24ch] font-display text-[clamp(1.9rem,4vw,3rem)] leading-[1.05] tracking-tight text-balance">
               Five of them, with the Search Console left open.
             </h2>

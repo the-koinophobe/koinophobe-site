@@ -39,7 +39,7 @@ export function MobileCta() {
         className="flex w-full items-center justify-center gap-2.5 rounded-sm bg-ink px-5 py-3.5 font-medium text-bg"
       >
         <Mail size={17} aria-hidden />
-        Send me your URL
+        How can I help?
       </a>
     </div>
   );

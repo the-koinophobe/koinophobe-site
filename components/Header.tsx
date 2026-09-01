@@ -41,7 +41,7 @@ export function Header() {
               </Link>
             );
           })}
-          <EmailCta label="Email me" from="header" size="sm" className="ml-2" />
+          <EmailCta label="How can I help?" from="header" size="sm" className="ml-2" />
           <ThemeToggle />
         </nav>
 
@@ -69,7 +69,7 @@ export function Header() {
               </Link>
             ))}
             <div className="flex items-center justify-between gap-3 pt-4">
-              <EmailCta label="Email me" from="header_mobile" size="sm" />
+              <EmailCta label="How can I help?" from="header_mobile" size="sm" />
               <ThemeToggle />
             </div>
           </div>

@@ -26,7 +26,7 @@ export function MetricStrip({ cells }: { cells: StripCell[] }) {
             i > 1 ? "min-[420px]:border-t min-[420px]:border-line sm:border-t-0" : ""
           }`}
         >
-          <span className="eyebrow mb-2 flex items-center gap-2">
+          <span className="eyebrow-flat mb-2 flex items-center gap-2">
             {c.icon}
             {c.label}
           </span>

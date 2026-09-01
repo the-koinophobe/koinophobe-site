@@ -151,7 +151,7 @@ export default function AboutPage() {
       <section className="pt-32 sm:pt-36">
         <div className="container-pad grid items-end gap-9 lg:grid-cols-[1.35fr_1fr] lg:gap-14">
           <Reveal>
-            <p className="eyebrow">[ How I work ]</p>
+            <p className="eyebrow">How I work</p>
             <h1 className="mt-4 max-w-[20ch] font-display text-[clamp(2.2rem,5.4vw,4.05rem)] leading-[1.04] tracking-tight text-balance">
               Four promises, and you can hold me to all of them.
             </h1>
@@ -196,7 +196,7 @@ export default function AboutPage() {
 
       <section className="container-pad pb-24 pt-24">
         <Reveal>
-        <p className="eyebrow">[ What I actually do ]</p>
+        <p className="eyebrow">What I actually do</p>
         <h2 className="mt-3.5 max-w-[22ch] font-display text-[clamp(1.85rem,3.9vw,2.95rem)] leading-[1.05] tracking-tight text-balance">
           Technical, measurable, and mostly in WordPress.
         </h2>

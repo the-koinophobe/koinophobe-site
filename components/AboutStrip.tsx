@@ -24,7 +24,7 @@ export function AboutStrip() {
       </Reveal>
 
       <Reveal delay={0.1}>
-        <p className="eyebrow">[ Who you&rsquo;d be working with ]</p>
+        <p className="eyebrow">Who you&rsquo;d be working with</p>
         <h2 className="mt-4 max-w-[20ch] font-display text-[clamp(1.9rem,4vw,3rem)] leading-[1.05] tracking-tight text-balance">
           One person, and you get all of him.
         </h2>

@@ -29,7 +29,7 @@ export default function HomePage() {
     <>
       <section className="pt-28 sm:pt-36">
         <div className="container-pad">
-          <p className="eyebrow">[ Technical SEO &middot; local businesses &middot; US hours ]</p>
+          <p className="eyebrow">Technical SEO &middot; local businesses &middot; US hours</p>
           <HeroHeadline
             className="mt-5 max-w-[16ch] font-display text-[clamp(2.7rem,7.4vw,5.6rem)] font-normal leading-[1.02] tracking-tight"
             segments={[{ text: "Numbers don't lie." }, { text: "I make yours go up.", muted: true }]}
@@ -88,7 +88,7 @@ export default function HomePage() {
 
       <section className="container-pad pt-24">
         <Reveal>
-          <p className="eyebrow">[ The work ]</p>
+          <p className="eyebrow">The work</p>
           <h2 className="mt-4 max-w-[20ch] font-display text-[clamp(1.9rem,4vw,3rem)] leading-[1.05] tracking-tight text-balance">
             Thirty-plus sites. Here are five with the numbers left open.
           </h2>
@@ -158,7 +158,6 @@ export default function HomePage() {
       <section className="pt-20">
         <CtaBand
           line="That is the whole process. Starting it costs you an email."
-          label="Start with a call"
           from="after_process"
         />
       </section>

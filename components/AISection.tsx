@@ -94,7 +94,7 @@ export function AISection() {
   return (
     <div className="grid items-start gap-12 lg:grid-cols-[1fr_1.02fr] lg:gap-16">
       <div>
-        <p className="eyebrow">[ The answer box ]</p>
+        <p className="eyebrow">The answer box</p>
         <h2 className="mt-4 max-w-[20ch] font-display text-[clamp(1.9rem,4vw,3rem)] leading-[1.05] tracking-tight text-balance">
           A good number of them are asking a machine now.
         </h2>

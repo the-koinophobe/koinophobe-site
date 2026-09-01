@@ -63,7 +63,7 @@ export function Availability() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <p className="eyebrow">[ Three things in the first email ]</p>
+          <p className="eyebrow">Three things in the first email</p>
           <div className="mt-5 border-t border-line">
             {ASK.map((a) => (
               <div

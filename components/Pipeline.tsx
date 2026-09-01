@@ -185,7 +185,7 @@ export function Pipeline() {
     <div ref={rootRef}>
       <div className="grid gap-12 lg:grid-cols-[0.92fr_1fr] lg:gap-20">
       <div className="lg:sticky lg:top-32 lg:self-start">
-        <p className="eyebrow">[ The line from search to money ]</p>
+        <p className="eyebrow">The line from search to money</p>
         <h2 className="mt-4 max-w-[15ch] font-display text-[clamp(1.9rem,4vw,3.1rem)] leading-[1.05] tracking-tight text-balance">
           Four steps. I can only see the first two.
         </h2>

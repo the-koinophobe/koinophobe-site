@@ -38,7 +38,7 @@ export default function ContactPage() {
       <section className="pt-28 sm:pt-36">
         <div className="container-pad">
           <Reveal>
-            <p className="eyebrow">[ Contact ]</p>
+            <p className="eyebrow">Contact</p>
             <h1 className="mt-4 max-w-[17ch] font-display text-[clamp(2.2rem,5.4vw,4.05rem)] leading-[1.04] tracking-tight text-balance">
               Tell me the site and the goal. I&rsquo;ll do the rest.
             </h1>
@@ -66,7 +66,7 @@ export default function ContactPage() {
       <section className="mt-20 border-t border-line bg-surface">
         <div className="container-pad grid gap-12 py-16 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
           <Reveal>
-            <p className="eyebrow">[ Or just email me ]</p>
+            <p className="eyebrow">Or just email me</p>
             <a
               href={`mailto:${site.email}?subject=My%20site`}
               className="mt-4 block font-display text-[clamp(1.4rem,3vw,2rem)] leading-tight tracking-tight transition-colors duration-100 hover:text-brand"

@@ -65,7 +65,7 @@ export function CaseStudyBlock({ c }: { c: CaseStudy }) {
               i > 1 ? "min-[420px]:border-t min-[420px]:border-line sm:border-t-0" : ""
             }`}
           >
-            <span className="eyebrow mb-1.5 block text-[10px]">{m.label}</span>
+            <span className="eyebrow-flat mb-1.5 block text-[10px]">{m.label}</span>
             <span className="tnum text-xl font-medium tracking-tight">{m.value}</span>
             {m.delta ? (
               <span

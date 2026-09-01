@@ -14,7 +14,7 @@ export function Reviews() {
   return (
     <>
       <Reveal>
-        <p className="eyebrow">[ In their words ]</p>
+        <p className="eyebrow">In their words</p>
         <h2 className="mt-4 max-w-[22ch] font-display text-[clamp(1.9rem,4vw,3rem)] leading-[1.05] tracking-tight text-balance">
           The part I can&rsquo;t put in a chart.
         </h2>
