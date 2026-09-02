@@ -111,15 +111,19 @@ const servicesLd = {
       "@type": "Service",
       name: s.title,
       description: s.body,
-      provider: { "@type": "Person", name: site.owner },
+      provider: { "@id": "https://koinophobe.com/#organization" },
       areaServed: "United States",
     },
   })),
 };
 
+// Same @id as the Person in the root layout, so this page enriches that one
+// entity instead of introducing a second Michael Edward.
 const personLd = {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": "https://koinophobe.com/#michael",
+  worksFor: { "@id": "https://koinophobe.com/#organization" },
   name: site.owner,
   url: "https://koinophobe.com/about",
   email: site.email,

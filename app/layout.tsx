@@ -66,35 +66,87 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+/*
+ * Entity graph. Three nodes joined by @id so Google reads one organisation,
+ * one person and one site rather than three unrelated blobs.
+ *
+ * Deliberately Organization, not ProfessionalService. ProfessionalService is a
+ * LocalBusiness, which asserts a place customers visit. There isn't one, and
+ * claiming otherwise would contradict the advice on this very site about who
+ * is eligible for a local listing. serviceType lives on Service, so the
+ * services hang off an OfferCatalog where the vocabulary actually allows them.
+ */
+const ORG_ID = "https://koinophobe.com/#organization";
+const PERSON_ID = "https://koinophobe.com/#michael";
+const SITE_ID = "https://koinophobe.com/#website";
+
+const SERVICES = [
+  "Technical SEO",
+  "Local SEO",
+  "Google Business Profile management",
+  "Conversion tracking and analytics implementation",
+  "Website migration",
+  "Core Web Vitals optimisation",
+];
+
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "Koinophobe",
-  description:
-    "Freelance SEO and conversion tracking. Grows organic traffic and proves it converts with analytics that tie rankings to leads.",
-  url: "https://koinophobe.com",
-  founder: { "@type": "Person", name: "Michael Edward" },
-  sameAs: [site.linkedin, site.x],
-  areaServed: "United States (remote, US Eastern hours)",
-  knowsAbout: [
-    "Technical SEO",
-    "On-page SEO",
-    "Local SEO",
-    "Conversion tracking",
-    "Google Analytics 4",
-    "Google Tag Manager",
-    "Core Web Vitals",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": ORG_ID,
+      name: "Koinophobe",
+      url: "https://koinophobe.com",
+      email: site.email,
+      description:
+        "Freelance technical SEO and conversion tracking. Grows organic search performance for local businesses and proves it with the client's own Search Console and analytics data.",
+      founder: { "@id": PERSON_ID },
+      sameAs: [site.linkedin, site.x],
+      areaServed: { "@type": "Country", name: "United States" },
+      knowsAbout: [
+        "Technical SEO",
+        "On-page SEO",
+        "Local SEO",
+        "Conversion tracking",
+        "Google Analytics 4",
+        "Google Tag Manager",
+        "Google Search Console",
+        "Core Web Vitals",
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Search and analytics services",
+        itemListElement: SERVICES.map((name) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name,
+            serviceType: name,
+            provider: { "@id": ORG_ID },
+            areaServed: { "@type": "Country", name: "United States" },
+          },
+        })),
+      },
+    },
+    {
+      "@type": "Person",
+      "@id": PERSON_ID,
+      name: site.owner,
+      url: "https://koinophobe.com/about",
+      email: site.email,
+      jobTitle: "Technical SEO and analytics consultant",
+      worksFor: { "@id": ORG_ID },
+      sameAs: [site.linkedin, site.x],
+    },
+    {
+      "@type": "WebSite",
+      "@id": SITE_ID,
+      name: site.name,
+      url: "https://koinophobe.com",
+      inLanguage: "en",
+      publisher: { "@id": ORG_ID },
+    },
   ],
-  serviceType: "Search Engine Optimization",
-};
-
-const siteLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: site.name,
-  url: "https://koinophobe.com",
-  inLanguage: "en",
-  author: { "@type": "Person", name: site.owner, sameAs: [site.linkedin, site.x] },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -113,7 +165,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, siteLd]) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className="min-h-screen">
