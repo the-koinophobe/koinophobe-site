@@ -118,7 +118,7 @@ export function Process() {
       {/* rail: draws itself as you scroll past */}
       <div className="relative mt-14">
         <svg
-          className="pointer-events-none absolute inset-x-0 top-[22px] hidden h-px w-full overflow-visible sm:block"
+          className="pointer-events-none absolute inset-x-0 top-[22px] z-0 hidden h-px w-full overflow-visible sm:block"
           viewBox="0 0 1000 1"
           preserveAspectRatio="none"
           aria-hidden
@@ -141,7 +141,7 @@ export function Process() {
                 className="group flex items-start gap-4 text-left sm:flex-col sm:gap-0"
               >
                 <span
-                  className={`grid h-11 w-11 flex-none place-items-center rounded-full border transition-all duration-150 ${
+                  className={`relative z-10 grid h-11 w-11 flex-none place-items-center rounded-full border transition-all duration-150 ${
                     on
                       ? "border-brand bg-brand text-bg"
                       : "border-line bg-bg text-muted group-hover:border-brand group-hover:text-ink"
