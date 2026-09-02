@@ -1,12 +1,9 @@
-"use client";
-
-import { Fragment, useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import { Fragment } from "react";
 
 /**
- * Masked word rise for an above-the-fold headline. Runs on mount rather than
- * on scroll, and the words render visible first so no-JS and reduced-motion
- * readers never see a blank heading.
+ * Masked word rise for the above-the-fold headline. Pure CSS keyframes on a
+ * per-word delay, so the largest text on the page paints immediately instead
+ * of waiting for a script to hydrate.
  */
 export function HeroHeadline({
   segments,
@@ -15,42 +12,32 @@ export function HeroHeadline({
   segments: { text: string; muted?: boolean }[];
   className?: string;
 }) {
-  const ref = useRef<HTMLHeadingElement | null>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-    const words = el.querySelectorAll<HTMLElement>("[data-word]");
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        words,
-        { yPercent: 108 },
-        { yPercent: 0, duration: 0.85, ease: "power3.out", stagger: 0.045, delay: 0.05 }
-      );
-    });
-    return () => ctx.revert();
-  }, []);
-
   const label = segments.map((s) => s.text).join(" ");
+  let n = 0;
 
   return (
-    <h1 ref={ref} className={className} aria-label={label}>
+    <h1 className={`word-rise ${className}`} aria-label={label}>
       {segments.map((seg, si) => (
         <span key={si} className="block">
-          {seg.text.split(" ").map((w, wi) => (
-            <Fragment key={wi}>
-              <span className="inline-block overflow-hidden pb-[0.12em] -mb-[0.12em] align-baseline" aria-hidden>
+          {seg.text.split(" ").map((w, wi) => {
+            const delay = (n++ * 0.045 + 0.05).toFixed(2);
+            return (
+              <Fragment key={wi}>
                 <span
-                  data-word
-                  className={`inline-block will-change-transform ${seg.muted ? "text-muted" : ""}`}
+                  className="inline-block overflow-hidden pb-[0.12em] -mb-[0.12em] align-baseline"
+                  aria-hidden
                 >
-                  {w}
-                </span>
-              </span>{" "}
-            </Fragment>
-          ))}
+                  <span
+                    data-word
+                    className={`inline-block ${seg.muted ? "text-muted" : ""}`}
+                    style={{ animationDelay: `${delay}s` }}
+                  >
+                    {w}
+                  </span>
+                </span>{" "}
+              </Fragment>
+            );
+          })}
         </span>
       ))}
     </h1>

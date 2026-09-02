@@ -34,7 +34,7 @@ export default function HomePage() {
             className="mt-5 max-w-[16ch] font-display text-[clamp(2.7rem,7.4vw,5.6rem)] font-normal leading-[1.02] tracking-tight"
             segments={[{ text: "Numbers don't lie." }, { text: "I make yours go up.", muted: true }]}
           />
-          <Reveal as="p" delay={0.35} className="mt-7 max-w-[58ch] text-[17.5px] text-muted">
+          <p className="mt-7 max-w-[58ch] text-[17.5px] text-muted">
             I&rsquo;m Michael. I do technical SEO for local businesses, and I&rsquo;ve spent two
             years proving it on the only scoreboard that counts:{" "}
             <strong className="font-medium text-ink">
@@ -42,16 +42,16 @@ export default function HomePage() {
             </strong>{" "}
             Thirty-plus sites so far. Five of them are opened up below, data and all, because
             showing you beats telling you.
-          </Reveal>
+          </p>
 
-          <Reveal delay={0.4} className="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <div className="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
             <EmailCta from="hero" />
             <TextCta href="/work" label="See the numbers" from="hero" />
-          </Reveal>
+          </div>
 
-          <Reveal delay={0.5} className="mt-12">
+          <div className="mt-12">
             <StreamGraph />
-          </Reveal>
+          </div>
 
           <MetricStrip
             cells={[

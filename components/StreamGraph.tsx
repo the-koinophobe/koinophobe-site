@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { gsap } from "gsap";
 import { sectors, streamMonths } from "@/lib/gsc";
 
 /**
@@ -66,21 +65,6 @@ export function StreamGraph() {
       return { ...s, d, top };
     });
     return { bands, totals, max };
-  }, []);
-
-  // The stream draws itself once, on mount.
-  useEffect(() => {
-    const el = wrapRef.current;
-    if (!el) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        el.querySelectorAll("[data-band]"),
-        { scaleY: 0.18, opacity: 0, transformOrigin: "center center" },
-        { scaleY: 1, opacity: 1, duration: 1.1, ease: "power3.out", stagger: 0.09, delay: 0.2 }
-      );
-    }, el);
-    return () => ctx.revert();
   }, []);
 
   const xFor = (i: number) => PAD.l + (i * (W - PAD.l - PAD.r)) / (N - 1);

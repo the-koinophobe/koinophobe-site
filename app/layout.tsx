@@ -6,8 +6,7 @@ import { Header } from "@/components/Header";
 import { ChromeGate } from "@/components/ChromeGate";
 import { Footer } from "@/components/Footer";
 import { Analytics } from "@/components/Analytics";
-import { SmoothScroll } from "@/components/SmoothScroll";
-import { Cursor } from "@/components/Cursor";
+import { Anim } from "@/components/Anim";
 import { CookieConsent } from "@/components/CookieConsent";
 import { site } from "@/lib/site";
 
@@ -21,14 +20,13 @@ const serif = Fraunces({
   subsets: ["latin"],
   variable: "--font-serif",
   display: "swap",
-  style: ["italic", "normal"],
-  weight: ["300", "400", "500"],
+  weight: ["400"],
 });
 const mono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
   display: "swap",
-  weight: ["400", "500", "700"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -108,14 +106,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <head>
         <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('anim')}catch(e){}",
+          }}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, siteLd]) }}
         />
       </head>
-      <body className="js-anim min-h-screen">
+      <body className="min-h-screen">
         <ThemeProvider>
-          <SmoothScroll />
-          <Cursor />
           <ChromeGate>
             <Header />
           </ChromeGate>
@@ -124,6 +126,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Footer />
           </ChromeGate>
         </ThemeProvider>
+        <Anim />
         <CookieConsent />
         <Analytics />
       </body>

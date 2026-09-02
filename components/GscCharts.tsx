@@ -1,32 +1,48 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { agencyPages, positionLadder } from "@/lib/gsc";
 
-if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger);
 
 /**
  * Charts draw themselves when they scroll into view. Every animation is
  * opacity/transform or a dash offset, and reduced-motion skips straight to the
  * finished state, so the figures are never withheld from anyone.
  */
-function useDrawIn(build: (el: HTMLElement, tl: gsap.core.Timeline) => void) {
+function useDrawIn() {
   const ref = useRef<HTMLDivElement | null>(null);
+
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: { trigger: el, start: "top 84%", once: true },
-      });
-      build(el, tl);
-    }, el);
-    return () => ctx.revert();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
+    // Dash length and travel distance are the only two numbers CSS cannot work
+    // out for itself, so measure them once and hand them over as variables.
+    el.querySelectorAll<SVGPathElement>("[data-spark-line]").forEach((p) => {
+      const len = p.getTotalLength();
+      p.style.strokeDasharray = String(len);
+      p.style.setProperty("--len", String(len));
+    });
+    el.querySelectorAll<SVGElement>("[data-ladder-now]").forEach((n) => {
+      n.style.setProperty("--travel", `${n.getAttribute("data-travel") ?? 0}px`);
+    });
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      el.setAttribute("data-in", "");
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (!entries[0].isIntersecting) return;
+        el.setAttribute("data-in", "");
+        io.disconnect();
+      },
+      { rootMargin: "0px 0px -14% 0px" }
+    );
+    io.observe(el);
+    return () => io.disconnect();
   }, []);
+
   return ref;
 }
 
@@ -96,18 +112,7 @@ export function Sparkline({
   const v = useVar();
   const [hover, setHover] = useState<number | null>(null);
   const svgRef = useRef<SVGSVGElement | null>(null);
-  const frameRef = useDrawIn((el, tl) => {
-    const path = el.querySelector<SVGPathElement>("[data-spark-line]");
-    const area = el.querySelector<SVGPathElement>("[data-spark-area]");
-    const cap = el.querySelectorAll("[data-spark-cap]");
-    if (path) {
-      const len = path.getTotalLength();
-      gsap.set(path, { strokeDasharray: len, strokeDashoffset: len });
-      tl.to(path, { strokeDashoffset: 0, duration: 1.25, ease: "power2.inOut" });
-    }
-    if (area) tl.fromTo(area, { opacity: 0 }, { opacity: 1, duration: 0.8 }, 0.3);
-    if (cap.length) tl.fromTo(cap, { opacity: 0, scale: 0.6, transformOrigin: "center" }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2)" }, "-=0.25");
-  });
+  const frameRef = useDrawIn();
 
   const W = 560, H = 210, PL = 46, PR = 14, PT = 14, PB = 30;
   const max = Math.max(...data.map((d) => d[1]));
@@ -199,14 +204,7 @@ export function Sparkline({
 
 export function PositionLadder({ title, range }: { title: string; range: string }) {
   const v = useVar();
-  const frameRef = useDrawIn((el, tl) => {
-    const conns = el.querySelectorAll("[data-ladder-line]");
-    const nows = el.querySelectorAll("[data-ladder-now]");
-    const vals = el.querySelectorAll("[data-ladder-val]");
-    tl.fromTo(conns, { scaleX: 0, transformOrigin: "right center" }, { scaleX: 1, duration: 0.6, ease: "power2.out", stagger: 0.08 })
-      .fromTo(nows, { x: (i: number) => Number((nows[i] as SVGElement).getAttribute("data-travel")) }, { x: 0, duration: 0.9, ease: "power3.out", stagger: 0.08 }, "-=0.45")
-      .fromTo(vals, { opacity: 0 }, { opacity: 1, duration: 0.4, stagger: 0.06 }, "-=0.5");
-  });
+  const frameRef = useDrawIn();
   const rows = positionLadder;
   const W = 560, RH = 52, PT = 28, PB = 22, PL = 8, PR = 64;
   const H = PT + PB + rows.length * RH;
@@ -258,12 +256,7 @@ export function PositionLadder({ title, range }: { title: string; range: string 
 
 export function PageBars({ title, range }: { title: string; range: string }) {
   const v = useVar();
-  const frameRef = useDrawIn((el, tl) => {
-    tl.fromTo(el.querySelectorAll("[data-bar]"), { scaleX: 0, transformOrigin: "left center" },
-      { scaleX: 1, duration: 0.75, ease: "power3.out", stagger: 0.07 })
-      .fromTo(el.querySelectorAll("[data-bar-val]"), { opacity: 0, x: -6 },
-        { opacity: 1, x: 0, duration: 0.4, stagger: 0.05 }, "-=0.6");
-  });
+  const frameRef = useDrawIn();
   const rows = agencyPages;
   const W = 560, RH = 46, PT = 6, PB = 8, PL = 6, GUT = 152;
   const H = PT + PB + rows.length * RH;

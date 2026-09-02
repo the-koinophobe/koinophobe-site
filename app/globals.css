@@ -235,20 +235,40 @@ html.lenis body {
   }
 }
 
-/* GSAP reveal initial state (only applied when JS + motion allowed) */
-.reveal {
+/* ── Scroll animation ────────────────────────────────────────────────────
+   One IntersectionObserver (components/Anim.tsx) sets data-in; everything
+   below is CSS. The `anim` class is added by an inline script in the head, so
+   with JS off nothing is ever hidden. */
+.anim [data-anim] { opacity: 0; }
+.anim [data-anim="rise"] { transform: translateY(18px); }
+.anim [data-anim][data-in] {
   opacity: 1;
+  transform: none;
+  transition: opacity 0.6s cubic-bezier(0.2, 0.7, 0.3, 1),
+              transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1);
 }
-.js-anim .reveal {
-  opacity: 0;
-  will-change: transform, opacity;
+.anim [data-anim="stagger"] { opacity: 1; }
+.anim [data-anim="stagger"] > * { opacity: 0; transform: translateY(18px); }
+.anim [data-anim="stagger"][data-in] > * {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.55s cubic-bezier(0.2, 0.7, 0.3, 1),
+              transform 0.55s cubic-bezier(0.2, 0.7, 0.3, 1);
 }
-.js-anim .js-stagger > * {
-  opacity: 0;
+.anim [data-anim="stagger"][data-in] > *:nth-child(2) { transition-delay: 0.07s; }
+.anim [data-anim="stagger"][data-in] > *:nth-child(3) { transition-delay: 0.14s; }
+.anim [data-anim="stagger"][data-in] > *:nth-child(4) { transition-delay: 0.21s; }
+.anim [data-anim="stagger"][data-in] > *:nth-child(5) { transition-delay: 0.28s; }
+.anim [data-anim="stagger"][data-in] > *:nth-child(n+6) { transition-delay: 0.35s; }
+
+/* Draw a stroked path in when its container enters view. */
+.anim [data-draw] { stroke-dashoffset: var(--len, 1000); }
+.anim [data-in] [data-draw],
+.anim [data-draw][data-in] {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1.1s cubic-bezier(0.3, 0.8, 0.4, 1);
 }
-.js-anim .js-rise > * {
-  transform: translateY(120%);
-}
+
 /* Word-mask rise (WordRise) — pure CSS, runs with or without JS */
 .word-rise [data-word] {
   transform: translateY(115%);
@@ -259,13 +279,15 @@ html.lenis body {
   to { transform: translateY(0); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .js-anim .reveal,
-  .js-anim .js-stagger > * {
+  [data-anim],
+  [data-anim] > * {
     opacity: 1 !important;
     transform: none !important;
+    transition: none !important;
   }
-  .js-anim .js-rise > * {
-    transform: none !important;
+  [data-draw] {
+    stroke-dashoffset: 0 !important;
+    transition: none !important;
   }
   .word-rise [data-word] {
     animation: none !important;
@@ -489,4 +511,84 @@ html.gbp-light .gbp-theme .gbp-logo { filter: none; }
   .pipe-dot {
     display: none;
   }
+}
+
+/* ── Chart draw-in ───────────────────────────────────────────────────────
+   The container gets data-in from its own observer (useDrawIn). Everything
+   here is a transition, so the charts cost no animation library. */
+.anim [data-spark-line] { stroke-dashoffset: var(--len, 1000); }
+.anim [data-in] [data-spark-line] {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.anim [data-spark-area],
+.anim [data-spark-cap],
+.anim [data-ladder-val],
+.anim [data-bar-val] { opacity: 0; }
+.anim [data-in] [data-spark-area] { opacity: 1; transition: opacity 0.8s ease 0.3s; }
+.anim [data-in] [data-spark-cap] { opacity: 1; transition: opacity 0.4s ease 1s; }
+
+.anim [data-ladder-line],
+.anim [data-bar] { transform: scaleX(0); }
+.anim [data-ladder-line] { transform-origin: right center; }
+.anim [data-bar] { transform-origin: left center; }
+.anim [data-in] [data-ladder-line],
+.anim [data-in] [data-bar] {
+  transform: none;
+  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+.anim [data-ladder-now] { transform: translateX(var(--travel, 0)); }
+.anim [data-in] [data-ladder-now] {
+  transform: none;
+  transition: transform 0.9s cubic-bezier(0.2, 0.8, 0.3, 1) 0.15s;
+}
+.anim [data-in] [data-ladder-val],
+.anim [data-in] [data-bar-val] { opacity: 1; transition: opacity 0.45s ease 0.5s; }
+
+/* Row-by-row stagger for the ladder and bar charts. */
+.anim [data-in] [data-ladder-line]:nth-of-type(n),
+.anim [data-in] [data-bar] { transition-delay: 0s; }
+.anim [data-in] g:nth-child(2) [data-ladder-line],
+.anim [data-in] g:nth-child(2) [data-bar] { transition-delay: 0.07s; }
+.anim [data-in] g:nth-child(3) [data-ladder-line],
+.anim [data-in] g:nth-child(3) [data-bar] { transition-delay: 0.14s; }
+.anim [data-in] g:nth-child(4) [data-ladder-line],
+.anim [data-in] g:nth-child(4) [data-bar] { transition-delay: 0.21s; }
+.anim [data-in] g:nth-child(n+5) [data-ladder-line],
+.anim [data-in] g:nth-child(n+5) [data-bar] { transition-delay: 0.28s; }
+
+/* Stream graph bands rise on mount. */
+.anim [data-band] {
+  opacity: 0;
+  transform: scaleY(0.18);
+  transform-origin: center center;
+  animation: band-in 1.1s cubic-bezier(0.2, 0.8, 0.3, 1) forwards;
+}
+@keyframes band-in { to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-spark-line], [data-spark-area], [data-spark-cap],
+  [data-ladder-line], [data-ladder-now], [data-ladder-val],
+  [data-bar], [data-bar-val], [data-band] {
+    opacity: 1 !important;
+    transform: none !important;
+    stroke-dashoffset: 0 !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+.anim [data-band] { animation-delay: 0.2s; }
+.anim [data-band]:nth-of-type(2) { animation-delay: 0.29s; }
+.anim [data-band]:nth-of-type(3) { animation-delay: 0.38s; }
+.anim [data-band]:nth-of-type(4) { animation-delay: 0.47s; }
+.anim [data-band]:nth-of-type(n+5) { animation-delay: 0.56s; }
+
+/* Offscreen wall tiles are skipped entirely until they scroll near. The size
+   hint keeps the scrollbar honest so nothing shifts. */
+.wall-tile {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 260px auto 230px;
+}
+@media (min-width: 640px) {
+  .wall-tile { contain-intrinsic-size: auto 340px auto 260px; }
 }

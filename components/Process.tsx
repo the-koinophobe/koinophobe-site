@@ -1,11 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { PhoneCall, FileText, Hammer, TrendingUp } from "lucide-react";
-
-if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger);
 
 type Audience = "owner" | "agency";
 
@@ -58,51 +54,32 @@ export function Process() {
   const rootRef = useRef<HTMLDivElement | null>(null);
   const bodyRef = useRef<HTMLParagraphElement | null>(null);
 
+  // The rail and the nodes are CSS. This only measures the path once and
+  // marks the section when it arrives, which is the whole animation budget.
   useEffect(() => {
     const el = rootRef.current;
     if (!el) return;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const ctx = gsap.context(() => {
-      const rail = el.querySelector<SVGPathElement>("[data-rail]");
-      const nodes = el.querySelectorAll("[data-node]");
-      if (reduce) {
-        gsap.set([rail, nodes], { clearProps: "all", opacity: 1 });
-        return;
-      }
-      if (rail) {
-        const len = rail.getTotalLength();
-        gsap.set(rail, { strokeDasharray: len, strokeDashoffset: len });
-        gsap.to(rail, {
-          strokeDashoffset: 0,
-          ease: "none",
-          scrollTrigger: { trigger: el, start: "top 72%", end: "bottom 70%", scrub: 0.5 },
-        });
-      }
-      gsap.fromTo(
-        nodes,
-        { opacity: 0, scale: 0.75 },
-        {
-          opacity: 1,
-          scale: 1,
-          duration: 0.4,
-          ease: "back.out(2.2)",
-          stagger: 0.14,
-          scrollTrigger: { trigger: el, start: "top 72%", once: true },
-        }
-      );
-    }, el);
-    return () => ctx.revert();
+    const rail = el.querySelector<SVGPathElement>("[data-rail]");
+    if (rail) {
+      const len = rail.getTotalLength();
+      rail.style.strokeDasharray = String(len);
+      rail.style.setProperty("--len", String(len));
+    }
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      el.setAttribute("data-in", "");
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (!entries[0].isIntersecting) return;
+        el.setAttribute("data-in", "");
+        io.disconnect();
+      },
+      { rootMargin: "0px 0px -20% 0px" }
+    );
+    io.observe(el);
+    return () => io.disconnect();
   }, []);
-
-  useEffect(() => {
-    const el = bodyRef.current;
-    if (!el) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const ctx = gsap.context(() => {
-      gsap.fromTo(el, { opacity: 0, y: 5 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" });
-    }, el);
-    return () => ctx.revert();
-  }, [active, audience]);
 
   const step = STEPS[active];
 
@@ -192,7 +169,7 @@ export function Process() {
         </div>
       </div>
 
-      <p ref={bodyRef} className="mt-10 max-w-[62ch] border-t border-line pt-8 text-[17.5px]">
+      <p key={`${active}-${audience}`} ref={bodyRef} className="step-body mt-10 max-w-[62ch] border-t border-line pt-8 text-[17.5px]">
         {step[audience]}
       </p>
     </div>

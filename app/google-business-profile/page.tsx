@@ -4,7 +4,6 @@ import Link from "next/link";
 import { ArrowRight, Check, X } from "lucide-react";
 
 import { Reveal } from "@/components/Reveal";
-import { CharReveal } from "@/components/CharReveal";
 import { WordRise } from "@/components/WordRise";
 import { WhatsAppButton } from "@/components/gbp/WhatsAppButton";
 import { MapPack } from "@/components/gbp/MapPack";
@@ -126,7 +125,7 @@ function Head({
       <h2
         className={`font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl ${t.title}`}
       >
-        <CharReveal text={heading} />
+        <WordRise tokens={heading.split(" ").map((t) => ({ t }))} />
       </h2>
       {intro && <p className={`mt-5 text-lg ${t.intro}`}>{intro}</p>}
     </Reveal>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { projects, type Project } from "@/lib/content";
@@ -17,7 +17,7 @@ import { projects, type Project } from "@/lib/content";
  * them into plain scrollable strips.
  */
 
-function Tile({ p }: { p: Project }) {
+function Tile({ p, video }: { p: Project; video: boolean }) {
   const vid = useRef<HTMLVideoElement | null>(null);
   const [live, setLive] = useState(false);
 
@@ -40,7 +40,7 @@ function Tile({ p }: { p: Project }) {
     <div
       onPointerEnter={enter}
       onPointerLeave={leave}
-      className="group flex h-full w-[260px] flex-none flex-col overflow-hidden rounded-md border border-line bg-bg sm:w-[340px]"
+      className="wall-tile group flex h-full w-[260px] flex-none flex-col overflow-hidden rounded-md border border-line bg-bg sm:w-[340px]"
     >
       <div className="flex items-center gap-2 border-b border-line bg-surface px-3 py-2">
         <span className="flex gap-1.5" aria-hidden>
@@ -54,7 +54,7 @@ function Tile({ p }: { p: Project }) {
       </div>
 
       <div className="relative aspect-[16/10] w-full overflow-hidden bg-surface">
-        {p.video ? (
+        {p.video && video ? (
           <video
             ref={vid}
             poster={p.image}
@@ -109,6 +109,18 @@ function Tile({ p }: { p: Project }) {
 }
 
 export function SiteWall() {
+  // A tile's video only ever plays on hover, so a touch device is handed the
+  // poster and nothing else. That is 28 media elements the phone never builds.
+  // `ready` also gates the marquee's duplicate copy. The server sends one set
+  // of tiles; the clone that makes the loop seamless is added after paint, so
+  // the HTML the browser has to download is half the size.
+  const [video, setVideo] = useState(false);
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    setVideo(window.matchMedia("(pointer: fine)").matches);
+    setReady(true);
+  }, []);
+
   const named = projects.filter((p) => p.named).length;
   const unnamed = projects.length - named;
 
@@ -136,8 +148,8 @@ export function SiteWall() {
                 i === 0 ? "wall-drift" : "wall-drift wall-drift-rev"
               }`}
             >
-              {[...row, ...row].map((p, j) => (
-                <Tile key={`${p.name}-${j}`} p={p} />
+              {(ready ? [...row, ...row] : row).map((p, j) => (
+                <Tile key={`${p.name}-${j}`} p={p} video={video} />
               ))}
             </div>
           </div>

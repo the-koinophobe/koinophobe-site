@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { CalendarCheck, MessageSquare, Search } from "lucide-react";
-import { ContactForm } from "@/components/ContactForm";
 import { Reveal } from "@/components/Reveal";
 import { Stagger } from "@/components/Stagger";
 import { XIcon } from "@/components/Availability";
@@ -108,7 +107,34 @@ export default function ContactPage() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <ContactForm />
+            <p className="eyebrow">Three things in the first email</p>
+            <ol className="mt-6 space-y-5">
+              {[
+                ["Your URL.", "That is the only thing I actually need to start."],
+                [
+                  "What you want more of.",
+                  "Calls, bookings, quotes, foot traffic. Not rankings, the thing rankings are supposed to buy you.",
+                ],
+                [
+                  "What you have already tried.",
+                  "So I do not spend the first call recommending something that failed last year.",
+                ],
+              ].map(([t, b], i) => (
+                <li key={t} className="grid grid-cols-[1.6rem_1fr] gap-x-4">
+                  <span className="tnum font-mono text-[12px] text-brand">0{i + 1}</span>
+                  <span>
+                    <span className="block text-[16.5px] font-medium">{t}</span>
+                    <span className="mt-1 block max-w-[42ch] text-[15px] leading-relaxed text-muted">
+                      {b}
+                    </span>
+                  </span>
+                </li>
+              ))}
+            </ol>
+            <p className="mt-9 max-w-[42ch] text-[15px] text-muted">
+              No form, no autoresponder, no drip sequence. It comes straight to my inbox and I
+              answer it myself.
+            </p>
           </Reveal>
         </div>
       </section>

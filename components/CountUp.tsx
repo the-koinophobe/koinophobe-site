@@ -1,29 +1,18 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger);
 
 /**
- * Counts a figure up when it scrolls into view. `value` is the plain number;
- * `display` is what renders on the server and for reduced-motion, so the real
- * figure is always in the markup.
+ * Counts a figure up when it scrolls into view. The real number is rendered on
+ * the server, so it is correct before this runs and correct if it never does.
  */
 export function CountUp({
   value,
   display,
-  prefix = "",
-  suffix = "",
-  decimals = 0,
   className = "",
 }: {
   value: number;
   display: string;
-  prefix?: string;
-  suffix?: string;
-  decimals?: number;
   className?: string;
 }) {
   const ref = useRef<HTMLSpanElement | null>(null);
@@ -33,29 +22,25 @@ export function CountUp({
     if (!el) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    const obj = { n: 0 };
-    const ctx = gsap.context(() => {
-      gsap.to(obj, {
-        n: value,
-        duration: 1.4,
-        ease: "power3.out",
-        scrollTrigger: { trigger: el, start: "top 88%", once: true },
-        onUpdate: () => {
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (!entries[0].isIntersecting) return;
+        io.disconnect();
+        const start = performance.now();
+        const tick = (now: number) => {
+          const p = Math.min((now - start) / 1200, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
           el.textContent =
-            prefix +
-            obj.n.toLocaleString("en-US", {
-              minimumFractionDigits: decimals,
-              maximumFractionDigits: decimals,
-            }) +
-            suffix;
-        },
-        onComplete: () => {
-          el.textContent = display;
-        },
-      });
-    });
-    return () => ctx.revert();
-  }, [value, display, prefix, suffix, decimals]);
+            p < 1 ? Math.round(value * eased).toLocaleString("en-US") : display;
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      },
+      { rootMargin: "0px 0px -12% 0px" }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [value, display]);
 
   return (
     <span ref={ref} className={className}>

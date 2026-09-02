@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Only the icons actually imported get bundled.
+  experimental: { optimizePackageImports: ["lucide-react"], optimizeCss: true },
   poweredByHeader: false,
   // Short branded links for social bios; UTM tags are applied on arrival so
   // GA4 attributes the visit. Add more here per campaign as needed.

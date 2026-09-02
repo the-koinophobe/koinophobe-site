@@ -1,14 +1,17 @@
-"use client";
-
 import Link from "next/link";
 import { ArrowRight, Mail } from "lucide-react";
 import { site } from "@/lib/site";
-import { track } from "@/lib/analytics";
 
 const SUBJECT = encodeURIComponent("My site");
 
 /** One href builder so every CTA on the site points at the same inbox. */
 export const mailHref = `mailto:${site.email}?subject=${SUBJECT}`;
+
+/*
+ * These are server components. Click tracking happens through one delegated
+ * listener in Track.tsx reading the data-track attributes below, so a call to
+ * action costs no JavaScript of its own.
+ */
 
 /** Solid primary button. Used in the header, the hero and every CTA band. */
 export function EmailCta({
@@ -25,7 +28,8 @@ export function EmailCta({
   return (
     <a
       href={mailHref}
-      onClick={() => track("cta_email", { from })}
+      data-track="cta_email"
+      data-from={from}
       className={`inline-flex items-center gap-2.5 rounded-sm bg-ink font-medium text-bg transition-[transform,opacity] duration-150 hover:-translate-y-0.5 hover:opacity-90 motion-reduce:transform-none ${
         size === "sm" ? "px-4 py-2 text-[13px]" : "px-6 py-4 text-[16px]"
       } ${className}`}
@@ -51,7 +55,8 @@ export function TextCta({
   return (
     <Link
       href={href}
-      onClick={() => track("cta_link", { from, href })}
+      data-track="cta_link"
+      data-from={from}
       className={`group inline-flex items-center gap-2.5 border-b border-line pb-1 font-mono text-[11.5px] uppercase tracking-[0.11em] transition-colors duration-100 hover:text-brand ${className}`}
     >
       {label}

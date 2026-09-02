@@ -1,12 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Search, MousePointerClick, PhoneCall, Banknote } from "lucide-react";
 import { aggregate } from "@/lib/gsc";
-
-if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger);
 
 type Node = {
   key: string;
@@ -72,21 +68,17 @@ function Figure({ value, run }: { value: number; run: boolean }) {
     if (!el || !run || done.current) return;
     done.current = true;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const obj = { n: 0 };
-    const tween = gsap.to(obj, {
-      n: value,
-      duration: 1.1,
-      ease: "power3.out",
-      onUpdate: () => {
-        el.textContent = Math.round(obj.n).toLocaleString("en-US");
-      },
-      onComplete: () => {
-        el.textContent = value.toLocaleString("en-US");
-      },
-    });
-    return () => {
-      tween.kill();
+    let raf = 0;
+    const start = performance.now();
+    const tick = (now: number) => {
+      const p = Math.min((now - start) / 1100, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent =
+        p < 1 ? Math.round(value * eased).toLocaleString("en-US") : value.toLocaleString("en-US");
+      if (p < 1) raf = requestAnimationFrame(tick);
     };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
   }, [run, value]);
 
   return (
@@ -131,53 +123,48 @@ export function Pipeline() {
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) {
-      gsap.set(fill, { scaleY: 1 });
-      gsap.set(dot, { autoAlpha: 0 });
+      fill.style.transform = "scaleY(1)";
+      dot.style.opacity = "0";
       setActive(NODES.length - 1);
       return;
     }
 
-    const setFromProgress = (p: number) => {
+    // Progress is just where the rail sits in the viewport. One passive
+    // listener, coalesced into a frame, is the whole scroll engine.
+    let raf = 0;
+    const paint = () => {
+      raf = 0;
+      const r = list.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const span = r.height - vh * 0.34 || 1;
+      const p = Math.min(Math.max((vh * 0.62 - r.top) / span, 0), 1);
+      fill.style.transform = `scaleY(${p})`;
+      dot.style.transform = `translate(-50%, -50%) translateY(${p * len}px)`;
       const y = p * len;
       let n = 0;
-      for (let i = 0; i < centers.length; i++) {
-        if (centers[i] - top <= y + 4) n = i;
-      }
+      for (let i = 0; i < centers.length; i++) if (centers[i] - top <= y + 4) n = i;
       if (n !== activeRef.current) {
         activeRef.current = n;
         setActive(n);
       }
     };
-
-    const ctx = gsap.context(() => {
-      gsap.set(fill, { scaleY: 0, transformOrigin: "top center" });
-      gsap.set(dot, { y: 0 });
-      const st = ScrollTrigger.create({
-        trigger: list,
-        start: "top 62%",
-        end: "bottom 78%",
-        scrub: 0.55,
-        onRefresh: () => {
-          top = measure();
-        },
-        onUpdate: (self) => {
-          const p = self.progress;
-          gsap.set(fill, { scaleY: p });
-          gsap.set(dot, { y: p * len });
-          setFromProgress(p);
-        },
-      });
-      return () => st.kill();
-    }, el);
-
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(paint);
+    };
     const onResize = () => {
       top = measure();
+      onScroll();
     };
+
+    fill.style.transformOrigin = "top center";
+    paint();
+    window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onResize);
 
     return () => {
+      if (raf) cancelAnimationFrame(raf);
+      window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onResize);
-      ctx.revert();
     };
   }, []);
 

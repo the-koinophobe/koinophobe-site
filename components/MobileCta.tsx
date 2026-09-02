@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { Mail } from "lucide-react";
 import { site } from "@/lib/site";
-import { track } from "@/lib/analytics";
 
 /**
  * Phone-only sticky bar. Appears once the reader is past the hero so it never
@@ -35,7 +34,8 @@ export function MobileCta() {
       <a
         href={`mailto:${site.email}?subject=My%20site`}
         tabIndex={show ? 0 : -1}
-        onClick={() => track("cta_email", { from: "mobile_bar" })}
+        data-track="cta_email"
+        data-from="mobile_bar"
         className="flex w-full items-center justify-center gap-2.5 rounded-sm bg-ink px-5 py-3.5 font-medium text-bg"
       >
         <Mail size={17} aria-hidden />
