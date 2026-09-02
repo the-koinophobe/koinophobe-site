@@ -1,0 +1,68 @@
+# Sveltia CMS. Commits markdown straight to the repo, Vercel rebuilds on push.
+# Sign in with a fine-grained GitHub token so there is no OAuth service to run.
+backend:
+  name: github
+  repo: the-koinophobe/koinophobe-site
+  branch: main
+  commit_messages:
+    create: 'note: add {{slug}}'
+    update: 'note: update {{slug}}'
+    delete: 'note: remove {{slug}}'
+
+site_url: https://koinophobe.com
+display_url: https://koinophobe.com
+publish_mode: simple
+
+media_folder: public/notes
+public_folder: /notes
+
+collections:
+  - name: notes
+    label: Notes
+    label_singular: Note
+    folder: content/notes
+    create: true
+    delete: true
+    slug: '{{fields.slug}}'
+    identifier_field: title
+    path: '{{slug}}'
+    extension: md
+    format: yaml-frontmatter
+    summary: '{{title}}'
+    sortable_fields: [date, title]
+    view_groups:
+      - label: Status
+        field: draft
+    fields:
+      - { name: title, label: Title, widget: string, hint: 'Written for a person, not a search engine.' }
+      - {
+          name: slug,
+          label: URL slug,
+          widget: string,
+          pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Lowercase words separated by hyphens.'],
+          hint: 'Becomes koinophobe.com/notes/your-slug. Do not change it after publishing.',
+        }
+      - {
+          name: date,
+          label: Publish date,
+          widget: datetime,
+          date_format: 'YYYY-MM-DD',
+          time_format: false,
+          picker_utc: true,
+          hint: 'A future date holds the note back until that day.',
+        }
+      - {
+          name: draft,
+          label: Draft,
+          widget: boolean,
+          default: true,
+          hint: 'On means nobody but you can see it. Turn it off to publish.',
+        }
+      - {
+          name: excerpt,
+          label: Excerpt,
+          widget: text,
+          required: true,
+          hint: 'One or two sentences. Used on the notes index, in the meta description and in link previews.',
+        }
+      - { name: body, label: Body, widget: markdown }

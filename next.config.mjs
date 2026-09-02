@@ -2,8 +2,14 @@
 const nextConfig = {
   reactStrictMode: true,
   // Only the icons actually imported get bundled.
-  experimental: { optimizePackageImports: ["lucide-react"], optimizeCss: true },
+  experimental: { optimizePackageImports: ["lucide-react"] },
   poweredByHeader: false,
+  // public/admin/index.html is only served at its literal path, so point the
+  // clean URL at it. Sveltia routes internally on the hash, so one entry is all
+  // it needs.
+  async rewrites() {
+    return [{ source: "/admin", destination: "/admin/index.html" }];
+  },
   // Short branded links for social bios; UTM tags are applied on arrival so
   // GA4 attributes the visit. Add more here per campaign as needed.
   async redirects() {

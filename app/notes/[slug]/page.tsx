@@ -6,10 +6,14 @@ import { Availability } from "@/components/Availability";
 import { CtaBand } from "@/components/Cta";
 import { MobileCta } from "@/components/MobileCta";
 import { ArrowLeft } from "lucide-react";
-import { notes, getNote } from "@/lib/notes";
+import { publishedNotes, getNote } from "@/lib/notes";
+
+// Hourly revalidation plus on-demand rendering, so a note scheduled for next
+// Tuesday goes live on Tuesday without a deploy.
+export const revalidate = 3600;
 
 export function generateStaticParams() {
-  return notes.map((n) => ({ slug: n.slug }));
+  return publishedNotes().map((n) => ({ slug: n.slug }));
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
@@ -96,19 +100,8 @@ export default function NotePage({ params }: { params: { slug: string } }) {
       </section>
 
       <section className="container-pad pb-24 pt-14">
-        <Reveal className="max-w-[68ch] space-y-6 text-[17.5px] leading-[1.7] text-muted">
-          {note.body.map((p, i) =>
-            p.startsWith("## ") ? (
-              <h2
-                key={i}
-                className="!mt-14 font-display text-[clamp(1.5rem,3vw,2rem)] leading-snug tracking-tight text-ink text-balance"
-              >
-                {p.slice(3)}
-              </h2>
-            ) : (
-              <p key={i}>{p}</p>
-            )
-          )}
+        <Reveal className="prose max-w-[68ch] text-[17.5px] leading-[1.7] text-muted">
+          <div dangerouslySetInnerHTML={{ __html: note.html }} />
         </Reveal>
       </section>
 

@@ -5,7 +5,10 @@ import { Reveal } from "@/components/Reveal";
 import { Stagger } from "@/components/Stagger";
 import { Availability } from "@/components/Availability";
 import { MobileCta } from "@/components/MobileCta";
-import { notes } from "@/lib/notes";
+import { publishedNotes } from "@/lib/notes";
+
+// Re-render hourly so a scheduled note publishes itself.
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Notes",
@@ -23,7 +26,7 @@ function fmt(date: string) {
 }
 
 export default function NotesPage() {
-  const sorted = [...notes].sort((a, b) => b.date.localeCompare(a.date));
+  const sorted = publishedNotes(); // already newest first
   return (
     <>
       <section className="pt-28 sm:pt-36">
