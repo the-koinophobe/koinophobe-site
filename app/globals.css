@@ -684,13 +684,17 @@ html.gbp-light .gbp-theme .gbp-logo { filter: none; }
 /* Figures. Alt text doubles as the caption, which is what it is in a note
    built on charts. */
 .prose figure { margin: 2.5rem 0; }
+/* Charts are exported on a near-white ground, so they get a mat and a border
+   and read as a printed figure inset rather than a white slab dropped on a
+   dark page. */
 .prose figure img {
   display: block;
   width: 100%;
   height: auto;
   border: 1px solid rgb(var(--line));
   border-radius: 2px;
-  background: rgb(var(--surface));
+  background: #fcfcfb;
+  padding: 10px;
 }
 .prose figcaption {
   margin-top: 0.85rem;

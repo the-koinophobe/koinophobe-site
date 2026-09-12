@@ -73,7 +73,13 @@ function enrich(html: string): string {
     .replace(/<img([^>]*?)>/g, (whole, attrs: string) => {
       const src = /src="([^"]*)"/.exec(attrs)?.[1] ?? "";
       const alt = /alt="([^"]*)"/.exec(attrs)?.[1] ?? "";
-      const resolved = /^(https?:|\/|data:)/.test(src) ? src : `/notes/${src.replace(/^\.\//, "")}`;
+      let resolved = /^(https?:|\/|data:)/.test(src) ? src : `/notes/${src.replace(/^\.\//, "")}`;
+      // Write .png in the markdown, serve .webp when one sits beside it. Keeps
+      // the note portable while the page ships the smaller file.
+      const webp = resolved.replace(/\.(png|jpe?g)$/i, ".webp");
+      if (webp !== resolved && fs.existsSync(path.join(PUBLIC, webp.replace(/^\//, "")))) {
+        resolved = webp;
+      }
       const size = imageSize(resolved);
       const dims = size ? ` width="${size.w}" height="${size.h}"` : "";
       const img = `<img src="${resolved}" alt="${alt}"${dims} loading="lazy" decoding="async">`;
