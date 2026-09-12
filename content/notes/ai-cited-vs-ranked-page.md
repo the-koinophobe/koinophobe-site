@@ -2,8 +2,8 @@
 title: What separates an AI cited page from a page that merely ranked
 slug: ai-cited-vs-ranked-page
 date: 2026-09-12
-draft: true
-excerpt: Very often, we have been told of a plethora of actions that, if performed should get your pages seen by AI assistants, I ran a simulation to find out what actually moves the needle.
+draft: false
+excerpt: Very often, we have been told of a plethora of actions that, if performed should get your pages seen by AI assistants, I ran some measurements to find out what actually moves the needle.
 ---
 
 ![Cited pages against pages that ranked: assistants share 2 to 12 percent of URLs with Google's organic top ten, but 34 to 54 percent of companies](figures/fig2-overlap.png)
@@ -360,9 +360,3 @@ In the order I would actually do them.
 **4. Test the one surviving measure with an intervention.** Article markup is a correlation with an unresolved artifact explanation. Add `Article` markup to a set of matched vendor pages that do not have it, leave a matched set alone, and watch citation over a quarter. That is the only design here that could produce a causal claim, and it is the claim every vendor actually wants.
 
 **5. Watch concentration over time.** One measurement of 58.3% in the top ten is a fact about September 2026. The question a vendor at number eleven cares about is whether that number is rising.
-
-## Reproducing this
-
-The collection file, the vendor list and both scripts are published. Standard library only, no dependencies, so it runs anywhere Python runs.
-
-The vendor list is the most subjective input here and it is the one that caused the largest error I found. Disagree with any line of it and re-run. The page-type rules are in one function. The significance threshold is one constant. If a different defensible choice flips a conclusion, I would rather know.
