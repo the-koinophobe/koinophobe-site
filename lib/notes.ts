@@ -95,6 +95,21 @@ function enrich(html: string): string {
 }
 
 /**
+ * YAML turns an unquoted `2026-09-12` into a Date object, not a string, so
+ * String().slice(0,10) used to produce "Sat Sep 12" — a date with no year,
+ * which JavaScript then reads as 2001. The CMS writes dates unquoted, so this
+ * hit every note published from the phone. Normalise both shapes to
+ * YYYY-MM-DD, and return "" for anything unparseable rather than guessing.
+ */
+function isoDate(value: unknown): string {
+  if (value instanceof Date) {
+    return Number.isNaN(value.getTime()) ? "" : value.toISOString().slice(0, 10);
+  }
+  const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(value ?? "").trim());
+  return match ? match[0] : "";
+}
+
+/**
  * Notes are markdown files in content/notes, written from the CMS at /admin.
  * They are read once per server start, since the files are baked at build.
  */
@@ -105,7 +120,7 @@ const all: Note[] = (fs.existsSync(DIR) ? fs.readdirSync(DIR) : [])
     return {
       slug: file.replace(/\.md$/, ""),
       title: String(data.title ?? ""),
-      date: String(data.date ?? "").slice(0, 10),
+      date: isoDate(data.date),
       excerpt: String(data.excerpt ?? ""),
       draft: data.draft === true,
       html: enrich(marked.parse(content, { async: false }) as string),
@@ -121,7 +136,11 @@ const all: Note[] = (fs.existsSync(DIR) ? fs.readdirSync(DIR) : [])
 export function publishedNotes(): Note[] {
   const now = Date.now();
   return all
-    .filter((n) => !n.draft && n.title && new Date(n.date).getTime() <= now)
+    .filter((n) => {
+      if (n.draft || !n.title || !n.date) return false;
+      const at = new Date(`${n.date}T00:00:00Z`).getTime();
+      return !Number.isNaN(at) && at <= now;
+    })
     .sort((a, b) => b.date.localeCompare(a.date));
 }
 
