@@ -58,12 +58,63 @@ function imageSize(rel: string): { w: number; h: number } | null {
 }
 
 /**
+ * Every file under public/notes, indexed by bare filename, so an image
+ * resolves whether the note writes `figures/chart.png` (hand-written) or
+ * `chart.png` (what the CMS media picker inserts). Built once at startup.
+ */
+const mediaByName: Map<string, string> = (() => {
+  const map = new Map<string, string>();
+  const root = path.join(PUBLIC, "notes");
+  const walk = (dir: string) => {
+    if (!fs.existsSync(dir)) return;
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        walk(full);
+        continue;
+      }
+      const url = "/" + path.relative(PUBLIC, full).split(path.sep).join("/");
+      const base = entry.name.toLowerCase();
+      if (!map.has(base)) map.set(base, url);
+      // also index under the original extension, so a .png reference finds
+      // the .webp that replaced it
+      const stem = base.replace(/\.[^.]+$/, "");
+      for (const ext of ["png", "jpg", "jpeg", "webp"]) {
+        const key = `${stem}.${ext}`;
+        if (!map.has(key)) map.set(key, url);
+      }
+    }
+  };
+  walk(root);
+  return map;
+})();
+
+/** Resolve whatever a note wrote to a file that actually exists. */
+function resolveImage(src: string): string {
+  if (/^(https?:|data:)/.test(src)) return src;
+  const clean = src.replace(/^\.\//, "");
+  const candidates = [
+    clean.startsWith("/") ? clean : `/notes/${clean}`,
+    clean.startsWith("/") ? clean : `/${clean}`,
+  ];
+  for (const c of candidates) {
+    const webp = c.replace(/\.(png|jpe?g)$/i, ".webp");
+    if (webp !== c && fs.existsSync(path.join(PUBLIC, webp.replace(/^\//, "")))) return webp;
+    if (fs.existsSync(path.join(PUBLIC, c.replace(/^\//, "")))) return c;
+  }
+  // Last resort: match on the filename alone, wherever it lives under
+  // public/notes. This is what makes a CMS upload and a hand-written path
+  // behave the same.
+  const found = mediaByName.get(path.posix.basename(clean).toLowerCase());
+  return found ?? (clean.startsWith("/") ? clean : `/notes/${clean}`);
+}
+
+/**
  * Two fixes applied to marked's output.
  *
- * Images: a bare relative path in a note means "an image I uploaded", so it
- * resolves against the CMS media folder. Each one gets its intrinsic size, lazy
- * loading, and its alt text promoted to a visible caption, because in a
- * data-heavy note the alt text is the figure caption.
+ * Images: the path is resolved against the media folder, gets its intrinsic
+ * size so nothing shifts while it loads, and has its alt text promoted to a
+ * visible caption, because in a data-heavy note the alt text is the caption.
  *
  * Tables: wrapped so a wide table scrolls inside its own box. Without this a
  * seven-column table pushes the whole page sideways on a phone.
@@ -73,13 +124,7 @@ function enrich(html: string): string {
     .replace(/<img([^>]*?)>/g, (whole, attrs: string) => {
       const src = /src="([^"]*)"/.exec(attrs)?.[1] ?? "";
       const alt = /alt="([^"]*)"/.exec(attrs)?.[1] ?? "";
-      let resolved = /^(https?:|\/|data:)/.test(src) ? src : `/notes/${src.replace(/^\.\//, "")}`;
-      // Write .png in the markdown, serve .webp when one sits beside it. Keeps
-      // the note portable while the page ships the smaller file.
-      const webp = resolved.replace(/\.(png|jpe?g)$/i, ".webp");
-      if (webp !== resolved && fs.existsSync(path.join(PUBLIC, webp.replace(/^\//, "")))) {
-        resolved = webp;
-      }
+      const resolved = resolveImage(src);
       const size = imageSize(resolved);
       const dims = size ? ` width="${size.w}" height="${size.h}"` : "";
       const img = `<img src="${resolved}" alt="${alt}"${dims} loading="lazy" decoding="async">`;
@@ -87,8 +132,6 @@ function enrich(html: string): string {
         ? `<figure>${img}<figcaption>${alt}</figcaption></figure>`
         : `<figure>${img}</figure>`;
     })
-    // marked already wrapped a lone image in a paragraph; unwrap so the figure
-    // is a block rather than illegal markup inside a <p>.
     .replace(/<p>(<figure>[\s\S]*?<\/figure>)<\/p>/g, "$1")
     .replace(/<table>/g, '<div class="table-wrap"><table>')
     .replace(/<\/table>/g, "</table></div>");

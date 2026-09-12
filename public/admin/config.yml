@@ -13,14 +13,19 @@ site_url: https://koinophobe.com
 display_url: https://koinophobe.com
 publish_mode: simple
 
-media_folder: public/notes
-public_folder: /notes
+# Leading slashes force these to resolve from the repo root. Without them a
+# collection that sets `path` resolves media relative to the entry file, which
+# is how an upload ended up in content/notes where nothing is ever served.
+media_folder: /public/notes/figures
+public_folder: /notes/figures
 
 collections:
   - name: notes
     label: Notes
     label_singular: Note
     folder: content/notes
+    media_folder: /public/notes/figures
+    public_folder: /notes/figures
     create: true
     delete: true
     slug: '{{fields.slug}}'
