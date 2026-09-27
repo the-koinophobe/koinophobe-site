@@ -1,35 +1,52 @@
 import type { Metadata } from "next";
-import { CalendarCheck, MessageSquare, Search } from "lucide-react";
+import { CalendarCheck, Link2, Linkedin, MapPin, Search, Target, Video } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { Stagger } from "@/components/Stagger";
 import { XIcon } from "@/components/Availability";
-import { Linkedin } from "lucide-react";
+import { CalInline } from "@/components/CalInline";
+import { EmailCta } from "@/components/Cta";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Send me your URL and what you want more of. I'll look at your site properly, then we get on a call and I tell you straight whether there's something worth paying for.",
+    "Book a free 20-minute call or email me your website. I look at your site before we talk and tell you what I'd fix first, or that nothing needs fixing.",
   alternates: { canonical: "/contact" },
 };
 
 const STEPS = [
   {
-    icon: <MessageSquare size={22} aria-hidden />,
-    title: "You write",
-    body: "The URL, what you sell and where, and what you actually want more of. Three lines is plenty.",
+    icon: <CalendarCheck size={22} aria-hidden />,
+    title: "You book",
+    body: "Pick a time and tell me your website and what you want more of. Calls, bookings, quotes, foot traffic.",
   },
   {
     icon: <Search size={22} aria-hidden />,
     title: "I look",
-    body: "Properly, before we speak. Rankings, structure, speed, and whether the pages that should exist do.",
+    body: "Before we speak. Rankings, structure, speed, tracking, and whether the pages that should exist do.",
   },
   {
-    icon: <CalendarCheck size={22} aria-hidden />,
+    icon: <Target size={22} aria-hidden />,
     title: "We talk",
-    body: "Twenty minutes. I tell you what I'd do and what it costs, or that it isn't worth doing. Either way it's free.",
+    body: "Twenty minutes. You get the two or three things I'd fix first and what they'd cost, whether you hire me or not.",
   },
 ];
+
+const ASK = [
+  { icon: <Link2 size={19} aria-hidden />, t: "Your website.", b: "That's enough for me to start." },
+  {
+    icon: <MapPin size={19} aria-hidden />,
+    t: "What you sell and where.",
+    b: "Local search depends on the second half.",
+  },
+  {
+    icon: <Target size={19} aria-hidden />,
+    t: "What you want more of.",
+    b: "Calls, bookings, quotes or foot traffic. Rankings are only worth something if they get you one of those.",
+  },
+];
+
+const videoHref = `mailto:${site.email}?subject=${encodeURIComponent("Video review")}`;
 
 export default function ContactPage() {
   return (
@@ -42,9 +59,9 @@ export default function ContactPage() {
               Tell me the site and the goal. I&rsquo;ll do the rest.
             </h1>
             <p className="mt-6 max-w-[58ch] text-[17.5px] text-muted">
-              No pricing page and no funnel. You send a few lines, I look at your site properly, and
-              we get twenty minutes on a call. If I&rsquo;m not the right person for it you&rsquo;ll
-              hear that in the reply and it costs you nothing.
+              Book a free 20-minute call, or email me if you&rsquo;d rather write. Either way
+              I&rsquo;ll look at your site before we talk, and if there&rsquo;s nothing worth paying
+              for, I&rsquo;ll tell you.
             </p>
           </Reveal>
 
@@ -62,19 +79,29 @@ export default function ContactPage() {
         </div>
       </section>
 
+      <section id="book" className="mt-16 scroll-mt-24">
+        <div className="container-pad">
+          <p className="eyebrow">Book a call</p>
+          <div className="mt-6">
+            <CalInline />
+          </div>
+        </div>
+      </section>
+
       <section className="mt-20 border-t border-line bg-surface">
         <div className="container-pad grid gap-12 py-16 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
           <Reveal>
-            <p className="eyebrow">Or just email me</p>
+            <p className="eyebrow">Or email me</p>
             <a
               href={`mailto:${site.email}?subject=My%20site`}
+              data-track="cta_email"
+              data-from="contact_address"
               className="mt-4 block font-display text-[clamp(1.4rem,3vw,2rem)] leading-tight tracking-tight transition-colors duration-100 hover:text-brand"
             >
               {site.email}
             </a>
             <p className="mt-6 max-w-[42ch] text-muted">
-              I read everything myself and reply within a working day. Available now, working US
-              Eastern hours.
+              I read everything myself. I work 9 to 5 Eastern and reply the same business day.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3">
               <a
@@ -92,7 +119,47 @@ export default function ContactPage() {
                 {site.xHandle}
               </a>
             </div>
-            <figure className="mt-12 border-t border-line pt-8">
+
+            <div id="video" className="mt-12 scroll-mt-24 border-t border-line pt-8">
+              <span className="text-brand">
+                <Video size={22} aria-hidden />
+              </span>
+              <h2 className="mt-3 font-display text-[1.35rem] leading-snug tracking-tight">
+                Rather not get on a call?
+              </h2>
+              <p className="mt-2.5 max-w-[46ch] text-[15.5px] text-muted">
+                Email me your website with &ldquo;Video review&rdquo; in the subject. I&rsquo;ll
+                send back a 5-minute screen recording of what I&rsquo;d fix first. Free, no call
+                needed.
+              </p>
+              <EmailCta
+                label="Ask for a video review"
+                href={videoHref}
+                from="contact_video"
+                className="mt-5"
+              />
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <p className="eyebrow">If you email, include</p>
+            <div className="mt-5 border-t border-line">
+              {ASK.map((a) => (
+                <div
+                  key={a.t}
+                  className="grid grid-cols-[24px_1fr] items-start gap-4 border-b border-line py-5"
+                >
+                  <span className="mt-0.5 text-brand">{a.icon}</span>
+                  <p>
+                    <span className="block text-[16.5px] font-medium">{a.t}</span>
+                    <span className="mt-1 block max-w-[42ch] text-[15px] leading-relaxed text-muted">
+                      {a.b}
+                    </span>
+                  </p>
+                </div>
+              ))}
+            </div>
+            <figure className="mt-10">
               <blockquote className="font-display text-[1.18rem] leading-[1.45] tracking-tight text-balance">
                 &ldquo;Best to work with, will hire all the time. Straight forward, doesn&rsquo;t
                 waste time. If he can&rsquo;t do something he&rsquo;ll tell you.&rdquo;
@@ -104,37 +171,6 @@ export default function ContactPage() {
                 </span>
               </figcaption>
             </figure>
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <p className="eyebrow">Three things in the first email</p>
-            <ol className="mt-6 space-y-5">
-              {[
-                ["Your URL.", "That is the only thing I actually need to start."],
-                [
-                  "What you want more of.",
-                  "Calls, bookings, quotes, foot traffic. Not rankings, the thing rankings are supposed to buy you.",
-                ],
-                [
-                  "What you have already tried.",
-                  "So I do not spend the first call recommending something that failed last year.",
-                ],
-              ].map(([t, b], i) => (
-                <li key={t} className="grid grid-cols-[1.6rem_1fr] gap-x-4">
-                  <span className="tnum font-mono text-[12px] text-brand">0{i + 1}</span>
-                  <span>
-                    <span className="block text-[16.5px] font-medium">{t}</span>
-                    <span className="mt-1 block max-w-[42ch] text-[15px] leading-relaxed text-muted">
-                      {b}
-                    </span>
-                  </span>
-                </li>
-              ))}
-            </ol>
-            <p className="mt-9 max-w-[42ch] text-[15px] text-muted">
-              No form, no autoresponder, no drip sequence. It comes straight to my inbox and I
-              answer it myself.
-            </p>
           </Reveal>
         </div>
       </section>

@@ -1,31 +1,25 @@
 export const site = {
   name: "Koinophobe",
   owner: "Michael Edward",
-  // Domain inbox goes live with the koinophobe.com purchase (next week as of
-  // 2026-07-04). Until then fallbackEmail is the monitored address.
   email: "michael@koinophobe.com",
-  fallbackEmail: "thekoinophobe@gmail.com",
   linkedin: "https://www.linkedin.com/in/airdward/",
   linkedinHandle: "linkedin.com/in/airdward",
   x: "https://x.com/con610t",
   xHandle: "@con610t",
-  tagline: "Numbers don't lie. I make yours go up.",
-  valueProp:
-    "Technical SEO and measurement for local businesses, with the Search Console data to back every claim.",
+  /**
+   * Cal.com. `calLink` is the username/event slug, used by the inline embed on
+   * /contact. `booking` is the same page as a plain link for every other CTA,
+   * so no page but /contact ever loads Cal's script.
+   */
+  calLink: "koinophobe/intro",
+  booking: "https://cal.com/koinophobe/intro",
+  /** Said next to every booking button. Only change it if the promise changes. */
+  hours: "9 to 5 Eastern, same-day replies",
   nav: [
     { label: "Home", href: "/" },
     { label: "Work", href: "/work" },
-    { label: "Approach", href: "/about" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "About", href: "/about" },
     { label: "Notes", href: "/notes" },
-    { label: "Contact", href: "/contact" },
   ],
 };
-
-// Superseded by lib/gsc.ts, which carries the verified export figures.
-// Kept because older pages still import it.
-export const stats = [
-  { value: "1.03M", label: "Search impressions across the five sites with data open" },
-  { value: "3,077", label: "Clicks, after subtracting a spam event I found" },
-  { value: "4,981", label: "Queries ranked, 624 of them inside the top 3" },
-  { value: "2 yr", label: "Of freelance SEO work for local businesses" },
-];

@@ -10,18 +10,20 @@ import { Stagger } from "./Stagger";
  * breaks Google's structured data guidelines, and an SEO's own site is a bad
  * place to test that.
  */
-export function Reviews() {
+export function Reviews({ exclude = [] }: { exclude?: string[] }) {
   return (
     <>
       <Reveal>
         <p className="eyebrow">In their words</p>
         <h2 className="mt-4 max-w-[22ch] font-display text-[clamp(1.9rem,4vw,3rem)] leading-[1.05] tracking-tight text-balance">
-          The part I can&rsquo;t put in a chart.
+          What clients say about working with me.
         </h2>
       </Reveal>
 
       <Stagger className="mt-11 grid border-t border-line md:grid-cols-2">
-        {reviews.map((r, i) => (
+        {reviews
+          .filter((r) => !exclude.includes(r.name))
+          .map((r, i) => (
           <figure
             key={r.name}
             className={`border-b border-line py-8 md:pr-10 ${

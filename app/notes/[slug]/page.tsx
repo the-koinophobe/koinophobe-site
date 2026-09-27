@@ -28,7 +28,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 }
 
 function fmt(date: string) {
-  return new Date(date).toLocaleDateString("en-GB", {
+  return new Date(date).toLocaleDateString("en-US", {
+    timeZone: "UTC",
     year: "numeric",
     month: "short",
     day: "numeric",
@@ -41,11 +42,21 @@ export default function NotePage({ params }: { params: { slug: string } }) {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: note.title,
     description: note.excerpt,
     datePublished: note.date,
-    author: { "@type": "Person", name: "Michael Edward", url: "https://koinophobe.com/about" },
+    dateModified: note.date,
+    inLanguage: "en-US",
+    image: "https://koinophobe.com/opengraph-image",
+    author: {
+      "@type": "Person",
+      "@id": "https://koinophobe.com/#michael",
+      name: "Michael Edward",
+      url: "https://koinophobe.com/about",
+    },
+    publisher: { "@id": "https://koinophobe.com/#organization" },
+    isPartOf: { "@id": "https://koinophobe.com/#website" },
     mainEntityOfPage: `https://koinophobe.com/notes/${note.slug}`,
   };
 
@@ -103,6 +114,20 @@ export default function NotePage({ params }: { params: { slug: string } }) {
         <Reveal className="prose max-w-[68ch] text-[17.5px] leading-[1.7] text-muted">
           <div dangerouslySetInnerHTML={{ __html: note.html }} />
         </Reveal>
+        <aside className="mt-14 max-w-[68ch] border-t border-line pt-7 text-[15.5px] text-muted">
+          <p>
+            <span className="font-medium text-ink">Michael Edward</span> runs{" "}
+            <Link href="/notes/what-is-a-koinophobe" className="text-ink underline underline-offset-4">
+              Koinophobe
+            </Link>
+            , a technical SEO practice for home service businesses in the US. 30+ sites over two
+            years, with the numbers on the{" "}
+            <Link href="/work" className="text-ink underline underline-offset-4">
+              work page
+            </Link>
+            .
+          </p>
+        </aside>
       </section>
 
       <CtaBand

@@ -1,15 +1,14 @@
 const PHRASES = [
-  "Two years of client work",
-  "Technical SEO",
-  "GA4 · GTM · Search Console",
+  "More calls from Google",
+  "Calls and forms tracked",
+  "Map pack",
+  "Service and city pages",
+  "Fast sites",
   "30+ sites shipped",
-  "White-label for agencies",
-  "Local search & map pack",
-  "Core Web Vitals",
-  "Conversion tracking",
-  "Schema & structured data",
+  "Two years of client work",
   "Site migrations",
-  "US Eastern hours",
+  "White-label for agencies",
+  "9 to 5 Eastern",
 ];
 
 export function Ticker() {

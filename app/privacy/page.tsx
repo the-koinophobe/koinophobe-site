@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const updated = "June 2026";
+const updated = "September 2026";
 
 export default function PrivacyPage() {
   return (
@@ -41,9 +41,10 @@ export default function PrivacyPage() {
             <h2>What I collect and why</h2>
             <ul className="mt-2 list-disc space-y-2 pl-5">
               <li>
-                <strong>Contact form:</strong> your name, email, website and message,
-                used solely to reply to your enquiry. Legal basis: your consent / steps
-                taken at your request.
+                <strong>Email and bookings:</strong> your name, email, website and
+                anything you write, used to reply to you and to run the call you
+                booked. Bookings are handled by Cal.com. Legal basis: steps taken at
+                your request.
               </li>
               <li>
                 <strong>Analytics:</strong> anonymous usage data (pages viewed, rough
@@ -61,8 +62,8 @@ export default function PrivacyPage() {
             <h2>Who I share it with</h2>
             <p className="mt-2">
               Only the processors needed to run the site: the hosting provider
-              (Vercel), the form delivery service (web3forms), and Google Analytics
-              (if you consent). I never sell your data.
+              (Vercel), the booking service (Cal.com, if you book a call), and Google
+              Analytics (if you consent). I never sell your data.
             </p>
           </div>
 
@@ -78,7 +79,7 @@ export default function PrivacyPage() {
           <div>
             <h2>How long I keep it</h2>
             <p className="mt-2">
-              Enquiry emails are kept only as long as needed to handle our
+              Inquiry emails are kept only as long as needed to handle our
               correspondence and any resulting work. Analytics data follows Google&apos;s
               retention settings. You can ask me to delete your data at any time.
             </p>
@@ -92,6 +93,18 @@ export default function PrivacyPage() {
               withdraw consent at any time. You also have the right to complain to your
               local data protection authority. To exercise any right, email{" "}
               <a href={`mailto:${site.email}`}>{site.email}</a>.
+            </p>
+          </div>
+
+          <div>
+            <h2>If you are in the US</h2>
+            <p className="mt-2">
+              I don&apos;t sell or share your personal information, and I don&apos;t use it
+              for targeted advertising. Residents of California and other states with
+              privacy laws can ask what I hold about them, ask me to correct or delete
+              it, and won&apos;t be treated differently for asking. Email{" "}
+              <a href={`mailto:${site.email}`}>{site.email}</a> and I&apos;ll respond
+              within 45 days.
             </p>
           </div>
 

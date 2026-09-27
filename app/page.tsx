@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight, Eye, MousePointerClick, Search, Trophy } from "lucide-react";
 import { AboutStrip } from "@/components/AboutStrip";
 import { Availability } from "@/components/Availability";
-import { CtaBand, EmailCta, TextCta } from "@/components/Cta";
+import { BookCta, BookNote, CtaBand, TextCta } from "@/components/Cta";
 import { MobileCta } from "@/components/MobileCta";
 import { Pipeline } from "@/components/Pipeline";
 import { SiteWall } from "@/components/SiteWall";
@@ -17,10 +17,13 @@ import { StreamGraph } from "@/components/StreamGraph";
 import { Ticker } from "@/components/Ticker";
 import { TrustRow } from "@/components/TrustRow";
 import { aggregate, cases } from "@/lib/gsc";
+import { reviews } from "@/lib/content";
+
+const HERO_QUOTES = ["Daniel Folks", "Johnny Urena"];
 
 export const metadata = {
   description:
-    "Michael Edward. Technical SEO for local businesses. Thirty-plus sites in two years, five of them opened up here with 2,096 keywords on page one and every figure taken from live Search Console data.",
+    "Technical SEO for home service businesses in the US. 30+ sites over two years, five opened up here with every figure from their own Search Console. Prices on the site and a free 20-minute call.",
   alternates: { canonical: "/" },
 };
 
@@ -29,24 +32,45 @@ export default function HomePage() {
     <>
       <section className="pt-28 sm:pt-36">
         <div className="container-pad">
-          <p className="eyebrow">Technical SEO &middot; local businesses &middot; US hours</p>
+          <p className="eyebrow">Technical SEO &middot; home services &middot; US hours</p>
           <HeroHeadline
-            className="mt-5 max-w-[16ch] font-display text-[clamp(2.7rem,7.4vw,5.6rem)] font-normal leading-[1.02] tracking-tight"
-            segments={[{ text: "Numbers don't lie." }, { text: "I make yours go up.", muted: true }]}
+            className="mt-5 max-w-[27ch] font-display text-[clamp(2.4rem,6vw,4.6rem)] font-normal leading-[1.03] tracking-tight"
+            segments={[
+              { text: "For home service businesses" },
+              { text: "tired of SEO they can’t see working.", muted: true },
+            ]}
           />
           <p className="mt-7 max-w-[58ch] text-[17.5px] text-muted">
-            I&rsquo;m Michael. I do technical SEO for local businesses, and I&rsquo;ve spent two
-            years proving it on the only scoreboard that counts:{" "}
-            <strong className="font-medium text-ink">
-              what Google actually sends you.
-            </strong>{" "}
-            Thirty-plus sites so far. Five of them are opened up below, data and all, because
-            showing you beats telling you.
+            I&rsquo;m Michael Edward, and Koinophobe is my SEO practice. I fix the technical side of
+            local business websites so more of the people who find you on Google{" "}
+            <strong className="font-medium text-ink">end up calling.</strong> Roofers, pool deck
+            and lawn companies, clinics and shops, 30+ sites over two years. Five are below with the
+            numbers from their own Search Console.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
-            <EmailCta from="hero" />
-            <TextCta href="/work" label="See the numbers" from="hero" />
+            <BookCta from="hero" />
+            <TextCta href="/pricing" label="See pricing" from="hero" />
+          </div>
+          <BookNote className="mt-4" />
+
+          <div className="mt-10 grid gap-6 border-t border-line pt-7 md:grid-cols-2 md:gap-10">
+            {reviews
+              .filter((r) => HERO_QUOTES.includes(r.name))
+              .map((r) => (
+                <figure key={r.name}>
+                  <blockquote className="font-display text-[1.12rem] leading-[1.4] tracking-tight text-balance">
+                    &ldquo;{r.quote}&rdquo;
+                  </blockquote>
+                  <figcaption className="mt-3 flex flex-wrap items-baseline gap-x-3 font-mono text-[11px] text-muted">
+                    <span className="text-ink">{r.name}</span>
+                    <span>{r.role}</span>
+                    <span className={r.source === "Upwork" ? "text-brand" : ""}>
+                      {r.source === "Upwork" ? "Verified · Upwork" : "Direct client"}
+                    </span>
+                  </figcaption>
+                </figure>
+              ))}
           </div>
 
           <div className="mt-12">
@@ -56,28 +80,28 @@ export default function HomePage() {
           <MetricStrip
             cells={[
               {
-                label: "On page one",
-                value: <CountUp value={aggregate.pageOne} display={aggregate.pageOne.toLocaleString("en-US")} />,
-                note: "Keywords at position 10 or better",
-                icon: <Trophy size={15} aria-hidden />,
-              },
-              {
-                label: "Impressions",
-                value: <CountUp value={aggregate.impressions} display={aggregate.impressions.toLocaleString("en-US")} />,
-                note: aggregate.window,
-                icon: <Eye size={15} aria-hidden />,
-              },
-              {
                 label: "Clicks",
                 value: <CountUp value={aggregate.clicks} display={aggregate.clicks.toLocaleString("en-US")} />,
                 note: "Real visitors, spam traffic stripped out",
                 icon: <MousePointerClick size={15} aria-hidden />,
               },
               {
+                label: "On page one",
+                value: <CountUp value={aggregate.pageOne} display={aggregate.pageOne.toLocaleString("en-US")} />,
+                note: "Keywords at position 10 or better",
+                icon: <Trophy size={15} aria-hidden />,
+              },
+              {
                 label: "Keywords ranked",
                 value: <CountUp value={aggregate.queries} display={aggregate.queries.toLocaleString("en-US")} />,
                 note: "624 of them inside the top 3",
                 icon: <Search size={15} aria-hidden />,
+              },
+              {
+                label: "Impressions",
+                value: <CountUp value={aggregate.impressions} display={aggregate.impressions.toLocaleString("en-US")} />,
+                note: aggregate.window,
+                icon: <Eye size={15} aria-hidden />,
               },
             ]}
           />
@@ -93,9 +117,8 @@ export default function HomePage() {
             Thirty-plus sites. Here are five with the numbers left open.
           </h2>
           <p className="mt-5 max-w-[58ch] text-muted">
-            A pain clinic, a roofer, a tint shop, a game shop and a marketing agency. Not the
-            biggest five, the five I can show you the data for. Every number comes from their own
-            Search Console.
+            A pain clinic, a roofer, a tint shop, a game shop and a marketing agency. They&rsquo;re
+            the five whose data I can show, and every number comes from their own Search Console.
           </p>
         </Reveal>
 
@@ -147,6 +170,14 @@ export default function HomePage() {
         <SiteWall />
       </section>
 
+      <section className="pt-16">
+        <CtaBand
+          line="Monthly plans start at $600, and every price is on the site."
+          from="after_wall"
+          secondary={{ href: "/pricing", label: "See pricing" }}
+        />
+      </section>
+
       <section className="container-pad pt-28">
         <Pipeline />
       </section>
@@ -157,7 +188,7 @@ export default function HomePage() {
 
       <section className="pt-20">
         <CtaBand
-          line="That is the whole process. Starting it costs you an email."
+          line="Book a time, or email me if you'd rather write."
           from="after_process"
         />
       </section>
@@ -167,7 +198,7 @@ export default function HomePage() {
       </section>
 
       <section className="container-pad pb-24 pt-24">
-        <Reviews />
+        <Reviews exclude={HERO_QUOTES} />
       </section>
 
       <Availability />

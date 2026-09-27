@@ -21,7 +21,7 @@ const READ_THIS = [
   {
     icon: <Search size={17} aria-hidden />,
     title: "Source.",
-    body: `Live Search Console data, pulled ${EXPORT_DATE}. Nothing estimated, nothing modelled.`,
+    body: `Live Search Console data, pulled ${EXPORT_DATE}. Nothing estimated or modeled.`,
   },
   {
     icon: <Sparkles size={17} aria-hidden />,

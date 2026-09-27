@@ -141,7 +141,7 @@ function enrich(html: string): string {
  * YAML turns an unquoted `2026-09-12` into a Date object, not a string, so
  * String().slice(0,10) used to produce "Sat Sep 12" — a date with no year,
  * which JavaScript then reads as 2001. The CMS writes dates unquoted, so this
- * hit every note published from the phone. Normalise both shapes to
+ * hit every note published from the phone. Normalize both shapes to
  * YYYY-MM-DD, and return "" for anything unparseable rather than guessing.
  */
 function isoDate(value: unknown): string {

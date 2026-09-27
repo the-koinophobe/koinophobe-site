@@ -26,7 +26,7 @@ const NODES: Node[] = [
     unit: "times a client site was put in front of someone",
     owner: "mine",
     body:
-      "Somebody types the thing. You are in that result set or you are not, and nothing further down this line happens until you are. This step is entirely mine.",
+      "Somebody types the thing. If you're not in the results, nothing below this happens. This part is my job.",
   },
   {
     key: "click",
@@ -36,7 +36,7 @@ const NODES: Node[] = [
     unit: "of them chose the client over everyone else on the page",
     owner: "mine",
     body:
-      "Now they pick one. Position, title, and what your Business Profile says about you decide which one. Still mine, still in the data, still not money.",
+      "They pick one. Your position, your title and what your Business Profile says decide which. Search Console shows me this part too.",
   },
   {
     key: "call",
@@ -45,7 +45,7 @@ const NODES: Node[] = [
     owner: "yours",
     slot: "Your number, not mine",
     body:
-      "The phone rings, or the form comes in, or nothing happens and you never find out why. Search Console has never once told me this. It is trackable, but only if somebody bothered to wire it up.",
+      "The phone rings or a form comes in. Search Console can't see this. It can be tracked, but only if someone sets it up, and on most sites I take over nobody has.",
   },
   {
     key: "revenue",
@@ -54,7 +54,7 @@ const NODES: Node[] = [
     owner: "yours",
     slot: "Not in any tool I own",
     body:
-      "What the job was actually worth once it closed. No tool I own can see this number. You have it sitting in your books right now, and it is the only one of the four that pays anybody.",
+      "What the job was worth once it closed. No tool I use can see it. You have it in your books, and it's the number that decides whether any of this was worth paying for.",
   },
 ];
 
@@ -177,9 +177,9 @@ export function Pipeline() {
           Four steps. I can only see the first two.
         </h2>
         <p className="mt-6 max-w-[46ch] text-[17.5px] text-muted">
-          Every SEO report you have ever been sent stops at step two, because step two is
-          where the tools stop. Nothing in Search Console has ever told me whether your phone
-          rang. That half is yours, and it is the half that pays for the other half.
+          Most SEO reports stop at clicks, because that&rsquo;s where the tools stop. Search
+          Console can&rsquo;t tell me whether your phone rang, so call and form tracking is the
+          first thing I set up on any site.
         </p>
         <p className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-line pt-6 font-mono text-[10.5px] uppercase tracking-[0.13em] text-muted">
           <span className="inline-flex items-center gap-2">
@@ -240,7 +240,7 @@ export function Pipeline() {
 
               <div className="min-w-0 pt-2">
                 <p className="font-mono text-[11px] uppercase tracking-[0.13em] text-muted">
-                  0{i + 1} &middot; {n.label}
+                  {n.label}
                 </p>
 
                 {n.value !== undefined ? (
@@ -279,9 +279,9 @@ export function Pipeline() {
       </div>
 
       <p className="mt-14 max-w-[62ch] border-t border-line pt-8 font-display text-[clamp(1.15rem,2.2vw,1.5rem)] leading-snug tracking-tight text-balance">
-        The distance between {aggregate.clicks.toLocaleString("en-US")} clicks and your bank
-        account is the whole conversation. Tell me what step three is worth to you and I will
-        work backwards from there.
+        In July I noticed form submissions on a client&rsquo;s site had been dropping since
+        March. It was an email setting. Four months, and nobody caught it, me included. I check
+        form delivery on every site every month now.
       </p>
     </div>
   );

@@ -52,7 +52,7 @@ body {
   overflow-x: clip; /* decorative SVGs can never cause sideways scroll */
 }
 
-/* Brand-coloured text selection — small craft signal */
+/* Brand-colored text selection — small craft signal */
 ::selection {
   background: rgb(var(--brand));
   color: rgb(var(--bg));
@@ -74,7 +74,7 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cg fill='none' stroke='%2312603D' stroke-opacity='0.09' stroke-width='1.2'%3E%3Ccircle cx='45' cy='45' r='10'/%3E%3Ccircle cx='45' cy='45' r='22'/%3E%3Ccircle cx='45' cy='45' r='34'/%3E%3C/g%3E%3C/svg%3E");
   background-size: 90px 90px;
 }
-/* waves in the page background colour, for use on teal brand surfaces */
+/* waves in the page background color, for use on teal brand surfaces */
 .pattern-on-brand {
   background-image: none;
 }
@@ -140,7 +140,7 @@ html.lenis body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* Accent emphasis: serif italic in brand colour */
+/* Accent emphasis: serif italic in brand color */
 .accent {
   font-family: var(--font-serif), Georgia, serif;
   font-style: italic;
@@ -304,7 +304,7 @@ html.lenis body {
 /* ---- Landing page palette: greens -----------------------------------------
    Scoped to /google-business-profile. Light is the default; the page carries
    its own toggle because it renders without the site header. `--edge` is the
-   hard border and offset-shadow colour and is always the darkest green.
+   hard border and offset-shadow color and is always the darkest green.
    `--brand` is the lime FILL only, never text: it is unreadable on white, so
    text that needs to be green uses `--deep`. Anything sitting on `--accent`
    uses `text-bg`, which lands light on light mode and dark on dark. */
@@ -322,7 +322,7 @@ html.lenis body {
 }
 
 html.gbp-light .gbp-theme {
-  --bg: 228 242 204;        /* pale lime wash: the page itself carries colour */
+  --bg: 228 242 204;        /* pale lime wash: the page itself carries color */
   --surface: 255 255 255;   /* cards sit white on top of it */
   --ink: 11 31 19;          /* deep forest text */
   --muted: 71 98 80;
@@ -352,7 +352,7 @@ html.gbp-light .gbp-theme .gbp-logo { filter: none; }
 
 
 /* ---- Rebuild: Search Console vernacular ---- */
-/* Section eyebrow. The filled button: ink ground, page colour text. Dark
+/* Section eyebrow. The filled button: ink ground, page color text. Dark
    green on cream in light mode, cream on dark green in dark mode, exactly
    like the selected state of the audience toggle. */
 .eyebrow {
@@ -425,7 +425,7 @@ html.gbp-light .gbp-theme .gbp-logo { filter: none; }
   .marquee-mask { overflow-x: auto; }
 }
 
-/* ── Pipeline: the travelling dot on the search-to-money rail ─────────── */
+/* ── Pipeline: the traveling dot on the search-to-money rail ─────────── */
 .pipe-dot {
   box-shadow:
     0 0 0 5px rgb(var(--brand) / 0.13),

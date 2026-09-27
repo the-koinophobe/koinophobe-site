@@ -14,6 +14,7 @@ const nextConfig = {
   // GA4 attributes the visit. Add more here per campaign as needed.
   async redirects() {
     return [
+      { source: "/approach", destination: "/about", permanent: true },
       {
         source: "/ig",
         destination: "/?utm_source=instagram&utm_medium=social&utm_campaign=bio",

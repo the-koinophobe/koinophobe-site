@@ -20,9 +20,9 @@ import { Stagger } from "@/components/Stagger";
 import { site } from "@/lib/site";
 
 export const metadata = {
-  title: "Approach",
+  title: "About",
   description:
-    "How Michael Edward works and what he actually does: technical SEO, measurement, local search and WordPress for small businesses and the agencies that serve them.",
+    "Koinophobe is the SEO practice of Michael Edward. How he works and what he does: technical SEO, call tracking, local search and WordPress for home service businesses and the agencies that serve them.",
   alternates: { canonical: "/about" },
 };
 
@@ -58,7 +58,7 @@ const SERVICES = [
   {
     icon: <BarChart3 size={20} aria-hidden />,
     title: "Measurement",
-    body: "GA4 and GTM built properly, Search Console configured, conversion and call tracking wired to the things that make money. If it isn't measured I won't claim it.",
+    body: "GA4 and GTM set up right, Search Console configured, conversion and call tracking wired to the things that make money. If it isn't measured I won't claim it.",
   },
   {
     icon: <MapPin size={20} aria-hidden />,
@@ -85,8 +85,8 @@ const SERVICES = [
 const WORKING = [
   {
     icon: <Layers size={17} aria-hidden />,
-    title: "Retainer or per-project.",
-    body: "Whichever fits the work in front of us.",
+    title: "Prices in USD, on the site.",
+    body: "Monthly plans or one-time projects. See the pricing page.",
   },
   {
     icon: <Users size={17} aria-hidden />,
@@ -95,8 +95,8 @@ const WORKING = [
   },
   {
     icon: <Globe size={17} aria-hidden />,
-    title: "US Eastern hours.",
-    body: "Calls, standups and turnaround on your clock.",
+    title: "9 to 5 Eastern.",
+    body: "Calls on your clock, and replies the same business day.",
   },
 ];
 
@@ -160,7 +160,8 @@ export default function AboutPage() {
               Four promises, and you can hold me to all of them.
             </h1>
             <p className="mt-6 max-w-[62ch] text-[17.5px] text-muted">
-              There isn&rsquo;t much mystery in this job. There&rsquo;s the data you already own, the
+              Koinophobe is the SEO practice of Michael Edward. There isn&rsquo;t much mystery in
+              this job. There&rsquo;s the data you already own, the
               parts of the site stopping it from working, and whether the person reporting on it is
               willing to tell you something you don&rsquo;t want to hear.
             </p>
@@ -200,7 +201,7 @@ export default function AboutPage() {
 
       <section className="container-pad pb-24 pt-24">
         <Reveal>
-        <p className="eyebrow">What I actually do</p>
+        <p className="eyebrow">What I do</p>
         <h2 className="mt-3.5 max-w-[22ch] font-display text-[clamp(1.85rem,3.9vw,2.95rem)] leading-[1.05] tracking-tight text-balance">
           Technical, measurable, and mostly in WordPress.
         </h2>
@@ -222,7 +223,7 @@ export default function AboutPage() {
       <CtaBand
         line="Sound like the way you want this done?"
         from="after_services"
-        secondary={{ href: "/work", label: "See the numbers" }}
+        secondary={{ href: "/pricing", label: "See pricing" }}
       />
 
       <Availability />

@@ -117,7 +117,7 @@ Claude cites more than twice as many sources per answer as Perplexity. Google AI
 
 Google AI Overviews returned nineteen answers rather than twenty because on Q01 run 3 it produced no AI Overview at all. That refusal is recorded as a row with an empty URL rather than silently skipped.
 
-Assistants were queried signed in, with memory and custom instructions disabled, in a fresh chat per run. Google was queried in a fresh incognito window per run. 96 runs in total, collected on 11 September 2026 between 20:37 and 21:54 local time, in one sitting, from a single collection point in West Africa.
+Assistants were queried signed in, with memory and custom instructions disabled, in a fresh chat per run. Google was queried in a fresh incognito window per run. 96 runs in total, collected on September 11, 2026 between 20:37 and 21:54 local time, in one sitting, from a single collection point outside the US.
 
 ## What was measured
 
@@ -215,7 +215,7 @@ Same question, three times, fresh session each time, memory off. The figure is t
 
 Overall mean across the fifteen three-run pairs: **27.7%**. Q01 on Google AI Overviews has two runs rather than three, because run 3 produced no AI Overview, and its 61.5% is excluded from the mean. Overlap falls mechanically as runs are added, so mixing a two-run pair into a three-run mean would inflate it.
 
-![Run-to-run citation stability by assistant: Google AI Overviews 62.7 percent, ChatGPT 4.5 percent](fig2-overlap.png)
+![Run-to-run citation stability by assistant: Google AI Overviews 62.7 percent, ChatGPT 4.5 percent](figures/fig1-stability.png)
 
 **The ranges do not overlap at the extremes.** Google AI Overviews never dropped below 21.4%. ChatGPT never got above 18.2%. That is a fourteen-fold difference in mean, and unlike everything in the headline table it is not subtle.
 

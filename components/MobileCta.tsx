@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Mail } from "lucide-react";
+import { CalendarCheck } from "lucide-react";
 import { site } from "@/lib/site";
 
 /**
@@ -32,14 +32,16 @@ export function MobileCta() {
       aria-hidden={!show}
     >
       <a
-        href={`mailto:${site.email}?subject=My%20site`}
+        href={site.booking}
+        target="_blank"
+        rel="noopener"
         tabIndex={show ? 0 : -1}
-        data-track="cta_email"
+        data-track="cta_book"
         data-from="mobile_bar"
         className="flex w-full items-center justify-center gap-2.5 rounded-sm bg-ink px-5 py-3.5 font-medium text-bg"
       >
-        <Mail size={17} aria-hidden />
-        How can I help?
+        <CalendarCheck size={17} aria-hidden />
+        Book a free call
       </a>
     </div>
   );

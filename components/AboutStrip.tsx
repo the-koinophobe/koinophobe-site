@@ -26,22 +26,22 @@ export function AboutStrip() {
       <Reveal delay={0.1}>
         <p className="eyebrow">Who you&rsquo;d be working with</p>
         <h2 className="mt-4 max-w-[20ch] font-display text-[clamp(1.9rem,4vw,3rem)] leading-[1.05] tracking-tight text-balance">
-          One person, and you get all of him.
+          It&rsquo;s just me.
         </h2>
         <div className="mt-6 max-w-[56ch] space-y-4 text-muted">
           <p>
-            No account manager, no junior doing the actual work, no ticket queue. You get me, and I
-            have been doing this long enough to know which of the forty things in a standard audit
-            are worth your money and which thirty-five are not.
+            I do the work and I answer my own email. After enough audits you learn most of a
+            40-point checklist won&rsquo;t change how often your phone rings. I skip those and tell
+            you why.
           </p>
           <p>
             Computer science degree, two years freelance, thirty-plus WordPress sites across roofing,
-            wellness, retail, automotive, real estate and legal. I write the code when a plugin
-            won&rsquo;t do it, which is more often than most SEOs would like to admit.
+            wellness, retail, automotive, real estate and legal. When a plugin can&rsquo;t do it, I
+            write the code.
           </p>
           <p className="text-ink">
-            And I&rsquo;ll tell you when something isn&rsquo;t worth doing. That habit has cost me
-            work and kept me every client I&rsquo;ve had.
+            If something isn&rsquo;t worth paying for, I&rsquo;ll tell you, and I&rsquo;ll tell you
+            what I&rsquo;d do instead.
           </p>
         </div>
         <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3">

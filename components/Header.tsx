@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { site } from "@/lib/site";
 import { ThemeToggle } from "./ThemeToggle";
-import { EmailCta } from "./Cta";
+import { BookCta } from "./Cta";
 
 export function Header() {
   const pathname = usePathname();
@@ -17,9 +17,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-bg/90 backdrop-blur-md">
       <div className="container-pad flex h-[60px] items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2.5" aria-label={site.name}>
+        <Link href="/" className="flex items-center gap-2.5">
           <span className="h-2.5 w-2.5 flex-none rounded-full bg-brand" />
-          <span className="font-display text-[19px] tracking-tight">{site.owner}</span>
+          <span className="font-display text-[19px] tracking-tight">{site.name}</span>
+          <span className="hidden font-mono text-[10.5px] tracking-wide text-muted lg:inline">
+            by {site.owner}
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-1.5 md:flex">
@@ -41,7 +44,7 @@ export function Header() {
               </Link>
             );
           })}
-          <EmailCta label="How can I help?" from="header" size="sm" className="ml-2" />
+          <BookCta label="Book a call" from="header" size="sm" className="ml-2" />
           <ThemeToggle />
         </nav>
 
@@ -69,7 +72,7 @@ export function Header() {
               </Link>
             ))}
             <div className="flex items-center justify-between gap-3 pt-4">
-              <EmailCta label="How can I help?" from="header_mobile" size="sm" />
+              <BookCta label="Book a call" from="header_mobile" size="sm" />
               <ThemeToggle />
             </div>
           </div>

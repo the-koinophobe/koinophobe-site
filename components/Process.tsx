@@ -12,7 +12,7 @@ const STEPS = [
     icon: PhoneCall,
     when: "Day one",
     owner:
-      "Twenty minutes, no deck. What does the business actually need more of, and who do you need it from? Half the time the answer isn't more traffic at all, it's the wrong three pages ranking.",
+      "Twenty minutes, no slides. What do you need more of, and from who? A lot of the time the fix isn't more traffic. It's the wrong pages ranking.",
     agency:
       "Twenty minutes with you, not your client. What has been promised, what has already been tried, and where the account is bleeding time. I have sat on your side of that call plenty of times.",
   },
@@ -22,7 +22,7 @@ const STEPS = [
     icon: FileText,
     when: "Within a few days",
     owner:
-      "You get it in writing: what I will do, in what order, what it costs, and what has to be true for it to work. If I think the money is better spent somewhere that isn't me, that goes in the document too.",
+      "You get it in writing: what I'll do, in what order, and what it costs, at the prices on the pricing page. If the money is better spent somewhere that isn't me, I'll say that in writing too.",
     agency:
       "A scope your account manager can forward to the client without editing a line. Fixed price or retainer, your call, and I stay invisible in every document that leaves your office.",
   },
@@ -42,7 +42,7 @@ const STEPS = [
     icon: TrendingUp,
     when: "Monthly, ongoing",
     owner:
-      "Now the data matters. Same four numbers every month against the same baseline, so you can see the work landing instead of taking my word for it. That is the whole reason this site is built out of client data.",
+      "Now the data matters. The same four numbers every month against the same baseline, so you can see the work landing instead of taking my word for it. It's why this site is built out of client data.",
     agency:
       "A monthly report in your template with your logo on it. Same four numbers, same baseline, written so a client can read it without a phone call afterwards.",
   },
@@ -108,7 +108,7 @@ export function Process() {
       </div>
 
       <h2 className="mt-4 max-w-[22ch] font-display text-[clamp(1.9rem,4vw,3rem)] leading-[1.05] tracking-tight text-balance">
-        We talk first. Everything else follows from that.
+        It starts with a 20-minute call.
       </h2>
       <p className="mt-5 max-w-[58ch] text-muted">
         Nobody should hand over analytics access to a stranger on day one. I want to know what

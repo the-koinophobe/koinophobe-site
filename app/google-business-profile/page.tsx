@@ -40,11 +40,11 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://koinophobe.com/google-business-profile",
     siteName: site.name,
-    title: `${title} — ${site.name}`,
+    title: `${title} · ${site.name}`,
     description,
   },
   twitter: { card: "summary_large_image", title, description },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: false },
 };
 
 const jsonLd = {

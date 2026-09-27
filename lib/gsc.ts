@@ -1,10 +1,10 @@
 /**
  * Every figure here is read straight out of the Google Search Console exports
- * pulled on 28-30 August 2026. Nothing is estimated, rounded up, or modelled.
+ * pulled on August 28 to 30, 2026. Nothing is estimated, rounded up, or modeled.
  * If a number changes, re-export and update it here rather than in a component.
  */
 
-export const EXPORT_DATE = "28-30 Aug 2026";
+export const EXPORT_DATE = "Aug 28 to 30, 2026";
 
 export const aggregate = {
   /** Sites worked on across two years. The body of work. */
@@ -72,7 +72,7 @@ export const cases: CaseStudy[] = [
     next: "Phones are carrying this: 678 of the 854 clicks at 11.3% CTR. Desktop is still sitting at 2%, which means there is a second clinic's worth of traffic in this account that nobody has gone and taken yet. That's the next six months, and it's the easy kind of work because the rankings are already there.",
     chart: "myofascial",
     chartTitle: "Clicks per month",
-    chartRange: "Aug 2025 – Aug 2026",
+    chartRange: "Aug 2025 to Aug 2026",
     caption:
       "Source: Search Console, 16-month export. August 2026 is a partial month (data to the 27th).",
   },
@@ -82,7 +82,7 @@ export const cases: CaseStudy[] = [
     client: "Roofing contractor",
     place: "Brevard County, FL",
     title: "From page five to page two, on a thousand queries at once.",
-    meta: "Oct 2025 – Aug 2026 vs the eleven months before · white-label, contractor unnamed",
+    meta: "Oct 2025 to Aug 2026 vs the eleven months before · white-label, contractor unnamed",
     headline: { value: "×25.8", label: "impressions, year on year" },
     metrics: [
       { label: "Impressions", value: "139,639", delta: "×25.8", tone: "up" },
@@ -92,7 +92,7 @@ export const cases: CaseStudy[] = [
     ],
     body: [
       "893 of the 1,099 searches this site now appears for did not return it at all a year ago. It wasn't ranking badly for them. It wasn't in the index for them.",
-      "The work was unglamorous: title and meta rewrites across the whole site, service pages built per town instead of one page trying to cover the county, FAQ and service schema, and a set of long-form articles aimed at the questions Florida homeowners actually type after a storm. Then I waited, because that's the part nobody sells.",
+      "The work was unglamorous: title and meta rewrites across the whole site, service pages built per town instead of one page trying to cover the county, FAQ and service schema, and a set of long-form articles aimed at the questions Florida homeowners type after a storm. Then I waited, because that's the part nobody sells.",
       "The geographic terms are where it shows. `roofing melbourne fl` went from position 77 to 12.9. `roof replacement melbourne fl` from 70 to 15. Those are the searches that turn into a truck in a driveway.",
     ],
     next: "The hard part is done. This site now shows up 26 times more often than it did, which is the part that takes a year. Turning those impressions into clicks is a snippet problem, not a ranking problem, and it is already moving: last quarter's CTR is 0.24% against 0.17% the quarter before. Same site, same rankings, better titles.",
@@ -100,7 +100,7 @@ export const cases: CaseStudy[] = [
     chartTitle: "Average position · lower is better",
     chartRange: "Then → now",
     caption:
-      "Source: Search Console, 1 Oct 2025 – 28 Aug 2026 compared with 28 Apr – 30 Sep 2025. The axis is inverted because in search, falling is winning.",
+      "Source: Search Console, Oct 1, 2025 to Aug 28, 2026 compared with Apr 28 to Sep 30, 2025. The axis is inverted because in search, falling is winning.",
   },
   {
     slug: "tint-lordz",
@@ -124,7 +124,7 @@ export const cases: CaseStudy[] = [
     next: "`window tinting near me` already shows this shop 358 times a period and sits at 19. Getting that one phrase onto page one is worth more than everything else in the account combined, and it is a Google Business Profile and review-velocity job, not a rewrite. That is the plan, and the brand rankings mean we start from strength.",
     chart: "tint",
     chartTitle: "Impressions per month",
-    chartRange: "Jul 2025 – Aug 2026",
+    chartRange: "Jul 2025 to Aug 2026",
     caption:
       "Source: Search Console, 16-month export. August 2026 is a partial month (data to the 27th).",
   },
@@ -137,7 +137,7 @@ export const cases: CaseStudy[] = [
     meta: "Apr 2025 to Aug 2026 · direct client",
     headline: { value: "614", label: "keywords on page one" },
     metrics: [
-      { label: "Clicks", value: "353", delta: "18 months" },
+      { label: "Clicks", value: "353", delta: "17 months" },
       { label: "Impressions", value: "14,175", delta: "412 → 993/mo", tone: "up" },
       { label: "Avg position", value: "19.7", delta: "from 24.2", tone: "up" },
       { label: "Top-3 queries", value: "149", delta: "of 1,000" },
@@ -150,7 +150,7 @@ export const cases: CaseStudy[] = [
     next: "Impressions more than doubled while clicks held, which for a shop this size means the visibility is bought and the conversion is the next lever. Better titles on the category pages and a real Google Business Profile push are worth more here than another hundred keywords, and both are cheap.",
     chart: "gameshop",
     chartTitle: "Clicks per month",
-    chartRange: "Apr 2025 – Aug 2026",
+    chartRange: "Apr 2025 to Aug 2026",
     caption:
       "Source: Search Console, 16-month export. August 2026 is a partial month (data to the 27th).",
   },
@@ -161,9 +161,9 @@ export const cases: CaseStudy[] = [
     place: "Palm Bay, FL",
     title: "830,000 impressions from a town of 130,000 people.",
     meta: "Apr 2025 to Aug 2026 · ongoing",
-    headline: { value: "829K", label: "impressions in 18 months" },
+    headline: { value: "1,211", label: "clicks in 17 months" },
     metrics: [
-      { label: "Impressions", value: "829,797", delta: "18 months" },
+      { label: "Impressions", value: "829,797", delta: "17 months" },
       { label: "Clicks", value: "1,211", delta: "excl. spam event" },
       { label: "Avg position", value: "14.9", delta: "from 19.1", tone: "up" },
       { label: "Best money term", value: "7.0", delta: "“palm bay seo”" },

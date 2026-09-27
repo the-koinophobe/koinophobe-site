@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { sectors, streamMonths } from "@/lib/gsc";
+import { aggregate, sectors, streamMonths } from "@/lib/gsc";
 
 /**
  * Monthly organic clicks by sector, stacked as a stream. Hover or drag across
@@ -47,7 +47,7 @@ export function StreamGraph() {
     const max = Math.max(...totals);
     const x = (i: number) => PAD.l + (i * (W - PAD.l - PAD.r)) / (N - 1);
     const plotH = H - PAD.t - PAD.b;
-    // centred stack: the classic stream silhouette
+    // centered stack: the classic stream silhouette
     const baseline = totals.map((t) => (H - PAD.b) - plotH / 2 - (t / max) * plotH / 2);
     const running = [...baseline];
     const bands = sectors.map((s) => {
@@ -84,7 +84,7 @@ export function StreamGraph() {
       <div className="relative overflow-hidden rounded-md border border-line bg-surface">
         <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 px-4 pt-4 sm:px-5">
           <span className="eyebrow-flat">Organic clicks by sector</span>
-          <span className="eyebrow-flat">{streamMonths[0]} to {streamMonths[N - 1]} 2026</span>
+          <span className="eyebrow-flat">{aggregate.window}</span>
         </div>
 
         <svg
@@ -183,7 +183,7 @@ export function StreamGraph() {
       <p className="mt-4 min-h-[2.6em] font-mono text-[11px] leading-relaxed text-muted">
         {active
           ? active.note
-          : "Four sectors, seventeen months, every click Google actually sent. Hover a month or a band."}
+          : "Four sectors, 17 months, every click Google sent. Hover a month or a band."}
       </p>
     </div>
   );

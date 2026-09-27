@@ -18,6 +18,12 @@ export function Footer() {
                 {n.label}
               </Link>
             ))}
+            <Link href="/contact" className="hover:text-ink">
+              Contact
+            </Link>
+            <Link href="/roofing-seo" className="hover:text-ink">
+              Roofing SEO
+            </Link>
             <a href={site.linkedin} className="hover:text-ink">
               LinkedIn
             </a>

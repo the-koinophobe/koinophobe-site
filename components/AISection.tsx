@@ -15,7 +15,7 @@ type Line = { text: string; delay: number };
 
 const Q1: Line = { text: "myofascial release clinic melbourne fl", delay: 0.3 };
 const A1_AT = Q1.delay + Q1.text.length * CHAR + 0.25;
-const Q2: Line = { text: "best window tint shop near lawrence ks", delay: A1_AT + 1.35 };
+const Q2: Line = { text: "best window tint shop near lawrence ma", delay: A1_AT + 1.35 };
 const A2_AT = Q2.delay + Q2.text.length * CHAR + 0.25;
 
 function typeStyle(l: Line): CSSProperties {
@@ -39,7 +39,7 @@ const POINTS = [
   {
     icon: Star,
     title: "Reviews with words in them",
-    body: "Not the star count. The sentences. Every summary you have ever read back from an AI was assembled out of what customers actually wrote.",
+    body: "The star count matters less than the sentences. AI summaries are built out of what customers wrote.",
   },
   {
     icon: Quote,
@@ -105,8 +105,8 @@ export function AISection() {
           answer the question in plain words.
         </p>
         <p className="mt-5 max-w-[54ch] text-[17.5px] text-muted">
-          That is the work already on this page. The only thing that changed is that it now
-          gets read out loud instead of clicked.
+          It&rsquo;s the same work you see on this page. The answer just gets read out instead of
+          clicked.
         </p>
 
         <ul className="mt-10 border-t border-line">
@@ -184,8 +184,8 @@ export function AISection() {
             className="term-fade mt-8 border-t border-line pt-5 text-[13px] leading-relaxed text-muted"
             style={fadeStyle(A2_AT + 1.1)}
           >
-            Neither of those clients did a single thing aimed at a robot. They ranked because
-            the fundamentals were right, and the robot read the same page everybody else does.
+            Neither client did anything special for AI. The basics were right, and the assistant
+            read the same pages everyone else does.
           </p>
         </div>
       </div>

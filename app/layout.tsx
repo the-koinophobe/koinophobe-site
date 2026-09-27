@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description:
-    "Technical SEO and measurement for local businesses. Thirty-plus sites in two years, with live Search Console data opened up on five of them.",
+    "Technical SEO and call tracking for home service businesses in the US. 30+ sites over two years, with live Search Console data opened up on five of them. Prices on the site.",
   keywords: [
     "SEO specialist",
     "technical SEO",
@@ -55,19 +55,19 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: "Koinophobe · Technical SEO that shows up in the numbers",
     description:
-      "Technical SEO and measurement for local businesses, with the Search Console data to back it up.",
+      "Technical SEO for home service businesses, with the Search Console data to back it up and the prices on the site.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Koinophobe · Technical SEO that shows up in the numbers",
     description:
-      "Technical SEO and measurement for local businesses. Every figure from a live export.",
+      "Technical SEO for home service businesses. Every figure from a live export.",
   },
   robots: { index: true, follow: true },
 };
 
 /*
- * Entity graph. Three nodes joined by @id so Google reads one organisation,
+ * Entity graph. Three nodes joined by @id so Google reads one organization,
  * one person and one site rather than three unrelated blobs.
  *
  * Deliberately Organization, not ProfessionalService. ProfessionalService is a
@@ -86,7 +86,7 @@ const SERVICES = [
   "Google Business Profile management",
   "Conversion tracking and analytics implementation",
   "Website migration",
-  "Core Web Vitals optimisation",
+  "Core Web Vitals optimization",
 ];
 
 const jsonLd = {
@@ -96,10 +96,16 @@ const jsonLd = {
       "@type": "Organization",
       "@id": ORG_ID,
       name: "Koinophobe",
+      alternateName: ["Koinophobe SEO", "koinophobe.com"],
       url: "https://koinophobe.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://koinophobe.com/icon.png",
+      },
+      image: "https://koinophobe.com/opengraph-image",
       email: site.email,
       description:
-        "Freelance technical SEO and conversion tracking. Grows organic search performance for local businesses and proves it with the client's own Search Console and analytics data.",
+        "Freelance technical SEO and call tracking for home service and local businesses in the US, proven with the client's own Search Console and analytics data.",
       founder: { "@id": PERSON_ID },
       sameAs: [site.linkedin, site.x],
       areaServed: { "@type": "Country", name: "United States" },
@@ -134,7 +140,7 @@ const jsonLd = {
       name: site.owner,
       url: "https://koinophobe.com/about",
       email: site.email,
-      jobTitle: "Technical SEO and analytics consultant",
+      jobTitle: "Technical SEO consultant, founder of Koinophobe",
       worksFor: { "@id": ORG_ID },
       sameAs: [site.linkedin, site.x],
     },
@@ -142,8 +148,9 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": SITE_ID,
       name: site.name,
+      alternateName: ["Koinophobe SEO", "koinophobe.com"],
       url: "https://koinophobe.com",
-      inLanguage: "en",
+      inLanguage: "en-US",
       publisher: { "@id": ORG_ID },
     },
   ],
@@ -152,7 +159,7 @@ const jsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
-      lang="en"
+      lang="en-US"
       suppressHydrationWarning
       className={`${sans.variable} ${serif.variable} ${mono.variable}`}
     >

@@ -49,19 +49,19 @@ export default function OgImage() {
           style={{
             display: "flex",
             flexDirection: "column",
-            fontSize: 78,
-            lineHeight: 1.04,
+            fontSize: 70,
+            lineHeight: 1.06,
             color: "#032b14",
             letterSpacing: -2,
           }}
         >
-          <div style={{ display: "flex" }}>Numbers don&rsquo;t lie.</div>
+          <div style={{ display: "flex" }}>For home service businesses</div>
+          <div style={{ display: "flex" }}>tired of SEO they</div>
           {/* Satori strips leading and trailing whitespace inside text nodes,
-              so the spaces around the coloured word come from flex gap. */}
-          <div style={{ display: "flex", gap: 22 }}>
-            <span>I make</span>
-            <span style={{ color: "#12603D" }}>yours</span>
-            <span>go up.</span>
+              so the spaces around the colored words come from flex gap. */}
+          <div style={{ display: "flex", gap: 20 }}>
+            <span>can&rsquo;t</span>
+            <span style={{ color: "#12603D" }}>see working.</span>
           </div>
         </div>
 
@@ -75,7 +75,7 @@ export default function OgImage() {
             color: "#4A5C50",
           }}
         >
-          Technical SEO &middot; Local businesses &middot; 30+ sites &middot; koinophobe.com
+          Technical SEO &middot; US home services &middot; 30+ sites &middot; koinophobe.com
         </div>
       </div>
     ),

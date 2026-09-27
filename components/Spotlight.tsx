@@ -2,7 +2,7 @@
 
 import { useRef, type ReactNode, type PointerEvent } from "react";
 
-// Card wrapper that tracks the cursor with a soft brand-coloured glow.
+// Card wrapper that tracks the cursor with a soft brand-colored glow.
 // Pure CSS vars, no re-renders, disabled on touch and reduced motion (see
 // .spot rules in globals.css).
 export function Spotlight({

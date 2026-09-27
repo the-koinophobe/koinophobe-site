@@ -13,12 +13,13 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Notes",
   description:
-    "Short, practical notes on technical SEO, tracking, and turning search traffic into leads a local business can actually count.",
+    "Short, practical notes on technical SEO, tracking, and turning search traffic into leads a local business can count.",
   alternates: { canonical: "/notes" },
 };
 
 function fmt(date: string) {
-  return new Date(date).toLocaleDateString("en-GB", {
+  return new Date(date).toLocaleDateString("en-US", {
+    timeZone: "UTC",
     year: "numeric",
     month: "short",
     day: "numeric",

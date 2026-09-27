@@ -1,16 +1,20 @@
+import { projects } from "@/lib/content";
+
 const SECTORS = [
   "Roofing",
+  "Pool decks",
+  "Lawn care",
+  "Hurricane shutters",
+  "Real estate",
   "Wellness",
   "Automotive",
   "Retail",
-  "Real estate",
-  "Legal",
-  "Lawn care",
-  "HOA compliance",
 ];
 
+const named = projects.filter((p) => p.named).length;
+
 /**
- * The honest version of a logo wall. Two clients can be named; the rest is
+ * The honest version of a logo wall. Only direct clients are named; the rest is
  * white-label and stays anonymous, so the sectors carry the proof instead.
  */
 export function TrustRow() {
@@ -26,7 +30,7 @@ export function TrustRow() {
         ))}
       </p>
       <p className="font-mono text-[10.5px] uppercase leading-relaxed tracking-[0.11em] text-muted sm:text-[11px] sm:tracking-[0.13em]">
-        Two named on this site &middot; the rest is white-label and stays anonymous
+        {named} named on this site &middot; the rest is white-label and stays anonymous
       </p>
     </div>
   );

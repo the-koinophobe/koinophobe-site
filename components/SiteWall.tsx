@@ -135,9 +135,9 @@ export function SiteWall() {
         Thirty-plus sites. These are the ones I kept the screenshots of.
       </h2>
       <p className="mt-5 max-w-[58ch] text-muted">
-        {unnamed} of the {projects.length} below went out under an agency&rsquo;s name, so they run
-        here without one: you can see the work, you just don&rsquo;t get the client. That is the
-        deal when you work white-label, and it is the same deal I&rsquo;d give you.
+        {unnamed} of the {projects.length} below show without a name, most because they went out
+        under an agency&rsquo;s brand. You can see the work, not the client. If you hire me
+        white-label, your clients get the same treatment.
       </p>
 
       <div className="mt-12 space-y-4">

@@ -1,19 +1,20 @@
-import { Linkedin, Mail, Link2, MapPin, Target } from "lucide-react";
+import { Linkedin, Link2, MapPin, Target } from "lucide-react";
 import { site } from "@/lib/site";
 import { Reveal } from "./Reveal";
+import { BookCta, BookNote, EmailCta } from "./Cta";
 
 const ASK = [
   {
     icon: <Link2 size={19} aria-hidden />,
-    text: "The URL. That's genuinely all I need to start forming an opinion.",
+    text: "Your website. That's enough for me to start.",
   },
   {
     icon: <MapPin size={19} aria-hidden />,
-    text: "What you sell and where. Local search lives or dies on the second half of that.",
+    text: "What you sell and where. Local search depends on the second half.",
   },
   {
     icon: <Target size={19} aria-hidden />,
-    text: "What you actually want more of. Calls, bookings, quotes, foot traffic. Not rankings.",
+    text: "What you want more of: calls, bookings, quotes or foot traffic.",
   },
 ];
 
@@ -30,19 +31,20 @@ export function Availability() {
             Send me your URL. I&rsquo;ll tell you what I&rsquo;d do with it.
           </h2>
           <p className="mt-6 max-w-[50ch] text-muted">
-            No pricing page, no discovery funnel, no form that emails you a PDF. Write to me, we get
-            on a call, and I tell you straight whether there&rsquo;s something here worth paying for.
-            If there isn&rsquo;t, you&rsquo;ll hear that too and it costs you nothing.
+            Prices are on the{" "}
+            <a href="/pricing" className="text-ink underline underline-offset-4">
+              pricing page
+            </a>
+            . Not sure what you need? Book a free 20-minute call. I&rsquo;ll look at your site before
+            we talk, and if there&rsquo;s nothing worth paying for, I&rsquo;ll tell you on the call.
           </p>
 
           <div className="mt-8 flex flex-col items-start gap-5">
-            <a
-              href={`mailto:${site.email}?subject=My%20site`}
-              className="inline-flex items-center gap-3 rounded-sm bg-ink px-6 py-4 font-medium text-bg transition-[transform,opacity] duration-150 hover:-translate-y-0.5 hover:opacity-90 motion-reduce:transform-none"
-            >
-              <Mail size={19} aria-hidden />
-              {site.email}
-            </a>
+            <div className="flex flex-wrap items-center gap-x-7 gap-y-4">
+              <BookCta from="availability" />
+              <EmailCta from="availability" />
+            </div>
+            <BookNote />
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
               <a
                 href={site.linkedin}
@@ -63,7 +65,7 @@ export function Availability() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <p className="eyebrow">Three things in the first email</p>
+          <p className="eyebrow">If you email, include</p>
           <div className="mt-5 border-t border-line">
             {ASK.map((a) => (
               <div
@@ -76,8 +78,8 @@ export function Availability() {
             ))}
           </div>
           <p className="mt-5 font-mono text-[11.5px] leading-relaxed text-muted">
-            I&rsquo;ll have looked at your site properly before we speak, so the call isn&rsquo;t
-            twenty minutes of background.
+            I&rsquo;ll look at your site before we talk, so we don&rsquo;t spend the call on
+            background. {site.email}
           </p>
         </Reveal>
       </div>

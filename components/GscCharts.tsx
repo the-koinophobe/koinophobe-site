@@ -49,7 +49,7 @@ function useDrawIn() {
 /* ------------------------------------------------------------------ shell */
 
 /**
- * Resolves the theme tokens to real colour strings. SVG presentation attributes
+ * Resolves the theme tokens to real color strings. SVG presentation attributes
  * take var() in modern browsers, but resolving them here means the rendered
  * markup never depends on that, and the charts repaint when the theme flips.
  */
