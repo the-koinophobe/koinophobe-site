@@ -36,7 +36,7 @@ export default function HomePage() {
           <HeroHeadline
             className="mt-5 max-w-[32ch] font-display text-[clamp(2.4rem,6vw,4.6rem)] font-normal leading-[1.03] tracking-tight"
             segments={[
-              { text: "For home service businesses" },
+              { text: "For Business Owners" },
               { text: "tired of SEO they can’t see working.", muted: true },
             ]}
           />
