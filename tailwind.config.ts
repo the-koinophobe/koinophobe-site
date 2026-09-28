@@ -20,9 +20,9 @@ const config: Config = {
         accent: "rgb(var(--accent) / <alpha-value>)",
       },
       fontFamily: {
-        display: ["var(--font-serif)", "Iowan Old Style", "Georgia", "serif"],
+        display: ["var(--font-display)", "Arial Black", "system-ui", "sans-serif"],
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-        serif: ["var(--font-serif)", "Georgia", "serif"],
+        serif: ["var(--font-display)", "Arial Black", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       borderRadius: {

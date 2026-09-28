@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Eye, Search, Sparkles } from "lucide-react";
 import { AISection } from "@/components/AISection";
 import { Availability } from "@/components/Availability";
@@ -106,11 +107,26 @@ export default function WorkPage() {
 
       <section className="pt-24">
         <div className="container-pad">
-          <Reveal>
-            <p className="eyebrow">The numbers</p>
-            <h2 className="mt-4 max-w-[24ch] font-display text-[clamp(1.9rem,4vw,3rem)] leading-[1.05] tracking-tight text-balance">
-              Five of them, with the Search Console left open.
-            </h2>
+          <Reveal className="grid items-end gap-8 md:grid-cols-[1fr_auto] md:gap-12">
+            <div>
+              <p className="eyebrow">The numbers</p>
+              <h2 className="mt-4 max-w-[24ch] font-display text-[clamp(1.9rem,4vw,3rem)] leading-[1.05] tracking-tight text-balance">
+                Five of them, with the Search Console left open.
+              </h2>
+              <p className="mt-5 max-w-[52ch] text-muted">
+                The greatest hits, if you like. Same four numbers for each, the story behind them,
+                and what I&rsquo;d go after next.
+              </p>
+            </div>
+            <div className="relative aspect-square w-full max-w-[260px] overflow-hidden rounded-md border border-line shadow-[0_18px_40px_-24px_rgb(0_0_0/0.45)] md:w-[260px]">
+              <Image
+                src="/me/greatest-works.webp"
+                alt="Retro record sleeve reading Michael: Greatest Works"
+                fill
+                sizes="260px"
+                className="object-cover"
+              />
+            </div>
           </Reveal>
           <div className="mt-12 border-t border-line">
             {cases.map((c) => (

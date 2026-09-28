@@ -36,6 +36,8 @@ Koinophobe is also the name of my SEO practice at koinophobe.com. I'm Michael Ed
 
 ## Why I picked the name
 
+![Me, done up as an old oil portrait in a gilt frame](/me/portrait.webp)
+
 My parents got me a computer when I was 12. At the time, a computer at home was a luxury, and they made it happen anyway. Then they paid for tutor after tutor. Looking back, I can see how much they gave up to do it.
 
 So I decided I can't be mediocre at whatever I do. Too much went into getting me here. That's why the business is called Koinophobe.

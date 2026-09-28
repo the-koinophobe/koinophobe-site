@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { CalendarCheck, Link2, Linkedin, MapPin, Search, Target, Video } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { Stagger } from "@/components/Stagger";
@@ -53,6 +54,7 @@ export default function ContactPage() {
     <>
       <section className="pt-28 sm:pt-36">
         <div className="container-pad">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.35fr_1fr] lg:gap-14">
           <Reveal>
             <p className="eyebrow">Contact</p>
             <h1 className="mt-4 max-w-[17ch] font-display text-[clamp(2.2rem,5.4vw,4.05rem)] leading-[1.04] tracking-tight text-balance">
@@ -64,6 +66,24 @@ export default function ContactPage() {
               for, I&rsquo;ll tell you.
             </p>
           </Reveal>
+          <Reveal delay={0.1}>
+            <figure className="mx-auto w-full max-w-[300px] lg:mr-0 lg:max-w-[340px]">
+              <div className="relative aspect-square w-full rotate-[1.5deg] overflow-hidden rounded-md border border-line shadow-[0_18px_40px_-24px_rgb(0_0_0/0.45)] motion-reduce:rotate-0">
+                <Image
+                  src="/me/wanted.webp"
+                  alt="Wanted poster of Michael Edward: for being too good at SEO, alias the search engine savant"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 300px, 340px"
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="mt-4 text-center font-mono text-[11px] tracking-wide text-muted">
+                Last seen working 9 to 5 Eastern.
+              </figcaption>
+            </figure>
+          </Reveal>
+          </div>
 
           <Stagger className="mt-14 grid gap-px bg-line sm:grid-cols-3">
             {STEPS.map((s, i) => (

@@ -9,10 +9,10 @@ export function AboutStrip() {
   return (
     <div className="grid gap-10 md:grid-cols-[minmax(0,0.75fr)_minmax(0,1fr)] md:gap-14 lg:gap-20">
       <Reveal>
-        <div className="relative aspect-[4/5] w-full max-w-[340px] overflow-hidden rounded-md border border-line bg-surface md:max-w-none">
+        <div className="relative aspect-square w-full max-w-[340px] overflow-hidden rounded-md border border-line bg-surface md:max-w-none">
           <Image
-            src="/michael-edward.webp"
-            alt="Michael Edward"
+            src="/me/michael-edward.webp"
+            alt="Michael Edward, founder of Koinophobe"
             fill
             sizes="(max-width: 768px) 90vw, 34vw"
             className="object-cover"

@@ -142,7 +142,7 @@ html.lenis body {
 
 /* Accent emphasis: serif italic in brand color */
 .accent {
-  font-family: var(--font-serif), Georgia, serif;
+  font-family: var(--font-display), "Arial Black", system-ui, sans-serif;
   font-style: italic;
   font-weight: 500;
   color: rgb(var(--brand));
@@ -599,7 +599,7 @@ html.gbp-light .gbp-theme .gbp-logo { filter: none; }
 .prose > div > * + * { margin-top: 1.5rem; }
 .prose h2 {
   margin-top: 3.5rem;
-  font-family: var(--font-serif), Georgia, serif;
+  font-family: var(--font-display), "Arial Black", system-ui, sans-serif;
   font-size: clamp(1.5rem, 3vw, 2rem);
   line-height: 1.25;
   letter-spacing: -0.02em;
@@ -707,7 +707,7 @@ html.gbp-light .gbp-theme .gbp-logo { filter: none; }
 /* Headings below h2 were too quiet to read as headings at all. */
 .prose h3 {
   margin-top: 2.75rem;
-  font-family: var(--font-serif), Georgia, serif;
+  font-family: var(--font-display), "Arial Black", system-ui, sans-serif;
   font-size: 1.32rem;
   font-weight: 400;
   letter-spacing: -0.015em;
@@ -725,3 +725,19 @@ html.gbp-light .gbp-theme .gbp-logo { filter: none; }
 }
 .prose em { color: rgb(var(--muted)); }
 .prose img { border-radius: 2px; }
+
+/* Viga ships one weight and no italic. Stop the browser faking either. */
+.font-display,
+.prose h2,
+.prose h3 {
+  font-synthesis: none;
+}
+
+/* Viga is wide and heavy, so the tight tracking cut for Fraunces crowds it.
+   Ease it everywhere, and set quotes at normal spacing. */
+.font-display.tracking-tight {
+  letter-spacing: -0.012em;
+}
+blockquote.font-display {
+  letter-spacing: 0;
+}

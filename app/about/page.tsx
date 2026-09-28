@@ -17,6 +17,7 @@ import { MobileCta } from "@/components/MobileCta";
 import { Reveal } from "@/components/Reveal";
 import { Spotlight } from "@/components/Spotlight";
 import { Stagger } from "@/components/Stagger";
+import Image from "next/image";
 import { site } from "@/lib/site";
 
 export const metadata = {
@@ -127,7 +128,8 @@ const personLd = {
   name: site.owner,
   url: "https://koinophobe.com/about",
   email: site.email,
-  sameAs: [site.linkedin],
+  sameAs: [site.linkedin, site.x],
+  image: "https://koinophobe.com/me/michael-edward.webp",
   jobTitle: "Technical SEO and analytics consultant",
   knowsAbout: [
     "Technical SEO",
@@ -166,6 +168,17 @@ export default function AboutPage() {
               willing to tell you something you don&rsquo;t want to hear.
             </p>
           </Reveal>
+          <div>
+          <div className="relative mb-6 aspect-square w-full max-w-[300px] overflow-hidden rounded-md border border-line bg-surface">
+            <Image
+              src="/me/michael-edward.webp"
+              alt="Michael Edward, founder of Koinophobe"
+              fill
+              priority
+              sizes="(max-width: 1024px) 300px, 300px"
+              className="object-cover"
+            />
+          </div>
           <Stagger className="border-t border-line">
             {WORKING.map((r) => (
               <div
@@ -179,6 +192,7 @@ export default function AboutPage() {
               </div>
             ))}
           </Stagger>
+          </div>
         </div>
 
         <div className="container-pad">

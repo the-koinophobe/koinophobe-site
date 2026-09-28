@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Instrument_Sans, Fraunces, JetBrains_Mono } from "next/font/google";
+import { Instrument_Sans, JetBrains_Mono, Viga } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Header } from "@/components/Header";
@@ -16,11 +16,11 @@ const sans = Instrument_Sans({
   display: "swap",
   weight: ["400", "500", "600"],
 });
-const serif = Fraunces({
+const display = Viga({
   subsets: ["latin"],
-  variable: "--font-serif",
+  variable: "--font-display",
   display: "swap",
-  weight: ["400"],
+  weight: "400",
 });
 const mono = JetBrains_Mono({
   subsets: ["latin"],
@@ -141,6 +141,7 @@ const jsonLd = {
       url: "https://koinophobe.com/about",
       email: site.email,
       jobTitle: "Technical SEO consultant, founder of Koinophobe",
+      image: "https://koinophobe.com/me/michael-edward.webp",
       worksFor: { "@id": ORG_ID },
       sameAs: [site.linkedin, site.x],
     },
@@ -161,7 +162,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="en-US"
       suppressHydrationWarning
-      className={`${sans.variable} ${serif.variable} ${mono.variable}`}
+      className={`${sans.variable} ${display.variable} ${mono.variable}`}
     >
       <head>
         <script

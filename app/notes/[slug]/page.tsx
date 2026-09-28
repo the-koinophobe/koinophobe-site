@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Reveal } from "@/components/Reveal";
@@ -114,7 +115,14 @@ export default function NotePage({ params }: { params: { slug: string } }) {
         <Reveal className="prose max-w-[68ch] text-[17.5px] leading-[1.7] text-muted">
           <div dangerouslySetInnerHTML={{ __html: note.html }} />
         </Reveal>
-        <aside className="mt-14 max-w-[68ch] border-t border-line pt-7 text-[15.5px] text-muted">
+        <aside className="mt-14 flex max-w-[68ch] items-start gap-5 border-t border-line pt-7 text-[15.5px] text-muted">
+          <Image
+            src="/me/michael-edward.webp"
+            alt="Michael Edward"
+            width={56}
+            height={56}
+            className="h-14 w-14 flex-none rounded-full border border-line object-cover"
+          />
           <p>
             <span className="font-medium text-ink">Michael Edward</span> runs{" "}
             <Link href="/notes/what-is-a-koinophobe" className="text-ink underline underline-offset-4">

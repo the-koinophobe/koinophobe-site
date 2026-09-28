@@ -23,7 +23,7 @@ export default function OgImage() {
           justifyContent: "space-between",
           padding: 80,
           backgroundColor: "#FBF7ED",
-          fontFamily: "Fraunces",
+          fontFamily: "Viga",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
