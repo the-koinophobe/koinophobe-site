@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import { ChromeGate } from "@/components/ChromeGate";
 import { Footer } from "@/components/Footer";
 import { Analytics } from "@/components/Analytics";
+import { Analytics as VercelAnalytics } from '@vercel/analytics/next';
 import { Anim } from "@/components/Anim";
 import { CookieConsent } from "@/components/CookieConsent";
 import { site } from "@/lib/site";
@@ -189,6 +190,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Anim />
         <CookieConsent />
         <Analytics />
+        <VercelAnalytics />
       </body>
     </html>
   );
