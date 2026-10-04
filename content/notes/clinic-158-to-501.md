@@ -3,6 +3,13 @@ title: "How a clinic went from 158 to 501 clicks in six months"
 date: "2026-04-20"
 excerpt: "A short walk through a real result: what was broken, what I changed, and how the numbers moved."
 draft: false
+faq:
+  - q: "What SEO work helped a local clinic get more clicks?"
+    a: "Tracking went in first, then technical fixes to indexing, headings, images and LocalBusiness structured data. The biggest change was replacing one generic services page with a page for each treatment and the conditions it addresses, each with a title tag written like an ad. Clicks went from 158 to 501 over six months."
+  - q: "Why set up conversion tracking before starting SEO?"
+    a: "So every click connects to real events like calls tapped, forms sent and appointments requested. For this clinic I set up GA4 through Google Tag Manager, wired click-to-call and form submission events, and verified Search Console before touching keywords."
+  - q: "Why did click-through rate dip while clicks went up?"
+    a: "When reach expands quickly, you pick up thousands of new impressions at lower positions before the clicks catch up. Early in a growth curve, that dip is a sign of expansion."
 ---
 A local myofascial release clinic came to me almost invisible in search: 158 organic clicks over six months, barely any impressions outside its own brand name, and no way to tell whether the website had ever produced a patient. Six months later the same site had 501 clicks, impressions had grown from 2.2K to 8.7K, and click-through rate peaked at 6.1 percent. Here is the actual work behind those numbers.
 

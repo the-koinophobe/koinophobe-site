@@ -4,6 +4,13 @@ slug: ai-cited-vs-ranked-page
 date: 2026-09-12
 draft: false
 excerpt: Very often, we have been told of a plethora of actions that, if performed should get your pages seen by AI assistants, I ran some measurements to find out what actually moves the needle.
+faq:
+  - q: "Do AI assistants cite the same pages that rank on Google?"
+    a: "Rarely. Between 2.0% and 11.6% of cited URLs also appeared in Google's organic top ten for the same query, against 34% to 54% at the company level. They agree on who is credible and disagree on which page answers the question."
+  - q: "Does schema markup help a page get cited by AI assistants?"
+    a: "Of six page properties measured, only Article or BlogPosting markup separated cited pages from pages that ranked and were never cited, 41.6% against 0%. Having any structured data at all was inside the noise. It is a correlation in one category over one collection window, and whether adding the markup to a page that isn't an article does anything is untested."
+  - q: "How consistent are AI assistant citations between runs?"
+    a: "It depends on the assistant. Asked the same question three times, Google AI Overviews kept 62.7% of cited URLs in every run and ChatGPT kept 4.5%."
 ---
 
 ![Cited pages against pages that ranked: assistants share 2 to 12 percent of URLs with Google's organic top ten, but 34 to 54 percent of companies](figures/fig2-overlap.png)

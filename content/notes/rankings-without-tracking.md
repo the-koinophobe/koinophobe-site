@@ -3,6 +3,13 @@ title: "Rankings without tracking are a vanity metric"
 date: "2026-06-01"
 excerpt: "A page-one ranking feels great. But if you cannot tie it to a call or a form, you are guessing. Here is how I close that gap."
 draft: false
+faq:
+  - q: "Why aren't keyword rankings enough to measure SEO?"
+    a: "Rankings are volatile, personalized and increasingly detached from clicks, and they say nothing about intent. A keyword at position three means nothing if nobody who lands on that page ever calls, books or buys."
+  - q: "What tools do I need for conversion tracking?"
+    a: "I use Google Analytics 4 for measurement, Google Tag Manager for deploying tags without touching site code, and Google Search Console for query-level search data. Connecting Search Console to GA4 joins what people searched with what they did on the site."
+  - q: "What should I do if a page gets traffic but no leads?"
+    a: "A page with strong traffic and no conversions has a content or trust problem. Add reviews, pricing signals and a clearer call to action."
 ---
 Most SEO reports stop at rankings and traffic. Those are inputs, not outcomes. A business does not pay its bills with impressions, and a keyword sitting at position three means nothing if nobody who lands on that page ever calls, books, or buys. Yet the majority of small businesses I audit are paying for SEO with no way to tell whether it produces a single lead.
 

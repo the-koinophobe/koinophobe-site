@@ -9,6 +9,7 @@ import { Reveal } from "@/components/Reveal";
 import { Stagger } from "@/components/Stagger";
 import { cases } from "@/lib/gsc";
 import { projects } from "@/lib/content";
+import { Faq, type FaqItem } from "@/components/Faq";
 
 export const metadata: Metadata = {
   title: "SEO for roofing companies",
@@ -50,6 +51,25 @@ const WORK = [
     icon: <Gauge size={20} aria-hidden />,
     t: "A fast site on a phone",
     b: "Most roof searches happen on a phone, often standing in the yard looking at the damage. The page has to load on one bar.",
+  },
+];
+
+const ROOF_FAQ: FaqItem[] = [
+  {
+    q: "How long does roofing SEO take to work?",
+    a: "Plan on a few months before judging it. On the roofing site on this page, average position went from 47.9 to 14.9, comparing October 2025 to August 2026 with the eleven months before.",
+  },
+  {
+    q: "Does a roofing company need a page for every town?",
+    a: "A page for each town you want work in, with real jobs from that town on it, does better than one county page. Near-copies with only the town name swapped can be treated as doorway pages by Google.",
+  },
+  {
+    q: "How much does roofing SEO cost?",
+    a: "The Growth plan is $1,500 a month and covers two new town or service pages a month plus Business Profile work. If the site needs fixing first, the Setup Sprint is a one-time $1,800.",
+  },
+  {
+    q: "Should a roofer run Local Services Ads or do SEO?",
+    a: "They do different jobs. Local Services Ads charge per lead and stop when the budget does; SEO builds pages and rankings you keep. If you run both, track calls from each so you can compare.",
   },
 ];
 
@@ -111,6 +131,8 @@ export default function RoofingPage() {
           your site needs fixing first, the Setup Sprint is a one-time $1,800.
         </p>
       </section>
+
+      <Faq items={ROOF_FAQ} title="Roofing SEO questions" className="pt-24" />
 
       <section className="pt-24">
         <CtaBand

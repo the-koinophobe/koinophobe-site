@@ -13,6 +13,8 @@ export type Note = {
   seoTitle: string;
   /** Optional cover illustration, a public path such as /notes/illustrations/x.webp. */
   cover: string;
+  /** Optional questions, shown under the note and sent as FAQPage schema. */
+  faq: { q: string; a: string }[];
   /** Rendered at build time. Server only, so no markdown parser reaches the browser. */
   html: string;
 };
@@ -172,6 +174,14 @@ const all: Note[] = (fs.existsSync(DIR) ? fs.readdirSync(DIR) : [])
       draft: data.draft === true,
       seoTitle: String(data.seo_title ?? ""),
       cover: data.cover ? resolveImage(String(data.cover)) : "",
+      faq: Array.isArray(data.faq)
+        ? data.faq
+            .map((f: { q?: unknown; a?: unknown }) => ({
+              q: String(f?.q ?? "").trim(),
+              a: String(f?.a ?? "").trim(),
+            }))
+            .filter((f: { q: string; a: string }) => f.q && f.a)
+        : [],
       html: enrich(marked.parse(content, { async: false }) as string),
     };
   });

@@ -19,6 +19,7 @@ import { Spotlight } from "@/components/Spotlight";
 import { Stagger } from "@/components/Stagger";
 import Image from "next/image";
 import { site } from "@/lib/site";
+import { Faq, type FaqItem } from "@/components/Faq";
 
 export const metadata = {
   title: "About",
@@ -142,6 +143,25 @@ const personLd = {
   ],
 };
 
+const ABOUT_FAQ: FaqItem[] = [
+  {
+    q: "Who is Michael Edward?",
+    a: "I run Koinophobe, a technical SEO and call tracking practice for home service businesses in the US. I've worked on 30+ sites over two years.",
+  },
+  {
+    q: "What does Koinophobe mean?",
+    a: "A koinophobe is someone afraid of living an ordinary life. The word comes from koinophobia, coined by John Koenig in The Dictionary of Obscure Sorrows, and I named the practice after it.",
+  },
+  {
+    q: "Do you work with marketing agencies?",
+    a: "Yes. 11 of the 15 sites on my portfolio wall went out under an agency's name. Agency pricing starts at $850 per site per month, or $900 for a 10-hour block.",
+  },
+  {
+    q: "Who owns the accounts and pages?",
+    a: "You do. Google Analytics, Search Console, your Business Profile and the website stay in your name, and if you leave you keep all of it.",
+  },
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -233,6 +253,8 @@ export default function AboutPage() {
           ))}
         </Stagger>
       </section>
+
+      <Faq items={ABOUT_FAQ} className="pb-20 pt-6" />
 
       <CtaBand
         line="Sound like the way you want this done?"

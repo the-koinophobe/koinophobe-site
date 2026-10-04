@@ -4,6 +4,13 @@ slug: lawrence-ma-window-tint-seo
 date: 2026-10-03
 draft: false
 excerpt: "Tint Lordz Auto Spa ranks at position 2 or better for every version of its own name. The generic search sits at 19. Here's the data, and the plan any tint shop in the Merrimack Valley can copy."
+faq:
+  - q: "Where does Tint Lordz Auto Spa rank for its own name?"
+    a: "At position 2 or better for every version of its name, 1.98 on average. The search 'tint lordz auto spa lawrence' sits at 1.9 with an 11.2% click-through rate."
+  - q: "Why does ranking for your own business name matter?"
+    a: "A tint shop gets a lot of its business from people who heard the name from a friend and half remember it. If they search and land on a competitor or a directory, that referral just leaked. Owning every version of the name stops the leak."
+  - q: "How can a tint shop rank for 'window tinting near me'?"
+    a: "Near-me searches are decided mostly by the map pack, which looks at how close the shop is, whether the Business Profile has the right category and services, and how many recent reviews it has with sentences in them. For Tint Lordz that search sits at 19, so the Business Profile comes first, followed by a steady flow of reviews."
 ---
 
 Tint Lordz Auto Spa is a window tint and detailing shop in Lawrence, Massachusetts. I rebuilt the site and have been working on its search since mid-2025. This is what 14 months of Search Console looks like, July 2025 to August 2026.

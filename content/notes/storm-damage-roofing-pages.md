@@ -1,11 +1,18 @@
 ---
 title: "The storm damage pages every roofing website needs"
 slug: storm-damage-roofing-pages
-date: 2026-11-04
+date: 2026-09-22
 draft: false
 seo_title: "Storm damage pages every roofing site needs"
 excerpt: "After a storm, homeowners search questions before they search roofers. The storm damage pages to build now, so they rank before next hurricane season."
 cover: /notes/illustrations/storm-damage-roofing-pages.webp
+faq:
+  - q: "What storm damage pages should a roofing website have?"
+    a: "Emergency roof repair and tarping, storm damage inspection, insurance claims, wind damage and hail damage, and repair or replace. If you work in Florida, add wind mitigation inspections."
+  - q: "When should roofers publish storm damage pages?"
+    a: "Now, in the off-season. A page published the morning after a storm won't rank for weeks, and pages published over the winter have months to get indexed and start ranking before June."
+  - q: "What should a roofing insurance claims page say?"
+    a: "How the process usually works from the homeowner's side: document the damage, call the insurer, get an inspection. Explain what you can help with, keep it general and accurate, and don't promise outcomes or give legal advice."
 ---
 
 ![Isobars around a storm above a calendar strip of the Atlantic season, June 1 to November 30, with the September 10 peak marked](/notes/illustrations/storm-damage-roofing-pages.webp)

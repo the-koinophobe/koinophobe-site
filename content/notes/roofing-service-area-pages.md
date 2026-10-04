@@ -1,11 +1,18 @@
 ---
 title: "How to build service area pages for a roofing company"
 slug: roofing-service-area-pages
-date: 2026-10-17
+date: 2026-09-09
 draft: false
 seo_title: "Service area pages for roofers that rank"
 excerpt: "One page per town works for roofers, if each page is real. What to put on a roofing service area page, how many to build, and where Google draws the line."
 cover: /notes/illustrations/roofing-service-area-pages.webp
+faq:
+  - q: "What should a roofing service area page include?"
+    a: "Jobs you've done in that town, photos from those jobs, what's specific about roofing there, reviews from customers in that town, the services you offer there, questions people from that town ask, and a way to call or book near the top. If you can't fill most of that for a town, you don't need a page for it yet."
+  - q: "Does Google treat city pages as doorway pages?"
+    a: "Twenty copies of the same page with the town name swapped is what Google penalizes as doorway abuse. Twenty pages that each say something true and specific about the work in that town is a normal website."
+  - q: "How many service area pages should a roofer build?"
+    a: "Start with the five to ten towns where you already do the most work and want more. Match them to the service areas on your Google Business Profile, which allows up to 20, and add new towns as you get jobs in them."
 ---
 
 ![Thirteen town pages, each with its own content, next to five copies of the same page with the town name swapped](/notes/illustrations/roofing-service-area-pages.webp)

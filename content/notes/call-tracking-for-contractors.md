@@ -1,11 +1,18 @@
 ---
 title: "Call tracking for contractors: which calls came from Google?"
 slug: call-tracking-for-contractors
-date: 2026-10-21
+date: 2026-09-11
 draft: false
 seo_title: "Call tracking for contractors, in plain English"
 excerpt: "Most contractors can't say how many calls came from Google last month. Here's how to track website calls, Business Profile calls and forms without a big tool."
 cover: /notes/illustrations/call-tracking-for-contractors.webp
+faq:
+  - q: "How do I track phone calls from my contractor website?"
+    a: "Make every phone number on your site a tap-to-call link, then set up Google Analytics 4 and Google Tag Manager to record a click on those links as an event. Mark that event as a key event. It costs nothing but setup time."
+  - q: "Where do I see calls from my Google Business Profile?"
+    a: "Open your Business Profile and go to Performance. It shows calls made from the profile by month, so write that number down every month."
+  - q: "Should I put a tracking number on my Google Business Profile?"
+    a: "The common approach is to put the tracking number in the primary phone field and your real number in the additional phone field. Directories that list your real number still match the profile that way."
 ---
 
 ![Calls arriving from search, maps, the website and the Business Profile, most counted, some lost without tracking](/notes/illustrations/call-tracking-for-contractors.webp)
@@ -47,7 +54,7 @@ If the service offers call recording, check the consent rules in your state firs
 
 ## Count forms properly, too
 
-Quote forms are the other half. Count them when they're actually submitted, not when someone loads the thank-you page, which bots and people refreshing will inflate. And check the form still sends. Forms stop delivering all the time when an email password changes or a plugin updates, and nobody notices until the leads dry up. I wrote about that in [what a free estimate page needs](/notes/lawrence-ma-free-estimate-page).
+Quote forms are the other half. Count them when they're actually submitted, not when someone loads the thank-you page, which bots and people refreshing will inflate. And check the form still sends. Forms stop delivering all the time when an email password changes or a plugin updates, and nobody notices until the leads dry up. I wrote about two ways it happens in [why a contact form stops sending leads](/notes/speed-plugin-broke-contact-form).
 
 ## What you'll have at the end of the month
 

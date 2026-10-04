@@ -8,6 +8,7 @@ import { Reveal } from "@/components/Reveal";
 import { Stagger } from "@/components/Stagger";
 import { agency, monthly, oneTime, type Plan } from "@/lib/pricing";
 import { site } from "@/lib/site";
+import { FaqSchema } from "@/components/Faq";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -152,6 +153,7 @@ export default function PricingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingLd) }}
       />
+      <FaqSchema items={FAQ} />
 
       <section className="pt-28 sm:pt-36">
         <div className="container-pad">

@@ -1,11 +1,18 @@
 ---
 title: "What 1,250 'near me' searches taught me about local SEO"
 slug: near-me-searches-local-seo-data
-date: 2026-10-10
+date: 2026-09-02
 draft: false
 seo_title: "1,250 'near me' searches: what ranks and why"
 excerpt: "I pulled every 'near me' search from five client sites. 1,250 queries, 780 on page one, 191 in the top three. Here is what the ones that rank have in common."
 cover: /notes/illustrations/near-me-searches-local-seo-data.webp
+faq:
+  - q: "How many near me searches can one business show up for?"
+    a: "Hundreds. The pain clinic in this data shows up for 415 different versions of near me, and they brought in 179 clicks between them. Across five sites there were 1,250 near-me queries."
+  - q: "Why do storefront businesses win more near me searches?"
+    a: "Near me leans hard on where the person searching is standing, and a business with a storefront has an address to measure from. In this data the clinic and the game shop account for 836 of the 1,250 queries."
+  - q: "How do I find near me searches in Search Console?"
+    a: "Open Search Console, go to Performance, filter queries containing 'near me', and export the list. You'll see which services and towns are missing pages."
 ---
 
 ![Every near-me query across five sites, one mark each: 191 in the top three, 780 on page one, 1,250 in total](/notes/illustrations/near-me-searches-local-seo-data.webp)

@@ -1,11 +1,18 @@
 ---
 title: "Why your contractor website isn't showing up on Google"
 slug: contractor-website-not-showing-on-google
-date: 2026-10-24
+date: 2026-09-14
 draft: false
 seo_title: "Contractor site not on Google? Check these"
 excerpt: "Search your company and your site isn't there? Work through these checks in order, from the WordPress setting that hides you to pages Google never indexed."
 cover: /notes/illustrations/contractor-website-not-showing-on-google.webp
+faq:
+  - q: "How do I check if Google has indexed my website?"
+    a: "Search Google for site:yourdomain.com with your real domain and no spaces. No results means Google hasn't indexed the site. Plenty of results means the site is indexed and the problem is ranking."
+  - q: "Can a WordPress setting hide my site from Google?"
+    a: "Yes. In WordPress, go to Settings > Reading and look for 'Discourage search engines from indexing this site.' Developers tick it while building a site and forget to untick it at launch, so untick it and save."
+  - q: "What does 'crawled, currently not indexed' mean?"
+    a: "Google saw the page and decided it wasn't worth indexing. It's usually thin content or a near copy of another page, like town pages that read the same with the name swapped. The fix is fewer, better pages."
 ---
 
 ![Pages crawled, indexed, ranked and clicked, with a gap where a noindex setting removed pages from the index](/notes/illustrations/contractor-website-not-showing-on-google.webp)

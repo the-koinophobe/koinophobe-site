@@ -1,11 +1,18 @@
 ---
 title: "Google Business Profile setup for roofing companies"
 slug: google-business-profile-for-roofers
-date: 2026-10-14
+date: 2026-09-05
 draft: false
 seo_title: "Google Business Profile for roofers: setup guide"
 excerpt: "How to set up a Google Business Profile for a roofing company: category, service areas, address rules, phone tracking and photos, so the map sends you calls."
 cover: /notes/illustrations/google-business-profile-for-roofers.webp
+faq:
+  - q: "What category should a roofer use on Google Business Profile?"
+    a: "For most roofers it's Roofing contractor. The primary category carries the most weight, so it should be the work you want the most calls for. Add secondary categories only for work you actually sell."
+  - q: "Should a roofing company hide its address on Google?"
+    a: "If customers never visit your home office or yard, Google's rules say to remove the address and set a service area instead. Showing a home address that customers never visit can get a profile suspended."
+  - q: "How many service areas can I add to my Business Profile?"
+    a: "Up to 20, entered as cities, ZIP codes or counties, with no radius, and about 2 hours of driving from where you're based at most. Twenty is a ceiling, so list the towns where you do the most jobs and want more."
 ---
 
 ![A roofing company's service area: up to 20 towns inside roughly two hours of driving](/notes/illustrations/google-business-profile-for-roofers.webp)

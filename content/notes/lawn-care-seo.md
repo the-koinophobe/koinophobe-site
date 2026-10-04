@@ -1,11 +1,18 @@
 ---
 title: "Lawn care SEO: how to rank in your town before spring"
 slug: lawn-care-seo
-date: 2026-11-11
+date: 2026-09-26
 draft: false
 seo_title: "Lawn care SEO: rank in your town before spring"
 excerpt: "Lawn care searches jump in spring, and pages take months to rank. What lawn care companies should build over the winter so Google sends calls by March."
 cover: /notes/illustrations/lawn-care-seo.webp
+faq:
+  - q: "When should a lawn care company start working on SEO?"
+    a: "Pages take weeks to months to start ranking, so if you want calls in March, the pages need to be live by December. Build service pages and a plans page in November, then town pages over December and January."
+  - q: "Does each lawn care service need its own page?"
+    a: "Yes. People search for the specific job, like aeration or fertilization, and a single services page can't rank for all of them. Each page should say what's included, how often you do it, when in the year it should happen and roughly what it costs."
+  - q: "Should lawn care companies publish their prices online?"
+    a: "If you publish prices, you'll get fewer calls from people who were never going to buy, which saves your time for the ones who will. A page that lays out your plans side by side answers the question most people have before they call."
 ---
 
 ![Mowing stripes across a calendar year, with a marker at the start of March for pages that need to be live](/notes/illustrations/lawn-care-seo.webp)

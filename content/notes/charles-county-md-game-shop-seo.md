@@ -4,6 +4,13 @@ slug: charles-county-md-game-shop-seo
 date: 2026-09-30
 draft: false
 excerpt: "Over The Table Top is one independent board game and card shop in Charles County, Maryland. Here's what 17 months of Search Console data says worked, what didn't, and what I'd do next."
+faq:
+  - q: "How many keywords does Over The Table Top rank for on page one?"
+    a: "614 keywords on page one in Search Console data from April 2025 to August 2026, with 149 in the top three out of the 1,000 rows Search Console exports. 398 different near me searches now show the shop."
+  - q: "What SEO work helped a small game shop rank locally?"
+    a: "Product schema on the inventory so Google can read what's in stock, category pages with real titles, and cleanup on pages nobody had looked at in a while. A custom woodwork page that was nearly deleted now pulls its own traffic."
+  - q: "Why are my impressions going up but clicks staying flat?"
+    a: "For this shop, clicks held roughly flat while impressions more than doubled. Impressions without clicks is a title problem, so rewrite the titles and descriptions you have before you write more."
 ---
 
 Over The Table Top is an independent board game and trading card shop in Charles County, Maryland. One location. It competes for the same searches as big-box stores, Amazon, and Google's own local pack.

@@ -1,11 +1,18 @@
 ---
 title: "Getting more Google reviews as a roofer, within the rules"
 slug: google-reviews-for-roofers
-date: 2026-10-28
+date: 2026-09-17
 draft: false
 seo_title: "Google reviews for roofers: get more, legally"
 excerpt: "Reviews decide a lot of who wins the map. How roofers can ask for Google reviews at the right moment, and what Google and the FTC now prohibit."
 cover: /notes/illustrations/google-reviews-for-roofers.webp
+faq:
+  - q: "Can I offer a discount in exchange for a Google review?"
+    a: "No. Google prohibits offering incentives such as payment, discounts, or free goods or services in exchange for posting any review. Since you want reviews on Google, the simple rule is to offer nothing."
+  - q: "What is review gating and is it allowed?"
+    a: "Review gating is texting happy customers the review link and sending unhappy ones a private feedback form instead. Google prohibits selectively soliciting positive reviews, so it's against the rules even though it's common."
+  - q: "When should a roofer ask a customer for a Google review?"
+    a: "At the final walkthrough, when the new roof is on and the yard is clean. Ask in person, then text the review link from your Business Profile before you leave. Make the ask part of how every job closes."
 ---
 
 ![Two years of reviews: a steady one every two weeks, against the same number arriving in a single month](/notes/illustrations/google-reviews-for-roofers.webp)

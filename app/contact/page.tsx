@@ -7,6 +7,7 @@ import { XIcon } from "@/components/Availability";
 import { CalInline } from "@/components/CalInline";
 import { EmailCta } from "@/components/Cta";
 import { site } from "@/lib/site";
+import { Faq, type FaqItem } from "@/components/Faq";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -48,6 +49,25 @@ const ASK = [
 ];
 
 const videoHref = `mailto:${site.email}?subject=${encodeURIComponent("Video review")}`;
+
+const CONTACT_FAQ: FaqItem[] = [
+  {
+    q: "What happens on the free call?",
+    a: "It's twenty minutes. I look at your site before we talk, then tell you the two or three things I'd fix first and what they'd cost, whether you hire me or not.",
+  },
+  {
+    q: "What should I send before the call?",
+    a: "Your website, what you sell and where, and what you want more of: calls, bookings, quotes or foot traffic.",
+  },
+  {
+    q: "Can I email instead of booking a call?",
+    a: "Yes. Email me your website and I'll reply the same business day. If you'd rather not talk at all, ask for a video review and I'll record what I'd fix first.",
+  },
+  {
+    q: "When do you work?",
+    a: "9 to 5 Eastern, with replies the same business day.",
+  },
+];
 
 export default function ContactPage() {
   return (
@@ -194,6 +214,8 @@ export default function ContactPage() {
           </Reveal>
         </div>
       </section>
+
+      <Faq items={CONTACT_FAQ} className="pb-24 pt-20" />
     </>
   );
 }

@@ -18,6 +18,7 @@ import { Ticker } from "@/components/Ticker";
 import { TrustRow } from "@/components/TrustRow";
 import { aggregate, cases } from "@/lib/gsc";
 import { reviews } from "@/lib/content";
+import { Faq, type FaqItem } from "@/components/Faq";
 
 const HERO_QUOTES = ["Daniel Folks", "Johnny Urena"];
 
@@ -26,6 +27,25 @@ export const metadata = {
     "Technical SEO for home service businesses in the US. 30+ sites over two years, five opened up here with every figure from their own Search Console. Prices on the site and a free 20-minute call.",
   alternates: { canonical: "/" },
 };
+
+const HOME_FAQ: FaqItem[] = [
+  {
+    q: "What does Koinophobe do?",
+    a: "Technical SEO and call tracking for home service businesses in the US. I fix what stops a site from ranking, set up tracking so you can see the calls and forms Google sends, and build the town and service pages that bring in local searches.",
+  },
+  {
+    q: "What kinds of businesses do you work with?",
+    a: "Mostly home service companies: roofers, pool deck, lawn and hurricane shutter businesses. I also work with clinics, shops and auto businesses, at the same prices.",
+  },
+  {
+    q: "How much does it cost?",
+    a: "Every price is on the pricing page, in US dollars. The Site Audit is $750, the Setup Sprint is a one-time $1,800, and monthly plans start at $600.",
+  },
+  {
+    q: "How long does SEO take to work?",
+    a: "Tracking starts counting calls and forms as soon as it's set up. New pages usually take weeks to months to rank, which is why monthly plans have a three-month minimum.",
+  },
+];
 
 export default function HomePage() {
   return (
@@ -197,9 +217,11 @@ export default function HomePage() {
         <AboutStrip />
       </section>
 
-      <section className="container-pad pb-24 pt-24">
+      <section className="container-pad pt-24">
         <Reviews exclude={HERO_QUOTES} />
       </section>
+
+      <Faq items={HOME_FAQ} title="Common questions" className="pb-24 pt-24" />
 
       <Availability />
       <MobileCta />

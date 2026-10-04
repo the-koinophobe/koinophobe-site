@@ -84,4 +84,18 @@ collections:
           required: false,
           hint: 'Used for link previews and the article image Google sees. 1600 x 900 works best.',
         }
+      - {
+          name: faq,
+          label: Questions (optional),
+          label_singular: Question,
+          widget: list,
+          required: false,
+          collapsed: true,
+          summary: '{{fields.q}}',
+          hint: 'Shown under the note as Questions and sent to Google as FAQPage schema. Two to four is plenty. Answers must match what the note says.',
+          fields: [
+            { name: q, label: Question, widget: string },
+            { name: a, label: Answer, widget: text },
+          ],
+        }
       - { name: body, label: Body, widget: markdown }

@@ -4,6 +4,13 @@ slug: lawrence-ma-free-estimate-page
 date: 2026-10-07
 draft: false
 excerpt: "A free estimate page is where a search turns into a lead, and most of them leak. Here's what I put on every one now, from builds for clients in Lawrence, MA and around the US."
+faq:
+  - q: "What fields should a free estimate form have?"
+    a: "Name, phone, email, town, what you need, and an optional photo upload. Every extra field costs you people, and they'll give you the full address after you've called them back."
+  - q: "How should I track free estimate form submissions?"
+    a: "Fire an event when the form is actually submitted, because tracking a visit to a thank-you URL counts bots and people who refresh. Then mark that event as a key event in Google Analytics."
+  - q: "How often should I test my website contact form?"
+    a: "Every month. Forms stop sending when an email password changes, a caching plugin blocks the script or a mail setting expires. In July I found a client's form submissions had been dropping since March because of an email setting, and nobody caught it for four months."
 ---
 
 Johnny Urena, a client in Lawrence, Massachusetts, hired me on Upwork to build a free estimate page. His review afterward: "Straight forward, doesn't waste time. If he can't do something he'll tell you."

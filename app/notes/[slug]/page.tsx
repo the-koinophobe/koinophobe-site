@@ -6,6 +6,7 @@ import { Reveal } from "@/components/Reveal";
 import { Availability } from "@/components/Availability";
 import { CtaBand } from "@/components/Cta";
 import { MobileCta } from "@/components/MobileCta";
+import { FaqList, FaqSchema } from "@/components/Faq";
 import { ArrowLeft } from "lucide-react";
 import { publishedNotes, getNote } from "@/lib/notes";
 
@@ -58,6 +59,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
     description: note.excerpt,
     datePublished: note.date,
     dateModified: note.date,
+    wordCount: note.html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length,
     inLanguage: "en-US",
     image: note.cover ? `https://koinophobe.com${note.cover}` : "https://koinophobe.com/opengraph-image",
     author: {
@@ -96,6 +98,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      <FaqSchema items={note.faq} />
       <section className="pt-28 sm:pt-36">
         <div className="container-pad">
           <Reveal>
@@ -125,6 +128,16 @@ export default function NotePage({ params }: { params: { slug: string } }) {
         <Reveal className="prose max-w-[68ch] text-[17.5px] leading-[1.7] text-muted">
           <div dangerouslySetInnerHTML={{ __html: note.html }} />
         </Reveal>
+        {note.faq.length ? (
+          <Reveal className="mt-14 max-w-[68ch]">
+            <h2 className="font-display text-[clamp(1.5rem,3vw,2rem)] leading-[1.1] tracking-tight">
+              Questions
+            </h2>
+            <div className="mt-6">
+              <FaqList items={note.faq} />
+            </div>
+          </Reveal>
+        ) : null}
         <aside className="mt-14 flex max-w-[68ch] items-start gap-5 border-t border-line pt-7 text-[15.5px] text-muted">
           <Image
             src="/me/michael-edward.webp"

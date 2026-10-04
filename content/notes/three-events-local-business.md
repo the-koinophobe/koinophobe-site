@@ -3,6 +3,13 @@ title: "The three conversion events every local business should track"
 date: "2026-05-15"
 excerpt: "You do not need a complicated analytics setup. You need three events wired up correctly. These are the ones that count."
 draft: false
+faq:
+  - q: "What conversion events should a local business track?"
+    a: "Phone calls, especially click-to-call taps, form submissions measured on success, and quote or booking requests as their own event. Google Analytics 4 and Google Tag Manager are free, and the setup fits into an afternoon."
+  - q: "How do I track click-to-call taps in Google Analytics 4?"
+    a: "Add a Google Tag Manager click trigger on every tel: link that fires a phone_call event into GA4, then mark it as a key event. You can then see which pages, keywords and times of day produce calls."
+  - q: "Why shouldn't I count thank-you page visits as form leads?"
+    a: "Counting visits to a thank-you page inflates the numbers with bots, refreshes and accidental hits, and some form plugins never redirect at all. Fire the event on the form's actual success state instead."
 ---
 Local service businesses live and die on a handful of actions: someone calls, someone fills a form, someone asks for a quote. Track those three correctly and your website stops being a brochure and becomes a measurable sales channel. Miss them and you are flying blind, no matter how much traffic Google sends you.
 

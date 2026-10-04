@@ -1,11 +1,18 @@
 ---
 title: "SEO for pool deck repair and resurfacing companies"
 slug: pool-deck-repair-seo
-date: 2026-11-07
+date: 2026-09-24
 draft: false
 seo_title: "Pool deck repair SEO: rank before pool season"
 excerpt: "How pool deck repair and resurfacing companies can rank on Google: a page for each service, before-and-after proof, the right map category and timing."
 cover: /notes/illustrations/pool-deck-repair-seo.webp
+faq:
+  - q: "What pages should a pool deck repair website have?"
+    a: "One page per service: pool deck resurfacing, crack repair, cool deck or knockdown finishes, paver and travertine installation, sealing and cleaning, and coatings for concrete decks. A page that tries to cover all six ranks for none of them."
+  - q: "What Google Business Profile category fits pool deck repair?"
+    a: "You may not find a category that says pool deck repair exactly, so pick the closest primary category for the work you do most. Check what the top three companies in your area use by searching for them on Google Maps."
+  - q: "Should pool deck companies list prices on their website?"
+    a: "On cost, a range with what pushes it up or down is more useful than 'call for a quote', and it brings you better-qualified calls. Answer it on the service pages in two or three sentences."
 ---
 
 ![A pool beside a deck of travertine pavers in running bond, with one cracked tile marked for repair](/notes/illustrations/pool-deck-repair-seo.webp)
