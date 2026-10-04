@@ -20,11 +20,21 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const note = getNote(params.slug);
   if (!note) return {};
+  const title = note.seoTitle || note.title;
+  const images = note.cover ? [{ url: note.cover, width: 1600, height: 900, alt: note.title }] : undefined;
   return {
-    title: note.title,
+    title,
     description: note.excerpt,
     alternates: { canonical: `/notes/${note.slug}` },
-    openGraph: { title: note.title, description: note.excerpt, type: "article" },
+    openGraph: {
+      title,
+      description: note.excerpt,
+      type: "article",
+      publishedTime: note.date,
+      authors: ["Michael Edward"],
+      ...(images ? { images } : {}),
+    },
+    twitter: { card: "summary_large_image", title, description: note.excerpt, ...(images ? { images: [note.cover] } : {}) },
   };
 }
 
@@ -49,7 +59,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
     datePublished: note.date,
     dateModified: note.date,
     inLanguage: "en-US",
-    image: "https://koinophobe.com/opengraph-image",
+    image: note.cover ? `https://koinophobe.com${note.cover}` : "https://koinophobe.com/opengraph-image",
     author: {
       "@type": "Person",
       "@id": "https://koinophobe.com/#michael",

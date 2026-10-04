@@ -70,4 +70,18 @@ collections:
           required: true,
           hint: 'One or two sentences. Used on the notes index, in the meta description and in link previews.',
         }
+      - {
+          name: seo_title,
+          label: SEO title (optional),
+          widget: string,
+          required: false,
+          hint: 'Shorter title for Google and link previews. Keep it under 47 characters; " · Koinophobe" is added after it.',
+        }
+      - {
+          name: cover,
+          label: Cover illustration (optional),
+          widget: image,
+          required: false,
+          hint: 'Used for link previews and the article image Google sees. 1600 x 900 works best.',
+        }
       - { name: body, label: Body, widget: markdown }

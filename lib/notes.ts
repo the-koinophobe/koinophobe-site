@@ -9,6 +9,10 @@ export type Note = {
   date: string; // ISO
   excerpt: string;
   draft: boolean;
+  /** Optional shorter title for the <title> tag and link previews. */
+  seoTitle: string;
+  /** Optional cover illustration, a public path such as /notes/illustrations/x.webp. */
+  cover: string;
   /** Rendered at build time. Server only, so no markdown parser reaches the browser. */
   html: string;
 };
@@ -166,6 +170,8 @@ const all: Note[] = (fs.existsSync(DIR) ? fs.readdirSync(DIR) : [])
       date: isoDate(data.date),
       excerpt: String(data.excerpt ?? ""),
       draft: data.draft === true,
+      seoTitle: String(data.seo_title ?? ""),
+      cover: data.cover ? resolveImage(String(data.cover)) : "",
       html: enrich(marked.parse(content, { async: false }) as string),
     };
   });
