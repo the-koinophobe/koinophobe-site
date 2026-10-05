@@ -181,7 +181,7 @@ export function Pipeline() {
           Console can&rsquo;t tell me whether your phone rang, so call and form tracking is the
           first thing I set up on any site.
         </p>
-        <p className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-line pt-6 font-mono text-[10.5px] uppercase tracking-[0.13em] text-muted">
+        <p className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-line pt-6 font-mono text-[11.5px] uppercase tracking-[0.13em] text-muted">
           <span className="inline-flex items-center gap-2">
             <span aria-hidden className="h-2 w-2 rounded-full bg-brand" />
             In the data
@@ -239,7 +239,7 @@ export function Pipeline() {
               </span>
 
               <div className="min-w-0 pt-2">
-                <p className="font-mono text-[11px] uppercase tracking-[0.13em] text-muted">
+                <p className="font-mono text-[12px] uppercase tracking-[0.13em] text-muted">
                   {n.label}
                 </p>
 
@@ -252,14 +252,14 @@ export function Pipeline() {
                     >
                       <Figure value={n.value} run={on} />
                     </p>
-                    <p className="mt-2.5 max-w-[34ch] font-mono text-[11px] leading-relaxed text-muted">
+                    <p className="mt-2.5 max-w-[34ch] font-mono text-[12px] leading-relaxed text-muted">
                       {n.unit}
                     </p>
                   </>
                 ) : (
                   <p className="mt-3">
                     <span
-                      className={`inline-flex items-center gap-2.5 rounded-sm border border-dashed px-3.5 py-2 font-mono text-[11px] uppercase tracking-[0.13em] transition-colors duration-300 ${
+                      className={`inline-flex items-center gap-2.5 rounded-sm border border-dashed px-3.5 py-2 font-mono text-[12px] uppercase tracking-[0.13em] transition-colors duration-300 ${
                         on ? "border-accent text-accent" : "border-line text-muted/60"
                       }`}
                     >

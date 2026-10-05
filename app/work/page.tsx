@@ -6,13 +6,16 @@ import { CtaBand } from "@/components/Cta";
 import { MobileCta } from "@/components/MobileCta";
 import { Reveal } from "@/components/Reveal";
 import { SiteWall } from "@/components/SiteWall";
-import { Stagger } from "@/components/Stagger";
 import { CaseStudyBlock } from "@/components/CaseStudyBlock";
+import { RelatedNotes } from "@/components/RelatedNotes";
 import { cases, EXPORT_DATE } from "@/lib/gsc";
 import { site } from "@/lib/site";
 
+// Related notes appear on their publish date without a deploy.
+export const revalidate = 3600;
+
 export const metadata = {
-  title: "The ledger",
+  title: "SEO case studies for local businesses",
   description:
     "Five local-business Search Console case studies out of thirty-plus sites: a pain clinic, a roofer, a tint shop, a game store and a marketing agency. Each with what I would go after next.",
   alternates: { canonical: "/work" },
@@ -61,74 +64,53 @@ export default function WorkPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(casesLd) }}
       />
-      <section className="pt-32 sm:pt-36">
-        <div className="container-pad grid items-end gap-9 lg:grid-cols-[1.35fr_1fr] lg:gap-14">
+      <section className="hero-bg">
+        <div className="container-pad grid items-center gap-10 pb-14 pt-14 sm:pt-20 lg:grid-cols-[1.35fr_1fr] lg:gap-14">
           <Reveal>
-            <p className="eyebrow">The ledger</p>
-            <h1 className="mt-4 max-w-[20ch] font-display text-[clamp(2.2rem,5.4vw,4.05rem)] leading-[1.04] tracking-tight text-balance">
-              The wall, and the five I opened up.
-            </h1>
-            <p className="mt-6 max-w-[62ch] text-[17.5px] text-muted">
-              Thirty-plus sites in two years. Below is every one I kept a screenshot of, then the
-              five I can put the Search Console data on the table for. Same four numbers each time,
-              the story behind them, and what I&rsquo;d go after next.
+            <p className="eyebrow">Case studies</p>
+            <h1 className="t-h1 mt-5 max-w-[20ch]">SEO case studies from real Search Console accounts</h1>
+            <p className="t-lead mt-6 max-w-[60ch]">
+              Thirty-plus sites in two years. Here are the five I can put the Search Console data on the table
+              for: same four numbers each time, the story behind them, and what I&rsquo;d go after next. Then every
+              site I kept a screenshot of.
             </p>
+            <nav aria-label="Case studies" className="mt-8 flex flex-wrap gap-2">
+              {cases.map((c) => (
+                <a key={c.slug} href={`#${c.slug}`} className="btn btn-sm btn-secondary">
+                  {c.client}
+                </a>
+              ))}
+            </nav>
           </Reveal>
-          <Stagger className="border-t border-line">
+          <ul className="card divide-y divide-line px-5">
             {READ_THIS.map((r) => (
-              <div
-                key={r.title}
-                className="grid grid-cols-[24px_1fr] items-start gap-4 border-b border-line py-3.5"
-              >
-                <span className="text-brand">{r.icon}</span>
+              <li key={r.title} className="flex items-start gap-3.5 py-4">
+                <span className="mt-0.5 text-brand">{r.icon}</span>
                 <p className="text-[14.5px] text-muted">
                   <b className="font-medium text-ink">{r.title}</b> {r.body}
                 </p>
-              </div>
+              </li>
             ))}
-          </Stagger>
-        </div>
-
-      </section>
-
-      <section className="pt-24">
-        <div className="container-pad">
-          <SiteWall />
+          </ul>
         </div>
       </section>
 
-      <section className="pt-16">
-        <CtaBand
-          line="Want your site on a wall like this?"
-          from="after_wall"
-          secondary={{ href: "/about", label: "How I work" }}
-        />
-      </section>
-
-      <section className="pt-24">
+      <section className="section">
         <div className="container-pad">
           <Reveal className="grid items-end gap-8 md:grid-cols-[1fr_auto] md:gap-12">
             <div>
               <p className="eyebrow">The numbers</p>
-              <h2 className="mt-4 max-w-[24ch] font-display text-[clamp(1.9rem,4vw,3rem)] leading-[1.05] tracking-tight text-balance">
-                Five of them, with the Search Console left open.
-              </h2>
-              <p className="mt-5 max-w-[52ch] text-muted">
-                The greatest hits, if you like. Same four numbers for each, the story behind them,
-                and what I&rsquo;d go after next.
+              <h2 className="t-h2 mt-5 max-w-[24ch]">Five of them, with the Search Console left open</h2>
+              <p className="t-lead mt-4 max-w-[52ch]">
+                The greatest hits, if you like. Same four numbers for each, the story behind them, and what
+                I&rsquo;d go after next.
               </p>
             </div>
-            <div className="relative aspect-square w-full max-w-[260px] overflow-hidden rounded-md border border-line shadow-[0_18px_40px_-24px_rgb(0_0_0/0.45)] md:w-[260px]">
-              <Image
-                src="/me/greatest-works.webp"
-                alt="Retro record sleeve reading Michael: Greatest Works"
-                fill
-                sizes="260px"
-                className="object-cover"
-              />
+            <div className="relative aspect-square w-full max-w-[220px] overflow-hidden rounded-2xl shadow-float md:w-[220px]">
+              <Image src="/me/greatest-works.webp" alt="Retro record sleeve reading Michael: Greatest Works" fill sizes="220px" className="object-cover" />
             </div>
           </Reveal>
-          <div className="mt-12 border-t border-line">
+          <div className="card mt-12 px-5 sm:px-8">
             {cases.map((c) => (
               <CaseStudyBlock key={c.slug} c={c} />
             ))}
@@ -136,17 +118,31 @@ export default function WorkPage() {
         </div>
       </section>
 
-      <section className="container-pad pt-28">
-        <AISection />
+      <div className="pb-4">
+        <CtaBand
+          line="Want numbers like these on your site?"
+          from="work_after_cases"
+          secondary={{ href: "/pricing", label: "See pricing" }}
+        />
+      </div>
+
+      <section className="section">
+        <div className="container-pad">
+          <SiteWall />
+        </div>
       </section>
 
-      <section className="pt-24">
-        <CtaBand
-          line="Send me the URL. I'll tell you what I'd go after first."
-          from="after_ai"
-          secondary={{ href: "/notes", label: "Read the notes" }}
-        />
+      <section className="section section-tint">
+        <div className="container-pad">
+          <AISection />
+        </div>
       </section>
+
+      <RelatedNotes
+        className="!bg-bg"
+        title="The case studies, written up"
+        slugs={["clinic-158-to-501", "charles-county-md-game-shop-seo", "lawrence-ma-window-tint-seo", "near-me-searches-local-seo-data", "zero-click-rankings-title-tags", "ai-cited-vs-ranked-page"]}
+      />
 
       <Availability />
       <MobileCta />

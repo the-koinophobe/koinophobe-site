@@ -5,7 +5,9 @@ date: 2026-10-21
 draft: false
 seo_title: "Pest control SEO: pest pages and plans"
 excerpt: "Pest control SEO built around how people search: a page per pest, a recurring plans page, seasonal timing, town pages, reviews within the rules and tracking."
-cover: /notes/illustrations/pest-control-seo.webp
+cover: /notes/photos/pest-control-seo-cover.webp
+cover_alt: "A pest control technician with his equipment working in front of a house"
+cover_credit: "Photo: Pro Pest Control Canberra on Unsplash"
 faq:
   - q: "What pages should a pest control website have?"
     a: "A page for each pest you treat (termites, mosquitoes, rodents, bed bugs, ants), a page for your recurring plans, and a real page for each town you serve. People search the pest, so the pest pages bring them in."
@@ -24,6 +26,8 @@ Most of the sites I work on are roofing, pool deck, lawn and shutter companies. 
 ## A page for each pest
 
 People search the pest, so build a page for each one you treat:
+
+![Close view of a brown cockroach crawling on a rough gray surface](/notes/photos/pest-control-seo-1.webp "Photo: Cecep Rahmat on Unsplash")
 
 - **Termites.** Inspections and treatment are often separate searches and can be separate pages. Say what an inspection involves and what happens if you find activity.
 - **Mosquitoes.** Yard treatments, how often you come back, what the homeowner needs to do between visits.

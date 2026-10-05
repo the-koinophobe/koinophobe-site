@@ -72,23 +72,27 @@ const CONTACT_FAQ: FaqItem[] = [
 export default function ContactPage() {
   return (
     <>
-      <section className="pt-28 sm:pt-36">
-        <div className="container-pad">
+      <section className="hero-bg">
+        <div className="container-pad pb-6 pt-14 sm:pt-20">
           <div className="grid items-center gap-10 lg:grid-cols-[1.35fr_1fr] lg:gap-14">
           <Reveal>
             <p className="eyebrow">Contact</p>
-            <h1 className="mt-4 max-w-[17ch] font-display text-[clamp(2.2rem,5.4vw,4.05rem)] leading-[1.04] tracking-tight text-balance">
-              Tell me the site and the goal. I&rsquo;ll do the rest.
-            </h1>
-            <p className="mt-6 max-w-[58ch] text-[17.5px] text-muted">
+            <h1 className="t-h1 mt-5 max-w-[17ch]">Book a free SEO call, or send me your site</h1>
+            <p className="t-lead mt-6 max-w-[58ch]">
               Book a free 20-minute call, or email me if you&rsquo;d rather write. Either way
               I&rsquo;ll look at your site before we talk, and if there&rsquo;s nothing worth paying
               for, I&rsquo;ll tell you.
             </p>
+            <div className="mt-9 flex flex-wrap items-center gap-3">
+              <a href="#book" className="btn btn-lg btn-primary" data-track="cta_link" data-from="contact_hero">
+                Pick a time
+              </a>
+              <EmailCta from="contact_hero" />
+            </div>
           </Reveal>
           <Reveal delay={0.1}>
             <figure className="mx-auto w-full max-w-[300px] lg:mr-0 lg:max-w-[340px]">
-              <div className="relative aspect-square w-full rotate-[1.5deg] overflow-hidden rounded-md border border-line shadow-[0_18px_40px_-24px_rgb(0_0_0/0.45)] motion-reduce:rotate-0">
+              <div className="relative aspect-square w-full rotate-[1.5deg] overflow-hidden rounded-3xl shadow-float motion-reduce:rotate-0">
                 <Image
                   src="/me/wanted.webp"
                   alt="Wanted poster of Michael Edward: for being too good at SEO, alias the search engine savant"
@@ -98,20 +102,18 @@ export default function ContactPage() {
                   className="object-cover"
                 />
               </div>
-              <figcaption className="mt-4 text-center font-mono text-[11px] tracking-wide text-muted">
+              <figcaption className="mt-4 text-center text-[13.5px] text-muted">
                 Last seen working 9 to 5 Eastern.
               </figcaption>
             </figure>
           </Reveal>
           </div>
 
-          <Stagger className="mt-14 grid gap-px bg-line sm:grid-cols-3">
-            {STEPS.map((s, i) => (
-              <div key={s.title} className={`bg-bg py-8 sm:pr-8 ${i > 0 ? "sm:pl-8" : ""}`}>
-                <span className="block text-brand">{s.icon}</span>
-                <h2 className="mt-4 font-display text-[1.35rem] leading-snug tracking-tight">
-                  {s.title}
-                </h2>
+          <Stagger className="mt-14 grid gap-5 sm:grid-cols-3">
+            {STEPS.map((s) => (
+              <div key={s.title} className="card p-7">
+                <span className="icon-tile">{s.icon}</span>
+                <h2 className="t-h3 mt-5">{s.title}</h2>
                 <p className="mt-2.5 text-[15.5px] text-muted">{s.body}</p>
               </div>
             ))}
@@ -128,7 +130,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="mt-20 border-t border-line bg-surface">
+      <section className="mt-20 section-tint">
         <div className="container-pad grid gap-12 py-16 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
           <Reveal>
             <p className="eyebrow">Or email me</p>
@@ -176,6 +178,7 @@ export default function ContactPage() {
                 label="Ask for a video review"
                 href={videoHref}
                 from="contact_video"
+                size="md"
                 className="mt-5"
               />
             </div>
@@ -206,7 +209,7 @@ export default function ContactPage() {
               </blockquote>
               <figcaption className="mt-4 flex flex-wrap items-baseline gap-x-3">
                 <span className="text-[15px] font-medium">Johnny Urena</span>
-                <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-brand">
+                <span className="font-mono text-[11.5px] uppercase tracking-[0.12em] text-brand">
                   Verified &middot; Upwork
                 </span>
               </figcaption>

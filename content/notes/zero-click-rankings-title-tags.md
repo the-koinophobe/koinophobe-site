@@ -5,7 +5,9 @@ date: 2026-09-03
 draft: false
 seo_title: "Ranking but no clicks: fix the snippet first"
 excerpt: "Ranking but no clicks? 307 search terms in Google's top ten got zero clicks across three sites. How to find yours in Search Console and fix title and page."
-cover: /notes/illustrations/zero-click-rankings-title-tags.webp
+cover: /notes/photos/zero-click-rankings-title-tags-cover.webp
+cover_alt: "Hands typing on a laptop showing the Google search page, with a phone beside it"
+cover_credit: "Photo: Benjamin Dada on Unsplash"
 faq:
   - q: "Why am I ranking on Google but getting no clicks?"
     a: "Usually the snippet doesn't match what the searcher wants, or the page can't do what they came to do. Check the title tag and meta description first, then the page itself."

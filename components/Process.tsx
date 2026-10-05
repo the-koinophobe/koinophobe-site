@@ -87,7 +87,7 @@ export function Process() {
     <div ref={rootRef}>
       <div className="flex flex-wrap items-center justify-between gap-4">
         <p className="eyebrow">How it goes</p>
-        <div className="inline-flex rounded-sm border border-line p-0.5" role="tablist" aria-label="Who you are">
+        <div className="inline-flex rounded-full border border-line p-1" role="tablist" aria-label="Who you are">
           {([["owner", "I run the business"], ["agency", "I'm an agency"]] as [Audience, string][]).map(
             ([key, label]) => (
               <button
@@ -96,7 +96,7 @@ export function Process() {
                 role="tab"
                 aria-selected={audience === key}
                 onClick={() => setAudience(key)}
-                className={`rounded-[2px] px-3 py-1.5 font-mono text-[10.5px] uppercase tracking-[0.1em] transition-colors duration-100 ${
+                className={`rounded-full px-4 py-2 text-[13.5px] font-medium transition-colors duration-100 ${
                   audience === key ? "bg-ink text-bg" : "text-muted hover:text-ink"
                 }`}
               >
@@ -161,7 +161,7 @@ export function Process() {
                   >
                     {s.label}
                   </span>
-                  <span className="mt-1 block font-mono text-[11px] text-muted">{s.when}</span>
+                  <span className="mt-1 block font-mono text-[12px] text-muted">{s.when}</span>
                 </span>
               </button>
             );

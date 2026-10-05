@@ -5,7 +5,9 @@ date: 2026-08-12
 draft: false
 seo_title: "HVAC SEO: build pages before the season"
 excerpt: "HVAC SEO runs on two seasons. Which service pages to build, when to publish them, a maintenance plan page, HVACBusiness schema and how to track the calls."
-cover: /notes/illustrations/hvac-seo.webp
+cover: /notes/photos/hvac-seo-cover.webp
+cover_alt: "A white outdoor air conditioning unit sitting beside a brick wall outside a building"
+cover_credit: "Photo: Everett Pachmann on Unsplash"
 faq:
   - q: "When should an HVAC company publish seasonal pages?"
     a: "Months before demand peaks. New pages can take weeks or months to be indexed and settle in rankings, so a furnace repair page should be live well before the first cold snap in your area."
@@ -24,6 +26,8 @@ Most of the sites I work on are roofing, pool deck, lawn and shutter companies. 
 ## Why the timing matters
 
 A new page doesn't rank the day you publish it. Google has to find and index it, then test it against the pages already ranking, and that can take weeks or months. If you publish your furnace repair page during the first cold week, you've missed most of the busy stretch.
+
+![A white wall thermostat set to 62 degrees inside a home](/notes/photos/hvac-seo-1.webp "Photo: Dan LeFebvre on Unsplash")
 
 You can see your own pattern in Google Search Console. Open the Performance report, compare the last three months with the same three months a year ago, and look at which queries rose and when. That tells you when your area's searches start, and your publishing date should land a couple of months before it.
 

@@ -15,10 +15,10 @@ export const metadata: Metadata = {
  */
 export default function BookedPage() {
   return (
-    <section className="container-pad pb-28 pt-32 sm:pt-40">
+    <section className="container-pad pb-28 pt-14 sm:pt-20">
       <BookedTrack />
       <p className="eyebrow">Booked</p>
-      <h1 className="mt-4 max-w-[18ch] font-display text-[clamp(2.2rem,5.4vw,4.05rem)] leading-[1.04] tracking-tight text-balance">
+      <h1 className="t-h1 mt-5 max-w-[18ch]">
         You&rsquo;re on my calendar.
       </h1>
       <div className="mt-6 max-w-[56ch] space-y-4 text-[17.5px] text-muted">

@@ -5,7 +5,9 @@ date: 2026-08-04
 draft: false
 seo_title: "Plumbing SEO: winning the emergency call"
 excerpt: "Plumbing SEO for emergency calls: Business Profile settings, a service page per job, town pages, Plumber schema and the call tracking that proves it works."
-cover: /notes/illustrations/plumbing-seo.webp
+cover: /notes/photos/plumbing-seo-cover.webp
+cover_alt: "A plumber kneeling in a bathroom, repairing the pipes and fittings under a fixture"
+cover_credit: "Photo: bhagya laxmi on Unsplash"
 faq:
   - q: "How does a plumber get into the Google map pack?"
     a: "Start with a complete Google Business Profile: the right primary category, true hours, service areas set by city or ZIP, and your real business name. Then back it up with a website that has a page for each job and each town you serve."
@@ -42,6 +44,8 @@ Then test it at night. Open the site on your phone, tap the number, and make sur
 ## One service page per job
 
 People search the job. `drain cleaning`, `water heater replacement` and `sewer line repair` are different searches from different homeowners, and a single "Services" page that lists everything gives Google little to rank for any one of them. Build a page for each job you want more of:
+
+![A plumber working with tools on a water pipe running through a wall](/notes/photos/plumbing-seo-1.webp "Photo: Timur Shakerzianov on Unsplash")
 
 | Page | What it should answer |
 |---|---|

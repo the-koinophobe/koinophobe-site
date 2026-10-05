@@ -5,7 +5,9 @@ date: 2026-10-31
 draft: false
 seo_title: "White label technical SEO for agencies"
 excerpt: "White label technical SEO for agencies with home service clients: what I do under your brand, how reporting and accounts work, and what it costs per site."
-cover: /notes/illustrations/white-label-technical-seo-for-agencies.webp
+cover: /notes/photos/white-label-technical-seo-for-agencies-cover.webp
+cover_alt: "Two members of a digital marketing team reviewing client work on laptops in an office"
+cover_credit: "Photo: Ben Spray on Unsplash"
 faq:
   - q: "What does white label technical SEO include?"
     a: "Audits, call and form tracking, site speed, schema, technical fixes and new service or town pages, all delivered under the agency's name."
@@ -38,6 +40,8 @@ Of the 15 sites on [my portfolio wall](/work), 11 went out under an agency's nam
 ## How it works
 
 Your agency's name goes on the reports. I stay invisible to your client unless you want otherwise.
+
+![Colleagues gathered around a laptop in an office meeting room](/notes/photos/white-label-technical-seo-for-agencies-1.webp "Photo: Creatopy on Unsplash")
 
 Your client still owns every account. I get added as a user to their Analytics, Search Console, Tag Manager and Business Profile, the same way your own staff would be. If the client leaves you, nothing is stuck with me.
 

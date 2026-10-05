@@ -38,7 +38,7 @@ export function MobileCta() {
         tabIndex={show ? 0 : -1}
         data-track="cta_book"
         data-from="mobile_bar"
-        className="flex w-full items-center justify-center gap-2.5 rounded-sm bg-ink px-5 py-3.5 font-medium text-bg"
+        className="btn btn-md btn-primary w-full"
       >
         <CalendarCheck size={17} aria-hidden />
         Book a free call

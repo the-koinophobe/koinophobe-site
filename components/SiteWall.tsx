@@ -40,7 +40,7 @@ function Tile({ p, video }: { p: Project; video: boolean }) {
     <div
       onPointerEnter={enter}
       onPointerLeave={leave}
-      className="wall-tile group flex h-full w-[260px] flex-none flex-col overflow-hidden rounded-md border border-line bg-bg sm:w-[340px]"
+      className="wall-tile group flex h-full w-[260px] flex-none flex-col overflow-hidden rounded-2xl border border-line bg-bg sm:w-[340px]"
     >
       <div className="flex items-center gap-2 border-b border-line bg-surface px-3 py-2">
         <span className="flex gap-1.5" aria-hidden>
@@ -48,7 +48,7 @@ function Tile({ p, video }: { p: Project; video: boolean }) {
           <span className="h-2 w-2 rounded-full bg-muted/35" />
           <span className="h-2 w-2 rounded-full bg-muted/25" />
         </span>
-        <span className="ml-1 truncate font-mono text-[10.5px] text-muted">
+        <span className="ml-1 truncate font-mono text-[11.5px] text-muted">
           {p.named ? host : "·".repeat(22)}
         </span>
       </div>
@@ -85,7 +85,7 @@ function Tile({ p, video }: { p: Project; video: boolean }) {
           <span className="block truncate text-[14px] font-medium">
             {p.named ? p.name : p.sector}
           </span>
-          <span className="mt-0.5 block truncate font-mono text-[10.5px] text-muted">
+          <span className="mt-0.5 block truncate font-mono text-[11.5px] text-muted">
             {p.named ? p.sector : p.market}
           </span>
         </span>
@@ -156,7 +156,7 @@ export function SiteWall() {
         ))}
       </div>
 
-      <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.11em] text-muted">
+      <p className="mt-6 font-mono text-[12px] uppercase tracking-[0.11em] text-muted">
         {projects.length} sites &middot; {named} I can put a name to &middot; hover to wake them
       </p>
     </div>

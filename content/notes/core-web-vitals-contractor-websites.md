@@ -5,7 +5,9 @@ date: 2026-10-02
 draft: false
 seo_title: "Core Web Vitals for contractor websites"
 excerpt: "Core Web Vitals for contractor websites in plain terms: the three metrics, Google's good thresholds, where to check them, and what usually slows sites down."
-cover: /notes/illustrations/core-web-vitals-contractor-websites.webp
+cover: /notes/photos/core-web-vitals-contractor-websites-cover.webp
+cover_alt: "A person holding an iPhone and browsing a website on the screen"
+cover_credit: "Photo: Quilia on Unsplash"
 faq:
   - q: "What are good Core Web Vitals scores?"
     a: "Google rates LCP of 2.5 seconds or less, INP of 200 milliseconds or less and CLS of 0.1 or less as good. They are judged on real visits, at the 75th percentile."
@@ -34,6 +36,8 @@ Google judges these at the 75th percentile of real visits. In plain terms, at le
 ## Where to check
 
 **PageSpeed Insights.** Enter a URL and you get two kinds of data. The top section, field data, comes from real Chrome users over the past 28 days. That's what Google uses. Below it is lab data, a single simulated test on a throttled phone, plus the 0 to 100 Performance score. Lab data is useful for finding problems. Field data tells you whether real visitors have them. Many small business sites don't get enough traffic for field data, in which case you'll only see the lab test.
+
+![A laptop screen showing a Google PageSpeed Insights report with a score of 99](/notes/photos/core-web-vitals-contractor-websites-1.webp "Photo: Justin Morgan on Unsplash")
 
 **Search Console.** The Core Web Vitals report groups your URLs into good, needs improvement and poor, separately for mobile and desktop, using the same field data. It also needs enough traffic to show anything. I walk through the rest of Search Console in [Google Search Console for contractors](/notes/google-search-console-for-contractors).
 

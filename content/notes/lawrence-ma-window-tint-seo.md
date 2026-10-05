@@ -4,6 +4,9 @@ slug: lawrence-ma-window-tint-seo
 date: 2026-10-03
 draft: false
 excerpt: "Tint Lordz Auto Spa ranks at position 2 or better for every version of its own name. The generic search sits at 19. Here's the data, and the plan any tint shop in the Merrimack Valley can copy."
+cover: /notes/photos/lawrence-ma-window-tint-seo-cover.webp
+cover_alt: "A technician in a cap applying protective film to a car in a tint shop"
+cover_credit: "Photo: David Glessner on Unsplash"
 faq:
   - q: "Where does Tint Lordz Auto Spa rank for its own name?"
     a: "At position 2 or better for every version of its name, 1.98 on average. The search 'tint lordz auto spa lawrence' sits at 1.9 with an 11.2% click-through rate."
@@ -41,6 +44,8 @@ It's a different job from the brand work. Near-me searches are decided mostly by
 - **A page for each town you pull from.** For a shop in Lawrence that's Methuen, Andover, Haverhill and Lowell. One real page each, with jobs done there. A copy of the same page with the town name swapped doesn't count.
 - **Pages for what people compare.** Ceramic vs carbon film is a question people search before they pick a shop. Answer it on your own site.
 - **Track the bookings.** Calls, forms and booking links should each record an event, so you know which searches turned into cars in the bay.
+
+![A mechanic working on a car's electronics inside an auto repair shop](/notes/photos/lawrence-ma-window-tint-seo-1.webp "Photo: Maxim Hopman on Unsplash")
 
 ## Brand first, category second
 

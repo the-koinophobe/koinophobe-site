@@ -4,6 +4,9 @@ slug: lawrence-ma-free-estimate-page
 date: 2026-10-07
 draft: false
 excerpt: "A free estimate page is where a search turns into a lead, and most of them leak. Here's what I put on every one now, from builds for clients in Lawrence, MA and around the US."
+cover: /notes/photos/lawrence-ma-free-estimate-page-cover.webp
+cover_alt: "A worker in an orange safety vest writing notes on paper outdoors"
+cover_credit: "Photo: Agustín Pimentel on Unsplash"
 faq:
   - q: "What fields should a free estimate form have?"
     a: "Name, phone, email, town, what you need, and an optional photo upload. Every extra field costs you people, and they'll give you the full address after you've called them back."
@@ -34,6 +37,8 @@ List the towns you serve on the page in plain words. If you're in Lawrence, that
 ## Make the phone number tappable
 
 A lot of people land on the estimate page on a phone and decide to call instead. The number should be a real tap-to-call link, near the top, and it should be tracked.
+
+![A close up of a person holding a smartphone in one hand](/notes/photos/lawrence-ma-free-estimate-page-1.webp "Photo: Vladislav Igumnov on Unsplash")
 
 ## Track the submission itself
 

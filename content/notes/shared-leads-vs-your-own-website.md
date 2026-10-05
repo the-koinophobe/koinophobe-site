@@ -5,7 +5,9 @@ date: 2026-08-22
 draft: false
 seo_title: "Shared leads vs SEO for contractors"
 excerpt: "Shared leads vs SEO for contractors: how lead services split one homeowner among several bidders, what your own site brings, and how to compare the two."
-cover: /notes/illustrations/shared-leads-vs-your-own-website.webp
+cover: /notes/photos/shared-leads-vs-your-own-website-cover.webp
+cover_alt: "A worker wearing a safety helmet talking on a cell phone"
+cover_credit: "Photo: Thi Nguyen Duc on Unsplash"
 faq:
   - q: "Are shared leads worth it for contractors?"
     a: "They can fill a thin schedule, especially for a new business. The same homeowner usually goes to several contractors, so you compete on speed and price every time. Judge them by cost per booked job."
@@ -24,6 +26,8 @@ Shared leads can work for some contractors. Below is what you're paying for with
 ## How a shared lead plays out
 
 You're in a race from the second the lead lands. The contractor who calls first usually gets the first real conversation. The one who quotes lowest often gets the job. If you're up on a roof when the notification comes in, you may be calling back after others already have.
+
+![A woman at home talking on her mobile phone and smiling](/notes/photos/shared-leads-vs-your-own-website-1.webp "Photo: Vitaly Gariev on Unsplash")
 
 The homeowner filled in a form on a lead site, so they may not know your company name when you call, and some stop answering after a few calls from numbers they don't recognize. You still paid for the lead.
 

@@ -5,7 +5,9 @@ date: 2026-08-29
 draft: false
 seo_title: "Optimize images for website speed: contractors"
 excerpt: "How to optimize images for website speed on a contractor site: resize, convert to WebP, compress, name and size them properly, and lazy load the right ones."
-cover: /notes/illustrations/image-optimization-contractor-websites.webp
+cover: /notes/photos/image-optimization-contractor-websites-cover.webp
+cover_alt: "A laptop screen showing photo editing software with an image open for adjustment"
+cover_credit: "Photo: Zulfugar Karimov on Unsplash"
 faq:
   - q: "What size should images be on my website?"
     a: "Resize them to the largest width they display at. My own site photos are 1200 pixels wide, and a photo inside a column of text can usually be smaller."
@@ -30,6 +32,8 @@ Speed is one ranking signal among many. A fast page with thin content doesn't au
 ## How I optimize contractor photos
 
 ### 1. Resize to the display size
+
+![A digital camera sitting on a desk in front of an open laptop](/notes/photos/image-optimization-contractor-websites-1.webp "Photo: Feng Sun on Unsplash")
 
 Find out how wide the image displays on the page. A photo shown in a column 800 pixels wide gains nothing from being 4,000 pixels wide; the browser still downloads every pixel. My site photos are 1200 pixels wide. WordPress creates smaller copies of each upload and serves them to smaller screens, so upload a sensibly sized original and let it handle the rest.
 

@@ -17,7 +17,7 @@ export function AboutStrip() {
             sizes="(max-width: 768px) 90vw, 34vw"
             className="object-cover"
           />
-          <span className="absolute bottom-3 left-3 rounded-sm bg-bg/90 px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.12em] text-ink backdrop-blur">
+          <span className="absolute bottom-3 left-3 rounded-sm bg-bg/90 px-2.5 py-1.5 font-mono text-[11.5px] uppercase tracking-[0.12em] text-ink backdrop-blur">
             Michael Edward
           </span>
         </div>

@@ -5,7 +5,9 @@ date: 2026-08-31
 draft: false
 seo_title: "NAP consistency and citations for contractors"
 excerpt: "NAP consistency for contractors: where your name, address and phone number need to match, how mismatches creep in, and how to find and fix them."
-cover: /notes/illustrations/nap-citations-contractors.webp
+cover: /notes/photos/nap-citations-contractors-cover.webp
+cover_alt: "Store opening hours lettered on the glass door of a small business"
+cover_credit: "Photo: Phil Hearing on Unsplash"
 faq:
   - q: "What does NAP stand for in local SEO?"
     a: "Name, address and phone number. NAP consistency means those details match on your website, your Google Business Profile and every other place your business is listed."
@@ -28,6 +30,8 @@ Consistency still matters for a plainer reason. A homeowner who finds your old n
 ## Where your name, address and phone should match
 
 Start with the places customers and Google look most:
+
+![A pair of printed business cards lying on a marble counter](/notes/photos/nap-citations-contractors-1.webp "Photo: Julian Tong on Unsplash")
 
 - your website: header, footer, contact page and schema markup
 - Google Business Profile

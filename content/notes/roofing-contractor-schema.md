@@ -5,7 +5,9 @@ date: 2026-08-26
 draft: false
 seo_title: "Roofing contractor schema: what goes where"
 excerpt: "Roofing contractor schema, page by page: what to mark up on your home page, service pages and articles, what it won't do for you, and how to test it."
-cover: /notes/illustrations/roofing-contractor-schema.webp
+cover: /notes/photos/roofing-contractor-schema-cover.webp
+cover_alt: "Two workers kneeling on a residential roof in bright daylight, working on the roof surface"
+cover_credit: "Photo: Raze Solar on Unsplash"
 faq:
   - q: "Does schema help a roofing website rank higher?"
     a: "Nobody can promise that it will. It helps Google read your business details and services correctly, which supports the rest of the work on the page."
@@ -81,6 +83,8 @@ Don't mark up your own reviews to get star ratings. Google doesn't show review s
 ## How to test it
 
 Run every page through two tools after you publish:
+
+![A person working on a laptop at a white table, reviewing a website](/notes/photos/roofing-contractor-schema-1.webp "Photo: Myriam Jessier on Unsplash")
 
 1. **Rich Results Test** from Google. It shows what Google can read from the page and flags errors in the types it uses for search features.
 2. **Schema Markup Validator** at validator.schema.org. It checks everything against the schema.org vocabulary, including types like Service that the Rich Results Test doesn't report on.

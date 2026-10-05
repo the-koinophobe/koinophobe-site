@@ -32,13 +32,13 @@ function Chart({ c }: { c: CaseStudy }) {
 
 export function CaseStudyBlock({ c }: { c: CaseStudy }) {
   return (
-    <article id={c.slug} className="scroll-mt-24 border-b border-line py-10 sm:py-14">
+    <article id={c.slug} className="scroll-mt-24 border-b border-line py-10 last:border-0 sm:py-14">
       <Reveal>
       <div className="flex flex-wrap items-center gap-3.5">
         {[c.client, c.place].map((t) => (
           <span
             key={t}
-            className="rounded-sm border border-line px-2 py-0.5 font-mono text-[10.5px] uppercase tracking-[0.12em] text-muted"
+            className="rounded-full border border-line px-2.5 py-1 text-[12.5px] text-muted"
           >
             {t}
           </span>
@@ -69,7 +69,7 @@ export function CaseStudyBlock({ c }: { c: CaseStudy }) {
             <span className="tnum text-xl font-medium tracking-tight">{m.value}</span>
             {m.delta ? (
               <span
-                className={`ml-2 whitespace-nowrap font-mono text-[11px] ${
+                className={`ml-2 whitespace-nowrap font-mono text-[12px] ${
                   m.tone === "up" ? "text-brand" : m.tone === "down" ? "text-accent" : "text-muted"
                 }`}
               >
@@ -89,12 +89,12 @@ export function CaseStudyBlock({ c }: { c: CaseStudy }) {
         <div className="flex flex-col">
           <figure>
             <Chart c={c} />
-            <figcaption className="mt-3 font-mono text-[11px] leading-relaxed text-muted">
+            <figcaption className="mt-3 font-mono text-[12px] leading-relaxed text-muted">
               {c.caption}
             </figcaption>
           </figure>
           <div className="mt-7 border-t border-line pt-4">
-            <span className="mb-3 flex items-center gap-2.5 font-mono text-[11px] uppercase tracking-[0.14em] text-brand">
+            <span className="mb-3 flex items-center gap-2.5 font-mono text-[12px] uppercase tracking-[0.14em] text-brand">
               <ArrowUpRight size={17} aria-hidden />
               What&rsquo;s next
             </span>

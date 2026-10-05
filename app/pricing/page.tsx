@@ -2,13 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Ban, CalendarClock, Check, KeyRound, Landmark, Video } from "lucide-react";
 import { Availability } from "@/components/Availability";
-import { BookCta, BookNote, CtaBand, EmailCta } from "@/components/Cta";
+import { RelatedNotes } from "@/components/RelatedNotes";
+import { getNote } from "@/lib/notes";
+import { BookCta, BookNote, EmailCta } from "@/components/Cta";
 import { MobileCta } from "@/components/MobileCta";
 import { Reveal } from "@/components/Reveal";
 import { Stagger } from "@/components/Stagger";
 import { agency, monthly, oneTime, type Plan } from "@/lib/pricing";
 import { site } from "@/lib/site";
 import { FaqSchema } from "@/components/Faq";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -66,22 +70,15 @@ const FAQ = [
 function PlanCard({ p }: { p: Plan }) {
   return (
     <div
-      className={`flex h-full flex-col gap-5 rounded-md border bg-surface p-6 sm:p-7 ${
-        p.pick ? "border-ink shadow-[inset_0_0_0_1px_rgb(var(--ink))]" : "border-line"
-      }`}
+      id={p.key}
+      className={`card flex h-full scroll-mt-28 flex-col gap-5 p-6 sm:p-7 ${p.pick ? "border-ink/60 shadow-float" : ""}`}
     >
       <div className="flex min-h-[24px] items-center justify-between gap-3">
-        <span className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-muted">
-          {p.kicker}
-        </span>
-        {p.pick && (
-          <span className="rounded-full bg-ink px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.1em] text-bg">
-            Most clients
-          </span>
-        )}
+        <span className="text-[14px] font-medium text-muted">{p.kicker}</span>
+        {p.pick && <span className="eyebrow !text-[12px]">Most clients</span>}
       </div>
       <div>
-        <h3 className="font-display text-[1.5rem] leading-tight tracking-tight">{p.name}</h3>
+        <h3 className="t-h3 !text-[1.5rem]">{p.name}</h3>
         <p className="mt-3 flex items-baseline gap-2">
           {p.from && <span className="text-[15px] text-muted">from</span>}
           <span className="tnum font-display text-[2.4rem] leading-none tracking-tight">
@@ -155,19 +152,19 @@ export default function PricingPage() {
       />
       <FaqSchema items={FAQ} />
 
-      <section className="pt-28 sm:pt-36">
-        <div className="container-pad">
-          <Reveal>
+      <section className="hero-bg">
+        <div className="container-pad pb-14 pt-14 sm:pt-20">
+          <Reveal className="max-w-3xl">
             <p className="eyebrow">Pricing</p>
-            <h1 className="mt-4 max-w-[19ch] font-display text-[clamp(2.2rem,5.4vw,4.05rem)] leading-[1.04] tracking-tight text-balance">
-              For owners who want the price before the call.
+            <h1 className="t-h1 mt-5 max-w-[20ch]">
+              SEO pricing for home service businesses, before the call
             </h1>
-            <p className="mt-6 max-w-[58ch] text-[17.5px] text-muted">
+            <p className="t-lead mt-6 max-w-[58ch]">
               Everything here is in US dollars. You&rsquo;re invoiced in USD and pay by ACH bank
               transfer. If you&rsquo;re not sure which one fits, the intro call is free and
               I&rsquo;ll tell you.
             </p>
-            <div className="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <div className="mt-9 flex flex-wrap items-center gap-3">
               <BookCta from="pricing_hero" />
               <EmailCta from="pricing_hero" />
             </div>
@@ -176,8 +173,9 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="container-pad pt-20">
-        <h2 className="eyebrow-flat">Start here</h2>
+      <section className="container-pad pt-6">
+        <h2 className="t-h3">Start here: one-time</h2>
+        <p className="mt-1.5 text-[15px] text-muted">A free call, an audit, or a one-off fix.</p>
         <Stagger className="mt-6 grid gap-4 md:grid-cols-3">
           {oneTime.map((p) => (
             <PlanCard key={p.key} p={p} />
@@ -185,12 +183,13 @@ export default function PricingPage() {
         </Stagger>
       </section>
 
-      <section className="container-pad pt-16">
+      <section id="monthly" className="container-pad scroll-mt-28 pt-20">
         <div className="flex flex-wrap items-baseline justify-between gap-3">
-          <h2 className="eyebrow-flat">Monthly</h2>
-          <p className="font-mono text-[11px] text-muted">
-            3-month minimum, then month to month
-          </p>
+          <div>
+            <h2 className="t-h3">Monthly SEO plans</h2>
+            <p className="mt-1.5 text-[15px] text-muted">Someone on it every month, with a report you can read.</p>
+          </div>
+          <p className="text-[14px] text-muted">3-month minimum, then month to month</p>
         </div>
         <Stagger className="mt-6 grid gap-4 md:grid-cols-3">
           {monthly.map((p) => (
@@ -199,13 +198,14 @@ export default function PricingPage() {
         </Stagger>
       </section>
 
-      <section className="container-pad pt-16">
-        <h2 className="eyebrow-flat">For agencies</h2>
-        <div className="mt-6 border-t border-line">
+      <section id="agencies" className="container-pad scroll-mt-28 pt-20">
+        <h2 className="t-h3">White-label for agencies</h2>
+        <p className="mt-1.5 text-[15px] text-muted">Technical SEO under your brand. You keep the client relationship.</p>
+        <div className="card mt-6 px-6">
           {agency.map((a) => (
             <div
               key={a.name}
-              className="grid gap-2 border-b border-line py-5 sm:grid-cols-[14ch_22ch_1fr] sm:gap-6"
+              className="grid gap-2 border-b border-line py-5 last:border-0 sm:grid-cols-[14ch_22ch_1fr] sm:gap-6"
             >
               <span className="font-medium">{a.name}</span>
               <span className="tnum font-display text-[1.2rem] leading-snug tracking-tight">
@@ -215,22 +215,22 @@ export default function PricingPage() {
             </div>
           ))}
         </div>
-        <p className="mt-4 text-[15px] text-muted">
-          How white-label works day to day is on the{" "}
-          <Link href="/about" className="text-ink underline underline-offset-4">
-            about page
-          </Link>
-          .
-        </p>
+        {getNote("white-label-technical-seo-for-agencies") ? (
+          <p className="mt-4 text-[15px] text-muted">
+            How white-label works day to day:{" "}
+            <Link href="/notes/white-label-technical-seo-for-agencies" className="text-ink underline underline-offset-4">
+              white-label technical SEO for agencies
+            </Link>
+            .
+          </p>
+        ) : null}
       </section>
 
       <section className="container-pad pt-24">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           <Reveal>
             <p className="eyebrow">The terms</p>
-            <h2 className="mt-4 max-w-[18ch] font-display text-[clamp(1.9rem,4vw,3rem)] leading-[1.05] tracking-tight text-balance">
-              What you can count on.
-            </h2>
+            <h2 className="t-h2 mt-5 max-w-[18ch]">What you can count on</h2>
             <div className="mt-8 border-t border-line">
               {TERMS.map((x) => (
                 <div
@@ -247,7 +247,7 @@ export default function PricingPage() {
                 </div>
               ))}
             </div>
-            <div className="mt-10 rounded-md border border-line bg-surface p-6">
+            <div className="card mt-10 bg-surface p-6">
               <span className="text-brand">
                 <Video size={22} aria-hidden />
               </span>
@@ -260,6 +260,7 @@ export default function PricingPage() {
                 label="Ask for a video review"
                 href={`mailto:${site.email}?subject=${encodeURIComponent("Video review")}`}
                 from="pricing_video"
+                size="md"
                 className="mt-5"
               />
             </div>
@@ -287,9 +288,11 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="pt-24">
-        <CtaBand line="Not sure which one fits? That's what the free call is for." from="pricing_end" />
-      </section>
+      <RelatedNotes
+        className="mt-24"
+        title="Before you choose a plan"
+        slugs={["how-long-does-seo-take", "hiring-an-seo-questions-to-ask", "roofing-seo-cost", "monthly-seo-report-contractors", "seo-vs-google-ads-contractors"]}
+      />
 
       <Availability />
       <MobileCta />

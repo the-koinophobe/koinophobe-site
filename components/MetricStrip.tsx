@@ -34,7 +34,7 @@ export function MetricStrip({ cells }: { cells: StripCell[] }) {
             {c.value}
           </span>
           {c.note ? (
-            <span className="mt-2 block font-mono text-[11px] leading-relaxed text-muted">{c.note}</span>
+            <span className="mt-2 block font-mono text-[12px] leading-relaxed text-muted">{c.note}</span>
           ) : null}
         </div>
       ))}

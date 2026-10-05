@@ -5,7 +5,9 @@ date: 2026-10-06
 draft: false
 seo_title: "GA4 reports for contractors: 5 questions"
 excerpt: "The GA4 reports a small business or contractor needs: five plain questions, the report that answers each one, and how to mark calls and forms as key events."
-cover: /notes/illustrations/ga4-reports-for-contractors.webp
+cover: /notes/photos/ga4-reports-for-contractors-cover.webp
+cover_alt: "A person using a MacBook with the Google Analytics 4 interface on screen"
+cover_credit: "Photo: Myriam Jessier on Unsplash"
 faq:
   - q: "How do I mark a key event in GA4?"
     a: "Go to Admin, then Events, find the event (for example a phone tap or form submit) and turn on the key event toggle. GA4 starts counting it as a key event from that point forward."
@@ -34,6 +36,8 @@ One warning. A form event fires when someone clicks submit in the browser. It ca
 ## 1. Where are visitors coming from?
 
 **Reports > Acquisition > Traffic acquisition.**
+
+![A computer screen showing an analytics dashboard with traffic charts for a small business](/notes/photos/ga4-reports-for-contractors-1.webp "Photo: 1981 Digital on Unsplash")
 
 Each row is a channel: Organic Search, Direct, Paid Search, Referral, Organic Social and so on. Look at sessions, then look at the key events column for each channel. If Organic Search brings plenty of visits and very few key events, you have a page or tracking problem to find. If Paid Search brings most of your key events, you know what your ad money is buying.
 

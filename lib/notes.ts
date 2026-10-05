@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { marked } from "marked";
+import { TOPIC_BY_SLUG, type TopicKey } from "./topics";
 
 export type Note = {
   slug: string;
@@ -15,6 +16,16 @@ export type Note = {
   cover: string;
   /** Optional questions, shown under the note and sent as FAQPage schema. */
   faq: { q: string; a: string }[];
+  /** Small version of the cover for cards and menus, when one exists. */
+  coverSm: string;
+  /** Alt text and photo credit for the cover. */
+  coverAlt: string;
+  coverCredit: string;
+  topic: TopicKey;
+  /** Minutes to read, at 230 words a minute. */
+  minutes: number;
+  /** The note's H2s, for the table of contents. */
+  toc: { id: string; text: string }[];
   /** Rendered at build time. Server only, so no markdown parser reaches the browser. */
   html: string;
 };
@@ -133,12 +144,17 @@ function enrich(html: string): string {
       const resolved = resolveImage(src);
       const size = imageSize(resolved);
       const dims = size ? ` width="${size.w}" height="${size.h}"` : "";
+      const title = /title="([^"]*)"/.exec(attrs)?.[1] ?? "";
       const img = `<img src="${resolved}" alt="${alt}"${dims} loading="lazy" decoding="async">`;
+      // A title means a photograph: the caption is its credit, the alt text
+      // stays for screen readers. Without one it's a chart or plate, and the
+      // alt text doubles as the caption.
+      if (title) return `<figure class="is-photo">${img}<figcaption>${title}</figcaption></figure>`;
       return alt
         ? `<figure>${img}<figcaption>${alt}</figcaption></figure>`
         : `<figure>${img}</figure>`;
     })
-    .replace(/<p>(<figure>[\s\S]*?<\/figure>)<\/p>/g, "$1")
+    .replace(/<p>(<figure[\s\S]*?<\/figure>)<\/p>/g, "$1")
     .replace(/<table>/g, '<div class="table-wrap"><table>')
     .replace(/<\/table>/g, "</table></div>");
 }
@@ -158,6 +174,42 @@ function isoDate(value: unknown): string {
   return match ? match[0] : "";
 }
 
+
+/** URL-safe id for a heading, shared by the TOC and the rendered H2s. */
+function slugify(s: string) {
+  return s
+    .toLowerCase()
+    .replace(/<[^>]+>/g, "")
+    .replace(/&[a-z#0-9]+;/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 64);
+}
+
+function tocOf(md: string) {
+  return md
+    .split("\n")
+    .filter((l) => /^## /.test(l))
+    .map((l) => {
+      const text = l.replace(/^## /, "").replace(/[`*_]/g, "").trim();
+      return { id: slugify(text), text };
+    });
+}
+
+function headingIds(html: string) {
+  return html.replace(/<h2>([\s\S]*?)<\/h2>/g, (_, inner: string) => {
+    const text = inner.replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").replace(/&#39;/g, "'").replace(/&quot;/g, '"');
+    return `<h2 id="${slugify(text)}">${inner}</h2>`;
+  });
+}
+
+/** /notes/photos/x-cover.webp has a sibling x-cover-sm.webp for cards. */
+function smallCover(src: string) {
+  if (!src) return "";
+  const sm = src.replace(/\.webp$/, "-sm.webp");
+  return sm !== src && fs.existsSync(path.join(PUBLIC, sm.replace(/^\//, ""))) ? sm : src;
+}
+
 /**
  * Notes are markdown files in content/notes, written from the CMS at /admin.
  * They are read once per server start, since the files are baked at build.
@@ -174,6 +226,12 @@ const all: Note[] = (fs.existsSync(DIR) ? fs.readdirSync(DIR) : [])
       draft: data.draft === true,
       seoTitle: String(data.seo_title ?? ""),
       cover: data.cover ? resolveImage(String(data.cover)) : "",
+      coverSm: smallCover(data.cover ? String(data.cover) : ""),
+      coverAlt: String(data.cover_alt ?? data.title ?? ""),
+      coverCredit: String(data.cover_credit ?? ""),
+      topic: (data.topic as TopicKey) || TOPIC_BY_SLUG[file.replace(/\.md$/, "")] || "strategy",
+      minutes: Math.max(2, Math.round(content.split(/\s+/).filter(Boolean).length / 230)),
+      toc: tocOf(content),
       faq: Array.isArray(data.faq)
         ? data.faq
             .map((f: { q?: unknown; a?: unknown }) => ({
@@ -182,7 +240,7 @@ const all: Note[] = (fs.existsSync(DIR) ? fs.readdirSync(DIR) : [])
             }))
             .filter((f: { q: string; a: string }) => f.q && f.a)
         : [],
-      html: enrich(marked.parse(content, { async: false }) as string),
+      html: headingIds(enrich(marked.parse(content, { async: false }) as string)),
     };
   });
 
@@ -205,4 +263,27 @@ export function publishedNotes(): Note[] {
 
 export function getNote(slug: string): Note | undefined {
   return publishedNotes().find((n) => n.slug === slug);
+}
+
+/** Up to `n` notes worth reading next: same topic first, then the newest others. */
+export function relatedNotes(note: Note, n = 3): Note[] {
+  const pool = publishedNotes().filter((x) => x.slug !== note.slug);
+  const same = pool.filter((x) => x.topic === note.topic);
+  const rest = pool.filter((x) => x.topic !== note.topic);
+  return [...same, ...rest].slice(0, n);
+}
+
+/** The published notes either side of this one, by date. */
+export function adjacentNotes(note: Note): { newer?: Note; older?: Note } {
+  const list = publishedNotes();
+  const i = list.findIndex((x) => x.slug === note.slug);
+  return { newer: i > 0 ? list[i - 1] : undefined, older: i >= 0 ? list[i + 1] : undefined };
+}
+
+export const NOTES_PER_PAGE = 12;
+
+export function notesPage(page: number) {
+  const all = publishedNotes();
+  const pages = Math.max(1, Math.ceil(all.length / NOTES_PER_PAGE));
+  return { items: all.slice((page - 1) * NOTES_PER_PAGE, page * NOTES_PER_PAGE), pages, total: all.length };
 }

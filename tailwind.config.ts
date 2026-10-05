@@ -18,6 +18,10 @@ const config: Config = {
         brand: "rgb(var(--brand) / <alpha-value>)",
         "brand-soft": "rgb(var(--brand-soft) / <alpha-value>)",
         accent: "rgb(var(--accent) / <alpha-value>)",
+        forest: "rgb(var(--forest) / <alpha-value>)",
+        "on-forest": "rgb(var(--on-forest) / <alpha-value>)",
+        cream: "rgb(var(--cream) / <alpha-value>)",
+        band: "rgb(var(--band) / <alpha-value>)",
       },
       fontFamily: {
         display: ["var(--font-display)", "Arial Black", "system-ui", "sans-serif"],
@@ -26,9 +30,9 @@ const config: Config = {
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       borderRadius: {
-        xl: "1rem",
-        "2xl": "1.5rem",
-        "3xl": "2rem",
+        xl: "0.75rem",
+        "2xl": "1rem",
+        "3xl": "1.5rem",
       },
       maxWidth: {
         content: "80rem",

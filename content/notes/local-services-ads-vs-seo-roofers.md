@@ -5,7 +5,9 @@ date: 2026-10-11
 draft: false
 seo_title: "Local Services Ads vs SEO for roofers"
 excerpt: "Local Services Ads vs SEO for roofers: where each shows on Google, how you pay, when LSA makes sense, why SEO compounds, and how to track both side by side."
-cover: /notes/illustrations/local-services-ads-vs-seo-roofers.webp
+cover: /notes/photos/local-services-ads-vs-seo-roofers-cover.webp
+cover_alt: "A woman holding a smartphone outdoors in daylight, looking at the screen"
+cover_credit: "Photo: Paul Hanaoka on Unsplash"
 faq:
   - q: "What are Google Local Services Ads for roofers?"
     a: "They are ads that appear at the top of some local searches. You pay per lead instead of per click, and you go through Google's screening (license, insurance and background checks, depending on the category) to get a badge."
@@ -32,6 +34,8 @@ Regular text ads can also appear in the mix. The order and number of each layer 
 ## When LSA makes sense
 
 LSA fits a roofer who needs calls this month and has budget for it. A new business with no reviews and no rankings yet, or a roofer entering a new town, can get in front of searchers sooner than SEO would allow, once the screening is done.
+
+![A roofer on a residential roof working with a safety rope](/notes/photos/local-services-ads-vs-seo-roofers-1.webp "Photo: Raze Solar on Unsplash")
 
 I won't quote an LSA cost per lead. It varies by trade, market and season, and the only number that matters is the one in your own account. Some leads won't be real jobs (wrong service, wrong area, spam), so check the lead list every week and mark which ones turned into work.
 

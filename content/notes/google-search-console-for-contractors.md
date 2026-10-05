@@ -5,7 +5,9 @@ date: 2026-10-01
 draft: false
 seo_title: "Google Search Console for contractors: a guide"
 excerpt: "Google Search Console for contractors: how to set it up, the five reports worth checking, and what steady growth looks like, using a clinic's monthly clicks."
-cover: /notes/illustrations/google-search-console-for-contractors.webp
+cover: /notes/photos/google-search-console-for-contractors-cover.webp
+cover_alt: "A computer screen showing Google Search Console performance statistics and charts for a website"
+cover_credit: "Photo: Justin Morgan on Unsplash"
 faq:
   - q: "Is Google Search Console free to use?"
     a: "Yes. It's a free Google tool. You need a Google account and access to your domain's DNS settings to verify a domain property."
@@ -36,6 +38,8 @@ Last step: add whoever handles your SEO under Settings > Users and permissions. 
 ## The reports that matter
 
 ### Performance
+
+![A computer screen showing a site overview report with a line graph of visits](/notes/photos/google-search-console-for-contractors-1.webp "Photo: Justin Morgan on Unsplash")
 
 This is the one you'll open most. It shows clicks, impressions, average click-through rate and average position for any date range. Under the chart are tabs. **Queries** lists the searches you showed up for. **Pages** shows which of your pages earned those impressions and clicks. **Devices** splits it between mobile, desktop and tablet.
 

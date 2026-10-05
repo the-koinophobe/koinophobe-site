@@ -16,9 +16,9 @@ export function ThemeToggle() {
       type="button"
       aria-label="Switch theme"
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="ml-2 inline-flex items-center gap-2 rounded-sm border border-line px-2.5 py-1.5 text-muted transition-colors duration-100 hover:border-muted hover:text-ink"
+      className="hx-icon-btn"
     >
-      <SunMoon size={14} aria-hidden />
+      <SunMoon size={16} aria-hidden />
     </button>
   );
 }

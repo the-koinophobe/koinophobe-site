@@ -5,7 +5,9 @@ date: 2026-09-08
 draft: false
 seo_title: "Hurricane shutter SEO: the next county"
 excerpt: "Hurricane shutter SEO data from one Florida company: 38% of its visibility came from outside its home county. What that means for town pages and timing."
-cover: /notes/illustrations/hurricane-shutter-seo-next-county.webp
+cover: /notes/photos/hurricane-shutter-seo-next-county-cover.webp
+cover_alt: "Dark storm clouds rolling in over a coastal town and the water at Port Canaveral, Florida"
+cover_credit: "Photo: Frederick Wallace on Unsplash"
 faq:
   - q: "Should a hurricane shutter company target nearby counties?"
     a: "If you install there, yes. On one shutter site I work on, 38% of search visibility came from outside the home county. Build a real page for each town you serve over the line."
@@ -51,6 +53,8 @@ For the shutter site, that means rewriting titles so the product and town appear
 ## Timing content to the season
 
 The Atlantic hurricane season runs June 1 to November 30, with the peak around September 10. One seasonal article pulling 37 of 51 clicks suggests how closely this trade's search traffic follows the storm calendar. That article was also the site's biggest source of clicks in the window, so it should link clearly to the product pages and the town pages, with a short line telling the reader what to do next.
+
+![A beach house standing under a heavy gray sky as a storm approaches](/notes/photos/hurricane-shutter-seo-next-county-1.webp "Photo: Vince Rankin on Unsplash")
 
 New pages take time to be indexed and settle in rankings. Anything meant for this season should be published in spring. Refresh the seasonal article before June each year with the latest storm history, so it's current when searches climb.
 

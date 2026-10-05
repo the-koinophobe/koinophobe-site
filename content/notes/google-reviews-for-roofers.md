@@ -5,7 +5,9 @@ date: 2026-09-17
 draft: false
 seo_title: "Google reviews for roofers: get more, legally"
 excerpt: "Reviews decide a lot of who wins the map. How roofers can ask for Google reviews at the right moment, and what Google and the FTC now prohibit."
-cover: /notes/illustrations/google-reviews-for-roofers.webp
+cover: /notes/photos/google-reviews-for-roofers-cover.webp
+cover_alt: "Two people shaking hands in front of a plain white wall"
+cover_credit: "Photo: Chris Liverani on Unsplash"
 faq:
   - q: "Can I offer a discount in exchange for a Google review?"
     a: "No. Google prohibits offering incentives such as payment, discounts, or free goods or services in exchange for posting any review. Since you want reviews on Google, the simple rule is to offer nothing."
@@ -32,6 +34,8 @@ The FTC rule allows an incentive for any review, positive or not. Google doesn't
 ## Ask at the moment the job looks best
 
 For a roofer, that's the final walkthrough. The new roof is on, the yard is clean, the homeowner is standing in the driveway looking at it. Ask then, in person, and send the link by text before you leave.
+
+![A white house with dark red trim and a clean gray shingle roof](/notes/photos/google-reviews-for-roofers-1.webp "Photo: Naturalist Boat on Unsplash")
 
 Get your link from the Business Profile: open the profile, choose **Ask for reviews**, and copy the short link. Save it as a text shortcut on every crew lead's phone.
 

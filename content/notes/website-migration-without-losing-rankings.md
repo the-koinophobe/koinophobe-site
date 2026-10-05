@@ -5,7 +5,9 @@ date: 2026-08-19
 draft: false
 seo_title: "Website redesign without losing SEO"
 excerpt: "A website redesign without losing SEO comes down to redirects, keeping the pages that rank, and watching Search Console after launch. Here is my checklist."
-cover: /notes/illustrations/website-migration-without-losing-rankings.webp
+cover: /notes/photos/website-migration-without-losing-rankings-cover.webp
+cover_alt: "Hand drawn wireframe sketches of website page layouts spread across a table"
+cover_credit: "Photo: Hal Gatewood on Unsplash"
 faq:
   - q: "Will a website redesign hurt my Google rankings?"
     a: "It can if URLs change without redirects, ranking pages lose their content, or the new site launches blocked from search. Handled carefully, the risk is much smaller."
@@ -24,6 +26,8 @@ Here's the checklist I work through. Most of it happens before the new site goes
 ## Before launch
 
 **1. List every URL on the current site.** Crawl it with a tool like Screaming Frog (the free version handles up to 500 URLs) and save the list. Add every URL from your XML sitemap. A crawler only finds pages that something links to, so orphaned pages can slip through.
+
+![A designer at a desk drawing a website wireframe next to a computer and tablet](/notes/photos/website-migration-without-losing-rankings-1.webp "Photo: Mahmudul Hasan on Unsplash")
 
 **2. Export what ranks.** In Search Console, open the Performance report, set the date range to the last 12 months, and export the Pages tab. Sort by clicks, then by impressions. These are the pages you can least afford to lose. Then open the Links report and note your top linked pages, since links from other sites point at specific URLs.
 

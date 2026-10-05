@@ -5,7 +5,9 @@ date: 2026-09-24
 draft: false
 seo_title: "Pool deck repair SEO: rank before pool season"
 excerpt: "How pool deck repair and resurfacing companies can rank on Google: a page for each service, before-and-after proof, the right map category and timing."
-cover: /notes/illustrations/pool-deck-repair-seo.webp
+cover: /notes/photos/pool-deck-repair-seo-cover.webp
+cover_alt: "A backyard swimming pool with a paved deck and a pergola covered patio"
+cover_credit: "Photo: Leo_Visions on Unsplash"
 faq:
   - q: "What pages should a pool deck repair website have?"
     a: "One page per service: pool deck resurfacing, crack repair, cool deck or knockdown finishes, paver and travertine installation, sealing and cleaning, and coatings for concrete decks. A page that tries to cover all six ranks for none of them."
@@ -24,6 +26,8 @@ I work on a pool deck repair site in Florida. Here's how I'd set one up from scr
 ## One page per service
 
 People search for the specific job, so each job needs its own page:
+
+![Close view of concrete deck pavers along the edge of a swimming pool](/notes/photos/pool-deck-repair-seo-1.webp "Photo: Ran Berkovich on Unsplash")
 
 - pool deck resurfacing
 - crack repair

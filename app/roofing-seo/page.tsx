@@ -3,16 +3,20 @@ import Link from "next/link";
 import { Building2, CloudLightning, FileCode2, Gauge, MapPin, PhoneCall } from "lucide-react";
 import { Availability } from "@/components/Availability";
 import { CaseStudyBlock } from "@/components/CaseStudyBlock";
-import { BookCta, BookNote, CtaBand, TextCta } from "@/components/Cta";
+import Image from "next/image";
+import { BookCta, BookNote, PageCta } from "@/components/Cta";
+import { RelatedNotes } from "@/components/RelatedNotes";
 import { MobileCta } from "@/components/MobileCta";
 import { Reveal } from "@/components/Reveal";
-import { Stagger } from "@/components/Stagger";
 import { cases } from "@/lib/gsc";
 import { projects } from "@/lib/content";
 import { Faq, type FaqItem } from "@/components/Faq";
 
+// Related notes appear on their publish date without a deploy.
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
-  title: "SEO for roofing companies",
+  title: "Roofing SEO for contractors: more calls, no shared leads",
   description:
     "SEO for roofing contractors in the US: city service pages, storm and insurance content, Google Business Profile and call tracking. One Florida roofer went from position 77 to 12.9 for its main city term.",
   alternates: { canonical: "/roofing-seo" },
@@ -76,71 +80,88 @@ const ROOF_FAQ: FaqItem[] = [
 export default function RoofingPage() {
   return (
     <>
-      <section className="pt-28 sm:pt-36">
-        <div className="container-pad">
+      <section className="hero-bg">
+        <div className="container-pad grid items-center gap-12 pb-16 pt-14 sm:pt-20 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
           <Reveal>
             <p className="eyebrow">SEO for roofing companies</p>
-            <h1 className="mt-4 max-w-[19ch] font-display text-[clamp(2.2rem,5.4vw,4.05rem)] leading-[1.04] tracking-tight text-balance">
-              For roofing companies tired of paying for shared leads.
-            </h1>
-            <p className="mt-6 max-w-[58ch] text-[17.5px] text-muted">
-              A lead from a lead site gets sold to three other contractors. A homeowner who finds
-              you on Google calls you. I&rsquo;ve done the SEO on {roofSites} roofing sites in
-              Brevard County, Florida. One of them is below with its Search Console open.
+            <h1 className="t-h1 mt-5 max-w-[17ch]">Roofing SEO for contractors tired of paying for shared leads</h1>
+            <p className="t-lead mt-6 max-w-[58ch]">
+              A lead from a lead site gets sold to three other contractors. A homeowner who finds you on Google
+              calls you. I&rsquo;ve done the SEO on {roofSites} roofing sites in Brevard County, Florida. One of
+              them is below with its Search Console open.
             </p>
-            <div className="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <div className="mt-9 flex flex-wrap items-center gap-3">
               <BookCta from="roofing_hero" />
-              <TextCta href="/pricing" label="See pricing" from="roofing_hero" />
+              <PageCta href="/pricing" label="See pricing" from="roofing_hero" />
             </div>
             <BookNote className="mt-4" />
           </Reveal>
-        </div>
-      </section>
-
-      <section className="container-pad pt-20">
-        <p className="eyebrow">One roofer, one year</p>
-        <div className="mt-8 border-t border-line">
-          <CaseStudyBlock c={roofing} />
-        </div>
-      </section>
-
-      <section className="container-pad pt-24">
-        <Reveal>
-          <p className="eyebrow">What I do for roofers</p>
-          <h2 className="mt-4 max-w-[22ch] font-display text-[clamp(1.9rem,4vw,3rem)] leading-[1.05] tracking-tight text-balance">
-            The same six things on every roofing site.
-          </h2>
-        </Reveal>
-        <Stagger className="mt-11 grid gap-px bg-line md:grid-cols-2">
-          {WORK.map((w, i) => (
-            <div key={w.t} className={`bg-bg py-7 md:pr-8 ${i % 2 === 1 ? "md:pl-8" : ""}`}>
-              <span className="block text-brand">{w.icon}</span>
-              <h3 className="mt-3.5 font-display text-[1.3rem] leading-snug tracking-tight">
-                {w.t}
-              </h3>
-              <p className="mt-2 max-w-[48ch] text-[15.5px] text-muted">{w.b}</p>
+          <div className="relative mx-auto w-full max-w-[560px] lg:mx-0">
+            <div className="hero-photo aspect-[4/3]">
+              <Image
+                src="/site/roofing-hero.webp"
+                alt="Two roofers in safety harnesses working on an asphalt shingle roof"
+                fill
+                priority
+                sizes="(min-width: 1024px) 560px, 92vw"
+                className="object-cover"
+              />
             </div>
-          ))}
-        </Stagger>
-        <p className="mt-10 max-w-[60ch] text-[16.5px] text-muted">
-          The{" "}
-          <Link href="/pricing" className="text-ink underline underline-offset-4">
-            Growth plan
-          </Link>{" "}
-          at $1,500 a month covers two new town or service pages a month plus the profile work. If
-          your site needs fixing first, the Setup Sprint is a one-time $1,800.
-        </p>
+            <div className="float-card float-in bottom-[-6%] left-[-4%] w-[250px] p-4 sm:left-[-8%]" style={{ animationDelay: "0.4s" }}>
+              <p className="font-mono text-[12px] text-muted">roofing melbourne fl</p>
+              <p className="mt-2 font-display text-[1.65rem] leading-none tracking-tight">77 &rarr; 12.9</p>
+              <p className="mt-1.5 text-[12.5px] leading-snug text-muted">Average position, year on year</p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <Faq items={ROOF_FAQ} title="Roofing SEO questions" className="pt-24" />
-
-      <section className="pt-24">
-        <CtaBand
-          line="Want to see where your roofing site stands?"
-          from="roofing_end"
-          secondary={{ href: "/work", label: "See all the work" }}
-        />
+      <section className="section">
+        <div className="container-pad">
+          <Reveal className="max-w-3xl">
+            <p className="eyebrow">What I do for roofers</p>
+            <h2 className="t-h2 mt-5">The same six things on every roofing site</h2>
+          </Reveal>
+          <div data-anim="cards" className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {WORK.map((w) => (
+              <div key={w.t} className="card p-7">
+                <span className="icon-tile">{w.icon}</span>
+                <h3 className="t-h3 mt-5">{w.t}</h3>
+                <p className="mt-2.5 text-[15px] leading-relaxed text-muted">{w.b}</p>
+              </div>
+            ))}
+          </div>
+          <div className="card mt-8 flex flex-col gap-5 bg-cream p-7 sm:p-8 md:flex-row md:items-center md:justify-between">
+            <p className="max-w-[60ch] text-[16.5px]">
+              The <Link href="/pricing#growth" className="font-medium underline underline-offset-4">Growth plan</Link> at
+              $1,500 a month covers two new town or service pages a month plus the profile work. If your site needs
+              fixing first, the <Link href="/pricing#sprint" className="font-medium underline underline-offset-4">Setup Sprint</Link> is
+              a one-time $1,800.
+            </p>
+            <PageCta href="/pricing" label="Compare plans" from="roofing_plans" size="md" />
+          </div>
+        </div>
       </section>
+
+      <section className="section section-tint">
+        <div className="container-pad">
+          <Reveal className="max-w-3xl">
+            <p className="eyebrow">One roofer, one year</p>
+            <h2 className="t-h2 mt-5">What the work looked like in Search Console</h2>
+          </Reveal>
+          <div className="card mt-10 px-5 sm:px-8">
+            <CaseStudyBlock c={roofing} />
+          </div>
+        </div>
+      </section>
+
+      <Faq items={ROOF_FAQ} title="Roofing SEO questions" className="section" />
+
+      <RelatedNotes
+        title="Roofing SEO notes"
+        more={{ href: "/notes/topic/roofing", label: "All roofing notes" }}
+        slugs={["roofing-service-area-pages", "storm-damage-roofing-pages", "google-business-profile-for-roofers", "roofing-keywords", "roof-replacement-service-page", "roofing-seo-cost", "google-reviews-for-roofers"]}
+      />
 
       <Availability />
       <MobileCta />

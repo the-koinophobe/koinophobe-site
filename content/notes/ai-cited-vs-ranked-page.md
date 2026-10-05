@@ -4,6 +4,9 @@ slug: ai-cited-vs-ranked-page
 date: 2026-09-12
 draft: false
 excerpt: Very often, we have been told of a plethora of actions that, if performed should get your pages seen by AI assistants, I ran some measurements to find out what actually moves the needle.
+cover: /notes/photos/ai-cited-vs-ranked-page-cover.webp
+cover_alt: "A person typing on a laptop with an AI assistant open on the screen"
+cover_credit: "Photo: Jo Lin on Unsplash"
 faq:
   - q: "Do AI assistants cite the same pages that rank on Google?"
     a: "Rarely. Between 2.0% and 11.6% of cited URLs also appeared in Google's organic top ten for the same query, against 34% to 54% at the company level. They agree on who is credible and disagree on which page answers the question."
@@ -119,6 +122,8 @@ Head-to-head queries pull the tightest source sets. Q08 drew citations from five
 | Perplexity | `perplexity` | every numbered source in the citation rail | 20 | 80 | 4 | 2-8 | 24 |
 | Google AI Overviews | `google_aio` | every link surfaced by the AI Overview panel | 19 | 150 | 7 | 3-12 | 42 |
 | *Google organic (control)* | `google_organic` | *the organic top ten, AI Overview excluded* | *16* | *111* | *7* | *6-8* | *48* |
+
+![Hands on a laptop keyboard while a person works with AI software on screen](/notes/photos/ai-cited-vs-ranked-page-1.webp "Photo: Jo Lin on Unsplash")
 
 Claude cites more than twice as many sources per answer as Perplexity. Google AI Overviews draws on the widest set of companies of any assistant, 42, and is the only assistant whose breadth approaches organic search, 48.
 

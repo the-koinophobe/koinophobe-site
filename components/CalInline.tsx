@@ -89,7 +89,7 @@ export function CalInline() {
   };
 
   return (
-    <div className="rounded-md border border-line bg-bg">
+    <div className="card">
       {!open && (
         <div className="flex flex-col items-start gap-5 p-7 sm:p-9">
           <p className="max-w-[40ch] text-[15.5px] text-muted">
@@ -101,12 +101,12 @@ export function CalInline() {
             onClick={start}
             data-track="cta_book"
             data-from="contact_inline"
-            className="inline-flex items-center gap-2.5 rounded-sm bg-ink px-6 py-4 text-[16px] font-medium text-bg transition-[transform,opacity] duration-150 hover:-translate-y-0.5 hover:opacity-90 motion-reduce:transform-none"
+            className="btn btn-lg btn-primary"
           >
             <CalendarCheck size={19} aria-hidden />
             Show available times
           </button>
-          <p className="font-mono text-[11px] text-muted">
+          <p className="text-[13.5px] text-muted">
             Loads the calendar from Cal.com. Or{" "}
             <a href={site.booking} target="_blank" rel="noopener" className="underline">
               open it in a new tab

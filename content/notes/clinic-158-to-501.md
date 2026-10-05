@@ -3,6 +3,9 @@ title: "How a clinic went from 158 to 501 clicks in six months"
 date: "2026-04-20"
 excerpt: "A short walk through a real result: what was broken, what I changed, and how the numbers moved."
 draft: false
+cover: /notes/photos/clinic-158-to-501-cover.webp
+cover_alt: "A massage therapist working on the back of a woman lying on a treatment table"
+cover_credit: "Photo: Toa Heftiba on Unsplash"
 faq:
   - q: "What SEO work helped a local clinic get more clicks?"
     a: "Tracking went in first, then technical fixes to indexing, headings, images and LocalBusiness structured data. The biggest change was replacing one generic services page with a page for each treatment and the conditions it addresses, each with a title tag written like an ad. Clicks went from 158 to 501 over six months."
@@ -28,6 +31,8 @@ None of this is glamorous. All of it is why the later content work landed as fas
 ## Pages built around patient intent
 
 The single biggest change was replacing one generic services page with dedicated pages for each treatment and the conditions it addresses, written in the language patients actually type. People do not search for clinical terminology; they search for their pain, their area, and phrases like 'near me'. Each page answered the questions a prospective patient asks before booking: what the treatment involves, what it helps with, what a first visit looks like, and how to get in touch.
+
+![A physical therapist measuring the flexibility of a patient's leg during a treatment session](/notes/photos/clinic-158-to-501-1.webp "Photo: Navy Medicine on Unsplash")
 
 Every page got a title tag written like an ad rather than a label, because rankings only pay when people click. That is a big part of why CTR climbed to a 6.1 percent peak, well above what most local health sites see.
 

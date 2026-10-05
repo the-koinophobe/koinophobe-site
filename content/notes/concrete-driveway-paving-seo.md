@@ -5,7 +5,9 @@ date: 2026-10-23
 draft: false
 seo_title: "Concrete driveway SEO for paving contractors"
 excerpt: "Concrete driveway SEO for paving contractors: a page per job, honest cost factors, job photos, town pages, schema, and tracking every quote request."
-cover: /notes/illustrations/concrete-driveway-paving-seo.webp
+cover: /notes/photos/concrete-driveway-paving-seo-cover.webp
+cover_alt: "Freshly poured concrete being leveled with a screed board on a job site"
+cover_credit: "Photo: Markus Kammermann on Unsplash"
 faq:
   - q: "Should a paving contractor put prices on the website?"
     a: "Explain what moves the price, like size, removal of the old slab, base prep and finish. If you publish ranges, base them on your own recent jobs."
@@ -51,6 +53,8 @@ Don't copy a national average off another site. If you want to show ranges, take
 ## Job photos do the selling
 
 A driveway page with stock photos looks like every other driveway page. Shoot your own: forms set, base compacted, the pour, the finish, the cured slab. Before and after pairs from the same spot work best.
+
+![A crew of workers smoothing and leveling a fresh concrete slab](/notes/photos/concrete-driveway-paving-seo-1.webp "Photo: Acton Crawford on Unsplash")
 
 Process them before upload. In July 2026 I built a flat roof repair page for a roofing client from the client's own job photos. I compressed them, renamed them, added metadata, converted them to WebP and linked the new page with the main services page. On my own site, photos went from about 3 MB JPEGs to 93 to 200 KB WebP files at 1200 pixels. The [image optimization note](/notes/image-optimization-contractor-websites) has the steps.
 

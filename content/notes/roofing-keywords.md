@@ -5,7 +5,9 @@ date: 2026-10-13
 draft: false
 seo_title: "Roofing keywords worth a page of their own"
 excerpt: "Which roofing keywords deserve their own page, how to find the ones your site already shows for in Search Console, and four searches from a real roofing case."
-cover: /notes/illustrations/roofing-keywords.webp
+cover: /notes/photos/roofing-keywords-cover.webp
+cover_alt: "A close view of a gray shingled roof with a small bird perched on top"
+cover_credit: "Photo: Hal Gatewood on Unsplash"
 faq:
   - q: "What keywords should a roofing company target?"
     a: "Service plus town searches, repair and replacement searches, storm and insurance questions, and searches for the materials you install. Near me searches mostly come through your Business Profile."
@@ -40,6 +42,8 @@ I won't quote search volumes in this note. For small towns, keyword tools often 
 3. On the **Queries** tab, add a query filter: **Queries containing** `roof`.
 4. Turn on **Average position** and sort by **Impressions**.
 5. Click any query, then the **Pages** tab, to see which page Google is showing for it.
+
+![A person using a laptop at a white table to review search performance data](/notes/photos/roofing-keywords-1.webp "Photo: Myriam Jessier on Unsplash")
 
 Look for two things. Queries where the wrong page ranks, like your home page showing for a replacement search, tell you a page is missing. Queries with high impressions and a position between 10 and 30 tell you where a better page or a better title could move you onto page one.
 

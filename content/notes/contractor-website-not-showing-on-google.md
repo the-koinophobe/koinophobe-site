@@ -5,7 +5,9 @@ date: 2026-09-14
 draft: false
 seo_title: "Contractor site not on Google? Check these"
 excerpt: "Search your company and your site isn't there? Work through these checks in order, from the WordPress setting that hides you to pages Google never indexed."
-cover: /notes/illustrations/contractor-website-not-showing-on-google.webp
+cover: /notes/photos/contractor-website-not-showing-on-google-cover.webp
+cover_alt: "A man in a cafe searching Google on a laptop next to a cup of coffee"
+cover_credit: "Photo: Firmbee.com on Unsplash"
 faq:
   - q: "How do I check if Google has indexed my website?"
     a: "Search Google for site:yourdomain.com with your real domain and no spaces. No results means Google hasn't indexed the site. Plenty of results means the site is indexed and the problem is ranking."
@@ -22,6 +24,8 @@ You search for your own company, or for "roof repair" in your town, and your web
 ## 1. Check whether Google has your site at all
 
 Search Google for `site:yourdomain.com`, with your real domain and no spaces.
+
+![A hand holding a smartphone with a Google search open on the screen](/notes/photos/contractor-website-not-showing-on-google-1.webp "Photo: Arkan Perdana on Unsplash")
 
 - **No results:** Google hasn't indexed the site. Keep going down this list.
 - **Results, but not the page you expected:** that page isn't indexed. Jump to check 4.

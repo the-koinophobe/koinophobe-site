@@ -5,7 +5,9 @@ date: 2026-10-17
 draft: false
 seo_title: "Before and after photos SEO for contractors"
 excerpt: "Before and after photos SEO for contractors: why a text-free gallery ranks for nothing, and how to put each pair on the service and town pages that sell."
-cover: /notes/illustrations/before-after-gallery-seo.webp
+cover: /notes/photos/before-after-gallery-seo-cover.webp
+cover_alt: "A suburban house among trees on a grassy hill, finished with a new asphalt shingle roof"
+cover_credit: "Photo: Paragon Exterior on Unsplash"
 faq:
   - q: "Do before and after photos help a contractor website rank?"
     a: "They help when they sit on the right page with text around them. A gallery of photos with no words gives Google almost nothing to match to a search."
@@ -30,6 +32,8 @@ Big image files cause a second problem. Dozens of full-size photos make the page
 ## Put each pair on the page it proves
 
 Take each before and after pair and place it on the matching service page, and on the matching town page if you have one. A tile roof replacement in one town belongs on your roof replacement page and on that town's page. Under each pair, write a few lines:
+
+![A two-story blue house with new siding, a large wooden deck and a pergola](/notes/photos/before-after-gallery-seo-1.webp "Photo: Genuine Texas Exteriors on Unsplash")
 
 - **What:** the job, in the words a customer would use.
 - **Where:** the town or neighborhood (no street addresses).

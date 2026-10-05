@@ -13,9 +13,9 @@ const updated = "September 2026";
 
 export default function PrivacyPage() {
   return (
-    <section className="container-pad pb-16 pt-36 sm:pb-20 sm:pt-40">
+    <section className="container-pad pb-16 pt-14 sm:pb-20 sm:pt-20">
       <div className="mx-auto max-w-3xl">
-        <h1 className="font-display text-4xl font-semibold tracking-tight text-ink">
+        <h1 className="t-h1">
           Privacy Policy
         </h1>
         <p className="mt-3 text-sm text-muted">Last updated: {updated}</p>

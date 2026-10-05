@@ -5,7 +5,9 @@ date: 2026-09-02
 draft: false
 seo_title: "1,250 'near me' searches: what ranks and why"
 excerpt: "I pulled every 'near me' search from five client sites. 1,250 queries, 780 on page one, 191 in the top three. Here is what the ones that rank have in common."
-cover: /notes/illustrations/near-me-searches-local-seo-data.webp
+cover: /notes/photos/near-me-searches-local-seo-data-cover.webp
+cover_alt: "A hand holding a smartphone showing a GPS map while out in the city"
+cover_credit: "Photo: Enrique Alarcon on Unsplash"
 faq:
   - q: "How many near me searches can one business show up for?"
     a: "Hundreds. The pain clinic in this data shows up for 415 different versions of near me, and they brought in 179 clicks between them. Across five sites there were 1,250 near-me queries."
@@ -35,6 +37,8 @@ There were 1,250 of them. 780 showed one of those sites on page one, 191 in the 
 ## Near me is hundreds of small searches
 
 Nobody ranks for "near me". People type `fascia release near me`, `pokemon cards near me`, `window tinting near me`, `roof repair near me open saturday`, and Google treats each one as its own search.
+
+![A woman in a black leather jacket standing on a city sidewalk checking her phone](/notes/photos/near-me-searches-local-seo-data-1.webp "Photo: Margo Evardson on Unsplash")
 
 The clinic alone shows up for 415 different versions. They brought in 179 clicks between them. No single phrase carried it, which is the normal shape of local search. If you're tracking one near-me keyword in a rank tracker, you're watching a tiny slice of what's happening.
 

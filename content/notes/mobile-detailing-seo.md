@@ -5,7 +5,9 @@ date: 2026-10-19
 draft: false
 seo_title: "Mobile detailing SEO without a storefront"
 excerpt: "Mobile detailing SEO for a business with no shop: a service-area Business Profile, a priced packages page, service pages, town pages and online booking."
-cover: /notes/illustrations/mobile-detailing-seo.webp
+cover: /notes/photos/mobile-detailing-seo-cover.webp
+cover_alt: "A man waxing and polishing the hood of a car by hand"
+cover_credit: "Photo: Deniz Demirci on Unsplash"
 faq:
   - q: "Should a mobile detailer show an address on Google?"
     a: "If customers never come to you, no. Set up the Business Profile as a service-area business, remove the address and list the cities or ZIP codes you drive to."
@@ -38,6 +40,8 @@ That page answers the price question before the call. It also gives Google a pag
 ## Give each service its own page
 
 One "Services" page with five bullet points can only rank for so much. Ceramic coating, interior detailing, paint correction and fleet work get searched separately, by different people with different questions. Each one gets a page:
+
+![A man washing the side of a car with a soapy sponge](/notes/photos/mobile-detailing-seo-1.webp "Photo: Nik on Unsplash")
 
 - **Ceramic coating**: the prep involved, how long the job takes, how long your product lasts, aftercare.
 - **Interior detailing**: seats, carpets, stains, odors, pet hair, and what you can and can't get out.

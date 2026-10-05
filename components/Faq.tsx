@@ -66,10 +66,10 @@ export function Faq({
   return (
     <section className={`container-pad ${className}`}>
       <FaqSchema items={items} />
-      <Reveal className="max-w-[68ch]">
+      <Reveal className="max-w-3xl">
         <p className="eyebrow">{eyebrow}</p>
         {title ? (
-          <h2 className="mt-4 font-display text-[clamp(1.6rem,3.4vw,2.4rem)] leading-[1.08] tracking-tight text-balance">
+          <h2 className="t-h2 mt-5">
             {title}
           </h2>
         ) : null}

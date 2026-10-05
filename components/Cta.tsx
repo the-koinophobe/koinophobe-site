@@ -8,27 +8,27 @@ const SUBJECT = encodeURIComponent("My site");
 export const mailHref = `mailto:${site.email}?subject=${SUBJECT}`;
 
 /*
- * These are server components. Click tracking happens through one delegated
- * listener in Anim.tsx reading the data-track attributes below, so a call to
- * action costs no JavaScript of its own.
- *
- * Booking is the main action. Email stays as the quieter second option, and
- * keeps the "How can I help?" label.
+ * Every call to action on the site comes from this file, so they all share
+ * one shape (the pill in globals.css) and one set of analytics attributes.
+ * Click tracking runs through one delegated listener in Anim.tsx reading
+ * data-track and data-from, so a button costs no JavaScript of its own.
  */
 
-const solid =
-  "inline-flex items-center gap-2.5 rounded-sm bg-ink font-medium text-bg transition-[transform,opacity] duration-150 hover:-translate-y-0.5 hover:opacity-90 motion-reduce:transform-none";
+type Size = "sm" | "md" | "lg";
+const sizeClass: Record<Size, string> = { sm: "btn-sm", md: "btn-md", lg: "btn-lg" };
 
-/** Solid primary button. Opens the Cal.com booking page in a new tab. */
+/** Primary button. Opens the Cal.com booking page in a new tab. */
 export function BookCta({
   label = "Book a free call",
   from,
-  size = "md",
+  size = "lg",
+  tone = "primary",
   className = "",
 }: {
   label?: string;
   from: string;
-  size?: "sm" | "md";
+  size?: Size;
+  tone?: "primary" | "light";
   className?: string;
 }) {
   return (
@@ -38,24 +38,28 @@ export function BookCta({
       rel="noopener"
       data-track="cta_book"
       data-from={from}
-      className={`${solid} ${size === "sm" ? "px-4 py-2 text-[13px]" : "px-6 py-4 text-[16px]"} ${className}`}
+      className={`btn ${sizeClass[size]} ${tone === "light" ? "btn-light" : "btn-primary"} ${className}`}
     >
-      <CalendarCheck size={size === "sm" ? 15 : 19} aria-hidden />
+      <CalendarCheck size={size === "sm" ? 16 : 18} aria-hidden />
       {label}
     </a>
   );
 }
 
-/** Quiet email link, same visual weight as TextCta. */
+/** Secondary button for email. */
 export function EmailCta({
-  label = "How can I help?",
+  label = "Email me",
   from,
   href = mailHref,
+  size = "lg",
+  tone = "secondary",
   className = "",
 }: {
   label?: string;
   from: string;
   href?: string;
+  size?: Size;
+  tone?: "secondary" | "ghost-light";
   className?: string;
 }) {
   return (
@@ -63,15 +67,42 @@ export function EmailCta({
       href={href}
       data-track="cta_email"
       data-from={from}
-      className={`group inline-flex items-center gap-2.5 border-b border-line pb-1 font-mono text-[11.5px] uppercase tracking-[0.11em] transition-colors duration-100 hover:text-brand ${className}`}
+      className={`btn ${sizeClass[size]} ${tone === "ghost-light" ? "btn-ghost-light" : "btn-secondary"} ${className}`}
     >
-      <Mail size={15} aria-hidden />
+      <Mail size={size === "sm" ? 16 : 18} aria-hidden />
       {label}
     </a>
   );
 }
 
-/** Quiet secondary link with a nudging arrow. */
+/** Secondary button that goes to another page on the site. */
+export function PageCta({
+  href,
+  label,
+  from,
+  size = "lg",
+  className = "",
+}: {
+  href: string;
+  label: string;
+  from: string;
+  size?: Size;
+  className?: string;
+}) {
+  return (
+    <Link
+      href={href}
+      data-track="cta_link"
+      data-from={from}
+      className={`btn ${sizeClass[size]} btn-secondary ${className}`}
+    >
+      {label}
+      <ArrowRight size={17} aria-hidden />
+    </Link>
+  );
+}
+
+/** Text link with an arrow, for routes inside a section. */
 export function TextCta({
   href,
   label,
@@ -84,34 +115,25 @@ export function TextCta({
   className?: string;
 }) {
   return (
-    <Link
-      href={href}
-      data-track="cta_link"
-      data-from={from}
-      className={`group inline-flex items-center gap-2.5 border-b border-line pb-1 font-mono text-[11.5px] uppercase tracking-[0.11em] transition-colors duration-100 hover:text-brand ${className}`}
-    >
+    <Link href={href} data-track="cta_link" data-from={from} className={`link-arrow text-[15.5px] ${className}`}>
       {label}
-      <ArrowRight
-        size={15}
-        aria-hidden
-        className="transition-transform duration-150 group-hover:translate-x-1 motion-reduce:transform-none"
-      />
+      <ArrowRight size={16} aria-hidden />
     </Link>
   );
 }
 
 /** The small line under a booking button. */
-export function BookNote({ className = "" }: { className?: string }) {
+export function BookNote({ className = "", light = false }: { className?: string; light?: boolean }) {
   return (
-    <p className={`font-mono text-[11px] tracking-wide text-muted ${className}`}>
+    <p className={`text-[13.5px] ${light ? "muted" : "text-muted"} ${className}`}>
       Free, 20 minutes &middot; {site.hours}
     </p>
   );
 }
 
 /**
- * Slim inline band, deliberately not the closing Availability section: one
- * line, the booking button, and one quieter alternative (email by default).
+ * A slim call-to-action card between sections: one line, the booking button
+ * and one quieter alternative.
  */
 export function CtaBand({
   line,
@@ -123,18 +145,16 @@ export function CtaBand({
   secondary?: { href: string; label: string };
 }) {
   return (
-    <div className="border-y border-line bg-surface">
-      <div className="container-pad flex flex-col gap-6 py-12 md:flex-row md:items-center md:justify-between md:gap-10">
-        <p className="max-w-[30ch] font-display text-[clamp(1.4rem,2.6vw,2rem)] leading-[1.15] tracking-tight text-balance">
-          {line}
-        </p>
+    <div className="container-pad">
+      <div className="card flex flex-col gap-6 bg-surface px-6 py-8 sm:px-10 md:flex-row md:items-center md:justify-between md:gap-10 md:py-10">
+        <p className="t-h3 max-w-[30ch] !text-[clamp(1.35rem,2.4vw,1.75rem)] text-balance">{line}</p>
         <div className="flex flex-col gap-3">
-          <div className="flex flex-wrap items-center gap-x-7 gap-y-4">
-            <BookCta from={from} />
+          <div className="flex flex-wrap items-center gap-3">
+            <BookCta from={from} size="md" />
             {secondary ? (
-              <TextCta href={secondary.href} label={secondary.label} from={from} />
+              <PageCta href={secondary.href} label={secondary.label} from={from} size="md" />
             ) : (
-              <EmailCta from={from} />
+              <EmailCta from={from} size="md" />
             )}
           </div>
           <BookNote />

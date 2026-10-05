@@ -5,7 +5,9 @@ date: 2026-10-27
 draft: false
 seo_title: "Questions to ask before hiring an SEO"
 excerpt: "Ten questions to ask before hiring an SEO, what a good answer sounds like for each, and the two answers that should end the conversation on the spot."
-cover: /notes/illustrations/hiring-an-seo-questions-to-ask.webp
+cover: /notes/photos/hiring-an-seo-questions-to-ask-cover.webp
+cover_alt: "Two men talking across a table during a business meeting"
+cover_credit: "Photo: LinkedIn Sales Solutions on Unsplash"
 faq:
   - q: "Should I hire an SEO who guarantees first page rankings?"
     a: "No. Google's own guidance says no one can guarantee a number one ranking. A guarantee usually means the provider is promising something they don't control."
@@ -52,6 +54,8 @@ Ask for numbers from Search Console or call tracking, with dates. A screenshot o
 ## 8. What does a report look like?
 
 Ask to see a real one with the client details removed. It should fit on a page: calls, forms and bookings, Search Console clicks and impressions against last year, the pages added or fixed, and next month's list. Here's [what a monthly SEO report should include](/notes/monthly-seo-report-contractors).
+
+![Two people reviewing printed documents together at a meeting table](/notes/photos/hiring-an-seo-questions-to-ask-1.webp "Photo: Van Tay Media on Unsplash")
 
 ## 9. How long is the contract?
 

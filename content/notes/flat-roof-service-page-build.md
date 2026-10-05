@@ -5,7 +5,9 @@ date: 2026-10-15
 draft: false
 seo_title: "Flat roof repair page: build it from job photos"
 excerpt: "How to build a flat roof repair page from your own job photos: compressing, naming and converting images, what goes on the page, alt text and links."
-cover: /notes/illustrations/flat-roof-service-page-build.webp
+cover: /notes/photos/flat-roof-service-page-build-cover.webp
+cover_alt: "A crew of seven workers in hard hats standing on a flat commercial rooftop"
+cover_credit: "Photo: Scott Blake on Unsplash"
 faq:
   - q: "What should a flat roof repair page include?"
     a: "The flat roof problems you fix, the systems you work on, when you'd repair versus replace, your process, real job photos with captions, the towns you serve and a way to book."
@@ -48,6 +50,8 @@ Fill in the title and description fields so each file stays labeled, including i
 ## What goes on the page
 
 Write it for a building owner or homeowner with water coming through a flat roof. In order:
+
+![A worker in a white coverall spraying foam coating onto a roof with a spray gun](/notes/photos/flat-roof-service-page-build-1.webp "Photo: Ömer Haktan Bulut on Unsplash")
 
 - **The problems you fix.** Ponding, split seams, blisters, flashing failures, leaks around penetrations. Use the words customers use on the phone.
 - **The systems you work on.** Modified bitumen, TPO, EPDM, built-up, coatings. List only the ones your crews handle.

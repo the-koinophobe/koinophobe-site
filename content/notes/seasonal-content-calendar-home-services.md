@@ -5,7 +5,9 @@ date: 2026-10-25
 draft: false
 seo_title: "Seasonal marketing calendar for home services"
 excerpt: "A seasonal marketing calendar for home services: what roofers, HVAC, lawn and pool companies should publish each month so pages rank before the busy season."
-cover: /notes/illustrations/seasonal-content-calendar-home-services.webp
+cover: /notes/photos/seasonal-content-calendar-home-services-cover.webp
+cover_alt: "A house and a tree covered in heavy snow after a winter storm"
+cover_credit: "Photo: chris robert on Unsplash"
 faq:
   - q: "How far ahead should I publish seasonal content?"
     a: "At least one season ahead. New pages can take weeks to months to rank, so a page published when the busy season starts often shows up after the demand has passed."
@@ -52,6 +54,8 @@ Your climate shifts all of these. A Florida pool company and a Massachusetts one
 | October | Review the season in Search Console, plan next spring's pages |
 | November | Spring pool and lawn outlines, update any dated titles for next year |
 | December | Write next year's AC pages and spring service pages |
+
+![An open monthly planner with blank calendar pages lying on a wooden desk](/notes/photos/seasonal-content-calendar-home-services-1.webp "Photo: Eric Rothermel on Unsplash")
 
 The pattern is the same in every row: the page goes live a few months before its searches peak.
 

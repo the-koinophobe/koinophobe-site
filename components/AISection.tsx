@@ -60,7 +60,7 @@ function Answer({
   return (
     <div className="term-fade mt-3 border-l-2 border-brand/40 pl-4" style={fadeStyle(at)}>
       <p className="text-[14.5px] leading-relaxed text-ink">{children}</p>
-      <p className="mt-2.5 font-mono text-[10.5px] uppercase tracking-[0.11em] text-muted">
+      <p className="mt-2.5 font-mono text-[11.5px] uppercase tracking-[0.11em] text-muted">
         cited &middot; <span className="text-brand">{domain}</span>
       </p>
     </div>
@@ -140,13 +140,13 @@ export function AISection() {
       >
         <div className="flex items-center gap-2.5 border-b border-line px-4 py-3 sm:px-5">
           <Terminal size={14} aria-hidden className="text-brand" />
-          <span className="font-mono text-[10.5px] uppercase tracking-[0.13em] text-muted">
+          <span className="font-mono text-[11.5px] uppercase tracking-[0.13em] text-muted">
             What a customer gets asked back
           </span>
         </div>
 
         <div className="px-4 py-6 sm:px-6 sm:py-8">
-          <p className="font-mono text-[11px] leading-relaxed text-brand sm:text-[13px]">
+          <p className="font-mono text-[12px] leading-relaxed text-brand sm:text-[13px]">
             <span aria-hidden className="select-none pr-2 text-muted">
               &gt;
             </span>
@@ -163,7 +163,7 @@ export function AISection() {
           </Answer>
 
           <p
-            className="term-fade term-caret mt-8 font-mono text-[11px] leading-relaxed text-brand sm:text-[13px]"
+            className="term-fade term-caret mt-8 font-mono text-[12px] leading-relaxed text-brand sm:text-[13px]"
             style={fadeStyle(Q2.delay - 0.3)}
           >
             <span aria-hidden className="select-none pr-2 text-muted">

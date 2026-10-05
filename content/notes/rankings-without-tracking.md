@@ -3,6 +3,9 @@ title: "Rankings without tracking are a vanity metric"
 date: "2026-06-01"
 excerpt: "A page-one ranking feels great. But if you cannot tie it to a call or a form, you are guessing. Here is how I close that gap."
 draft: false
+cover: /notes/photos/rankings-without-tracking-cover.webp
+cover_alt: "A man at his desk looking over printed documents while working on a laptop"
+cover_credit: "Photo: Vitaly Gariev on Unsplash"
 faq:
   - q: "Why aren't keyword rankings enough to measure SEO?"
     a: "Rankings are volatile, personalized and increasingly detached from clicks, and they say nothing about intent. A keyword at position three means nothing if nobody who lands on that page ever calls, books or buys."
@@ -30,6 +33,8 @@ The stack I use for this is boring and proven: Google Analytics 4 for measuremen
 ## The GA4 and GTM setup I run on every site
 
 First, GA4 gets installed through GTM, not pasted into the theme, so tags survive redesigns and stay auditable. Second, every tel: link fires a click-to-call event. Third, forms fire an event on successful submission, not on page load of a thank-you URL that spam bots also hit. Fourth, the events that represent revenue get marked as key events in GA4 so they surface in every report and can feed Google Ads if you ever run it.
+
+![A person using a laptop that shows a Google Analytics overview report](/notes/photos/rankings-without-tracking-1.webp "Photo: Myriam Jessier on Unsplash")
 
 Finally, I connect Search Console to GA4. That single link joins the query data (what people searched) with behavior data (what they did on the site), which is where the real insight lives.
 

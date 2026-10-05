@@ -5,7 +5,9 @@ date: 2026-10-28
 draft: false
 seo_title: "Business not showing up on Google by name?"
 excerpt: "Business not showing up on Google when searched by name? The common causes, the name signals to fix, and what I changed when it happened to my own brand."
-cover: /notes/illustrations/ranking-for-your-business-name.webp
+cover: /notes/photos/ranking-for-your-business-name-cover.webp
+cover_alt: "A red pickup truck parked in front of a small antiques shop with a painted sign"
+cover_credit: "Photo: Wally Holden on Unsplash"
 faq:
   - q: "Why doesn't my business show up when I Google its name?"
     a: "Common causes are a site blocked from indexing, a name Google reads as another word or another business, and a name written differently across your site, Business Profile and directories."
@@ -30,6 +32,8 @@ If the site isn't indexed, nothing below matters yet. The full checklist is in [
 ## Why Google misreads a business name
 
 When a search could mean several things, Google shows what it thinks most people want. A name that looks like a common word, a misspelling of one, or the name of a bigger company elsewhere has to fight for its own results. A name written three different ways across the web makes that fight harder.
+
+![A sign in a shop window that says come in, we are open](/notes/photos/ranking-for-your-business-name-1.webp "Photo: Tim Mossholder on Unsplash")
 
 That was my problem. I wrote [what is a koinophobe](/notes/what-is-a-koinophobe) to explain the name on my own site, and went through my site's name signals. The list below is the checklist I'd use on any site with the same problem.
 

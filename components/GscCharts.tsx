@@ -84,8 +84,8 @@ function Frame({
   innerRef?: React.Ref<HTMLDivElement>;
 }) {
   return (
-    <div ref={innerRef} className="relative rounded-md border border-line bg-surface p-4 sm:p-[18px]">
-      <div className="mb-3.5 flex flex-wrap justify-between gap-3 font-mono text-[10.5px] uppercase tracking-[0.13em] text-muted">
+    <div ref={innerRef} className="relative rounded-2xl border border-line bg-surface p-4 sm:p-[18px]">
+      <div className="mb-3.5 flex flex-wrap justify-between gap-3 font-mono text-[11.5px] uppercase tracking-[0.13em] text-muted">
         <span>{title}</span>
         <span>{range}</span>
       </div>
@@ -187,7 +187,7 @@ export function Sparkline({
         </svg>
         {hover !== null && (
           <div
-            className="pointer-events-none absolute -translate-x-1/2 -translate-y-[124%] whitespace-nowrap rounded-sm bg-ink px-2.5 py-1.5 font-mono text-[11px] leading-snug text-bg"
+            className="pointer-events-none absolute -translate-x-1/2 -translate-y-[124%] whitespace-nowrap rounded-lg bg-ink px-2.5 py-1.5 font-mono text-[12px] leading-snug text-bg"
             style={{ left: `${(x(hover) / W) * 100}%`, top: `${(y(data[hover][1]) / H) * 100}%` }}
           >
             <b>{data[hover][1].toLocaleString("en-US")}</b> {unit}
@@ -240,7 +240,7 @@ export function PositionLadder({ title, range }: { title: string; range: string 
           );
         })}
       </svg>
-      <div className="mt-3.5 flex flex-wrap gap-4 font-mono text-[10.5px] uppercase tracking-wider text-muted">
+      <div className="mt-3.5 flex flex-wrap gap-4 font-mono text-[11.5px] uppercase tracking-wider text-muted">
         <span className="flex items-center gap-2">
           <i className="inline-block h-2.5 w-2.5 rounded-full border-[1.5px] border-muted" />A year ago
         </span>

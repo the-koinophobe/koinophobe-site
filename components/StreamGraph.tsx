@@ -81,7 +81,7 @@ export function StreamGraph() {
 
   return (
     <div ref={wrapRef} className="relative">
-      <div className="relative overflow-hidden rounded-md border border-line bg-surface">
+      <div className="relative overflow-hidden rounded-2xl border border-line bg-surface">
         <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 px-4 pt-4 sm:px-5">
           <span className="eyebrow-flat">Organic clicks by sector</span>
           <span className="eyebrow-flat">{aggregate.window}</span>
@@ -127,7 +127,7 @@ export function StreamGraph() {
 
         </svg>
 
-        <div className="flex justify-between px-4 pb-4 font-mono text-[10px] uppercase tracking-[0.08em] text-muted sm:px-5 sm:text-[11px]">
+        <div className="flex justify-between px-4 pb-4 font-mono text-[11.5px] uppercase tracking-[0.08em] text-muted sm:px-5 sm:text-[12px]">
           {[0, Math.floor(N / 3), Math.floor((2 * N) / 3), N - 1].map((i) => (
             <span key={i}>{streamMonths[i]}</span>
           ))}
@@ -135,7 +135,7 @@ export function StreamGraph() {
 
         {hoverMonth !== null && (
           <div
-            className="pointer-events-none absolute top-12 z-10 -translate-x-1/2 whitespace-nowrap rounded-sm bg-ink px-3 py-2 font-mono text-[11px] leading-relaxed text-bg"
+            className="pointer-events-none absolute top-12 z-10 -translate-x-1/2 whitespace-nowrap rounded-lg bg-ink px-3 py-2 font-mono text-[12px] leading-relaxed text-bg"
             style={{ left: `${(xFor(hoverMonth) / W) * 100}%` }}
           >
             <b>{streamMonths[hoverMonth]}</b> · {totals[hoverMonth]} clicks
@@ -166,21 +166,21 @@ export function StreamGraph() {
                 className="h-2.5 w-2.5 flex-none rounded-full bg-brand"
                 style={{ opacity: BAND_ALPHA[i] }}
               />
-              <span className="font-mono text-[11px] uppercase tracking-[0.11em] text-muted transition-colors duration-100 group-hover:text-ink">
+              <span className="font-mono text-[12px] uppercase tracking-[0.11em] text-muted transition-colors duration-100 group-hover:text-ink">
                 {s.label}
               </span>
             </span>
             <span className="tnum mt-1.5 block font-display text-[1.35rem] leading-none tracking-tight">
               {s.pageOne}
             </span>
-            <span className="mt-1 block font-mono text-[10px] uppercase tracking-[0.1em] text-muted">
+            <span className="mt-1 block font-mono text-[11.5px] uppercase tracking-[0.1em] text-muted">
               on page one
             </span>
           </button>
         ))}
       </div>
 
-      <p className="mt-4 min-h-[2.6em] font-mono text-[11px] leading-relaxed text-muted">
+      <p className="mt-4 min-h-[2.6em] font-mono text-[12px] leading-relaxed text-muted">
         {active
           ? active.note
           : "Four sectors, 17 months, every click Google sent. Hover a month or a band."}

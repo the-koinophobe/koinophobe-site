@@ -5,7 +5,9 @@ date: 2026-09-22
 draft: false
 seo_title: "Storm damage pages every roofing site needs"
 excerpt: "After a storm, homeowners search questions before they search roofers. The storm damage pages to build now, so they rank before next hurricane season."
-cover: /notes/illustrations/storm-damage-roofing-pages.webp
+cover: /notes/photos/storm-damage-roofing-pages-cover.webp
+cover_alt: "A damaged asphalt shingle roof with several shingles missing and the underlayer exposed"
+cover_credit: "Photo: blue soda on Unsplash"
 faq:
   - q: "What storm damage pages should a roofing website have?"
     a: "Emergency roof repair and tarping, storm damage inspection, insurance claims, wind damage and hail damage, and repair or replace. If you work in Florida, add wind mitigation inspections."
@@ -24,6 +26,8 @@ The problem is timing. A page you publish the morning after a storm won't rank f
 ## What people search after a storm
 
 Homeowners don't start with "roofer". They start with questions:
+
+![A large fallen tree blocking a residential road after a hurricane, with a car parked nearby](/notes/photos/storm-damage-roofing-pages-1.webp "Photo: Erok Mule on Unsplash")
 
 - Is this damage or is it just old?
 - Will insurance cover it?

@@ -5,7 +5,9 @@ date: 2026-10-09
 draft: false
 seo_title: "Monthly SEO report: what it should include"
 excerpt: "What a monthly SEO report should include for a contractor: calls, forms, Search Console clicks against last year, work done, next steps, and what to ignore."
-cover: /notes/illustrations/monthly-seo-report-contractors.webp
+cover: /notes/photos/monthly-seo-report-contractors-cover.webp
+cover_alt: "Two professionals reviewing printed paperwork together at a conference table during a meeting"
+cover_credit: "Photo: Olena Kholina on Unsplash"
 faq:
   - q: "What should a monthly SEO report include?"
     a: "Calls and form or booking leads, Search Console clicks and impressions compared with the same month last year, the pages added or fixed, and a short list for next month. It should fit on one page."
@@ -24,6 +26,8 @@ Below is what belongs on that page, plus how to read a number that looks bad and
 ## What goes on the page
 
 **Calls.** How many calls came from the website and your Business Profile this month, compared with the same month last year. That needs call tracking and a phone tap event in GA4. Without it, nobody can tell you whether SEO is paying for itself, which is the whole argument of [rankings without tracking](/notes/rankings-without-tracking).
+
+![A printed report page with bar charts and pie charts on it](/notes/photos/monthly-seo-report-contractors-1.webp "Photo: Cht Gsml on Unsplash")
 
 **Forms and bookings.** The count of form submissions and online bookings, plus one line confirming the form was tested and the email arrived. Here's why that line matters. In July 2026 I found a client's form submissions had been dropping since March because the form's email connection needed re-authenticating after an email address change. Four months, and nobody noticed, me included. I test form delivery on every site monthly now.
 

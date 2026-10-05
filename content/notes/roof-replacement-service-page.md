@@ -5,7 +5,9 @@ date: 2026-10-04
 draft: false
 seo_title: "Roof replacement page: what to put on it"
 excerpt: "What goes on a roof replacement service page, in the order a homeowner reads it: materials, repair vs replace, process, cost factors, photos and booking."
-cover: /notes/illustrations/roof-replacement-service-page.webp
+cover: /notes/photos/roof-replacement-service-page-cover.webp
+cover_alt: "A roofer tearing old shingles off a residential roof before a new roof goes on"
+cover_credit: "Photo: Zohair Mirza on Unsplash"
 faq:
   - q: "What should a roof replacement page include?"
     a: "What you replace and with which materials, signs a roof needs replacing, your process, what drives the cost, real job photos, the towns you serve and a clear way to book."
@@ -36,6 +38,8 @@ Then say when a repair is enough. Saying you'd fix a small leak instead of selli
 ## The process, day by day
 
 Walk through a typical job the way your crews work it. Inspection and estimate. Permit. Material delivery. Tear-off. Decking check and any board replacement. Underlayment, then the new roof. Cleanup and a magnet sweep for nails. Final inspection.
+
+![Two roofers working side by side on the roof of a house](/notes/photos/roof-replacement-service-page-1.webp "Photo: Immo Wegmann on Unsplash")
 
 If most of your replacements take a day or two, say so. If weather or permits often stretch that, say that too.
 

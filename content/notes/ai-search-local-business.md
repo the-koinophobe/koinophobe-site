@@ -5,7 +5,9 @@ date: 2026-09-15
 draft: false
 seo_title: "AI search for local businesses: what to do"
 excerpt: "AI search for local businesses: what my study of ChatGPT, AI Overviews and other assistants found, its limits, and the plain steps worth taking for your site."
-cover: /notes/illustrations/ai-search-local-business.webp
+cover: /notes/photos/ai-search-local-business-cover.webp
+cover_alt: "A person typing a question into an AI chatbot on a smartphone screen"
+cover_credit: "Photo: Zulfugar Karimov on Unsplash"
 faq:
   - q: "Do ChatGPT and AI Overviews cite the pages that rank on Google?"
     a: "Rarely the same pages. In my September 2026 study, assistants shared only 2 to 12 percent of URLs with Google's top ten. The overlap in companies was 34 to 54 percent."
@@ -51,6 +53,8 @@ This was one software category, collected in one window. Home services weren't i
 ## What it suggests for a local business
 
 The company overlap is the useful part. If assistants care about which business to name, your job is to make your business easy to identify and easy to describe correctly.
+
+![Two smiling workers standing behind the counter of a small local coffee shop](/notes/photos/ai-search-local-business-1.webp "Photo: Vitaly Gariev on Unsplash")
 
 **Use one business name everywhere.** The same name on your website, your Google Business Profile, your directory listings and your invoices. Mixed versions make it harder for any system to tell they're the same company. I covered the listing side in [NAP citations for contractors](/notes/nap-citations-contractors).
 

@@ -5,7 +5,9 @@ date: 2026-09-19
 draft: false
 seo_title: "Roofing SEO cost in 2026: what you should pay"
 excerpt: "What roofing SEO costs in 2026, from survey data on 439 providers, what each price level buys, and the red flags that mean you're paying for nothing."
-cover: /notes/illustrations/roofing-seo-cost.webp
+cover: /notes/photos/roofing-seo-cost-cover.webp
+cover_alt: "A worker on a residential roof using a power drill in bright sun"
+cover_credit: "Photo: Raze Solar on Unsplash"
 faq:
   - q: "How much does SEO cost per month for a roofing company?"
     a: "Ahrefs' survey of 439 SEO providers, last updated in April 2026, puts average monthly retainers at $1,349 for freelancers, $1,557 for local SEO, $1,819 for local agencies and $3,209 for all agencies. The $1,200 to $2,000 range is where most single-location roofers should be if they want growth."
@@ -22,6 +24,8 @@ Roofers get SEO pitches every week, from $99 a month to $5,000. Here's what the 
 ## What the market charges
 
 The best public data I know of is Ahrefs' survey of 439 SEO providers, last updated in April 2026. Average monthly retainers:
+
+![A calculator resting on a sheet of paper, ready for working out costs](/notes/photos/roofing-seo-cost-1.webp "Photo: Aaron Lefler on Unsplash")
 
 | Provider | Average per month |
 | --- | --- |

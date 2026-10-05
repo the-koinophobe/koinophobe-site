@@ -3,6 +3,9 @@ title: "What is a koinophobe?"
 slug: what-is-a-koinophobe
 date: 2026-09-27
 draft: false
+cover: /notes/photos/what-is-a-koinophobe-1.webp
+cover_alt: "A crowd of people walking along a busy city sidewalk on an ordinary day"
+cover_credit: "Photo: hongguang xu on Unsplash"
 excerpt: "A koinophobe is someone afraid of living an ordinary life. The word comes from koinophobia, coined by John Koenig in The Dictionary of Obscure Sorrows. It's also the name of my SEO practice, and here's why."
 faq:
   - q: "What does koinophobe mean?"
@@ -20,6 +23,7 @@ It's a newer word than it sounds, and it gets mixed up with a few others, so her
 ## Where the word comes from
 
 Koinophobia was coined by John Koenig for The Dictionary of Obscure Sorrows, his long-running project of invented words for feelings that didn't have a name yet. He released it as a short video in 2015 with the definition "the fear that you've lived an ordinary life."
+
 
 The roots are Greek. Koinos means common or shared. It's the same root as Koine, the "common" Greek spoken across the ancient Mediterranean. Phobos means fear. Koinophobe is the person, the same way an arachnophobe is the person with arachnophobia.
 

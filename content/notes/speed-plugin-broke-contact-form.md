@@ -5,7 +5,9 @@ date: 2026-08-15
 draft: false
 seo_title: "Contact form not working? Two causes I found"
 excerpt: "Contact form not working on your WordPress site? Two causes I found on client sites, how each was fixed, and the monthly test that catches the next one."
-cover: /notes/illustrations/speed-plugin-broke-contact-form.webp
+cover: /notes/photos/speed-plugin-broke-contact-form-cover.webp
+cover_alt: "A stressed man in glasses holding his head while looking at his laptop"
+cover_credit: "Photo: Vitaly Gariev on Unsplash"
 faq:
   - q: "Why did my WordPress contact form stop sending emails?"
     a: "A common cause is the email connection. If the address the site sends from changes, an SMTP plugin can need re-authenticating, and messages stop arriving without an obvious warning."
@@ -34,6 +36,8 @@ The fix was re-authenticating the SMTP connection and sending test submissions u
 ## Cause two: a speed plugin that stopped forms submitting
 
 On another client site, the forms stopped submitting at all. The cause was SiteGround Speed Optimizer, SiteGround's own speed plugin. Its combine and minify setting merges and shrinks the site's code files so the browser makes fewer requests.
+
+![A laptop on a desk with website programming code open on the screen](/notes/photos/speed-plugin-broke-contact-form-1.webp "Photo: Arnold Francisca on Unsplash")
 
 That sounds harmless, and on many sites it is. Form plugins, though, can depend on their scripts loading in a certain order, and combining files can change that order.
 

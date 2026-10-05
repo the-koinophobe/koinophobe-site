@@ -5,7 +5,9 @@ date: 2026-09-11
 draft: false
 seo_title: "Call tracking for contractors, in plain English"
 excerpt: "Most contractors can't say how many calls came from Google last month. Here's how to track website calls, Business Profile calls and forms without a big tool."
-cover: /notes/illustrations/call-tracking-for-contractors.webp
+cover: /notes/photos/call-tracking-for-contractors-cover.webp
+cover_alt: "A construction worker in a hard hat sitting on a job site, talking on his phone"
+cover_credit: "Photo: Albert Vinas on Unsplash"
 faq:
   - q: "How do I track phone calls from my contractor website?"
     a: "Make every phone number on your site a tap-to-call link, then set up Google Analytics 4 and Google Tag Manager to record a click on those links as an event. Mark that event as a key event. It costs nothing but setup time."

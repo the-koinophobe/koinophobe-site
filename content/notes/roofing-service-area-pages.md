@@ -5,7 +5,9 @@ date: 2026-09-09
 draft: false
 seo_title: "Service area pages for roofers that rank"
 excerpt: "One page per town works for roofers, if each page is real. What to put on a roofing service area page, how many to build, and where Google draws the line."
-cover: /notes/illustrations/roofing-service-area-pages.webp
+cover: /notes/photos/roofing-service-area-pages-cover.webp
+cover_alt: "Aerial view of suburban rooftops along winding streets in a residential neighborhood"
+cover_credit: "Photo: Ahnaf Tahsin on Unsplash"
 faq:
   - q: "What should a roofing service area page include?"
     a: "Jobs you've done in that town, photos from those jobs, what's specific about roofing there, reviews from customers in that town, the services you offer there, questions people from that town ask, and a way to call or book near the top. If you can't fill most of that for a town, you don't need a page for it yet."
@@ -24,6 +26,8 @@ On one Florida roofing site, we replaced a single county page with a real page f
 ## Where Google draws the line
 
 Google has a name for doing this badly: doorway abuse. Its spam policy describes it as pages "created to rank for specific, similar search queries", and lists examples including:
+
+![Rows of suburban homes and rooftops seen from above, with green trees beyond](/notes/photos/roofing-service-area-pages-1.webp "Photo: Jeff Le on Unsplash")
 
 - pages "targeted at specific regions or cities that funnel users to one page"
 - "substantially similar pages that are closer to search results than a clearly defined, browseable hierarchy"

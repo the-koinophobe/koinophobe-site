@@ -1,86 +1,69 @@
-import { Linkedin, Link2, MapPin, Target } from "lucide-react";
+import Link from "next/link";
+import { Check, Linkedin } from "lucide-react";
 import { site } from "@/lib/site";
 import { Reveal } from "./Reveal";
 import { BookCta, BookNote, EmailCta } from "./Cta";
 
-const ASK = [
-  {
-    icon: <Link2 size={19} aria-hidden />,
-    text: "Your website. That's enough for me to start.",
-  },
-  {
-    icon: <MapPin size={19} aria-hidden />,
-    text: "What you sell and where. Local search depends on the second half.",
-  },
-  {
-    icon: <Target size={19} aria-hidden />,
-    text: "What you want more of: calls, bookings, quotes or foot traffic.",
-  },
+const CALL = [
+  "I look at your site and your Google Business Profile before we talk.",
+  "You get the two or three things I'd fix first, and what they'd cost.",
+  "If nothing is worth paying for, I'll tell you that on the call.",
 ];
 
+/**
+ * The closing call to action on every page: one dark band, one job.
+ */
 export function Availability() {
   return (
-    <section id="contact" className="border-t border-line bg-surface">
-      <div className="container-pad grid gap-12 py-[78px] md:grid-cols-[1.1fr_1fr] md:gap-14">
+    <section id="contact" className="band">
+      <div className="container-pad grid gap-12 py-20 md:grid-cols-[1.15fr_1fr] md:items-center md:gap-16 md:py-24">
         <Reveal>
-          <span className="inline-flex items-center gap-2.5 rounded-full bg-ink px-4 py-2 font-mono text-[11px] uppercase tracking-[0.12em] text-bg">
-            <span className="avail-pip relative h-[7px] w-[7px] flex-none rounded-full bg-bg text-bg" />
-            Available now
+          <span className="inline-flex items-center gap-2.5 rounded-full bg-white/10 px-3.5 py-1.5 text-[13px] font-medium">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#7ED2A5] opacity-60 motion-reduce:animate-none" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-[#7ED2A5]" />
+            </span>
+            Taking new clients
           </span>
-          <h2 className="mt-5 max-w-[16ch] font-display text-[clamp(2rem,4.6vw,3.3rem)] leading-[1.04] tracking-tight text-balance">
-            Send me your URL. I&rsquo;ll tell you what I&rsquo;d do with it.
-          </h2>
-          <p className="mt-6 max-w-[50ch] text-muted">
-            Prices are on the{" "}
-            <a href="/pricing" className="text-ink underline underline-offset-4">
+          <h2 className="t-h2 mt-5 max-w-[18ch]">Send me your website. I&rsquo;ll tell you what I&rsquo;d fix first.</h2>
+          <p className="muted mt-5 max-w-[52ch] text-[17px] leading-relaxed">
+            Book a free 20-minute call, or email me if you&rsquo;d rather write. Every price is on the{" "}
+            <Link href="/pricing" className="text-white underline underline-offset-4 dark:text-ink">
               pricing page
-            </a>
-            . Not sure what you need? Book a free 20-minute call. I&rsquo;ll look at your site before
-            we talk, and if there&rsquo;s nothing worth paying for, I&rsquo;ll tell you on the call.
+            </Link>
+            , so there are no surprises when we talk.
           </p>
-
-          <div className="mt-8 flex flex-col items-start gap-5">
-            <div className="flex flex-wrap items-center gap-x-7 gap-y-4">
-              <BookCta from="availability" />
-              <EmailCta from="availability" />
-            </div>
-            <BookNote />
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-              <a
-                href={site.linkedin}
-                className="inline-flex items-center gap-2 font-mono text-[11.5px] text-muted transition-colors duration-100 hover:text-ink"
-              >
-                <Linkedin size={16} aria-hidden />
-                {site.linkedinHandle}
-              </a>
-              <a
-                href={site.x}
-                className="inline-flex items-center gap-2 font-mono text-[11.5px] text-muted transition-colors duration-100 hover:text-ink"
-              >
-                <XIcon />
-                {site.xHandle}
-              </a>
-            </div>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <BookCta from="availability" tone="light" />
+            <EmailCta from="availability" tone="ghost-light" />
           </div>
+          <BookNote light className="mt-4" />
         </Reveal>
 
         <Reveal delay={0.1}>
-          <p className="eyebrow">If you email, include</p>
-          <div className="mt-5 border-t border-line">
-            {ASK.map((a) => (
-              <div
-                key={a.text}
-                className="grid grid-cols-[24px_1fr] items-start gap-4 border-b border-line py-5"
-              >
-                <span className="mt-0.5 text-brand">{a.icon}</span>
-                <p className="text-[15.5px] text-muted">{a.text}</p>
-              </div>
-            ))}
+          <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-7 sm:p-8">
+            <p className="text-[15px] font-medium">What happens on the call</p>
+            <ul className="mt-5 space-y-4">
+              {CALL.map((c) => (
+                <li key={c} className="flex gap-3 text-[15.5px] leading-snug">
+                  <Check size={18} aria-hidden className="mt-0.5 flex-none text-[#7ED2A5]" />
+                  <span className="muted">{c}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-white/10 pt-5 text-[14px]">
+              <a href={`mailto:${site.email}`} className="muted hover:text-white">
+                {site.email}
+              </a>
+              <a href={site.linkedin} className="muted inline-flex items-center gap-2 hover:text-white">
+                <Linkedin size={15} aria-hidden />
+                LinkedIn
+              </a>
+              <a href={site.x} className="muted inline-flex items-center gap-2 hover:text-white">
+                <XIcon />X
+              </a>
+            </div>
           </div>
-          <p className="mt-5 font-mono text-[11.5px] leading-relaxed text-muted">
-            I&rsquo;ll look at your site before we talk, so we don&rsquo;t spend the call on
-            background. {site.email}
-          </p>
         </Reveal>
       </div>
     </section>
@@ -90,14 +73,7 @@ export function Availability() {
 /** Lucide has no X mark, so this is the official glyph path. */
 export function XIcon({ size = 14 }: { size?: number }) {
   return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      aria-hidden
-      className="flex-none"
-    >
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden className="flex-none">
       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
     </svg>
   );

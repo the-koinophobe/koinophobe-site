@@ -5,7 +5,9 @@ date: 2026-08-08
 draft: false
 seo_title: "Track phone clicks with Google Tag Manager"
 excerpt: "How to track phone clicks with Google Tag Manager and GA4, step by step, from the tel: link to the key event, plus which calls it will never see."
-cover: /notes/illustrations/gtm-phone-click-tracking.webp
+cover: /notes/photos/gtm-phone-click-tracking-cover.webp
+cover_alt: "A smartphone screen showing an active phone call interface with round buttons"
+cover_credit: "Photo: Jay Openiano on Unsplash"
 faq:
   - q: "Does GA4 track clicks on my phone number by itself?"
     a: "Don't count on it. Enhanced measurement is built for outbound links and file downloads. Taps on tel: links need their own trigger and tag, which Google Tag Manager handles."
@@ -24,6 +26,8 @@ Here is how I set it up with Google Tag Manager. I'm assuming GA4 already runs t
 ## Step 1: make every number a tel: link
 
 The trigger only sees links. A number typed as plain text, or baked into an image, can't be counted.
+
+![Lines of colorful HTML code displayed in a code editor on a screen](/notes/photos/gtm-phone-click-tracking-1.webp "Photo: Florian Olivo on Unsplash")
 
 Check every place your number appears: the header, the footer, a sticky call bar on mobile, the contact page, service pages, and any "Call now" button. Each one should be a link like this:
 

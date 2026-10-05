@@ -5,7 +5,9 @@ date: 2026-10-30
 draft: false
 seo_title: "Merrimack Valley SEO for contractors"
 excerpt: "Merrimack Valley SEO for contractors in Lawrence, Methuen, Andover, Haverhill and Lowell: town pages, Business Profile service areas and a free estimate page."
-cover: /notes/illustrations/merrimack-valley-contractor-seo.webp
+cover: /notes/photos/merrimack-valley-contractor-seo-cover.webp
+cover_alt: "A large old brick mill building standing beside a body of water"
+cover_credit: "Photo: David Trinks on Unsplash"
 faq:
   - q: "How many towns should a Lawrence MA contractor list on Google?"
     a: "Google Business Profile allows up to 20 service areas, set by city or ZIP code, within about 2 hours of driving. List the towns you want work in and can reach on time."
@@ -45,6 +47,8 @@ If customers do come to you, keep the address visible. You can still list servic
 ## Build town pages from real jobs
 
 A page for Methuen and a page for Haverhill can each help, if each one has something only that town's page could have:
+
+![A worker in a blue shirt installing window flashing on a gray house from the roof](/notes/photos/merrimack-valley-contractor-seo-1.webp "Photo: Matt Adams on Unsplash")
 
 - Photos from jobs you did there
 - A review from a customer in that town

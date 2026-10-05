@@ -4,6 +4,9 @@ slug: charles-county-md-game-shop-seo
 date: 2026-09-30
 draft: false
 excerpt: "Over The Table Top is one independent board game and card shop in Charles County, Maryland. Here's what 17 months of Search Console data says worked, what didn't, and what I'd do next."
+cover: /notes/photos/charles-county-md-game-shop-seo-cover.webp
+cover_alt: "Shelves filled with board games, tabletop games and puzzles stacked side by side"
+cover_credit: "Photo: Zoshua Colah on Unsplash"
 faq:
   - q: "How many keywords does Over The Table Top rank for on page one?"
     a: "614 keywords on page one in Search Console data from April 2025 to August 2026, with 149 in the top three out of the 1,000 rows Search Console exports. 398 different near me searches now show the shop."
@@ -42,6 +45,8 @@ Clicks held roughly flat while impressions more than doubled. The shop shows up 
 ## If you run a shop in Charles County
 
 A few things from this account that apply to most small shops between Waldorf, La Plata and Indian Head:
+
+![Two men sitting at a table playing a tabletop game as one rolls a die](/notes/photos/charles-county-md-game-shop-seo-1.webp "Photo: 2H Media on Unsplash")
 
 - **People search by town as well as "near me".** Put the town you're in on your homepage title and your Business Profile, and mention the towns you pull customers from in plain sentences.
 - **Your inventory is content.** If you sell things people search by name, product schema is the cheapest visibility you'll get.

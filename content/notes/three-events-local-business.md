@@ -3,6 +3,9 @@ title: "The three conversion events every local business should track"
 date: "2026-05-15"
 excerpt: "You do not need a complicated analytics setup. You need three events wired up correctly. These are the ones that count."
 draft: false
+cover: /notes/photos/three-events-local-business-cover.webp
+cover_alt: "A man talking on his mobile phone while working on a laptop at an office desk"
+cover_credit: "Photo: Vitaly Gariev on Unsplash"
 faq:
   - q: "What conversion events should a local business track?"
     a: "Phone calls, especially click-to-call taps, form submissions measured on success, and quote or booking requests as their own event. Google Analytics 4 and Google Tag Manager are free, and the setup fits into an afternoon."
@@ -30,6 +33,8 @@ The right way is to fire an event on the form's actual success state: the AJAX s
 ## 3. Quote and booking requests
 
 If your business takes bookings or quote requests, those deserve their own event, separate from general contact forms. A message asking 'what are your hours' and a request for a roof replacement estimate are not the same lead, and mixing them poisons your data.
+
+![A computer screen showing a monthly calendar used for scheduling appointments](/notes/photos/three-events-local-business-1.webp "Photo: Ed Hardie on Unsplash")
 
 Split them, mark the high-value event as a key event, and you can calculate what a visitor from each channel is actually worth. That is the number that tells you whether SEO is beating your ad spend, and it is the number I anchor every monthly report around.
 

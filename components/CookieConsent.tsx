@@ -37,9 +37,9 @@ export function CookieConsent() {
   if (!show) return null;
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-[70] border-t border-line bg-surface">
-      <div className="container-pad flex flex-wrap items-center justify-between gap-x-6 gap-y-3 py-3.5">
-        <p className="font-mono text-[11.5px] text-muted">
+    <div className="fixed inset-x-3 bottom-3 z-[70] mx-auto max-w-2xl rounded-2xl border border-line bg-bg shadow-float sm:inset-x-6">
+      <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 px-5 py-4">
+        <p className="text-[14px] text-muted">
           Anonymous analytics only, nothing loads until you choose.{" "}
           <Link href="/cookies" className="underline hover:text-ink">
             Details
@@ -49,14 +49,14 @@ export function CookieConsent() {
           <button
             type="button"
             onClick={() => choose("denied")}
-            className="rounded-sm border border-line px-3 py-1.5 font-mono text-[10.5px] uppercase tracking-[0.11em] text-muted transition-colors hover:text-ink"
+            className="btn btn-sm btn-secondary"
           >
             Reject
           </button>
           <button
             type="button"
             onClick={() => choose("granted")}
-            className="rounded-sm bg-ink px-3 py-1.5 font-mono text-[10.5px] uppercase tracking-[0.11em] text-bg"
+            className="btn btn-sm btn-primary"
           >
             Accept
           </button>

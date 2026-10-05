@@ -5,7 +5,9 @@ date: 2026-10-29
 draft: false
 seo_title: "Charles County MD SEO for small businesses"
 excerpt: "Charles County MD SEO for small businesses in Waldorf, St. Charles, La Plata and Indian Head, using a local game shop's real Search Console numbers."
-cover: /notes/illustrations/charles-county-md-small-business-seo.webp
+cover: /notes/photos/charles-county-md-small-business-seo-cover.webp
+cover_alt: "A row of older brick storefront buildings along a small-town main street"
+cover_credit: "Photo: J Dean on Unsplash"
 faq:
   - q: "How do I get my Waldorf business into near me searches?"
     a: "Complete your Google Business Profile with the right categories, hours and photos, and make sure your site names each thing you sell or do. Over The Table Top in Charles County shows up for 398 near-me searches."
@@ -41,6 +43,8 @@ Daniel's review: "He's been on top of things, not only what I asked, but also ou
 ## Start with the Business Profile
 
 For a shop with a counter people walk up to, the Google Business Profile is the first thing a local searcher sees. Keep the address visible, choose the most specific primary category that fits, and fill in hours, holiday hours, photos and products. Use your real business name with no keywords added.
+
+![An American flag reflected in the front window of a small downtown storefront](/notes/photos/charles-county-md-small-business-seo-1.webp "Photo: Michael Discenza on Unsplash")
 
 If you're a contractor or service business that goes to the customer, set it up as a service-area business instead. Remove the address, then add up to 20 service areas by city or ZIP code, within about 2 hours of driving. The [Business Profile setup guide](/notes/google-business-profile-for-roofers) walks through each setting.
 
