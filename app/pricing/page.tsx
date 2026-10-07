@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Ban, CalendarClock, Check, KeyRound, Landmark, Video } from "lucide-react";
+import { ArrowRight, Ban, CalendarClock, Check, KeyRound, Landmark, ShieldCheck, Video } from "lucide-react";
 import { Availability } from "@/components/Availability";
 import { RelatedNotes } from "@/components/RelatedNotes";
 import { getNote } from "@/lib/notes";
@@ -8,7 +8,7 @@ import { BookCta, BookNote, EmailCta } from "@/components/Cta";
 import { MobileCta } from "@/components/MobileCta";
 import { Reveal } from "@/components/Reveal";
 import { Stagger } from "@/components/Stagger";
-import { agency, monthly, oneTime, type Plan } from "@/lib/pricing";
+import { agency, monthly, oneTime, startup, type Plan } from "@/lib/pricing";
 import { site } from "@/lib/site";
 import { FaqSchema } from "@/components/Faq";
 
@@ -17,7 +17,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "SEO pricing in US dollars. A free intro call, a $750 site audit, a $1,800 setup sprint, and monthly plans from $600. White-label for agencies from $850 a site.",
+    "SEO pricing in US dollars. A free intro call, a $750 site audit, a $1,800 setup sprint, and monthly plans from $600. SEO and AI search for software startups at $1,500 a month. White-label for agencies from $850 a site.",
   alternates: { canonical: "/pricing" },
 };
 
@@ -29,8 +29,8 @@ const TERMS = [
   },
   {
     icon: <CalendarClock size={19} aria-hidden />,
-    t: "3 months minimum on monthly plans.",
-    b: "SEO takes that long to show up in Google. After that it's month to month, with 30 days' notice to cancel.",
+    t: "3 months minimum on home service plans.",
+    b: "SEO takes that long to show up in Google. After that it's month to month, with 30 days' notice to cancel. The software startup plan has a refundable first month instead.",
   },
   {
     icon: <Landmark size={19} aria-hidden />,
@@ -40,7 +40,7 @@ const TERMS = [
   {
     icon: <Ban size={19} aria-hidden />,
     t: "Not included.",
-    b: "Ad spend, ad management and long-form blog writing. If you need those, I'll say so up front and point you to someone.",
+    b: "Ad spend and ad management. Long-form articles are only in the software startup plan. If you need something else, I'll say so up front and point you to someone.",
   },
 ];
 
@@ -59,7 +59,7 @@ const FAQ = [
   },
   {
     q: "Do you only work with home service businesses?",
-    a: "Most of my work is roofers, pool deck, lawn and shutter companies, but I also work with clinics, shops and auto businesses. Same prices.",
+    a: "Most of my work is roofers, pool deck, lawn and shutter companies, but I also work with clinics, shops and auto businesses at the same prices. Software startups have their own plan, Search + AI, at $1,500 a month.",
   },
   {
     q: "What hours do you work?",
@@ -128,6 +128,7 @@ const pricingLd = {
   itemListElement: [
     ...oneTime.map(offer),
     ...monthly.map(offer),
+    offer(startup),
     ...agency.map((a) => ({
       "@type": "Offer",
       name: `Agency white-label: ${a.name}`,
@@ -196,6 +197,52 @@ export default function PricingPage() {
             <PlanCard key={p.key} p={p} />
           ))}
         </Stagger>
+      </section>
+
+      <section id="startups" className="container-pad scroll-mt-28 pt-20">
+        <div className="flex flex-wrap items-baseline justify-between gap-3">
+          <div>
+            <h2 className="t-h3">SEO and AI search for software startups</h2>
+            <p className="mt-1.5 text-[15px] text-muted">One change shipped to your site every working day, for Google and the AI assistants.</p>
+          </div>
+          <p className="text-[14px] text-muted">First month refundable, then month to month</p>
+        </div>
+        <div id={startup.key} className="card mt-6 grid scroll-mt-28 gap-8 p-6 sm:p-8 lg:grid-cols-[0.9fr_1.4fr] lg:gap-12">
+          <div className="flex flex-col gap-5">
+            <div className="flex items-center justify-between gap-3">
+              <span className="text-[14px] font-medium text-muted">{startup.kicker}</span>
+              <span className="eyebrow !text-[12px]">
+                {startup.seatsOpen > 0 ? `${startup.seatsOpen} of ${startup.seats} seats open` : "Waitlist"}
+              </span>
+            </div>
+            <div>
+              <h3 className="t-h3 !text-[1.5rem]">{startup.name}</h3>
+              <p className="mt-3 flex items-baseline gap-2">
+                <span className="tnum font-display text-[2.4rem] leading-none tracking-tight">{startup.price}</span>
+                <span className="text-[14px] text-muted">{startup.unit}</span>
+              </p>
+            </div>
+            <div className="flex gap-3 rounded-2xl bg-cream p-4 text-ink">
+              <ShieldCheck size={19} aria-hidden className="mt-0.5 flex-none text-brand" />
+              <p className="text-[14.5px] leading-relaxed">{startup.guarantee}</p>
+            </div>
+            <Link href="/saas-seo" data-track="cta_link" data-from="pricing_startup" className="btn btn-md btn-secondary self-start">
+              How the plan works
+              <ArrowRight size={17} aria-hidden />
+            </Link>
+          </div>
+          <div className="border-t border-line pt-6 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
+            <p className="text-[14px] font-medium text-muted">Every month:</p>
+            <ul className="mt-4 grid gap-x-8 gap-y-2.5 sm:grid-cols-2">
+              {startup.items.map((it) => (
+                <li key={it} className="grid grid-cols-[18px_1fr] gap-2.5 text-[15px]">
+                  <Check size={16} aria-hidden className="mt-1 text-brand" />
+                  <span>{it}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section id="agencies" className="container-pad scroll-mt-28 pt-20">

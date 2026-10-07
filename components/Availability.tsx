@@ -13,7 +13,8 @@ const CALL = [
 /**
  * The closing call to action on every page: one dark band, one job.
  */
-export function Availability() {
+/** `call` swaps the call bullets for a page with a different buyer (e.g. /saas-seo). */
+export function Availability({ call = CALL }: { call?: string[] } = {}) {
   return (
     <section id="contact" className="band">
       <div className="container-pad grid gap-12 py-20 md:grid-cols-[1.15fr_1fr] md:items-center md:gap-16 md:py-24">
@@ -44,7 +45,7 @@ export function Availability() {
           <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-7 sm:p-8">
             <p className="text-[15px] font-medium">What happens on the call</p>
             <ul className="mt-5 space-y-4">
-              {CALL.map((c) => (
+              {call.map((c) => (
                 <li key={c} className="flex gap-3 text-[15.5px] leading-snug">
                   <Check size={18} aria-hidden className="mt-0.5 flex-none text-[#7ED2A5]" />
                   <span className="muted">{c}</span>

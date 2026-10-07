@@ -55,6 +55,7 @@ const SERVICES = [
   { href: "/pricing#sprint", title: "Setup Sprint, $1,800", desc: "Tracking, speed, schema and fixes, done once." },
   { href: "/pricing#monthly", title: "Monthly SEO, from $600", desc: "New pages, Business Profile and a monthly report." },
   { href: "/pricing#agencies", title: "White-label for agencies", desc: "Technical SEO under your brand, from $850 a site." },
+  { href: "/saas-seo", title: "SEO + AI search for startups", desc: "Found on Google, named by ChatGPT. $1,500 a month." },
 ];
 
 const NOTES = [

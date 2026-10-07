@@ -139,3 +139,41 @@ export const agency = [
 
 /** Lowest monthly price, for "plans from" lines elsewhere on the site. */
 export const monthlyFrom = Math.min(...monthly.map((p) => p.amount));
+
+/**
+ * Search + AI: the software startup plan, sold on /saas-seo. A different buyer
+ * and different work from the home service plans above, so it lives on its own
+ * page and keeps its own terms: a refundable first month, then month to month.
+ *
+ * `seatsOpen` is printed on the page. Only ever set it to the real number of
+ * open seats; the cap is capacity, so it is never a scarcity line.
+ */
+export const startup: Plan & {
+  seats: number;
+  seatsOpen: number;
+  guarantee: string;
+  terms: string;
+} = {
+  key: "startup",
+  kicker: "For software startups",
+  name: "Search + AI",
+  amount: 1500,
+  price: "$1,500",
+  unit: "/month",
+  monthly: true,
+  seats: 5,
+  seatsOpen: 5,
+  items: [
+    "Up to 12 in-depth articles",
+    "50+ fixes to pages you already have",
+    "Comparison and alternatives pages",
+    "A free tool when your category has room for one",
+    "AI answer tracking across ChatGPT, Claude, Perplexity, Gemini and AI Overviews",
+    "Crawl and index checks, plus index requests",
+    "Directory listings and link outreach",
+    "A Monday report on what shipped and what moved",
+  ],
+  note: "One change shipped every working day. Five clients at a time.",
+  guarantee: "First month refundable. Ask within 7 days of it ending and the $1,500 comes back.",
+  terms: "Month to month after that, 30 days' notice to cancel.",
+};
