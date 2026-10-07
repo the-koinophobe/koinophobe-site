@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Ban, CalendarClock, Check, KeyRound, Landmark, ShieldCheck, Video } from "lucide-react";
+import { ArrowRight, Ban, CalendarClock, Check, KeyRound, Landmark, Video } from "lucide-react";
 import { Availability } from "@/components/Availability";
 import { RelatedNotes } from "@/components/RelatedNotes";
 import { getNote } from "@/lib/notes";
@@ -17,7 +17,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "SEO pricing in US dollars. A free intro call, a $750 site audit, a $1,800 setup sprint, and monthly plans from $600. SEO and AI search for software startups at $1,500 a month. White-label for agencies from $850 a site.",
+    "SEO pricing in US dollars. A free intro call, a $750 site audit, a $1,800 setup sprint, and monthly plans from $600. SEO and AI search for software startups at $1,000 a month. White-label for agencies from $850 a site.",
   alternates: { canonical: "/pricing" },
 };
 
@@ -30,7 +30,7 @@ const TERMS = [
   {
     icon: <CalendarClock size={19} aria-hidden />,
     t: "3 months minimum on home service plans.",
-    b: "SEO takes that long to show up in Google. After that it's month to month, with 30 days' notice to cancel. The software startup plan has a refundable first month instead.",
+    b: "SEO takes that long to show up in Google. After that it's month to month, with 30 days' notice to cancel. The software startup plan has no minimum: either side can stop with 30 days' notice.",
   },
   {
     icon: <Landmark size={19} aria-hidden />,
@@ -59,7 +59,7 @@ const FAQ = [
   },
   {
     q: "Do you only work with home service businesses?",
-    a: "Most of my work is roofers, pool deck, lawn and shutter companies, but I also work with clinics, shops and auto businesses at the same prices. Software startups have their own plan, Search + AI, at $1,500 a month.",
+    a: "Most of my work is roofers, pool deck, lawn and shutter companies, but I also work with clinics, shops and auto businesses at the same prices. Software startups have their own plan, Search + AI, at $1,000 a month.",
   },
   {
     q: "What hours do you work?",
@@ -203,9 +203,9 @@ export default function PricingPage() {
         <div className="flex flex-wrap items-baseline justify-between gap-3">
           <div>
             <h2 className="t-h3">SEO and AI search for software startups</h2>
-            <p className="mt-1.5 text-[15px] text-muted">One change shipped to your site every working day, for Google and the AI assistants.</p>
+            <p className="mt-1.5 text-[15px] text-muted">Measured, fixed and written for Google and the AI assistants, every change as a pull request.</p>
           </div>
-          <p className="text-[14px] text-muted">First month refundable, then month to month</p>
+          <p className="text-[14px] text-muted">No contract, 30 days&rsquo; notice to stop</p>
         </div>
         <div id={startup.key} className="card mt-6 grid scroll-mt-28 gap-8 p-6 sm:p-8 lg:grid-cols-[0.9fr_1.4fr] lg:gap-12">
           <div className="flex flex-col gap-5">
@@ -223,8 +223,10 @@ export default function PricingPage() {
               </p>
             </div>
             <div className="flex gap-3 rounded-2xl bg-cream p-4 text-ink">
-              <ShieldCheck size={19} aria-hidden className="mt-0.5 flex-none text-brand" />
-              <p className="text-[14.5px] leading-relaxed">{startup.guarantee}</p>
+              <CalendarClock size={19} aria-hidden className="mt-0.5 flex-none text-brand" />
+              <p className="text-[14.5px] leading-relaxed">
+                <span className="font-medium">{startup.termsLead}</span> {startup.terms}
+              </p>
             </div>
             <Link href="/saas-seo" data-track="cta_link" data-from="pricing_startup" className="btn btn-md btn-secondary self-start">
               How the plan works
@@ -241,8 +243,24 @@ export default function PricingPage() {
                 </li>
               ))}
             </ul>
+            {startup.extras.map((x) => (
+              <p key={x} className="mt-3 text-[14px] text-muted">
+                Plus, when it fits: {x.charAt(0).toLowerCase() + x.slice(1)}.
+              </p>
+            ))}
           </div>
         </div>
+        <p className="mt-4 text-[15px] text-muted">
+          How the AI side is measured:{" "}
+          <Link href="/notes/track-ai-search-visibility" className="text-ink underline underline-offset-4">
+            tracking AI search visibility
+          </Link>
+          . Free first step:{" "}
+          <Link href="/saas-seo#check" className="text-ink underline underline-offset-4">
+            the AI crawler check
+          </Link>
+          .
+        </p>
       </section>
 
       <section id="agencies" className="container-pad scroll-mt-28 pt-20">

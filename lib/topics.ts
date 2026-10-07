@@ -3,7 +3,7 @@
  * frontmatter (the CMS has a dropdown for it). Notes without one fall back to
  * the map below, and then to "strategy".
  */
-export type TopicKey = "roofing" | "local" | "trades" | "tracking" | "technical" | "strategy";
+export type TopicKey = "roofing" | "local" | "trades" | "tracking" | "technical" | "ai" | "strategy";
 
 export const topics: { key: TopicKey; label: string; title: string; blurb: string }[] = [
   {
@@ -34,7 +34,13 @@ export const topics: { key: TopicKey; label: string; title: string; blurb: strin
     key: "technical",
     label: "Technical SEO",
     title: "Technical SEO for contractor websites",
-    blurb: "Indexing, speed, Core Web Vitals, migrations, titles and how AI search picks pages.",
+    blurb: "Indexing, speed, Core Web Vitals, migrations, titles and what breaks when a site moves.",
+  },
+  {
+    key: "ai",
+    label: "AI search",
+    title: "AI search and SaaS SEO",
+    blurb: "How ChatGPT, Claude, Perplexity and AI Overviews pick their sources, measured, and what software companies can do about it.",
   },
   {
     key: "strategy",
@@ -97,9 +103,13 @@ export const TOPIC_BY_SLUG: Record<string, TopicKey> = {
   "contractor-website-not-showing-on-google": "technical",
   "core-web-vitals-contractor-websites": "technical",
   "zero-click-rankings-title-tags": "technical",
-  "ai-cited-vs-ranked-page": "technical",
-  "ai-search-local-business": "technical",
   "contractor-homepage-that-converts": "technical",
+  // ai search
+  "ai-cited-vs-ranked-page": "ai",
+  "ai-search-local-business": "ai",
+  "ai-crawlers-robots-txt": "ai",
+  "saas-comparison-pages": "ai",
+  "track-ai-search-visibility": "ai",
   // strategy and case studies
   "hiring-an-seo-questions-to-ask": "strategy",
   "how-long-does-seo-take": "strategy",

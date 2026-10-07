@@ -372,3 +372,9 @@ In the order I would actually do them.
 **4. Test the one surviving measure with an intervention.** Article markup is a correlation with an unresolved artifact explanation. Add `Article` markup to a set of matched vendor pages that do not have it, leave a matched set alone, and watch citation over a quarter. That is the only design here that could produce a causal claim, and it is the claim every vendor actually wants.
 
 **5. Watch concentration over time.** One measurement of 58.3% in the top ten is a fact about September 2026. The question a vendor at number eleven cares about is whether that number is rising.
+
+## Where this went next
+
+Three follow-up notes turn the findings into practice for software companies. [AI crawlers and robots.txt](/notes/ai-crawlers-robots-txt) covers the split between crawlers that fetch pages to cite them and crawlers that collect training data, which is the measure this study had to correct. [Comparison pages](/notes/saas-comparison-pages) looks at why head-to-head questions drew on the fewest sources. [Tracking AI search visibility](/notes/track-ai-search-visibility) turns finding 3 into a method a founder can run in a spreadsheet.
+
+The same tracking, run monthly against a client's own buyer questions, is the measurement half of the [Search + AI plan](/saas-seo).

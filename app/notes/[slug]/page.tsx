@@ -47,6 +47,8 @@ export default function NotePage({ params }: { params: { slug: string } }) {
   if (!note) notFound();
 
   const topic = topics.find((t) => t.key === note.topic)!;
+  // AI search notes are read by founders, so their calls to action point at /saas-seo.
+  const isAi = topic.key === "ai";
   const related = relatedNotes(note, 3);
   const { newer, older } = adjacentNotes(note);
   const url = `https://koinophobe.com/notes/${note.slug}`;
@@ -169,8 +171,8 @@ export default function NotePage({ params }: { params: { slug: string } }) {
                   <Link href="/notes/what-is-a-koinophobe" className="text-ink underline underline-offset-4">
                     Koinophobe
                   </Link>
-                  , a technical SEO practice for home service businesses in the US. 30+ sites over two
-                  years, with the numbers on the{" "}
+                  , a technical SEO practice for {isAi ? "software startups and home service businesses" : "home service businesses"} in
+                  the US. 30+ sites over two years, with the numbers on the{" "}
                   <Link href="/work" className="text-ink underline underline-offset-4">
                     work page
                   </Link>
@@ -210,13 +212,19 @@ export default function NotePage({ params }: { params: { slug: string } }) {
                 </nav>
               ) : null}
               <div className="card bg-surface p-6">
-                <p className="t-h3 !text-[1.2rem]">Want this done on your site?</p>
+                <p className="t-h3 !text-[1.2rem]">{isAi ? "Want your product in the answer?" : "Want this done on your site?"}</p>
                 <p className="mt-2 text-[14.5px] leading-relaxed text-muted">
-                  Book a free 20-minute call. I&rsquo;ll look at your site first and tell you what I&rsquo;d fix.
+                  {isAi
+                    ? "Run the free AI crawler check, or book 20 minutes and I\u2019ll bring what the assistants say about your category."
+                    : "Book a free 20-minute call. I\u2019ll look at your site first and tell you what I\u2019d fix."}
                 </p>
                 <div className="mt-5 flex flex-col gap-2.5">
                   <BookCta from="note_sidebar" size="md" className="w-full" />
-                  <PageCta href="/pricing" label="See pricing" from="note_sidebar" size="md" className="w-full" />
+                  {isAi ? (
+                    <PageCta href="/saas-seo#check" label="Check your site free" from="note_sidebar_ai" size="md" className="w-full" />
+                  ) : (
+                    <PageCta href="/pricing" label="See pricing" from="note_sidebar" size="md" className="w-full" />
+                  )}
                 </div>
               </div>
             </div>
@@ -242,7 +250,17 @@ export default function NotePage({ params }: { params: { slug: string } }) {
         </section>
       ) : null}
 
-      <Availability />
+      <Availability
+        call={
+          isAi
+            ? [
+                "I check your robots.txt, your rendering and what the assistants say about your category before we talk.",
+                "You get the first few changes I'd ship, in order.",
+                "If it isn't a fit, I'll tell you that on the call.",
+              ]
+            : undefined
+        }
+      />
       <MobileCta />
     </>
   );

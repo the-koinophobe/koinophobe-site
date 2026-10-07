@@ -55,7 +55,7 @@ const SERVICES = [
   { href: "/pricing#sprint", title: "Setup Sprint, $1,800", desc: "Tracking, speed, schema and fixes, done once." },
   { href: "/pricing#monthly", title: "Monthly SEO, from $600", desc: "New pages, Business Profile and a monthly report." },
   { href: "/pricing#agencies", title: "White-label for agencies", desc: "Technical SEO under your brand, from $850 a site." },
-  { href: "/saas-seo", title: "SEO + AI search for startups", desc: "Found on Google, named by ChatGPT. $1,500 a month." },
+  { href: "/saas-seo", title: "SEO + AI search for startups", desc: "Found on Google, cited by ChatGPT. $1,000 a month." },
 ];
 
 const NOTES = [
@@ -63,6 +63,7 @@ const NOTES = [
   { href: "/notes/topic/local", title: "Local SEO", desc: "Business Profile, map pack, near me" },
   { href: "/notes/topic/tracking", title: "Call tracking", desc: "GA4, Tag Manager, Search Console" },
   { href: "/notes/topic/trades", title: "By trade", desc: "Plumbing, HVAC, lawn, pest and more" },
+  { href: "/notes/topic/ai", title: "AI search", desc: "ChatGPT, Claude, AI Overviews, measured" },
   { href: "/notes", title: "All notes", desc: "Everything, newest first" },
 ];
 

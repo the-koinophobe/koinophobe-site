@@ -143,7 +143,9 @@ export const monthlyFrom = Math.min(...monthly.map((p) => p.amount));
 /**
  * Search + AI: the software startup plan, sold on /saas-seo. A different buyer
  * and different work from the home service plans above, so it lives on its own
- * page and keeps its own terms: a refundable first month, then month to month.
+ * page and keeps its own terms: no contract, and either side can stop with 30
+ * days' notice. `items` is what ships every month, so every line in it must be
+ * something countable that I control. Anything conditional goes in `extras`.
  *
  * `seatsOpen` is printed on the page. Only ever set it to the real number of
  * open seats; the cap is capacity, so it is never a scarcity line.
@@ -151,29 +153,28 @@ export const monthlyFrom = Math.min(...monthly.map((p) => p.amount));
 export const startup: Plan & {
   seats: number;
   seatsOpen: number;
-  guarantee: string;
+  extras: string[];
+  termsLead: string;
   terms: string;
 } = {
   key: "startup",
   kicker: "For software startups",
   name: "Search + AI",
-  amount: 1500,
-  price: "$1,500",
+  amount: 1000,
+  price: "$1,000",
   unit: "/month",
   monthly: true,
   seats: 5,
   seatsOpen: 5,
   items: [
-    "Up to 12 in-depth articles",
+    "Citation tracking: your buyer questions across 4 assistants, 3 runs each",
+    "12 in-depth articles, comparison and alternatives pages included",
     "50+ fixes to pages you already have",
-    "Comparison and alternatives pages",
-    "A free tool when your category has room for one",
-    "AI answer tracking across ChatGPT, Claude, Perplexity, Gemini and AI Overviews",
-    "Crawl and index checks, plus index requests",
-    "Directory listings and link outreach",
-    "A Monday report on what shipped and what moved",
+    "Every change sent as a pull request",
+    "A Friday changelog and a month-end citation report",
   ],
-  note: "One change shipped every working day. Five clients at a time.",
-  guarantee: "First month refundable. Ask within 7 days of it ending and the $1,500 comes back.",
-  terms: "Month to month after that, 30 days' notice to cancel.",
+  note: "Measured, fixed and written every month. Five clients at a time.",
+  extras: ["A free tool when your category has room for one"],
+  termsLead: "No contract.",
+  terms: "If you're not satisfied at any point, tell me and we stop 30 days later.",
 };

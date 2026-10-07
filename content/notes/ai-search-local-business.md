@@ -77,3 +77,5 @@ Every step above is also sound practice for regular Google search, so none of it
 ## Next step
 
 Check that your business name matches across your site and your Business Profile, then look at your About page with fresh eyes. If you'd like me to look over your schema and name signals, [send me your site](/contact) and I'll reply the same business day.
+
+Run a software company instead? The same study points somewhere more specific for you: [which AI crawlers can read your site](/notes/ai-crawlers-robots-txt), [comparison and alternatives pages](/notes/saas-comparison-pages), and [tracking AI answers with repeated runs](/notes/track-ai-search-visibility). That work, done monthly, is the [Search + AI plan](/saas-seo).
