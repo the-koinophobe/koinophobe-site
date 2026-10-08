@@ -45,7 +45,7 @@ Your agency's name goes on the reports. I stay invisible to your client unless y
 
 Your client still owns every account. I get added as a user to their Analytics, Search Console, Tag Manager and Business Profile, the same way your own staff would be. If the client leaves you, nothing is stuck with me.
 
-I work 9 to 5 Eastern and reply the same business day, which matters when your client calls you about a form that stopped working.
+I reply the same business day, which matters when your client calls you about a form that stopped working.
 
 ## What the results look like
 

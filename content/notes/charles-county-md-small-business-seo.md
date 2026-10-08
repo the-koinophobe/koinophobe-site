@@ -72,4 +72,4 @@ Name the Charles County towns your customers come from on your contact page and 
 
 Rankings that climb without clicks usually point at the snippet: the title tag and meta description that show in results, and whether the page does what the searcher came to do. Across three sites I work on, 307 search terms ranked in the top ten in 28 days and got zero clicks. I go through the fix in [zero-click rankings and title tags](/notes/zero-click-rankings-title-tags).
 
-If you run a small business in Charles County and want to know where your site stands, start with a Site Audit on my [pricing page](/pricing), or [send me a message](/contact). I reply the same business day, 9 to 5 Eastern.
+If you run a small business in Charles County and want to know where your site stands, start with a Site Audit on my [pricing page](/pricing), or [send me a message](/contact). I reply the same business day.

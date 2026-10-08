@@ -64,8 +64,8 @@ const CONTACT_FAQ: FaqItem[] = [
     a: "Yes. Email me your website and I'll reply the same business day. If you'd rather not talk at all, ask for a video review and I'll record what I'd fix first.",
   },
   {
-    q: "When do you work?",
-    a: "9 to 5 Eastern, with replies the same business day.",
+    q: "How fast do you reply?",
+    a: "The same business day, by email, or on a call booked at a time that suits you.",
   },
 ];
 
@@ -103,7 +103,7 @@ export default function ContactPage() {
                 />
               </div>
               <figcaption className="mt-4 text-center text-[13.5px] text-muted">
-                Last seen working 9 to 5 Eastern.
+                Last seen answering email the same day.
               </figcaption>
             </figure>
           </Reveal>
@@ -143,7 +143,7 @@ export default function ContactPage() {
               {site.email}
             </a>
             <p className="mt-6 max-w-[42ch] text-muted">
-              I read everything myself. I work 9 to 5 Eastern and reply the same business day.
+              I read everything myself and reply the same business day.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3">
               <a

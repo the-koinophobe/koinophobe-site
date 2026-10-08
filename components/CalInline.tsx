@@ -93,8 +93,7 @@ export function CalInline() {
       {!open && (
         <div className="flex flex-col items-start gap-5 p-7 sm:p-9">
           <p className="max-w-[40ch] text-[15.5px] text-muted">
-            Pick a time that suits you. The calendar shows your local time, and every slot is
-            inside {site.hours.split(",")[0]}.
+            Pick a time that suits you. The calendar shows your local time.
           </p>
           <button
             type="button"

@@ -99,8 +99,8 @@ const WORKING = [
   },
   {
     icon: <Globe size={17} aria-hidden />,
-    title: "9 to 5 Eastern.",
-    body: "Calls on your clock, and replies the same business day.",
+    title: "Replies the same day.",
+    body: "Calls at a time that suits you, and email answered the same business day.",
   },
 ];
 

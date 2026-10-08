@@ -15,7 +15,11 @@ import { ThemeToggle } from "./ThemeToggle";
  * custom-property changes driven from one effect, so React never re-renders
  * on hover.
  *
- * Pricing and About are plain links; Work, Services and Notes open panels.
+ * Five items: Work, Services, Pricing, Notes, About. Work and Notes are real
+ * links to their pages and open their panel on hover, with a separate chevron
+ * button for touch and keyboard. Services has no page of its own, so its label
+ * is the button. On phones the sheet shows the same five rows, with the three
+ * menus as collapsible submenus.
  */
 
 const WORK = [
@@ -63,8 +67,7 @@ const NOTES = [
   { href: "/notes/topic/local", title: "Local SEO", desc: "Business Profile, map pack, near me" },
   { href: "/notes/topic/tracking", title: "Call tracking", desc: "GA4, Tag Manager, Search Console" },
   { href: "/notes/topic/trades", title: "By trade", desc: "Plumbing, HVAC, lawn, pest and more" },
-  { href: "/notes/topic/ai", title: "AI search", desc: "ChatGPT, Claude, AI Overviews, measured" },
-  { href: "/notes", title: "All notes", desc: "Everything, newest first" },
+  { href: "/notes/topic/ai", title: "AI search", desc: "ChatGPT, Claude, AI Overviews" },
 ];
 
 const MENUS = ["work", "services", "notes"] as const;
@@ -81,12 +84,73 @@ function Chevron() {
   );
 }
 
+/** One row of the phone menu with a collapsible submenu under it. */
+function SheetGroup({
+  id,
+  label,
+  href,
+  items,
+  open,
+  onToggle,
+}: {
+  id: MenuId;
+  label: string;
+  href?: string;
+  items: { href: string; title: string }[];
+  open: boolean;
+  onToggle: (id: MenuId | null) => void;
+}) {
+  const panelId = `hx-sub-${id}`;
+  const toggle = () => onToggle(open ? null : id);
+  return (
+    <div className="hx-sgroup">
+      {href ? (
+        <div className="hx-shead">
+          <Link className="hx-srow" href={href}>
+            {label}
+          </Link>
+          <button
+            type="button"
+            className="hx-stoggle"
+            aria-expanded={open}
+            aria-controls={panelId}
+            aria-label={`${open ? "Hide" : "Show"} ${label.toLowerCase()} links`}
+            onClick={toggle}
+          >
+            <Chevron />
+          </button>
+        </div>
+      ) : (
+        <button type="button" className="hx-srow hx-srow-btn" aria-expanded={open} aria-controls={panelId} onClick={toggle}>
+          {label}
+          <span className="hx-stoggle" aria-hidden>
+            <Chevron />
+          </span>
+        </button>
+      )}
+      <div id={panelId} className={`hx-ssub${open ? " open" : ""}`} aria-hidden={!open}>
+        <div>
+          {items.map((it) => (
+            <Link key={it.href} href={it.href} tabIndex={open ? 0 : -1}>
+              {it.title}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function Header() {
   const pathname = usePathname() ?? "/";
   const headerRef = useRef<HTMLElement | null>(null);
   const [sheetOpen, setSheetOpen] = useState(false);
+  const [sub, setSub] = useState<MenuId | null>(null);
 
   useEffect(() => setSheetOpen(false), [pathname]);
+  useEffect(() => {
+    if (!sheetOpen) setSub(null);
+  }, [sheetOpen]);
 
   // The dropdown. Plain DOM work inside one effect, mirroring the spec it was
   // built from, so pointer movement never triggers a React render.
@@ -96,7 +160,10 @@ export function Header() {
     const nav = header.querySelector<HTMLElement>("#hx-nav");
     const dd = header.querySelector<HTMLElement>("#hx-dd");
     if (!nav || !dd) return;
-    const triggers = Array.from(nav.querySelectorAll<HTMLButtonElement>(".hx-trigger"));
+    const triggers = Array.from(nav.querySelectorAll<HTMLElement>(".hx-trigger"));
+    const carets = Array.from(nav.querySelectorAll<HTMLButtonElement>(".hx-caret"));
+    const expand = (id: MenuId | null) =>
+      [...triggers, ...carets].forEach((t) => t.setAttribute("aria-expanded", String(t.dataset.menu === id)));
     const panels = Object.fromEntries(
       MENUS.map((id) => [id, dd.querySelector<HTMLElement>(`[data-panel="${id}"]`)!])
     ) as Record<MenuId, HTMLElement>;
@@ -156,14 +223,14 @@ export function Header() {
         place(id);
       }
       next.setAttribute("data-state", "active");
-      triggers.forEach((t) => t.setAttribute("aria-expanded", String(t.dataset.menu === id)));
+      expand(id);
       current = id;
     };
 
     const close = () => {
       dd.classList.remove("open");
       if (current) panels[current].removeAttribute("data-state");
-      triggers.forEach((t) => t.setAttribute("aria-expanded", "false"));
+      expand(null);
       current = null;
     };
 
@@ -187,7 +254,18 @@ export function Header() {
       on(t, "pointerenter", (e: PointerEvent) => {
         if (e.pointerType === "mouse") open(id);
       });
-      on(t, "click", () => (current === id ? close() : open(id)));
+      // A link trigger navigates; only the button trigger toggles.
+      on(t, "click", () => {
+        if (t.tagName === "BUTTON") current === id ? close() : open(id);
+        else close();
+      });
+    });
+    carets.forEach((c) => {
+      const id = c.dataset.menu as MenuId;
+      on(c, "pointerenter", (e: PointerEvent) => {
+        if (e.pointerType === "mouse") open(id);
+      });
+      on(c, "click", () => (current === id ? close() : open(id)));
     });
 
     nav.querySelectorAll<HTMLElement>(".hx-plain").forEach((a) =>
@@ -254,9 +332,12 @@ export function Header() {
 
         <nav className="hx-nav" id="hx-nav" aria-label="Main">
           <ul className="hx-links">
-            <li>
-              <button type="button" className="hx-trigger" data-menu="work" aria-expanded="false">
-                Work <Chevron />
+            <li className="hx-split">
+              <Link className="hx-trigger" data-menu="work" href="/work" aria-current={pathname === "/work" ? "page" : undefined}>
+                Work
+              </Link>
+              <button type="button" className="hx-caret" data-menu="work" aria-expanded="false" aria-label="Show case studies">
+                <Chevron />
               </button>
             </li>
             <li>
@@ -269,9 +350,12 @@ export function Header() {
                 Pricing
               </Link>
             </li>
-            <li>
-              <button type="button" className="hx-trigger" data-menu="notes" aria-expanded="false">
-                Notes <Chevron />
+            <li className="hx-split">
+              <Link className="hx-trigger" data-menu="notes" href="/notes" aria-current={pathname.startsWith("/notes") ? "page" : undefined}>
+                Notes
+              </Link>
+              <button type="button" className="hx-caret" data-menu="notes" aria-expanded="false" aria-label="Show note topics">
+                <Chevron />
               </button>
             </li>
             <li>
@@ -353,29 +437,16 @@ export function Header() {
           if ((e.target as Element).closest("a")) setSheetOpen(false);
         }}
       >
-        <h3>Services</h3>
-        {SERVICES.map((s) => (
-          <Link key={s.href} href={s.href}>
-            {s.title}
-          </Link>
-        ))}
-        <Link href="/pricing">All pricing</Link>
-        <h3>Work</h3>
-        <Link href="/work">All case studies</Link>
-        {WORK.map((w) => (
-          <Link key={w.href} href={w.href}>
-            {w.title}
-          </Link>
-        ))}
-        <h3>Notes</h3>
-        {NOTES.map((n) => (
-          <Link key={n.href} href={n.href}>
-            {n.title}
-          </Link>
-        ))}
-        <h3>Koinophobe</h3>
-        <Link href="/about">About</Link>
-        <Link href="/contact">Contact</Link>
+        <nav aria-label="Menu">
+          <SheetGroup id="work" label="Work" href="/work" open={sub === "work"} onToggle={setSub}
+            items={WORK.map((w) => ({ href: w.href, title: w.title }))} />
+          <SheetGroup id="services" label="Services" open={sub === "services"} onToggle={setSub}
+            items={SERVICES.map((x) => ({ href: x.href, title: x.title }))} />
+          <Link className="hx-srow" href="/pricing">Pricing</Link>
+          <SheetGroup id="notes" label="Notes" href="/notes" open={sub === "notes"} onToggle={setSub}
+            items={NOTES.map((n) => ({ href: n.href, title: n.title }))} />
+          <Link className="hx-srow" href="/about">About</Link>
+        </nav>
         <div className="hx-sheet-foot">
           <a
             className="btn btn-md btn-primary"

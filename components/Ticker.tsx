@@ -8,7 +8,7 @@ const PHRASES = [
   "Two years of client work",
   "Site migrations",
   "White-label for agencies",
-  "9 to 5 Eastern",
+  "Same-day replies",
 ];
 
 export function Ticker() {

@@ -412,7 +412,7 @@ export default function HomePage() {
             <h2 className="t-h2 mt-5">Hi, I&rsquo;m Michael. You&rsquo;ll deal with me directly.</h2>
             <p className="t-lead mt-5 max-w-[56ch]">
               I&rsquo;ve worked on 30+ sites over two years, much of it for marketing agencies under their brand.
-              I work 9 to 5 Eastern and reply the same business day.
+              I reply the same business day.
             </p>
             <ul className="mt-7 space-y-3 text-[16px]">
               {[

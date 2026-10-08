@@ -14,7 +14,7 @@ export const site = {
   calLink: "koinophobe/intro",
   booking: "https://cal.com/koinophobe/intro",
   /** Said next to every booking button. Only change it if the promise changes. */
-  hours: "9 to 5 Eastern, same-day replies",
+  hours: "same-day replies",
   nav: [
     { label: "Home", href: "/" },
     { label: "Work", href: "/work" },

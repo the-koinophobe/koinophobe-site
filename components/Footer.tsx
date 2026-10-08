@@ -6,7 +6,7 @@ import { CookieSettingsButton } from "./CookieSettingsButton";
 import { SiteVisits } from "./SiteVisits";
 import { XIcon } from "./Availability";
 
-const COLS: { title: string; links: { href: string; label: string }[] }[] = [
+const COLS: { title: string; href?: string; links: { href: string; label: string }[] }[] = [
   {
     title: "Services",
     links: [
@@ -21,8 +21,8 @@ const COLS: { title: string; links: { href: string; label: string }[] }[] = [
   },
   {
     title: "Work",
+    href: "/work",
     links: [
-      { href: "/work", label: "All case studies" },
       { href: "/work#myofascial-clinic", label: "Pain clinic" },
       { href: "/work#roofing-contractor", label: "Roofing contractor" },
       { href: "/work#tint-lordz", label: "Tint Lordz Auto Spa" },
@@ -32,10 +32,8 @@ const COLS: { title: string; links: { href: string; label: string }[] }[] = [
   },
   {
     title: "Notes",
-    links: [
-      ...topics.map((t) => ({ href: `/notes/topic/${t.key}`, label: t.label })),
-      { href: "/notes", label: "All notes" },
-    ],
+    href: "/notes",
+    links: topics.map((t) => ({ href: `/notes/topic/${t.key}`, label: t.label })),
   },
   {
     title: "Koinophobe",
@@ -63,7 +61,7 @@ export function Footer() {
             <p className="muted mt-4 max-w-[34ch] text-[15px] leading-relaxed">
               Technical SEO and call tracking for home service businesses in the US, by {site.owner}.
             </p>
-            <p className="muted mt-4 text-[14px]">{site.hours}</p>
+            <p className="muted mt-4 text-[14px]">Replies the same business day</p>
             <a href={`mailto:${site.email}`} className="mt-1 inline-block text-[14px] underline-offset-4 hover:underline">
               {site.email}
             </a>
@@ -78,7 +76,13 @@ export function Footer() {
           </div>
           {COLS.map((c) => (
             <nav key={c.title} aria-label={c.title}>
-              <p className="text-[14px] font-medium">{c.title}</p>
+              {c.href ? (
+                <Link href={c.href} className="text-[14px] font-medium underline-offset-4 hover:underline">
+                  {c.title}
+                </Link>
+              ) : (
+                <p className="text-[14px] font-medium">{c.title}</p>
+              )}
               <ul className="mt-4 space-y-2.5">
                 {c.links.map((l) => (
                   <li key={l.href}>

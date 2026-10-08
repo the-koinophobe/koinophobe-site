@@ -61,10 +61,6 @@ const FAQ = [
     q: "Do you only work with home service businesses?",
     a: "Most of my work is roofers, pool deck, lawn and shutter companies, but I also work with clinics, shops and auto businesses at the same prices. Software startups have their own plan, Search + AI, at $1,000 a month.",
   },
-  {
-    q: "What hours do you work?",
-    a: "9 to 5 Eastern. I reply to email the same business day.",
-  },
 ];
 
 function PlanCard({ p }: { p: Plan }) {
