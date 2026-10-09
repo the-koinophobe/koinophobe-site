@@ -185,9 +185,10 @@ export default function AiSearchPage() {
               For business owners whose customers ask ChatGPT <span className="text-brand">before they call</span>.
             </h1>
             <p className="t-lead mt-6 max-w-[58ch]">
-              I&rsquo;m Michael Edward. I get businesses named and cited by ChatGPT, Claude, Perplexity and
-              Google&rsquo;s AI Overviews: I fix what keeps assistants from reading your site, write the pages they
-              quote, and measure the answers every month with a method I&rsquo;ve published.
+              I&rsquo;m Michael Edward. I get businesses named and cited by ChatGPT, Claude, Perplexity, Gemini and
+              Google&rsquo;s AI Overviews, and readable by AI agents like Manus. I fix what keeps assistants from
+              reading your site, write the pages they quote, and measure the answers every month with a method
+              I&rsquo;ve published.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <BookCta from="ai_hero" />

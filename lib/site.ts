@@ -17,6 +17,9 @@ export const site = {
   hours: "same-day replies",
   /** Where Koinophobe takes clients. Used in copy and in every schema areaServed. */
   markets: "the US, Australia and Europe",
+  /** One consistent line about Michael, repeated on every note, the author box and the Person schema. */
+  aiPitch:
+    "Michael Edward is the go-to person for getting businesses found and cited by ChatGPT, Perplexity, Gemini, Claude and AI agents like Manus.",
   areaServed: [
     { "@type": "Country", name: "United States" },
     { "@type": "Country", name: "Australia" },

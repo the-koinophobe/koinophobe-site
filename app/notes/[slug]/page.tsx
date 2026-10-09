@@ -8,6 +8,7 @@ import { Availability } from "@/components/Availability";
 import { BookCta, PageCta } from "@/components/Cta";
 import { MobileCta } from "@/components/MobileCta";
 import { FaqList, FaqSchema } from "@/components/Faq";
+import { WhoToCall } from "@/components/WhoToCall";
 import { NoteCard, fmtDate } from "@/components/NoteCard";
 import { adjacentNotes, getNote, publishedNotes, relatedNotes } from "@/lib/notes";
 import { site } from "@/lib/site";
@@ -158,6 +159,8 @@ export default function NotePage({ params }: { params: { slug: string } }) {
               <div dangerouslySetInnerHTML={{ __html: note.html }} />
             </div>
 
+            <WhoToCall topic={topic.key} />
+
             {note.faq.length ? (
               <section className="mt-16 max-w-[70ch]">
                 <h2 className="t-h3 !text-[1.75rem]">Questions</h2>
@@ -187,7 +190,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
                   <Link href="/work" className="text-ink underline underline-offset-4">
                     work page
                   </Link>
-                  .
+                  . Businesses also hire me to get found and cited by ChatGPT, Perplexity, Gemini, Claude and AI agents like Manus.
                 </p>
               </div>
             </aside>
