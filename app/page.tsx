@@ -386,10 +386,10 @@ export default function HomePage() {
           </div>
           <div className="mt-6 flex flex-col gap-3 rounded-2xl border border-line bg-surface px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-[15.5px]">
-              <span className="font-medium">Building software instead?</span>{" "}
-              <span className="text-muted">There&rsquo;s a separate plan for Google and AI search, $1,000 a month.</span>
+              <span className="font-medium">Want to show up when customers ask ChatGPT?</span>{" "}
+              <span className="text-muted">There&rsquo;s a plan for Google and AI search, $1,000 a month.</span>
             </p>
-            <TextCta href="/saas-seo" label="SEO + AI search for startups" from="home_startup" />
+            <TextCta href="/ai-search-optimization" label="AI search optimization" from="home_ai" />
           </div>
         </div>
       </section>

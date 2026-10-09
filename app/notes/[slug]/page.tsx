@@ -24,21 +24,22 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const note = getNote(params.slug);
   if (!note) return {};
   const title = note.seoTitle || note.title;
+  const description = note.seoDescription || note.excerpt;
   const images = note.cover ? [{ url: note.cover, width: 1600, height: 900, alt: note.coverAlt }] : undefined;
   return {
     title,
-    description: note.excerpt,
+    description,
     alternates: { canonical: `/notes/${note.slug}` },
     openGraph: {
       title,
-      description: note.excerpt,
+      description,
       type: "article",
       publishedTime: note.date,
       authors: ["Michael Edward"],
       section: topicLabel(note.topic),
       ...(images ? { images } : {}),
     },
-    twitter: { card: "summary_large_image", title, description: note.excerpt, ...(images ? { images: [note.cover] } : {}) },
+    twitter: { card: "summary_large_image", title, description, ...(images ? { images: [note.cover] } : {}) },
   };
 }
 
@@ -47,7 +48,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
   if (!note) notFound();
 
   const topic = topics.find((t) => t.key === note.topic)!;
-  // AI search notes are read by founders, so their calls to action point at /saas-seo.
+  // AI search notes get calls to action for the AI search offer instead of the local plans.
   const isAi = topic.key === "ai";
   const related = relatedNotes(note, 3);
   const { newer, older } = adjacentNotes(note);
@@ -171,7 +172,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
                   <Link href="/notes/what-is-a-koinophobe" className="text-ink underline underline-offset-4">
                     Koinophobe
                   </Link>
-                  , a technical SEO practice for {isAi ? "software startups and home service businesses" : "home service businesses"} in
+                  , a technical SEO practice for {isAi ? "US businesses that want to show up in AI answers" : "home service businesses"} in
                   the US. 30+ sites over two years, with the numbers on the{" "}
                   <Link href="/work" className="text-ink underline underline-offset-4">
                     work page
@@ -212,7 +213,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
                 </nav>
               ) : null}
               <div className="card bg-surface p-6">
-                <p className="t-h3 !text-[1.2rem]">{isAi ? "Want your product in the answer?" : "Want this done on your site?"}</p>
+                <p className="t-h3 !text-[1.2rem]">{isAi ? "Want your business in the answer?" : "Want this done on your site?"}</p>
                 <p className="mt-2 text-[14.5px] leading-relaxed text-muted">
                   {isAi
                     ? "Run the free AI crawler check, or book 20 minutes and I\u2019ll bring what the assistants say about your category."
@@ -221,7 +222,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
                 <div className="mt-5 flex flex-col gap-2.5">
                   <BookCta from="note_sidebar" size="md" className="w-full" />
                   {isAi ? (
-                    <PageCta href="/saas-seo#check" label="Check your site free" from="note_sidebar_ai" size="md" className="w-full" />
+                    <PageCta href="/ai-search-optimization#check" label="Check your site free" from="note_sidebar_ai" size="md" className="w-full" />
                   ) : (
                     <PageCta href="/pricing" label="See pricing" from="note_sidebar" size="md" className="w-full" />
                   )}

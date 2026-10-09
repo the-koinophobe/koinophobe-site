@@ -90,4 +90,4 @@ My study set its threshold before I looked at any data: a difference only counte
 
 Before tracking, make sure the assistants can read you: the [AI crawler guide](/notes/ai-crawlers-robots-txt) covers which crawlers matter, and the [free crawler check](/saas-seo#check) tests your site in ten seconds. Then give them something worth citing; head-to-head questions draw on the smallest pool of sources, which is why I start with [comparison pages](/notes/saas-comparison-pages).
 
-This tracking setup, run with three runs per question across four assistants, is the measurement half of the [Search + AI plan](/saas-seo). Each month ends with the citation report, so you can see what the work did.
+This tracking setup, run with three runs per question across four assistants, is the measurement half of my [AI search optimization](/ai-search-optimization) service. To see the clicks as well, [track ChatGPT traffic in GA4](/notes/track-chatgpt-traffic-ga4). Each month ends with the citation report, so you can see what the work did.

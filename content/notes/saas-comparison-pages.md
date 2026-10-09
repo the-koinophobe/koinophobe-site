@@ -80,4 +80,4 @@ I put every comparison page on a quarterly check: re-verify the table, update `d
 
 Pick the two competitors your buyers mention most on sales calls and build one "vs" page and one "alternatives" page for each. Then [track whether they get cited](/notes/track-ai-search-visibility), using repeated runs, since one answer from ChatGPT tells you very little.
 
-Comparison and alternatives pages are part of every month on the [Search + AI plan](/saas-seo). If you'd like to see where you stand first, the [free crawler check](/saas-seo#check) takes ten seconds.
+Comparison and alternatives pages are part of every month on the [Search + AI plan](/saas-seo). For what gets cited beyond comparisons, see [content that AI cites](/notes/content-ai-cites). If you'd like to see where you stand first, the [free crawler check](/saas-seo#check) takes ten seconds.

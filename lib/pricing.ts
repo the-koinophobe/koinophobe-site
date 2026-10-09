@@ -158,7 +158,7 @@ export const startup: Plan & {
   terms: string;
 } = {
   key: "startup",
-  kicker: "For software startups",
+  kicker: "Google and AI search",
   name: "Search + AI",
   amount: 1000,
   price: "$1,000",

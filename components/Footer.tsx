@@ -15,6 +15,7 @@ const COLS: { title: string; href?: string; links: { href: string; label: string
       { href: "/pricing#sprint", label: "Setup Sprint" },
       { href: "/pricing#monthly", label: "Monthly SEO plans" },
       { href: "/pricing#agencies", label: "White-label for agencies" },
+      { href: "/ai-search-optimization", label: "AI search optimization" },
       { href: "/saas-seo", label: "SaaS SEO and AI search" },
       { href: "/pricing", label: "All pricing" },
     ],

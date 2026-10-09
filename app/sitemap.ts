@@ -33,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/work`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/pricing`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/roofing-seo`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/ai-search-optimization`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/saas-seo`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/about`, lastModified: now, changeFrequency: "yearly", priority: 0.6 },
     { url: `${base}/notes`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },

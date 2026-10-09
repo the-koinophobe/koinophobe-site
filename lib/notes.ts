@@ -12,6 +12,8 @@ export type Note = {
   draft: boolean;
   /** Optional shorter title for the <title> tag and link previews. */
   seoTitle: string;
+  /** Optional meta description (about 155 characters); falls back to the excerpt. */
+  seoDescription: string;
   /** Optional cover illustration, a public path such as /notes/illustrations/x.webp. */
   cover: string;
   /** Optional questions, shown under the note and sent as FAQPage schema. */
@@ -225,6 +227,7 @@ const all: Note[] = (fs.existsSync(DIR) ? fs.readdirSync(DIR) : [])
       excerpt: String(data.excerpt ?? ""),
       draft: data.draft === true,
       seoTitle: String(data.seo_title ?? ""),
+      seoDescription: String(data.seo_description ?? ""),
       cover: data.cover ? resolveImage(String(data.cover)) : "",
       coverSm: smallCover(data.cover ? String(data.cover) : ""),
       coverAlt: String(data.cover_alt ?? data.title ?? ""),

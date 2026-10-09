@@ -40,7 +40,7 @@ export const topics: { key: TopicKey; label: string; title: string; blurb: strin
     key: "ai",
     label: "AI search",
     title: "AI search and SaaS SEO",
-    blurb: "How ChatGPT, Claude, Perplexity and AI Overviews pick their sources, measured, and what software companies can do about it.",
+    blurb: "How ChatGPT, Claude, Perplexity and AI Overviews pick their sources, measured, and what any business can do to get named.",
   },
   {
     key: "strategy",

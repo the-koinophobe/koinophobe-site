@@ -555,7 +555,11 @@ export default function SaasSeoPage() {
                 ))}
               </div>
               <p className="mt-6 text-[14.5px] text-muted">
-                Run a home service business instead? Those plans are on the{" "}
+                Not a software company? See{" "}
+                <Link href="/ai-search-optimization" className="text-ink underline underline-offset-4">
+                  AI search optimization for business owners
+                </Link>
+                . Run a home service business? Those plans are on the{" "}
                 <Link href="/pricing" className="text-ink underline underline-offset-4">
                   pricing page
                 </Link>

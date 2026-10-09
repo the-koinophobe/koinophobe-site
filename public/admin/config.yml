@@ -78,6 +78,13 @@ collections:
           hint: 'Shorter title for Google and link previews. Keep it under 47 characters; " · Koinophobe" is added after it.',
         }
       - {
+          name: seo_description,
+          label: Meta description (optional),
+          widget: string,
+          required: false,
+          hint: 'What Google shows under the title. About 150 to 155 characters. Leave empty to use the excerpt.',
+        }
+      - {
           name: cover,
           label: Cover illustration (optional),
           widget: image,

@@ -109,4 +109,4 @@ Two things to remember after you edit it. Rules apply per host, so `docs.yourapp
 
 Run the [crawler check](/saas-seo#check) on your main domain and your docs subdomain. If everything that fetches pages for answers is allowed and your pages have text before JavaScript runs, the next question is whether you have pages worth citing. I wrote up how I build [comparison pages that assistants cite](/notes/saas-comparison-pages), and how to [track AI search visibility](/notes/track-ai-search-visibility) without being fooled by one screenshot.
 
-This is also the first week of the [Search + AI plan](/saas-seo) for software startups: crawler access and rendering get fixed before any writing starts, because nothing else works until they do.
+This is also the first week of my [AI search optimization](/ai-search-optimization) service (for software companies, [the SaaS version](/saas-seo)): crawler access and rendering get fixed before any writing starts, because nothing else works until they do.

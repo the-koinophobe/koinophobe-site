@@ -17,7 +17,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "SEO pricing in US dollars. A free intro call, a $750 site audit, a $1,800 setup sprint, and monthly plans from $600. SEO and AI search for software startups at $1,000 a month. White-label for agencies from $850 a site.",
+    "SEO pricing in US dollars. A free intro call, a $750 site audit, a $1,800 setup sprint, and monthly plans from $600. AI search optimization at $1,000 a month. White-label for agencies from $850 a site.",
   alternates: { canonical: "/pricing" },
 };
 
@@ -59,7 +59,7 @@ const FAQ = [
   },
   {
     q: "Do you only work with home service businesses?",
-    a: "Most of my work is roofers, pool deck, lawn and shutter companies, but I also work with clinics, shops and auto businesses at the same prices. Software startups have their own plan, Search + AI, at $1,000 a month.",
+    a: "Most of my work is roofers, pool deck, lawn and shutter companies, but I also work with clinics, shops and auto businesses at the same prices. Any business that wants to show up in AI answers can use the Search + AI plan, $1,000 a month.",
   },
 ];
 
@@ -198,8 +198,8 @@ export default function PricingPage() {
       <section id="startups" className="container-pad scroll-mt-28 pt-20">
         <div className="flex flex-wrap items-baseline justify-between gap-3">
           <div>
-            <h2 className="t-h3">SEO and AI search for software startups</h2>
-            <p className="mt-1.5 text-[15px] text-muted">Measured, fixed and written for Google and the AI assistants, every change as a pull request.</p>
+            <h2 className="t-h3">AI search optimization</h2>
+            <p className="mt-1.5 text-[15px] text-muted">For any business that wants to be named by ChatGPT, Claude, Perplexity and Google&rsquo;s AI. Software startups get it as pull requests.</p>
           </div>
           <p className="text-[14px] text-muted">No contract, 30 days&rsquo; notice to stop</p>
         </div>
@@ -224,7 +224,7 @@ export default function PricingPage() {
                 <span className="font-medium">{startup.termsLead}</span> {startup.terms}
               </p>
             </div>
-            <Link href="/saas-seo" data-track="cta_link" data-from="pricing_startup" className="btn btn-md btn-secondary self-start">
+            <Link href="/ai-search-optimization" data-track="cta_link" data-from="pricing_startup" className="btn btn-md btn-secondary self-start">
               How the plan works
               <ArrowRight size={17} aria-hidden />
             </Link>
