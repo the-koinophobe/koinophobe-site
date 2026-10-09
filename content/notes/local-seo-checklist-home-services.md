@@ -22,8 +22,8 @@ This is the list I work through when I start on a home service site, in the orde
 ## Google Business Profile
 
 - **Real business name, nothing added.** Keywords stuffed into the name break Google's rules and can get the profile suspended.
-- **Correct primary category.** It tells Google which searches the profile fits. Add secondary categories only for work you do.
-- **Street address removed if customers don't visit you.** Service-area businesses are supposed to hide it.
+- **Correct primary category.** It tells Google which searches the profile fits. Add secondary categories only for work you do. [How to choose it](/notes/google-business-profile-categories).
+- **Street address removed if customers don't visit you.** Service-area businesses are supposed to hide it. [Service area businesses on Google](/notes/service-area-business-google-business-profile) explains how areas and ranking work.
 - **Service areas set by city or ZIP.** You get up to 20, within about 2 hours' drive of your base.
 - **Hours that match when someone answers.** A caller who reaches voicemail calls the next listing.
 - **Your own job photos, added as jobs finish.** They show in the map results and in Google Maps.
@@ -36,7 +36,7 @@ Each setting is covered in [Business Profile setup for roofers](/notes/google-bu
 - **Name, phone and towns served in the footer.** It should match your profile.
 - **Indexing switched on.** In WordPress, go to Settings > Reading and make sure "Discourage search engines from indexing this site" is unticked.
 - **Sitemap submitted in Search Console.** Then the Pages report shows which pages Google indexed and which it left out.
-- **Schema on the homepage.** Use your trade's schema.org type (RoofingContractor, Plumber, Electrician) with the same details as the Business Profile.
+- **Schema on the homepage.** Use your trade's schema.org type (RoofingContractor, Plumber, Electrician) with the same details as the Business Profile. For the rest of the technical side, [a one-afternoon audit](/notes/diy-seo-audit-checklist) covers what to check yourself.
 
 ![Two construction workers reviewing plans together at a job site](/notes/photos/local-seo-checklist-home-services-1.webp "Photo: RONNAKORN TRIRAGANON on Unsplash")
 

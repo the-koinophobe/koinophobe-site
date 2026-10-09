@@ -35,7 +35,7 @@ const TERMS = [
   {
     icon: <Landmark size={19} aria-hidden />,
     t: "Invoices in US dollars.",
-    b: "You pay by ACH bank transfer, the same way you'd pay any US vendor.",
+    b: "US clients pay by ACH bank transfer. In Australia or Europe, I'll send payment details that work from where you are.",
   },
   {
     icon: <Ban size={19} aria-hidden />,
@@ -113,7 +113,7 @@ const offer = (p: Plan) => ({
       }
     : { price: p.amount }),
   seller: { "@id": "https://koinophobe.com/#organization" },
-  areaServed: { "@type": "Country", name: "United States" },
+  areaServed: site.areaServed,
 });
 
 const pricingLd = {
@@ -157,8 +157,8 @@ export default function PricingPage() {
               SEO pricing for home service businesses, before the call
             </h1>
             <p className="t-lead mt-6 max-w-[58ch]">
-              Everything here is in US dollars. You&rsquo;re invoiced in USD and pay by ACH bank
-              transfer. If you&rsquo;re not sure which one fits, the intro call is free and
+              Everything here is in US dollars, for businesses in the US, Australia and Europe.
+              You&rsquo;re invoiced in USD. If you&rsquo;re not sure which one fits, the intro call is free and
               I&rsquo;ll tell you.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">

@@ -37,11 +37,11 @@ This is where most of the work is, and most of it is in your own profile.
 
 ![The front of a small local clothing shop with large display windows](/notes/photos/google-map-pack-ranking-1.webp "Photo: Surinder Singh on Unsplash")
 
-**Primary category.** It tells Google what you are. A roofer's is usually Roofing contractor. Pick the work you want the most calls for, then add secondary categories only for work you sell.
+**Primary category.** It tells Google what you are. A roofer's is usually Roofing contractor. Pick the work you want the most calls for, then add secondary categories only for work you sell. [Choosing categories](/notes/google-business-profile-categories) goes through how to pick them and check competitors'.
 
 **Services.** List each job on its own line, in the words customers use: roof repair, leak repair, storm damage inspection, roof replacement. Add a sentence or two to each.
 
-**Service areas.** If customers don't come to you, hide the address and set service areas instead. Google allows up to 20, entered as cities or ZIP codes, within about two hours' drive of your base.
+**Service areas.** If customers don't come to you, hide the address and set service areas instead. Google allows up to 20, entered as cities or ZIP codes, within about two hours' drive of your base. [Service area businesses on Google](/notes/service-area-business-google-business-profile) covers the details.
 
 **Your website.** The profile links to it, and I treat the two as one listing. Each town you list should have a real page on the site about the work you do there. Pages that are the same text with the town swapped are doorway pages under Google's spam policy, so I wrote up how to do them properly in [roofing service area pages](/notes/roofing-service-area-pages).
 
@@ -65,7 +65,7 @@ What you can do is make the towns you list match the towns on your website and t
 
 **Keywords in the business name.** Calling yourself "Best Roofer Melbourne FL Roofing" breaks Google's guidelines. Google says unnecessary information in the name could get the profile suspended, and competitors do report it.
 
-**A fake address.** Google's guidelines say a virtual office isn't eligible, and P.O. boxes or mailboxes at remote locations aren't acceptable.
+**A fake address.** Google's guidelines say a virtual office isn't eligible, and P.O. boxes or mailboxes at remote locations aren't acceptable. If competitors are using one, [here's how to report them](/notes/report-fake-google-business-listings) with evidence.
 
 **A second profile for the same location.** Google says not to create more than one profile for each location. Duplicates confuse the listing and put both at risk.
 

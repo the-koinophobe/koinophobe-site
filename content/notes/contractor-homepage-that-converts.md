@@ -17,7 +17,7 @@ faq:
     a: "Track phone taps and form submissions as key events in GA4. Then the Landing page report shows how many calls and forms started on the homepage."
 ---
 
-Your homepage gets traffic from people who already know your name, people who clicked your Business Profile, and people who landed on a service page and wanted to see who you are. All of them want the same few answers fast. This is the checklist I work through on a contractor homepage, in the order a visitor reads it.
+Your homepage gets traffic from people who already know your name, people who clicked your Business Profile, and people who landed on a service page and wanted to see who you are. All of them want the same few answers fast. This is the checklist I work through on a contractor homepage, in the order a visitor reads it. Before redesigning it, run [the one-afternoon audit](/notes/diy-seo-audit-checklist) so you know what's broken underneath.
 
 ## The first screen
 

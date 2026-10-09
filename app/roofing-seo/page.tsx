@@ -18,7 +18,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Roofing SEO for contractors: more calls, no shared leads",
   description:
-    "SEO for roofing contractors in the US: city service pages, storm and insurance content, Google Business Profile and call tracking. One Florida roofer went from position 77 to 12.9 for its main city term.",
+    "SEO for roofing contractors in the US and Australia: city service pages, storm and insurance content, Google Business Profile and call tracking. One Florida roofer went from position 77 to 12.9 for its main city term.",
   alternates: { canonical: "/roofing-seo" },
 };
 

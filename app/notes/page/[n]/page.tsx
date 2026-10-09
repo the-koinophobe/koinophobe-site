@@ -14,7 +14,7 @@ export function generateMetadata({ params }: { params: { n: string } }): Metadat
   const n = Number(params.n);
   return {
     title: `Notes, page ${n}`,
-    description: `Local SEO, call tracking and technical SEO notes for home service businesses, page ${n}.`,
+    description: `SEO notes for local businesses and startups: local SEO, technical SEO, AI search and call tracking, page ${n}.`,
     alternates: { canonical: `/notes/page/${n}` },
   };
 }
@@ -28,7 +28,7 @@ export default function NotesPageN({ params }: { params: { n: string } }) {
   return (
     <NotesListing
       heading={`Notes, page ${n}`}
-      intro="Older notes on local SEO, call tracking and technical SEO for home service businesses."
+      intro="Older notes on local SEO, technical SEO, AI search and call tracking for local businesses and startups."
       items={items}
       page={n}
       pages={pages}

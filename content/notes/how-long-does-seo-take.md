@@ -59,7 +59,7 @@ Its click-through rate fell from 0.63% to 0.19% over the same period, because mo
 
 This is how the work usually runs. The numbers in each stretch differ from site to site.
 
-**Month 1.** Setup and fixes. Call and form tracking in GA4, the Business Profile cleaned up, indexing problems found and fixed, speed and schema work. Rankings usually barely move, because Google hasn't recrawled most of the changes yet.
+**Month 1.** Setup and fixes. Call and form tracking in GA4, the Business Profile cleaned up, indexing problems found and fixed, speed and schema work. Rankings usually barely move, because Google hasn't recrawled most of the changes yet. If pages sit in Search Console as [discovered](/notes/discovered-currently-not-indexed) or [crawled but not indexed](/notes/crawled-currently-not-indexed), those notes explain what to change.
 
 **Month 3.** New and rewritten pages are indexed. In Search Console you start to see more impressions and more searches the site shows for, often on page two or three. On the clinic, this is the month clicks jumped.
 

@@ -6,9 +6,9 @@ import { notesPage, publishedNotes } from "@/lib/notes";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Notes on local SEO for home service businesses",
+  title: "SEO notes for local businesses and startups",
   description:
-    "Practical notes on local SEO, call tracking and technical SEO for roofers, plumbers, HVAC, lawn and other home service businesses. New notes twice a week.",
+    "SEO notes for local businesses and startup founders in the US, Australia and Europe: local SEO, technical SEO, AI search and call tracking.",
   alternates: { canonical: "/notes" },
 };
 
@@ -34,8 +34,8 @@ export default function NotesPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogLd) }} />
       <NotesListing
-        heading="Local SEO notes for home service businesses"
-        intro="What I'd tell you on the call anyway: how to get found on Google, how to count the calls it sends, and what's worth paying for. Written for owners, with real numbers where I have them."
+        heading="SEO notes for local businesses and startups"
+        intro="What I'd tell you on the call anyway: how to get found on Google and in AI answers, how to count the leads it sends, and what's worth paying for. Written for owners and founders, with real numbers where I have them."
         items={items}
         page={1}
         pages={pages}

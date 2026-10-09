@@ -10,6 +10,7 @@ import { MobileCta } from "@/components/MobileCta";
 import { FaqList, FaqSchema } from "@/components/Faq";
 import { NoteCard, fmtDate } from "@/components/NoteCard";
 import { adjacentNotes, getNote, publishedNotes, relatedNotes } from "@/lib/notes";
+import { site } from "@/lib/site";
 import { topicLabel, topics } from "@/lib/topics";
 
 // Hourly revalidation plus on-demand rendering, so a note scheduled for next
@@ -50,6 +51,15 @@ export default function NotePage({ params }: { params: { slug: string } }) {
   const topic = topics.find((t) => t.key === note.topic)!;
   // AI search notes get calls to action for the AI search offer instead of the local plans.
   const isAi = topic.key === "ai";
+  // Startup notes point founders at the Search + AI plan on /saas-seo.
+  const isStartup = topic.key === "startups";
+  const audience = isAi
+    ? "businesses that want to show up in AI answers"
+    : isStartup
+      ? "software startups"
+      : topic.key === "technical"
+        ? "small businesses and startups"
+        : "home service businesses";
   const related = relatedNotes(note, 3);
   const { newer, older } = adjacentNotes(note);
   const url = `https://koinophobe.com/notes/${note.slug}`;
@@ -172,8 +182,8 @@ export default function NotePage({ params }: { params: { slug: string } }) {
                   <Link href="/notes/what-is-a-koinophobe" className="text-ink underline underline-offset-4">
                     Koinophobe
                   </Link>
-                  , a technical SEO practice for {isAi ? "US businesses that want to show up in AI answers" : "home service businesses"} in
-                  the US. 30+ sites over two years, with the numbers on the{" "}
+                  , a technical SEO practice for {audience} in
+                  {site.markets}. 30+ sites over two years, with the numbers on the{" "}
                   <Link href="/work" className="text-ink underline underline-offset-4">
                     work page
                   </Link>
@@ -213,16 +223,20 @@ export default function NotePage({ params }: { params: { slug: string } }) {
                 </nav>
               ) : null}
               <div className="card bg-surface p-6">
-                <p className="t-h3 !text-[1.2rem]">{isAi ? "Want your business in the answer?" : "Want this done on your site?"}</p>
+                <p className="t-h3 !text-[1.2rem]">{isAi ? "Want your business in the answer?" : isStartup ? "Want this shipped on your site?" : "Want this done on your site?"}</p>
                 <p className="mt-2 text-[14.5px] leading-relaxed text-muted">
                   {isAi
                     ? "Run the free AI crawler check, or book 20 minutes and I\u2019ll bring what the assistants say about your category."
-                    : "Book a free 20-minute call. I\u2019ll look at your site first and tell you what I\u2019d fix."}
+                    : isStartup
+                      ? "I fix the technical side and write the pages buyers search for, with every change sent as a pull request. $1,000 a month, no contract."
+                      : "Book a free 20-minute call. I\u2019ll look at your site first and tell you what I\u2019d fix."}
                 </p>
                 <div className="mt-5 flex flex-col gap-2.5">
                   <BookCta from="note_sidebar" size="md" className="w-full" />
                   {isAi ? (
                     <PageCta href="/ai-search-optimization#check" label="Check your site free" from="note_sidebar_ai" size="md" className="w-full" />
+                  ) : isStartup ? (
+                    <PageCta href="/saas-seo" label="See the startup plan" from="note_sidebar_startup" size="md" className="w-full" />
                   ) : (
                     <PageCta href="/pricing" label="See pricing" from="note_sidebar" size="md" className="w-full" />
                   )}
@@ -259,7 +273,13 @@ export default function NotePage({ params }: { params: { slug: string } }) {
                 "You get the first few changes I'd ship, in order.",
                 "If it isn't a fit, I'll tell you that on the call.",
               ]
-            : undefined
+            : isStartup
+              ? [
+                  "I check your rendering, indexing and the pages buyers search for before we talk.",
+                  "You get the first fixes I'd ship, in order, whether you hire me or not.",
+                  "If it isn't a fit, I'll tell you that on the call.",
+                ]
+              : undefined
         }
       />
       <MobileCta />

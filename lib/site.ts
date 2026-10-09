@@ -15,6 +15,13 @@ export const site = {
   booking: "https://cal.com/koinophobe/intro",
   /** Said next to every booking button. Only change it if the promise changes. */
   hours: "same-day replies",
+  /** Where Koinophobe takes clients. Used in copy and in every schema areaServed. */
+  markets: "the US, Australia and Europe",
+  areaServed: [
+    { "@type": "Country", name: "United States" },
+    { "@type": "Country", name: "Australia" },
+    { "@type": "Place", name: "Europe" },
+  ],
   nav: [
     { label: "Home", href: "/" },
     { label: "Work", href: "/work" },

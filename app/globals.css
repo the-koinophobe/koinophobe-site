@@ -1089,7 +1089,7 @@ blockquote.font-display {
   padding: 0.3rem 0.7rem;
 }
 .hx-p-services { width: 430px; height: 488px; padding: 8px; display: flex; flex-direction: column; gap: 2px; }
-.hx-p-notes { width: 300px; height: 318px; padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.hx-p-notes { width: 300px; height: 438px; padding: 8px; display: flex; flex-direction: column; gap: 2px; }
 
 .hx-menu-btn {
   display: none;

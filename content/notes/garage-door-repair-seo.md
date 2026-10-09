@@ -31,7 +31,7 @@ The map pack runs on your Google Business Profile. My note on [how the map pack 
 
 ![A modern garage door with wood panels and a row of windows](/notes/photos/garage-door-repair-seo-1.webp "Photo: Ryan Waldman on Unsplash")
 
-- **Primary category** that matches garage door work, with secondary categories only for work you do.
+- **Primary category** that matches garage door work, with secondary categories only for work you do. [How to choose categories](/notes/google-business-profile-categories) covers the trade-offs.
 - **Hours** set to when someone answers. Mark 24 hours only if a person picks up at night.
 - **Service areas**, up to 20, set by city or ZIP within about 2 hours' drive. Remove the street address if customers don't visit you.
 - **Name** exactly as it appears on your truck and invoices. Adding "Spring Repair 24/7" to it breaks Google's rules.
@@ -65,7 +65,7 @@ When three listings look alike, reviews are one of the few things that set them 
 
 ## A crowded, messy map pack
 
-Garage door repair is one of the urgent trades where the map results can include listings that don't match a real local company. Some are lead generators that sell the call on. Some sit at a virtual office or a mailbox address. Some are duplicates of one business.
+Garage door repair is one of the urgent trades where the map results can include listings that don't match a real local company. Some are lead generators that sell the call on. Some sit at a virtual office or a mailbox address. Some are duplicates of one business. [How to report fake listings](/notes/report-fake-google-business-listings) covers the evidence to gather and which of Google's forms to use.
 
 Google's Business Profile guidelines cover these cases. A profile has to match the business as it appears on its signage and branding. A rented address the business doesn't operate from (a virtual office) isn't eligible, and neither is a remote mailbox. A business shouldn't have more than one profile per location.
 

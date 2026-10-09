@@ -37,7 +37,7 @@ Ask for specifics. "Two new town pages, a rewrite of the roof repair page's titl
 
 ## 4. How will I see calls?
 
-This is the question that separates SEO you can judge from SEO you have to take on faith. A good answer covers phone taps on the website, calls from your Business Profile and form submissions, all recorded somewhere you can see. If they only talk about traffic and rankings, they can't show you whether the phone rang. I covered the options in [call tracking for contractors](/notes/call-tracking-for-contractors).
+This is the question that separates SEO you can judge from SEO you have to take on faith. A good answer covers phone taps on the website, calls from your Business Profile and form submissions, all recorded somewhere you can see. If they only talk about traffic and rankings, they can't show you whether the phone rang. I covered the options in [call tracking for contractors](/notes/call-tracking-for-contractors). If you're hiring because traffic fell, [find out why it dropped](/notes/website-traffic-dropped) first; you'll ask better questions.
 
 ## 5. Do you guarantee rankings?
 

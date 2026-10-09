@@ -42,7 +42,7 @@ Daniel's review: "He's been on top of things, not only what I asked, but also ou
 
 ## Start with the Business Profile
 
-For a shop with a counter people walk up to, the Google Business Profile is the first thing a local searcher sees. Keep the address visible, choose the most specific primary category that fits, and fill in hours, holiday hours, photos and products. Use your real business name with no keywords added.
+For a shop with a counter people walk up to, the Google Business Profile is the first thing a local searcher sees. Keep the address visible, choose the most specific primary category that fits, and fill in hours, holiday hours, photos and products. Use your real business name with no keywords added. [Choosing categories](/notes/google-business-profile-categories) covers how to pick the primary one, and [auto repair shop SEO](/notes/auto-repair-shop-seo) shows the setup for another walk-in business.
 
 ![An American flag reflected in the front window of a small downtown storefront](/notes/photos/charles-county-md-small-business-seo-1.webp "Photo: Michael Discenza on Unsplash")
 

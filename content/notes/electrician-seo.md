@@ -35,7 +35,7 @@ Urgent local searches usually show the map pack above the regular results, and t
 
 ![Circuit breakers and wiring inside an open electrical panel](/notes/photos/electrician-seo-1.webp "Photo: Troy Bridges on Unsplash")
 
-- Primary category Electrician, with secondary categories only for work you do.
+- Primary category Electrician, with secondary categories only for work you do. [How to choose categories](/notes/google-business-profile-categories).
 - Hours set to when someone answers. Mark 24 hours only if a person picks up at night.
 - Up to 20 service areas by city or ZIP, within about 2 hours' drive.
 - The street address removed if customers don't come to you.

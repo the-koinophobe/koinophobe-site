@@ -60,7 +60,7 @@ export function Footer() {
               <span className="font-display text-[20px] tracking-tight">{site.name}</span>
             </Link>
             <p className="muted mt-4 max-w-[34ch] text-[15px] leading-relaxed">
-              Technical SEO and call tracking for home service businesses in the US, by {site.owner}.
+              Technical SEO and call tracking for businesses in {site.markets}, by {site.owner}.
             </p>
             <p className="muted mt-4 text-[14px]">Replies the same business day</p>
             <a href={`mailto:${site.email}`} className="mt-1 inline-block text-[14px] underline-offset-4 hover:underline">

@@ -38,7 +38,7 @@ Build a page for each job you want more of:
 | Roof cleaning | The method you use on shingles or tile, how long results last, roof types you won't touch |
 | Deck cleaning | Wood and composite, whether you stain or seal afterward |
 
-Roof cleaning needs the most explanation. Some homeowners worry that washing will damage the roof, so if you soft wash roofs, say so and describe how. If you also do gutters, fences or commercial buildings, those can be their own pages later.
+Roof cleaning needs the most explanation. Some homeowners worry that washing will damage the roof, so if you soft wash roofs, say so and describe how. If you also do gutters, fences or commercial buildings, those can be their own pages later. If you also clean inside homes, [house cleaning SEO](/notes/house-cleaning-seo) covers how those searches and pages differ.
 
 Each page needs a title tag naming the service and your main town, a tap-to-call button near the top, your own photos, and the questions customers ask you before they book.
 

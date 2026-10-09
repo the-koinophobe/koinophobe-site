@@ -3,7 +3,7 @@
  * frontmatter (the CMS has a dropdown for it). Notes without one fall back to
  * the map below, and then to "strategy".
  */
-export type TopicKey = "roofing" | "local" | "trades" | "tracking" | "technical" | "ai" | "strategy";
+export type TopicKey = "roofing" | "local" | "trades" | "tracking" | "technical" | "ai" | "startups" | "strategy";
 
 export const topics: { key: TopicKey; label: string; title: string; blurb: string }[] = [
   {
@@ -22,7 +22,7 @@ export const topics: { key: TopicKey; label: string; title: string; blurb: strin
     key: "trades",
     label: "By trade",
     title: "SEO by trade",
-    blurb: "Plumbing, HVAC, lawn, pool deck, pest control, paving and more, trade by trade.",
+    blurb: "Plumbing, HVAC, cleaning, moving, auto repair, solar and more, trade by trade.",
   },
   {
     key: "tracking",
@@ -33,14 +33,20 @@ export const topics: { key: TopicKey; label: string; title: string; blurb: strin
   {
     key: "technical",
     label: "Technical SEO",
-    title: "Technical SEO for contractor websites",
-    blurb: "Indexing, speed, Core Web Vitals, migrations, titles and what breaks when a site moves.",
+    title: "Technical SEO for business websites",
+    blurb: "Indexing statuses, sitemaps, canonicals, speed, migrations and what breaks when a site moves.",
   },
   {
     key: "ai",
     label: "AI search",
     title: "AI search and SaaS SEO",
     blurb: "How ChatGPT, Claude, Perplexity and AI Overviews pick their sources, measured, and what any business can do to get named.",
+  },
+  {
+    key: "startups",
+    label: "Startups",
+    title: "SEO for startup founders",
+    blurb: "When to start, the pages to build first, Next.js and React SEO, domain changes and the first backlinks.",
   },
   {
     key: "strategy",

@@ -23,6 +23,7 @@ import { RelatedNotes } from "@/components/RelatedNotes";
 import { Reveal } from "@/components/Reveal";
 import { aggregate } from "@/lib/gsc";
 import { startup } from "@/lib/pricing";
+import { site } from "@/lib/site";
 
 // Related notes appear on their publish date without a deploy.
 export const revalidate = 3600;
@@ -191,7 +192,7 @@ const serviceLd = {
   serviceType: "Search engine optimization and AI search visibility",
   url: "https://koinophobe.com/saas-seo",
   provider: { "@id": "https://koinophobe.com/#organization" },
-  areaServed: { "@type": "Country", name: "United States" },
+  areaServed: site.areaServed,
   audience: { "@type": "BusinessAudience", name: "Software startups" },
   offers: {
     "@type": "Offer",
@@ -599,9 +600,15 @@ export default function SaasSeoPage() {
       <Faq items={SAAS_FAQ} title="Questions founders ask first" className="section !pt-0" />
 
       <RelatedNotes
-        title="AI search notes"
-        more={{ href: "/notes/topic/ai", label: "All AI search notes" }}
+        title="Notes for founders"
+        more={{ href: "/notes/topic/startups", label: "All startup notes" }}
         slugs={[
+          "seo-for-startups",
+          "javascript-seo-react",
+          "saas-feature-pages",
+          "nextjs-seo-checklist",
+          "startup-backlinks",
+          "change-domain-name-seo",
           "ai-crawlers-robots-txt",
           "saas-comparison-pages",
           "track-ai-search-visibility",

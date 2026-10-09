@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description:
-    "Technical SEO and call tracking for home service businesses in the US. 30+ sites over two years, with live Search Console data opened up on five of them. Prices on the site.",
+    "Technical SEO and call tracking for home service businesses in the US, Australia and Europe. 30+ sites over two years, with live Search Console data opened up on five of them. Prices on the site.",
   keywords: [
     "SEO specialist",
     "technical SEO",
@@ -106,10 +106,10 @@ const jsonLd = {
       image: "https://koinophobe.com/opengraph-image",
       email: site.email,
       description:
-        "Freelance technical SEO and call tracking for home service and local businesses in the US, proven with the client's own Search Console and analytics data.",
+        "Freelance technical SEO and call tracking for home service and local businesses in the US, Australia and Europe, proven with the client's own Search Console and analytics data.",
       founder: { "@id": PERSON_ID },
       sameAs: [site.linkedin, site.x],
-      areaServed: { "@type": "Country", name: "United States" },
+      areaServed: site.areaServed,
       knowsAbout: [
         "Technical SEO",
         "On-page SEO",
@@ -130,7 +130,7 @@ const jsonLd = {
             name,
             serviceType: name,
             provider: { "@id": ORG_ID },
-            areaServed: { "@type": "Country", name: "United States" },
+            areaServed: site.areaServed,
           },
         })),
       },

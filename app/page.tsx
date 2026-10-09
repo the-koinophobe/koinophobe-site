@@ -29,14 +29,14 @@ export const revalidate = 3600;
 export const metadata = {
   title: { absolute: "Koinophobe · SEO for home service businesses, measured in calls" },
   description:
-    "Technical SEO, local SEO and call tracking for roofers and home service businesses in the US. 30+ sites over two years, prices on the site, and a free 20-minute call.",
+    "Technical SEO, local SEO and call tracking for roofers and home service businesses in the US, Australia and Europe. 30+ sites over two years, prices on the site, and a free 20-minute call.",
   alternates: { canonical: "/" },
 };
 
 const HOME_FAQ: FaqItem[] = [
   {
     q: "What does Koinophobe do?",
-    a: "Technical SEO and call tracking for home service businesses in the US. I fix what stops a site from ranking, set up tracking so you can see the calls and forms Google sends, and build the town and service pages that bring in local searches.",
+    a: "Technical SEO and call tracking for home service businesses in the US, Australia and Europe. I fix what stops a site from ranking, set up tracking so you can see the calls and forms Google sends, and build the town and service pages that bring in local searches.",
   },
   {
     q: "What kinds of businesses do you work with?",
@@ -116,7 +116,7 @@ export default function HomePage() {
           <div className="hero-in">
             <p className="eyebrow">
               <span className="h-1.5 w-1.5 rounded-full bg-brand" aria-hidden />
-              Technical SEO for US home service businesses
+              Technical SEO for home services in the US, Australia and Europe
             </p>
             <h1 className="t-h1 mt-6 max-w-[17ch]">
               SEO that gets home service businesses <span className="text-brand">more calls</span> from Google.

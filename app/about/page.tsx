@@ -116,7 +116,7 @@ const servicesLd = {
       name: s.title,
       description: s.body,
       provider: { "@id": "https://koinophobe.com/#organization" },
-      areaServed: "United States",
+      areaServed: site.areaServed,
     },
   })),
 };
@@ -148,7 +148,7 @@ const personLd = {
 const ABOUT_FAQ: FaqItem[] = [
   {
     q: "Who is Michael Edward?",
-    a: "I run Koinophobe, a technical SEO and call tracking practice for home service businesses in the US. I've worked on 30+ sites over two years.",
+    a: "I run Koinophobe, a technical SEO and call tracking practice for home service businesses in the US, Australia and Europe. I've worked on 30+ sites over two years.",
   },
   {
     q: "What does Koinophobe mean?",
@@ -182,7 +182,7 @@ export default function AboutPage() {
             <p className="eyebrow">About</p>
             <h1 className="t-h1 mt-5 max-w-[18ch]">I&rsquo;m Michael Edward. Koinophobe is my SEO practice.</h1>
             <p className="t-lead mt-6 max-w-[58ch]">
-              I do technical SEO, local SEO and call tracking for home service businesses in the US, and
+              I do technical SEO, local SEO and call tracking for home service businesses in the US, Australia and Europe, and
               for the marketing agencies that serve them. There isn&rsquo;t much mystery in this job:
               there&rsquo;s the data you already own, the parts of the site stopping it from working, and
               whether the person reporting on it will tell you something you don&rsquo;t want to hear.

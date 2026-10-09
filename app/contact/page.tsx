@@ -124,6 +124,10 @@ export default function ContactPage() {
       <section id="book" className="mt-16 scroll-mt-24">
         <div className="container-pad">
           <p className="eyebrow">Book a call</p>
+          <p className="mt-4 max-w-[60ch] text-[15.5px] text-muted">
+            I take clients in {site.markets}. If your business is somewhere else, I&rsquo;m
+            not the right fit, and I&rsquo;d rather tell you now than on the call.
+          </p>
           <div className="mt-6">
             <CalInline />
           </div>

@@ -22,6 +22,7 @@ import { Faq, type FaqItem } from "@/components/Faq";
 import { MobileCta } from "@/components/MobileCta";
 import { Reveal } from "@/components/Reveal";
 import { getNote } from "@/lib/notes";
+import { site } from "@/lib/site";
 import { startup } from "@/lib/pricing";
 
 // Guides appear on their publish date without a deploy.
@@ -142,7 +143,7 @@ const serviceLd = {
   serviceType: "AI search optimization",
   url: "https://koinophobe.com/ai-search-optimization",
   provider: { "@id": "https://koinophobe.com/#organization" },
-  areaServed: { "@type": "Country", name: "United States" },
+  areaServed: site.areaServed,
   offers: {
     "@type": "Offer",
     name: startup.name,

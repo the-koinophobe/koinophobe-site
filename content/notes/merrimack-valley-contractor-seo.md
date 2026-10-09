@@ -38,7 +38,7 @@ The name searches and the town-plus-service search sit near the top. The broad n
 
 ## Set your Business Profile service areas
 
-If customers don't come to you, set up your Google Business Profile as a service-area business. Remove the address so it isn't shown, then add service areas by city or ZIP code. Google allows up to 20, within about 2 hours of driving from your base.
+If customers don't come to you, set up your Google Business Profile as a service-area business. Remove the address so it isn't shown, then add service areas by city or ZIP code. Google allows up to 20, within about 2 hours of driving from your base. [Service area businesses on Google](/notes/service-area-business-google-business-profile) explains what the areas do and don't do for ranking.
 
 Lawrence, Methuen, Andover, Haverhill and Lowell are five. Add the other towns where you take jobs, and leave off the ones you'd turn down. Use your real business name with no towns or keywords in it. The [Business Profile setup guide](/notes/google-business-profile-for-roofers) covers the rest of the settings.
 

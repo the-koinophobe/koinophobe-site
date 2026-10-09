@@ -96,8 +96,8 @@ collections:
           label: Topic,
           widget: select,
           required: false,
-          options: [roofing, local, trades, tracking, technical, ai, strategy],
-          hint: 'Which topic page the note appears on. roofing, local (Local SEO), trades (By trade), tracking (Call tracking), technical (Technical SEO), ai (AI search), strategy (Strategy and case studies).',
+          options: [roofing, local, trades, tracking, technical, ai, startups, strategy],
+          hint: 'Which topic page the note appears on. roofing, local (Local SEO), trades (By trade), tracking (Call tracking), technical (Technical SEO), ai (AI search), startups (Startups), strategy (Strategy and case studies).',
         }
       - { name: cover_alt, label: Cover alt text (optional), widget: string, required: false, hint: 'Describe what the cover photo shows.' }
       - { name: cover_credit, label: Cover credit (optional), widget: string, required: false, hint: 'For example: Photo by Jane Doe on Unsplash' }

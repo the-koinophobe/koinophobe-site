@@ -64,7 +64,7 @@ Planned trimming has its own timing. Many homeowners book it for late fall and w
 
 A page for each town you want work in can help with `tree service [town]` searches. Each needs something true about the town: the tree species you see most, storm damage you've cleared there, how fast you get out. Near-identical pages with the town name swapped count as doorway spam under Google's policies. [One real page per town](/notes/roofing-service-area-pages) explains how to write them.
 
-On the Business Profile, set up to 20 service areas by city or ZIP, use your real business name with no keywords added, and set special hours if you run extended storm hours.
+On the Business Profile, set up to 20 service areas by city or ZIP, use your real business name with no keywords added, and set special hours if you run extended storm hours. [Service area businesses on Google](/notes/service-area-business-google-business-profile) covers how far those areas reach in practice.
 
 ## Next step
 

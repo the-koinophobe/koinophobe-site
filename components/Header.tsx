@@ -69,6 +69,8 @@ const NOTES = [
   { href: "/notes/topic/tracking", title: "Call tracking", desc: "GA4, Tag Manager, Search Console" },
   { href: "/notes/topic/trades", title: "By trade", desc: "Plumbing, HVAC, lawn, pest and more" },
   { href: "/notes/topic/ai", title: "AI search", desc: "ChatGPT, Claude, AI Overviews" },
+  { href: "/notes/topic/technical", title: "Technical SEO", desc: "Indexing, sitemaps, canonicals" },
+  { href: "/notes/topic/startups", title: "Startups", desc: "First pages, Next.js, backlinks" },
 ];
 
 const MENUS = ["work", "services", "notes"] as const;

@@ -19,13 +19,13 @@ faq:
 
 ![An agency's brand laid over the work underneath, eleven of fifteen sites unnamed](/notes/illustrations/white-label-technical-seo-for-agencies.webp)
 
-If you run a marketing agency with home service clients, your team may be stronger on ads or content than on the technical side, like tracking and indexing. That's the part I do, under your name.
+If you run a marketing agency with home service clients, your team may be stronger on ads or content than on the technical side, like tracking and indexing. That's the part I do, under your name. If a client needs the basics explained, [what is technical SEO](/notes/what-is-technical-seo) is written for them.
 
 Of the 15 sites on [my portfolio wall](/work), 11 went out under an agency's name. Much of my work is done this way.
 
 ## What I do under your brand
 
-**Audits.** A full technical pass on a client site: indexing, titles and meta descriptions, site structure, speed, schema and tracking. You get findings written so you can hand them to your client as your own.
+**Audits.** A full technical pass on a client site: indexing, titles and meta descriptions, site structure, speed, schema and tracking. You get findings written so you can hand them to your client as your own. The [one-afternoon audit checklist](/notes/diy-seo-audit-checklist) shows the owner-level version of the same checks.
 
 **Tracking.** Phone taps and form submissions as key events in GA4, set up through Google Tag Manager, with Search Console linked. I also test form delivery on every site monthly. That habit started in July 2026, when I found a client's form submissions had been dropping since March because the email connection needed re-authenticating after an email address change. Nobody had noticed, me included.
 

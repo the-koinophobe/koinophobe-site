@@ -21,7 +21,7 @@ faq:
 
 A hurricane shutter company I work with got 37 of its 51 clicks in one 28-day window from a single article, a seasonal piece on hurricane history. One page brought in most of the site's search clicks in that window.
 
-Home service demand comes in waves. AC repair in summer, furnaces in winter, lawn programs in spring, storm work when the weather turns. The page that catches a wave has to be indexed and ranking before it arrives, and that takes time.
+Home service demand comes in waves. AC repair in summer, furnaces in winter, lawn programs in spring, storm work when the weather turns. The page that catches a wave has to be indexed and ranking before it arrives, and that takes time. Movers and cleaning companies ride the same waves: moving season peaks in summer, and [move-out cleaning](/notes/house-cleaning-seo) follows it. [Moving company SEO](/notes/moving-company-seo) covers the timing for movers.
 
 ## Why publishing in season is too late
 

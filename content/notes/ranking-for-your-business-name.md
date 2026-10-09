@@ -27,7 +27,7 @@ So I've been on the wrong side of this one. Here's how I'd work through it for a
 
 Rule out the simple causes first. In WordPress, go to Settings > Reading and make sure "Discourage search engines from indexing this site" is unchecked. A developer may have ticked it while building the site and never unticked it. Then run your home page through URL Inspection in Google Search Console and check the Pages report for excluded pages.
 
-If the site isn't indexed, nothing below matters yet. The full checklist is in [why a contractor website isn't showing on Google](/notes/contractor-website-not-showing-on-google).
+If the site isn't indexed, nothing below matters yet. The full checklist is in [why a contractor website isn't showing on Google](/notes/contractor-website-not-showing-on-google). If you've recently changed your name or domain, [changing your domain without losing traffic](/notes/change-domain-name-seo) covers how to carry the old name across.
 
 ## Why Google misreads a business name
 
@@ -73,7 +73,7 @@ Your Google Business Profile should carry your real business name and nothing el
 
 ### Make citations match
 
-Directories, Yelp, the BBB, your supplier's dealer locator and any chamber listing should spell the name, address and phone number the same way. I cover the cleanup in [NAP citations for contractors](/notes/nap-citations-contractors).
+Directories, Yelp, the BBB, your supplier's dealer locator and any chamber listing should spell the name, address and phone number the same way. I cover the cleanup in [NAP citations for contractors](/notes/nap-citations-contractors). If a competitor's listing uses your name or a fake version of it, [here's how to report it](/notes/report-fake-google-business-listings).
 
 ### Write an About page
 

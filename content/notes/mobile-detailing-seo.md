@@ -25,7 +25,7 @@ Most of the sites I work on are roofing, pool deck, lawn and shutter companies, 
 
 ## Set up the Business Profile as a service-area business
 
-In Google Business Profile, if customers don't visit your location, remove the address so it isn't shown. Then add service areas. Google allows up to 20, and you set them by city or ZIP code. They should sit within about 2 hours of driving from your base.
+In Google Business Profile, if customers don't visit your location, remove the address so it isn't shown. Then add service areas. Google allows up to 20, and you set them by city or ZIP code. They should sit within about 2 hours of driving from your base. [Service area businesses on Google](/notes/service-area-business-google-business-profile) explains why the list of areas doesn't decide where you rank.
 
 Pick the towns where you want work and can show up on time. Twenty towns you rarely drive to won't put you in front of those customers by themselves.
 
