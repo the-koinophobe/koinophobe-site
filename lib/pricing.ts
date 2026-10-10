@@ -48,7 +48,7 @@ export const oneTime: Plan[] = [
       "One Google Business Profile cleanup",
       "A short video showing where to see your numbers",
     ],
-    note: "Paid upfront. Credited toward the Setup Sprint within 30 days.",
+    note: "You pay after you see it working in your own account. Credited toward the Setup Sprint within 30 days.",
   },
   {
     key: "audit",
