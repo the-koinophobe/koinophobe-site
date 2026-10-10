@@ -36,6 +36,21 @@ export const oneTime: Plan[] = [
     note: "Yours to keep whether you hire me or not.",
   },
   {
+    key: "tracking",
+    kicker: "Small fix",
+    name: "Tracking Fix",
+    amount: 300,
+    price: "$300",
+    unit: "one-time, 5 business days",
+    items: [
+      "Calls, form fills and quote requests counted in GA4",
+      "Set up through Google Tag Manager, tested end to end",
+      "One Google Business Profile cleanup",
+      "A short video showing where to see your numbers",
+    ],
+    note: "Paid upfront. Credited toward the Setup Sprint within 30 days.",
+  },
+  {
     key: "audit",
     kicker: "Paid audit",
     name: "Site Audit",
@@ -123,6 +138,12 @@ export const monthly: Plan[] = [
 ];
 
 export const agency = [
+  {
+    name: "Tracking fix",
+    price: "$250 per site",
+    amount: 250,
+    body: "GA4 and Tag Manager call and form tracking plus one Business Profile cleanup, under your brand. 5 business days.",
+  },
   {
     name: "Per site",
     price: "from $850/month",

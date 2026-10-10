@@ -17,7 +17,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "SEO pricing in US dollars. A free intro call, a $750 site audit, a $1,800 setup sprint, and monthly plans from $600. AI search optimization at $1,000 a month. White-label for agencies from $850 a site.",
+    "SEO pricing in US dollars. A free intro call, a $300 tracking fix, a $750 site audit, a $1,800 setup sprint, and monthly plans from $600. AI search optimization at $1,000 a month. White-label for agencies from $850 a site.",
   alternates: { canonical: "/pricing" },
 };
 
@@ -47,7 +47,7 @@ const TERMS = [
 const FAQ = [
   {
     q: "Which one do I need?",
-    a: "If you don't know whether your calls and forms are being tracked, start with the audit. If you know what's broken and want it fixed once, the Setup Sprint. If you want someone on it every month, Growth. The intro call is free if you'd rather ask me.",
+    a: "If you just want your calls and forms counted, the $300 Tracking Fix. If you don't know what else is wrong, start with the audit. If you know what's broken and want it fixed once, the Setup Sprint. If you want someone on it every month, Growth. The intro call is free if you'd rather ask me.",
   },
   {
     q: "Do you guarantee rankings?",
@@ -173,7 +173,7 @@ export default function PricingPage() {
       <section className="container-pad pt-6">
         <h2 className="t-h3">Start here: one-time</h2>
         <p className="mt-1.5 text-[15px] text-muted">A free call, an audit, or a one-off fix.</p>
-        <Stagger className="mt-6 grid gap-4 md:grid-cols-3">
+        <Stagger className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {oneTime.map((p) => (
             <PlanCard key={p.key} p={p} />
           ))}
