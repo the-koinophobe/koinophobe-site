@@ -17,7 +17,7 @@ export const revalidate = 3600;
 export const metadata = {
   title: "SEO case studies for local businesses",
   description:
-    "Five local-business Search Console case studies out of thirty-plus sites: a pain clinic, a roofer, a tint shop, a game store and a marketing agency. Each with what I would go after next.",
+    "Five Search Console case studies from 30+ local business sites: a pain clinic, a roofer, a tint shop, a game store and an agency, with what comes next.",
   alternates: { canonical: "/work" },
 };
 

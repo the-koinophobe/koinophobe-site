@@ -15,7 +15,8 @@ export function generateMetadata({ params }: { params: { topic: string } }): Met
   if (!t) return {};
   return {
     title: t.title,
-    description: `${t.blurb} Practical notes for home service businesses from Koinophobe.`,
+    // The blurb alone when the brand line would push it past what Google shows.
+    description: t.blurb.length + 26 <= 158 ? `${t.blurb} Notes by Michael Edward.` : t.blurb,
     alternates: { canonical: `/notes/topic/${t.key}` },
   };
 }

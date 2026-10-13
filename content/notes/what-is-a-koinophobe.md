@@ -1,6 +1,7 @@
 ---
 title: "What is a koinophobe?"
 slug: what-is-a-koinophobe
+seo_description: "A koinophobe is someone afraid of living an ordinary life, from koinophobia in The Dictionary of Obscure Sorrows. It's also the name of my SEO practice."
 date: 2026-09-27
 draft: false
 cover: /notes/photos/what-is-a-koinophobe-1.webp

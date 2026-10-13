@@ -17,7 +17,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "SEO pricing in US dollars. A free intro call, a $300 tracking fix, a $750 site audit, a $1,800 setup sprint, and monthly plans from $600. AI search optimization at $1,000 a month. White-label for agencies from $850 a site.",
+    "SEO prices in US dollars: a $300 tracking fix, a $750 site audit, monthly plans from $600, AI search at $1,000 a month, and agency rates from $850 a site.",
   alternates: { canonical: "/pricing" },
 };
 

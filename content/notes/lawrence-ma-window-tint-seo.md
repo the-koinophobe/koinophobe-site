@@ -1,6 +1,8 @@
 ---
 title: "A Lawrence, MA tint shop owns its name. 'Window tinting near me' is next."
 slug: lawrence-ma-window-tint-seo
+seo_title: "Window tint SEO in Lawrence, MA: owning the brand search"
+seo_description: "Tint Lordz Auto Spa ranks at position 2 or better for its own name, while the generic search sits at 19. The data, and a plan any tint shop can copy."
 date: 2026-10-03
 draft: false
 excerpt: "Tint Lordz Auto Spa ranks at position 2 or better for every version of its own name. The generic search sits at 19. Here's the data, and the plan any tint shop in the Merrimack Valley can copy."

@@ -31,7 +31,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "SaaS SEO and AI search for software startups",
   description:
-    "SEO and AI search for software startups, run like a measurement study: your buyer questions tracked across ChatGPT, Claude, Perplexity and AI Overviews, fixes shipped as pull requests, 12 articles a month. $1,000 a month, no contract.",
+    "SEO and AI search for software startups: buyer questions tracked across ChatGPT, Claude and Perplexity, fixes as pull requests. $1,000 a month, no contract.",
   alternates: { canonical: "/saas-seo" },
 };
 

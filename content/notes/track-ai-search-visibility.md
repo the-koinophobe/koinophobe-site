@@ -1,6 +1,7 @@
 ---
 title: "How to track AI search visibility without fooling yourself"
 slug: track-ai-search-visibility
+seo_description: "Asked the same question three times, ChatGPT kept 4.5% of its cited pages. A spreadsheet method for tracking AI search visibility that holds up."
 date: 2026-10-07
 draft: false
 topic: ai

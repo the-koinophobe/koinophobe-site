@@ -1,5 +1,6 @@
 ---
 title: "The three conversion events every local business should track"
+seo_title: "Three conversion events every local business should track"
 date: "2026-05-15"
 excerpt: "You do not need a complicated analytics setup. You need three events wired up correctly. These are the ones that count."
 draft: false

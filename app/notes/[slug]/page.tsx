@@ -29,7 +29,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const description = note.seoDescription || note.excerpt;
   const images = note.cover ? [{ url: note.cover, width: 1600, height: 900, alt: note.coverAlt }] : undefined;
   return {
-    title,
+    // Google shows about 60 characters; keep the words that matter over the brand suffix.
+    title: title.length + ` · ${site.name}`.length > 60 ? { absolute: title } : title,
     description,
     alternates: { canonical: `/notes/${note.slug}` },
     openGraph: {

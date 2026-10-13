@@ -1,6 +1,7 @@
 ---
 title: "SaaS comparison pages: what my citation study says about vs and alternatives pages"
 slug: saas-comparison-pages
+seo_description: "Head-to-head questions pull from the smallest pool of sources of any query I measured. What that means for your vs and alternatives pages."
 date: 2026-10-06
 draft: false
 topic: ai

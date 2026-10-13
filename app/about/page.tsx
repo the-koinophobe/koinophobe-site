@@ -24,9 +24,9 @@ import { Faq, type FaqItem } from "@/components/Faq";
 export const revalidate = 3600;
 
 export const metadata = {
-  title: "About Michael Edward, technical SEO for home services",
+  title: "Michael Edward, technical SEO and AI search",
   description:
-    "Koinophobe is the SEO practice of Michael Edward. How he works and what he does: technical SEO, call tracking, local search and WordPress for home service businesses and the agencies that serve them.",
+    "Michael Edward runs Koinophobe: technical SEO, local search and AI search for home service businesses, startups and the agencies that serve them.",
   alternates: { canonical: "/about" },
 };
 

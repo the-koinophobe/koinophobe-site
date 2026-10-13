@@ -1,6 +1,8 @@
 ---
 title: "614 keywords on page one for a game shop in Charles County, MD"
 slug: charles-county-md-game-shop-seo
+seo_title: "Game shop SEO in Charles County, MD: 614 keywords"
+seo_description: "One board game shop in Charles County, Maryland: what 17 months of Search Console data says worked, what didn't, and what I'd do next."
 date: 2026-09-30
 draft: false
 excerpt: "Over The Table Top is one independent board game and card shop in Charles County, Maryland. Here's what 17 months of Search Console data says worked, what didn't, and what I'd do next."

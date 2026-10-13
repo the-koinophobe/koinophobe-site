@@ -1,6 +1,7 @@
 ---
 title: "Can ChatGPT read your site? How to check AI crawler access"
 slug: ai-crawlers-robots-txt
+seo_description: "Can ChatGPT, Claude and Perplexity crawl your site? Which AI crawlers matter, how sites block them by accident, and what to put in robots.txt."
 date: 2026-10-05
 draft: false
 topic: ai

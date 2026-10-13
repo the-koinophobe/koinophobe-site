@@ -27,9 +27,9 @@ import { Faq, type FaqItem } from "@/components/Faq";
 export const revalidate = 3600;
 
 export const metadata = {
-  title: { absolute: "Koinophobe · SEO for home service businesses, measured in calls" },
+  title: { absolute: "Koinophobe · SEO for home services, measured in calls" },
   description:
-    "Technical SEO, local SEO and call tracking for roofers and home service businesses in the US, Australia and Europe. 30+ sites over two years, prices on the site, and a free 20-minute call.",
+    "SEO and call tracking for home service businesses in the US, Australia and Europe. 30+ sites over two years, prices on the site, a free 20-minute call.",
   alternates: { canonical: "/" },
 };
 

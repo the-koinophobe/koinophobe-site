@@ -1,6 +1,7 @@
 ---
 title: "What a free estimate page needs before anyone fills it out"
 slug: lawrence-ma-free-estimate-page
+seo_description: "A free estimate page is where a search becomes a lead, and most of them leak. What I put on every one, from builds in Lawrence, MA and beyond."
 date: 2026-10-07
 draft: false
 excerpt: "A free estimate page is where a search turns into a lead, and most of them leak. Here's what I put on every one now, from builds for clients in Lawrence, MA and around the US."

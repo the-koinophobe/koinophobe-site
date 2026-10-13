@@ -16,9 +16,9 @@ import { Faq, type FaqItem } from "@/components/Faq";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Roofing SEO for contractors: more calls, no shared leads",
+  title: "Roofing SEO: more calls, no shared leads",
   description:
-    "SEO for roofing contractors in the US and Australia: city service pages, storm and insurance content, Google Business Profile and call tracking. One Florida roofer went from position 77 to 12.9 for its main city term.",
+    "Roofing SEO for contractors in the US and Australia: city pages, storm content, Business Profile and call tracking. One roofer went from position 77 to 12.9.",
   alternates: { canonical: "/roofing-seo" },
 };
 
