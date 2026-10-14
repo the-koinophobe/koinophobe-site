@@ -23,7 +23,7 @@ faq:
 
 A cleaning company earns its steady money from recurring customers, but most people don't start by searching "biweekly cleaning service." They search for the job in front of them: `deep cleaning`, `move out cleaning`, `house cleaners near me`. The site has to catch that search, book the first clean, and then sell the schedule.
 
-Cleaning isn't a trade I've worked in. Most of my sites are roofing, pool deck, lawn and shutter companies. The search side works the same way, though, so this is the setup I'd use, and the results I mention come from those other trades.
+Cleaning isn't a trade we've worked in. Most of our sites are roofing, pool deck, lawn and shutter companies. The search side works the same way, though, so this is the setup we'd use, and the results we mention come from those other trades.
 
 ## A page for each kind of clean
 
@@ -67,10 +67,10 @@ Recurring customers see you every week or two, which gives you more chances to a
 
 ## Track bookings
 
-Make each booking a key event in GA4, whether it comes from a form, a booking tool or a phone tap, and test the booking form every month. In July 2026 I found a client's forms had been failing since March because of an email setting. Nobody noticed for four months. [The three events every local business should track](/notes/three-events-local-business) covers the setup.
+Make each booking a key event in GA4, whether it comes from a form, a booking tool or a phone tap, and test the booking form every month. In July 2026 we found a client's forms had been failing since March because of an email setting. Nobody noticed for four months. [The three events every local business should track](/notes/three-events-local-business) covers the setup.
 
-Then watch which service pages lead to recurring sign-ups. That tells you which pages to improve first. Lawn care runs on the same one-time-to-recurring pattern, and my [lawn care SEO](/notes/lawn-care-seo) note shows a similar plan page.
+Then watch which service pages lead to recurring sign-ups. That tells you which pages to improve first. Lawn care runs on the same one-time-to-recurring pattern, and our [lawn care SEO](/notes/lawn-care-seo) note shows a similar plan page.
 
 ## Where to start
 
-Build the prices page and the move-out cleaning page first. Both answer searches people make when they're ready to book. If you'd like help with the site and profile, my plans and what they include are on the [pricing page](/pricing).
+Build the prices page and the move-out cleaning page first. Both answer searches people make when they're ready to book. If you'd like help with the site and profile, our plans and what they include are on the [pricing page](/pricing).

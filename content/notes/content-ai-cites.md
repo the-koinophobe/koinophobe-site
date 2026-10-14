@@ -5,23 +5,23 @@ date: 2026-09-23
 draft: false
 topic: ai
 seo_title: "How to write content AI assistants cite"
-seo_description: "The pages AI assistants cited in my study were article-shaped, direct and specific. A page template any business can use to write content AI cites."
-excerpt: "The pages ChatGPT, Claude, Perplexity and AI Overviews cited in my study had a shape: article-like, direct, specific and longer than what ranked. A page template any business can use, built from those measurements."
+seo_description: "The pages AI assistants cited in our study were article-shaped, direct and specific. A page template any business can use to write content AI cites."
+excerpt: "The pages ChatGPT, Claude, Perplexity and AI Overviews cited in our study had a shape: article-like, direct, specific and longer than what ranked. A page template any business can use, built from those measurements."
 cover: /notes/photos/content-ai-cites-cover.webp
 cover_alt: "A person typing on a laptop at a desk"
 cover_credit: "Photo: Vinícius Marçall on Unsplash"
 faq:
   - q: "What kind of content do AI assistants cite?"
-    a: "In my September 2026 study, cited pages were mostly article-shaped: guides, comparisons and roundups. 41.6% carried Article markup against none of the pages that ranked on Google and weren't cited. Product and pricing pages ranked but were rarely cited."
+    a: "In our September 2026 study, cited pages were mostly article-shaped: guides, comparisons and roundups. 41.6% carried Article markup against none of the pages that ranked on Google and weren't cited. Product and pricing pages ranked but were rarely cited."
   - q: "How long should content be to get cited by AI?"
-    a: "There's no magic length. Cited pages in my study had a median of about 2,500 words against about 2,100 for pages that ranked and weren't cited, but that was descriptive, not a tested cause. Write as long as the question needs and put the direct answer first."
+    a: "There's no magic length. Cited pages in our study had a median of about 2,500 words against about 2,100 for pages that ranked and weren't cited, but that was descriptive, not a tested cause. Write as long as the question needs and put the direct answer first."
   - q: "Should I write content for AI or for people?"
     a: "For people, in a shape machines can lift. A direct answer in the first lines, clear headings phrased as questions, facts with dates and a named author help a reader and a system at the same time."
 ---
 
 ![The outline of an article page with a short answer block at the top marked in ochre, then headed sections below](/notes/illustrations/content-ai-cites.webp)
 
-Most AI SEO advice about content is a vibe: "write authoritative content," "be helpful." I wanted something more specific, so I looked at what the cited pages in [my September 2026 study](/notes/ai-cited-vs-ranked-page) had in common, against pages that ranked on Google for the same question and were never cited.
+Most AI SEO advice about content is a vibe: "write authoritative content," "be helpful." We wanted something more specific, so we looked at what the cited pages in [our September 2026 study](/notes/ai-cited-vs-ranked-page) had in common, against pages that ranked on Google for the same question and were never cited.
 
 Here's the shape, and a template you can use for any business.
 
@@ -39,7 +39,7 @@ Here's the shape, and a template you can use for any business.
 
 ## A template that matches
 
-This is the structure I use for client pages meant to be cited. It works for a SaaS comparison, a dentist's explainer or a contractor's cost guide.
+This is the structure we use for client pages meant to be cited. It works for a SaaS comparison, a dentist's explainer or a contractor's cost guide.
 
 **1. A title that is the question, or answers it.** "How much does a metal roof cost in Florida in 2026?" or "Invoice software for agencies: five options compared."
 
@@ -59,18 +59,18 @@ This is the structure I use for client pages meant to be cited. It works for a S
 
 ## What to write about first
 
-Start with the questions where assistants already name competitors and not you. Ask ChatGPT, Claude, Perplexity and Google your customers' questions, note who's cited, and write the better page. My [tracking method](/notes/track-ai-search-visibility) makes that list.
+Start with the questions where assistants already name competitors and not you. Ask ChatGPT, Claude, Perplexity and Google your customers' questions, note who's cited, and write the better page. Our [tracking method](/notes/track-ai-search-visibility) makes that list.
 
 Good first pages for most businesses:
 
 - **Cost pages.** "How much does X cost" is asked constantly and rarely answered honestly.
-- **Comparisons.** You versus the main alternative, or two options customers weigh. Head-to-head questions drew on the fewest sources in my study, so each cited page gets a bigger share. [Comparison pages](/notes/saas-comparison-pages).
+- **Comparisons.** You versus the main alternative, or two options customers weigh. Head-to-head questions drew on the fewest sources in our study, so each cited page gets a bigger share. [Comparison pages](/notes/saas-comparison-pages).
 - **"Is it worth it" pages.** Decisions with trade-offs, answered plainly.
 
-## Mistakes I see
+## Mistakes we see
 
 - **Answer buried in paragraph six.** Move it to the top.
-- **Prices in images, tables as screenshots.** Google advises keeping important content in text. So do I.
+- **Prices in images, tables as screenshots.** Google advises keeping important content in text. So do we.
 - **Undated pages.** Assistants repeat stale facts. Date yours and update them.
 - **AI-written filler.** Forty pages that say the same thing as every other site give an assistant no reason to pick yours.
 
@@ -78,4 +78,4 @@ Good first pages for most businesses:
 
 Pick one question your customers ask before buying, and rewrite or write that page using the template above this week. Then check it can be read: run the [free AI crawler check](/saas-seo#check).
 
-If you want a steady supply, my [AI search optimization](/ai-search-optimization) service writes 12 in-depth pages a month in this shape, plus the fixes and tracking. $1,000 a month, no contract.
+If you want a steady supply, our [AI search optimization](/ai-search-optimization) service writes 12 in-depth pages a month in this shape, plus the fixes and tracking. $1,000 a month, no contract.

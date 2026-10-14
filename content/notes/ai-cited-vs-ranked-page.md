@@ -1,11 +1,11 @@
 ---
 title: What separates an AI cited page from a page that merely ranked
 seo_title: "AI cited pages vs Google ranked pages: a 96-run study"
-seo_description: "I asked ChatGPT, Claude, Perplexity and Google AI Overviews 12 buyer questions across 96 runs. What the pages they cited had that ranked pages lacked."
+seo_description: "We asked ChatGPT, Claude, Perplexity and Google AI Overviews 12 buyer questions across 96 runs. What the pages they cited had that ranked pages lacked."
 slug: ai-cited-vs-ranked-page
 date: 2026-09-12
 draft: false
-excerpt: Very often, we have been told of a plethora of actions that, if performed should get your pages seen by AI assistants, I ran some measurements to find out what actually moves the needle.
+excerpt: Very often, we have been told of a plethora of actions that, if performed should get your pages seen by AI assistants, we ran some measurements to find out what actually moves the needle.
 cover: /notes/photos/ai-cited-vs-ranked-page-cover.webp
 cover_alt: "A person typing on a laptop with an AI assistant open on the screen"
 cover_credit: "Photo: Jo Lin on Unsplash"
@@ -20,7 +20,7 @@ faq:
 
 ![Cited pages against pages that ranked: assistants share 2 to 12 percent of URLs with Google's organic top ten, but 34 to 54 percent of companies](figures/fig2-overlap.png)
 
-I recently came across [Openbenchmarks](https://openbenchmarks.com/), an independent benchmarking platform that publishes its data under CC-BY-4.0 and its code on GitHub, so that agents and humans have a second opinion when they pick a vendor. The idea stuck with me. So I ran a measurement of my own, to see what AI assistants are actually giving weight to right now.
+We recently came across [Openbenchmarks](https://openbenchmarks.com/), an independent benchmarking platform that publishes its data under CC-BY-4.0 and its code on GitHub, so that agents and humans have a second opinion when they pick a vendor. The idea stuck with us. So we ran a measurement of our own, to see what AI assistants are actually giving weight to right now.
 
 ## The question
 
@@ -53,7 +53,7 @@ Every percentage below carries a 95% Wilson confidence interval, shown in bracke
 
 A measure counts as separating the two groups only when the two intervals do not overlap. Anything else is reported as inside the noise and is not a finding. A measure computed on fewer than ten pages is suppressed entirely rather than reported with a caveat.
 
-I wrote that threshold down before I looked at any data. It is the reason the headline below is publishable rather than a failure.
+We wrote that threshold down before we looked at any data. It is the reason the headline below is publishable rather than a failure.
 
 ## The twelve queries
 
@@ -312,7 +312,7 @@ One oddity worth a second look. `use-apify.com` is the eighth most cited domain 
 | 404 | 3 | dataforseo.com, developers.oxylabs.io, docs.zyte.com |
 | 302, 400, 410 | 3 | apix-drive.com, app.scrapingbee.com, scraping.pro |
 
-Twenty Bright Data pages, the second most cited company in the study, did not resolve from my collection point. That is a property of the network I collected on, not of Bright Data. One of the largest players in the category is therefore almost entirely absent from the property measurements while its 46 citations still count in the concentration table. Read the headline table as measured on the category minus Bright Data.
+Twenty Bright Data pages, the second most cited company in the study, did not resolve from our collection point. That is a property of the network we collected on, not of Bright Data. One of the largest players in the category is therefore almost entirely absent from the property measurements while its 46 citations still count in the concentration table. Read the headline table as measured on the category minus Bright Data.
 
 Eight pages were refused by bot rules rather than missing. G2, SourceForge, SoftwareAdvice, DesignRush and Medium block plain HTTP clients as policy. Those are exactly the review and comparison sites the study would most want to characterize, so **the review-site share is suppressed by the measurement method, not by assistant behavior, and cannot be read as evidence about review sites at all.** The honest value for that row is "unmeasurable".
 
@@ -327,7 +327,7 @@ There is a real methodological point in that second group. A study that measures
 - **That the stability percentages would replicate.** Four queries, three runs, sixteen pairs. The spread between assistants is large enough to report; the exact percentages are not.
 - **That any of this is stable over time.** One sitting. Two of the four assistants ship changes weekly.
 
-## What I got wrong before I got it right
+## What we got wrong before we got it right
 
 Every one of these made a number look better or cleaner than it was. They are listed because a measurement nobody can audit is an opinion with decimal places.
 
@@ -339,13 +339,13 @@ Every one of these made a number look better or cleaner than it was. They are li
 6. **Code-sample URLs counted as citations.** `example.com`, bare API endpoints and template literals inside code blocks were being scored as cited pages. Seventeen URLs dropped on that rule.
 7. **A URL repair rule was destructive.** The regex that fixes run-on URLs from the Google results copy listed `.co` before `.com` in its TLD alternation, which quietly turned `brightdata.com` into `brightdata.co` and mangled 436 healthy URLs. Rewritten to require the brand token to actually repeat after the TLD, and tested against both broken and healthy cases.
 
-Errors 1, 3 and 4 each changed a reported result. Error 7 would have invalidated the entire run. I found it by testing the repair against URLs that were already healthy, which is the test most people skip.
+Errors 1, 3 and 4 each changed a reported result. Error 7 would have invalidated the entire run. We found it by testing the repair against URLs that were already healthy, which is the test most people skip.
 
 ## What it adds up to
 
 In order of how much weight each can carry.
 
-**1. Assistants and organic search return almost disjoint sets of pages.** Between 2.0% and 11.6% of cited URLs also appeared in Google's organic top ten for the identical query, against 34% to 54% at the company level. They agree on who is credible and disagree on which page answers the question. This is the strongest result here and it was not the one I set out to find.
+**1. Assistants and organic search return almost disjoint sets of pages.** Between 2.0% and 11.6% of cited URLs also appeared in Google's organic top ten for the identical query, against 34% to 54% at the company level. They agree on who is credible and disagree on which page answers the question. This is the strongest result here and it was not the one we set out to find.
 
 **2. Five of six measured page properties cannot distinguish cited pages from ranked-but-never-cited pages.** Only Article markup separates them, and it survives holding page type constant. Four of the five non-findings point the opposite way to the conventional advice.
 
@@ -361,9 +361,9 @@ Two things follow from that, and you are welcome to disagree with both.
 
 "Optimize your page to get cited" is the wrong frame right now, because the channel is not stable enough for a page-level change to be attributable to anything. And "AI search" is not one channel. Google AI Overviews was more stable, more diverse in source type and more willing to cite forums than any chat assistant here. Any claim about AI visibility that does not name the assistant is unfalsifiable.
 
-## What I would measure next
+## What we would measure next
 
-In the order I would actually do them.
+In the order we would actually do them.
 
 **1. Fix the two known measurement holes.** A headless browser fetch path for the domains that refused a plain HTTP client, and a second collection point so a DNS failure at one location does not remove a major vendor from the sample. Then re-run identically and see whether the headline still comes back empty. A negative result is only as strong as the coverage behind it.
 

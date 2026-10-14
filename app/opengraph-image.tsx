@@ -75,7 +75,7 @@ export default function OgImage() {
             color: "#4A5C50",
           }}
         >
-          Technical SEO &middot; US, Australia, Europe &middot; 30+ sites &middot; koinophobe.com
+          SEO agency &middot; 30+ sites &middot; koinophobe.com
         </div>
       </div>
     ),

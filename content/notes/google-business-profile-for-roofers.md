@@ -21,7 +21,7 @@ faq:
 
 When someone searches "roofer near me", the first thing they see is usually the map with three businesses under it. Those three get most of the calls. Your Google Business Profile decides whether you're one of them.
 
-Most roofing profiles I look at were set up once, years ago, and never touched again. Here's how I set one up now.
+Most roofing profiles we look at were set up once, years ago, and never touched again. Here's how we set one up now.
 
 ## Pick the right primary category
 
@@ -54,7 +54,7 @@ Under Services, list each job separately: roof replacement, roof repair, leak re
 
 If you want to know how many calls come from the profile, you can use a tracking number. The common approach is to put the tracking number in the **primary phone** field and your main business number in the **additional phone** field, so directories that list your main number still match.
 
-Whatever you choose, use one main number everywhere else: your website, Yelp, the BBB, your truck. I wrote more about this in [call tracking for contractors](/notes/call-tracking-for-contractors).
+Whatever you choose, use one main number everywhere else: your website, Yelp, the BBB, your truck. We wrote more about this in [call tracking for contractors](/notes/call-tracking-for-contractors).
 
 ## Link to the right page, with tracking
 
@@ -62,7 +62,7 @@ The website link doesn't have to be your homepage. If the profile serves one cit
 
 `https://yoursite.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp`
 
-Then make sure the page they land on lets them act. One roofing site I work on ranks in the top three for a search about booking an inspection. It showed up 143 times in four weeks and got no clicks. The page had no way to book online.
+Then make sure the page they land on lets them act. One roofing site we work on ranks in the top three for a search about booking an inspection. It showed up 143 times in four weeks and got no clicks. The page had no way to book online.
 
 ## Photos of real jobs
 
@@ -70,10 +70,10 @@ Upload photos from actual jobs: the crew on a roof, before and after, the truck 
 
 ## Reviews
 
-Reviews are the other half of ranking on the map. Ask every customer, reply to every review, and stay inside Google's rules on incentives. I covered how in [getting more Google reviews as a roofer](/notes/google-reviews-for-roofers).
+Reviews are the other half of ranking on the map. Ask every customer, reply to every review, and stay inside Google's rules on incentives. We covered how in [getting more Google reviews as a roofer](/notes/google-reviews-for-roofers).
 
 ## The ten-minute check
 
 Open your profile and check: primary category, address hidden or shown correctly, service areas, real name, services filled in, website link going to the right page, photos added in the last month. If any of those are off, fix them today. Most take a minute.
 
-If you'd like me to go through it with you, the [Site Audit](/pricing) covers the profile and the website together. More on how I work with roofers is on the [roofing SEO page](/roofing-seo).
+If you'd like us to go through it with you, the [Site Audit](/pricing) covers the profile and the website together. More on how we work with roofers is on the [roofing SEO page](/roofing-seo).

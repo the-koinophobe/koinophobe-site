@@ -11,8 +11,8 @@ type Node = {
   /** Numeric figure, only where Search Console can actually see it. */
   value?: number;
   unit?: string;
-  owner: "mine" | "yours";
-  /** Stand-in shown where there is no figure I can honestly put up. */
+  owner: "ours" | "yours";
+  /** Stand-in shown where there is no figure we can honestly put up. */
   slot?: string;
   body: string;
 };
@@ -24,9 +24,9 @@ const NODES: Node[] = [
     icon: Search,
     value: aggregate.impressions,
     unit: "times a client site was put in front of someone",
-    owner: "mine",
+    owner: "ours",
     body:
-      "Somebody types the thing. If you're not in the results, nothing below this happens. This part is my job.",
+      "Somebody types the thing. If you're not in the results, nothing below this happens. This part is our job.",
   },
   {
     key: "click",
@@ -34,27 +34,27 @@ const NODES: Node[] = [
     icon: MousePointerClick,
     value: aggregate.clicks,
     unit: "of them chose the client over everyone else on the page",
-    owner: "mine",
+    owner: "ours",
     body:
-      "They pick one. Your position, your title and what your Business Profile says decide which. Search Console shows me this part too.",
+      "They pick one. Your position, your title and what your Business Profile says decide which. Search Console shows us this part too.",
   },
   {
     key: "call",
     label: "Call",
     icon: PhoneCall,
     owner: "yours",
-    slot: "Your number, not mine",
+    slot: "Your number, not ours",
     body:
-      "The phone rings or a form comes in. Search Console can't see this. It can be tracked, but only if someone sets it up, and on most sites I take over nobody has.",
+      "The phone rings or a form comes in. Search Console can't see this. It can be tracked, but only if someone sets it up, and on most sites we take over nobody has.",
   },
   {
     key: "revenue",
     label: "Revenue",
     icon: Banknote,
     owner: "yours",
-    slot: "Not in any tool I own",
+    slot: "Not in any tool we own",
     body:
-      "What the job was worth once it closed. No tool I use can see it. You have it in your books, and it's the number that decides whether any of this was worth paying for.",
+      "What the job was worth once it closed. No tool we use can see it. You have it in your books, and it's the number that decides whether any of this was worth paying for.",
   },
 ];
 
@@ -174,12 +174,12 @@ export function Pipeline() {
       <div className="lg:sticky lg:top-32 lg:self-start">
         <p className="eyebrow">The line from search to money</p>
         <h2 className="mt-4 max-w-[15ch] font-display text-[clamp(1.9rem,4vw,3.1rem)] leading-[1.05] tracking-tight text-balance">
-          Four steps. I can only see the first two.
+          Four steps. We can only see the first two.
         </h2>
         <p className="mt-6 max-w-[46ch] text-[17.5px] text-muted">
           Most SEO reports stop at clicks, because that&rsquo;s where the tools stop. Search
-          Console can&rsquo;t tell me whether your phone rang, so call and form tracking is the
-          first thing I set up on any site.
+          Console can&rsquo;t tell us whether your phone rang, so call and form tracking is the
+          first thing we set up on any site.
         </p>
         <p className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-line pt-6 font-mono text-[11.5px] uppercase tracking-[0.13em] text-muted">
           <span className="inline-flex items-center gap-2">
@@ -279,8 +279,8 @@ export function Pipeline() {
       </div>
 
       <p className="mt-14 max-w-[62ch] border-t border-line pt-8 font-display text-[clamp(1.15rem,2.2vw,1.5rem)] leading-snug tracking-tight text-balance">
-        In July I noticed form submissions on a client&rsquo;s site had been dropping since
-        March. It was an email setting. Four months, and nobody caught it, me included. I check
+        In July we noticed form submissions on a client&rsquo;s site had been dropping since
+        March. It was an email setting. Four months, and nobody caught it, us included. We check
         form delivery on every site every month now.
       </p>
     </div>

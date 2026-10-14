@@ -46,7 +46,7 @@ There's no API yet. Microsoft has said API access is planned, without a date, an
 
 ## How to read it
 
-**Citations over time.** A baseline. Watch the trend after you publish or update pages, but don't read meaning into one day. My own [citation study](/notes/ai-cited-vs-ranked-page) found AI answers change a lot from run to run, and daily citation counts will be noisy for the same reason.
+**Citations over time.** A baseline. Watch the trend after you publish or update pages, but don't read meaning into one day. Our own [citation study](/notes/ai-cited-vs-ranked-page) found AI answers change a lot from run to run, and daily citation counts will be noisy for the same reason.
 
 **Cited pages.** The most useful view. These are the pages Copilot trusts enough to quote. Compare them with your top pages in Google Search Console:
 
@@ -60,7 +60,7 @@ There's no API yet. Microsoft has said API access is planned, without a date, an
 
 - **Other assistants.** Copilot only. ChatGPT, Claude, Perplexity and Google's AI features aren't in it.
 - **Whether you were named without a link.** It counts citations, not mentions in the text.
-- **Clicks.** Citations aren't visits. GA4 shows the visits; I covered the setup in [tracking ChatGPT traffic in GA4](/notes/track-chatgpt-traffic-ga4).
+- **Clicks.** Citations aren't visits. GA4 shows the visits; we covered the setup in [tracking ChatGPT traffic in GA4](/notes/track-chatgpt-traffic-ga4).
 
 So use it as one of three measures: platform data where it exists (Bing), clicks in GA4, and repeated checks of what assistants say, using a fixed question list. [The tracking method](/notes/track-ai-search-visibility).
 
@@ -72,4 +72,4 @@ Copilot answers from Bing. Bing's index is also part of how many other tools fin
 
 Verify your site in Bing Webmaster Tools today and submit your sitemap. Check the AI Performance report in a few weeks and list your cited pages. Then run the [free AI crawler check](/saas-seo#check) to confirm Bingbot and the other assistants' crawlers can reach everything else.
 
-My [AI search optimization](/ai-search-optimization) service reads this report alongside repeated checks across ChatGPT, Claude, Perplexity and Google every month. $1,000 a month, no contract.
+Our [AI search optimization](/ai-search-optimization) service reads this report alongside repeated checks across ChatGPT, Claude, Perplexity and Google every month. $1,000 a month, no contract.

@@ -34,7 +34,7 @@ Phone calls are the hardest lead to count, because they don't happen on your web
 
 Every phone number on your site should be a tap-to-call link. Then set up Google Analytics 4 and Google Tag Manager to record a click on any of those links as an event, and mark that event as a key event.
 
-That gives you calls from the website by page, by town page, and by the search that brought the person in. It costs nothing but setup time. It's the first thing I set up on any contractor site, along with form submissions and booking links. I wrote about those three events together in [the three conversion events every local business should track](/notes/three-events-local-business).
+That gives you calls from the website by page, by town page, and by the search that brought the person in. It costs nothing but setup time. It's the first thing we set up on any contractor site, along with form submissions and booking links. We wrote about those three events together in [the three conversion events every local business should track](/notes/three-events-local-business).
 
 ## Business Profile calls: already counted
 
@@ -56,7 +56,7 @@ If the service offers call recording, check the consent rules in your state firs
 
 ## Count forms properly, too
 
-Quote forms are the other half. Count them when they're actually submitted, not when someone loads the thank-you page, which bots and people refreshing will inflate. And check the form still sends. Forms stop delivering all the time when an email password changes or a plugin updates, and nobody notices until the leads dry up. I wrote about two ways it happens in [why a contact form stops sending leads](/notes/speed-plugin-broke-contact-form).
+Quote forms are the other half. Count them when they're actually submitted, not when someone loads the thank-you page, which bots and people refreshing will inflate. And check the form still sends. Forms stop delivering all the time when an email password changes or a plugin updates, and nobody notices until the leads dry up. We wrote about two ways it happens in [why a contact form stops sending leads](/notes/speed-plugin-broke-contact-form).
 
 ## What you'll have at the end of the month
 

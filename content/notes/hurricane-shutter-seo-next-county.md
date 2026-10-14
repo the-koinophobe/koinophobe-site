@@ -10,7 +10,7 @@ cover_alt: "Dark storm clouds rolling in over a coastal town and the water at Po
 cover_credit: "Photo: Frederick Wallace on Unsplash"
 faq:
   - q: "Should a hurricane shutter company target nearby counties?"
-    a: "If you install there, yes. On one shutter site I work on, 38% of search visibility came from outside the home county. Build a real page for each town you serve over the line."
+    a: "If you install there, yes. On one shutter site we work on, 38% of search visibility came from outside the home county. Build a real page for each town you serve over the line."
   - q: "Why does my shutter page rank in the top three with no clicks?"
     a: "Usually the snippet or the page. The title tag and meta description may not match the search, or the page may not do what the searcher came for. Fix both before chasing more rankings."
   - q: "When should hurricane content be published?"
@@ -19,9 +19,9 @@ faq:
 
 ![A home county and its neighbor, with 38 percent of search visibility landing outside home](/notes/illustrations/hurricane-shutter-seo-next-county.webp)
 
-It's easy to build a shutter company's website around its home county. The homepage names it, the service pages name it, and the Business Profile is centered on it. On one site I work on, the data said a large share of the people searching were somewhere else.
+It's easy to build a shutter company's website around its home county. The homepage names it, the service pages name it, and the Business Profile is centered on it. On one site we work on, the data said a large share of the people searching were somewhere else.
 
-This note is about one hurricane shutter company in Florida that I work with. I'll give the numbers as they are, then what I'd do with them.
+This note is about one hurricane shutter company in Florida that we work with. We'll give the numbers as they are, then what we'd do with them.
 
 ## What the data showed
 
@@ -42,11 +42,11 @@ The numbers alone can't tell you exactly why nobody clicked. What they do tell y
 
 The fix is a real page for the neighboring town. It should say which products you install there (patio screens, accordion shutters, panels, whatever you do), show jobs you've done in that town if you have them, mention permit or inspection steps if they differ, and give a phone number someone answers. Google's doorway abuse policy treats near-identical pages with the town name swapped as spam, so the page needs content that is true about that town.
 
-Then add the town to your Google Business Profile service areas. You can list up to 20, set by city or ZIP, within about 2 hours' drive. My [Business Profile setup note](/notes/google-business-profile-for-roofers) is written for roofers, and the settings are the same for shutters.
+Then add the town to your Google Business Profile service areas. You can list up to 20, set by city or ZIP, within about 2 hours' drive. Our [Business Profile setup note](/notes/google-business-profile-for-roofers) is written for roofers, and the settings are the same for shutters.
 
 ## Fixing the zero clicks
 
-A top-three ranking with no clicks points at two things: the snippet (your title tag and meta description) and whether the page does what the searcher came to do. Across three Florida sites I work on, in the 28 days to August 16, 2026, 307 search terms ranked in Google's top ten and got zero clicks from 19,883 impressions. I wrote that up in [why top rankings get zero clicks](/notes/zero-click-rankings-title-tags).
+A top-three ranking with no clicks points at two things: the snippet (your title tag and meta description) and whether the page does what the searcher came to do. Across three Florida sites we work on, in the 28 days to August 16, 2026, 307 search terms ranked in Google's top ten and got zero clicks from 19,883 impressions. We wrote that up in [why top rankings get zero clicks](/notes/zero-click-rankings-title-tags).
 
 For the shutter site, that means rewriting titles so the product and town appear in the first few words, and writing meta descriptions that say what the searcher gets: the products installed in that town, a free estimate if you offer one, and a phone number. Then check the Search Console Performance report a few weeks later, filtered to those queries, and compare clicks with the previous period.
 
@@ -58,8 +58,8 @@ The Atlantic hurricane season runs June 1 to November 30, with the peak around S
 
 New pages take time to be indexed and settle in rankings. Anything meant for this season should be published in spring. Refresh the seasonal article before June each year with the latest storm history, so it's current when searches climb.
 
-## What I'd check on your site
+## What we'd check on your site
 
-If you sell shutters or impact windows, open Search Console, go to Performance, and look at the Queries tab for town names you don't have pages for. Then compare the Pages tab against the Queries tab to see which page Google is showing for each town. For a wider look at location searches, my [near-me search data](/notes/near-me-searches-local-seo-data) covers 1,250 near-me queries across five sites.
+If you sell shutters or impact windows, open Search Console, go to Performance, and look at the Queries tab for town names you don't have pages for. Then compare the Pages tab against the Queries tab to see which page Google is showing for each town. For a wider look at location searches, our [near-me search data](/notes/near-me-searches-local-seo-data) covers 1,250 near-me queries across five sites.
 
-If you'd rather have someone go through it with you, the Site Audit on my [pricing page](/pricing) is where I'd start, or [send me your site](/contact) and tell me which towns you install in.
+If you'd rather have someone go through it with you, the Site Audit on our [pricing page](/pricing) is where we'd start, or [send us your site](/contact) and tell us which towns you install in.

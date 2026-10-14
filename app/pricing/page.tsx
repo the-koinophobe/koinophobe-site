@@ -17,7 +17,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "SEO prices in US dollars: a $300 tracking fix, a $750 site audit, monthly plans from $600, AI search at $1,000 a month, and agency rates from $850 a site.",
+    "SEO agency prices: a $300 tracking fix, a $750 site audit, monthly plans from $600, AI search at $1,000 a month, and agency rates from $850 a site.",
   alternates: { canonical: "/pricing" },
 };
 
@@ -34,20 +34,20 @@ const TERMS = [
   },
   {
     icon: <Landmark size={19} aria-hidden />,
-    t: "Invoices in US dollars.",
-    b: "US clients pay by ACH bank transfer. In Australia or Europe, I'll send payment details that work from where you are.",
+    t: "Simple invoicing.",
+    b: "Pay by ACH bank transfer. One-time projects are invoiced up front, monthly plans at the start of each month.",
   },
   {
     icon: <Ban size={19} aria-hidden />,
     t: "Not included.",
-    b: "Ad spend and ad management. Long-form articles are only in the software startup plan. If you need something else, I'll say so up front and point you to someone.",
+    b: "Ad spend and ad management. Long-form articles are only in the software startup plan. If you need something else, we'll say so up front and point you to someone.",
   },
 ];
 
 const FAQ = [
   {
     q: "Which one do I need?",
-    a: "If you just want your calls and forms counted, the $300 Tracking Fix. If you don't know what else is wrong, start with the audit. If you know what's broken and want it fixed once, the Setup Sprint. If you want someone on it every month, Growth. The intro call is free if you'd rather ask me.",
+    a: "If you just want your calls and forms counted, the $300 Tracking Fix. If you don't know what else is wrong, start with the audit. If you know what's broken and want it fixed once, the Setup Sprint. If you want someone on it every month, Growth. The intro call is free if you'd rather ask us.",
   },
   {
     q: "Do you guarantee rankings?",
@@ -55,11 +55,11 @@ const FAQ = [
   },
   {
     q: "What happens if I cancel?",
-    a: "You keep everything: the accounts, the pages, the tracking. Give me 30 days' notice after the first three months and I'll hand it all over in order.",
+    a: "You keep everything: the accounts, the pages, the tracking. Give us 30 days' notice after the first three months and we'll hand it all over in order.",
   },
   {
     q: "Do you only work with home service businesses?",
-    a: "Most of my work is roofers, pool deck, lawn and shutter companies, but I also work with clinics, shops and auto businesses at the same prices. Any business that wants to show up in AI answers can use the Search + AI plan, $1,000 a month.",
+    a: "Most of our work is roofers, pool deck, lawn and shutter companies, but we also work with clinics, shops and auto businesses at the same prices. Any business that wants to show up in AI answers can use the Search + AI plan, $1,000 a month.",
   },
 ];
 
@@ -157,9 +157,8 @@ export default function PricingPage() {
               SEO pricing for home service businesses, before the call
             </h1>
             <p className="t-lead mt-6 max-w-[58ch]">
-              Everything here is in US dollars, for businesses in the US, Australia and Europe.
-              You&rsquo;re invoiced in USD. If you&rsquo;re not sure which one fits, the intro call is free and
-              I&rsquo;ll tell you.
+              Every price we charge is on this page. If you&rsquo;re not sure which one fits, the intro call is
+              free and we&rsquo;ll tell you.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <BookCta from="pricing_hero" />
@@ -325,8 +324,8 @@ export default function PricingPage() {
               </span>
               <p className="mt-3 text-[16.5px] font-medium">Not ready for a call?</p>
               <p className="mt-1.5 max-w-[46ch] text-[15px] text-muted">
-                Email me your website and I&rsquo;ll send a free 5-minute screen recording of what
-                I&rsquo;d fix first.
+                Email us your website and we&rsquo;ll send a free 5-minute screen recording of what
+                we&rsquo;d fix first.
               </p>
               <EmailCta
                 label="Ask for a video review"

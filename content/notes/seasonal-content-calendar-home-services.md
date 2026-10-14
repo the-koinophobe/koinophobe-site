@@ -19,13 +19,13 @@ faq:
 
 ![A year in a ring, with the busy months for roofing, HVAC, lawn and pools](/notes/illustrations/seasonal-content-calendar-home-services.webp)
 
-A hurricane shutter company I work with got 37 of its 51 clicks in one 28-day window from a single article, a seasonal piece on hurricane history. One page brought in most of the site's search clicks in that window.
+A hurricane shutter company we work with got 37 of its 51 clicks in one 28-day window from a single article, a seasonal piece on hurricane history. One page brought in most of the site's search clicks in that window.
 
 Home service demand comes in waves. AC repair in summer, furnaces in winter, lawn programs in spring, storm work when the weather turns. The page that catches a wave has to be indexed and ranking before it arrives, and that takes time. Movers and cleaning companies ride the same waves: moving season peaks in summer, and [move-out cleaning](/notes/house-cleaning-seo) follows it. [Moving company SEO](/notes/moving-company-seo) covers the timing for movers.
 
 ## Why publishing in season is too late
 
-A new page has to be crawled, indexed and tested against the pages already ranking. That can take weeks or months, and I can't tell you which for any given site. If you publish an AC repair page in July, it may settle into its position in September, when the calls have slowed.
+A new page has to be crawled, indexed and tested against the pages already ranking. That can take weeks or months, and we can't tell you which for any given site. If you publish an AC repair page in July, it may settle into its position in September, when the calls have slowed.
 
 So plan at least one season ahead. Write summer pages in winter and winter pages in summer.
 
@@ -61,13 +61,13 @@ The pattern is the same in every row: the page goes live a few months before its
 
 ## Refresh what already ranks
 
-Last year's seasonal pages are a head start if they already show up in search. Before each season, open the Performance report in Google Search Console and compare the same months last year. Look at which queries each seasonal page showed for, then update the page with this year's photos, dates and any new questions. Keep the same URL. My [Search Console guide for contractors](/notes/google-search-console-for-contractors) shows where those comparisons live.
+Last year's seasonal pages are a head start if they already show up in search. Before each season, open the Performance report in Google Search Console and compare the same months last year. Look at which queries each seasonal page showed for, then update the page with this year's photos, dates and any new questions. Keep the same URL. Our [Search Console guide for contractors](/notes/google-search-console-for-contractors) shows where those comparisons live.
 
-## What the shutter article tells me
+## What the shutter article tells us
 
 The 37 of 51 figure shows where that site's clicks came from in that window: one seasonal article. On the same site, searches for a neighboring town climbed into the top three and still got nothing. 19 of those searches ranked in the top five, with 691 impressions and zero clicks. In that window, the seasonal article got the clicks and the town searches got none.
 
-On a Florida roofing site I work on, long-form articles on the questions homeowners ask after storms were one part of the work, alongside title rewrites, a service page per town and schema. Average position went from 47.9 to 14.9 across October 2025 to August 2026, compared with the eleven months before. I can't credit the articles alone for that, but they're the part that answers storm-season searches. The page types are in [storm damage roofing pages](/notes/storm-damage-roofing-pages).
+On a Florida roofing site we work on, long-form articles on the questions homeowners ask after storms were one part of the work, alongside title rewrites, a service page per town and schema. Average position went from 47.9 to 14.9 across October 2025 to August 2026, compared with the eleven months before. We can't credit the articles alone for that, but they're the part that answers storm-season searches. The page types are in [storm damage roofing pages](/notes/storm-damage-roofing-pages).
 
 ## Trade notes
 
@@ -81,4 +81,4 @@ Each trade has its own seasonal pages worth planning:
 
 Pick your trade's busy months, count back three to four months, and put a publish date on the calendar for each page. Two pages a month gives you 24 by this time next year.
 
-That's the pace on my Growth plan: 2 new town or service pages a month, plus Business Profile posts and a monthly call. Details are on the [pricing page](/pricing).
+That's the pace on our Growth plan: 2 new town or service pages a month, plus Business Profile posts and a monthly call. Details are on the [pricing page](/pricing).

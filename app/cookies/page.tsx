@@ -27,7 +27,7 @@ export default function CookiesPage() {
           </p>
 
           <div>
-            <h2>Categories I use</h2>
+            <h2>Categories we use</h2>
             <ul className="mt-2 list-disc space-y-2 pl-5">
               <li>
                 <strong>Strictly necessary:</strong> a single local setting that

@@ -19,7 +19,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Roofing SEO: more calls, no shared leads",
   description:
-    "Roofing SEO for contractors in the US and Australia: city pages, storm content, Business Profile and call tracking. One roofer went from position 77 to 12.9.",
+    "Roofing SEO for contractors: city pages, storm content, Business Profile and call tracking. One roofer went from position 77 to 12.9.",
   alternates: { canonical: "/roofing-seo" },
 };
 
@@ -92,7 +92,7 @@ export default function RoofingPage() {
             <h1 className="t-h1 mt-5 max-w-[17ch]">Roofing SEO for contractors tired of paying for shared leads</h1>
             <p className="t-lead mt-6 max-w-[58ch]">
               A lead from a lead site gets sold to three other contractors. A homeowner who finds you on Google
-              calls you. I&rsquo;ve done the SEO on {roofSites} roofing sites in Brevard County, Florida. One of
+              calls you. We&rsquo;ve done the SEO on {roofSites} roofing sites in Brevard County, Florida. One of
               them is below with its Search Console open.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
@@ -124,7 +124,7 @@ export default function RoofingPage() {
       <section className="section">
         <div className="container-pad">
           <Reveal className="max-w-3xl">
-            <p className="eyebrow">What I do for roofers</p>
+            <p className="eyebrow">What we do for roofers</p>
             <h2 className="t-h2 mt-5">The same six things on every roofing site</h2>
           </Reveal>
           <div data-anim="cards" className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

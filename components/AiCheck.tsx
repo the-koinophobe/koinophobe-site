@@ -8,7 +8,7 @@ import { track } from "@/lib/analytics";
 /*
  * The AI crawler check on /saas-seo. Calls /api/ai-check, which reads the
  * site's robots.txt and raw homepage, then shows which crawlers get in. The
- * result can be emailed to me in one click, which is the whole funnel: no
+ * result can be emailed to us in one click, which is the whole funnel: no
  * form backend, nothing stored.
  */
 
@@ -71,7 +71,7 @@ function summary(r: Result) {
   if (blocked.length === 0 && r.robots.state !== "unreachable")
     lines.push(`All ${cite.length} crawlers that fetch pages for answers are allowed by robots.txt.`);
   else if (blocked.length) lines.push(`${blocked.length} of ${cite.length} crawlers that fetch pages for answers are blocked: ${blocked.map((b) => b.token).join(", ")}.`);
-  if (r.page.refused) lines.push(`The homepage refused my checker (${r.page.status}${r.page.edge ? `, ${r.page.edge}` : ""}). A firewall that refuses me may refuse AI crawlers too.`);
+  if (r.page.refused) lines.push(`The homepage refused my checker (${r.page.status}${r.page.edge ? `, ${r.page.edge}` : ""}). A firewall that refuses us may refuse AI crawlers too.`);
   if (r.page.noindex) lines.push(`The homepage carries a noindex ${r.page.noindex === "header" ? "header" : "tag"}.`);
   if (r.page.thin) lines.push(`The homepage shows ${r.page.textChars} characters of text before JavaScript runs, so crawlers that don't run JavaScript see an almost empty page.`);
   return lines;
@@ -110,7 +110,7 @@ export function AiCheck() {
   const mail = result
     ? `mailto:${site.email}?subject=${encodeURIComponent(`AI crawler check: ${result.host}`)}&body=${encodeURIComponent(
         [
-          `I ran the AI crawler check on ${result.host}.`,
+          `We ran the AI crawler check on ${result.host}.`,
           "",
           ...lines,
           "",
@@ -146,7 +146,7 @@ export function AiCheck() {
           className="btn btn-lg btn-primary justify-center disabled:opacity-70"
         >
           {state === "loading" ? <Loader2 size={18} aria-hidden className="animate-spin" /> : <ScanSearch size={18} aria-hidden />}
-          {state === "loading" ? "Checking" : "Check my site"}
+          {state === "loading" ? "Checking" : "Check our site"}
         </button>
       </form>
 
@@ -226,7 +226,7 @@ export function AiCheck() {
               </p>
               <a href={mail} data-track="cta_email" data-from="saas_check_result" className="btn btn-md btn-primary flex-none">
                 <Mail size={17} aria-hidden />
-                Send me this result
+                Send us this result
               </a>
             </div>
           </div>

@@ -39,7 +39,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       description,
       type: "article",
       publishedTime: note.date,
-      authors: ["Michael Edward"],
+      authors: ["Koinophobe"],
       section: topicLabel(note.topic),
       ...(images ? { images } : {}),
     },
@@ -81,12 +81,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
     articleSection: topic.label,
     wordCount: words,
     image: note.cover ? `https://koinophobe.com${note.cover}` : "https://koinophobe.com/opengraph-image",
-    author: {
-      "@type": "Person",
-      "@id": "https://koinophobe.com/#michael",
-      name: "Michael Edward",
-      url: "https://koinophobe.com/about",
-    },
+    author: { "@id": "https://koinophobe.com/#organization" },
     publisher: { "@id": "https://koinophobe.com/#organization" },
     isPartOf: { "@id": "https://koinophobe.com/#website" },
     mainEntityOfPage: url,
@@ -125,8 +120,10 @@ export default function NotePage({ params }: { params: { slug: string } }) {
               <p className="t-lead mt-5 max-w-[62ch]">{note.excerpt}</p>
               <div className="mt-7 flex flex-wrap items-center gap-x-4 gap-y-2 text-[14.5px] text-muted">
                 <Link href="/about" className="flex items-center gap-2.5 font-medium text-ink">
-                  <Image src="/me/michael-edward.webp" alt="" width={32} height={32} className="h-8 w-8 rounded-full object-cover" />
-                  Michael Edward
+                  <span className="grid h-8 w-8 place-items-center rounded-full bg-surface" aria-hidden>
+                    <span className="logo-mark h-4 w-4" />
+                  </span>
+                  Koinophobe
                 </Link>
                 <span aria-hidden>&middot;</span>
                 <time dateTime={note.date}>{fmtDate(note.date, "long")}</time>
@@ -175,26 +172,20 @@ export default function NotePage({ params }: { params: { slug: string } }) {
             ) : null}
 
             <aside className="card mt-14 flex max-w-[70ch] items-start gap-5 bg-surface p-6">
-              <Image
-                src="/me/michael-edward.webp"
-                alt="Michael Edward"
-                width={64}
-                height={64}
-                className="h-16 w-16 flex-none rounded-full object-cover"
-              />
+              <span className="grid h-16 w-16 flex-none place-items-center rounded-full bg-bg" aria-hidden>
+                <span className="logo-mark h-7 w-7" />
+              </span>
               <div>
-                <p className="font-medium">Written by Michael Edward</p>
+                <p className="font-medium">Written by the Koinophobe team</p>
                 <p className="mt-1.5 text-[15px] leading-relaxed text-muted">
-                  I run{" "}
-                  <Link href="/notes/what-is-a-koinophobe" className="text-ink underline underline-offset-4">
+                  <Link href="/about" className="text-ink underline underline-offset-4">
                     Koinophobe
-                  </Link>
-                  , a technical SEO practice for {audience} in
-                  {site.markets}. 30+ sites over two years, with the numbers on the{" "}
+                  </Link>{" "}
+                  is an SEO agency for {audience}. 30+ sites built and ranked, with the numbers on the{" "}
                   <Link href="/work" className="text-ink underline underline-offset-4">
                     work page
                   </Link>
-                  . Businesses also hire me to get found and cited by ChatGPT, Perplexity, Gemini, Claude and AI agents like Manus.
+                  . Businesses also hire us to get found and cited by ChatGPT, Perplexity, Gemini, Claude and AI agents like Manus.
                 </p>
               </div>
             </aside>
@@ -233,10 +224,10 @@ export default function NotePage({ params }: { params: { slug: string } }) {
                 <p className="t-h3 !text-[1.2rem]">{isAi ? "Want your business in the answer?" : isStartup ? "Want this shipped on your site?" : "Want this done on your site?"}</p>
                 <p className="mt-2 text-[14.5px] leading-relaxed text-muted">
                   {isAi
-                    ? "Run the free AI crawler check, or book 20 minutes and I\u2019ll bring what the assistants say about your category."
+                    ? "Run the free AI crawler check, or book 20 minutes and we\u2019ll bring what the assistants say about your category."
                     : isStartup
-                      ? "I fix the technical side and write the pages buyers search for, with every change sent as a pull request. $1,000 a month, no contract."
-                      : "Book a free 20-minute call. I\u2019ll look at your site first and tell you what I\u2019d fix."}
+                      ? "We fix the technical side and write the pages buyers search for, with every change sent as a pull request. $1,000 a month, no contract."
+                      : "Book a free 20-minute call. We\u2019ll look at your site first and tell you what we\u2019d fix."}
                 </p>
                 <div className="mt-5 flex flex-col gap-2.5">
                   <BookCta from="note_sidebar" size="md" className="w-full" />
@@ -278,15 +269,15 @@ export default function NotePage({ params }: { params: { slug: string } }) {
         call={
           isAi
             ? [
-                "I check your robots.txt, your rendering and what the assistants say about your category before we talk.",
-                "You get the first few changes I'd ship, in order.",
-                "If it isn't a fit, I'll tell you that on the call.",
+                "We check your robots.txt, your rendering and what the assistants say about your category before we talk.",
+                "You get the first few changes we'd ship, in order.",
+                "If it isn't a fit, we'll tell you that on the call.",
               ]
             : isStartup
               ? [
-                  "I check your rendering, indexing and the pages buyers search for before we talk.",
-                  "You get the first fixes I'd ship, in order, whether you hire me or not.",
-                  "If it isn't a fit, I'll tell you that on the call.",
+                  "We check your rendering, indexing and the pages buyers search for before we talk.",
+                  "You get the first fixes we'd ship, in order, whether you hire us or not.",
+                  "If it isn't a fit, we'll tell you that on the call.",
                 ]
               : undefined
         }

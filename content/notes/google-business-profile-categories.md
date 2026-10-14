@@ -21,7 +21,7 @@ faq:
 
 ![A business profile with one primary category at the top and a short list of additional categories below it](/notes/illustrations/google-business-profile-categories.webp)
 
-Of all the settings on a Google Business Profile, the primary category is the one I'd check first. It tells Google what kind of business you are, and that decides which searches your profile can show up for. A roofer listed as "Contractor" competes for a vague set of searches. Listed as "Roofing contractor," it competes for the ones that bring roof jobs.
+Of all the settings on a Google Business Profile, the primary category is the one we'd check first. It tells Google what kind of business you are, and that decides which searches your profile can show up for. A roofer listed as "Contractor" competes for a vague set of searches. Listed as "Roofing contractor," it competes for the ones that bring roof jobs.
 
 Local SEO practitioners agree on this more than on most things. In Whitespark's Local Search Ranking Factors survey, the primary category comes out as the most important factor for the map pack.
 
@@ -37,7 +37,7 @@ Pick the most specific category that describes the work most of your revenue com
 
 - A roofer who also does gutters: **Roofing contractor**, with gutters as an additional category.
 - An HVAC company: **HVAC contractor**, or **Air conditioning contractor** if most calls are for cooling.
-- A kitchen and bath remodeler: **Kitchen remodeler** or **Bathroom remodeler**, whichever brings in more of the revenue, with the other one and **Remodeler** as additional categories. The rest of the setup is on my [home remodeling SEO](/home-remodeling-seo) page.
+- A kitchen and bath remodeler: **Kitchen remodeler** or **Bathroom remodeler**, whichever brings in more of the revenue, with the other one and **Remodeler** as additional categories. The rest of the setup is on our [home remodeling SEO](/home-remodeling-seo) page.
 - A cleaning company: **House cleaning service** if you mainly clean homes, **Commercial cleaning service** if you mainly clean offices.
 - A general auto shop: **Auto repair shop**, with **Brake shop** or **Oil change service** as additional categories if you do enough of that work.
 
@@ -55,7 +55,7 @@ Most local businesses need two to five categories in total. If you're at nine, c
 
 The primary category shows under the business name in Google Maps and in the search results panel. Additional categories don't show publicly, but local SEO browser extensions and rank tracking tools can read them from the page.
 
-Look at the top three businesses for your main search in two or three towns you serve. My [near-me search data](/notes/near-me-searches-local-seo-data) shows how much the results change with where the searcher stands. If they all share a primary category you don't use, that's worth testing.
+Look at the top three businesses for your main search in two or three towns you serve. Our [near-me search data](/notes/near-me-searches-local-seo-data) shows how much the results change with where the searcher stands. If they all share a primary category you don't use, that's worth testing.
 
 ## Changing categories
 
@@ -65,4 +65,4 @@ Also check for new categories every few months. Google adds them, and a better f
 
 ## Where to start
 
-Open your profile, read your primary category, and search your main service in your home town. If the top three use something different, look closely at why. My [Business Profile setup guide](/notes/google-business-profile-for-roofers) covers the other settings, and [service area businesses on Google](/notes/service-area-business-google-business-profile) covers the address and service areas. If you'd like the profile handled as part of a plan, see the Growth plan on my [pricing page](/pricing).
+Open your profile, read your primary category, and search your main service in your home town. If the top three use something different, look closely at why. Our [Business Profile setup guide](/notes/google-business-profile-for-roofers) covers the other settings, and [service area businesses on Google](/notes/service-area-business-google-business-profile) covers the address and service areas. If you'd like the profile handled as part of a plan, see the Growth plan on our [pricing page](/pricing).

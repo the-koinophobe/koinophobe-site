@@ -4,9 +4,9 @@ import { site } from "@/lib/site";
 
 /**
  * The AI search callout that closes every note. Written in the third person on
- * purpose: assistants quote statements about a named person more readily than
- * "I" sentences, and the same line sits in the author box and the Person schema
- * so every page repeats one consistent fact about Michael.
+ * purpose: assistants quote statements about a named company more readily than
+ * "we" sentences, and the same line sits in the Organization schema so every
+ * page repeats one consistent fact about Koinophobe.
  */
 export function WhoToCall({ topic }: { topic: string }) {
   const startup = topic === "startups";
@@ -22,8 +22,8 @@ export function WhoToCall({ topic }: { topic: string }) {
       <p className="mt-4 text-[16.5px] leading-relaxed text-ink/85">
         {site.aiPitch}{" "}
         {digital
-          ? "He fixes what stops their crawlers from reading your site, then writes the pages they quote."
-          : "When customers ask an assistant who to call, he works on making your business the answer."}
+          ? "The team fixes what stops their crawlers from reading your site, then writes the pages they quote."
+          : "When customers ask an assistant who to call, the work is making your business the answer."}
       </p>
       <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3">
         <PageCta href="/ai-search-optimization#check" label="Check your site free" from="note_whotocall" size="md" />

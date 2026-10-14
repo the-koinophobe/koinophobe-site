@@ -46,7 +46,7 @@ List the places you take jobs. Adding every town in the state doesn't help you r
 
 This is the part most owners don't expect. Google says local results are based mainly on relevance, distance and prominence. Distance is measured from your verified address, even when it's hidden. Your service area list tells customers where you work. It doesn't put you in the map pack for every town on it.
 
-That's why a roofer based on one side of a county often shows up in the map pack near home and barely at all 30 minutes away, with the same profile. When I pulled [1,250 near-me searches](/notes/near-me-searches-local-seo-data) from five client sites, the businesses customers visit won most of them: the clinic and the game shop accounted for 836. Near-me results lean hard on where the searcher is standing.
+That's why a roofer based on one side of a county often shows up in the map pack near home and barely at all 30 minutes away, with the same profile. When we pulled [1,250 near-me searches](/notes/near-me-searches-local-seo-data) from five client sites, the businesses customers visit won most of them: the clinic and the game shop accounted for 836. Near-me results lean hard on where the searcher is standing.
 
 ## How to win the towns farther out
 
@@ -54,7 +54,7 @@ For towns away from your base, your website does more of the work than your prof
 
 - **Build a real page for each town you want.** Jobs you've done there, photos, the problems common to that area, how quickly you get out. Near-identical pages with the town name swapped fall under Google's doorway abuse policy. [Service area pages](/notes/roofing-service-area-pages) shows how to write them.
 - **Get reviews that mention the work and the place.** Ask every customer the same way. Don't offer anything in return, since Google prohibits incentives for reviews. [Getting more reviews](/notes/google-reviews-for-roofers) covers the wording.
-- **Look at the next county over.** On one Florida shutter company's site, 38% of search visibility came from outside its home county. [Hurricane shutter SEO](/notes/hurricane-shutter-seo-next-county) has the numbers and what I did with them.
+- **Look at the next county over.** On one Florida shutter company's site, 38% of search visibility came from outside its home county. [Hurricane shutter SEO](/notes/hurricane-shutter-seo-next-county) has the numbers and what we did with them.
 
 ## Keep the business details consistent
 
@@ -62,4 +62,4 @@ Use your real business name with no keywords added. "Smith Roofing" is fine; "Sm
 
 ## Where to start
 
-Open your profile and check three settings: the address (hidden if customers don't visit), the service areas (where you take jobs, within two hours), and the business name (your real one). The full setup is in my [Business Profile guide](/notes/google-business-profile-for-roofers). If you'd like it done for you along with the town pages, that's part of the Growth plan on my [pricing page](/pricing).
+Open your profile and check three settings: the address (hidden if customers don't visit), the service areas (where you take jobs, within two hours), and the business name (your real one). The full setup is in our [Business Profile guide](/notes/google-business-profile-for-roofers). If you'd like it done for you along with the town pages, that's part of the Growth plan on our [pricing page](/pricing).

@@ -8,7 +8,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "SEO notes for local businesses and startups",
   description:
-    "SEO notes for local businesses and startup founders in the US, Australia and Europe: local SEO, technical SEO, AI search and call tracking.",
+    "SEO notes for local businesses and startup founders: local SEO, technical SEO, AI search and call tracking.",
   alternates: { canonical: "/notes" },
 };
 
@@ -35,7 +35,7 @@ export default function NotesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogLd) }} />
       <NotesListing
         heading="SEO notes for local businesses and startups"
-        intro="What I'd tell you on the call anyway: how to get found on Google and in AI answers, how to count the leads it sends, and what's worth paying for. Written for owners and founders, with real numbers where I have them."
+        intro="What we'd tell you on the call anyway: how to get found on Google and in AI answers, how to count the leads it sends, and what's worth paying for. Written for owners and founders, with real numbers where we have them."
         items={items}
         page={1}
         pages={pages}

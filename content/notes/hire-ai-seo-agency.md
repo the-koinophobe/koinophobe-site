@@ -23,16 +23,16 @@ faq:
 
 A year ago almost nobody sold "AI SEO." Now every agency does, along with a wave of new ones named after GEO. Some know what they're doing. Many renamed their SEO package.
 
-These are the questions I'd ask before hiring anyone for it, including me. Each comes with the answer you should want and the answer that should end the call.
+These are the questions we'd ask before hiring anyone for it, including us. Each comes with the answer you should want and the answer that should end the call.
 
 ## About measurement
 
 **1. "How will you measure whether we show up in AI answers?"**
 Want: a fixed list of buyer questions agreed with you, asked across several assistants, in fresh sessions, more than once for the important ones, logged with every source cited.
-Walk away: "We'll send screenshots." In [my September 2026 study](/notes/ai-cited-vs-ranked-page), ChatGPT kept only 4.5% of its cited pages across three runs of the same question. One screenshot is luck.
+Walk away: "We'll send screenshots." In [our September 2026 study](/notes/ai-cited-vs-ranked-page), ChatGPT kept only 4.5% of its cited pages across three runs of the same question. One screenshot is luck.
 
 **2. "Which assistants do you track?"**
-Want: at least ChatGPT and Google's AI Overviews, ideally Claude and Perplexity too, and an explanation of why they differ. In my data the chat assistants agreed with each other on companies about twice as often as any of them agreed with Google AI Overviews.
+Want: at least ChatGPT and Google's AI Overviews, ideally Claude and Perplexity too, and an explanation of why they differ. In our data the chat assistants agreed with each other on companies about twice as often as any of them agreed with Google AI Overviews.
 
 **3. "What will your report say it can't tell us?"**
 Want: limits stated plainly: sample size, location, how often answers move.
@@ -75,24 +75,24 @@ Walk away: 12 months locked in for a channel that changes weekly.
 **12. "What happens to our accounts and pages if we stop?"**
 Want: you own everything: the site, the pages, the tracking sheet, every account.
 
-## How I answer them
+## How we answer them
 
-Since I'm asking you to hold others to this, here are mine:
+Since we're asking you to hold others to this, here are ours:
 
 1. Fixed question list, four assistants, three runs each, every citation logged. [Method](/notes/track-ai-search-visibility).
 2. ChatGPT, Claude, Perplexity and Google AI Overviews.
 3. Every report states sample size and what the numbers can't show.
 4. Crawler access and answer tracking, on top of the SEO.
 5. Crawler access and rendering, in week one.
-6. I do, as pull requests or in your CMS.
+6. We do, as pull requests or in your CMS.
 7. 12 in-depth pages a month, comparison and alternatives pages included.
 8. You review anything that makes claims about you.
 9. No.
 10. Harmless, not a priority.
-11. None. If you're not satisfied, tell me and we stop 30 days later.
+11. None. If you're not satisfied, tell us and we stop 30 days later.
 12. You own all of it.
 
-The plan is on my [AI search optimization](/ai-search-optimization) page, priced at $1,000 a month. [What that price covers](/notes/ai-seo-pricing).
+The plan is on our [AI search optimization](/ai-search-optimization) page, priced at $1,000 a month. [What that price covers](/notes/ai-seo-pricing).
 
 ## Next steps
 

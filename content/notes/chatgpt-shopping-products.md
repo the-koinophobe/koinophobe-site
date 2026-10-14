@@ -23,7 +23,7 @@ faq:
 
 People now shop inside ChatGPT. Ask for "a waterproof hiking backpack under $150" and you may get a carousel of products with prices and links to stores. If you run an online store, the question is how your products get into that carousel.
 
-OpenAI has published more about this than about most of ChatGPT. Here's what it says, and what I'd do.
+OpenAI has published more about this than about most of ChatGPT. Here's what it says, and what we'd do.
 
 ## What OpenAI says about product results
 
@@ -40,7 +40,7 @@ So the levers are clear: accurate structured product data, a good price, stock, 
 
 ![A person shopping online with a laptop and a card](/notes/photos/chatgpt-shopping-products-1.webp "Photo: SumUp on Unsplash")
 
-## What I'd do for an online store
+## What we'd do for an online store
 
 ### 1. Get your product data into the pipeline
 
@@ -69,7 +69,7 @@ Product carousels draw on structured data, but ChatGPT's regular web answers dra
 
 ### 6. Publish buying guides
 
-When someone asks "what should I look for in a hiking backpack," ChatGPT cites articles. In [my citation study](/notes/ai-cited-vs-ranked-page), article-shaped pages got cited and product pages mostly didn't. A good buying guide on your site, linking to your products, covers the questions before the purchase. [Content that AI cites](/notes/content-ai-cites) has the template.
+When someone asks "what should I look for in a hiking backpack," ChatGPT cites articles. In [our citation study](/notes/ai-cited-vs-ranked-page), article-shaped pages got cited and product pages mostly didn't. A good buying guide on your site, linking to your products, covers the questions before the purchase. [Content that AI cites](/notes/content-ai-cites) has the template.
 
 ## How to check where you stand
 
@@ -81,4 +81,4 @@ Also set up [ChatGPT tracking in GA4](/notes/track-chatgpt-traffic-ga4); shoppin
 
 Audit your ten best-selling products today: title, description, attributes, price accuracy, stock accuracy, reviews. Fix what's thin. Then write one buying guide for your main category.
 
-My [AI search optimization](/ai-search-optimization) service handles the crawler access, buying guides and comparison pages, and monthly tracking of whether ChatGPT and the other assistants name your store. $1,000 a month, no contract.
+Our [AI search optimization](/ai-search-optimization) service handles the crawler access, buying guides and comparison pages, and monthly tracking of whether ChatGPT and the other assistants name your store. $1,000 a month, no contract.

@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description:
-    "Technical SEO and call tracking for home service businesses in the US, Australia and Europe. 30+ sites over two years, with live Search Console data opened up on five of them. Prices on the site.",
+    "SEO agency for home service businesses: technical SEO, local search, call tracking and AI search. 30+ sites, with live Search Console data opened up on five of them. Prices on the site.",
   keywords: [
-    "SEO specialist",
+    "SEO agency",
     "technical SEO",
     "conversion tracking",
     "GA4",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     "local SEO",
     "search console",
   ],
-  authors: [{ name: site.owner }],
+  authors: [{ name: site.name }],
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -68,8 +68,8 @@ export const metadata: Metadata = {
 };
 
 /*
- * Entity graph. Three nodes joined by @id so Google reads one organization,
- * one person and one site rather than three unrelated blobs.
+ * Entity graph. Two nodes joined by @id so Google reads one organization and
+ * one site rather than two unrelated blobs.
  *
  * Deliberately Organization, not ProfessionalService. ProfessionalService is a
  * LocalBusiness, which asserts a place customers visit. There isn't one, and
@@ -78,7 +78,6 @@ export const metadata: Metadata = {
  * services hang off an OfferCatalog where the vocabulary actually allows them.
  */
 const ORG_ID = "https://koinophobe.com/#organization";
-const PERSON_ID = "https://koinophobe.com/#michael";
 const SITE_ID = "https://koinophobe.com/#website";
 
 const SERVICES = [
@@ -106,8 +105,8 @@ const jsonLd = {
       image: "https://koinophobe.com/opengraph-image",
       email: site.email,
       description:
-        "Freelance technical SEO and call tracking for home service and local businesses in the US, Australia and Europe, proven with the client's own Search Console and analytics data.",
-      founder: { "@id": PERSON_ID },
+        "SEO agency for home service and local businesses: technical SEO, local search, call tracking and AI search, proven with the client's own Search Console and analytics data.",
+      slogan: "Technical SEO that shows up in the numbers",
       sameAs: [site.linkedin, site.x],
       areaServed: site.areaServed,
       knowsAbout: [
@@ -141,19 +140,6 @@ const jsonLd = {
           },
         })),
       },
-    },
-    {
-      "@type": "Person",
-      "@id": PERSON_ID,
-      name: site.owner,
-      url: "https://koinophobe.com/about",
-      email: site.email,
-      jobTitle: "Technical SEO consultant, founder of Koinophobe",
-      description: site.aiPitch,
-      knowsAbout: ["Technical SEO", "Local SEO", "AI search optimization", "ChatGPT", "Perplexity", "Google Gemini", "Claude", "Manus"],
-      image: "https://koinophobe.com/me/michael-edward.webp",
-      worksFor: { "@id": ORG_ID },
-      sameAs: [site.linkedin, site.x],
     },
     {
       "@type": "WebSite",

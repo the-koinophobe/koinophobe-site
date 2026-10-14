@@ -33,11 +33,11 @@ Open Search Console, go to **Indexing, Pages**, click **Crawled, currently not i
 
 **Pages you want in search.** Service pages, product pages, town pages, real articles. These are the ones to work on.
 
-On most small business sites I look at, the second pile is short. On sites that generated a lot of pages from a template, it's long, and that's a signal in itself.
+On most small business sites we look at, the second pile is short. On sites that generated a lot of pages from a template, it's long, and that's a signal in itself.
 
 ## Why Google skips a page it has read
 
-Google doesn't send a reason with this status, so you have to work it out from the page. These are the causes I see most:
+Google doesn't send a reason with this status, so you have to work it out from the page. These are the causes we see most:
 
 - **It's close to another page.** Twenty town pages with the same text and a different city name, or three blog posts answering the same question. Google keeps one and skips the rest.
 - **There isn't much on it.** A service page with two sentences and a contact form. A product page with the manufacturer's description and nothing else.
@@ -51,7 +51,7 @@ Google doesn't send a reason with this status, so you have to work it out from t
 
 **Check what Google saw.** Run the URL Inspection tool on the page, click **Test live URL**, then **View tested page**. Read the HTML and the screenshot. If your main content is missing, fix the rendering before anything else. [What is technical SEO](/notes/what-is-technical-seo) covers the basics.
 
-**Merge near-duplicates.** If two pages answer the same question, combine them into the better one and redirect the other with a 301. For town pages, either add something true about each place (jobs you did there, the problems common to that area, how fast you get there) or cut the list down to the towns where you have something to say. My [service area pages](/notes/roofing-service-area-pages) note shows what that looks like.
+**Merge near-duplicates.** If two pages answer the same question, combine them into the better one and redirect the other with a 301. For town pages, either add something true about each place (jobs you did there, the problems common to that area, how fast you get there) or cut the list down to the towns where you have something to say. Our [service area pages](/notes/roofing-service-area-pages) note shows what that looks like.
 
 **Add what only you can say.** Prices or price ranges, photos from your own jobs, the questions customers ask on the phone, how long the work takes. Pages with specifics are harder to call duplicates.
 
@@ -67,4 +67,4 @@ The fix is fewer, better pages. Delete or merge the weakest, redirect them to th
 
 ## Where to start
 
-Export the list today and sort it into the two piles. Fix the three most important pages first, request indexing for each, and check back in two weeks. If you'd like someone to go through the report with you, [my Site Audit](/pricing) covers indexing along with everything else that affects calls, and the [Search Console guide](/notes/google-search-console-for-contractors) explains the rest of the reports.
+Export the list today and sort it into the two piles. Fix the three most important pages first, request indexing for each, and check back in two weeks. If you'd like someone to go through the report with you, [our Site Audit](/pricing) covers indexing along with everything else that affects calls, and the [Search Console guide](/notes/google-search-console-for-contractors) explains the rest of the reports.

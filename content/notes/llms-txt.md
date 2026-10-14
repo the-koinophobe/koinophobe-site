@@ -21,7 +21,7 @@ faq:
 
 ![A small text file on the left with dashed lines toward a row of crawlers, none of the lines reaching them](/notes/illustrations/llms-txt.webp)
 
-Every few weeks a business owner forwards me an agency proposal with "llms.txt implementation" as a line item. It's usually priced like it matters. Here's what it is and what the evidence says.
+Every few weeks a business owner forwards us an agency proposal with "llms.txt implementation" as a line item. It's usually priced like it matters. Here's what it is and what the evidence says.
 
 ## What llms.txt is
 
@@ -56,17 +56,17 @@ If something changes, the companies will say so in their documentation, the same
 
 ## When it's a red flag
 
-When it's sold as the main deliverable, or priced as if it moves rankings. If an agency leads with llms.txt and doesn't mention robots.txt, crawler access, or how they'll measure your presence in AI answers, they're selling the trend. I listed better questions to ask in [how to hire an AI SEO agency](/notes/hire-ai-seo-agency).
+When it's sold as the main deliverable, or priced as if it moves rankings. If an agency leads with llms.txt and doesn't mention robots.txt, crawler access, or how they'll measure your presence in AI answers, they're selling the trend. We listed better questions to ask in [how to hire an AI SEO agency](/notes/hire-ai-seo-agency).
 
 ## What to do instead
 
 1. Run the [free AI crawler check](/saas-seo#check) to confirm OAI-SearchBot, Claude-SearchBot and PerplexityBot can get in.
 2. Make sure your important text is in the page's raw HTML.
-3. Publish pages that answer the questions your customers ask, in the shape assistants cite. In [my September 2026 study](/notes/ai-cited-vs-ranked-page), 41.6% of cited pages carried Article markup, against none of the pages that ranked on Google and were never cited.
+3. Publish pages that answer the questions your customers ask, in the shape assistants cite. In [our September 2026 study](/notes/ai-cited-vs-ranked-page), 41.6% of cited pages carried Article markup, against none of the pages that ranked on Google and were never cited.
 4. Measure whether it's working with [repeated runs](/notes/track-ai-search-visibility), not screenshots.
 
 ## Next steps
 
 If you already have an llms.txt, leave it. If you don't, don't rush. Read [how to rank in ChatGPT](/notes/how-to-rank-in-chatgpt) for the steps that have evidence behind them.
 
-My [AI search optimization](/ai-search-optimization) service starts with the access fixes that work by definition and measures everything after. $1,000 a month, no contract.
+Our [AI search optimization](/ai-search-optimization) service starts with the access fixes that work by definition and measures everything after. $1,000 a month, no contract.

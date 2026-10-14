@@ -17,7 +17,7 @@ faq:
     a: "Track phone taps and form submissions as key events in GA4. Then the Landing page report shows how many calls and forms started on the homepage."
 ---
 
-Your homepage gets traffic from people who already know your name, people who clicked your Business Profile, and people who landed on a service page and wanted to see who you are. All of them want the same few answers fast. This is the checklist I work through on a contractor homepage, in the order a visitor reads it. Before redesigning it, run [the one-afternoon audit](/notes/diy-seo-audit-checklist) so you know what's broken underneath.
+Your homepage gets traffic from people who already know your name, people who clicked your Business Profile, and people who landed on a service page and wanted to see who you are. All of them want the same few answers fast. This is the checklist we work through on a contractor homepage, in the order a visitor reads it. Before redesigning it, run [the one-afternoon audit](/notes/diy-seo-audit-checklist) so you know what's broken underneath.
 
 ## The first screen
 
@@ -31,7 +31,7 @@ Pull the homepage up on your phone and don't scroll. That screen has to answer f
 
 **One main action.** Pick one, such as Get a free estimate or Book an inspection, and make it the biggest button on the screen.
 
-The search side matters here too. One roofing site I work on ranked at position 2.6 for a search about booking an inspection. It showed 143 times in four weeks and got no clicks. The page had no way to book online. If people search for an action, put that action on the page.
+The search side matters here too. One roofing site we work on ranked at position 2.6 for a search about booking an inspection. It showed 143 times in four weeks and got no clicks. The page had no way to book online. If people search for an action, put that action on the page.
 
 ## Proof, right under the fold
 
@@ -50,17 +50,17 @@ List your main services with a sentence each and a link to that service's own pa
 
 ## The towns you work in
 
-Add a short section listing your towns, each linked to a real page about your work there. Keep it to the towns you serve and want more jobs in. Thin copies of the same page with the town name swapped count as doorway pages under Google's spam policy, so each one needs its own substance. [Roofing service area pages](/notes/roofing-service-area-pages) explains how I build them.
+Add a short section listing your towns, each linked to a real page about your work there. Keep it to the towns you serve and want more jobs in. Thin copies of the same page with the town name swapped count as doorway pages under Google's spam policy, so each one needs its own substance. [Roofing service area pages](/notes/roofing-service-area-pages) explains how we build them.
 
 ## The estimate form
 
-If the homepage has a form, keep it short. Name, phone, email, town, what you need, and an optional photo upload is plenty. Say when they'll hear back. Then test it. In July 2026 I found a client's form submissions had been dropping since March because of an email setting after an email address change, and nobody noticed for four months. On another site, a speed plugin's combine and minify setting stopped the form from submitting at all. Everything a free estimate page needs is in [what a free estimate page needs](/notes/lawrence-ma-free-estimate-page).
+If the homepage has a form, keep it short. Name, phone, email, town, what you need, and an optional photo upload is plenty. Say when they'll hear back. Then test it. In July 2026 we found a client's form submissions had been dropping since March because of an email setting after an email address change, and nobody noticed for four months. On another site, a speed plugin's combine and minify setting stopped the form from submitting at all. Everything a free estimate page needs is in [what a free estimate page needs](/notes/lawrence-ma-free-estimate-page).
 
 ## Speed
 
 Check speed on mobile first. Google's Core Web Vitals call a page good when Largest Contentful Paint is 2.5 seconds or less, Interaction to Next Paint is 200 milliseconds or less, and Cumulative Layout Shift is 0.1 or less.
 
-The usual culprits on a contractor homepage are huge photos, sliders and animation scripts. On my own site, photos went from about 3 MB JPEGs to 93 to 200 KB WebP files at 1200 pixels wide, and mobile PageSpeed went from 52 to between 96 and 99 once I removed heavy animation libraries and unused scripts. [Core Web Vitals for contractor websites](/notes/core-web-vitals-contractor-websites) goes through where to check yours.
+The usual culprits on a contractor homepage are huge photos, sliders and animation scripts. On our own site, photos went from about 3 MB JPEGs to 93 to 200 KB WebP files at 1200 pixels wide, and mobile PageSpeed went from 52 to between 96 and 99 once we removed heavy animation libraries and unused scripts. [Core Web Vitals for contractor websites](/notes/core-web-vitals-contractor-websites) goes through where to check yours.
 
 ## Mobile, checked by hand
 
@@ -73,7 +73,7 @@ Open the homepage on your own phone and go through it like a customer would:
 
 ## Tracking
 
-A homepage that gets calls is only useful if you can see the calls. Phone taps should fire a GA4 event, marked as a key event, and so should form submissions. With Google Tag Manager that's a Click - Just Links trigger on links where the Click URL starts with `tel:`, sending a GA4 Event tag. I wrote the steps in [tracking phone clicks with GTM](/notes/gtm-phone-click-tracking). After that, GA4's Landing page report shows how many calls and forms started on the homepage.
+A homepage that gets calls is only useful if you can see the calls. Phone taps should fire a GA4 event, marked as a key event, and so should form submissions. With Google Tag Manager that's a Click - Just Links trigger on links where the Click URL starts with `tel:`, sending a GA4 Event tag. We wrote the steps in [tracking phone clicks with GTM](/notes/gtm-phone-click-tracking). After that, GA4's Landing page report shows how many calls and forms started on the homepage.
 
 ## The checklist
 
@@ -85,4 +85,4 @@ A homepage that gets calls is only useful if you can see the calls. Phone taps s
 6. Good Core Web Vitals on mobile.
 7. Calls and forms tracked as key events.
 
-Go through it on your own phone today. If you'd rather have me check the homepage and the tracking behind it, [book a call](/contact).
+Go through it on your own phone today. If you'd rather have us check the homepage and the tracking behind it, [book a call](/contact).

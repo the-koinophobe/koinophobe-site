@@ -1,12 +1,12 @@
 ---
-title: "Next.js SEO checklist for the App Router: what I check before a launch"
+title: "Next.js SEO checklist for the App Router: what we check before a launch"
 slug: nextjs-seo-checklist
 date: 2026-10-14
 draft: false
 topic: startups
 seo_title: "Next.js SEO checklist for the App Router"
-seo_description: "The Next.js App Router SEO checklist I run before launch: metadata, canonicals, sitemap.ts, robots.ts, rendering, status codes, redirects and schema."
-excerpt: "Next.js gives you most of what SEO needs, but the defaults leave gaps. The checklist I run on App Router sites before launch, my own included: metadata, canonicals, sitemap and robots files, rendering, status codes, redirects and structured data."
+seo_description: "The Next.js App Router SEO checklist we run before launch: metadata, canonicals, sitemap.ts, robots.ts, rendering, status codes, redirects and schema."
+excerpt: "Next.js gives you most of what SEO needs, but the defaults leave gaps. The checklist we run on App Router sites before launch, our own included: metadata, canonicals, sitemap and robots files, rendering, status codes, redirects and structured data."
 cover: /notes/photos/nextjs-seo-checklist-cover.webp
 cover_alt: "A laptop screen showing colorful code"
 cover_credit: "Photo: Mohammad Rahmani on Unsplash"
@@ -21,9 +21,9 @@ faq:
 
 ![A Next.js page passing a row of launch checks, from metadata to schema](/notes/illustrations/nextjs-seo-checklist.webp)
 
-My own site runs on Next.js 14 with the App Router, and so do several of the startup sites people send me. Next.js handles most of the SEO basics well. The problems I find come from gaps in the defaults and from content that quietly moved into client components.
+Our own site runs on Next.js 14 with the App Router, and so do several of the startup sites people send us. Next.js handles most of the SEO basics well. The problems we find come from gaps in the defaults and from content that quietly moved into client components.
 
-This is the checklist I run before a launch. Each item takes a few minutes to check. If you're still choosing a stack, [SEO for startups](/notes/seo-for-startups) covers the decisions that are expensive to undo.
+This is the checklist we run before a launch. Each item takes a few minutes to check. If you're still choosing a stack, [SEO for startups](/notes/seo-for-startups) covers the decisions that are expensive to undo.
 
 ## Metadata
 
@@ -71,6 +71,6 @@ This is where most Next.js SEO problems come from.
 
 ## Where to start
 
-Run the curl test on your homepage and pricing page, then view the source and check the title and canonical. Those two checks catch the problems I find most often on Next.js sites. The free [AI crawler check](/ai-search-optimization#check) does the first one for you. For the non-engineers on your team, [what is technical SEO](/notes/what-is-technical-seo) explains each area in plain terms.
+Run the curl test on your homepage and pricing page, then view the source and check the title and canonical. Those two checks catch the problems we find most often on Next.js sites. The free [AI crawler check](/ai-search-optimization#check) does the first one for you. For the non-engineers on your team, [what is technical SEO](/notes/what-is-technical-seo) explains each area in plain terms.
 
-If you'd rather have it fixed, my [SaaS SEO plan](/saas-seo) sends every change as a pull request against your repo, so your team reviews each one before it ships.
+If you'd rather have it fixed, our [SaaS SEO plan](/saas-seo) sends every change as a pull request against your repo, so your team reviews each one before it ships.

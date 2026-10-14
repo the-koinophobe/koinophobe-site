@@ -21,7 +21,7 @@ faq:
 
 A homeowner looking for a paving contractor often types the job itself: `stamped concrete patio`, `driveway replacement`, `sealcoating near me`, `cracked driveway repair`. Each of those is a different searcher with a different budget, and a site with one "Concrete Services" page can only answer one of them well.
 
-Most of the sites I work on are roofing, pool deck, lawn and shutter companies. Paving searches work a lot like roofing ones, since homeowners search by the job and the town, so this is how I'd set up a paving site.
+Most of the sites we work on are roofing, pool deck, lawn and shutter companies. Paving searches work a lot like roofing ones, since homeowners search by the job and the town, so this is how we'd set up a paving site.
 
 ## One page per job
 
@@ -56,7 +56,7 @@ A driveway page with stock photos looks like every other driveway page. Shoot yo
 
 ![A crew of workers smoothing and leveling a fresh concrete slab](/notes/photos/concrete-driveway-paving-seo-1.webp "Photo: Acton Crawford on Unsplash")
 
-Process them before upload. In July 2026 I built a flat roof repair page for a roofing client from the client's own job photos. I compressed them, renamed them, added metadata, converted them to WebP and linked the new page with the main services page. On my own site, photos went from about 3 MB JPEGs to 93 to 200 KB WebP files at 1200 pixels. The [image optimization note](/notes/image-optimization-contractor-websites) has the steps.
+Process them before upload. In July 2026 we built a flat roof repair page for a roofing client from the client's own job photos. We compressed them, renamed them, added metadata, converted them to WebP and linked the new page with the main services page. On our own site, photos went from about 3 MB JPEGs to 93 to 200 KB WebP files at 1200 pixels. The [image optimization note](/notes/image-optimization-contractor-websites) has the steps.
 
 ## Publish ahead of the season
 
@@ -64,16 +64,16 @@ Concrete and sealcoating work depends on the weather, so demand bunches into the
 
 ## Town pages, done properly
 
-If you work in eight towns, a page for each can help, as long as each one has something real: driveways you've poured there, photos, a review from a customer in that town, local details like typical lot sizes or permit offices. Google's doorway abuse policy treats near-identical pages that only swap the town name as spam. I go through what counts in [service area pages that hold up](/notes/roofing-service-area-pages).
+If you work in eight towns, a page for each can help, as long as each one has something real: driveways you've poured there, photos, a review from a customer in that town, local details like typical lot sizes or permit offices. Google's doorway abuse policy treats near-identical pages that only swap the town name as spam. We go through what counts in [service area pages that hold up](/notes/roofing-service-area-pages).
 
 ## Schema for a paving contractor
 
-Use GeneralContractor or HomeAndConstructionBusiness for the business itself, with your name, address, phone, hours and areas served. Add Service markup to each job page. The approach is the same one I lay out for roofers in [roofing contractor schema](/notes/roofing-contractor-schema), with a different business type.
+Use GeneralContractor or HomeAndConstructionBusiness for the business itself, with your name, address, phone, hours and areas served. Add Service markup to each job page. The approach is the same one we lay out for roofers in [roofing contractor schema](/notes/roofing-contractor-schema), with a different business type.
 
 ## Track every quote request
 
 Paving jobs are large tickets, so each lead matters. Mark form submissions and phone taps as key events in GA4. In Google Tag Manager, a Click - Just Links trigger where Click URL starts with `tel:` catches phone taps from the site.
 
-Then test the forms yourself. One client's form submissions dropped for four months, March to July 2026, because an email address change broke the site's mail connection, and nobody caught it, me included. Since then I test form delivery on every site once a month. The wider setup is in [call tracking for contractors](/notes/call-tracking-for-contractors).
+Then test the forms yourself. One client's form submissions dropped for four months, March to July 2026, because an email address change broke the site's mail connection, and nobody caught it, us included. Since then we test form delivery on every site once a month. The wider setup is in [call tracking for contractors](/notes/call-tracking-for-contractors).
 
-If you want schema and tracking set up together, the Setup Sprint covers both in 3 to 4 weeks, and the Growth plan adds two new service or town pages a month. Both are on my [pricing page](/pricing).
+If you want schema and tracking set up together, the Setup Sprint covers both in 3 to 4 weeks, and the Growth plan adds two new service or town pages a month. Both are on our [pricing page](/pricing).

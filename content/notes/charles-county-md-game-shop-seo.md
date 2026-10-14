@@ -2,10 +2,10 @@
 title: "614 keywords on page one for a game shop in Charles County, MD"
 slug: charles-county-md-game-shop-seo
 seo_title: "Game shop SEO in Charles County, MD: 614 keywords"
-seo_description: "One board game shop in Charles County, Maryland: what 17 months of Search Console data says worked, what didn't, and what I'd do next."
+seo_description: "One board game shop in Charles County, Maryland: what 17 months of Search Console data says worked, what didn't, and what we'd do next."
 date: 2026-09-30
 draft: false
-excerpt: "Over The Table Top is one independent board game and card shop in Charles County, Maryland. Here's what 17 months of Search Console data says worked, what didn't, and what I'd do next."
+excerpt: "Over The Table Top is one independent board game and card shop in Charles County, Maryland. Here's what 17 months of Search Console data says worked, what didn't, and what we'd do next."
 cover: /notes/photos/charles-county-md-game-shop-seo-cover.webp
 cover_alt: "Shelves filled with board games, tabletop games and puzzles stacked side by side"
 cover_credit: "Photo: Zoshua Colah on Unsplash"
@@ -20,7 +20,7 @@ faq:
 
 Over The Table Top is an independent board game and trading card shop in Charles County, Maryland. One location. It competes for the same searches as big-box stores, Amazon, and Google's own local pack.
 
-Daniel, the owner, has been a direct client of mine for a while. His review on this site says I've been "on top of things, not only what I asked, but also outside the scope." Here's what that looked like in his Search Console, April 2025 to August 2026.
+Daniel, the owner, has been a direct client of ours for a while. His review on this site says we've been "on top of things, not only what I asked, but also outside the scope." Here's what that looked like in his Search Console, April 2025 to August 2026.
 
 ## The numbers
 
@@ -57,6 +57,6 @@ A few things from this account that apply to most small shops between Waldorf, L
 
 ## The short version
 
-One store, one county, 614 keywords on page one, and the next lever is getting more of those searches to click. If your shop is in the same spot, the [intro call](/contact) is free and I'll look at your Search Console before we talk.
+One store, one county, 614 keywords on page one, and the next lever is getting more of those searches to click. If your shop is in the same spot, the [intro call](/contact) is free and we'll look at your Search Console before we talk.
 
-Michael Edward, Koinophobe
+The Koinophobe team

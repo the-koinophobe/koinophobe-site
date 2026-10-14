@@ -6,7 +6,7 @@ draft: false
 topic: trades
 seo_title: "Auto repair shop SEO: win 'mechanic near me'"
 seo_description: "SEO for auto repair shops: Business Profile settings, a page for each service and make, prices and warranties, reviews, AutoRepair schema and call tracking."
-excerpt: "An auto shop has something most trades don't: an address customers drive to. That makes the map pack and near-me searches winnable. How I'd set up a repair shop's Business Profile and site, from service and make pages to warranties, reviews and schema."
+excerpt: "An auto shop has something most trades don't: an address customers drive to. That makes the map pack and near-me searches winnable. How we'd set up a repair shop's Business Profile and site, from service and make pages to warranties, reviews and schema."
 cover: /notes/photos/auto-repair-shop-seo-cover.webp
 cover_alt: "A mechanic in a gray uniform inspecting a car engine"
 cover_credit: "Photo: Kate Ibragimova on Unsplash"
@@ -21,9 +21,9 @@ faq:
 
 ![An auto shop on a map with near-me searches drawn toward it from the streets around, and service bays labeled by job](/notes/illustrations/auto-repair-shop-seo.webp)
 
-Auto repair is one of the few local trades where customers come to you. That changes the SEO. When I went through [1,250 near-me searches](/notes/near-me-searches-local-seo-data) across five client sites, the businesses people visit in person won most of them: a pain clinic and a game shop accounted for 836. Near-me results lean hard on where the searcher is standing, and a shop has an address to measure from.
+Auto repair is one of the few local trades where customers come to you. That changes the SEO. When we went through [1,250 near-me searches](/notes/near-me-searches-local-seo-data) across five client sites, the businesses people visit in person won most of them: a pain clinic and a game shop accounted for 836. Near-me results lean hard on where the searcher is standing, and a shop has an address to measure from.
 
-Repair shops aren't a trade I've worked in. Most of my sites are roofing, pool deck, lawn and shutter companies, plus that clinic and game shop. This is the setup I'd use for a shop, based on what worked for the storefront businesses.
+Repair shops aren't a trade we've worked in. Most of our sites are roofing, pool deck, lawn and shutter companies, plus that clinic and game shop. This is the setup we'd use for a shop, based on what worked for the storefront businesses.
 
 ## The Business Profile does most of the work
 
@@ -76,4 +76,4 @@ Most repair customers call. Track website phone taps as a GA4 key event, count B
 
 ## Where to start
 
-Check your profile's category, hours and photos this week, then build the pages for your two most profitable services. If you'd like help with both, my plans are on the [pricing page](/pricing). For a shop with more than one location, the Multi-location plan is built for that.
+Check your profile's category, hours and photos this week, then build the pages for your two most profitable services. If you'd like help with both, our plans are on the [pricing page](/pricing). For a shop with more than one location, the Multi-location plan is built for that.

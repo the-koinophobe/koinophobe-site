@@ -6,7 +6,7 @@ draft: false
 topic: ai
 seo_title: "How to track ChatGPT traffic in GA4"
 seo_description: "ChatGPT tags its links with utm_source=chatgpt.com. A ten-minute GA4 setup, with regex, that separates ChatGPT, Perplexity and Copilot visits."
-excerpt: "ChatGPT tags its links with utm_source=chatgpt.com, and other assistants show up as referrers. A ten-minute GA4 setup that separates AI assistant visits from everything else, with the regex I use."
+excerpt: "ChatGPT tags its links with utm_source=chatgpt.com, and other assistants show up as referrers. A ten-minute GA4 setup that separates AI assistant visits from everything else, with the regex we use."
 cover: /notes/photos/track-chatgpt-traffic-ga4-cover.webp
 cover_alt: "A laptop and phone showing analytics dashboards on a wooden desk"
 cover_credit: "Photo: Vagaro on Unsplash"
@@ -21,7 +21,7 @@ faq:
 
 ![A stream of visits split into channels, with a thin new channel for AI assistants marked in ochre](/notes/illustrations/track-chatgpt-traffic-ga4.webp)
 
-Business owners keep asking whether ChatGPT is sending them customers. You can answer that in Google Analytics 4 in about ten minutes, at least for the visits that click through. Here's the setup I use for clients.
+Business owners keep asking whether ChatGPT is sending them customers. You can answer that in Google Analytics 4 in about ten minutes, at least for the visits that click through. Here's the setup we use for clients.
 
 ## Where AI visits show up
 
@@ -39,7 +39,7 @@ Business owners keep asking whether ChatGPT is sending them customers. You can a
 2. Change the table's primary dimension to **Session source**.
 3. Type `chatgpt` in the search box. Then try `perplexity`, `claude`, `copilot`, `gemini`.
 
-If you see rows, you have AI visits. Look at their engagement rate and key events next to Google organic. In my experience these visitors tend to arrive with a specific question already answered, so a small number can convert well, but check your own numbers before believing anyone's.
+If you see rows, you have AI visits. Look at their engagement rate and key events next to Google organic. In our experience these visitors tend to arrive with a specific question already answered, so a small number can convert well, but check your own numbers before believing anyone's.
 
 ## Permanent setup: an AI assistants channel
 
@@ -61,7 +61,7 @@ New data sorts into the channel from then on. Custom channel groups also apply t
 
 ## Mark the visits that matter
 
-Traffic isn't the goal; calls, forms, bookings and sales are. If you haven't set up key events for those, do that first, or the AI channel will just be a number that goes up and down. I wrote a short guide to [the GA4 reports worth reading](/notes/ga4-reports-for-contractors), and the same events matter for any business.
+Traffic isn't the goal; calls, forms, bookings and sales are. If you haven't set up key events for those, do that first, or the AI channel will just be a number that goes up and down. We wrote a short guide to [the GA4 reports worth reading](/notes/ga4-reports-for-contractors), and the same events matter for any business.
 
 Then compare: sessions, engaged sessions and key events for AI assistants against Organic Search, monthly.
 
@@ -71,7 +71,7 @@ Clicks are the smallest part of AI visibility. A customer who reads ChatGPT's an
 
 So pair GA4 with two other measures:
 
-- **Whether assistants name you,** checked with a fixed list of buyer questions and repeated runs. [My tracking method](/notes/track-ai-search-visibility).
+- **Whether assistants name you,** checked with a fixed list of buyer questions and repeated runs. [Our tracking method](/notes/track-ai-search-visibility).
 - **Citations reported by the platforms.** Bing now shows how often Copilot cites your pages in its [AI Performance report](/notes/bing-copilot-ai-performance-report). It's the first assistant to give site owners that data.
 
 Also ask new customers how they found you, and add "ChatGPT or another AI assistant" as an option on your intake form. It's low-tech and catches what analytics misses.
@@ -80,4 +80,4 @@ Also ask new customers how they found you, and add "ChatGPT or another AI assist
 
 Set up the AI assistants channel today and look at the last 90 days. If you see visits, look at which pages they land on: those are the pages assistants already cite, and they deserve updating first.
 
-If you'd like help reading it, my [AI search optimization](/ai-search-optimization) service sets up this tracking, measures the answers themselves monthly, and builds the pages that get cited. $1,000 a month, no contract.
+If you'd like help reading it, our [AI search optimization](/ai-search-optimization) service sets up this tracking, measures the answers themselves monthly, and builds the pages that get cited. $1,000 a month, no contract.

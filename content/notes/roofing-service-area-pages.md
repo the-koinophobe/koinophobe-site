@@ -36,7 +36,7 @@ In plain terms: twenty copies of the same page with the town name swapped is the
 
 ## What goes on a town page
 
-Here's what I put on each one. If you can't fill most of it for a town, you don't need a page for that town yet.
+Here's what we put on each one. If you can't fill most of it for a town, you don't need a page for that town yet.
 
 - **Jobs you've done there.** Street names and neighborhoods, not house numbers. The roof type, what was wrong, what you did. Two or three short write-ups are plenty.
 - **Photos from those jobs.** Taken by your crew, not stock.

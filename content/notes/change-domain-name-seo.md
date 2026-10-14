@@ -6,7 +6,7 @@ draft: false
 topic: startups
 seo_title: "Changing your startup's domain name without losing SEO"
 seo_description: "A domain change or rebrand checklist for startups: redirect mapping, Google's Change of Address tool, the brand query, partner links and what to monitor."
-excerpt: "Rebrands happen, and a domain change doesn't have to cost you your search traffic. The checklist I use: the URL map, redirects, Google's Change of Address tool, the parts startups forget (app subdomains, docs, partner listings, the old brand name), and what to watch for the first three months."
+excerpt: "Rebrands happen, and a domain change doesn't have to cost you your search traffic. The checklist we use: the URL map, redirects, Google's Change of Address tool, the parts startups forget (app subdomains, docs, partner listings, the old brand name), and what to watch for the first three months."
 cover: /notes/photos/change-domain-name-seo-cover.webp
 cover_alt: "A room stacked with moving boxes beside a window"
 cover_credit: "Photo: Alicia Christin Gerald on Unsplash"
@@ -14,7 +14,7 @@ faq:
   - q: "Will changing my domain hurt my SEO?"
     a: "Expect some temporary fluctuation while Google recrawls. Google says permanent redirects don't cause a loss in PageRank, and with every old URL redirected to its matching new one, most sites settle within weeks. When a move goes badly, missing redirects are usually why."
   - q: "How long should I keep redirects after changing domains?"
-    a: "Google recommends keeping them as long as possible, and at least a year. I'd keep the old domain registered and redirecting for as long as the company exists, because old links, emails and integrations keep pointing at it."
+    a: "Google recommends keeping them as long as possible, and at least a year. We'd keep the old domain registered and redirecting for as long as the company exists, because old links, emails and integrations keep pointing at it."
   - q: "How do I use Google's Change of Address tool?"
     a: "Verify both the old and new domains in Google Search Console, set up the redirects, then open the old property's Settings and choose Change of address. Google says to submit it for every verified variant of the old domain."
 ---
@@ -61,7 +61,7 @@ Google says to "expect temporary fluctuation in site ranking during the move" an
 - **Test a sample of old URLs** every couple of weeks to confirm they still redirect in one hop.
 - **Compare sign-ups by landing page** against the month before the move.
 
-If clicks drop and don't recover after a few weeks, [my traffic drop diagnosis](/notes/website-traffic-dropped) walks through what to check, and the redirect map is the first place to look.
+If clicks drop and don't recover after a few weeks, [our traffic drop diagnosis](/notes/website-traffic-dropped) walks through what to check, and the redirect map is the first place to look.
 
 ## Keep the old domain
 
@@ -69,4 +69,4 @@ Google recommends keeping redirects for at least a year. Keep the old domain reg
 
 ## Where to start
 
-Start the URL map now, even if the move is months away. It's the slowest part of the job. If you're also redesigning, [my redesign checklist](/notes/website-migration-without-losing-rankings) covers the overlap. If you'd like the redirect map and launch checks done for you, that's work my [SaaS SEO plan](/saas-seo) covers, with every change sent as a pull request.
+Start the URL map now, even if the move is months away. It's the slowest part of the job. If you're also redesigning, [our redesign checklist](/notes/website-migration-without-losing-rankings) covers the overlap. If you'd like the redirect map and launch checks done for you, that's work our [SaaS SEO plan](/saas-seo) covers, with every change sent as a pull request.

@@ -16,7 +16,7 @@ export function generateMetadata({ params }: { params: { topic: string } }): Met
   return {
     title: t.title,
     // The blurb alone when the brand line would push it past what Google shows.
-    description: t.blurb.length + 26 <= 158 ? `${t.blurb} Notes by Michael Edward.` : t.blurb,
+    description: t.blurb.length + 33 <= 158 ? `${t.blurb} Notes from the Koinophobe team.` : t.blurb,
     alternates: { canonical: `/notes/topic/${t.key}` },
   };
 }

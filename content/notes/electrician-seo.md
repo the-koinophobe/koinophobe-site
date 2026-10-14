@@ -17,7 +17,7 @@ faq:
     a: "Yes. schema.org has an Electrician type. Add it to the homepage with your business name, phone, hours and service area, matching your Google Business Profile, and add Service markup to each service page."
 ---
 
-Most of the sites I work on are roofing, pool deck, lawn and shutter companies. I don't have an electrician on the list. Electrical searches follow the same rules as those trades, though, so this is the setup I'd build for an electrical contractor, and any results I mention come from the trades I do work in.
+Most of the sites we work on are roofing, pool deck, lawn and shutter companies. We don't have an electrician on the list. Electrical searches follow the same rules as those trades, though, so this is the setup we'd build for an electrical contractor, and any results we mention come from the trades we do work in.
 
 ## Two kinds of electrical search
 
@@ -57,7 +57,7 @@ People search the job, so give each job you want more of its own page:
 
 Each page needs its own title tag naming the job and your main town, photos from your own jobs, and the questions customers ask you on the phone. Put a quote form on the planned-job pages and keep the tap-to-call button too.
 
-Title tags matter more than most owners expect. Across three Florida sites I work on, 307 searches ranked in Google's top ten in one 28-day window and got zero clicks, from 19,883 impressions. The snippet, meaning the title tag and meta description, was a large part of that.
+Title tags matter more than most owners expect. Across three Florida sites we work on, 307 searches ranked in Google's top ten in one 28-day window and got zero clicks, from 19,883 impressions. The snippet, meaning the title tag and meta description, was a large part of that.
 
 ## Show the license
 
@@ -73,17 +73,17 @@ schema.org has an Electrician type. Add it to the homepage as JSON-LD with your 
 
 A page for each town you want work in can help with `electrician [town]` searches. Google's doorway abuse policy treats near-identical pages with the town name swapped as spam, so each page needs something true: jobs you've done there, the age of the housing, the panel and wiring problems that come with it.
 
-On a Florida roofing site I work on, replacing one county page with a page per town was one of four changes made while average position went from 47.9 to 14.9 (October 2025 to August 2026, compared with the eleven months before). [One real page per town](/notes/roofing-service-area-pages) covers how to write them.
+On a Florida roofing site we work on, replacing one county page with a page per town was one of four changes made while average position went from 47.9 to 14.9 (October 2025 to August 2026, compared with the eleven months before). [One real page per town](/notes/roofing-service-area-pages) covers how to write them.
 
 ## Track calls and quote requests
 
 Set up tracking before judging any of this:
 
-- Website phone taps as a GA4 key event. My [Tag Manager phone click setup](/notes/gtm-phone-click-tracking) has the steps.
+- Website phone taps as a GA4 key event. Our [Tag Manager phone click setup](/notes/gtm-phone-click-tracking) has the steps.
 - Quote form submissions as a separate key event, so you can see which service pages bring in planned work.
 - Business Profile calls, counted on their own.
-- A monthly test that each form still sends. In July 2026 I found a client's form submissions had been dropping since March because of an email setting, and nobody caught it for four months, me included.
+- A monthly test that each form still sends. In July 2026 we found a client's form submissions had been dropping since March because of an email setting, and nobody caught it for four months, us included.
 
 ## Where to start
 
-Fix the Business Profile and the tap-to-call header first, then build pages for the two planned jobs you most want, then town pages. The rest of the setup is in my [local SEO checklist for home service businesses](/notes/local-seo-checklist-home-services). If you want a second pair of eyes on your site, [send me the address](/contact) and I'll reply the same business day.
+Fix the Business Profile and the tap-to-call header first, then build pages for the two planned jobs you most want, then town pages. The rest of the setup is in our [local SEO checklist for home service businesses](/notes/local-seo-checklist-home-services). If you want a second pair of eyes on your site, [send us the address](/contact) and we'll reply the same business day.

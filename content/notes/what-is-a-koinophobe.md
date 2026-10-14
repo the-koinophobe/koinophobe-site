@@ -1,13 +1,13 @@
 ---
 title: "What is a koinophobe?"
 slug: what-is-a-koinophobe
-seo_description: "A koinophobe is someone afraid of living an ordinary life, from koinophobia in The Dictionary of Obscure Sorrows. It's also the name of my SEO practice."
+seo_description: "A koinophobe is someone afraid of living an ordinary life, from koinophobia in The Dictionary of Obscure Sorrows. It's also the name of our SEO agency."
 date: 2026-09-27
 draft: false
 cover: /notes/photos/what-is-a-koinophobe-1.webp
 cover_alt: "A crowd of people walking along a busy city sidewalk on an ordinary day"
 cover_credit: "Photo: hongguang xu on Unsplash"
-excerpt: "A koinophobe is someone afraid of living an ordinary life. The word comes from koinophobia, coined by John Koenig in The Dictionary of Obscure Sorrows. It's also the name of my SEO practice, and here's why."
+excerpt: "A koinophobe is someone afraid of living an ordinary life. The word comes from koinophobia, coined by John Koenig in The Dictionary of Obscure Sorrows. It's also the name of our SEO agency, and here's why."
 faq:
   - q: "What does koinophobe mean?"
     a: "A koinophobe is a person with koinophobia, the fear that you've lived an ordinary life. It isn't a medical diagnosis, and you won't find it in a clinical manual."
@@ -19,7 +19,7 @@ faq:
 
 A koinophobe is a person with koinophobia: the fear that you've lived an ordinary life.
 
-It's a newer word than it sounds, and it gets mixed up with a few others, so here's where it comes from, what it doesn't mean, and why it's on the front of my business.
+It's a newer word than it sounds, and it gets mixed up with a few others, so here's where it comes from, what it doesn't mean, and why it's on the front of our business.
 
 ## Where the word comes from
 
@@ -44,15 +44,11 @@ Quick way to keep them apart:
 
 ## Koinophobe, the business
 
-Koinophobe is also the name of my SEO practice at koinophobe.com. I'm Michael Edward. I do technical SEO for home service businesses in the US: roofers, pool deck and lawn companies, plus a few clinics and shops.
+Koinophobe is also the name of our SEO agency at koinophobe.com. We do technical SEO, local search and call tracking for home service businesses: roofers, remodelers, pool deck and lawn companies, plus a few clinics and shops.
 
-## Why I picked the name
+## Why we picked the name
 
-![Me, done up as an old oil portrait in a gilt frame](/me/portrait.webp)
-
-My parents got me a computer when I was 12. At the time, a computer at home was a luxury, and they made it happen anyway. Then they paid for tutor after tutor. Looking back, I can see how much they gave up to do it.
-
-So I decided I can't be mediocre at whatever I do. Too much went into getting me here. That's why the business is called Koinophobe.
+An agency named after the fear of being ordinary has to hold itself to that. Ordinary SEO is a monthly PDF of rankings nobody asked for, a checklist audit, and a vague promise about "visibility". We'd rather be measured on the numbers in your own Search Console and on how many calls your site brings in, and we put five clients' numbers on the [work page](/work) so you can judge us the same way.
 
 ## What it means for your site
 

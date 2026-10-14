@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Eye, Search, Sparkles } from "lucide-react";
 import { AISection } from "@/components/AISection";
 import { Availability } from "@/components/Availability";
@@ -9,7 +8,6 @@ import { SiteWall } from "@/components/SiteWall";
 import { CaseStudyBlock } from "@/components/CaseStudyBlock";
 import { RelatedNotes } from "@/components/RelatedNotes";
 import { cases, EXPORT_DATE } from "@/lib/gsc";
-import { site } from "@/lib/site";
 
 // Related notes appear on their publish date without a deploy.
 export const revalidate = 3600;
@@ -51,7 +49,7 @@ const casesLd = {
       name: c.title,
       about: `${c.client}, ${c.place}`,
       headline: `${c.headline.value} ${c.headline.label}`,
-      author: { "@type": "Person", name: site.owner },
+      author: { "@id": "https://koinophobe.com/#organization" },
       url: `https://koinophobe.com/work#${c.slug}`,
     },
   })),
@@ -70,9 +68,9 @@ export default function WorkPage() {
             <p className="eyebrow">Case studies</p>
             <h1 className="t-h1 mt-5 max-w-[20ch]">SEO case studies from real Search Console accounts</h1>
             <p className="t-lead mt-6 max-w-[60ch]">
-              Thirty-plus sites in two years. Here are the five I can put the Search Console data on the table
-              for: same four numbers each time, the story behind them, and what I&rsquo;d go after next. Then every
-              site I kept a screenshot of.
+              Thirty-plus sites in two years. Here are the five we can put the Search Console data on the table
+              for: same four numbers each time, the story behind them, and what we&rsquo;d go after next. Then every
+              site we kept a screenshot of.
             </p>
             <nav aria-label="Case studies" className="mt-8 flex flex-wrap gap-2">
               {cases.map((c) => (
@@ -97,17 +95,14 @@ export default function WorkPage() {
 
       <section className="section">
         <div className="container-pad">
-          <Reveal className="grid items-end gap-8 md:grid-cols-[1fr_auto] md:gap-12">
+          <Reveal>
             <div>
               <p className="eyebrow">The numbers</p>
               <h2 className="t-h2 mt-5 max-w-[24ch]">Five of them, with the Search Console left open</h2>
               <p className="t-lead mt-4 max-w-[52ch]">
                 The greatest hits, if you like. Same four numbers for each, the story behind them, and what
-                I&rsquo;d go after next.
+                we&rsquo;d go after next.
               </p>
-            </div>
-            <div className="relative aspect-square w-full max-w-[220px] overflow-hidden rounded-2xl shadow-float md:w-[220px]">
-              <Image src="/me/greatest-works.webp" alt="Retro record sleeve reading Michael: Greatest Works" fill sizes="220px" className="object-cover" />
             </div>
           </Reveal>
           <div className="card mt-12 px-5 sm:px-8">

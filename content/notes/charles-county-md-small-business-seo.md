@@ -14,14 +14,14 @@ faq:
   - q: "Does product schema help a local store?"
     a: "It marks up each product's name, price and availability so Google can read your inventory. Over The Table Top has product schema on its inventory. Keep prices and stock current or the markup works against you."
   - q: "How much does local SEO cost for a small business?"
-    a: "My prices are on my pricing page: a $750 Site Audit, a $1,800 Setup Sprint, or monthly plans from $600. An Ahrefs survey of 439 providers put the average local SEO retainer at $1,557 a month."
+    a: "Our prices are on our pricing page: a $750 Site Audit, a $1,800 Setup Sprint, or monthly plans from $600. An Ahrefs survey of 439 providers put the average local SEO retainer at $1,557 a month."
 ---
 
 ![Charles County towns as survey points: Waldorf, St. Charles, La Plata, Indian Head](/notes/illustrations/charles-county-md-small-business-seo.webp)
 
 If you run a small business in Waldorf, St. Charles, La Plata or Indian Head, the search work that brings people through the door follows the same rules as anywhere else. What changes is the competition for your exact searches, and how many of the things you sell or do have a page of their own.
 
-The worked example I have from Charles County is Over The Table Top, a game shop owned by Daniel. These are its numbers.
+The worked example we have from Charles County is Over The Table Top, a game shop owned by Daniel. These are its numbers.
 
 ## What happened at Over The Table Top
 
@@ -36,7 +36,7 @@ The worked example I have from Charles County is Over The Table Top, a game shop
 | `local game stores near me` | 7.3 |
 | `pokemon cards near me` | 9.0 |
 
-Impressions more than doubled. Clicks held flat over the same stretch, and I'll come back to that, because it's the next job.
+Impressions more than doubled. Clicks held flat over the same stretch, and we'll come back to that, because it's the next job.
 
 Daniel's review: "He's been on top of things, not only what I asked, but also outside the scope." The full case is in [the Charles County game shop write-up](/notes/charles-county-md-game-shop-seo).
 
@@ -52,7 +52,7 @@ If you're a contractor or service business that goes to the customer, set it up 
 
 Nobody can move your shop closer to the searcher. What you control is how clearly your profile and site say what you sell. Over The Table Top shows up for 398 near-me searches, and the ones in the table above describe what the shop is and what it stocks. Your profile and pages should say what you are and what you sell in the words people search with.
 
-Across five sites I work on, from April 2025 to August 2026, there were 1,250 near-me queries. 780 landed on page one, 191 in the top three, and they brought 343 clicks. The breakdown is in [what 1,250 near-me searches showed](/notes/near-me-searches-local-seo-data).
+Across five sites we work on, from April 2025 to August 2026, there were 1,250 near-me queries. 780 landed on page one, 191 in the top three, and they brought 343 clicks. The breakdown is in [what 1,250 near-me searches showed](/notes/near-me-searches-local-seo-data).
 
 ## Product schema if you sell inventory
 
@@ -70,6 +70,6 @@ Name the Charles County towns your customers come from on your contact page and 
 
 ## Then work on clicks
 
-Rankings that climb without clicks usually point at the snippet: the title tag and meta description that show in results, and whether the page does what the searcher came to do. Across three sites I work on, 307 search terms ranked in the top ten in 28 days and got zero clicks. I go through the fix in [zero-click rankings and title tags](/notes/zero-click-rankings-title-tags).
+Rankings that climb without clicks usually point at the snippet: the title tag and meta description that show in results, and whether the page does what the searcher came to do. Across three sites we work on, 307 search terms ranked in the top ten in 28 days and got zero clicks. We go through the fix in [zero-click rankings and title tags](/notes/zero-click-rankings-title-tags).
 
-If you run a small business in Charles County and want to know where your site stands, start with a Site Audit on my [pricing page](/pricing), or [send me a message](/contact). I reply the same business day.
+If you run a small business in Charles County and want to know where your site stands, start with a Site Audit on our [pricing page](/pricing), or [send us a message](/contact). We reply the same business day.

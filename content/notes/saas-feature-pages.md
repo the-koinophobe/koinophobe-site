@@ -6,7 +6,7 @@ draft: false
 topic: startups
 seo_title: "SaaS feature, use case and integration pages that rank"
 seo_description: "The pages a SaaS site needs between the homepage and the blog: use cases, features and integrations. What each should contain, and how many is too many."
-excerpt: "Most SaaS sites have a homepage, a pricing page and a blog, and nothing in between for the searches buyers make while choosing. What to put on use case, feature and integration pages, how my citation study changes the format, and where templated pages tip into spam."
+excerpt: "Most SaaS sites have a homepage, a pricing page and a blog, and nothing in between for the searches buyers make while choosing. What to put on use case, feature and integration pages, how our citation study changes the format, and where templated pages tip into spam."
 cover: /notes/photos/saas-feature-pages-cover.webp
 cover_alt: "A person working on a laptop"
 cover_credit: "Photo: Campaign Creators on Unsplash"
@@ -21,9 +21,9 @@ faq:
 
 ![A SaaS site map with use case, feature and integration pages filling the gap between the homepage and the blog](/notes/illustrations/saas-feature-pages.webp)
 
-Most SaaS sites I look at have a homepage, a pricing page, a blog and not much in between. The homepage tries to speak to everyone. The blog covers broad topics. Nothing answers the searches a buyer makes while they're deciding: "[category] for agencies," "[tool] Slack integration," "how to automate [task]."
+Most SaaS sites we look at have a homepage, a pricing page, a blog and not much in between. The homepage tries to speak to everyone. The blog covers broad topics. Nothing answers the searches a buyer makes while they're deciding: "[category] for agencies," "[tool] Slack integration," "how to automate [task]."
 
-Those in-between pages are where a lot of SaaS search traffic converts. Here's what I'd build and what goes on each.
+Those in-between pages are where a lot of SaaS search traffic converts. Here's what we'd build and what goes on each.
 
 ## Use case pages
 
@@ -43,7 +43,7 @@ Five to fifteen good use case pages beat fifty thin ones. If two pages would say
 
 Build a page for a feature when people search for it by name, or when it's the reason customers pick you. Explain what it does, show it working, list the plans that include it, and link to the docs.
 
-In [my citation study](/notes/ai-cited-vs-ranked-page), 41.6% of the pages AI assistants cited were marked up as articles, against none of the pages that ranked on Google without being cited. Assistants favored pages that explain over pages that pitch. A feature page that answers "how does this work and when would I use it" in plain prose has a better chance of being quoted than one made of icons and three-word headings. [How to write content AI assistants cite](/notes/content-ai-cites) covers the format.
+In [our citation study](/notes/ai-cited-vs-ranked-page), 41.6% of the pages AI assistants cited were marked up as articles, against none of the pages that ranked on Google without being cited. Assistants favored pages that explain over pages that pitch. A feature page that answers "how does this work and when would I use it" in plain prose has a better chance of being quoted than one made of icons and three-word headings. [How to write content AI assistants cite](/notes/content-ai-cites) covers the format.
 
 ![A dashboard with charts on a monitor](/notes/photos/saas-feature-pages-1.webp "Photo: Stephen Dawson on Unsplash")
 
@@ -81,4 +81,4 @@ Track sign-ups and demo requests by landing page. After a few months you'll see 
 
 List your top five use cases from sales calls and your top ten integrations by usage. Write those fifteen pages before anything else on the blog. [SEO for startups](/notes/seo-for-startups) covers the order of the rest.
 
-If you'd like them written and shipped for you, my [SaaS SEO plan](/saas-seo) includes 12 in-depth pages a month, comparison and alternatives pages included, for $1,000 a month with no contract.
+If you'd like them written and shipped for you, our [SaaS SEO plan](/saas-seo) includes 12 in-depth pages a month, comparison and alternatives pages included, for $1,000 a month with no contract.

@@ -4,7 +4,7 @@ slug: ranking-for-your-business-name
 date: 2026-10-28
 draft: false
 seo_title: "Business not showing up on Google by name?"
-excerpt: "Business not showing up on Google when searched by name? The common causes, the name signals to fix, and what I changed when it happened to my own brand."
+excerpt: "Business not showing up on Google when searched by name? The common causes, the name signals to fix, and what we changed when it happened to our own brand."
 cover: /notes/photos/ranking-for-your-business-name-cover.webp
 cover_alt: "A red pickup truck parked in front of a small antiques shop with a painted sign"
 cover_credit: "Photo: Wally Holden on Unsplash"
@@ -14,14 +14,14 @@ faq:
   - q: "What is alternateName in schema markup?"
     a: "It's a schema.org property for other names your business goes by, like a short form or a common misspelling. It sits in your Organization or LocalBusiness markup next to name and sameAs."
   - q: "How long does it take to rank for my own business name?"
-    a: "It depends on how fast Google recrawls your site and profiles. I can't promise a date, but you can watch your name's position in the Search Console Performance report."
+    a: "It depends on how fast Google recrawls your site and profiles. We can't promise a date, but you can watch your name's position in the Search Console Performance report."
 ---
 
 ![A results page where the business name finally sits in the first row](/notes/illustrations/ranking-for-your-business-name.webp)
 
-In late September 2026, my own brand wasn't on page one of Google for its own name. Google read "koinophobe" as the word koinophobia, so a person typing my brand name got results for a different word.
+In late September 2026, our own brand wasn't on page one of Google for its own name. Google read "koinophobe" as the word koinophobia, so a person typing our brand name got results for a different word.
 
-So I've been on the wrong side of this one. Here's how I'd work through it for any business.
+So we've been on the wrong side of this one. Here's how we'd work through it for any business.
 
 ## Check that Google can index the site at all
 
@@ -35,11 +35,11 @@ When a search could mean several things, Google shows what it thinks most people
 
 ![A sign in a shop window that says come in, we are open](/notes/photos/ranking-for-your-business-name-1.webp "Photo: Tim Mossholder on Unsplash")
 
-That was my problem. I wrote [what is a koinophobe](/notes/what-is-a-koinophobe) to explain the name on my own site, and went through my site's name signals. The list below is the checklist I'd use on any site with the same problem.
+That was our problem. We wrote [what is a koinophobe](/notes/what-is-a-koinophobe) to explain the name on our own site, and went through our site's name signals. The list below is the checklist we'd use on any site with the same problem.
 
 ## What it looks like when it's working
 
-Tint Lordz Auto Spa, a window tint shop in Lawrence, MA, is the clean example from my work. Every version of its name ranks at position 2 or better, with an average of 1.98. `tint lordz auto spa lawrence` sits at 1.9 with an 11.2% click-through rate. People searching a business by name already want that business, so a top spot on those searches is worth protecting. I wrote up the rest in [the Tint Lordz case](/notes/lawrence-ma-window-tint-seo).
+Tint Lordz Auto Spa, a window tint shop in Lawrence, MA, is the clean example from our work. Every version of its name ranks at position 2 or better, with an average of 1.98. `tint lordz auto spa lawrence` sits at 1.9 with an 11.2% click-through rate. People searching a business by name already want that business, so a top spot on those searches is worth protecting. We wrote up the rest in [the Tint Lordz case](/notes/lawrence-ma-window-tint-seo).
 
 ## The fixes
 
@@ -73,7 +73,7 @@ Your Google Business Profile should carry your real business name and nothing el
 
 ### Make citations match
 
-Directories, Yelp, the BBB, your supplier's dealer locator and any chamber listing should spell the name, address and phone number the same way. I cover the cleanup in [NAP citations for contractors](/notes/nap-citations-contractors). If a competitor's listing uses your name or a fake version of it, [here's how to report it](/notes/report-fake-google-business-listings).
+Directories, Yelp, the BBB, your supplier's dealer locator and any chamber listing should spell the name, address and phone number the same way. We cover the cleanup in [NAP citations for contractors](/notes/nap-citations-contractors). If a competitor's listing uses your name or a fake version of it, [here's how to report it](/notes/report-fake-google-business-listings).
 
 ### Write an About page
 
@@ -85,6 +85,6 @@ Every profile you control (Facebook, LinkedIn, Instagram, Yelp, Business Profile
 
 ## How to tell if it's working
 
-In Search Console, open the Performance report, filter queries containing your name, and compare the last three months with the three before. Watch average position and clicks. I can't promise how long Google takes to change how it reads a name, so check it monthly and leave the changes in place.
+In Search Console, open the Performance report, filter queries containing your name, and compare the last three months with the three before. Watch average position and clicks. We can't promise how long Google takes to change how it reads a name, so check it monthly and leave the changes in place.
 
-If you want someone to check all of this on your site, start with the Site Audit on my [pricing page](/pricing). The $750 is credited in full if a monthly plan starts within 30 days.
+If you want someone to check all of this on your site, start with the Site Audit on our [pricing page](/pricing). The $750 is credited in full if a monthly plan starts within 30 days.

@@ -21,7 +21,7 @@ faq:
 
 A burst pipe at 2 a.m. produces a short search. Someone types `emergency plumber` or `plumber near me` on a phone, looks at the map, and calls one of the first businesses that looks open. Plumbing SEO is mostly about being in that first screen and picking up when the phone rings.
 
-Most of the sites I work on are roofing, pool deck, lawn and shutter companies. This is the same method, applied to how plumbing searches work. Results I mention come from those trades.
+Most of the sites we work on are roofing, pool deck, lawn and shutter companies. This is the same method, applied to how plumbing searches work. Results we mention come from those trades.
 
 ## The map pack carries emergency searches
 
@@ -62,7 +62,7 @@ Each page needs its own title tag naming the job and your main town, a tap-to-ca
 
 A page for each town you work in can help you show up for `plumber [town]` searches. The catch is Google's doorway abuse policy: near-identical pages with the town name swapped out are treated as spam. Each town page needs something true about that town, such as jobs you've done there, the age of the housing and the problems it brings, and how fast you get there.
 
-On a Florida roofing site I work on, replacing one county page with a real service page per town was one of four changes made while average position moved from 47.9 to 14.9 (October 2025 to August 2026, compared with the eleven months before). The full numbers are on my [roofing SEO page](/roofing-seo).
+On a Florida roofing site we work on, replacing one county page with a real service page per town was one of four changes made while average position moved from 47.9 to 14.9 (October 2025 to August 2026, compared with the eleven months before). The full numbers are on our [roofing SEO page](/roofing-seo).
 
 ## Plumber schema
 
@@ -72,10 +72,10 @@ schema.org has a Plumber type. Add it to the homepage as JSON-LD with your busin
 
 For a plumber, a ranking only matters once the phone rings. [Rankings without call tracking](/notes/rankings-without-tracking) tell you very little, so set up tracking first:
 
-- Website phone taps as a GA4 key event. I covered the setup in [the three events every local business should track](/notes/three-events-local-business).
+- Website phone taps as a GA4 key event. We covered the setup in [the three events every local business should track](/notes/three-events-local-business).
 - Calls from the Business Profile, which show in the profile's performance view.
-- Form submissions, tested by hand every month. In July 2026 I found a client's form submissions had been dropping since March because of an email setting. Four months, and nobody noticed, me included.
+- Form submissions, tested by hand every month. In July 2026 we found a client's form submissions had been dropping since March because of an email setting. Four months, and nobody noticed, us included.
 
 ## Where to start
 
-Work in this order: Business Profile first, then the click-to-call header and true hours, then service pages for your three highest-value jobs, then town pages, then schema. If you want someone to check all of it, the Site Audit on my [pricing page](/pricing) is the place to start, or [send me your site address](/contact) and I'll reply the same business day.
+Work in this order: Business Profile first, then the click-to-call header and true hours, then service pages for your three highest-value jobs, then town pages, then schema. If you want someone to check all of it, the Site Audit on our [pricing page](/pricing) is the place to start, or [send us your site address](/contact) and we'll reply the same business day.

@@ -21,7 +21,7 @@ faq:
 
 For a roofer or a pool deck company, the phone call is usually the lead. GA4 won't show it unless you set it up. The default install records page views and a handful of automatic events, and a tap on your phone number goes by without a trace.
 
-Here is how I set it up with Google Tag Manager. I'm assuming GA4 already runs through Tag Manager on your site.
+Here is how we set it up with Google Tag Manager. We're assuming GA4 already runs through Tag Manager on your site.
 
 ## Step 1: make every number a tel: link
 
@@ -92,4 +92,4 @@ It also misses:
 
 For completed calls, and for hand-dialed calls from your site, you need a call tracking number. That's a separate layer. Taps are still worth having, because they show which pages make people reach for the phone, and they cost nothing to collect.
 
-Phone taps are one of the [three events worth tracking on a local business site](/notes/three-events-local-business), along with forms and bookings. Without them, [rankings don't tell you much](/notes/rankings-without-tracking). Tracking setup in GA4 is part of the Setup Sprint on [my pricing page](/pricing). If you'd like me to check what your site records now, [send me the address](/contact).
+Phone taps are one of the [three events worth tracking on a local business site](/notes/three-events-local-business), along with forms and bookings. Without them, [rankings don't tell you much](/notes/rankings-without-tracking). Tracking setup in GA4 is part of the Setup Sprint on [our pricing page](/pricing). If you'd like us to check what your site records now, [send us the address](/contact).

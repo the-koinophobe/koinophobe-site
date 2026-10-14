@@ -17,7 +17,7 @@ faq:
     a: "Only for towns where you want more work, and only if you can write something true about each one. Near-identical pages with the town name swapped count as doorway spam under Google's policies."
 ---
 
-This is the list I work through when I start on a home service site, in the order I check things. Most of the sites I work on are roofing, pool deck, lawn and shutter companies, and the list barely changes between them.
+This is the list we work through when we start on a home service site, in the order we check things. Most of the sites we work on are roofing, pool deck, lawn and shutter companies, and the list barely changes between them.
 
 ## Google Business Profile
 
@@ -32,7 +32,7 @@ Each setting is covered in [Business Profile setup for roofers](/notes/google-bu
 
 ## Website basics
 
-- **Tap-to-call number in the header of every page.** On a pain clinic site I work on, 678 of 854 search clicks in a year came from phones.
+- **Tap-to-call number in the header of every page.** On a pain clinic site we work on, 678 of 854 search clicks in a year came from phones.
 - **Name, phone and towns served in the footer.** It should match your profile.
 - **Indexing switched on.** In WordPress, go to Settings > Reading and make sure "Discourage search engines from indexing this site" is unticked.
 - **Sitemap submitted in Search Console.** Then the Pages report shows which pages Google indexed and which it left out.
@@ -43,14 +43,14 @@ Each setting is covered in [Business Profile setup for roofers](/notes/google-bu
 ## Service pages
 
 - **One page per job you want more of.** `roof repair` and `roof replacement` are different searches from different homeowners.
-- **A title tag with the job and your main town.** Across three Florida sites I work on, 307 searches ranked in the top ten in one 28-day window and got zero clicks. The snippet was a big part of why.
+- **A title tag with the job and your main town.** Across three Florida sites we work on, 307 searches ranked in the top ten in one 28-day window and got zero clicks. The snippet was a big part of why.
 - **A way to do what the searcher came for.** On a roofing site, a search about booking an inspection ranked at 2.6, showed 143 times in four weeks and got no clicks. The page had no way to book online.
 - **Your own job photos, renamed and compressed.** File names and alt text give Google words to match.
 - **The questions customers ask you on the phone.** Answer them on the page, with Service markup if you can.
 
 ## Town pages
 
-- **A real page for each town you want work in.** On a Florida roofing site I work on, replacing one county page with a page per town was one of four changes made while average position went from 47.9 to 14.9.
+- **A real page for each town you want work in.** On a Florida roofing site we work on, replacing one county page with a page per town was one of four changes made while average position went from 47.9 to 14.9.
 - **Something true about each town.** Google's doorway abuse policy treats near-identical pages with the town name swapped as spam. Jobs you've done there and local housing details set each page apart.
 
 [One real page per town](/notes/roofing-service-area-pages) goes further into what each page needs.
@@ -87,11 +87,11 @@ The audit steps are in [NAP and citations for contractors](/notes/nap-citations-
 | Interaction to Next Paint | 200 milliseconds or less | How fast the page responds to a tap |
 | Cumulative Layout Shift | 0.1 or less | How much the layout jumps while loading |
 
-Big photos are a common cause of slow pages. On my own site, photos went from about 3 MB JPEGs to WebP files of 93 to 200 KB at 1200 pixels.
+Big photos are a common cause of slow pages. On our own site, photos went from about 3 MB JPEGs to WebP files of 93 to 200 KB at 1200 pixels.
 
 ## Monthly upkeep
 
-1. Submit every form and confirm the email arrives. In July 2026 I found a client's form submissions had been dropping since March because of an email setting, and nobody noticed for four months, me included.
+1. Submit every form and confirm the email arrives. In July 2026 we found a client's form submissions had been dropping since March because of an email setting, and nobody noticed for four months, us included.
 2. Tap the phone number on your own phone.
 3. In the Search Console Performance report, compare the last 28 days with the 28 before. Look for queries in the top ten with no clicks.
 4. Add new job photos and a post to the Business Profile.
@@ -100,4 +100,4 @@ Big photos are a common cause of slow pages. On my own site, photos went from ab
 
 ## Next step
 
-Fix the section with the fewest ticks first. If you'd like me to run the whole list on your site, the Site Audit on my [pricing page](/pricing) covers it, and the fee is credited in full if a monthly plan starts within 30 days.
+Fix the section with the fewest ticks first. If you'd like us to run the whole list on your site, the Site Audit on our [pricing page](/pricing) covers it, and the fee is credited in full if a monthly plan starts within 30 days.

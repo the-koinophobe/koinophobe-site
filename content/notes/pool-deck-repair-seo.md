@@ -21,7 +21,7 @@ faq:
 
 Pool deck work is a good business to be found for. Homeowners search with a clear problem ("pool deck cracking", "resurface pool deck") and they're usually ready to get quotes. A lot of companies in the space have a one-page website and a Business Profile, and that's the whole marketing plan.
 
-I work on a pool deck repair site in Florida. Here's how I'd set one up from scratch.
+We work on a pool deck repair site in Florida. Here's how we'd set one up from scratch.
 
 ## One page per service
 
@@ -58,7 +58,7 @@ This is a visual trade. Every job should end with a before photo and an after ph
 
 You may not find a category that says "pool deck repair" exactly, so pick the closest primary category for the work you do most, and check what the top three companies in your area use. Search for them on Google Maps; the category shows under the name. Add secondary categories only for work you actually sell.
 
-Set your service area to the towns you want work in, up to Google's limit of 20, and keep it within about two hours of driving. I go through the rest of the setup in [Google Business Profile setup for roofing companies](/notes/google-business-profile-for-roofers), and almost all of it applies to deck companies too.
+Set your service area to the towns you want work in, up to Google's limit of 20, and keep it within about two hours of driving. We go through the rest of the setup in [Google Business Profile setup for roofing companies](/notes/google-business-profile-for-roofers), and almost all of it applies to deck companies too.
 
 ## Timing
 
@@ -68,4 +68,4 @@ Pool deck work tends to bunch up before pool season and after storms. Pages take
 
 Count calls from the site and quote form submissions, so you know which service pages bring in work. [Call tracking for contractors](/notes/call-tracking-for-contractors) covers the setup, and most of it is free.
 
-If you'd like help, the [Site Audit](/pricing) will tell you which pages are missing and what I'd fix first. Or [book a free call](/contact) and send me your site before we talk.
+If you'd like help, the [Site Audit](/pricing) will tell you which pages are missing and what we'd fix first. Or [book a free call](/contact) and send us your site before we talk.

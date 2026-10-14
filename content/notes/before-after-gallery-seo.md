@@ -14,7 +14,7 @@ faq:
   - q: "What should I name before and after photo files?"
     a: "Describe the job, the town and the stage, in lowercase words joined by hyphens, such as roof-replacement-[town]-before.webp. Camera names like IMG_4512.jpg tell Google nothing."
   - q: "What size should project photos be on a website?"
-    a: "Resize to about 1200 pixels wide and convert to compressed WebP. My own site photos went from about 3 MB JPEGs to WebP files of 93 to 200 KB."
+    a: "Resize to about 1200 pixels wide and convert to compressed WebP. Our own site photos went from about 3 MB JPEGs to WebP files of 93 to 200 KB."
 ---
 
 ![Pairs of before and after photos in a grid, one pair marked](/notes/illustrations/before-after-gallery-seo.webp)
@@ -27,7 +27,7 @@ The photos are some of the best proof you have. The fix is to move them to where
 
 Google matches pages to searches mostly through text: the title tag, headings, body copy, file names and alt text. A homeowner searching `paver patio before and after [town]` or `roof replacement [town]` needs a page that says those things. A grid of `IMG_4512.jpg` files says none of them.
 
-Big image files cause a second problem. Dozens of full-size photos make the page heavy on a phone, and if the first big photo loads slowly it drags out Largest Contentful Paint, which Google wants at 2.5 seconds or less. I covered the thresholds in [Core Web Vitals for contractor websites](/notes/core-web-vitals-contractor-websites).
+Big image files cause a second problem. Dozens of full-size photos make the page heavy on a phone, and if the first big photo loads slowly it drags out Largest Contentful Paint, which Google wants at 2.5 seconds or less. We covered the thresholds in [Core Web Vitals for contractor websites](/notes/core-web-vitals-contractor-websites).
 
 ## Put each pair on the page it proves
 
@@ -40,11 +40,11 @@ Take each before and after pair and place it on the matching service page, and o
 - **Materials:** product names and colors where they matter.
 - **How long:** days on site, if you know it.
 
-Those few lines give Google something to match and give the reader the detail that makes the photo believable. They also help with Google's doorway abuse policy, which treats near-identical town pages as spam. A real job with photos in that town is the kind of content that sets one town page apart from the next. My [roofing service area pages](/notes/roofing-service-area-pages) note goes further into what a town page needs.
+Those few lines give Google something to match and give the reader the detail that makes the photo believable. They also help with Google's doorway abuse policy, which treats near-identical town pages as spam. A real job with photos in that town is the kind of content that sets one town page apart from the next. Our [roofing service area pages](/notes/roofing-service-area-pages) note goes further into what a town page needs.
 
 You can keep a gallery page if you like it. Link each photo to the service page it belongs to, so the gallery becomes a way in.
 
-Remodelers get the most out of this, because a finished kitchen or bathroom is most of the sales pitch. On [home remodeling SEO](/home-remodeling-seo) I lay out how each finished job becomes a project page of its own.
+Remodelers get the most out of this, because a finished kitchen or bathroom is most of the sales pitch. On [home remodeling SEO](/home-remodeling-seo) We lay out how each finished job becomes a project page of its own.
 
 ## File names, alt text and size
 
@@ -52,13 +52,13 @@ Remodelers get the most out of this, because a finished kitchen or bathroom is m
 
 **Alt text.** One plain sentence describing what's in the photo, written for someone who can't see it. "Worn asphalt shingle roof before replacement" is enough. Don't stuff it with keywords.
 
-**Size and format.** Resize to about 1200 pixels wide and convert to WebP with compression. On my own site, photos went from about 3 MB JPEGs to WebP files of 93 to 200 KB at 1200 pixels. My [image optimization guide](/notes/image-optimization-contractor-websites) has the steps.
+**Size and format.** Resize to about 1200 pixels wide and convert to WebP with compression. On our own site, photos went from about 3 MB JPEGs to WebP files of 93 to 200 KB at 1200 pixels. Our [image optimization guide](/notes/image-optimization-contractor-websites) has the steps.
 
-In July 2026 I did this for a roofing client: took their job photos, compressed them, renamed them, added metadata, converted them to WebP, built a flat roof repair page around them and linked it with the main services page. That build is written up in [how I built a flat roof service page](/notes/flat-roof-service-page-build).
+In July 2026 we did this for a roofing client: took their job photos, compressed them, renamed them, added metadata, converted them to WebP, built a flat roof repair page around them and linked it with the main services page. That build is written up in [how we built a flat roof service page](/notes/flat-roof-service-page-build).
 
 ## Add them to your Business Profile
 
-Upload the same before and after photos to your Google Business Profile, a few at a time as jobs finish. Profile photos show in the map results and in Google Maps. My [Business Profile setup for roofers](/notes/google-business-profile-for-roofers) covers the rest of the profile, and the settings apply to most trades.
+Upload the same before and after photos to your Google Business Profile, a few at a time as jobs finish. Profile photos show in the map results and in Google Maps. Our [Business Profile setup for roofers](/notes/google-business-profile-for-roofers) covers the rest of the profile, and the settings apply to most trades.
 
 ## A simple habit for the crew
 
@@ -66,4 +66,4 @@ The hard part is getting the photos at all. Ask whoever runs the job to take one
 
 ## Next step
 
-Open your gallery page and count how many photos have a descriptive file name and alt text. Then pick your five best pairs and move them onto service pages this week. If you'd like a second opinion on which pages should get them, [send me your site](/contact) along with a link to your gallery.
+Open your gallery page and count how many photos have a descriptive file name and alt text. Then pick your five best pairs and move them onto service pages this week. If you'd like a second opinion on which pages should get them, [send us your site](/contact) along with a link to your gallery.

@@ -6,7 +6,7 @@ draft: false
 topic: technical
 seo_title: "Discovered, currently not indexed: causes and fixes"
 seo_description: "Google knows these URLs exist but hasn't crawled them. What the Search Console status means, the usual causes on small and new sites, and what to fix."
-excerpt: "Google found these URLs and put off crawling them. What the status means in Google's words, why new and template-heavy sites see so much of it, and the order I'd fix things in: server speed, wasted URLs, internal links, then requests."
+excerpt: "Google found these URLs and put off crawling them. What the status means in Google's words, why new and template-heavy sites see so much of it, and the order we'd fix things in: server speed, wasted URLs, internal links, then requests."
 cover: /notes/photos/discovered-currently-not-indexed-cover.webp
 cover_alt: "Wooden card catalog drawers with metal labels"
 cover_credit: "Photo: Ilya Semenov on Unsplash"
@@ -49,7 +49,7 @@ Search Console's Crawl stats report shows a sample of what Googlebot requested. 
 
 ### 3. Clean the sitemap
 
-Your sitemap should only list pages that return a 200 status, aren't redirected, aren't `noindex`, and are the canonical version. Most CMS plugins and frameworks can do this automatically if they're set up right. Check a handful of URLs by hand. If Google knows about pages from your old site that no longer exist, [my redesign checklist](/notes/website-migration-without-losing-rankings) covers the redirects.
+Your sitemap should only list pages that return a 200 status, aren't redirected, aren't `noindex`, and are the canonical version. Most CMS plugins and frameworks can do this automatically if they're set up right. Check a handful of URLs by hand. If Google knows about pages from your old site that no longer exist, [our redesign checklist](/notes/website-migration-without-losing-rankings) covers the redirects.
 
 ![Rows of old filing cabinets with labels](/notes/photos/discovered-currently-not-indexed-1.webp "Photo: MIKE STOLL on Unsplash")
 
@@ -69,4 +69,4 @@ Worry when your service pages, product pages or main articles sit here for more 
 
 ## Where to start
 
-Open Crawl stats today and check your response times. Then pick your five most important stuck pages and link to each one from a page that already gets traffic. [What is technical SEO](/notes/what-is-technical-seo) covers the other basics, and my Site Audit on the [pricing page](/pricing) includes the full indexing review if you'd like someone else to do it.
+Open Crawl stats today and check your response times. Then pick your five most important stuck pages and link to each one from a page that already gets traffic. [What is technical SEO](/notes/what-is-technical-seo) covers the other basics, and our Site Audit on the [pricing page](/pricing) includes the full indexing review if you'd like someone else to do it.

@@ -27,11 +27,11 @@ Before any of that, GA4 has to know what a lead looks like on your site.
 
 GA4 records events, which are things visitors do. Some events it tracks on its own, like page views and scrolls. The ones that matter to you are phone taps, form submissions and online bookings, and GA4 doesn't know those are leads until you tell it.
 
-If the events don't exist yet, you build them. A phone tap is usually done in Google Tag Manager with a Click - Just Links trigger, set to fire when the Click URL starts with `tel:`, and a GA4 Event tag. I walk through it step by step in [phone click tracking with Tag Manager](/notes/gtm-phone-click-tracking), and [the three events every local business should track](/notes/three-events-local-business) covers forms and bookings too.
+If the events don't exist yet, you build them. A phone tap is usually done in Google Tag Manager with a Click - Just Links trigger, set to fire when the Click URL starts with `tel:`, and a GA4 Event tag. We walk through it step by step in [phone click tracking with Tag Manager](/notes/gtm-phone-click-tracking), and [the three events every local business should track](/notes/three-events-local-business) covers forms and bookings too.
 
 Once an event shows up in GA4, go to **Admin > Events** and turn on the key event toggle next to it. From then on, it appears as a key event across your reports.
 
-One warning. A form event fires when someone clicks submit in the browser. It can't tell you whether the email reached your inbox. In July 2026 I found a client's form submissions had been dropping since March because the form's email (SMTP) connection needed re-authenticating after an email address change. Four months, and nobody noticed, me included. Now I test form delivery on every site monthly. On another site, a speed plugin setting stopped forms from submitting at all, which I wrote up in [the speed plugin that broke a contact form](/notes/speed-plugin-broke-contact-form).
+One warning. A form event fires when someone clicks submit in the browser. It can't tell you whether the email reached your inbox. In July 2026 we found a client's form submissions had been dropping since March because the form's email (SMTP) connection needed re-authenticating after an email address change. Four months, and nobody noticed, us included. Now we test form delivery on every site monthly. On another site, a speed plugin setting stopped forms from submitting at all, which we wrote up in [the speed plugin that broke a contact form](/notes/speed-plugin-broke-contact-form).
 
 ## 1. Where are visitors coming from?
 
@@ -47,7 +47,7 @@ Set the date range to the last 28 days and compare it with the same period last 
 
 **Reports > Engagement > Landing page.**
 
-This shows the first page each visit started on. Sort by key events. Your best service pages should be near the top. A page with lots of sessions and zero key events deserves a look. Is the phone number easy to tap on mobile? Is there a form, and does it work? Does the page let people do what they came for? On a roofing site I work on, a search about booking an inspection ranked at position 2.6, showed 143 times in four weeks and got zero clicks. The page had no way to book online.
+This shows the first page each visit started on. Sort by key events. Your best service pages should be near the top. A page with lots of sessions and zero key events deserves a look. Is the phone number easy to tap on mobile? Is there a form, and does it work? Does the page let people do what they came for? On a roofing site we work on, a search about booking an inspection ranked at position 2.6, showed 143 times in four weeks and got zero clicks. The page had no way to book online.
 
 ## 3. Are calls and forms happening?
 
@@ -67,4 +67,4 @@ Realtime shows the last 30 minutes. Use it as a test bench. Open your site on yo
 
 ## Next step
 
-Do the Realtime test this week. If calls or forms don't show up, tracking in GA4 is part of the Setup Sprint on my [pricing page](/pricing), along with the Business Profile cleanup, speed and schema work.
+Do the Realtime test this week. If calls or forms don't show up, tracking in GA4 is part of the Setup Sprint on our [pricing page](/pricing), along with the Business Profile cleanup, speed and schema work.

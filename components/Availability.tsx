@@ -5,9 +5,9 @@ import { Reveal } from "./Reveal";
 import { BookCta, BookNote, EmailCta } from "./Cta";
 
 const CALL = [
-  "I look at your site and your Google Business Profile before we talk.",
-  "You get the two or three things I'd fix first, and what they'd cost.",
-  "If nothing is worth paying for, I'll tell you that on the call.",
+  "We look at your site and your Google Business Profile before we talk.",
+  "You get the two or three things we'd fix first, and what they'd cost.",
+  "If nothing is worth paying for, we'll tell you that on the call.",
 ];
 
 /**
@@ -26,9 +26,9 @@ export function Availability({ call = CALL }: { call?: string[] } = {}) {
             </span>
             Taking new clients
           </span>
-          <h2 className="t-h2 mt-5 max-w-[18ch]">Send me your website. I&rsquo;ll tell you what I&rsquo;d fix first.</h2>
+          <h2 className="t-h2 mt-5 max-w-[18ch]">Send us your website. We&rsquo;ll tell you what we&rsquo;d fix first.</h2>
           <p className="muted mt-5 max-w-[52ch] text-[17px] leading-relaxed">
-            Book a free 20-minute call, or email me if you&rsquo;d rather write. Every price is on the{" "}
+            Book a free 20-minute call, or email us if you&rsquo;d rather write. Every price is on the{" "}
             <Link href="/pricing" className="text-white underline underline-offset-4 dark:text-ink">
               pricing page
             </Link>

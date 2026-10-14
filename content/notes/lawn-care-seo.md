@@ -23,7 +23,7 @@ In most of the country, lawn care is a spring decision. The first warm weekend, 
 
 That makes timing the whole game for a lawn care company's website. Pages take weeks to months to start ranking. If you want calls in March, the pages need to be live by December.
 
-I work on a lawn and landscaping site in Florida, where the season barely stops. The setup is the same either way.
+We work on a lawn and landscaping site in Florida, where the season barely stops. The setup is the same either way.
 
 ## A page for each service
 
@@ -48,7 +48,7 @@ If you publish prices, you'll get fewer calls from people who were never going t
 
 ## Town pages, with real yards
 
-Lawn care is very local. Soil, grass type, HOA rules and lot sizes change from one town to the next. A page for each town you serve, with photos of yards you maintain there and a few lines about what that area needs, does better than a list of town names. I wrote about how to build these in [service area pages](/notes/roofing-service-area-pages). It's written for roofers, and the method is the same.
+Lawn care is very local. Soil, grass type, HOA rules and lot sizes change from one town to the next. A page for each town you serve, with photos of yards you maintain there and a few lines about what that area needs, does better than a list of town names. We wrote about how to build these in [service area pages](/notes/roofing-service-area-pages). It's written for roofers, and the method is the same.
 
 ## The map pack
 
@@ -67,4 +67,4 @@ Reviews matter a lot here because lawn care is a trust purchase: someone is goin
 
 When spring hits, you'll want to know which pages are working. Track calls and form submissions from the start, as in [call tracking for contractors](/notes/call-tracking-for-contractors).
 
-If you want this built over the winter, the Growth plan on the [pricing page](/pricing) covers two new pages a month, which gets most of this done by March. Or [book a free call](/contact) and I'll tell you where your site stands.
+If you want this built over the winter, the Growth plan on the [pricing page](/pricing) covers two new pages a month, which gets most of this done by March. Or [book a free call](/contact) and we'll tell you where your site stands.

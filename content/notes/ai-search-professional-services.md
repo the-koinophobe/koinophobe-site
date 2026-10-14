@@ -25,7 +25,7 @@ faq:
 
 People ask assistants these questions now, and the answer often names a few practices. If you run a dental office, a law firm, an accounting practice or a clinic, being one of those names is worth a lot, because the person asking is close to booking.
 
-Here's what professional practices can do, built on what I've measured and what the platforms document.
+Here's what professional practices can do, built on what we've measured and what the platforms document.
 
 ## Why practices are a special case
 
@@ -37,7 +37,7 @@ Here's what professional practices can do, built on what I've measured and what 
 
 ![A man in a suit writing at a desk in an office](/notes/photos/ai-search-professional-services-1.webp "Photo: Gylain Omer on Unsplash")
 
-## What I'd do for a practice
+## What we'd do for a practice
 
 ### 1. Let the assistants read your site
 
@@ -58,7 +58,7 @@ These are the pages that get cited, because they're what people ask:
 - **What happens.** "What to expect at your first visit," "how long does a root canal take," "what to bring to a consultation."
 - **Do I need you?** "Do I need a lawyer for...," "can I do my own business taxes," "when should I see a physical therapist instead of a doctor."
 
-Write each one with a direct answer first, then the detail, reviewed by the professional who'd answer it in person. In [my study of AI citations](/notes/ai-cited-vs-ranked-page), assistants cited article-shaped pages and passed over pages that only described a business. [Content that AI cites](/notes/content-ai-cites).
+Write each one with a direct answer first, then the detail, reviewed by the professional who'd answer it in person. In [our study of AI citations](/notes/ai-cited-vs-ranked-page), assistants cited article-shaped pages and passed over pages that only described a business. [Content that AI cites](/notes/content-ai-cites).
 
 ### 4. Reviews with detail
 
@@ -70,14 +70,14 @@ Professional association directories, hospital affiliations, local press quotes,
 
 ## The rules, briefly
 
-I'm not a lawyer, and the rules vary by state and profession. Common restrictions include claims of specialization without certification, testimonials about outcomes, guarantees, and before-and-after images without disclaimers. Content written for AI search is still advertising. Have new pages reviewed the way you'd review an ad.
+We're not lawyers, and the rules vary by state and profession. Common restrictions include claims of specialization without certification, testimonials about outcomes, guarantees, and before-and-after images without disclaimers. Content written for AI search is still advertising. Have new pages reviewed the way you'd review an ad.
 
-## A practice I've worked on
+## A practice we've worked on
 
-One pain clinic I do SEO for gets most of its clicks from phones, at an 11.26% click-through rate against about 2% on desktop, across hundreds of "near me" variations of its services. People choosing a clinic are often on their phone, nearby and ready. The same people now ask assistants. The groundwork that won those searches (a complete profile, clear service pages, real reviews) is the same groundwork assistants draw on.
+One pain clinic we do SEO for gets most of its clicks from phones, at an 11.26% click-through rate against about 2% on desktop, across hundreds of "near me" variations of its services. People choosing a clinic are often on their phone, nearby and ready. The same people now ask assistants. The groundwork that won those searches (a complete profile, clear service pages, real reviews) is the same groundwork assistants draw on.
 
 ## Next steps
 
 Ask ChatGPT, Perplexity and Google three questions a new patient or client would ask, without your practice's name, and note who's recommended. Run each twice more in fresh sessions; answers vary a lot between runs. If a competitor is named consistently and you aren't, compare their profile, reviews and pages with yours.
 
-My [AI search optimization](/ai-search-optimization) service handles crawler access, the question pages, listing cleanup and monthly tracking across the assistants, for $1,000 a month with no contract.
+Our [AI search optimization](/ai-search-optimization) service handles crawler access, the question pages, listing cleanup and monthly tracking across the assistants, for $1,000 a month with no contract.

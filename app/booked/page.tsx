@@ -19,11 +19,11 @@ export default function BookedPage() {
       <BookedTrack />
       <p className="eyebrow">Booked</p>
       <h1 className="t-h1 mt-5 max-w-[18ch]">
-        You&rsquo;re on my calendar.
+        You&rsquo;re on our calendar.
       </h1>
       <div className="mt-6 max-w-[56ch] space-y-4 text-[17.5px] text-muted">
         <p>
-          The invite and the video link are in your email. I&rsquo;ll look at your site before we
+          The invite and the video link are in your email. We&rsquo;ll look at your site before we
           talk, so we can spend the 20 minutes on what to fix.
         </p>
         <p>

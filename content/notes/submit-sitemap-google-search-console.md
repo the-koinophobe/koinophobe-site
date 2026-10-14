@@ -21,7 +21,7 @@ faq:
 
 ![A sitemap file being handed to two search engines, with the robots.txt line pointing to it](/notes/illustrations/submit-sitemap-google-search-console.webp)
 
-A sitemap is a list of the pages on your site that you want search engines to know about. Submitting it takes ten minutes, and it's one of the first things I check on a new client's Search Console. A surprising number of small business sites never did it.
+A sitemap is a list of the pages on your site that you want search engines to know about. Submitting it takes ten minutes, and it's one of the first things we check on a new client's Search Console. A surprising number of small business sites never did it.
 
 It won't get pages indexed by itself. Google calls a sitemap submission "merely a hint." It does help Google find new pages faster, and the Sitemaps report tells you when something's wrong.
 
@@ -38,7 +38,7 @@ Most platforms make one for you. Open these in your browser to check:
 | Squarespace | `yourdomain.com/sitemap.xml` |
 | Next.js App Router | `yourdomain.com/sitemap.xml`, from `app/sitemap.ts` |
 
-If you see a page of URLs or a list of smaller sitemaps, that's it. If you get a 404, check your SEO plugin's settings, or see [my Next.js checklist](/notes/nextjs-seo-checklist) if you're on a custom build.
+If you see a page of URLs or a list of smaller sitemaps, that's it. If you get a 404, check your SEO plugin's settings, or see [our Next.js checklist](/notes/nextjs-seo-checklist) if you're on a custom build.
 
 ## Submit it to Google
 
@@ -76,7 +76,7 @@ Bing also supports IndexNow, a way for your site to notify search engines the mo
 
 ## Keep it clean
 
-A sitemap should only list pages you want in search results. Google's rules and my own checks come down to this:
+A sitemap should only list pages you want in search results. Google's rules and our own checks come down to this:
 
 - **Only indexable, canonical URLs** that return a 200 status. No redirects, 404s or `noindex` pages. A messy sitemap is a common reason for [discovered, currently not indexed](/notes/discovered-currently-not-indexed) pages.
 - **Accurate `lastmod` dates.** Google uses them only when they're "consistently and verifiably" accurate. Update them when the content changes. A new copyright year doesn't count.
@@ -87,4 +87,4 @@ There's no need to ping Google when your sitemap changes. Google retired its sit
 
 ## Where to start
 
-Open your sitemap URL now, then check the Sitemaps report in Search Console. If there's nothing submitted, submit it and add the robots.txt line. [My Search Console guide](/notes/google-search-console-for-contractors) covers the rest of the setup, and [what is technical SEO](/notes/what-is-technical-seo) covers the other basics. If you'd like it all checked at once, that's my Site Audit on the [pricing page](/pricing).
+Open your sitemap URL now, then check the Sitemaps report in Search Console. If there's nothing submitted, submit it and add the robots.txt line. [Our Search Console guide](/notes/google-search-console-for-contractors) covers the rest of the setup, and [what is technical SEO](/notes/what-is-technical-seo) covers the other basics. If you'd like it all checked at once, that's our Site Audit on the [pricing page](/pricing).

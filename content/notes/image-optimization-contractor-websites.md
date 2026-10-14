@@ -10,9 +10,9 @@ cover_alt: "A laptop screen showing photo editing software with an image open fo
 cover_credit: "Photo: Zulfugar Karimov on Unsplash"
 faq:
   - q: "What size should images be on my website?"
-    a: "Resize them to the largest width they display at. My own site photos are 1200 pixels wide, and a photo inside a column of text can usually be smaller."
+    a: "Resize them to the largest width they display at. Our own site photos are 1200 pixels wide, and a photo inside a column of text can usually be smaller."
   - q: "Is WebP better than JPEG for a website?"
-    a: "For photos, WebP files are usually smaller than JPEGs at similar quality, and current major browsers support it. After resizing and converting, my own photos went from about 3 MB to 93 to 200 KB."
+    a: "For photos, WebP files are usually smaller than JPEGs at similar quality, and current major browsers support it. After resizing and converting, our own photos went from about 3 MB to 93 to 200 KB."
   - q: "Should I lazy load every image on my site?"
     a: "No. Lazy load images below the fold. The hero image at the top should load right away, because it is often the element Google uses to measure loading speed."
 ---
@@ -21,7 +21,7 @@ faq:
 
 Contractor websites run on photos of finished jobs. Most of them come straight off a phone, several megabytes each and thousands of pixels wide, and get uploaded exactly as they are.
 
-My own site had the same problem. The photos were JPEGs of about 3 MB each. After I resized them to 1200 pixels wide and converted them to WebP, they came out between 93 and 200 KB.
+Our own site had the same problem. The photos were JPEGs of about 3 MB each. After we resized them to 1200 pixels wide and converted them to WebP, they came out between 93 and 200 KB.
 
 ## Why photo size matters
 
@@ -29,13 +29,13 @@ Google's Core Web Vitals measure loading with Largest Contentful Paint (LCP), th
 
 Speed is one ranking signal among many. A fast page with thin content doesn't automatically beat a slower page that answers the search better. The bigger cost of a heavy page is the visitor who leaves before your phone number shows up.
 
-## How I optimize contractor photos
+## How we optimize contractor photos
 
 ### 1. Resize to the display size
 
 ![A digital camera sitting on a desk in front of an open laptop](/notes/photos/image-optimization-contractor-websites-1.webp "Photo: Feng Sun on Unsplash")
 
-Find out how wide the image displays on the page. A photo shown in a column 800 pixels wide gains nothing from being 4,000 pixels wide; the browser still downloads every pixel. My site photos are 1200 pixels wide. WordPress creates smaller copies of each upload and serves them to smaller screens, so upload a sensibly sized original and let it handle the rest.
+Find out how wide the image displays on the page. A photo shown in a column 800 pixels wide gains nothing from being 4,000 pixels wide; the browser still downloads every pixel. Our site photos are 1200 pixels wide. WordPress creates smaller copies of each upload and serves them to smaller screens, so upload a sensibly sized original and let it handle the rest.
 
 ### 2. Convert to WebP
 
@@ -49,7 +49,7 @@ Lower the quality setting until you can see a difference at the size the photo d
 
 `IMG_4821.jpg` tells Google nothing about the photo. `flat-roof-repair-tpo-seam.webp` does. Use lowercase words and hyphens, and describe what's in the picture.
 
-When I built a flat roof repair page for a roofing client in July 2026, this was most of the image work. I took the client's own job photos, compressed them, renamed them, added metadata, converted them to WebP, and then built the page around them and linked it with the main services page.
+When we built a flat roof repair page for a roofing client in July 2026, this was most of the image work. We took the client's own job photos, compressed them, renamed them, added metadata, converted them to WebP, and then built the page around them and linked it with the main services page.
 
 ### 5. Write alt text
 
@@ -69,6 +69,6 @@ WordPress adds lazy loading automatically and tries to skip the first large imag
 
 Run the page through PageSpeed Insights before and after. It flags images that are oversized or in older formats, and it names the element it used for LCP, which tells you which photo to fix first.
 
-If you're planning a redesign, carry your renamed files and alt text over with the content; my [website redesign checklist](/notes/website-migration-without-losing-rankings) covers the rest. And if you add a speed plugin to compress images for you, test your forms afterward. One [speed plugin setting broke a client's contact form](/notes/speed-plugin-broke-contact-form).
+If you're planning a redesign, carry your renamed files and alt text over with the content; our [website redesign checklist](/notes/website-migration-without-losing-rankings) covers the rest. And if you add a speed plugin to compress images for you, test your forms afterward. One [speed plugin setting broke a client's contact form](/notes/speed-plugin-broke-contact-form).
 
-Speed work, including images, is part of the Setup Sprint on [my pricing page](/pricing). If you want me to look at what's slowing your site down, [send me the link](/contact).
+Speed work, including images, is part of the Setup Sprint on [our pricing page](/pricing). If you want us to look at what's slowing your site down, [send us the link](/contact).

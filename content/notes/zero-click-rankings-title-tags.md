@@ -19,9 +19,9 @@ faq:
 
 ![307 search terms ranking in Google's top ten with no clicks, 139 of them in the top five](/notes/illustrations/zero-click-rankings-title-tags.webp)
 
-In the 28 days to August 16, 2026, I pulled Search Console data for three Florida sites I work on. 307 search terms ranked in Google's top ten and got zero clicks. Between them they had 19,883 impressions.
+In the 28 days to August 16, 2026, we pulled Search Console data for three Florida sites we work on. 307 search terms ranked in Google's top ten and got zero clicks. Between them they had 19,883 impressions.
 
-Then I narrowed it to the top five.
+Then we narrowed it to the top five.
 
 | Position | Search terms | Impressions | Clicks |
 |---|---|---|---|
@@ -38,7 +38,7 @@ A page can rank for a search it was never written for. The title still says what
 
 ## The booking example
 
-On a roofing site I work on, a search about booking an inspection ranked at position 2.6. It showed 143 times in four weeks and got zero clicks.
+On a roofing site we work on, a search about booking an inspection ranked at position 2.6. It showed 143 times in four weeks and got zero clicks.
 
 The page had no way to book online. Someone searching that wants to pick a time. A sharper title might have earned a few clicks, and those visitors would have found nothing to book. The fix there starts on the page: add a booking path, then rewrite the snippet so it says you can book.
 
@@ -58,7 +58,7 @@ Write down the query, the page, the position and the impressions. That's your wo
 
 Take each query and ask what the person wanted to do. Book, get a price, find someone in their town, or learn something before they call.
 
-Then rewrite the title so it answers that. A few rules I follow:
+Then rewrite the title so it answers that. A few rules we follow:
 
 - Put the searcher's words near the start.
 - Name the town if the search names a town.
@@ -73,7 +73,7 @@ The meta description gets the same treatment. One or two sentences that say what
 
 A better snippet sends people to the page. The page still has to deliver. If the search is about booking, add online booking or a short form that asks for a time. If it's about cost, explain what drives the price. If it names a town, the page should show you work there.
 
-Structured data can help Google read the page correctly too. My note on [roofing contractor schema](/notes/roofing-contractor-schema) covers what to add.
+Structured data can help Google read the page correctly too. Our note on [roofing contractor schema](/notes/roofing-contractor-schema) covers what to add.
 
 ## Check whether it worked
 
@@ -81,4 +81,4 @@ Give each change four weeks, then use the **Compare** option in the Performance 
 
 Clicks are only half of it. If the page gets visits and still no calls, you need [call and form tracking](/notes/three-events-local-business) to see where people drop off, which is the whole point of [tracking before you judge rankings](/notes/rankings-without-tracking).
 
-If you'd like me to pull this list for your site, the Site Audit on [my pricing page](/pricing) is where I'd start. Or [send me your URL](/contact) and I'll tell you what I'd check first.
+If you'd like us to pull this list for your site, the Site Audit on [our pricing page](/pricing) is where we'd start. Or [send us your URL](/contact) and we'll tell you what we'd check first.

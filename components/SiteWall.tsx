@@ -132,11 +132,11 @@ export function SiteWall() {
     <div>
       <p className="eyebrow">The wall</p>
       <h2 className="mt-4 max-w-[22ch] font-display text-[clamp(1.9rem,4vw,3rem)] leading-[1.05] tracking-tight text-balance">
-        Thirty-plus sites. These are the ones I kept the screenshots of.
+        Thirty-plus sites. These are the ones we kept the screenshots of.
       </h2>
       <p className="mt-5 max-w-[58ch] text-muted">
         {unnamed} of the {projects.length} below show without a name, most because they went out
-        under an agency&rsquo;s brand. You can see the work, not the client. If you hire me
+        under an agency&rsquo;s brand. You can see the work, not the client. If you hire us
         white-label, your clients get the same treatment.
       </p>
 
@@ -157,7 +157,7 @@ export function SiteWall() {
       </div>
 
       <p className="mt-6 font-mono text-[12px] uppercase tracking-[0.11em] text-muted">
-        {projects.length} sites &middot; {named} I can put a name to &middot; hover to wake them
+        {projects.length} sites &middot; {named} we can put a name to &middot; hover to wake them
       </p>
     </div>
   );

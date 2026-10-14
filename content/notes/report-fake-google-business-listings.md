@@ -73,4 +73,4 @@ Keep your own profile clean while you do this. A business that reports keyword-s
 
 ## Where to start
 
-Search your main service in your town and look at every listing in the top ten. Note the ones you can prove are breaking the rules and start with name edits, since those are the quickest. If you'd rather have the profile and the monitoring handled, it's part of the Growth plan on my [pricing page](/pricing), and the full profile setup is in my [Business Profile guide](/notes/google-business-profile-for-roofers).
+Search your main service in your town and look at every listing in the top ten. Note the ones you can prove are breaking the rules and start with name edits, since those are the quickest. If you'd rather have the profile and the monitoring handled, it's part of the Growth plan on our [pricing page](/pricing), and the full profile setup is in our [Business Profile guide](/notes/google-business-profile-for-roofers).

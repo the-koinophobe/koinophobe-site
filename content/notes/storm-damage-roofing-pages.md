@@ -37,7 +37,7 @@ Homeowners don't start with "roofer". They start with questions:
 
 The roofer whose site answers those questions gets the call, because the homeowner is already on their page when they decide to pick up the phone.
 
-On a Florida roofing site I work on, part of the work was a set of articles aimed at exactly these questions. The site's average position went from 47.9 to 14.9 over the year. On a hurricane shutter site, 37 of 51 clicks in one four-week stretch came from a single seasonal storm article. Storm content does its work in bursts, and you can't predict the dates.
+On a Florida roofing site we work on, part of the work was a set of articles aimed at exactly these questions. The site's average position went from 47.9 to 14.9 over the year. On a hurricane shutter site, 37 of 51 clicks in one four-week stretch came from a single seasonal storm article. Storm content does its work in bursts, and you can't predict the dates.
 
 ## The pages to build
 
@@ -51,7 +51,7 @@ On a Florida roofing site I work on, part of the work was a set of articles aime
 
 **Repair or replace.** The question every homeowner asks. Give them your real rule of thumb: age of the roof, how much is damaged, what the insurer is likely to cover.
 
-**Wind mitigation inspections,** if you work in Florida. They can lower a homeowner's insurance premium, and people search for them all year. If you offer them, let people book online. I've seen one of these pages rank in the top three and get no clicks because the page had no way to book.
+**Wind mitigation inspections,** if you work in Florida. They can lower a homeowner's insurance premium, and people search for them all year. If you offer them, let people book online. We've seen one of these pages rank in the top three and get no clicks because the page had no way to book.
 
 ## How to write them
 

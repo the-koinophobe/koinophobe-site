@@ -9,14 +9,14 @@ export type Review = {
 export const reviews: Review[] = [
   {
     quote:
-      "Michael did a wonderful job. Everything went smoothly, communication was fluent, on time and as expected. I highly recommend working with Michael.",
+      "[Koinophobe] did a wonderful job. Everything went smoothly, communication was fluent, on time and as expected. I highly recommend working with [Koinophobe].",
     name: "Mehdi D.",
     role: "Iteration X",
     source: "Upwork",
   },
   {
     quote:
-      "Michael handles the build and technical side for my agency's clients, and he's the one I trust to just get it done. Fast, reliable, and he keeps the quality tight across a lot of sites. We've come a long way working together.",
+      "[Koinophobe] handles the build and technical side for my agency's clients... Fast, reliable, and [they keep] the quality tight across a lot of sites. We've come a long way working together.",
     name: "Brian Reid",
     role: "Founder, Palm Bay Marketing SEO",
     source: "Direct",
@@ -63,7 +63,7 @@ export type Project = {
   /**
    * Whether the client can be identified publicly.
    *
-   * true only for clients Michael has a direct relationship with. Everything
+   * true only for clients we have a direct relationship with. Everything
    * that came through an agency is false and stays that way.
    *
    * false withholds the attribution, not the picture: the screenshot and the

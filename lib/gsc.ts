@@ -92,7 +92,7 @@ export const cases: CaseStudy[] = [
     ],
     body: [
       "893 of the 1,099 searches this site now appears for did not return it at all a year ago. It wasn't ranking badly for them. It wasn't in the index for them.",
-      "The work was unglamorous: title and meta rewrites across the whole site, service pages built per town instead of one page trying to cover the county, FAQ and service schema, and a set of long-form articles aimed at the questions Florida homeowners type after a storm. Then I waited, because that's the part nobody sells.",
+      "The work was unglamorous: title and meta rewrites across the whole site, service pages built per town instead of one page trying to cover the county, FAQ and service schema, and a set of long-form articles aimed at the questions Florida homeowners type after a storm. Then we waited, because that's the part nobody sells.",
       "The geographic terms are where it shows. `roofing melbourne fl` went from position 77 to 12.9. `roof replacement melbourne fl` from 70 to 15. Those are the searches that turn into a truck in a driveway.",
     ],
     next: "The hard part is done. This site now shows up 26 times more often than it did, which is the part that takes a year. Turning those impressions into clicks is a snippet problem, not a ranking problem, and it is already moving: last quarter's CTR is 0.24% against 0.17% the quarter before. Same site, same rankings, better titles.",

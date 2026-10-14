@@ -18,7 +18,7 @@ faq:
     a: "Near-me searches are decided mostly by the map pack, which looks at how close the shop is, whether the Business Profile has the right category and services, and how many recent reviews it has with sentences in them. For Tint Lordz that search sits at 19, so the Business Profile comes first, followed by a steady flow of reviews."
 ---
 
-Tint Lordz Auto Spa is a window tint and detailing shop in Lawrence, Massachusetts. I rebuilt the site and have been working on its search since mid-2025. This is what 14 months of Search Console looks like, July 2025 to August 2026.
+Tint Lordz Auto Spa is a window tint and detailing shop in Lawrence, Massachusetts. We rebuilt the site and have been working on its search since mid-2025. This is what 14 months of Search Console looks like, July 2025 to August 2026.
 
 ## The brand is locked
 
@@ -51,8 +51,8 @@ It's a different job from the brand work. Near-me searches are decided mostly by
 
 ## Brand first, category second
 
-The order matters. You can't win "near me" if Google isn't sure who you are yet. I'm doing the same thing for my own name, [Koinophobe](/notes/what-is-a-koinophobe), right now, and the steps are the same ones in this post.
+The order matters. You can't win "near me" if Google isn't sure who you are yet. We're doing the same thing for our own name, [Koinophobe](/notes/what-is-a-koinophobe), right now, and the steps are the same ones in this post.
 
 If you run a shop in the Merrimack Valley and want to know where yours stands, the [intro call](/contact) is free.
 
-Michael Edward, Koinophobe
+The Koinophobe team

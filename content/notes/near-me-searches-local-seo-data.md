@@ -1,10 +1,10 @@
 ---
-title: "What 1,250 'near me' searches taught me about local SEO"
+title: "What 1,250 'near me' searches taught us about local SEO"
 slug: near-me-searches-local-seo-data
 date: 2026-09-02
 draft: false
 seo_title: "1,250 'near me' searches: what ranks and why"
-excerpt: "I pulled every 'near me' search from five client sites. 1,250 queries, 780 on page one, 191 in the top three. Here is what the ones that rank have in common."
+excerpt: "We pulled every 'near me' search from five client sites. 1,250 queries, 780 on page one, 191 in the top three. Here is what the ones that rank have in common."
 cover: /notes/photos/near-me-searches-local-seo-data-cover.webp
 cover_alt: "A hand holding a smartphone showing a GPS map while out in the city"
 cover_credit: "Photo: Enrique Alarcon on Unsplash"
@@ -19,7 +19,7 @@ faq:
 
 ![Every near-me query across five sites, one mark each: 191 in the top three, 780 on page one, 1,250 in total](/notes/illustrations/near-me-searches-local-seo-data.webp)
 
-I went through the Search Console exports for five sites I work on, April 2025 to August 2026, and pulled out every search that contained "near me". A pain clinic, a roofer, a tint shop, a game shop and a marketing agency.
+We went through the Search Console exports for five sites we work on, April 2025 to August 2026, and pulled out every search that contained "near me". A pain clinic, a roofer, a tint shop, a game shop and a marketing agency.
 
 There were 1,250 of them. 780 showed one of those sites on page one, 191 in the top three. Between them they brought in 343 clicks.
 
@@ -71,4 +71,4 @@ None of it is clever. It's the same work on every site, done properly and kept u
 
 Open Search Console, go to Performance, filter queries containing "near me", and export the list. You'll probably find more of them than you expected, and you'll see which services and towns are missing pages.
 
-If you'd rather I did it, the [Site Audit](/pricing) includes this export and a list of the pages I'd build first. The full case studies, with the same Search Console data, are on the [work page](/work).
+If you'd rather we did it, the [Site Audit](/pricing) includes this export and a list of the pages we'd build first. The full case studies, with the same Search Console data, are on the [work page](/work).

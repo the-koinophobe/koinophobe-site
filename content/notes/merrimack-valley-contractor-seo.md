@@ -21,7 +21,7 @@ faq:
 
 A contractor or service business in Lawrence usually works the towns around it too: Methuen, Andover, Haverhill, Lowell. Each of those is its own set of searches. `roofer methuen ma` is a different query from `roofer lawrence ma`, and Google decides separately whether you belong in each one.
 
-The local example I have is Tint Lordz Auto Spa, a window tint business in Lawrence, MA that serves Lawrence, Methuen, Andover, Haverhill and Lowell. It's a tint shop, but its customers come from the same towns a contractor would work, so its numbers give a fair picture of which local searches a small business can reach.
+The local example we have is Tint Lordz Auto Spa, a window tint business in Lawrence, MA that serves Lawrence, Methuen, Andover, Haverhill and Lowell. It's a tint shop, but its customers come from the same towns a contractor would work, so its numbers give a fair picture of which local searches a small business can reach.
 
 ## What Tint Lordz's numbers show
 
@@ -34,7 +34,7 @@ The local example I have is Tint Lordz Auto Spa, a window tint business in Lawre
 | Monthly impressions | Grew from about 1,000 to 3,000 to 4,000 |
 | Clicks, July 2025 to August 2026 | 393 |
 
-The name searches and the town-plus-service search sit near the top. The broad near-me search sits on page two. For a business working a handful of towns, that's the order I'd plan around: own the name, then own `service + town` for each town you work, and treat broad near-me terms as the longer project. The full case is in [the Tint Lordz write-up](/notes/lawrence-ma-window-tint-seo).
+The name searches and the town-plus-service search sit near the top. The broad near-me search sits on page two. For a business working a handful of towns, that's the order we'd plan around: own the name, then own `service + town` for each town you work, and treat broad near-me terms as the longer project. The full case is in [the Tint Lordz write-up](/notes/lawrence-ma-window-tint-seo).
 
 ## Set your Business Profile service areas
 
@@ -55,7 +55,7 @@ A page for Methuen and a page for Haverhill can each help, if each one has somet
 - The services you're called for most often there
 - The neighborhoods or streets you've worked, if the customer is fine with it
 
-Google's doorway abuse policy treats near-identical pages that swap the town name and funnel to one page as spam. If you have real work to show in three towns, build three pages and add more as jobs come in. I go through what makes a town page hold up in [service area pages that aren't doorways](/notes/roofing-service-area-pages).
+Google's doorway abuse policy treats near-identical pages that swap the town name and funnel to one page as spam. If you have real work to show in three towns, build three pages and add more as jobs come in. We go through what makes a town page hold up in [service area pages that aren't doorways](/notes/roofing-service-area-pages).
 
 ## Make the free estimate page do its job
 
@@ -67,7 +67,7 @@ For a contractor, the estimate page is where a visit turns into a lead, so it ne
 - What happens after they hit submit, and how fast you call back
 - A few photos of finished jobs
 
-Then test it. A form can look fine and still not deliver. On one client site, submissions had been dropping since March 2026 because of an email setting, and I didn't catch it until July. Now I check form delivery on every site monthly. The page itself is covered in [what a free estimate page needs](/notes/lawrence-ma-free-estimate-page).
+Then test it. A form can look fine and still not deliver. On one client site, submissions had been dropping since March 2026 because of an email setting, and we didn't catch it until July. Now we check form delivery on every site monthly. The page itself is covered in [what a free estimate page needs](/notes/lawrence-ma-free-estimate-page).
 
 ## Track calls and forms by town
 
@@ -75,4 +75,4 @@ Mark form submissions and phone taps as key events in GA4, then check Engagement
 
 For a storefront example in another state, with a product page and near-me numbers, see [Charles County small business SEO](/notes/charles-county-md-small-business-seo).
 
-If you work around Lawrence and want town pages, service areas and tracking set up, the Setup Sprint and Growth plan are on my [pricing page](/pricing). Growth includes 2 new town or service pages a month.
+If you work around Lawrence and want town pages, service areas and tracking set up, the Setup Sprint and Growth plan are on our [pricing page](/pricing). Growth includes 2 new town or service pages a month.

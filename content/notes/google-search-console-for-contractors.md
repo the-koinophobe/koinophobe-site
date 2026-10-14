@@ -45,7 +45,7 @@ This is the one you'll open most. It shows clicks, impressions, average click-th
 
 In the date filter there's a **Compare** tab. Use it to line up the last three months against the same three months a year earlier. Home service work is seasonal, and a drop from one month to the next can mean nothing more than the weather changed.
 
-Impressions count every time a page appeared in results, even if nobody scrolled down to it. Clicks are the visits. Watch both, and don't get excited about impressions alone. Across three Florida sites I work on, I found [307 searches ranking in Google's top ten with zero clicks](/notes/zero-click-rankings-title-tags) between them in a single 28-day window.
+Impressions count every time a page appeared in results, even if nobody scrolled down to it. Clicks are the visits. Watch both, and don't get excited about impressions alone. Across three Florida sites we work on, we found [307 searches ranking in Google's top ten with zero clicks](/notes/zero-click-rankings-title-tags) between them in a single 28-day window.
 
 ### Pages (indexing)
 
@@ -61,7 +61,7 @@ Both sit under Security & Manual actions, and both should say no issues detected
 
 ## What growth looks like in it
 
-Here's a pain clinic site in Florida I work on through an agency. These are its monthly clicks from the Performance report:
+Here's a pain clinic site in Florida we work on through an agency. These are its monthly clicks from the Performance report:
 
 | Month | Clicks |
 |---|---|
@@ -87,4 +87,4 @@ The Devices tab was more useful. Of the 854 clicks in that table, 678 came from 
 
 If you've never opened Search Console, set up the domain property this week, submit your sitemap, and leave it to collect data for a month. Then open Performance and look at Queries and Devices first.
 
-If you'd like someone to read what yours is showing, the Site Audit is on my [pricing page](/pricing), or you can [send me your site](/contact) and I'll reply the same business day.
+If you'd like someone to read what yours is showing, the Site Audit is on our [pricing page](/pricing), or you can [send us your site](/contact) and we'll reply the same business day.

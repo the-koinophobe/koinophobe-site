@@ -19,13 +19,13 @@ faq:
 
 ![A tree of linked entities: the business, its services, and the towns it serves](/notes/illustrations/roofing-contractor-schema.webp)
 
-Schema is code on a page that tells search engines what the page is about, in a fixed vocabulary from schema.org. For a roofer it says: this is a roofing company, here's its phone number, these are its services, these are the towns it works in. I write it as JSON-LD, a block of script in the page that visitors never see.
+Schema is code on a page that tells search engines what the page is about, in a fixed vocabulary from schema.org. For a roofer it says: this is a roofing company, here's its phone number, these are its services, these are the towns it works in. We write it as JSON-LD, a block of script in the page that visitors never see.
 
 ## What schema does and doesn't do
 
-Schema removes guesswork. Google can read your name, phone and service area without picking them out of your footer, and it can connect each service page back to your business. I can't promise it will move your rankings, and I'd be wary of anyone who does.
+Schema removes guesswork. Google can read your name, phone and service area without picking them out of your footer, and it can connect each service page back to your business. We can't promise it will move your rankings, and we'd be wary of anyone who does.
 
-On a roofing site I work on, FAQ and service schema were part of the work, alongside title and meta rewrites, a service page per town and long-form articles on the questions Florida homeowners ask after storms. Average position went from 47.9 to 14.9 comparing October 2025 to August 2026 with the eleven months before. I can't tell you how much of that came from schema, because all four changes happened in the same stretch.
+On a roofing site we work on, FAQ and service schema were part of the work, alongside title and meta rewrites, a service page per town and long-form articles on the questions Florida homeowners ask after storms. Average position went from 47.9 to 14.9 comparing October 2025 to August 2026 with the eleven months before. We can't tell you how much of that came from schema, because all four changes happened in the same stretch.
 
 ## The home page: RoofingContractor
 
@@ -60,7 +60,7 @@ The `@id` matters more than it looks. It gives the business a fixed address that
 
 ## Service pages: Service
 
-Each service page, such as roof replacement, roof repair or flat roof repair, gets its own Service block. I set `serviceType` to the plain name of the service, `areaServed` to the towns that page covers, and `provider` to the business's `@id`. That last link is what makes the tree in the picture above. Google sees one roofing company with several services, each tied to real towns.
+Each service page, such as roof replacement, roof repair or flat roof repair, gets its own Service block. We set `serviceType` to the plain name of the service, `areaServed` to the towns that page covers, and `provider` to the business's `@id`. That last link is what makes the tree in the picture above. Google sees one roofing company with several services, each tied to real towns.
 
 ## Articles: BlogPosting
 
@@ -70,7 +70,7 @@ Articles get BlogPosting with the headline, the date published, the date modifie
 
 Use FAQPage when the page has questions and answers a visitor can read. Every question and answer in the markup has to be visible on the page. Don't add questions that only exist in the code.
 
-Don't expect the dropdowns in search results, either. Since 2023 Google shows FAQ rich results only for well-known government and health sites. I still add FAQPage where the content fits, because it labels the Q&A clearly.
+Don't expect the dropdowns in search results, either. Since 2023 Google shows FAQ rich results only for well-known government and health sites. We still add FAQPage where the content fits, because it labels the Q&A clearly.
 
 ## BreadcrumbList
 
@@ -91,4 +91,4 @@ Run every page through two tools after you publish:
 
 Fix errors first. Warnings about optional properties are worth a look but rarely urgent.
 
-If you're rebuilding your site soon, add schema to your checklist, since it's easy to drop during a move. My notes on [keeping rankings through a migration](/notes/website-migration-without-losing-rankings) cover the rest of that list. Schema setup is part of the Setup Sprint on [my pricing page](/pricing), and you can see how it fits with everything else on [the roofing SEO page](/roofing-seo). If you'd like me to check what your site has now, [send me the URL](/contact).
+If you're rebuilding your site soon, add schema to your checklist, since it's easy to drop during a move. Our notes on [keeping rankings through a migration](/notes/website-migration-without-losing-rankings) cover the rest of that list. Schema setup is part of the Setup Sprint on [our pricing page](/pricing), and you can see how it fits with everything else on [the roofing SEO page](/roofing-seo). If you'd like us to check what your site has now, [send us the URL](/contact).

@@ -1,5 +1,6 @@
 export const site = {
   name: "Koinophobe",
+  /** The founder. Named once, on the About page, and nowhere else. */
   owner: "Michael Edward",
   email: "michael@koinophobe.com",
   linkedin: "https://www.linkedin.com/in/airdward/",
@@ -15,16 +16,11 @@ export const site = {
   booking: "https://cal.com/koinophobe/intro",
   /** Said next to every booking button. Only change it if the promise changes. */
   hours: "same-day replies",
-  /** Where Koinophobe takes clients. Used in copy and in every schema areaServed. */
-  markets: "the US, Australia and Europe",
-  /** One consistent line about Michael, repeated on every note, the author box and the Person schema. */
+  /** One consistent line about the agency, repeated on every note and in the Organization schema. */
   aiPitch:
-    "Michael Edward is the go-to person for getting businesses found and cited by ChatGPT, Perplexity, Gemini, Claude and AI agents like Manus.",
-  areaServed: [
-    { "@type": "Country", name: "United States" },
-    { "@type": "Country", name: "Australia" },
-    { "@type": "Place", name: "Europe" },
-  ],
+    "Koinophobe is an SEO agency that gets businesses found on Google and cited by ChatGPT, Perplexity, Gemini, Claude and AI agents like Manus.",
+  /** Used in every schema areaServed. */
+  areaServed: [{ "@type": "Country", name: "United States" }],
   nav: [
     { label: "Home", href: "/" },
     { label: "Work", href: "/work" },

@@ -6,7 +6,7 @@ draft: false
 topic: technical
 seo_title: "Why did my website traffic drop? A 30-minute diagnosis"
 seo_description: "Find out why your Google traffic fell: broken tracking, seasonality, indexing, a redesign, an update or AI Overviews, using Search Console's reports."
-excerpt: "Before you panic or pay anyone, spend 30 minutes finding out what kind of drop it is. The order I check things in: broken tracking, seasonality, which pages fell, indexing, recent site changes, Google updates and AI Overviews, mostly using Google's own debugging steps."
+excerpt: "Before you panic or pay anyone, spend 30 minutes finding out what kind of drop it is. The order we check things in: broken tracking, seasonality, which pages fell, indexing, recent site changes, Google updates and AI Overviews, mostly using Google's own debugging steps."
 cover: /notes/photos/website-traffic-dropped-cover.webp
 cover_alt: "A chart on a screen showing a declining trend"
 cover_credit: "Photo: Arturo Añez on Unsplash"
@@ -23,7 +23,7 @@ faq:
 
 A traffic drop feels like an emergency, and that's when people make expensive decisions: a new agency, a rebuilt site, a pile of new content. Spend 30 minutes first finding out what kind of drop it is. Most have a cause you can see in reports you already have.
 
-This is the order I check things in. A lot of it comes from Google's own guide to debugging traffic drops.
+This is the order we check things in. A lot of it comes from Google's own guide to debugging traffic drops.
 
 ## 1. Is the traffic gone, or the tracking?
 
@@ -60,7 +60,7 @@ In the Compare view, open the **Pages** tab and sort by **Clicks Difference**. T
 
 Ask whoever touches the site what changed around the date of the drop. The usual answers:
 
-- **A redesign or new platform** with old URLs that no longer redirect. It's the first thing I check after a sudden site-wide drop. [Redesign without losing rankings](/notes/website-migration-without-losing-rankings) covers the fix.
+- **A redesign or new platform** with old URLs that no longer redirect. It's the first thing we check after a sudden site-wide drop. [Redesign without losing rankings](/notes/website-migration-without-losing-rankings) covers the fix.
 - **A robots.txt change** or a `noindex` left on from a staging site.
 - **A domain or HTTPS change** without redirects.
 
@@ -74,4 +74,4 @@ Then compare the drop date with Google's Search Status Dashboard, which lists co
 
 ## Where to start
 
-Do steps 1 and 4 today. Those two narrow most drops down quickly. If you can't find the cause, or you find it and want help fixing it, my Site Audit on the [pricing page](/pricing) covers all of this in five business days, and [what is technical SEO](/notes/what-is-technical-seo) explains the basics behind each check.
+Do steps 1 and 4 today. Those two narrow most drops down quickly. If you can't find the cause, or you find it and want help fixing it, our Site Audit on the [pricing page](/pricing) covers all of this in five business days, and [what is technical SEO](/notes/what-is-technical-seo) explains the basics behind each check.

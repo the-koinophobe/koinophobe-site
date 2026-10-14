@@ -6,7 +6,7 @@ draft: false
 topic: trades
 seo_title: "Moving company SEO: local, long-distance and trust"
 seo_description: "SEO for moving companies: local town pages, long-distance route pages without doorway spam, the USDOT number on your site, estimates, reviews and peak season."
-excerpt: "Moving is a trade where customers expect to be scammed, so trust does as much work as rankings. How I'd set up a mover's site: local town pages, long-distance routes that aren't doorway pages, the federal ad rule most sites miss, estimate pages and timing for the summer rush."
+excerpt: "Moving is a trade where customers expect to be scammed, so trust does as much work as rankings. How we'd set up a mover's site: local town pages, long-distance routes that aren't doorway pages, the federal ad rule most sites miss, estimate pages and timing for the summer rush."
 cover: /notes/photos/moving-company-seo-cover.webp
 cover_alt: "A mover standing beside a moving truck"
 cover_credit: "Photo: Handiwork NYC on Unsplash"
@@ -23,7 +23,7 @@ faq:
 
 People choosing a mover are worried before they search. They've heard about held-hostage furniture and quotes that doubled on moving day. So a mover's site has two jobs: rank for the searches, and convince a nervous person you're one of the honest ones.
 
-Moving isn't a trade I've worked in. Most of my sites are roofing, pool deck, lawn and shutter companies. The search setup carries over, though, so this is how I'd build it, with the moving-specific rules checked against the federal sources.
+Moving isn't a trade we've worked in. Most of our sites are roofing, pool deck, lawn and shutter companies. The search setup carries over, though, so this is how we'd build it, with the moving-specific rules checked against the federal sources.
 
 ## Pages for each kind of move
 
@@ -78,4 +78,4 @@ Make each quote request a key event in GA4, whether it's a form, a phone tap or 
 
 ## Where to start
 
-Add your USDOT number to the footer today. Then write the estimates page and your main local moving page. If you'd like the site handled, my plans and what they include are on the [pricing page](/pricing).
+Add your USDOT number to the footer today. Then write the estimates page and your main local moving page. If you'd like the site handled, our plans and what they include are on the [pricing page](/pricing).

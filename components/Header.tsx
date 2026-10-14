@@ -329,9 +329,8 @@ export function Header() {
     >
       <div className="hx-bar">
         <Link href="/" className="hx-logo" aria-label="Koinophobe home">
-          <span className="hx-dot" aria-hidden />
+          <span className="logo-mark h-[22px] w-[22px]" aria-hidden />
           <span className="font-display text-[19px] tracking-tight">{site.name}</span>
-          <span className="hx-by">by {site.owner}</span>
         </Link>
 
         <nav className="hx-nav" id="hx-nav" aria-label="Main">

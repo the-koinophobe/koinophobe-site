@@ -17,7 +17,7 @@ faq:
     a: "Track them separately. Give ads their own call tracking, mark phone taps and form submissions as key events in GA4, and each month compare leads, booked jobs and cost per booked job for each channel."
 ---
 
-A contractor who wants more calls from Google has three main ways to pay for them: Google Ads, Local Services Ads, and SEO. They show up in different places on the results page and charge you in different ways. My work is SEO and call tracking, so I look at ads mostly from the tracking side, which is the side that tells you whether either one is worth it.
+A contractor who wants more calls from Google has three main ways to pay for them: Google Ads, Local Services Ads, and SEO. They show up in different places on the results page and charge you in different ways. Our work is SEO and call tracking, so we look at ads mostly from the tracking side, which is the side that tells you whether either one is worth it.
 
 ## How Google Ads works
 
@@ -27,19 +27,19 @@ You're charged when someone clicks. Google says what you pay is often less than 
 
 A few things about budgets that catch owners out. You set an average daily budget, and Google says a campaign might spend up to twice that on a given day when traffic is high. Over a month it won't spend more than 30.4 times the daily average. And when the budget stops, the ads stop. Pause the campaign and the ads stop showing.
 
-I won't quote a cost per click for your trade. It changes by market, season and how many competitors are bidding, and the only number worth trusting is the one in your own account.
+We won't quote a cost per click for your trade. It changes by market, season and how many competitors are bidding, and the only number worth trusting is the one in your own account.
 
 ## How SEO works
 
 SEO is the work that gets your website and Business Profile into the unpaid results: the map pack and the regular listings below it. Nobody pays per click there. The cost is the work itself, whether you pay someone or do it yourself.
 
-It's slow to start. On a Florida roofing site I work on, average position went from 47.9 to 14.9 when I compared October 2025 to August 2026 with the eleven months before. Impressions went from 5,410 to 139,639. 893 of the 1,099 searches it now shows for didn't show it at all the year before. That took most of a year, which is why I wrote a whole note on [how long SEO takes](/notes/how-long-does-seo-take).
+It's slow to start. On a Florida roofing site we work on, average position went from 47.9 to 14.9 when we compared October 2025 to August 2026 with the eleven months before. Impressions went from 5,410 to 139,639. 893 of the 1,099 searches it now shows for didn't show it at all the year before. That took most of a year, which is why we wrote a whole note on [how long SEO takes](/notes/how-long-does-seo-take).
 
 The difference is what's left when spending pauses. The pages that roofing site gained are still there, still showing for those searches. That's what people mean when they say SEO compounds.
 
 ## Local Services Ads are a third option
 
-Local Services Ads sit at the very top of some local searches. You pay per lead instead of per click, and you go through Google's screening (license, insurance and background checks, depending on the category) to get a badge. For roofers in particular I compared them with SEO in [Local Services Ads vs SEO for roofers](/notes/local-services-ads-vs-seo-roofers). Like regular ads, the leads stop when the budget does.
+Local Services Ads sit at the very top of some local searches. You pay per lead instead of per click, and you go through Google's screening (license, insurance and background checks, depending on the category) to get a badge. For roofers in particular we compared them with SEO in [Local Services Ads vs SEO for roofers](/notes/local-services-ads-vs-seo-roofers). Like regular ads, the leads stop when the budget does.
 
 ## When each one makes sense
 
@@ -47,13 +47,13 @@ Local Services Ads sit at the very top of some local searches. You pay per lead 
 
 **SEO fits when you plan to be around.** If you're in the same towns doing the same work in two years, the pages you build now keep working. It also covers searches you'd never think to bid on. The roofing site above shows for hundreds of searches it didn't show for a year earlier.
 
-**Both fit most established contractors.** Ads cover the gaps while SEO builds, and you can turn ad spend up or down with the season. I compared paying for leads with owning your site in [shared leads vs your own website](/notes/shared-leads-vs-your-own-website), and the same thinking applies here.
+**Both fit most established contractors.** Ads cover the gaps while SEO builds, and you can turn ad spend up or down with the season. We compared paying for leads with owning your site in [shared leads vs your own website](/notes/shared-leads-vs-your-own-website), and the same thinking applies here.
 
 ## Track both, or you're guessing
 
 This is the part that gets skipped. Calls from ads, calls from the map and calls from the website all ring the same phone, and without tracking they all look the same.
 
-What I set up:
+What we set up:
 
 - A separate tracking number for ads, so ad calls are counted on their own.
 - Phone taps on the website as a GA4 key event, using a tag that fires on `tel:` links.
@@ -66,4 +66,4 @@ After three or four months you'll have an answer for your own market.
 
 ## Where to start
 
-If you're running ads now, open the search terms report and export the last 90 days. If website calls aren't tracked yet, fix that before you change any budget. When you want to see what the SEO side costs, every plan is listed on my [pricing page](/pricing).
+If you're running ads now, open the search terms report and export the last 90 days. If website calls aren't tracked yet, fix that before you change any budget. When you want to see what the SEO side costs, every plan is listed on our [pricing page](/pricing).

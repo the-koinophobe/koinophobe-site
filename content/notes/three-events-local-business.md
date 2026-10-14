@@ -17,7 +17,7 @@ faq:
 ---
 Local service businesses live and die on a handful of actions: someone calls, someone fills a form, someone asks for a quote. Track those three correctly and your website stops being a brochure and becomes a measurable sales channel. Miss them and you are flying blind, no matter how much traffic Google sends you.
 
-The good news is that this does not require an enterprise analytics stack. Google Analytics 4 and Google Tag Manager are free, and the whole setup fits into an afternoon. Here is exactly what I wire up, in priority order, for every plumber, roofer, clinic, and detailer I work with.
+The good news is that this does not require an enterprise analytics stack. Google Analytics 4 and Google Tag Manager are free, and the whole setup fits into an afternoon. Here is exactly what we wire up, in priority order, for every plumber, roofer, clinic, and detailer we work with.
 
 ## 1. Phone calls, especially click-to-call
 
@@ -37,7 +37,7 @@ If your business takes bookings or quote requests, those deserve their own event
 
 ![A computer screen showing a monthly calendar used for scheduling appointments](/notes/photos/three-events-local-business-1.webp "Photo: Ed Hardie on Unsplash")
 
-Split them, mark the high-value event as a key event, and you can calculate what a visitor from each channel is actually worth. That is the number that tells you whether SEO is beating your ad spend, and it is the number I anchor every monthly report around.
+Split them, mark the high-value event as a key event, and you can calculate what a visitor from each channel is actually worth. That is the number that tells you whether SEO is beating your ad spend, and it is the number we anchor every monthly report around.
 
 ## Wiring it up in Google Tag Manager
 

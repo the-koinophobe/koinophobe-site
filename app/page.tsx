@@ -17,6 +17,7 @@ import { MobileCta } from "@/components/MobileCta";
 import { CountUp } from "@/components/CountUp";
 import { Reveal } from "@/components/Reveal";
 import { Reviews } from "@/components/Reviews";
+import { SiteWall } from "@/components/SiteWall";
 import { NoteCard } from "@/components/NoteCard";
 import { aggregate, cases, monthly as gscMonthly } from "@/lib/gsc";
 import { monthly, oneTime } from "@/lib/pricing";
@@ -29,22 +30,22 @@ export const revalidate = 3600;
 export const metadata = {
   title: { absolute: "Koinophobe · SEO for home services, measured in calls" },
   description:
-    "SEO and call tracking for home service businesses in the US, Australia and Europe. 30+ sites over two years, prices on the site, a free 20-minute call.",
+    "SEO agency for home service businesses: technical SEO, call tracking and AI search. 30+ sites built and ranked, prices on the site, a free 20-minute call.",
   alternates: { canonical: "/" },
 };
 
 const HOME_FAQ: FaqItem[] = [
   {
     q: "What does Koinophobe do?",
-    a: "Technical SEO and call tracking for home service businesses in the US, Australia and Europe. I fix what stops a site from ranking, set up tracking so you can see the calls and forms Google sends, and build the town and service pages that bring in local searches.",
+    a: "Koinophobe is an SEO agency for home service businesses. We fix what stops a site from ranking, set up tracking so you can see the calls and forms Google sends, and build the town and service pages that bring in local searches.",
   },
   {
     q: "What kinds of businesses do you work with?",
-    a: "Mostly home service companies: roofers, pool deck, lawn and hurricane shutter businesses. I also work with clinics, shops and auto businesses, at the same prices.",
+    a: "Mostly home service companies: roofers, pool deck, lawn and hurricane shutter businesses. We also work with clinics, shops and auto businesses, at the same prices.",
   },
   {
     q: "How much does it cost?",
-    a: "Every price is on the pricing page, in US dollars. The Site Audit is $750, the Setup Sprint is a one-time $1,800, and monthly plans start at $600.",
+    a: "Every price is on the pricing page. The Site Audit is $750, the Setup Sprint is a one-time $1,800, and monthly plans start at $600.",
   },
   {
     q: "How long does SEO take to work?",
@@ -66,7 +67,7 @@ const PILLARS = [
     title: "Fix what's holding the site back",
     body: "Indexing problems, slow pages, broken forms, missing schema, messy redirects. The technical work most agencies skip.",
     points: ["Speed and Core Web Vitals", "Schema for your trade", "Indexing and site structure"],
-    link: { href: "/notes/core-web-vitals-contractor-websites", label: "How I approach speed" },
+    link: { href: "/notes/core-web-vitals-contractor-websites", label: "How we approach speed" },
   },
   {
     icon: <MapPin size={20} aria-hidden />,
@@ -85,8 +86,8 @@ const PILLARS = [
 ];
 
 const STEPS = [
-  { n: "01", title: "Free 20-minute call", body: "I look at your site and Business Profile first, then tell you the two or three things I'd fix." },
-  { n: "02", title: "A plan in US dollars", body: "A fixed price from the pricing page. Three-month minimum on monthly plans, then month to month." },
+  { n: "01", title: "Free 20-minute call", body: "We look at your site and Business Profile first, then tell you the two or three things we'd fix." },
+  { n: "02", title: "A fixed price", body: "Straight from the pricing page. Three-month minimum on monthly plans, then month to month." },
   { n: "03", title: "The work, in your accounts", body: "Fixes, pages, profile and tracking. You own every account and keep everything if you leave." },
   { n: "04", title: "A report you can read", body: "Calls, forms, clicks and what's next, on one page every month." },
 ];
@@ -117,14 +118,13 @@ export default function HomePage() {
           <div className="hero-in">
             <p className="eyebrow">
               <span className="h-1.5 w-1.5 rounded-full bg-brand" aria-hidden />
-              Technical SEO for home services in the US, Australia and Europe
+              SEO agency for home service businesses
             </p>
             <h1 className="t-h1 mt-6 max-w-[17ch]">
               SEO that gets home service businesses <span className="text-brand">more calls</span> from Google.
             </h1>
             <p className="t-lead mt-6 max-w-[56ch]">
-              I&rsquo;m Michael Edward, and Koinophobe is my SEO practice for roofers, pool, lawn and other
-              home service companies. I fix what&rsquo;s holding your site back, build the pages that rank in
+              Koinophobe is an SEO agency for roofers, pool, lawn and other home service companies. We fix what&rsquo;s holding your site back, build the pages that rank in
               the towns you serve, and track every call so you can see exactly what Google sends you.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
@@ -218,7 +218,7 @@ export default function HomePage() {
             <h2 className="t-h2 mt-5">For trades that win work from local search</h2>
             <p className="t-lead mt-4 max-w-[60ch]">
               If your customers search &ldquo;near me&rdquo;, look at the map and call the first company that
-              looks right, your website and Business Profile are doing the selling. I make sure they do it well.
+              looks right, your website and Business Profile are doing the selling. We make sure they do it well.
             </p>
           </Reveal>
           <div data-anim="cards" className="mt-12 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-5">
@@ -248,14 +248,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── What I do ───────────────────────────────────────────── */}
+      {/* ── What we do ───────────────────────────────────────────── */}
       <section className="section section-tint">
         <div className="container-pad">
           <Reveal className="max-w-3xl">
-            <p className="eyebrow">What I do</p>
+            <p className="eyebrow">What we do</p>
             <h2 className="t-h2 mt-5">Three jobs, done properly, in your accounts</h2>
             <p className="t-lead mt-4 max-w-[60ch]">
-              Most SEO is hard to see. Mine shows up as pages you can open, rankings you can check and calls
+              Most SEO is hard to see. Ours shows up as pages you can open, rankings you can check and calls
               you can count.
             </p>
           </Reveal>
@@ -288,7 +288,7 @@ export default function HomePage() {
               <p className="eyebrow">Results</p>
               <h2 className="t-h2 mt-5">Real accounts, real Search Console numbers</h2>
               <p className="t-lead mt-4 max-w-[58ch]">
-                Thirty-plus sites over two years. These are the ones whose data I can show you, with what&rsquo;s
+                Thirty-plus sites over two years. These are the ones whose data we can show you, with what&rsquo;s
                 still left to win.
               </p>
             </Reveal>
@@ -344,7 +344,7 @@ export default function HomePage() {
           </ol>
           <div className="mt-10 flex flex-wrap items-center gap-3">
             <BookCta from="home_steps" />
-            <PageCta href="/about" label="How I work" from="home_steps" />
+            <PageCta href="/about" label="How we work" from="home_steps" />
           </div>
         </div>
       </section>
@@ -357,7 +357,7 @@ export default function HomePage() {
               <p className="eyebrow">Pricing</p>
               <h2 className="t-h2 mt-5">Every price is on the site</h2>
               <p className="t-lead mt-4 max-w-[56ch]">
-                US dollars, no long contracts, and you own everything I build. Start with an audit, fix it
+                No long contracts, and you own everything we build. Start with an audit, fix it
                 once, or hand it over every month.
               </p>
             </Reveal>
@@ -407,36 +407,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── About ───────────────────────────────────────────────── */}
+      {/* ── The work ────────────────────────────────────────────── */}
       <section className="section">
-        <div className="container-pad grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
-          <div className="relative mx-auto aspect-square w-full max-w-[460px] overflow-hidden rounded-3xl bg-surface lg:mx-0">
-            <Image src="/me/michael-edward.webp" alt="Michael Edward" fill sizes="(min-width: 1024px) 460px, 90vw" className="object-cover" />
+        <div className="container-pad">
+          <SiteWall />
+          <div className="mt-10 flex flex-wrap items-center gap-3">
+            <PageCta href="/work" label="See the case studies" from="home_wall" />
+            <TextCta href="/about" label="About Koinophobe" from="home_wall" />
           </div>
-          <Reveal>
-            <p className="eyebrow">Who you&rsquo;ll work with</p>
-            <h2 className="t-h2 mt-5">Hi, I&rsquo;m Michael. You&rsquo;ll deal with me directly.</h2>
-            <p className="t-lead mt-5 max-w-[56ch]">
-              I&rsquo;ve worked on 30+ sites over two years, much of it for marketing agencies under their brand.
-              I reply the same business day.
-            </p>
-            <ul className="mt-7 space-y-3 text-[16px]">
-              {[
-                "No account managers between you and the work",
-                "Everything set up in your name, so you keep it all",
-                "Plain monthly reports: calls, forms, clicks, next steps",
-              ].map((t) => (
-                <li key={t} className="flex items-start gap-3">
-                  <Check size={19} aria-hidden className="mt-0.5 flex-none text-brand" />
-                  {t}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-9 flex flex-wrap items-center gap-3">
-              <PageCta href="/about" label="More about me" from="home_about" />
-              <TextCta href="/notes/what-is-a-koinophobe" label="Why the name Koinophobe" from="home_about" />
-            </div>
-          </Reveal>
         </div>
       </section>
 
@@ -447,7 +425,7 @@ export default function HomePage() {
             <div className="flex flex-wrap items-end justify-between gap-6">
               <Reveal className="max-w-3xl">
                 <p className="eyebrow">Notes</p>
-                <h2 className="t-h2 mt-5">Free advice, from the work I do every day</h2>
+                <h2 className="t-h2 mt-5">Free advice, from the work we do every day</h2>
               </Reveal>
               <PageCta href="/notes" label="All notes" from="home_notes" size="md" />
             </div>

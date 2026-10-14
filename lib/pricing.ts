@@ -29,11 +29,11 @@ export const oneTime: Plan[] = [
     price: "$0",
     unit: "20 minutes",
     items: [
-      "I look at your site before we talk",
-      "The two or three things I'd fix first",
+      "We look at your site before we talk",
+      "The two or three things we'd fix first",
       "What they'd cost, or that nothing needs fixing",
     ],
-    note: "Yours to keep whether you hire me or not.",
+    note: "Yours to keep whether you hire us or not.",
   },
   {
     key: "tracking",
@@ -166,7 +166,7 @@ export const monthlyFrom = Math.min(...monthly.map((p) => p.amount));
  * and different work from the home service plans above, so it lives on its own
  * page and keeps its own terms: no contract, and either side can stop with 30
  * days' notice. `items` is what ships every month, so every line in it must be
- * something countable that I control. Anything conditional goes in `extras`.
+ * something countable that we control. Anything conditional goes in `extras`.
  *
  * `seatsOpen` is printed on the page. Only ever set it to the real number of
  * open seats; the cap is capacity, so it is never a scarcity line.
@@ -197,5 +197,5 @@ export const startup: Plan & {
   note: "Measured, fixed and written every month. Five clients at a time.",
   extras: ["A free tool when your category has room for one"],
   termsLead: "No contract.",
-  terms: "If you're not satisfied at any point, tell me and we stop 30 days later.",
+  terms: "If you're not satisfied at any point, tell us and we stop 30 days later.",
 };

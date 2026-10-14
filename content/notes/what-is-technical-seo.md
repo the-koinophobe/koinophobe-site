@@ -23,7 +23,7 @@ faq:
 
 Technical SEO is the part of SEO that decides whether Google can find your pages, read them and keep them in its index. Good writing and good links only count once those three things work. If they don't, the best service page you have is invisible.
 
-That's the definition. The rest of this note is what it covers in practice, which checks you can run yourself, and where it's worth paying someone like me.
+That's the definition. The rest of this note is what it covers in practice, which checks you can run yourself, and where it's worth paying someone like us.
 
 ## What Google needs before a page can rank
 
@@ -39,13 +39,13 @@ Google adds that meeting them "doesn't mean that a page will be indexed; indexin
 
 **Crawling.** Can search engines reach the page? This is robots.txt, server errors, and links Google can follow. A link built as a JavaScript button with no `href` is a dead end for Googlebot.
 
-**Rendering.** Can they read what's on it? Google runs JavaScript, but later and on a queue. Many AI crawlers don't run it at all. If your prices or services only appear after scripts load, some crawlers see an empty page. My [AI crawler access note](/notes/ai-crawlers-robots-txt) covers that side.
+**Rendering.** Can they read what's on it? Google runs JavaScript, but later and on a queue. Many AI crawlers don't run it at all. If your prices or services only appear after scripts load, some crawlers see an empty page. Our [AI crawler access note](/notes/ai-crawlers-robots-txt) covers that side.
 
 **Indexing.** Does Google keep the page? This is `noindex` tags, canonical tags, duplicate pages, and the statuses in Search Console's Page indexing report.
 
 **Site structure.** Do your important pages get internal links, and does the URL pattern make sense? A page linked only from the footer sitemap gets less attention than one linked from the homepage and three service pages.
 
-**Redirects and migrations.** When URLs change, old ones need permanent redirects to the matching new page. When traffic drops after a redesign, this is the first thing I check. [How to redesign without losing rankings](/notes/website-migration-without-losing-rankings) has the checklist.
+**Redirects and migrations.** When URLs change, old ones need permanent redirects to the matching new page. When traffic drops after a redesign, this is the first thing we check. [How to redesign without losing rankings](/notes/website-migration-without-losing-rankings) has the checklist.
 
 **Speed and page experience.** Core Web Vitals measure loading, responsiveness and layout shifts. They matter less than people think for rankings, and more for calls, since a slow page on a phone loses people. [Core Web Vitals for contractor sites](/notes/core-web-vitals-contractor-websites) explains what to fix first.
 
@@ -58,16 +58,16 @@ Google adds that meeting them "doesn't mean that a page will be indexed; indexin
 You don't need tools beyond a browser and Google Search Console.
 
 1. **Search `site:yourdomain.com` on Google.** If your main service pages are missing, start there.
-2. **Open Search Console's Page indexing report.** Read the reasons under "Why pages aren't indexed" and check that none of your money pages are in that list. [My Search Console guide](/notes/google-search-console-for-contractors) walks through the setup.
+2. **Open Search Console's Page indexing report.** Read the reasons under "Why pages aren't indexed" and check that none of your money pages are in that list. [Our Search Console guide](/notes/google-search-console-for-contractors) walks through the setup.
 3. **Inspect your homepage and one service page with the URL Inspection tool.** Run a live test and look at the screenshot. If it's blank or missing content, you have a rendering problem.
 4. **Visit `yourdomain.com/robots.txt`.** Make sure no line blocks pages you want found. A stray `Disallow: /` left over from a staging site happens more often than you'd expect.
 5. **Type the old version of your domain.** Try `http://`, `www` and non-`www`. All of them should land on one version of the site in one hop.
-6. **Submit a test lead through every form.** Technical problems aren't only about Google. In July 2026 I found a client's forms had been failing since March because of an email setting. Nobody noticed for four months.
+6. **Submit a test lead through every form.** Technical problems aren't only about Google. In July 2026 we found a client's forms had been failing since March because of an email setting. Nobody noticed for four months.
 
-If all six pass, your site is in better shape than most I see.
+If all six pass, your site is in better shape than most we see.
 
 ## When it's worth paying for
 
 Small sites usually need a technical check once, then after any big change: a redesign, a new platform, a domain change, a new developer. The problems that need someone with experience are the ones you can't see from the outside, such as redirect chains, canonicals pointing the wrong way, or JavaScript that hides content from crawlers.
 
-That's what my Site Audit covers. It's $750, delivered in five business days, ranked by what affects calls, and it's credited in full if you start a monthly plan within 30 days. Details are on the [pricing page](/pricing). If you'd rather start free, the [AI crawler check](/ai-search-optimization#check) tests whether search and AI crawlers can read your homepage.
+That's what our Site Audit covers. It's $750, delivered in five business days, ranked by what affects calls, and it's credited in full if you start a monthly plan within 30 days. Details are on the [pricing page](/pricing). If you'd rather start free, the [AI crawler check](/ai-search-optimization#check) tests whether search and AI crawlers can read your homepage.

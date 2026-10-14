@@ -19,7 +19,7 @@ faq:
 
 ![Pages crawled, indexed, ranked and clicked, with a gap where a noindex setting removed pages from the index](/notes/illustrations/contractor-website-not-showing-on-google.webp)
 
-You search for your own company, or for "roof repair" in your town, and your website isn't there. Before you pay anyone, work through these checks in order. The first few take a minute each and catch most of the problems I see.
+You search for your own company, or for "roof repair" in your town, and your website isn't there. Before you pay anyone, work through these checks in order. The first few take a minute each and catch most of the problems we see.
 
 ## 1. Check whether Google has your site at all
 
@@ -54,7 +54,7 @@ Fix the cause, then click **Request indexing**.
 
 ## 5. Look for copied town pages
 
-If you have twenty town pages that read the same with the name swapped, Google will often index a few and ignore the rest. That's the "crawled, currently not indexed" pattern. The fix is fewer, better pages. I wrote about how in [service area pages for roofers](/notes/roofing-service-area-pages).
+If you have twenty town pages that read the same with the name swapped, Google will often index a few and ignore the rest. That's the "crawled, currently not indexed" pattern. The fix is fewer, better pages. We wrote about how in [service area pages for roofers](/notes/roofing-service-area-pages).
 
 ## 6. You're indexed but not ranking
 
@@ -70,4 +70,4 @@ If traffic suddenly drops, or Search Console shows searches that have nothing to
 
 ## Still missing?
 
-If you've been through all of this and the site is indexed but buried, the problem is usually content and links, and that takes more than a checklist. The [Site Audit](/pricing) goes through all of the above and gives you a ranked list of what to fix. Or [book a free call](/contact) and I'll look before we talk.
+If you've been through all of this and the site is indexed but buried, the problem is usually content and links, and that takes more than a checklist. The [Site Audit](/pricing) goes through all of the above and gives you a ranked list of what to fix. Or [book a free call](/contact) and we'll look before we talk.

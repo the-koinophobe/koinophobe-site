@@ -29,9 +29,9 @@ Below is what belongs on that page, plus how to read a number that looks bad and
 
 ![A printed report page with bar charts and pie charts on it](/notes/photos/monthly-seo-report-contractors-1.webp "Photo: Cht Gsml on Unsplash")
 
-**Forms and bookings.** The count of form submissions and online bookings, plus one line confirming the form was tested and the email arrived. Here's why that line matters. In July 2026 I found a client's form submissions had been dropping since March because the form's email connection needed re-authenticating after an email address change. Four months, and nobody noticed, me included. I test form delivery on every site monthly now.
+**Forms and bookings.** The count of form submissions and online bookings, plus one line confirming the form was tested and the email arrived. Here's why that line matters. In July 2026 we found a client's form submissions had been dropping since March because the form's email connection needed re-authenticating after an email address change. Four months, and nobody noticed, us included. We test form delivery on every site monthly now.
 
-**Search Console clicks and impressions, against last year.** Use the Compare tab in the Performance report and line the month up with the same month a year earlier. Contracting is seasonal, so last month is the wrong comparison most of the year. On a hurricane shutter site I work with, 37 of 51 clicks in one 28-day window came from a single seasonal hurricane history article. With one seasonal article carrying that much, a month-to-month comparison can easily mislead you. If you aren't sure where these numbers live, [Search Console for contractors](/notes/google-search-console-for-contractors) shows each report.
+**Search Console clicks and impressions, against last year.** Use the Compare tab in the Performance report and line the month up with the same month a year earlier. Contracting is seasonal, so last month is the wrong comparison most of the year. On a hurricane shutter site we work with, 37 of 51 clicks in one 28-day window came from a single seasonal hurricane history article. With one seasonal article carrying that much, a month-to-month comparison can easily mislead you. If you aren't sure where these numbers live, [Search Console for contractors](/notes/google-search-console-for-contractors) shows each report.
 
 **Pages added or fixed.** A plain list with links. "Built a flat roof repair page from the client's job photos and linked it from the main services page" is a line you can check. "Ongoing optimization" isn't.
 
@@ -41,7 +41,7 @@ That's four numbers and two short lists. If you want to see where calls and form
 
 ## Reading a number honestly
 
-Here's a roofing site I work on in Florida. These are its Search Console numbers for October 2025 to August 2026 against the eleven months before:
+Here's a roofing site we work on in Florida. These are its Search Console numbers for October 2025 to August 2026 against the eleven months before:
 
 | Measure | Before | After |
 |---|---|---|
@@ -52,11 +52,11 @@ Here's a roofing site I work on in Florida. These are its Search Console numbers
 
 Click-through rate fell by more than two thirds. If a report put that number in red and stopped there, you'd think something broke.
 
-Here's what happened. Impressions grew 25.8 times. Of the 1,099 searches the site now shows for, 893 didn't show it at all the year before. Many of those new appearances were on page two, where hardly anyone clicks. So the share of people clicking went down while the number of people clicking went from 34 to 266. The lower CTR is a side effect of showing up for far more searches, and moving those page-two searches up is where more clicks would come from. The work behind it is on my [roofing SEO page](/roofing-seo).
+Here's what happened. Impressions grew 25.8 times. Of the 1,099 searches the site now shows for, 893 didn't show it at all the year before. Many of those new appearances were on page two, where hardly anyone clicks. So the share of people clicking went down while the number of people clicking went from 34 to 266. The lower CTR is a side effect of showing up for far more searches, and moving those page-two searches up is where more clicks would come from. The work behind it is on our [roofing SEO page](/roofing-seo).
 
 ## What to ignore
 
-**Ranking-only reports.** A table of 50 keywords and their positions tells you very little by itself. Across three Florida sites I work on, rankings improved on all three in one 28-day window without more clicks. I found 307 searches in the top ten with zero clicks, which I wrote about in [zero-click rankings and title tags](/notes/zero-click-rankings-title-tags). Rankings are useful for finding problems, but calls and forms are what you're paying for.
+**Ranking-only reports.** A table of 50 keywords and their positions tells you very little by itself. Across three Florida sites we work on, rankings improved on all three in one 28-day window without more clicks. We found 307 searches in the top ten with zero clicks, which we wrote about in [zero-click rankings and title tags](/notes/zero-click-rankings-title-tags). Rankings are useful for finding problems, but calls and forms are what you're paying for.
 
 **Third-party scores.** Domain authority, "visibility scores" and site health percentages come from SEO tools, and Google doesn't use them. They can move without your phone ringing more.
 
@@ -66,4 +66,4 @@ Here's what happened. Impressions grew 25.8 times. Of the 1,099 searches the sit
 
 ## Next step
 
-Ask your SEO provider for one page with those four numbers and two lists. If they can't produce calls and forms, tracking is the first thing to fix. My plans, including the monthly call on Growth, are on the [pricing page](/pricing).
+Ask your SEO provider for one page with those four numbers and two lists. If they can't produce calls and forms, tracking is the first thing to fix. Our plans, including the monthly call on Growth, are on the [pricing page](/pricing).

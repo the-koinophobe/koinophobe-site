@@ -4,7 +4,7 @@ slug: website-migration-without-losing-rankings
 date: 2026-08-19
 draft: false
 seo_title: "Website redesign without losing SEO"
-excerpt: "A website redesign without losing SEO comes down to redirects, keeping the pages that rank, and watching Search Console after launch. Here is my checklist."
+excerpt: "A website redesign without losing SEO comes down to redirects, keeping the pages that rank, and watching Search Console after launch. Here is our checklist."
 cover: /notes/photos/website-migration-without-losing-rankings-cover.webp
 cover_alt: "Hand drawn wireframe sketches of website page layouts spread across a table"
 cover_credit: "Photo: Hal Gatewood on Unsplash"
@@ -21,7 +21,7 @@ faq:
 
 A redesign usually starts with how the site looks. Your rankings depend on things the designer may never think about: the addresses of your pages, the words on them, and whether Google can still crawl them on launch day.
 
-Here's the checklist I work through. Most of it happens before the new site goes live.
+Here's the checklist we work through. Most of it happens before the new site goes live.
 
 ## Before launch
 
@@ -31,7 +31,7 @@ Here's the checklist I work through. Most of it happens before the new site goes
 
 **2. Export what ranks.** In Search Console, open the Performance report, set the date range to the last 12 months, and export the Pages tab. Sort by clicks, then by impressions. These are the pages you can least afford to lose. Then open the Links report and note your top linked pages, since links from other sites point at specific URLs.
 
-**3. Map old URLs to new ones.** Make a spreadsheet with two columns, old URL and new URL. Every old page gets the closest matching page on the new site, and a 301 redirect from old to new. A few rules I follow:
+**3. Map old URLs to new ones.** Make a spreadsheet with two columns, old URL and new URL. Every old page gets the closest matching page on the new site, and a 301 redirect from old to new. A few rules we follow:
 
 - Redirect each page to its real equivalent. Sending everything to the home page tends to get treated by Google like a missing page.
 - Point each redirect straight at the final URL. Chains, where A goes to B and B goes to C, slow things down and sometimes break.
@@ -45,7 +45,7 @@ The same goes for structure. Folding five town pages into one county page is a c
 
 **5. Update internal links.** Menus, footer links, buttons and links inside the body copy should point at the new URLs directly, without passing through a redirect.
 
-**6. Check tracking and forms.** A new theme often loses the GA4 tag, the phone links or the form settings. Re-test [phone click tracking in Tag Manager](/notes/gtm-phone-click-tracking) and submit every form. Speed plugins on a new build can stop forms cold, which I wrote up in [the contact form note](/notes/speed-plugin-broke-contact-form).
+**6. Check tracking and forms.** A new theme often loses the GA4 tag, the phone links or the form settings. Re-test [phone click tracking in Tag Manager](/notes/gtm-phone-click-tracking) and submit every form. Speed plugins on a new build can stop forms cold, which we wrote up in [the contact form note](/notes/speed-plugin-broke-contact-form).
 
 ## Launch day
 
@@ -68,8 +68,8 @@ Do all of the above, plus:
 - Redirect every old URL to its matching path on the new domain, page to page.
 - Verify both domains in Search Console and use the Change of Address tool in the old property's settings.
 - Update the website link on your Business Profile and other listings.
-- Keep the old domain registered. Google recommends keeping redirects for at least a year. I'd keep it for as long as the business exists, because old links and printed materials keep pointing at it.
+- Keep the old domain registered. Google recommends keeping redirects for at least a year. We'd keep it for as long as the business exists, because old links and printed materials keep pointing at it.
 
 Before you launch, set up [the tracking that shows whether leads held up](/notes/rankings-without-tracking), since rankings alone won't tell you.
 
-If a redesign is coming up, I can build the redirect map and run the launch checks with your developer. [Get in touch](/contact), or see the Site Audit and Setup Sprint on [my pricing page](/pricing).
+If a redesign is coming up, we can build the redirect map and run the launch checks with your developer. [Get in touch](/contact), or see the Site Audit and Setup Sprint on [our pricing page](/pricing).

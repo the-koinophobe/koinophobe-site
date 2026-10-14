@@ -6,7 +6,7 @@ draft: false
 topic: ai
 seo_title: "Google AI Mode SEO and query fan-out"
 seo_description: "Google AI Mode answers one question with many hidden searches. How query fan-out changes which pages get cited, and how to structure your site for it."
-excerpt: "AI Mode answers one question by running many searches you never see. That changes which of your pages can win. What Google has said about it, and how I'd structure a site for it."
+excerpt: "AI Mode answers one question by running many searches you never see. That changes which of your pages can win. What Google has said about it, and how we'd structure a site for it."
 cover: /notes/photos/google-ai-mode-seo-cover.webp
 cover_alt: "A phone in front of a large Google logo"
 cover_credit: "Photo: Shutter Speed on Unsplash"
@@ -35,13 +35,13 @@ So when someone asks "what's the best way to finance a new HVAC system," AI Mode
 
 ## What that means for your pages
 
-**The head term matters less on its own.** You can rank first for "HVAC financing" and still not be cited if another site answers "do HVAC rebates stack with financing" better. In my own study of Google's AI Overviews, which uses the same technique, only 2.2% of cited pages were in the organic top ten for the search typed. Fan-out is a big part of why.
+**The head term matters less on its own.** You can rank first for "HVAC financing" and still not be cited if another site answers "do HVAC rebates stack with financing" better. In our own study of Google's AI Overviews, which uses the same technique, only 2.2% of cited pages were in the organic top ten for the search typed. Fan-out is a big part of why.
 
 **Sub-questions become entry points.** Every specific question your customers ask is a possible fan-out search. A site that answers 40 real questions plainly has 40 chances; a site with five service pages has five.
 
 **Clear headings help a system find the part it needs.** If a page covers six sub-questions, put each under its own heading phrased the way people ask it. A system pulling one fact shouldn't have to read every section to find it.
 
-## How I'd structure a site for fan-out
+## How we'd structure a site for fan-out
 
 **1. Map the questions behind each service.** For each thing you sell, list what a careful buyer wants to know before buying: cost, timing, alternatives, risks, eligibility, local rules. Sales calls and support emails are the best source. Each one becomes a heading or a page.
 
@@ -53,9 +53,9 @@ So when someone asks "what's the best way to finance a new HVAC system," AI Mode
 
 **5. Keep important content in text.** Google says so directly for AI features. Tables in HTML, not images. Prices on the page, not in a PDF.
 
-I use the same structure for [comparison pages](/notes/saas-comparison-pages) and for local service sites. It's ordinary good SEO, aimed at the long list of questions instead of one keyword.
+We use the same structure for [comparison pages](/notes/saas-comparison-pages) and for local service sites. It's ordinary good SEO, aimed at the long list of questions instead of one keyword.
 
-## What I wouldn't do
+## What we wouldn't do
 
 - **Write 200 thin pages for 200 keyword variants.** Fan-out searches subtopics. Misspellings and word swaps don't need their own pages. Near-duplicate pages are the kind of thing Google's spam policies call doorway pages.
 - **Add special AI markup.** Google says there's no special structured data for AI Mode. Correct, ordinary markup is enough. [More here](/notes/schema-markup-for-ai-search).
@@ -63,10 +63,10 @@ I use the same structure for [comparison pages](/notes/saas-comparison-pages) an
 
 ## How to check where you stand
 
-Search Console counts AI Mode clicks under the Web search type without separating them. So check by hand: ask AI Mode the five questions that matter most to your business, note which sites it links, and repeat monthly. Then compare with [AI Overviews](/notes/how-to-appear-in-google-ai-overviews) and with ChatGPT, using the [tracking method](/notes/track-ai-search-visibility) I use for clients.
+Search Console counts AI Mode clicks under the Web search type without separating them. So check by hand: ask AI Mode the five questions that matter most to your business, note which sites it links, and repeat monthly. Then compare with [AI Overviews](/notes/how-to-appear-in-google-ai-overviews) and with ChatGPT, using the [tracking method](/notes/track-ai-search-visibility) We use for clients.
 
 ## Next steps
 
 Take your most important service and write down every question a buyer asks before paying for it. If your site answers fewer than half, that's your content plan for the quarter. [Content that AI cites](/notes/content-ai-cites) covers how to write each page.
 
-My [AI search optimization](/ai-search-optimization) service builds exactly this: the question map, 12 in-depth pages a month, and tracking across Google's AI features and the chat assistants. $1,000 a month, no contract.
+Our [AI search optimization](/ai-search-optimization) service builds exactly this: the question map, 12 in-depth pages a month, and tracking across Google's AI features and the chat assistants. $1,000 a month, no contract.

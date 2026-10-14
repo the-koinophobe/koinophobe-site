@@ -23,9 +23,9 @@ faq:
 
 For most of the last decade, residential solar websites had one headline: a 30% federal tax credit. The One Big Beautiful Bill Act, signed July 4, 2025, ended that credit (Section 25D of the tax code) for expenditures made after December 31, 2025, with the timing tied to when installation is complete.
 
-Plenty of solar sites still lead with it. That's the first thing I'd fix, and it changes what the rest of the site needs to say.
+Plenty of solar sites still lead with it. That's the first thing we'd fix, and it changes what the rest of the site needs to say.
 
-Solar isn't a trade I write about from client results; most of my sites are roofing, pool deck, lawn and shutter companies. The search side carries over, and the tax credit change is a matter of public record. I'm not a tax advisor, so treat the credit details below as a starting point for a conversation with yours.
+Solar isn't a trade we write about from client results; most of our sites are roofing, pool deck, lawn and shutter companies. The search side carries over, and the tax credit change is a matter of public record. We're not a tax advisor, so treat the credit details below as a starting point for a conversation with yours.
 
 ## Fix the pages that still sell the credit
 
@@ -65,4 +65,4 @@ Ask every customer for a review after the system is switched on, the same way ea
 
 ## Where to start
 
-Search your site for every mention of the tax credit and fix those pages this week. Then build the cost page and the battery page. If you'd like help with the site, my plans and what they include are on the [pricing page](/pricing).
+Search your site for every mention of the tax credit and fix those pages this week. Then build the cost page and the battery page. If you'd like help with the site, our plans and what they include are on the [pricing page](/pricing).

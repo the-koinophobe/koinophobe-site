@@ -60,7 +60,7 @@ Pick the URL you want, then make every signal point to it:
 2. **Use absolute URLs in the canonical tag,** and put a self-referencing canonical on every canonical page. Google recommends both.
 3. **List only canonical URLs in the sitemap.**
 4. **Point internal links at the canonical URL.** Menus, footers and in-text links.
-5. **Keep JavaScript away from the canonical.** If a script changes the canonical tag after load, Google may see two values. My [Next.js checklist](/notes/nextjs-seo-checklist) shows how to set it in the server response.
+5. **Keep JavaScript away from the canonical.** If a script changes the canonical tag after load, Google may see two values. Our [Next.js checklist](/notes/nextjs-seo-checklist) shows how to set it in the server response.
 
 Two things not to use for this: robots.txt, which can leave blocked URLs indexed without their content, and `noindex`, which removes a page from Search completely.
 
@@ -76,4 +76,4 @@ Request indexing for the URL you want in URL Inspection, then use **Validate fix
 
 ## Where to start
 
-Inspect three affected URLs today and sort them into the three cases above. If they're all the same-page-two-addresses case, the fix is a redirect rule and a sitemap update. If you'd like the full indexing review done for you, it's part of my Site Audit on the [pricing page](/pricing).
+Inspect three affected URLs today and sort them into the three cases above. If they're all the same-page-two-addresses case, the fix is a redirect rule and a sitemap update. If you'd like the full indexing review done for you, it's part of our Site Audit on the [pricing page](/pricing).

@@ -76,7 +76,7 @@ const CHECKS = [
   {
     icon: <Search size={20} aria-hidden />,
     t: "Do you rank for what buyers type?",
-    b: "In my study, a third to half of the companies the assistants named were also in Google's top ten. Ranking puts you in the pool they pick from.",
+    b: "In our study, a third to half of the companies the assistants named were also in Google's top ten. Ranking puts you in the pool they pick from.",
     link: { href: N.study, label: "The overlap numbers" },
   },
   {
@@ -104,7 +104,7 @@ const LOOP = [
     icon: <FileText size={20} aria-hidden />,
     t: "Publish",
     b: "12 in-depth articles a month, comparison and alternatives pages included, plus a free tool when your category has room for one.",
-    link: { href: N.compare, label: "How I build comparison pages" },
+    link: { href: N.compare, label: "How we build comparison pages" },
   },
   {
     icon: <RefreshCw size={20} aria-hidden />,
@@ -117,7 +117,7 @@ const LOOP = [
 const BEFORE = [
   {
     t: "Your category is new?",
-    b: "If nobody searches your category's name yet, I'll say so on the call. The work then goes after searches that exist: the tool you replace, the integrations your customers already use, and your own name.",
+    b: "If nobody searches your category's name yet, we'll say so on the call. The work then goes after searches that exist: the tool you replace, the integrations your customers already use, and your own name.",
   },
   {
     t: "No ranking promises.",
@@ -129,7 +129,7 @@ const BEFORE = [
   },
   {
     t: "Five seats.",
-    b: "I write the code and the articles myself, and five is as many sites as one person can run this loop for each month.",
+    b: "We write the code and the articles in-house, and five is as many sites as we can run this loop for each month without cutting corners.",
   },
 ];
 
@@ -137,12 +137,12 @@ const START = [
   {
     icon: <ScanSearch size={20} aria-hidden />,
     t: "Run the check",
-    b: "The crawler check above, or email me your domain. Either way I look at the site before we talk.",
+    b: "The crawler check above, or email us your domain. Either way we look at the site before we talk.",
   },
   {
     icon: <PhoneCall size={20} aria-hidden />,
     t: "20-minute call",
-    b: "I bring your crawler result and what the four assistants say about your category today. You bring the questions your buyers ask.",
+    b: "We bring your crawler result and what the four assistants say about your category today. You bring the questions your buyers ask.",
   },
   {
     icon: <GitMerge size={20} aria-hidden />,
@@ -153,15 +153,15 @@ const START = [
 
 /** The closing band's call bullets, written for a founder. */
 const CALL = [
-  "I check your robots.txt, your rendering and what the assistants say about your category before we talk.",
-  "You get the first few changes I'd ship, in order.",
-  "If it isn't a fit, I'll tell you that on the call.",
+  "We check your robots.txt, your rendering and what the assistants say about your category before we talk.",
+  "You get the first few changes we'd ship, in order.",
+  "If it isn't a fit, we'll tell you that on the call.",
 ];
 
 const SAAS_FAQ: FaqItem[] = [
   {
     q: "Can you guarantee ChatGPT will recommend us?",
-    a: "No. Nobody can, and in my own test ChatGPT cited a different set of pages almost every time it was asked the same question. What I can do is make sure crawlers can read you, that you rank, and that there's a page worth quoting, then measure the answers with repeated runs so you see a trend instead of one screenshot.",
+    a: "No. Nobody can, and in our own test ChatGPT cited a different set of pages almost every time it was asked the same question. What we can do is make sure crawlers can read you, that you rank, and that there's a page worth quoting, then measure the answers with repeated runs so you see a trend instead of one screenshot.",
   },
   {
     q: "What is AI search visibility?",
@@ -169,19 +169,19 @@ const SAAS_FAQ: FaqItem[] = [
   },
   {
     q: "How is this different from other AI visibility services?",
-    a: "The tracking uses the method from my published citation study: frozen questions, repeated runs, and Google's results as a control, with the limits written down. The fixes arrive as code in your repo. And the price is on this page.",
+    a: "The tracking uses the method from our published citation study: frozen questions, repeated runs, and Google's results as a control, with the limits written down. The fixes arrive as code in your repo. And the price is on this page.",
   },
   {
     q: "Do you need access to our codebase?",
-    a: "If your marketing site lives in a repo, yes. I work on a branch and open pull requests, and nothing merges without the review you want. On Webflow, Framer or WordPress I work in the CMS. Your product app stays untouched.",
+    a: "If your marketing site lives in a repo, yes. We work on a branch and open pull requests, and nothing merges without the review you want. On Webflow, Framer or WordPress we work in the CMS. Your product app stays untouched.",
   },
   {
     q: "Who writes the articles?",
-    a: "I do, from research into what your buyers ask. Anything that makes a claim about your product goes to you before it publishes, unless you tell me to skip that step.",
+    a: "We do, from research into what your buyers ask. Anything that makes a claim about your product goes to you before it publishes, unless you tell us to skip that step.",
   },
   {
     q: "What if we're not happy with the work?",
-    a: "Tell me and we stop 30 days later. There's no contract and no minimum term, and every page, pull request and account stays yours.",
+    a: "Tell us and we stop 30 days later. There's no contract and no minimum term, and every page, pull request and account stays yours.",
   },
 ];
 
@@ -275,7 +275,7 @@ export default function SaasSeoPage() {
               <span className="text-brand">a competitor</span>.
             </h1>
             <p className="t-lead mt-6 max-w-[58ch]">
-              I&rsquo;m Michael Edward, a developer who does SEO. I measure what ChatGPT, Claude, Perplexity and
+              Koinophobe is an SEO agency run by developers. We measure what ChatGPT, Claude, Perplexity and
               Google&rsquo;s AI Overviews say when your buyers ask, then fix and write until your pages are the
               ones they cite. Every change reaches you as a pull request you can read before it merges.
             </p>
@@ -302,7 +302,7 @@ export default function SaasSeoPage() {
               <p className="font-mono text-[12px] text-muted">Cited by AI and ranked on Google</p>
               <p className="mt-2 font-display text-[1.65rem] leading-none tracking-tight">2% to 12%</p>
               <p className="mt-1.5 text-[12.5px] leading-snug text-muted">
-                of cited pages, from my 96-run citation study
+                of cited pages, from our 96-run citation study
               </p>
             </div>
           </div>
@@ -312,7 +312,7 @@ export default function SaasSeoPage() {
       {/* ── What gets measured ──────────────────────────────────── */}
       <section className="border-y border-line">
         <div className="container-pad flex flex-col gap-4 py-7 md:flex-row md:items-center md:gap-8">
-          <p className="eyebrow-flat flex-none">What I measure</p>
+          <p className="eyebrow-flat flex-none">What we measure</p>
           <ul className="flex flex-wrap gap-2">
             {MEASURED.map((a) => (
               <li key={a} className="rounded-full border border-line bg-bg px-3.5 py-1.5 text-[14px]">
@@ -334,7 +334,7 @@ export default function SaasSeoPage() {
               <p className="eyebrow">Free check</p>
               <h2 className="t-h2 mt-5">Can AI crawlers read your site?</h2>
               <p className="t-lead mt-4 max-w-[60ch]">
-                Type your domain. I read your robots.txt for ten search and AI crawlers, then look at your
+                Type your domain. We read your robots.txt for ten search and AI crawlers, then look at your
                 homepage the way a crawler that doesn&rsquo;t run JavaScript sees it. Ten seconds, nothing
                 stored.
               </p>
@@ -343,7 +343,7 @@ export default function SaasSeoPage() {
               <AiCheck />
             </div>
             <p className="mt-8 text-[14.5px] text-muted">
-              What each crawler does and what I&rsquo;d set:{" "}
+              What each crawler does and what we&rsquo;d set:{" "}
               <Link href={N.crawlers} className="text-ink underline underline-offset-4">
                 AI crawlers and robots.txt
               </Link>
@@ -360,7 +360,7 @@ export default function SaasSeoPage() {
             <p className="eyebrow">Why you&rsquo;re missing from the answer</p>
             <h2 className="t-h2 mt-5">An assistant can only name you if it can read you first</h2>
             <p className="t-lead mt-4 max-w-[60ch]">
-              Three things have to be true before ChatGPT recommends a product. Most startup sites I check fail
+              Three things have to be true before ChatGPT recommends a product. Most startup sites we check fail
               at least one of them, and the first is usually a setting nobody chose on purpose.
             </p>
           </Reveal>
@@ -381,11 +381,11 @@ export default function SaasSeoPage() {
       <section className="section">
         <div className="container-pad grid grid-cols-[minmax(0,1fr)] gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
           <Reveal>
-            <p className="eyebrow">What I measured</p>
-            <h2 className="t-h2 mt-5 max-w-[20ch]">I ran 96 AI searches in a software category and checked what got cited</h2>
+            <p className="eyebrow">What we measured</p>
+            <h2 className="t-h2 mt-5 max-w-[20ch]">We ran 96 AI searches in a software category and checked what got cited</h2>
             <p className="t-lead mt-5 max-w-[56ch]">
-              On September 11, 2026 I asked ChatGPT, Claude, Perplexity and Google AI Overviews twelve buyer
-              questions about web scraping APIs. I recorded every page they cited, then measured those pages
+              On September 11, 2026 we asked ChatGPT, Claude, Perplexity and Google AI Overviews twelve buyer
+              questions about web scraping APIs. We recorded every page they cited, then measured those pages
               against the ones Google ranked for the same questions.
             </p>
             <p className="mt-5 max-w-[56ch] text-[16px] leading-relaxed text-muted">
@@ -444,26 +444,26 @@ export default function SaasSeoPage() {
           <Reveal>
             <div className="hero-photo mx-auto aspect-[4/5] w-full max-w-[400px] lg:mx-0">
               <Image
-                src="/me/michael-edward.webp"
-                alt="Michael Edward, the developer behind Koinophobe"
+                src="/work/pbseo.webp"
+                alt="Homepage of Palm Bay Marketing SEO, a site Koinophobe built and runs"
                 fill
                 sizes="(min-width: 1024px) 400px, 80vw"
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="eyebrow">Who does the work</p>
-            <h2 className="t-h2 mt-5 max-w-[20ch]">A developer, so the fix arrives as code</h2>
+            <h2 className="t-h2 mt-5 max-w-[20ch]">Developers, so the fix arrives as code</h2>
             <p className="t-lead mt-5 max-w-[58ch]">
-              Most SEO shows up as a forty-page audit your engineers never get to. I write the change myself,
+              Most SEO shows up as a forty-page audit your engineers never get to. We write the change in-house,
               in your repo or your CMS, and open it for review. Next.js, Astro, Webflow, Framer and WordPress
               are all fine.
             </p>
             <p className="mt-5 max-w-[58ch] text-[16px] leading-relaxed text-muted">
               On July 8, 2026 one client site logged 2,184 Search Console clicks in a day against a median of
-              4. I traced it to gambling spam cloaked onto real pages through AMP URLs the business never
-              built, and took 2,164 clicks out of my own reported numbers. Your citation report gets the same
+              4. We traced it to gambling spam cloaked onto real pages through AMP URLs the business never
+              built, and took 2,164 clicks out of our own reported numbers. Your citation report gets the same
               treatment.
             </p>
             <div className="mt-8 grid max-w-[520px] grid-cols-2 gap-4 border-t border-line pt-7">
@@ -476,12 +476,12 @@ export default function SaasSeoPage() {
                   {aggregate.impressions.toLocaleString("en-US")}
                 </p>
                 <p className="mt-2 text-[14px] text-muted">
-                  impressions across the {aggregate.properties} properties I have exports for
+                  impressions across the {aggregate.properties} properties we have exports for
                 </p>
               </div>
             </div>
             <p className="mt-6 max-w-[58ch] text-[14.5px] text-muted">
-              My Search Console numbers so far come from local businesses, all on the{" "}
+              Our Search Console numbers so far come from local businesses, all on the{" "}
               <Link href="/work" className="text-ink underline underline-offset-4">
                 work page
               </Link>{" "}

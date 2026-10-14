@@ -3,8 +3,8 @@ title: "Contact form not working? An email setting and a speed plugin broke two 
 slug: speed-plugin-broke-contact-form
 date: 2026-08-15
 draft: false
-seo_title: "Contact form not working? Two causes I found"
-excerpt: "Contact form not working on your WordPress site? Two causes I found on client sites, how each was fixed, and the monthly test that catches the next one."
+seo_title: "Contact form not working? Two causes we found"
+excerpt: "Contact form not working on your WordPress site? Two causes we found on client sites, how each was fixed, and the monthly test that catches the next one."
 cover: /notes/photos/speed-plugin-broke-contact-form-cover.webp
 cover_alt: "A stressed man in glasses holding his head while looking at his laptop"
 cover_credit: "Photo: Vitaly Gariev on Unsplash"
@@ -21,17 +21,17 @@ faq:
 
 A contact form can stop working without any error on the page. The form loads, the button looks fine, and the leads quietly stop reaching anyone. Most people find out weeks later, if they find out at all.
 
-It has happened on two sites I work on, for two different reasons. Here is what broke each time, how it was fixed, and the test I run now.
+It has happened on two sites we work on, for two different reasons. Here is what broke each time, how it was fixed, and the test we run now.
 
 ## Cause one: an email change and four quiet months
 
-In July 2026 I found that a client's form submissions had been dropping since March. The form was built in Elementor. The cause was an email setting: after an email address change on the account, the SMTP connection the site used to send mail needed re-authenticating.
+In July 2026 we found that a client's form submissions had been dropping since March. The form was built in Elementor. The cause was an email setting: after an email address change on the account, the SMTP connection the site used to send mail needed re-authenticating.
 
-Four months. Nobody noticed, and that includes me.
+Four months. Nobody noticed, and that includes us.
 
 Some background on why this happens. WordPress can send mail straight from the web server, but those messages often land in spam or get rejected. So most sites use an SMTP plugin that sends through a real mail account instead. That connection depends on the account's login or authorization. Change the email address or the password, and the plugin can lose its connection without telling anyone.
 
-The fix was re-authenticating the SMTP connection and sending test submissions until they arrived in the right inbox. I can't tell you how many people filled out that form between March and July. Anyone who didn't follow up by phone may well have hired someone else.
+The fix was re-authenticating the SMTP connection and sending test submissions until they arrived in the right inbox. We can't tell you how many people filled out that form between March and July. Anyone who didn't follow up by phone may well have hired someone else.
 
 ## Cause two: a speed plugin that stopped forms submitting
 
@@ -53,7 +53,7 @@ The lesson: any time a speed setting changes, test the form right after.
 
 ## The monthly form test
 
-I now test form delivery on every site I work on, once a month. Here's the checklist:
+We now test form delivery on every site we work on, once a month. Here's the checklist:
 
 - Submit every form on the site, including quote forms in popups, sidebars and footers. Use a phone for at least one of them.
 - Put something like "TEST, please ignore" in the name field so whoever reads the inbox knows.
@@ -67,6 +67,6 @@ Write down the date each time. If a form breaks later, you'll know the last day 
 
 ## Why this is part of SEO work
 
-A form that doesn't deliver throws away the traffic that SEO work brings in. I've written about why [rankings mean little without tracking](/notes/rankings-without-tracking), and forms are one of the [three events worth tracking on a local business site](/notes/three-events-local-business). Phone taps are the other big one, and here's [how to track phone clicks in Tag Manager](/notes/gtm-phone-click-tracking).
+A form that doesn't deliver throws away the traffic that SEO work brings in. We've written about why [rankings mean little without tracking](/notes/rankings-without-tracking), and forms are one of the [three events worth tracking on a local business site](/notes/three-events-local-business). Phone taps are the other big one, and here's [how to track phone clicks in Tag Manager](/notes/gtm-phone-click-tracking).
 
-If you'd like a second set of eyes on your forms and tracking, [send me your site](/contact). Plans and prices are on [my pricing page](/pricing).
+If you'd like a second set of eyes on your forms and tracking, [send us your site](/contact). Plans and prices are on [our pricing page](/pricing).

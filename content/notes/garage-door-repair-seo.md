@@ -17,7 +17,7 @@ faq:
     a: "Suggest an edit on the listing in Google Maps, or use Google's business redressal complaint form for listings that break the Business Profile guidelines. Don't answer them with extra listings of your own, because that can get your profile suspended."
 ---
 
-Most of the sites I work on are roofing, pool deck, lawn and shutter companies, and I don't have a garage door company among them. Garage door searches work under the same rules as those trades, so this is the setup I'd build, and any results I mention come from the trades I do work in.
+Most of the sites we work on are roofing, pool deck, lawn and shutter companies, and we don't have a garage door company among them. Garage door searches work under the same rules as those trades, so this is the setup we'd build, and any results we mention come from the trades we do work in.
 
 ## The urgent search
 
@@ -27,7 +27,7 @@ That search is won in two places. The first is the map pack, the three businesse
 
 ## The Business Profile
 
-The map pack runs on your Google Business Profile. My note on [how the map pack ranks businesses](/notes/google-map-pack-ranking) covers how Google picks the three. The settings to get right first:
+The map pack runs on your Google Business Profile. Our note on [how the map pack ranks businesses](/notes/google-map-pack-ranking) covers how Google picks the three. The settings to get right first:
 
 ![A modern garage door with wood panels and a row of windows](/notes/photos/garage-door-repair-seo-1.webp "Photo: Ryan Waldman on Unsplash")
 
@@ -53,7 +53,7 @@ People search two ways: the problem and the product. Build pages for both.
 | Cable and roller repair | Signs of wear, what's included in a tune-up |
 | New garage doors | Materials, insulated options, the brands you install, typical install time |
 
-Each page needs a title tag naming the job and your main town, the tap-to-call button, your own job photos and the questions customers ask on the phone. Title tags decide whether a ranking turns into a click. Across three Florida sites I work on, 307 searches ranked in Google's top ten in one 28-day window and got zero clicks.
+Each page needs a title tag naming the job and your main town, the tap-to-call button, your own job photos and the questions customers ask on the phone. Title tags decide whether a ranking turns into a click. Across three Florida sites we work on, 307 searches ranked in Google's top ten in one 28-day window and got zero clicks.
 
 ## Say what things cost
 
@@ -69,14 +69,14 @@ Garage door repair is one of the urgent trades where the map results can include
 
 Google's Business Profile guidelines cover these cases. A profile has to match the business as it appears on its signage and branding. A rented address the business doesn't operate from (a virtual office) isn't eligible, and neither is a remote mailbox. A business shouldn't have more than one profile per location.
 
-If you see a listing that breaks these rules, use Suggest an edit on it in Google Maps, or file Google's business redressal complaint form. Don't answer with extra listings or a keyword-stuffed name of your own. That puts your real profile at risk, and my note on [suspended Business Profiles](/notes/google-business-profile-suspended) covers what happens if yours gets suspended.
+If you see a listing that breaks these rules, use Suggest an edit on it in Google Maps, or file Google's business redressal complaint form. Don't answer with extra listings or a keyword-stuffed name of your own. That puts your real profile at risk, and our note on [suspended Business Profiles](/notes/google-business-profile-suspended) covers what happens if yours gets suspended.
 
 ## Town pages and tracking
 
 A page for each town you want work in can help with `garage door repair [town]` searches, as long as each one has something true about that town. Near-identical pages with the town name swapped count as doorway spam under Google's policies.
 
-Then track it. Make website phone taps a GA4 key event, count Business Profile calls separately, and test your forms every month. In July 2026 I found a client's form submissions had been dropping since March because of an email setting, and nobody noticed for four months, me included.
+Then track it. Make website phone taps a GA4 key event, count Business Profile calls separately, and test your forms every month. In July 2026 we found a client's form submissions had been dropping since March because of an email setting, and nobody noticed for four months, us included.
 
 ## Where to start
 
-Fix the Business Profile and the tap-to-call header first, then build the spring replacement page, then the rest. If you'd like someone to check the whole setup, the Site Audit on my [pricing page](/pricing) is the place to start.
+Fix the Business Profile and the tap-to-call header first, then build the spring replacement page, then the rest. If you'd like someone to check the whole setup, the Site Audit on our [pricing page](/pricing) is the place to start.

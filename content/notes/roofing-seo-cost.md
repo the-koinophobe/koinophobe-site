@@ -23,7 +23,7 @@ Roofers get SEO pitches every week, from $99 a month to $5,000. Here's what the 
 
 ## What the market charges
 
-The best public data I know of is Ahrefs' survey of 439 SEO providers, last updated in April 2026. Average monthly retainers:
+The best public data we know of is Ahrefs' survey of 439 SEO providers, last updated in April 2026. Average monthly retainers:
 
 ![A calculator resting on a sheet of paper, ready for working out costs](/notes/photos/roofing-seo-cost-1.webp "Photo: Aaron Lefler on Unsplash")
 
@@ -60,10 +60,10 @@ That last part matters. If you can't tell which calls came from Google, you can'
 - **Reports with rankings and no calls.** Rankings are an input. Calls and booked jobs are the result.
 - **No one can tell you what they'll do this month.** You should get a plain list.
 
-## What I charge
+## What we charge
 
-My prices are on the [pricing page](/pricing), in US dollars: a $750 audit, a one-time $1,800 setup, and monthly plans at $600 and $1,500, with multi-location from $2,500. You own every account, the minimum is three months, and after that it's month to month.
+Our prices are on the [pricing page](/pricing): a $750 audit, a one-time $1,800 setup, and monthly plans at $600 and $1,500, with multi-location from $2,500. You own every account, the minimum is three months, and after that it's month to month.
 
 The $1,500 Growth plan is built for roofers: two new town or service pages a month, Business Profile upkeep and a monthly call on what moved. The roofing results behind it are on the [roofing SEO page](/roofing-seo).
 
-If you're comparing quotes, send them to me on a [free call](/contact) and I'll tell you what I think each one actually includes.
+If you're comparing quotes, send them to us on a [free call](/contact) and we'll tell you what we think each one actually includes.

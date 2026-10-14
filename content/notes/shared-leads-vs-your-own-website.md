@@ -12,9 +12,9 @@ faq:
   - q: "Are shared leads worth it for contractors?"
     a: "They can fill a thin schedule, especially for a new business. The same homeowner usually goes to several contractors, so you compete on speed and price every time. Judge them by cost per booked job."
   - q: "How long does SEO take for a contractor website?"
-    a: "Months. On a roofing site I work on, the big gains in search visibility came over about eleven months of steady work, and clicks grew more slowly than impressions."
+    a: "Months. On a roofing site we work on, the big gains in search visibility came over about eleven months of steady work, and clicks grew more slowly than impressions."
   - q: "Who owns the leads that come from my own website?"
-    a: "You do. The calls, form fills and customer list stay with your business. On my plans you also own every account, including Search Console, GA4 and the Business Profile."
+    a: "You do. The calls, form fills and customer list stay with your business. On our plans you also own every account, including Search Console, GA4 and the Business Profile."
 ---
 
 ![One homeowner's request sent to four contractors at once, beside one search that leads to one roofer](/notes/illustrations/shared-leads-vs-your-own-website.webp)
@@ -49,13 +49,13 @@ The data is yours as well. The call shows up in your own tracking. The form land
 | When you stop paying | Leads stop | The site and profile stay yours |
 | Who holds the data | The lead service first | You |
 
-Speed is where shared leads win. Sign up today and you can have leads this week. SEO is slower. On a roofing site I work on, average position went from 47.9 to 14.9 when I compared October 2025 to August 2026 with the eleven months before. Impressions went from 5,410 to 139,639. Clicks went from 34 to 266, a smaller jump, because a lot of those new impressions were still on page two. That took most of a year of title rewrites, a page per town and schema work.
+Speed is where shared leads win. Sign up today and you can have leads this week. SEO is slower. On a roofing site we work on, average position went from 47.9 to 14.9 when we compared October 2025 to August 2026 with the eleven months before. Impressions went from 5,410 to 139,639. Clicks went from 34 to 266, a smaller jump, because a lot of those new impressions were still on page two. That took most of a year of title rewrites, a page per town and schema work.
 
 ## Cost per lead vs an asset
 
-Cost per lead is easy to measure, which is why lead services sell on it. The number I'd watch is cost per booked job. If you buy ten leads and close one, that job cost you ten leads plus the hours spent chasing the other nine. Track that for three months before you decide anything.
+Cost per lead is easy to measure, which is why lead services sell on it. The number we'd watch is cost per booked job. If you buy ten leads and close one, that job cost you ten leads plus the hours spent chasing the other nine. Track that for three months before you decide anything.
 
-SEO doesn't have a clean cost per lead in month one. It has a monthly cost and a slow curve. My Care plan is $600 a month and Growth is $1,500 a month, and everything is listed on [my pricing page](/pricing). What you're paying for is pages and a Business Profile that keep working after the invoice is paid.
+SEO doesn't have a clean cost per lead in month one. It has a monthly cost and a slow curve. Our Care plan is $600 a month and Growth is $1,500 a month, and everything is listed on [our pricing page](/pricing). What you're paying for is pages and a Business Profile that keep working after the invoice is paid.
 
 You can only judge either option if calls and forms are tracked. That's why [phone click tracking in Tag Manager](/notes/gtm-phone-click-tracking) should go in before anything else, and why [rankings mean little without tracking](/notes/rankings-without-tracking).
 
@@ -65,6 +65,6 @@ If you're brand new, your calendar is empty next month and you don't have a site
 
 Running both is fine. Just record where each booked job came from, so you decide with job counts in front of you.
 
-## Where I'd start
+## Where we'd start
 
-Start by measuring. Set up calls and form fills as key events in GA4 ([this note covers the three that matter](/notes/three-events-local-business)), then let a month of data come in. If your site is getting impressions and no calls, that's often fixable. A Site Audit is $750 and is credited in full if a monthly plan starts within 30 days. If you'd like me to look at your site first, [send it to me here](/contact) and I'll reply the same business day.
+Start by measuring. Set up calls and form fills as key events in GA4 ([this note covers the three that matter](/notes/three-events-local-business)), then let a month of data come in. If your site is getting impressions and no calls, that's often fixable. A Site Audit is $750 and is credited in full if a monthly plan starts within 30 days. If you'd like us to look at your site first, [send it to us here](/contact) and we'll reply the same business day.

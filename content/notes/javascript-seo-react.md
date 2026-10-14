@@ -58,7 +58,7 @@ If the text is in step 3 but missing in step 2, Google can see the page and most
 
 ## The fixes, in order of effort
 
-**Move the marketing site to a framework that renders on the server.** Next.js, Remix, Astro and similar frameworks send finished HTML. For most startups this is the right long-term answer. My [Next.js SEO checklist](/notes/nextjs-seo-checklist) covers what to check after the move.
+**Move the marketing site to a framework that renders on the server.** Next.js, Remix, Astro and similar frameworks send finished HTML. For most startups this is the right long-term answer. Our [Next.js SEO checklist](/notes/nextjs-seo-checklist) covers what to check after the move.
 
 **Split the marketing site from the app.** Keep `yoursite.com` as a server-rendered or static site and put the product at `app.yoursite.com`. The app can stay a single-page app; it's behind a login anyway.
 
@@ -70,4 +70,4 @@ If the text is in step 3 but missing in step 2, Google can see the page and most
 
 Run the test on your homepage and pricing page today. If the copy is missing from the raw HTML, the fix belongs on the roadmap before more content does, because new pages will have the same problem. [SEO for startups](/notes/seo-for-startups) covers the other early decisions.
 
-If you'd like help with the move, my [SaaS SEO plan](/saas-seo) ships fixes as pull requests your team reviews, at $1,000 a month with no contract.
+If you'd like help with the move, our [SaaS SEO plan](/saas-seo) ships fixes as pull requests your team reviews, at $1,000 a month with no contract.

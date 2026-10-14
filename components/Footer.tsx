@@ -40,7 +40,7 @@ const COLS: { title: string; href?: string; links: { href: string; label: string
   {
     title: "Koinophobe",
     links: [
-      { href: "/about", label: "About Michael" },
+      { href: "/about", label: "About us" },
       { href: "/contact", label: "Contact" },
       { href: "/notes/what-is-a-koinophobe", label: "Why the name" },
       { href: "/privacy", label: "Privacy" },
@@ -57,11 +57,11 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.3fr_repeat(4,1fr)] lg:gap-10">
           <div>
             <Link href="/" className="inline-flex items-center gap-2.5">
-              <span className="h-2.5 w-2.5 rounded-full bg-[#7ED2A5]" />
+              <span className="logo-mark h-[22px] w-[22px]" aria-hidden />
               <span className="font-display text-[20px] tracking-tight">{site.name}</span>
             </Link>
             <p className="muted mt-4 max-w-[34ch] text-[15px] leading-relaxed">
-              Technical SEO and call tracking for businesses in {site.markets}, by {site.owner}.
+              An SEO agency for home service businesses: technical SEO, local search, call tracking and AI search.
             </p>
             <p className="muted mt-4 text-[14px]">Replies the same business day</p>
             <a href={`mailto:${site.email}`} className="mt-1 inline-block text-[14px] underline-offset-4 hover:underline">
@@ -100,7 +100,7 @@ export function Footer() {
 
         <div className="muted mt-14 flex flex-wrap items-center justify-between gap-x-6 gap-y-3 border-t border-white/10 pt-6 text-[13.5px]">
           <span>
-            &copy; {year} {site.owner} &middot; {site.name}
+            &copy; {year} {site.name}
           </span>
           <div className="flex flex-wrap items-center gap-5">
             <SiteVisits />

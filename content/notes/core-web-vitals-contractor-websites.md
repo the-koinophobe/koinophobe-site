@@ -39,11 +39,11 @@ Google judges these at the 75th percentile of real visits. In plain terms, at le
 
 ![A laptop screen showing a Google PageSpeed Insights report with a score of 99](/notes/photos/core-web-vitals-contractor-websites-1.webp "Photo: Justin Morgan on Unsplash")
 
-**Search Console.** The Core Web Vitals report groups your URLs into good, needs improvement and poor, separately for mobile and desktop, using the same field data. It also needs enough traffic to show anything. I walk through the rest of Search Console in [Google Search Console for contractors](/notes/google-search-console-for-contractors).
+**Search Console.** The Core Web Vitals report groups your URLs into good, needs improvement and poor, separately for mobile and desktop, using the same field data. It also needs enough traffic to show anything. We walk through the rest of Search Console in [Google Search Console for contractors](/notes/google-search-console-for-contractors).
 
 ## What usually slows contractor sites down
 
-- **Huge hero images.** A full-size photo straight off a phone is often the LCP element itself. Resizing and converting to WebP is the cheapest fix; I covered it step by step in [how to optimize images for website speed](/notes/image-optimization-contractor-websites).
+- **Huge hero images.** A full-size photo straight off a phone is often the LCP element itself. Resizing and converting to WebP is the cheapest fix; we covered it step by step in [how to optimize images for website speed](/notes/image-optimization-contractor-websites).
 - **Sliders.** A rotating banner loads several large photos and a script to run them, and the first slide often arrives late. One good photo does the same job.
 - **Chat widgets.** These tend to load a lot of JavaScript on every page, which can hurt INP. Some chat tools let you delay loading until after the page is ready.
 - **Too many plugins.** Each plugin can add its own scripts and styles to every page, whether that page uses them or not.
@@ -52,9 +52,9 @@ Google judges these at the 75th percentile of real visits. In plain terms, at le
 
 Be careful with speed plugins that promise to fix all of this in one click. One setting in a speed plugin [stopped a client's contact form from submitting](/notes/speed-plugin-broke-contact-form). Test your forms after any change.
 
-## What happened on my own site
+## What happened on our own site
 
-My site's mobile PageSpeed score was 52. I removed heavy animation libraries and scripts the site wasn't using, and it went to 96, then 99. Desktop is 100.
+Our site's mobile PageSpeed score was 52. We removed heavy animation libraries and scripts the site wasn't using, and it went to 96, then 99. Desktop is 100.
 
 That's the lab Performance score, a test run, so it isn't the same as passing Core Web Vitals in field data. It does show where the weight was: in code the site could do without.
 
@@ -66,4 +66,4 @@ Where speed earns its keep is with the visitor. Someone standing in a driveway, 
 
 So fix the big problems first, usually oversized images and scripts you don't need. Then put the time into your pages and your tracking.
 
-Speed fixes are part of the Setup Sprint on [my pricing page](/pricing). If your site fails Core Web Vitals and you're not sure why, [send me the URL](/contact) and I'll tell you what's weighing it down.
+Speed fixes are part of the Setup Sprint on [our pricing page](/pricing). If your site fails Core Web Vitals and you're not sure why, [send us the URL](/contact) and we'll tell you what's weighing it down.

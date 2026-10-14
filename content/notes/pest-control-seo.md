@@ -21,7 +21,7 @@ faq:
 
 A pest control company makes its steady money on recurring plans, but people usually don't start by searching for a quarterly plan. They search the problem in front of them: `termite inspection`, `mosquito control`, `mice in walls`. The site has to catch that search and then sell the plan.
 
-Most of the sites I work on are roofing, pool deck, lawn and shutter companies. Pest control isn't on that list. The search side works the same way, though, so below is the setup I'd use for a pest company, and any results I mention come from those other trades.
+Most of the sites we work on are roofing, pool deck, lawn and shutter companies. Pest control isn't on that list. The search side works the same way, though, so below is the setup we'd use for a pest company, and any results we mention come from those other trades.
 
 ## A page for each pest
 
@@ -43,7 +43,7 @@ Recurring quarterly plans are the revenue core for many pest businesses, so give
 
 Write it for a homeowner who arrived on the termite or ant page and is deciding whether to book one visit or sign up. A plan described in one paragraph on the homepage gives that person, and Google, very little to work with.
 
-Lawn care runs on recurring plans too, and my [lawn care SEO](/notes/lawn-care-seo) note covers a similar setup.
+Lawn care runs on recurring plans too, and our [lawn care SEO](/notes/lawn-care-seo) note covers a similar setup.
 
 ## Time pages to each pest's season
 
@@ -53,7 +53,7 @@ Open Google Search Console, go to the Performance report, and compare the last t
 
 ## Town pages and Business Profile
 
-For each town you serve, a page about that town can help with `pest control [town]` searches. Google's doorway abuse policy treats near-identical pages with the town name swapped as spam, so each needs something true about the place: the pests you see most there, jobs you've done, how fast you get out. My [service area pages](/notes/roofing-service-area-pages) note is written for roofers, and the same rules apply.
+For each town you serve, a page about that town can help with `pest control [town]` searches. Google's doorway abuse policy treats near-identical pages with the town name swapped as spam, so each needs something true about the place: the pests you see most there, jobs you've done, how fast you get out. Our [service area pages](/notes/roofing-service-area-pages) note is written for roofers, and the same rules apply.
 
 Your Google Business Profile drives the map results. Set up to 20 service areas by city or ZIP, within about 2 hours' drive. Remove the street address if customers don't visit you. Use your real business name with no keywords added. The [Business Profile setup note](/notes/google-business-profile-for-roofers) walks through each setting.
 
@@ -63,8 +63,8 @@ Customers on a quarterly plan see you four times a year, which gives you more ch
 
 ## Track calls and plan sign-ups
 
-Track website phone taps as a GA4 key event, count Business Profile calls separately, and test your forms every month. In July 2026 I found a client's form submissions had been dropping since March because of an email setting, and nobody noticed for four months. If plan sign-ups happen online, make the sign-up its own key event so you can see which pest pages lead to plans. My [call tracking for contractors](/notes/call-tracking-for-contractors) note explains how to keep each source separate.
+Track website phone taps as a GA4 key event, count Business Profile calls separately, and test your forms every month. In July 2026 we found a client's form submissions had been dropping since March because of an email setting, and nobody noticed for four months. If plan sign-ups happen online, make the sign-up its own key event so you can see which pest pages lead to plans. Our [call tracking for contractors](/notes/call-tracking-for-contractors) note explains how to keep each source separate.
 
 ## Where to start
 
-Build the plans page first, then the page for the pest whose season is coming next. If you'd like help with the setup, the plans and what they include are on my [pricing page](/pricing).
+Build the plans page first, then the page for the pest whose season is coming next. If you'd like help with the setup, the plans and what they include are on our [pricing page](/pricing).

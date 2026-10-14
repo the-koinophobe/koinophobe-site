@@ -23,13 +23,13 @@ The good news is that Google runs a formal appeals process, and most of what you
 
 ## Why profiles get suspended
 
-Google says it may suspend or disable Business Profiles that don't follow its guidelines. The ones I'd check first, all from Google's own guideline pages:
+Google says it may suspend or disable Business Profiles that don't follow its guidelines. The ones we'd check first, all from Google's own guideline pages:
 
 **Keywords in the business name.** The name should be the name you use in the real world. Google says including unnecessary information in the name isn't permitted and could result in suspension. "Smith Roofing" is fine. "Smith Roofing Best Roof Repair Melbourne FL" is the kind of name that gets reported and pulled.
 
 **An ineligible address.** Google says a virtual office (a rented mailing address where you don't operate) isn't eligible for a profile, and P.O. boxes or mailboxes at remote locations aren't acceptable. A box at a shipping store is still a mailbox, even with a suite number on it.
 
-**A service-area business showing its address.** If customers don't come to your location, Google's guidelines say to hide the address and set service areas. A home address that no customer ever visits, shown on the map, goes against that rule. Roofers and other trades that work at the customer's house should check this first. I covered the right setup in [Business Profile setup for roofers](/notes/google-business-profile-for-roofers). [Service area businesses on Google](/notes/service-area-business-google-business-profile) walks through the right setup.
+**A service-area business showing its address.** If customers don't come to your location, Google's guidelines say to hide the address and set service areas. A home address that no customer ever visits, shown on the map, goes against that rule. Roofers and other trades that work at the customer's house should check this first. We covered the right setup in [Business Profile setup for roofers](/notes/google-business-profile-for-roofers). [Service area businesses on Google](/notes/service-area-business-google-business-profile) walks through the right setup.
 
 **Duplicate profiles.** Google says not to create more than one profile for each location, in one account or across several. This can happen by accident: an old profile from a previous owner, one an agency made, and one you made yourself.
 

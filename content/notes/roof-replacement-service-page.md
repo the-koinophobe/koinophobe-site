@@ -21,7 +21,7 @@ faq:
 
 A homeowner looking at a roof replacement is about to spend a lot of money on something they'll buy maybe once or twice in their life. They read slowly. They compare. Your page should answer their questions in roughly the order they ask them.
 
-On a roofing site I work on, `roof replacement melbourne fl` went from position 70 to 15, comparing October 2025 to August 2026 with the eleven months before. That happened alongside site-wide work: title and meta rewrites, a service page per town, FAQ and service schema, and articles on the questions Florida homeowners ask after storms. The order below is how I'd lay out a replacement page.
+On a roofing site we work on, `roof replacement melbourne fl` went from position 70 to 15, comparing October 2025 to August 2026 with the eleven months before. That happened alongside site-wide work: title and meta rewrites, a service page per town, FAQ and service schema, and articles on the questions Florida homeowners ask after storms. The order below is how we'd lay out a replacement page.
 
 ## What you replace, and with what
 
@@ -59,11 +59,11 @@ One short section: who the lender is, how to apply and a link. If you don't offe
 
 ## Photos from your own jobs
 
-Use photos of roofs your crews did, in the towns you serve. Before and after shots of the same house are the most useful. Stock photos of a smiling roofer don't help anyone decide. Compress them and name the files properly, which I cover in [image optimization for contractor websites](/notes/image-optimization-contractor-websites).
+Use photos of roofs your crews did, in the towns you serve. Before and after shots of the same house are the most useful. Stock photos of a smiling roofer don't help anyone decide. Compress them and name the files properly, which we cover in [image optimization for contractor websites](/notes/image-optimization-contractor-websites).
 
 ## Towns you serve
 
-List the towns, and link each to its own page if that page has real local content. My note on [roofing service area pages](/notes/roofing-service-area-pages) covers how to build those without running into Google's doorway rules.
+List the towns, and link each to its own page if that page has real local content. Our note on [roofing service area pages](/notes/roofing-service-area-pages) covers how to build those without running into Google's doorway rules.
 
 ## FAQs
 
@@ -71,8 +71,8 @@ Answer the questions your office gets on the phone: how long it takes, whether t
 
 ## A way to book
 
-End every section with a path forward, and finish the page with a clear one: a phone number that's tappable on mobile, a short form and online booking if you can take it. On a roofing site I work on, a search about booking an inspection ranked at 2.6 and got zero clicks in four weeks. The page had no way to book online. I wrote that up in [ranking but no clicks](/notes/zero-click-rankings-title-tags).
+End every section with a path forward, and finish the page with a clear one: a phone number that's tappable on mobile, a short form and online booking if you can take it. On a roofing site we work on, a search about booking an inspection ranked at 2.6 and got zero clicks in four weeks. The page had no way to book online. We wrote that up in [ranking but no clicks](/notes/zero-click-rankings-title-tags).
 
 Then track it. Calls and form fills from this page should show up as key events in GA4, or you won't know whether the rewrite worked.
 
-If you'd like me to review your replacement page or build one, the options are on [my pricing page](/pricing), and you can see how I approach [roofing SEO](/roofing-seo) as a whole.
+If you'd like us to review your replacement page or build one, the options are on [our pricing page](/pricing), and you can see how we approach [roofing SEO](/roofing-seo) as a whole.

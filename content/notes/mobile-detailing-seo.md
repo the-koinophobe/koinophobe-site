@@ -21,7 +21,7 @@ faq:
 
 A mobile detailer has a van, a water tank and no front door. Most local SEO advice assumes a shop with an address customers drive to. Yours runs the other way. You drive to them, so Google has to learn where you work from your Business Profile and your website.
 
-Most of the sites I work on are roofing, pool deck, lawn and shutter companies, and they also go to the customer. A detailer's site needs the same pieces, so here's the setup I'd build for one.
+Most of the sites we work on are roofing, pool deck, lawn and shutter companies, and they also go to the customer. A detailer's site needs the same pieces, so here's the setup we'd build for one.
 
 ## Set up the Business Profile as a service-area business
 
@@ -29,7 +29,7 @@ In Google Business Profile, if customers don't visit your location, remove the a
 
 Pick the towns where you want work and can show up on time. Twenty towns you rarely drive to won't put you in front of those customers by themselves.
 
-Use your real business name. Stuffing "Mobile Detailing Ceramic Coating" into the name field breaks Google's guidelines and puts the profile at risk of suspension. Fill in categories, services, hours and photos. I walk through every setting in the [Google Business Profile setup guide](/notes/google-business-profile-for-roofers). It's written for roofers, and the settings are the same for a detailer.
+Use your real business name. Stuffing "Mobile Detailing Ceramic Coating" into the name field breaks Google's guidelines and puts the profile at risk of suspension. Fill in categories, services, hours and photos. We walk through every setting in the [Google Business Profile setup guide](/notes/google-business-profile-for-roofers). It's written for roofers, and the settings are the same for a detailer.
 
 ## Build a packages page with prices
 
@@ -54,11 +54,11 @@ Add Service schema to each page and LocalBusiness schema sitewide with your area
 
 Google's doorway abuse policy treats near-identical pages that swap the city name as spam. A town page earns its place when it holds things only that town's page could have: photos from jobs there, the vehicles you tend to see, which days you're usually in that area, a review from a customer there.
 
-If you have real work to show for six towns, build six pages. Add more as the jobs come in. The rules are the same ones I cover in [service area pages that don't count as doorways](/notes/roofing-service-area-pages).
+If you have real work to show for six towns, build six pages. Add more as the jobs come in. The rules are the same ones we cover in [service area pages that don't count as doorways](/notes/roofing-service-area-pages).
 
 ## Make booking possible on the page
 
-On a roofing site I work on, a search about booking an inspection ranked at position 2.6, showed 143 times in four weeks and got zero clicks. The page had no way to book online. Put a booking widget, or a short form asking for date, vehicle and package, on every service page.
+On a roofing site we work on, a search about booking an inspection ranked at position 2.6, showed 143 times in four weeks and got zero clicks. The page had no way to book online. Put a booking widget, or a short form asking for date, vehicle and package, on every service page.
 
 Then track it. Calls, form submissions and bookings should each be a key event in GA4. The setup is in [three events every local business should track](/notes/three-events-local-business).
 
@@ -70,6 +70,6 @@ Detailing is visual. Shoot before and after pictures from the same angle in the 
 
 ## What a related auto business shows
 
-The closest example I have is Tint Lordz Auto Spa, a window tint shop in Lawrence, MA. Every version of its name ranks at position 2 or better, and `window tint lawrence ma` sits at 2.6. The broad `window tinting near me` sits at 19 on 358 impressions. I'd expect a detailer to see a similar split, so the profile, service pages and town pages come before chasing broad near-me terms.
+The closest example we have is Tint Lordz Auto Spa, a window tint shop in Lawrence, MA. Every version of its name ranks at position 2 or better, and `window tint lawrence ma` sits at 2.6. The broad `window tinting near me` sits at 19 on 358 impressions. We'd expect a detailer to see a similar split, so the profile, service pages and town pages come before chasing broad near-me terms.
 
-If you want this built for your detailing business, the Setup Sprint on my [pricing page](/pricing) covers Business Profile cleanup, schema and GA4 tracking in 3 to 4 weeks.
+If you want this built for your detailing business, the Setup Sprint on our [pricing page](/pricing) covers Business Profile cleanup, schema and GA4 tracking in 3 to 4 weeks.

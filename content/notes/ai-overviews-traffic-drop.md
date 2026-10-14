@@ -21,7 +21,7 @@ faq:
 
 ![Two lines over months, impressions rising and clicks flat, with the gap between them shaded](/notes/illustrations/ai-overviews-traffic-drop.webp)
 
-A business owner sends me a Search Console screenshot: impressions up 40%, clicks down 20%, average position barely moved. "Did we get penalized?"
+A business owner sends us a Search Console screenshot: impressions up 40%, clicks down 20%, average position barely moved. "Did we get penalized?"
 
 Usually not. More often, Google started answering some of their searches on the results page, with an AI Overview, a featured snippet, or both, and fewer people need to click. Here's how to tell, and what to do.
 
@@ -39,9 +39,9 @@ Google counts AI Overview and AI Mode traffic inside the normal Web search type,
 
 ![A laptop with an analytics dashboard on a glass table](/notes/photos/ai-overviews-traffic-drop-1.webp "Photo: Carlos Muza on Unsplash")
 
-## What it looked like on a site I work on
+## What it looked like on a site we work on
 
-One agency site I work on has an informational article about how far the town is from Orlando. Over 17 months it collected 87,354 impressions at a 0.13% click-through rate. People get the answer on the results page and move on. That's zero-click search, and it was happening before AI Overviews made it more common. I wrote about it in [zero-click rankings](/notes/zero-click-rankings-title-tags).
+One agency site we work on has an informational article about how far the town is from Orlando. Over 17 months it collected 87,354 impressions at a 0.13% click-through rate. People get the answer on the results page and move on. That's zero-click search, and it was happening before AI Overviews made it more common. We wrote about it in [zero-click rankings](/notes/zero-click-rankings-title-tags).
 
 On sites like this, the exposure is concentrated in informational questions with short answers.
 
@@ -61,7 +61,7 @@ Least exposed:
 
 **Confirm by hand.** Take the 20 queries with the biggest click drops, search them in an incognito window, and note whether an AI Overview appears and who it cites. Repeat next month; Overviews appear and disappear.
 
-**Try to be the cited source.** If an Overview answers the question anyway, you want to be one of its links. Google says pages need to be indexed and snippet-eligible, with no special requirements. In my own study, Google's Overviews cited pages that weren't in the top ten 97.8% of the time, so a well-structured page answering the exact sub-question can win a citation without ranking first. [How to appear in AI Overviews](/notes/how-to-appear-in-google-ai-overviews).
+**Try to be the cited source.** If an Overview answers the question anyway, you want to be one of its links. Google says pages need to be indexed and snippet-eligible, with no special requirements. In our own study, Google's Overviews cited pages that weren't in the top ten 97.8% of the time, so a well-structured page answering the exact sub-question can win a citation without ranking first. [How to appear in AI Overviews](/notes/how-to-appear-in-google-ai-overviews).
 
 **Give the click a reason.** Rewrite titles and descriptions to promise what the summary can't: local prices, a calculator, photos of real jobs, a checklist to download. "How long does a roof replacement take? Our schedule from real Tampa jobs" offers something a summary can't.
 
@@ -79,4 +79,4 @@ Least exposed:
 
 Open Search Console, compare the last three months with the previous period, and sort pages by click change. If the top losers are informational and their positions held, you're looking at answers on the results page, not a penalty. Then pick the five buying-intent pages that matter most and improve them first.
 
-My [AI search optimization](/ai-search-optimization) service runs this diagnosis, tracks AI Overviews alongside ChatGPT, Claude and Perplexity monthly, and builds the pages that get cited. $1,000 a month, no contract.
+Our [AI search optimization](/ai-search-optimization) service runs this diagnosis, tracks AI Overviews alongside ChatGPT, Claude and Perplexity monthly, and builds the pages that get cited. $1,000 a month, no contract.

@@ -37,7 +37,7 @@ LSA fits a roofer who needs calls this month and has budget for it. A new busine
 
 ![A roofer on a residential roof working with a safety rope](/notes/photos/local-services-ads-vs-seo-roofers-1.webp "Photo: Raze Solar on Unsplash")
 
-I won't quote an LSA cost per lead. It varies by trade, market and season, and the only number that matters is the one in your own account. Some leads won't be real jobs (wrong service, wrong area, spam), so check the lead list every week and mark which ones turned into work.
+We won't quote an LSA cost per lead. It varies by trade, market and season, and the only number that matters is the one in your own account. Some leads won't be real jobs (wrong service, wrong area, spam), so check the lead list every week and mark which ones turned into work.
 
 Keep in mind that LSA leads only come while you're paying. Pause the budget and they stop.
 
@@ -45,20 +45,20 @@ Keep in mind that LSA leads only come while you're paying. Pause the budget and 
 
 SEO takes longer to start and keeps working once it does. The pages and the Business Profile belong to you, and they keep showing for searches whether you're spending that month or not.
 
-On a Florida roofing site I work on, average position went from 47.9 to 14.9 when I compared October 2025 to August 2026 with the eleven months before. Impressions went from 5,410 to 139,639, and clicks from 34 to 266. 893 of the 1,099 searches it now shows for didn't show it at all the year before. The work was title and meta rewrites, a service page per town, FAQ and service schema, and long-form articles on the questions Florida homeowners ask after storms. The full case is on my [roofing SEO page](/roofing-seo).
+On a Florida roofing site we work on, average position went from 47.9 to 14.9 when we compared October 2025 to August 2026 with the eleven months before. Impressions went from 5,410 to 139,639, and clicks from 34 to 266. 893 of the 1,099 searches it now shows for didn't show it at all the year before. The work was title and meta rewrites, a service page per town, FAQ and service schema, and long-form articles on the questions Florida homeowners ask after storms. The full case is on our [roofing SEO page](/roofing-seo).
 
-That growth took months. The pages it built are still there if spending pauses, which is why I compared paying for leads with owning your site in [shared leads vs your own website](/notes/shared-leads-vs-your-own-website).
+That growth took months. The pages it built are still there if spending pauses, which is why we compared paying for leads with owning your site in [shared leads vs your own website](/notes/shared-leads-vs-your-own-website).
 
 ## The map pack is the shared ground
 
-Both approaches lean on reviews and an accurate business listing. If your Google Business Profile is thin, fix it first. My [Business Profile setup for roofers](/notes/google-business-profile-for-roofers) covers categories, service areas and the name rules, and [getting more Google reviews](/notes/google-reviews-for-roofers) covers how to ask within Google's and the FTC's rules.
+Both approaches lean on reviews and an accurate business listing. If your Google Business Profile is thin, fix it first. Our [Business Profile setup for roofers](/notes/google-business-profile-for-roofers) covers categories, service areas and the name rules, and [getting more Google reviews](/notes/google-reviews-for-roofers) covers how to ask within Google's and the FTC's rules.
 
 ## Track both, separately
 
-You can't compare the two without numbers. LSA leads show in the LSA dashboard. Website calls and form fills need their own tracking: a GA4 key event for phone taps, Business Profile calls counted on their own, and forms tested monthly. My [call tracking for contractors](/notes/call-tracking-for-contractors) note lays out how to keep each source separate.
+You can't compare the two without numbers. LSA leads show in the LSA dashboard. Website calls and form fills need their own tracking: a GA4 key event for phone taps, Business Profile calls counted on their own, and forms tested monthly. Our [call tracking for contractors](/notes/call-tracking-for-contractors) note lays out how to keep each source separate.
 
 Then, each month, put three numbers side by side for each channel: leads, booked jobs, and cost per booked job. For SEO, the cost is your monthly fee. For LSA, it's the ad spend. After a few months you'll know which one is paying for itself in your market.
 
-## What I'd do this week
+## What we'd do this week
 
-If you're running LSA now, export the last 90 days of leads and mark which ones became jobs. If you aren't tracking website calls yet, start there before you change anything else. When you're ready to look at the SEO side, my [pricing page](/pricing) lists what each plan includes.
+If you're running LSA now, export the last 90 days of leads and mark which ones became jobs. If you aren't tracking website calls yet, start there before you change anything else. When you're ready to look at the SEO side, our [pricing page](/pricing) lists what each plan includes.

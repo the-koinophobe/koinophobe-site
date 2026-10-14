@@ -6,7 +6,7 @@ draft: false
 topic: technical
 seo_title: "How to do an SEO audit yourself: a one-afternoon checklist"
 seo_description: "A do-it-yourself SEO audit for small business sites using free tools: indexing, technical checks, pages, Business Profile, tracking and AI crawler access."
-excerpt: "You can find most of what's holding a small business site back in one afternoon with free tools. The checklist I'd give a business owner: indexing, technical basics, your pages, your Business Profile, tracking and AI crawler access, with what good looks like for each."
+excerpt: "You can find most of what's holding a small business site back in one afternoon with free tools. The checklist we'd give a business owner: indexing, technical basics, your pages, your Business Profile, tracking and AI crawler access, with what good looks like for each."
 cover: /notes/photos/diy-seo-audit-checklist-cover.webp
 cover_alt: "Someone checking items off a checklist"
 cover_credit: "Photo: Jakub Żerdzicki on Unsplash"
@@ -23,7 +23,7 @@ faq:
 
 Most problems that hold back a small business website can be found in one afternoon with free tools. You need Google Search Console, a browser, your phone and a list.
 
-This is the list I'd give a business owner. For each check, there's what to do and what good looks like. Write down everything that fails, then sort the list at the end.
+This is the list we'd give a business owner. For each check, there's what to do and what good looks like. Write down everything that fails, then sort the list at the end.
 
 ## Indexing: is Google keeping your pages?
 
@@ -75,7 +75,7 @@ This is the list I'd give a business owner. For each check, there's what to do a
 
 ## Tracking: are calls and forms being counted?
 
-**Submit a test lead through every form.** Good: it arrives within a minute. In July 2026 I found a client's forms had been failing since March because of an email setting, and nobody noticed for four months.
+**Submit a test lead through every form.** Good: it arrives within a minute. In July 2026 we found a client's forms had been failing since March because of an email setting, and nobody noticed for four months.
 
 **Tap the phone number on your site from your phone.** Good: it dials.
 
@@ -97,4 +97,4 @@ Then work from the top.
 
 ## When to get help
 
-If your list is short and the fixes are clear, you may not need anyone. If it's long, or the problems are technical (redirects, canonicals, rendering), that's where an audit pays for itself. My Site Audit is $750, delivered in five business days, ranked by what affects calls, and credited in full if you start a monthly plan within 30 days. It's on the [pricing page](/pricing), and [what is technical SEO](/notes/what-is-technical-seo) covers the background for the checks above.
+If your list is short and the fixes are clear, you may not need anyone. If it's long, or the problems are technical (redirects, canonicals, rendering), that's where an audit pays for itself. Our Site Audit is $750, delivered in five business days, ranked by what affects calls, and credited in full if you start a monthly plan within 30 days. It's on the [pricing page](/pricing), and [what is technical SEO](/notes/what-is-technical-seo) covers the background for the checks above.

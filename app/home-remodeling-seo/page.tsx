@@ -113,7 +113,7 @@ const DIFFERENT = [
   {
     t: "Sold with photos",
     b: "Photos close the job, and full-size photos slow the site on a phone. Every image gets resized, compressed to WebP and captioned with the job and the town.",
-    link: { href: "/notes/image-optimization-contractor-websites", label: "How I optimize images" },
+    link: { href: "/notes/image-optimization-contractor-websites", label: "How we optimize images" },
   },
   {
     t: "Won at the consult",
@@ -152,7 +152,7 @@ const FAQ: FaqItem[] = [
   },
   {
     q: "How do I get ChatGPT to recommend my remodeling company?",
-    a: "Make sure AI crawlers can read your site, rank on Google for the same questions, publish pages that answer cost, timeline and permit questions with your own numbers, and get mentioned on the sites assistants read, such as Google reviews, Houzz, the BBB and local news. In my 96-run citation study, a third to half of the companies AI assistants named also ranked in Google's top ten. Nobody can guarantee a recommendation, so I measure the answers every month with repeated runs.",
+    a: "Make sure AI crawlers can read your site, rank on Google for the same questions, publish pages that answer cost, timeline and permit questions with your own numbers, and get mentioned on the sites assistants read, such as Google reviews, Houzz, the BBB and local news. In our 96-run citation study, a third to half of the companies AI assistants named also ranked in Google's top ten. Nobody can guarantee a recommendation, so we measure the answers every month with repeated runs.",
   },
   {
     q: "Should a remodeler put prices on the website?",
@@ -181,9 +181,9 @@ const FAQ: FaqItem[] = [
 ];
 
 const CALL = [
-  "I look at your site, your Business Profile and what ChatGPT says about remodelers in your area before we talk.",
-  "You get the first few pages I'd build, in order.",
-  "If it isn't a fit, I'll tell you that on the call.",
+  "We look at your site, your Business Profile and what ChatGPT says about remodelers in your area before we talk.",
+  "You get the first few pages we'd build, in order.",
+  "If it isn't a fit, we'll tell you that on the call.",
 ];
 
 const serviceLd = {
@@ -235,7 +235,7 @@ const pageLd = {
   isPartOf: { "@id": "https://koinophobe.com/#website" },
   about: { "@id": `${PAGE_URL}#service` },
   primaryImageOfPage: { "@type": "ImageObject", url: "https://koinophobe.com/site/remodeling-hero.webp", width: 1280, height: 960 },
-  author: { "@id": "https://koinophobe.com/#michael" },
+  publisher: { "@id": "https://koinophobe.com/#organization" },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
@@ -269,7 +269,7 @@ export default function RemodelingPage() {
             <h1 className="t-h1 mt-5 max-w-[18ch]">Home remodeling SEO, for Google and for ChatGPT</h1>
             <p className="t-lead mt-6 max-w-[58ch]">
               A kitchen or bathroom remodel gets researched for weeks before anyone calls. Homeowners search costs,
-              look at photos, read reviews, and more of them now ask ChatGPT who to hire. I build the pages they find
+              look at photos, read reviews, and more of them now ask ChatGPT who to hire. We build the pages they find
               along the way, run your Business Profile, and count the consults so you can see which came from search.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
@@ -292,7 +292,7 @@ export default function RemodelingPage() {
             <div className="float-card float-in bottom-[-6%] left-0 w-[250px] p-4 sm:left-[-8%]" style={{ animationDelay: "0.4s" }}>
               <p className="font-mono text-[12px] text-muted">Companies AI names that rank on Google</p>
               <p className="mt-2 font-display text-[1.65rem] leading-none tracking-tight">34% to 54%</p>
-              <p className="mt-1.5 text-[12.5px] leading-snug text-muted">From my 96-run citation study</p>
+              <p className="mt-1.5 text-[12.5px] leading-snug text-muted">From our 96-run citation study</p>
             </div>
           </div>
         </div>
@@ -324,11 +324,11 @@ export default function RemodelingPage() {
         </div>
       </section>
 
-      {/* ── What I do ───────────────────────────────────────────── */}
+      {/* ── What we do ───────────────────────────────────────────── */}
       <section className="section section-tint">
         <div className="container-pad">
           <Reveal className="max-w-3xl">
-            <p className="eyebrow">What I do for remodelers</p>
+            <p className="eyebrow">What we do for remodelers</p>
             <h2 className="t-h2 mt-5">Six things every remodeling site needs</h2>
           </Reveal>
           <div data-anim="cards" className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -484,7 +484,7 @@ export default function RemodelingPage() {
         <div className="container-pad">
           <Reveal className="max-w-3xl">
             <p className="eyebrow">What it costs</p>
-            <h2 className="t-h2 mt-5">Prices for remodelers, in US dollars</h2>
+            <h2 className="t-h2 mt-5">Prices for remodelers, on the page</h2>
           </Reveal>
           <div data-anim="cards" className="mt-10 grid gap-5 md:grid-cols-3">
             {[
@@ -523,7 +523,7 @@ export default function RemodelingPage() {
             <p className="eyebrow">The closest proof</p>
             <h2 className="t-h2 mt-5">The same work on a roofing contractor&rsquo;s site</h2>
             <p className="t-lead mt-4 max-w-[62ch]">
-              I don&rsquo;t have a remodeler&rsquo;s Search Console to open up for you yet. The nearest match is this
+              We don&rsquo;t have a remodeler&rsquo;s Search Console to open up for you yet. The nearest match is this
               roofer: a homeowner making a big decision about their house, and the same town pages, Business Profile
               work and tracking. More on the{" "}
               <Link href="/roofing-seo" className="text-ink underline underline-offset-4">roofing SEO page</Link> and the{" "}

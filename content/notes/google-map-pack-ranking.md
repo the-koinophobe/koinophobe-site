@@ -19,7 +19,7 @@ faq:
 
 Search `roofer near me` or `pool deck repair` on a phone and the first real results are usually three businesses under a map. That block is the map pack, and on a lot of local searches it sits above the regular website results.
 
-People ask me how to get into it as if there's a trick. Google has published how it works, so I start there.
+People ask us how to get into it as if there's a trick. Google has published how it works, so we start there.
 
 ## Google's three factors
 
@@ -43,9 +43,9 @@ This is where most of the work is, and most of it is in your own profile.
 
 **Service areas.** If customers don't come to you, hide the address and set service areas instead. Google allows up to 20, entered as cities or ZIP codes, within about two hours' drive of your base. [Service area businesses on Google](/notes/service-area-business-google-business-profile) covers the details.
 
-**Your website.** The profile links to it, and I treat the two as one listing. Each town you list should have a real page on the site about the work you do there. Pages that are the same text with the town swapped are doorway pages under Google's spam policy, so I wrote up how to do them properly in [roofing service area pages](/notes/roofing-service-area-pages).
+**Your website.** The profile links to it, and we treat the two as one listing. Each town you list should have a real page on the site about the work you do there. Pages that are the same text with the town swapped are doorway pages under Google's spam policy, so we wrote up how to do them properly in [roofing service area pages](/notes/roofing-service-area-pages).
 
-Google also says businesses with complete and accurate information are more likely to show up. Hours, phone, photos, description: fill them all in. My [Business Profile setup for roofers](/notes/google-business-profile-for-roofers) walks through every field.
+Google also says businesses with complete and accurate information are more likely to show up. Hours, phone, photos, description: fill them all in. Our [Business Profile setup for roofers](/notes/google-business-profile-for-roofers) walks through every field.
 
 ## Distance: mostly out of your hands
 
@@ -55,7 +55,7 @@ What you can do is make the towns you list match the towns on your website and t
 
 ## Prominence: reviews, links and listings
 
-**Reviews.** Ask every customer and reply to the reviews you get, within the rules. Google prohibits offering incentives for reviews and asking only happy customers. The FTC's fake reviews rule has been in effect since October 21, 2024. I covered the asking side in [getting more Google reviews as a roofer](/notes/google-reviews-for-roofers).
+**Reviews.** Ask every customer and reply to the reviews you get, within the rules. Google prohibits offering incentives for reviews and asking only happy customers. The FTC's fake reviews rule has been in effect since October 21, 2024. We covered the asking side in [getting more Google reviews as a roofer](/notes/google-reviews-for-roofers).
 
 **Links and mentions.** Google names links to your business as part of prominence. Local sponsorships, supplier pages, trade associations and local news are the realistic sources for a contractor.
 
@@ -71,12 +71,12 @@ What you can do is make the towns you list match the towns on your website and t
 
 ## What the near-me data shows
 
-I pulled every search containing "near me" from Search Console for five sites I work on, April 2025 to August 2026. There were 1,250 of them. 780 showed one of those sites on page one, 191 in the top three, and they brought in 343 clicks between them.
+We pulled every search containing "near me" from Search Console for five sites we work on, April 2025 to August 2026. There were 1,250 of them. 780 showed one of those sites on page one, 191 in the top three, and they brought in 343 clicks between them.
 
-Those are website rankings, which sit below the map. Plenty of near-me searches get settled in the map pack before anyone scrolls that far, so a page-one ranking doesn't always mean clicks. The full breakdown is in [what 1,250 near-me searches taught me](/notes/near-me-searches-local-seo-data). The short version: the sites that win the most near-me searches have the town on the page, a page per service, and a Business Profile that agrees with the website.
+Those are website rankings, which sit below the map. Plenty of near-me searches get settled in the map pack before anyone scrolls that far, so a page-one ranking doesn't always mean clicks. The full breakdown is in [what 1,250 near-me searches taught us](/notes/near-me-searches-local-seo-data). The short version: the sites that win the most near-me searches have the town on the page, a page per service, and a Business Profile that agrees with the website.
 
 ## Where to start this week
 
 Open your Business Profile and check four things: the primary category, the services list, the service areas, and whether the name is your real name. Then search your main service plus your town on your phone and note who's in the top three and what category shows under each name.
 
-If you'd like me to go through the profile and the website together, the [Site Audit on my pricing page](/pricing) covers both and ends with a list of what I'd fix first.
+If you'd like us to go through the profile and the website together, the [Site Audit on our pricing page](/pricing) covers both and ends with a list of what we'd fix first.

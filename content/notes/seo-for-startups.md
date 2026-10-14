@@ -6,7 +6,7 @@ draft: false
 topic: startups
 seo_title: "SEO for startups: when to start and what to do first"
 seo_description: "When a startup should start SEO, the pages to build first, the technical mistakes that cost months later, and how AI assistants change the order."
-excerpt: "Most founders start SEO too late or start it with the wrong pages. When to begin, the five pages to build before a blog, the technical decisions that are expensive to undo, and what my citation study says about AI assistants."
+excerpt: "Most founders start SEO too late or start it with the wrong pages. When to begin, the five pages to build before a blog, the technical decisions that are expensive to undo, and what our citation study says about AI assistants."
 cover: /notes/photos/seo-for-startups-cover.webp
 cover_alt: "A small team working around a table with laptops"
 cover_credit: "Photo: Annie Spratt on Unsplash"
@@ -21,9 +21,9 @@ faq:
 
 ![A startup's first pages laid out by when to build them, with the blog last](/notes/illustrations/seo-for-startups.webp)
 
-Founders usually ask me about SEO at one of two moments. Either it's before launch and they want to know if it's worth anything yet, or it's 18 months in, paid acquisition is getting expensive, and the marketing site has 40 pages Google has never shown anyone.
+Founders usually ask us about SEO at one of two moments. Either it's before launch and they want to know if it's worth anything yet, or it's 18 months in, paid acquisition is getting expensive, and the marketing site has 40 pages Google has never shown anyone.
 
-The second conversation is harder, so here's what I'd tell you at the first one.
+The second conversation is harder, so here's what we'd tell you at the first one.
 
 ## When to start
 
@@ -55,15 +55,15 @@ Before a blog, build the pages buyers search for when they're close to choosing:
 - **Integration pages** for the tools you connect to, one each, with what the integration does and how to set it up.
 - **A pricing page Google can read,** with prices in the HTML, what each plan includes, and the questions people ask before buying.
 
-In [my citation study](/notes/ai-cited-vs-ranked-page), head-to-head questions ("X vs Y for Z") drew answers that named 5 to 12 companies, against 13 to 18 for broader questions. Fewer names means each one carries more weight, which is why comparison pages are worth building early. [SaaS comparison pages](/notes/saas-comparison-pages) covers how to write them without sounding like an ad.
+In [our citation study](/notes/ai-cited-vs-ranked-page), head-to-head questions ("X vs Y for Z") drew answers that named 5 to 12 companies, against 13 to 18 for broader questions. Fewer names means each one carries more weight, which is why comparison pages are worth building early. [SaaS comparison pages](/notes/saas-comparison-pages) covers how to write them without sounding like an ad.
 
 ## What to measure from day one
 
 Connect Search Console and track sign-ups by landing page in your analytics. In the first months, watch impressions by page more than clicks: it's the earliest sign a page is being considered for queries. Clicks follow later.
 
-Also keep a short list of the questions your buyers ask AI assistants, and check them monthly. In my study, between 34% and 54% of the companies assistants named also ranked in Google's top ten for the same question, depending on the assistant. Ranking still gets you into the conversation. [How to track AI search visibility](/notes/track-ai-search-visibility) has the method.
+Also keep a short list of the questions your buyers ask AI assistants, and check them monthly. In our study, between 34% and 54% of the companies assistants named also ranked in Google's top ten for the same question, depending on the assistant. Ranking still gets you into the conversation. [How to track AI search visibility](/notes/track-ai-search-visibility) has the method.
 
-## What I'd skip early
+## What we'd skip early
 
 - **A general blog about your industry.** Posts like "10 productivity tips" attract readers who will never buy. Write for buyers first.
 - **Hundreds of templated pages.** Google's scaled content abuse policy covers "many pages generated for the primary purpose of manipulating search rankings and not helping users." A few dozen pages with something real on each beat a thousand with a swapped keyword.
@@ -72,4 +72,4 @@ Also keep a short list of the questions your buyers ask AI assistants, and check
 
 This week: verify Search Console, check that your homepage and pricing page render without JavaScript, and ask five customers what they searched before they found you. The free [AI crawler check](/ai-search-optimization#check) handles the rendering test in ten seconds.
 
-If you'd like the pages built and the fixes shipped as pull requests, that's my [SaaS SEO and AI search plan](/saas-seo): $1,000 a month, five clients at a time, no contract.
+If you'd like the pages built and the fixes shipped as pull requests, that's our [SaaS SEO and AI search plan](/saas-seo): $1,000 a month, five clients at a time, no contract.

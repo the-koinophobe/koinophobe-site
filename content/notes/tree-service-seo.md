@@ -17,7 +17,7 @@ faq:
     a: "Months before storm season. New pages can take weeks or months to be indexed and settle in rankings, so a storm page written after a storm hits is usually too late for that storm."
 ---
 
-Most of the sites I work on are roofing, pool deck, lawn and shutter companies. Tree work isn't one of them. Tree service searches run on the same rules, and they share a lot with roofing, because both trades get flooded with calls after a storm. So this is the setup I'd build for a tree company, and the results I mention come from the trades I do work in.
+Most of the sites we work on are roofing, pool deck, lawn and shutter companies. Tree work isn't one of them. Tree service searches run on the same rules, and they share a lot with roofing, because both trades get flooded with calls after a storm. So this is the setup we'd build for a tree company, and the results we mention come from the trades we do work in.
 
 ## Two kinds of demand
 
@@ -50,15 +50,15 @@ Credentials need more care. Only say "ISA Certified Arborist" if someone on your
 
 ## Before and after photos
 
-Tree work is easy to photograph. Take one photo from the same spot before you start and one when the yard is cleaned up. Put each pair on the matching service page and town page with a few lines underneath: the job, the town, the size of the tree, how long it took. File names like `tree-removal-[town]-before.webp` give Google something to match. My note on [before and after photos](/notes/before-after-gallery-seo) has the full routine, and the same photos belong on your Google Business Profile as jobs finish.
+Tree work is easy to photograph. Take one photo from the same spot before you start and one when the yard is cleaned up. Put each pair on the matching service page and town page with a few lines underneath: the job, the town, the size of the tree, how long it took. File names like `tree-removal-[town]-before.webp` give Google something to match. Our note on [before and after photos](/notes/before-after-gallery-seo) has the full routine, and the same photos belong on your Google Business Profile as jobs finish.
 
 ## Time pages to the weather
 
 Storm pages have to be live before the storm. A new page can take weeks or months to be indexed and settle into a position, so write the emergency storm cleanup page well ahead of your storm season. On the Atlantic and Gulf coasts that's hurricane season, June 1 to November 30, with the peak around September 10. Inland, it depends on your region's wind, ice and thunderstorm patterns.
 
-Seasonal articles can pull more weight than service pages in the right window. A hurricane shutter company I work with got 37 of its 51 clicks in one 28-day window from a single seasonal article about hurricane history. For a tree company, the matching article answers what homeowners ask before and after a storm. My [storm damage roofing pages](/notes/storm-damage-roofing-pages) note covers the page types for roofers, and the planning carries over.
+Seasonal articles can pull more weight than service pages in the right window. A hurricane shutter company we work with got 37 of its 51 clicks in one 28-day window from a single seasonal article about hurricane history. For a tree company, the matching article answers what homeowners ask before and after a storm. Our [storm damage roofing pages](/notes/storm-damage-roofing-pages) note covers the page types for roofers, and the planning carries over.
 
-Planned trimming has its own timing. Many homeowners book it for late fall and winter, when trees are dormant and branches are easier to see. Open Search Console's Performance report, compare the same months last year, and publish or refresh each page a couple of months before its searches rise. The [seasonal content calendar](/notes/seasonal-content-calendar-home-services) lays out how I plan that.
+Planned trimming has its own timing. Many homeowners book it for late fall and winter, when trees are dormant and branches are easier to see. Open Search Console's Performance report, compare the same months last year, and publish or refresh each page a couple of months before its searches rise. The [seasonal content calendar](/notes/seasonal-content-calendar-home-services) lays out how we plan that.
 
 ## Town pages and the profile
 
@@ -68,4 +68,4 @@ On the Business Profile, set up to 20 service areas by city or ZIP, use your rea
 
 ## Next step
 
-Build the emergency storm cleanup page first, before next storm season, then tree removal. If you'd like help with the setup, [send me your site](/contact) and I'll reply the same business day.
+Build the emergency storm cleanup page first, before next storm season, then tree removal. If you'd like help with the setup, [send us your site](/contact) and we'll reply the same business day.
