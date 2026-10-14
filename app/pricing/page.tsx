@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Ban, CalendarClock, Check, KeyRound, Landmark, Video } from "lucide-react";
+import { ArrowRight, Ban, CalendarClock, Check, KeyRound, Landmark, ShieldCheck, Video } from "lucide-react";
 import { Availability } from "@/components/Availability";
 import { RelatedNotes } from "@/components/RelatedNotes";
 import { getNote } from "@/lib/notes";
@@ -8,7 +8,7 @@ import { BookCta, BookNote, EmailCta } from "@/components/Cta";
 import { MobileCta } from "@/components/MobileCta";
 import { Reveal } from "@/components/Reveal";
 import { Stagger } from "@/components/Stagger";
-import { agency, monthly, oneTime, startup, type Plan } from "@/lib/pricing";
+import { agency, guarantee, monthly, oneTime, startup, type Plan } from "@/lib/pricing";
 import { site } from "@/lib/site";
 import { FaqSchema } from "@/components/Faq";
 
@@ -22,6 +22,11 @@ export const metadata: Metadata = {
 };
 
 const TERMS = [
+  {
+    icon: <ShieldCheck size={19} aria-hidden />,
+    t: `${guarantee.name}.`,
+    b: guarantee.terms,
+  },
   {
     icon: <KeyRound size={19} aria-hidden />,
     t: "You own every account.",
@@ -50,8 +55,12 @@ const FAQ = [
     a: "If you just want your calls and forms counted, the $300 Tracking Fix. If you don't know what else is wrong, start with the audit. If you know what's broken and want it fixed once, the Setup Sprint. If you want someone on it every month, Growth. The intro call is free if you'd rather ask us.",
   },
   {
+    q: "Is there a money-back guarantee?",
+    a: `Yes. ${guarantee.terms}`,
+  },
+  {
     q: "Do you guarantee rankings?",
-    a: "No, and be careful with anyone who does. Nobody controls Google. What you get is the work in your plan done every month, and a report that shows you what changed and what it did to your clicks and calls.",
+    a: "No, and be careful with anyone who does. Nobody controls Google. What we guarantee is your money: if you're not happy within 30 days of your first payment, you get all of it back. After that you get the work in your plan done every month, and a report that shows what changed and what it did to your clicks and calls.",
   },
   {
     q: "What happens if I cancel?",
@@ -157,8 +166,9 @@ export default function PricingPage() {
               SEO pricing for home service businesses, before the call
             </h1>
             <p className="t-lead mt-6 max-w-[58ch]">
-              Every price we charge is on this page. If you&rsquo;re not sure which one fits, the intro call is
-              free and we&rsquo;ll tell you.
+              Every price we charge is on this page, and your first payment on any of them is covered by a 100%
+              money-back guarantee. If you&rsquo;re not sure which one fits, the intro call is free and we&rsquo;ll
+              tell you.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <BookCta from="pricing_hero" />
@@ -169,7 +179,19 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="container-pad pt-6">
+      <section id="guarantee" className="container-pad scroll-mt-28 pt-6">
+        <div className="card flex flex-col gap-5 border-brand/30 bg-brand/[0.05] p-6 sm:flex-row sm:items-start sm:gap-6 sm:p-8">
+          <span className="icon-tile flex-none">
+            <ShieldCheck size={22} aria-hidden />
+          </span>
+          <div>
+            <h2 className="t-h3 !text-[1.5rem]">{guarantee.name}</h2>
+            <p className="mt-2 max-w-[75ch] text-[16px] leading-relaxed text-ink/85">{guarantee.terms}</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="container-pad pt-16">
         <h2 className="t-h3">Start here: one-time</h2>
         <p className="mt-1.5 text-[15px] text-muted">A free call, an audit, or a one-off fix.</p>
         <Stagger className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">

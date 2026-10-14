@@ -3,6 +3,7 @@ import { Check, Linkedin } from "lucide-react";
 import { site } from "@/lib/site";
 import { Reveal } from "./Reveal";
 import { BookCta, BookNote, EmailCta } from "./Cta";
+import { GuaranteeLine } from "./Guarantee";
 
 const CALL = [
   "We look at your site and your Google Business Profile before we talk.",
@@ -39,6 +40,7 @@ export function Availability({ call = CALL }: { call?: string[] } = {}) {
             <EmailCta from="availability" tone="ghost-light" />
           </div>
           <BookNote light className="mt-4" />
+          <GuaranteeLine light className="mt-6 max-w-[52ch]" />
         </Reveal>
 
         <Reveal delay={0.1}>

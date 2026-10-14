@@ -158,6 +158,20 @@ export const agency = [
   },
 ];
 
+/**
+ * The money-back guarantee. Every mention of it on the site reads from here,
+ * so the promise and its terms can never say different things. Covers the
+ * first payment on anything: a one-time project in full, or the first month
+ * of any monthly plan, agency rates included.
+ */
+export const guarantee = {
+  name: "100% money-back guarantee",
+  days: 30,
+  short: "Not happy within 30 days of your first payment? You get all of it back.",
+  terms:
+    "Ask within 30 days of your first payment and we refund 100% of it: the full price of a one-time project, or the first month of any monthly plan, agency rates included. No forms, no conditions, and no questions you have to answer. A refund ends the plan, minimum term included. Later monthly payments aren't refundable, but you can still cancel on the normal terms.",
+};
+
 /** Lowest monthly price, for "plans from" lines elsewhere on the site. */
 export const monthlyFrom = Math.min(...monthly.map((p) => p.amount));
 
@@ -197,5 +211,5 @@ export const startup: Plan & {
   note: "Measured, fixed and written every month. Five clients at a time.",
   extras: ["A free tool when your category has room for one"],
   termsLead: "No contract.",
-  terms: "If you're not satisfied at any point, tell us and we stop 30 days later.",
+  terms: "If you're not satisfied at any point, tell us and we stop 30 days later. Your first month is covered by a 100% money-back guarantee.",
 };

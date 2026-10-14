@@ -8,6 +8,7 @@ import { BookCta, BookNote, PageCta } from "@/components/Cta";
 import { RelatedNotes } from "@/components/RelatedNotes";
 import { MobileCta } from "@/components/MobileCta";
 import { MoreServices } from "@/components/MoreServices";
+import { GuaranteeLine } from "@/components/Guarantee";
 import { Reveal } from "@/components/Reveal";
 import { cases } from "@/lib/gsc";
 import { projects } from "@/lib/content";
@@ -70,7 +71,7 @@ const ROOF_FAQ: FaqItem[] = [
   },
   {
     q: "How much does roofing SEO cost?",
-    a: "The Growth plan is $1,500 a month and covers two new town or service pages a month plus Business Profile work. If the site needs fixing first, the Setup Sprint is a one-time $1,800.",
+    a: "The Growth plan is $1,500 a month and covers two new town or service pages a month plus Business Profile work. If the site needs fixing first, the Setup Sprint is a one-time $1,800. The first payment on either is covered by a 100% money-back guarantee for 30 days.",
   },
   {
     q: "Should a roofer run Local Services Ads or do SEO?",
@@ -145,6 +146,7 @@ export default function RoofingPage() {
             </p>
             <PageCta href="/pricing" label="Compare plans" from="roofing_plans" size="md" />
           </div>
+          <GuaranteeLine className="mt-5" />
         </div>
       </section>
 

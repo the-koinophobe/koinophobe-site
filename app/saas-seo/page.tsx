@@ -181,7 +181,7 @@ const SAAS_FAQ: FaqItem[] = [
   },
   {
     q: "What if we're not happy with the work?",
-    a: "Tell us and we stop 30 days later. There's no contract and no minimum term, and every page, pull request and account stays yours.",
+    a: "Tell us and we stop 30 days later. There's no contract and no minimum term, and every page, pull request and account stays yours. If it's within 30 days of your first payment, you also get that month back in full under our 100% money-back guarantee.",
   },
 ];
 
@@ -287,7 +287,7 @@ export default function SaasSeoPage() {
               </a>
             </div>
             <p className="mt-4 text-[13.5px] text-muted">
-              {startup.price} a month &middot; no contract &middot; {seatsLine}
+              {startup.price} a month &middot; no contract &middot; 100% money-back guarantee &middot; {seatsLine}
             </p>
           </Reveal>
 

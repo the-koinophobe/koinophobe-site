@@ -128,7 +128,7 @@ const FAQ: FaqItem[] = [
   },
   {
     q: "How much does it cost?",
-    a: "$1,000 a month, no contract. If you're not satisfied, tell us and we stop 30 days later. Every month includes citation tracking across four assistants with three runs each, 12 in-depth pages, 50+ fixes, a Friday changelog and a month-end report.",
+    a: "$1,000 a month, no contract, and the first month is covered by a 100% money-back guarantee for 30 days. If you're not satisfied later on, tell us and we stop 30 days later. Every month includes citation tracking across four assistants with three runs each, 12 in-depth pages, 50+ fixes, a Friday changelog and a month-end report.",
   },
   {
     q: "What if I run a local home service business?",
@@ -199,7 +199,7 @@ export default function AiSearchPage() {
               </a>
             </div>
             <p className="mt-4 text-[13.5px] text-muted">
-              {startup.price} a month &middot; no contract &middot; {seatsLine}
+              {startup.price} a month &middot; no contract &middot; 100% money-back guarantee &middot; {seatsLine}
             </p>
           </Reveal>
           <div className="relative mx-auto w-full max-w-[560px] lg:mx-0">

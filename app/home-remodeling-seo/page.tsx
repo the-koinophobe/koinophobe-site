@@ -19,6 +19,7 @@ import { BookCta, BookNote, PageCta, TextCta } from "@/components/Cta";
 import { Faq, type FaqItem } from "@/components/Faq";
 import { MobileCta } from "@/components/MobileCta";
 import { MoreServices } from "@/components/MoreServices";
+import { GuaranteeLine } from "@/components/Guarantee";
 import { Reveal } from "@/components/Reveal";
 import { cases } from "@/lib/gsc";
 import { getNote } from "@/lib/notes";
@@ -176,7 +177,7 @@ const FAQ: FaqItem[] = [
   },
   {
     q: "How much does SEO cost for a remodeler?",
-    a: `The Growth plan is ${growth.price} a month and covers two new service, town or project pages a month plus Business Profile work. If the site needs fixing first, the Setup Sprint is a one-time ${sprint.price}. If you only need calls and consult forms counted, the Tracking Fix is ${tracking.price}, paid after you see it working.`,
+    a: `The Growth plan is ${growth.price} a month and covers two new service, town or project pages a month plus Business Profile work. If the site needs fixing first, the Setup Sprint is a one-time ${sprint.price}. If you only need calls and consult forms counted, the Tracking Fix is ${tracking.price}, paid after you see it working. The first payment on any of them is covered by a 100% money-back guarantee for 30 days.`,
   },
 ];
 
@@ -513,6 +514,7 @@ export default function RemodelingPage() {
             </Link>{" "}
             is {startup.price} a month, no contract. Monthly local plans have a three-month minimum.
           </p>
+          <GuaranteeLine className="mt-5" />
         </div>
       </section>
 

@@ -14,7 +14,7 @@ faq:
   - q: "What are the red flags when hiring a roofing SEO company?"
     a: "A promise of first place on Google, the provider owning your accounts, twelve-month lock-ins, reports with rankings and no calls, and no one who can tell you what they'll do this month."
   - q: "What do you charge for roofing SEO?"
-    a: "A $750 audit, a one-time $1,800 setup, and monthly plans at $600 and $1,500, with multi-location from $2,500. You own every account, the minimum is three months, and after that it's month to month."
+    a: "A $750 audit, a one-time $1,800 setup, and monthly plans at $600 and $1,500, with multi-location from $2,500. You own every account, the minimum is three months, and after that it's month to month. The first payment on any plan is covered by a 100% money-back guarantee for 30 days."
 ---
 
 ![Average monthly SEO retainers in the US: freelancers $1,349, local SEO $1,557, local agencies $1,819, all agencies $3,209](/notes/illustrations/roofing-seo-cost.webp)
@@ -62,7 +62,7 @@ That last part matters. If you can't tell which calls came from Google, you can'
 
 ## What we charge
 
-Our prices are on the [pricing page](/pricing): a $750 audit, a one-time $1,800 setup, and monthly plans at $600 and $1,500, with multi-location from $2,500. You own every account, the minimum is three months, and after that it's month to month.
+Our prices are on the [pricing page](/pricing): a $750 audit, a one-time $1,800 setup, and monthly plans at $600 and $1,500, with multi-location from $2,500. You own every account, the minimum is three months, and after that it's month to month. The first payment on any plan is covered by a [100% money-back guarantee](/pricing#guarantee) for 30 days.
 
 The $1,500 Growth plan is built for roofers: two new town or service pages a month, Business Profile upkeep and a monthly call on what moved. The roofing results behind it are on the [roofing SEO page](/roofing-seo).
 

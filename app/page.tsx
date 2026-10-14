@@ -18,6 +18,7 @@ import { CountUp } from "@/components/CountUp";
 import { Reveal } from "@/components/Reveal";
 import { Reviews } from "@/components/Reviews";
 import { SiteWall } from "@/components/SiteWall";
+import { GuaranteeLine } from "@/components/Guarantee";
 import { NoteCard } from "@/components/NoteCard";
 import { aggregate, cases, monthly as gscMonthly } from "@/lib/gsc";
 import { monthly, oneTime } from "@/lib/pricing";
@@ -45,7 +46,7 @@ const HOME_FAQ: FaqItem[] = [
   },
   {
     q: "How much does it cost?",
-    a: "Every price is on the pricing page. The Site Audit is $750, the Setup Sprint is a one-time $1,800, and monthly plans start at $600.",
+    a: "Every price is on the pricing page, and your first payment on any plan is covered by a 100% money-back guarantee for 30 days. The Site Audit is $750, the Setup Sprint is a one-time $1,800, and monthly plans start at $600.",
   },
   {
     q: "How long does SEO take to work?",
@@ -133,7 +134,7 @@ export default function HomePage() {
             </div>
             <BookNote className="mt-4" />
             <ul className="mt-9 grid gap-3 border-t border-line pt-7 text-[15px] sm:grid-cols-3">
-              {["Prices on the site, from $600 a month", "You own every account", "30+ sites over two years"].map((t) => (
+              {["Prices on the site, from $600 a month", "100% money-back guarantee", "30+ sites built and ranked"].map((t) => (
                 <li key={t} className="flex items-start gap-2.5">
                   <Check size={18} aria-hidden className="mt-0.5 flex-none text-brand" />
                   <span>{t}</span>
@@ -397,6 +398,7 @@ export default function HomePage() {
             </p>
             <TextCta href="/ai-search-optimization" label="AI search optimization" from="home_ai" />
           </div>
+          <GuaranteeLine className="mt-6" />
         </div>
       </section>
 

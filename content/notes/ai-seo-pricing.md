@@ -59,7 +59,7 @@ Our [AI search optimization](/ai-search-optimization) plan is $1,000 a month. Ev
 - Every change sent as a pull request (or made in your CMS) so you can see exactly what changed
 - A Friday changelog and a month-end citation report
 
-Plus a free tool when your category has room for one. No contract; if you're not satisfied, tell us and we stop 30 days later. Five clients at a time, because we do the work ourselves.
+Plus a free tool when your category has room for one. No contract; if you're not satisfied, tell us and we stop 30 days later. The first month is covered by a [100% money-back guarantee](/pricing#guarantee): ask within 30 days and you get all of it back. Five clients at a time, because nothing is outsourced.
 
 For local home service businesses that mainly need Google Maps and local pages, our [local plans](/pricing) start lower and may fit better. For software startups, the same plan is described on the [SaaS SEO page](/saas-seo).
 
