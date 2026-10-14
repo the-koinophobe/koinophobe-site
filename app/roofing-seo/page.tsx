@@ -7,6 +7,7 @@ import Image from "next/image";
 import { BookCta, BookNote, PageCta } from "@/components/Cta";
 import { RelatedNotes } from "@/components/RelatedNotes";
 import { MobileCta } from "@/components/MobileCta";
+import { MoreServices } from "@/components/MoreServices";
 import { Reveal } from "@/components/Reveal";
 import { cases } from "@/lib/gsc";
 import { projects } from "@/lib/content";
@@ -74,6 +75,10 @@ const ROOF_FAQ: FaqItem[] = [
   {
     q: "Should a roofer run Local Services Ads or do SEO?",
     a: "They do different jobs. Local Services Ads charge per lead and stop when the budget does; SEO builds pages and rankings you keep. If you run both, track calls from each so you can compare.",
+  },
+  {
+    q: "Do you work with roofers who also do remodeling?",
+    a: "Yes. Remodeling gets its own service and project pages, because homeowners search for it differently and research it for longer. The home remodeling SEO page covers how that work is set up.",
   },
 ];
 
@@ -162,6 +167,8 @@ export default function RoofingPage() {
         more={{ href: "/notes/topic/roofing", label: "All roofing notes" }}
         slugs={["roofing-service-area-pages", "storm-damage-roofing-pages", "google-business-profile-for-roofers", "roofing-keywords", "roof-replacement-service-page", "roofing-seo-cost", "google-reviews-for-roofers"]}
       />
+
+      <MoreServices current="/roofing-seo" />
 
       <Availability />
       <MobileCta />

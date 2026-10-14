@@ -11,6 +11,7 @@ const COLS: { title: string; href?: string; links: { href: string; label: string
     title: "Services",
     links: [
       { href: "/roofing-seo", label: "Roofing SEO" },
+      { href: "/home-remodeling-seo", label: "Home remodeling SEO" },
       { href: "/pricing#audit", label: "Site Audit" },
       { href: "/pricing#sprint", label: "Setup Sprint" },
       { href: "/pricing#monthly", label: "Monthly SEO plans" },

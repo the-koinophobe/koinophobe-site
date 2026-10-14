@@ -54,6 +54,7 @@ const HOME_FAQ: FaqItem[] = [
 
 const SECTORS = [
   { title: "Roofing companies", href: "/roofing-seo", img: "/site/home-roofing.webp", alt: "A roofer standing on a roof during a tear-off on a brick house" },
+  { title: "Home remodelers", href: "/home-remodeling-seo", img: "/site/home-remodeling.webp", alt: "A remodeling contractor cutting tile with an angle grinder" },
   { title: "Pool and deck", href: "/notes/pool-deck-repair-seo", img: "/site/home-pool.webp", alt: "A backyard pool with a clean deck" },
   { title: "Lawn and landscaping", href: "/notes/lawn-care-seo", img: "/site/home-lawn.webp", alt: "A lawn care worker mowing a lawn" },
   { title: "Plumbing, HVAC and more", href: "/notes/topic/trades", img: "/site/home-plumbing.webp", alt: "A plumber fixing pipes under a sink" },
@@ -220,14 +221,19 @@ export default function HomePage() {
               looks right, your website and Business Profile are doing the selling. I make sure they do it well.
             </p>
           </Reveal>
-          <div data-anim="cards" className="mt-12 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
-            {SECTORS.map((s) => (
-              <Link key={s.title} href={s.href} className="group relative block aspect-[4/5] overflow-hidden rounded-2xl bg-surface photo-shade">
+          <div data-anim="cards" className="mt-12 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-5">
+            {SECTORS.map((s, i) => (
+              <Link
+                key={s.title}
+                href={s.href}
+                // Five cards in a two-column grid: the last one runs full width until the row fits all five.
+                className={`group relative block overflow-hidden rounded-2xl bg-surface photo-shade ${i === SECTORS.length - 1 ? "col-span-2 aspect-[8/5] lg:col-span-1 lg:aspect-[4/5]" : "aspect-[4/5]"}`}
+              >
                 <Image
                   src={s.img}
                   alt={s.alt}
                   fill
-                  sizes="(min-width: 1024px) 300px, (min-width: 640px) 50vw, 100vw"
+                  sizes="(min-width: 1024px) 240px, (min-width: 640px) 50vw, 100vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.04] motion-reduce:transform-none"
                 />
                 <span className="absolute inset-x-4 bottom-4 z-10 flex items-end justify-between gap-3 text-white sm:inset-x-5 sm:bottom-5">

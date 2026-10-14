@@ -37,6 +37,7 @@ Pick the most specific category that describes the work most of your revenue com
 
 - A roofer who also does gutters: **Roofing contractor**, with gutters as an additional category.
 - An HVAC company: **HVAC contractor**, or **Air conditioning contractor** if most calls are for cooling.
+- A kitchen and bath remodeler: **Kitchen remodeler** or **Bathroom remodeler**, whichever brings in more of the revenue, with the other one and **Remodeler** as additional categories. The rest of the setup is on my [home remodeling SEO](/home-remodeling-seo) page.
 - A cleaning company: **House cleaning service** if you mainly clean homes, **Commercial cleaning service** if you mainly clean offices.
 - A general auto shop: **Auto repair shop**, with **Brake shop** or **Oil change service** as additional categories if you do enough of that work.
 

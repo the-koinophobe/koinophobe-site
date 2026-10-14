@@ -193,6 +193,17 @@ export default function PricingPage() {
             <PlanCard key={p.key} p={p} />
           ))}
         </Stagger>
+        <p className="mt-5 text-[15px] text-muted">
+          What the plans look like for your trade:{" "}
+          <Link href="/roofing-seo" className="text-ink underline underline-offset-4">
+            roofing SEO
+          </Link>{" "}
+          and{" "}
+          <Link href="/home-remodeling-seo" className="text-ink underline underline-offset-4">
+            home remodeling SEO
+          </Link>
+          .
+        </p>
       </section>
 
       <section id="startups" className="container-pad scroll-mt-28 pt-20">

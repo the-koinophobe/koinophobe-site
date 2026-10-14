@@ -11,6 +11,7 @@ import { FaqList, FaqSchema } from "@/components/Faq";
 import { WhoToCall } from "@/components/WhoToCall";
 import { NoteCard, fmtDate } from "@/components/NoteCard";
 import { adjacentNotes, getNote, publishedNotes, relatedNotes } from "@/lib/notes";
+import { serviceForNote } from "@/lib/services";
 import { site } from "@/lib/site";
 import { topicLabel, topics } from "@/lib/topics";
 
@@ -62,6 +63,8 @@ export default function NotePage({ params }: { params: { slug: string } }) {
       : topic.key === "technical"
         ? "small businesses and startups"
         : "home service businesses";
+  // The service page closest to what the note is about, so the sidebar points somewhere specific.
+  const service = serviceForNote(note.slug, topic.key);
   const related = relatedNotes(note, 3);
   const { newer, older } = adjacentNotes(note);
   const url = `https://koinophobe.com/notes/${note.slug}`;
@@ -241,6 +244,8 @@ export default function NotePage({ params }: { params: { slug: string } }) {
                     <PageCta href="/ai-search-optimization#check" label="Check your site free" from="note_sidebar_ai" size="md" className="w-full" />
                   ) : isStartup ? (
                     <PageCta href="/saas-seo" label="See the startup plan" from="note_sidebar_startup" size="md" className="w-full" />
+                  ) : service ? (
+                    <PageCta href={service.href} label={service.cta} from="note_sidebar_service" size="md" className="w-full" />
                   ) : (
                     <PageCta href="/pricing" label="See pricing" from="note_sidebar" size="md" className="w-full" />
                   )}

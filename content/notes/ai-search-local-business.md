@@ -64,7 +64,7 @@ The company overlap is the useful part. If assistants care about which business 
 
 **Put BlogPosting markup on articles.** With a headline, author, date published and date modified. It's the one property that lined up with citation in my sample, it's cheap to add, and it's correct markup for an article regardless.
 
-**Answer questions plainly.** If homeowners ask how long a roof replacement takes, put a direct answer in the first lines of the page and the detail after. A direct answer is easier for a person to use and easier for any system to quote.
+**Answer questions plainly.** If homeowners ask how long a roof replacement takes, put a direct answer in the first lines of the page and the detail after. A direct answer is easier for a person to use and easier for any system to quote. For a remodeler, the page worth writing first is usually what a kitchen or bathroom remodel costs in your area, with ranges from your own jobs; I list the other questions worth a page on [home remodeling SEO](/home-remodeling-seo).
 
 **Get mentioned by other sites.** Local news, suppliers, trade associations, chambers of commerce, directories. The company overlap in my study suggests being known matters, and other people writing about you is how a business gets known beyond its own site.
 

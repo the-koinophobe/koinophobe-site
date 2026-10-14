@@ -44,6 +44,8 @@ Those few lines give Google something to match and give the reader the detail th
 
 You can keep a gallery page if you like it. Link each photo to the service page it belongs to, so the gallery becomes a way in.
 
+Remodelers get the most out of this, because a finished kitchen or bathroom is most of the sales pitch. On [home remodeling SEO](/home-remodeling-seo) I lay out how each finished job becomes a project page of its own.
+
 ## File names, alt text and size
 
 **File names.** Rename before uploading. Use the job, the town and the stage, in lowercase with hyphens: `roof-replacement-[town]-before.webp`, `roof-replacement-[town]-after.webp`.

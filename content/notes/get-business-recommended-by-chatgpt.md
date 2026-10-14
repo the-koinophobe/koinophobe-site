@@ -70,4 +70,4 @@ Do this in a fresh chat with memory off, three times. In my study, ChatGPT's cit
 
 Run the three test questions above this week and write down who gets named. Then work through the checklist in order: crawler access first, then consistency, then reviews and pages.
 
-If you'd like it done for you, my [AI search optimization](/ai-search-optimization) service covers the access fixes, the listing cleanup, the pages, and monthly tracking across ChatGPT, Claude, Perplexity and Google, for $1,000 a month with no contract. Local home service businesses can also start with the [plans on my pricing page](/pricing).
+If you'd like it done for you, my [AI search optimization](/ai-search-optimization) service covers the access fixes, the listing cleanup, the pages, and monthly tracking across ChatGPT, Claude, Perplexity and Google, for $1,000 a month with no contract. Local home service businesses can also start with the [plans on my pricing page](/pricing), and there are pages on how the work runs for [roofing companies](/roofing-seo) and [home remodelers](/home-remodeling-seo).

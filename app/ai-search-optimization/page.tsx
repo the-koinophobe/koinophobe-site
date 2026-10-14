@@ -20,6 +20,7 @@ import { Availability } from "@/components/Availability";
 import { BookCta, BookNote, TextCta } from "@/components/Cta";
 import { Faq, type FaqItem } from "@/components/Faq";
 import { MobileCta } from "@/components/MobileCta";
+import { MoreServices } from "@/components/MoreServices";
 import { Reveal } from "@/components/Reveal";
 import { getNote } from "@/lib/notes";
 import { site } from "@/lib/site";
@@ -377,7 +378,10 @@ export default function AiSearchPage() {
               <Link href="/pricing" className="text-ink underline underline-offset-4">
                 local plans
               </Link>{" "}
-              may fit better. <Link href="/notes/ai-seo-pricing" className="text-ink underline underline-offset-4">What the price covers</Link>.
+              may fit better. Built for{" "}
+              <Link href="/roofing-seo" className="text-ink underline underline-offset-4">roofers</Link> and{" "}
+              <Link href="/home-remodeling-seo" className="text-ink underline underline-offset-4">remodelers</Link>.{" "}
+              <Link href="/notes/ai-seo-pricing" className="text-ink underline underline-offset-4">What the price covers</Link>.
             </p>
           </Reveal>
         </div>
@@ -419,6 +423,8 @@ export default function AiSearchPage() {
       </section>
 
       <Faq items={FAQ} title="Questions owners ask first" className="section" />
+
+      <MoreServices current="/ai-search-optimization" />
 
       <Availability call={CALL} />
       <MobileCta />

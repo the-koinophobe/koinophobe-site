@@ -257,6 +257,7 @@ export default function AboutPage() {
           <div className="mt-10 flex flex-wrap items-center gap-3">
             <PageCta href="/pricing" label="See pricing" from="about_services" />
             <PageCta href="/roofing-seo" label="Roofing SEO" from="about_services" />
+            <PageCta href="/home-remodeling-seo" label="Home remodeling SEO" from="about_services" />
           </div>
         </div>
       </section>
