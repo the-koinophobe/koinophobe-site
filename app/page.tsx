@@ -216,7 +216,7 @@ export default function HomePage() {
         <div className="container-pad">
           <Reveal className="max-w-3xl">
             <p className="eyebrow">Who it&rsquo;s for</p>
-            <h2 className="t-h2 mt-5">For trades that win work from local search</h2>
+            <h2 className="t-h2 mt-5">Local SEO for roofers, remodelers and other trades</h2>
             <p className="t-lead mt-4 max-w-[60ch]">
               If your customers search &ldquo;near me&rdquo;, look at the map and call the first company that
               looks right, your website and Business Profile are doing the selling. We make sure they do it well.
@@ -254,7 +254,7 @@ export default function HomePage() {
         <div className="container-pad">
           <Reveal className="max-w-3xl">
             <p className="eyebrow">What we do</p>
-            <h2 className="t-h2 mt-5">Three jobs, done properly, in your accounts</h2>
+            <h2 className="t-h2 mt-5">Three SEO services, done properly, in your accounts</h2>
             <p className="t-lead mt-4 max-w-[60ch]">
               Most SEO is hard to see. Ours shows up as pages you can open, rankings you can check and calls
               you can count.
@@ -287,7 +287,7 @@ export default function HomePage() {
           <div className="flex flex-wrap items-end justify-between gap-6">
             <Reveal className="max-w-3xl">
               <p className="eyebrow">Results</p>
-              <h2 className="t-h2 mt-5">Real accounts, real Search Console numbers</h2>
+              <h2 className="t-h2 mt-5">SEO results from real Search Console accounts</h2>
               <p className="t-lead mt-4 max-w-[58ch]">
                 Thirty-plus sites over two years. These are the ones whose data we can show you, with what&rsquo;s
                 still left to win.
@@ -332,7 +332,7 @@ export default function HomePage() {
         <div className="container-pad">
           <Reveal className="max-w-3xl">
             <p className="eyebrow">How it works</p>
-            <h2 className="t-h2 mt-5">From a free call to a monthly report</h2>
+            <h2 className="t-h2 mt-5">How it works, from a free SEO call to a monthly report</h2>
           </Reveal>
           <ol data-anim="cards" className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {STEPS.map((s) => (
@@ -356,7 +356,7 @@ export default function HomePage() {
           <div className="flex flex-wrap items-end justify-between gap-6">
             <Reveal className="max-w-3xl">
               <p className="eyebrow">Pricing</p>
-              <h2 className="t-h2 mt-5">Every price is on the site</h2>
+              <h2 className="t-h2 mt-5">SEO pricing: every price is on the site</h2>
               <p className="t-lead mt-4 max-w-[56ch]">
                 No long contracts, and you own everything we build. Start with an audit, fix it
                 once, or hand it over every month.
@@ -427,7 +427,7 @@ export default function HomePage() {
             <div className="flex flex-wrap items-end justify-between gap-6">
               <Reveal className="max-w-3xl">
                 <p className="eyebrow">Notes</p>
-                <h2 className="t-h2 mt-5">Free advice, from the work we do every day</h2>
+                <h2 className="t-h2 mt-5">Free SEO guides, from the work we do every day</h2>
               </Reveal>
               <PageCta href="/notes" label="All notes" from="home_notes" size="md" />
             </div>
@@ -440,7 +440,7 @@ export default function HomePage() {
         </section>
       ) : null}
 
-      <Faq items={HOME_FAQ} title="Questions owners ask first" className="section" />
+      <Faq items={HOME_FAQ} title="SEO questions owners ask first" className="section" />
 
       <Availability />
       <MobileCta />

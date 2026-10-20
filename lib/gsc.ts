@@ -55,7 +55,7 @@ export const cases: CaseStudy[] = [
     index: "01",
     client: "Myofascial pain clinic",
     place: "Brevard County, FL",
-    title: "Four clicks a month to a hundred, and it stayed there.",
+    title: "A pain clinic went from four clicks a month to a hundred, and stayed there.",
     meta: "Aug 2025 to Aug 2026 · white-label, clinic unnamed",
     headline: { value: "854", label: "clicks in 12 months" },
     metrics: [
@@ -81,7 +81,7 @@ export const cases: CaseStudy[] = [
     index: "02",
     client: "Roofing contractor",
     place: "Brevard County, FL",
-    title: "From page five to page two, on a thousand queries at once.",
+    title: "A roofer went from page five to page two, on a thousand queries at once.",
     meta: "Oct 2025 to Aug 2026 vs the eleven months before · white-label, contractor unnamed",
     headline: { value: "×25.8", label: "impressions, year on year" },
     metrics: [
@@ -107,7 +107,7 @@ export const cases: CaseStudy[] = [
     index: "03",
     client: "Tint Lordz Auto Spa",
     place: "Lawrence, MA",
-    title: "The brand is locked. The category is still open.",
+    title: "A tint shop owns its brand searches. 'Window tinting near me' is still open.",
     meta: "Jul 2025 to Aug 2026 · direct client",
     headline: { value: "1.98", label: "avg position on brand" },
     metrics: [
@@ -133,7 +133,7 @@ export const cases: CaseStudy[] = [
     index: "04",
     client: "Over The Table Top",
     place: "Charles County, MD",
-    title: "614 keywords on page one, for a shop with one location.",
+    title: "614 keywords on page one for a game shop with one location.",
     meta: "Apr 2025 to Aug 2026 · direct client",
     headline: { value: "614", label: "keywords on page one" },
     metrics: [
@@ -159,7 +159,7 @@ export const cases: CaseStudy[] = [
     index: "05",
     client: "Marketing agency",
     place: "Palm Bay, FL",
-    title: "830,000 impressions from a town of 130,000 people.",
+    title: "830,000 impressions for an agency in a town of 130,000 people.",
     meta: "Apr 2025 to Aug 2026 · ongoing",
     headline: { value: "1,211", label: "clicks in 17 months" },
     metrics: [

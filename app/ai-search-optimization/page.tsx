@@ -183,7 +183,7 @@ export default function AiSearchPage() {
               AI search optimization
             </p>
             <h1 className="t-h1 mt-6 max-w-[18ch]">
-              For business owners whose customers ask ChatGPT <span className="text-brand">before they call</span>.
+              AI search optimization for businesses whose customers ask ChatGPT <span className="text-brand">before they call</span>.
             </h1>
             <p className="t-lead mt-6 max-w-[58ch]">
               Koinophobe is an SEO agency that gets businesses named and cited by ChatGPT, Claude, Perplexity, Gemini and
@@ -227,7 +227,7 @@ export default function AiSearchPage() {
         <div className="container-pad">
           <Reveal className="max-w-3xl">
             <p className="eyebrow">Who it&rsquo;s for</p>
-            <h2 className="t-h2 mt-5">Any business whose customers ask before they buy</h2>
+            <h2 className="t-h2 mt-5">Who AI search optimization is for</h2>
             <p className="t-lead mt-4 max-w-[60ch]">
               The work changes with what you sell. The method stays the same: let assistants read you, give them
               something worth quoting, and measure what they say.
@@ -300,7 +300,7 @@ export default function AiSearchPage() {
         <div className="container-pad">
           <Reveal className="max-w-3xl">
             <p className="eyebrow">How a month runs</p>
-            <h2 className="t-h2 mt-5">Measure, fix, publish, measure again</h2>
+            <h2 className="t-h2 mt-5">How AI search optimization works: measure, fix, publish, measure again</h2>
           </Reveal>
           <div data-anim="cards" className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {LOOP.map((w) => (
@@ -422,7 +422,7 @@ export default function AiSearchPage() {
         </div>
       </section>
 
-      <Faq items={FAQ} title="Questions owners ask first" className="section" />
+      <Faq items={FAQ} title="AI search optimization questions" className="section" />
 
       <MoreServices current="/ai-search-optimization" />
 

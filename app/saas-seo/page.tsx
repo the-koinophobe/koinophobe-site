@@ -271,7 +271,7 @@ export default function SaasSeoPage() {
               SEO and AI search for software startups
             </p>
             <h1 className="t-h1 mt-6 max-w-[18ch]">
-              For software founders whose buyers ask ChatGPT and hear about{" "}
+              SaaS SEO for founders whose buyers ask ChatGPT and hear about{" "}
               <span className="text-brand">a competitor</span>.
             </h1>
             <p className="t-lead mt-6 max-w-[58ch]">
@@ -415,7 +415,7 @@ export default function SaasSeoPage() {
         <div className="container-pad">
           <Reveal className="max-w-3xl">
             <p className="eyebrow">How a month runs</p>
-            <h2 className="t-h2 mt-5">Measure, fix, publish, measure again</h2>
+            <h2 className="t-h2 mt-5">How a month of SaaS SEO runs: measure, fix, publish, measure again</h2>
             <p className="t-lead mt-4 max-w-[60ch]">
               The same loop every month, so the report compares like with like and you can tell what the work
               did.
@@ -454,7 +454,7 @@ export default function SaasSeoPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="eyebrow">Who does the work</p>
-            <h2 className="t-h2 mt-5 max-w-[20ch]">Developers, so the fix arrives as code</h2>
+            <h2 className="t-h2 mt-5 max-w-[20ch]">SEO fixes from developers, delivered as code</h2>
             <p className="t-lead mt-5 max-w-[58ch]">
               Most SEO shows up as a forty-page audit your engineers never get to. We write the change in-house,
               in your repo or your CMS, and open it for review. Next.js, Astro, Webflow, Framer and WordPress
@@ -500,7 +500,7 @@ export default function SaasSeoPage() {
         <div className="container-pad">
           <Reveal className="max-w-3xl">
             <p className="eyebrow">The plan</p>
-            <h2 className="t-h2 mt-5">{startup.price} a month. Five seats.</h2>
+            <h2 className="t-h2 mt-5">SaaS SEO pricing: {startup.price} a month, five seats</h2>
           </Reveal>
           <div className="mt-12 grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[1.05fr_1fr] lg:gap-14">
             <div className="card flex flex-col gap-6 border-ink/60 bg-bg p-7 shadow-float sm:p-9">
@@ -576,7 +576,7 @@ export default function SaasSeoPage() {
         <div className="container-pad">
           <Reveal className="max-w-3xl">
             <p className="eyebrow">How we start</p>
-            <h2 className="t-h2 mt-5">From your domain to a first pull request</h2>
+            <h2 className="t-h2 mt-5">Getting started with SaaS SEO: from your domain to a first pull request</h2>
           </Reveal>
           <div data-anim="cards" className="mt-12 grid gap-8 md:grid-cols-3">
             {START.map((s) => (
@@ -597,10 +597,10 @@ export default function SaasSeoPage() {
         </div>
       </section>
 
-      <Faq items={SAAS_FAQ} title="Questions founders ask first" className="section !pt-0" />
+      <Faq items={SAAS_FAQ} title="SaaS SEO questions founders ask first" className="section !pt-0" />
 
       <RelatedNotes
-        title="Notes for founders"
+        title="SEO notes for software founders"
         more={{ href: "/notes/topic/startups", label: "All startup notes" }}
         slugs={[
           "seo-for-startups",

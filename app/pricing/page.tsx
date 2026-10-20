@@ -192,7 +192,7 @@ export default function PricingPage() {
       </section>
 
       <section className="container-pad pt-16">
-        <h2 className="t-h3">Start here: one-time</h2>
+        <h2 className="t-h3">One-time SEO audits and fixes</h2>
         <p className="mt-1.5 text-[15px] text-muted">A free call, an audit, or a one-off fix.</p>
         <Stagger className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {oneTime.map((p) => (
@@ -323,7 +323,7 @@ export default function PricingPage() {
         <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           <Reveal>
             <p className="eyebrow">The terms</p>
-            <h2 className="t-h2 mt-5 max-w-[18ch]">What you can count on</h2>
+            <h2 className="t-h2 mt-5 max-w-[18ch]">SEO contract terms you can count on</h2>
             <div className="mt-8 border-t border-line">
               {TERMS.map((x) => (
                 <div
@@ -383,7 +383,7 @@ export default function PricingPage() {
 
       <RelatedNotes
         className="mt-24"
-        title="Before you choose a plan"
+        title="Read before you choose an SEO plan"
         slugs={["how-long-does-seo-take", "hiring-an-seo-questions-to-ask", "roofing-seo-cost", "monthly-seo-report-contractors", "seo-vs-google-ads-contractors"]}
       />
 

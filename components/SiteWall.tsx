@@ -132,7 +132,7 @@ export function SiteWall() {
     <div>
       <p className="eyebrow">The wall</p>
       <h2 className="mt-4 max-w-[22ch] font-display text-[clamp(1.9rem,4vw,3rem)] leading-[1.05] tracking-tight text-balance">
-        Thirty-plus sites. These are the ones we kept the screenshots of.
+        Thirty-plus local business sites we&rsquo;ve done SEO on.
       </h2>
       <p className="mt-5 max-w-[58ch] text-muted">
         {unnamed} of the {projects.length} below show without a name, most because they went out

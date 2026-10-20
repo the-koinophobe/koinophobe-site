@@ -98,7 +98,7 @@ export default function WorkPage() {
           <Reveal>
             <div>
               <p className="eyebrow">The numbers</p>
-              <h2 className="t-h2 mt-5 max-w-[24ch]">Five of them, with the Search Console left open</h2>
+              <h2 className="t-h2 mt-5 max-w-[24ch]">Five SEO case studies, with the Search Console left open</h2>
               <p className="t-lead mt-4 max-w-[52ch]">
                 The greatest hits, if you like. Same four numbers for each, the story behind them, and what
                 we&rsquo;d go after next.
@@ -135,7 +135,7 @@ export default function WorkPage() {
 
       <RelatedNotes
         className="!bg-bg"
-        title="The case studies, written up"
+        title="The SEO case studies, written up"
         slugs={["clinic-158-to-501", "charles-county-md-game-shop-seo", "lawrence-ma-window-tint-seo", "near-me-searches-local-seo-data", "zero-click-rankings-title-tags", "ai-cited-vs-ranked-page"]}
       />
 

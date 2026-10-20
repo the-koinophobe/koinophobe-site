@@ -226,7 +226,7 @@ export default function AboutPage() {
           <div className="flex flex-wrap items-end justify-between gap-6">
             <Reveal className="max-w-3xl">
               <p className="eyebrow">The work</p>
-              <h2 className="t-h2 mt-5">Judge us on these, not on this page</h2>
+              <h2 className="t-h2 mt-5">Our SEO results: judge us on these, not on this page</h2>
             </Reveal>
             <PageCta href="/work" label="All case studies" from="about_work" size="md" />
           </div>
@@ -258,7 +258,7 @@ export default function AboutPage() {
         <div className="container-pad">
           <Reveal className="max-w-3xl">
             <p className="eyebrow">How we work</p>
-            <h2 className="t-h2 mt-5">Four promises, and you can hold us to all of them</h2>
+            <h2 className="t-h2 mt-5">How our SEO agency works: four promises you can hold us to</h2>
           </Reveal>
           <div data-anim="cards" className="mt-12 grid gap-5 md:grid-cols-2">
             {PRINCIPLES.map((p) => (
@@ -276,7 +276,7 @@ export default function AboutPage() {
         <div className="container-pad">
           <Reveal className="max-w-3xl">
             <p className="eyebrow">What we do</p>
-            <h2 className="t-h2 mt-5">Technical, measurable, and mostly in WordPress</h2>
+            <h2 className="t-h2 mt-5">Our SEO services: technical, measurable, and mostly in WordPress</h2>
           </Reveal>
           <div data-anim="cards" className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((s) => (

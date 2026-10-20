@@ -96,7 +96,7 @@ export function AISection() {
       <div>
         <p className="eyebrow">The answer box</p>
         <h2 className="mt-4 max-w-[20ch] font-display text-[clamp(1.9rem,4vw,3rem)] leading-[1.05] tracking-tight text-balance">
-          A good number of them are asking a machine now.
+          More of your customers are asking AI search now.
         </h2>
         <p className="mt-6 max-w-[54ch] text-[17.5px] text-muted">
           Nobody needs a separate &ldquo;AI strategy&rdquo; for this. Assistants build those

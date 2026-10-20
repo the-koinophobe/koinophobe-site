@@ -349,7 +349,7 @@ export default function RemodelingPage() {
         <div className="container-pad grid grid-cols-[minmax(0,1fr)] items-center gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
           <Reveal>
             <p className="eyebrow">The pages</p>
-            <h2 className="t-h2 mt-5 max-w-[20ch]">One page per remodel, per town, per finished job</h2>
+            <h2 className="t-h2 mt-5 max-w-[20ch]">Remodeling website pages: one per remodel, per town, per finished job</h2>
             <p className="t-lead mt-5 max-w-[56ch]">
               Most remodeling sites have a homepage, a services page and a gallery. Homeowners search for something
               more specific than that, and so do the assistants answering them.
@@ -458,7 +458,7 @@ export default function RemodelingPage() {
         <div className="container-pad">
           <Reveal className="max-w-3xl">
             <p className="eyebrow">Why remodeling is different</p>
-            <h2 className="t-h2 mt-5">A remodel isn&rsquo;t an emergency call</h2>
+            <h2 className="t-h2 mt-5">Why remodeling SEO is different: a remodel isn&rsquo;t an emergency call</h2>
             <p className="t-lead mt-4 max-w-[60ch]">
               A plumber wins the 2 a.m. call by being first on the map. A remodeler wins a job that was weeks in the
               planning. The SEO has to fit how it&rsquo;s actually bought.
@@ -485,7 +485,7 @@ export default function RemodelingPage() {
         <div className="container-pad">
           <Reveal className="max-w-3xl">
             <p className="eyebrow">What it costs</p>
-            <h2 className="t-h2 mt-5">Prices for remodelers, on the page</h2>
+            <h2 className="t-h2 mt-5">Remodeling SEO pricing, on the page</h2>
           </Reveal>
           <div data-anim="cards" className="mt-10 grid gap-5 md:grid-cols-3">
             {[
@@ -523,7 +523,7 @@ export default function RemodelingPage() {
         <div className="container-pad">
           <Reveal className="max-w-3xl">
             <p className="eyebrow">The closest proof</p>
-            <h2 className="t-h2 mt-5">The same work on a roofing contractor&rsquo;s site</h2>
+            <h2 className="t-h2 mt-5">The same SEO work on a roofing contractor&rsquo;s site</h2>
             <p className="t-lead mt-4 max-w-[62ch]">
               We don&rsquo;t have a remodeler&rsquo;s Search Console to open up for you yet. The nearest match is this
               roofer: a homeowner making a big decision about their house, and the same town pages, Business Profile
@@ -543,7 +543,7 @@ export default function RemodelingPage() {
         <div className="container-pad">
           <Reveal className="max-w-3xl">
             <p className="eyebrow">Free guides</p>
-            <h2 className="t-h2 mt-5">Do it yourself with these</h2>
+            <h2 className="t-h2 mt-5">Free SEO guides for remodelers</h2>
             <p className="t-lead mt-4 max-w-[60ch]">Everything on this page is written up in more detail. Start with whichever problem is costing you consults.</p>
           </Reveal>
           <div className="mt-12 grid gap-x-10 gap-y-10 md:grid-cols-2">

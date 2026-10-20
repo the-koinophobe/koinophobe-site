@@ -13,7 +13,7 @@ export function Reviews({ exclude = [] }: { exclude?: string[] }) {
     <>
       <Reveal className="max-w-3xl">
         <p className="eyebrow">In their words</p>
-        <h2 className="t-h2 mt-5">What clients say about working with us</h2>
+        <h2 className="t-h2 mt-5">What SEO clients say about working with us</h2>
       </Reveal>
       <div data-anim="cards" className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {list.map((r) => (

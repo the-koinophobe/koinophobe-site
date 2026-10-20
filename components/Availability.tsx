@@ -27,7 +27,7 @@ export function Availability({ call = CALL }: { call?: string[] } = {}) {
             </span>
             Taking new clients
           </span>
-          <h2 className="t-h2 mt-5 max-w-[18ch]">Send us your website. We&rsquo;ll tell you what we&rsquo;d fix first.</h2>
+          <h2 className="t-h2 mt-5 max-w-[18ch]">Book a free SEO call. We&rsquo;ll tell you what we&rsquo;d fix first.</h2>
           <p className="muted mt-5 max-w-[52ch] text-[17px] leading-relaxed">
             Book a free 20-minute call, or email us if you&rsquo;d rather write. Every price is on the{" "}
             <Link href="/pricing" className="text-white underline underline-offset-4 dark:text-ink">

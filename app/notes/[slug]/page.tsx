@@ -164,7 +164,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
 
             {note.faq.length ? (
               <section className="mt-16 max-w-[70ch]">
-                <h2 className="t-h3 !text-[1.75rem]">Questions</h2>
+                <h2 className="t-h3 !text-[1.75rem]">Frequently asked questions</h2>
                 <div className="mt-6">
                   <FaqList items={note.faq} />
                 </div>
@@ -251,9 +251,12 @@ export default function NotePage({ params }: { params: { slug: string } }) {
         <section className="section-tint py-20">
           <div className="container-pad">
             <div className="flex flex-wrap items-end justify-between gap-4">
-              <h2 className="t-h2 !text-[clamp(1.6rem,2.8vw,2.2rem)]">Keep reading</h2>
+              {/* lowercase the first letter only when it starts a plain word, so "AI" and "SEO" survive */}
+              <h2 className="t-h2 !text-[clamp(1.6rem,2.8vw,2.2rem)]">
+                More notes on {/^[A-Z][a-z]/.test(topic.title) ? topic.title[0].toLowerCase() + topic.title.slice(1) : topic.title}
+              </h2>
               <Link href={`/notes/topic/${topic.key}`} className="link-arrow">
-                More on {topic.label.toLowerCase()} <ArrowRight size={16} aria-hidden />
+                All notes on this topic <ArrowRight size={16} aria-hidden />
               </Link>
             </div>
             <div className="mt-8 grid gap-5 md:grid-cols-3">

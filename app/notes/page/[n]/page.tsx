@@ -13,7 +13,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { n: string } }): Metadata {
   const n = Number(params.n);
   return {
-    title: `Notes, page ${n}`,
+    title: `SEO notes, page ${n}`,
     description: `SEO notes for local businesses and startups: local SEO, technical SEO, AI search and call tracking, page ${n}.`,
     alternates: { canonical: `/notes/page/${n}` },
   };
@@ -27,7 +27,7 @@ export default function NotesPageN({ params }: { params: { n: string } }) {
   if (n > pages) notFound();
   return (
     <NotesListing
-      heading={`Notes, page ${n}`}
+      heading={`SEO notes for local businesses and startups, page ${n}`}
       intro="Older notes on local SEO, technical SEO, AI search and call tracking for local businesses and startups."
       items={items}
       page={n}

@@ -126,7 +126,7 @@ export default function RoofingPage() {
         <div className="container-pad">
           <Reveal className="max-w-3xl">
             <p className="eyebrow">What we do for roofers</p>
-            <h2 className="t-h2 mt-5">The same six things on every roofing site</h2>
+            <h2 className="t-h2 mt-5">Roofing SEO: the six things we fix on every roofing site</h2>
           </Reveal>
           <div data-anim="cards" className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {WORK.map((w) => (
@@ -154,7 +154,7 @@ export default function RoofingPage() {
         <div className="container-pad">
           <Reveal className="max-w-3xl">
             <p className="eyebrow">One roofer, one year</p>
-            <h2 className="t-h2 mt-5">What the work looked like in Search Console</h2>
+            <h2 className="t-h2 mt-5">Roofing SEO results in Search Console</h2>
           </Reveal>
           <div className="card mt-10 px-5 sm:px-8">
             <CaseStudyBlock c={roofing} />

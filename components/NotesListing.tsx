@@ -64,7 +64,7 @@ export function NotesListing({
       </section>
 
       <section className="container-pad pb-20">
-        <h2 className="sr-only">{activeTopic ? `${heading}: all notes` : "Latest notes"}</h2>
+        <h2 className="sr-only">{activeTopic ? `${heading}: all notes` : page > 1 ? "More SEO notes" : "Latest SEO notes"}</h2>
         {items.length === 0 ? (
           <p className="text-muted">Nothing here yet. New notes go up twice a week.</p>
         ) : featureFirst && first ? (

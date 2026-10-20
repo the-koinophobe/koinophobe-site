@@ -19,17 +19,17 @@ export const metadata: Metadata = {
 const STEPS = [
   {
     icon: <CalendarCheck size={22} aria-hidden />,
-    title: "You book",
+    title: "You book a free SEO call",
     body: "Pick a time and tell us your website and what you want more of. Calls, bookings, quotes, foot traffic.",
   },
   {
     icon: <Search size={22} aria-hidden />,
-    title: "We look",
+    title: "We look at your site",
     body: "Before we speak. Rankings, structure, speed, tracking, and whether the pages that should exist do.",
   },
   {
     icon: <Target size={22} aria-hidden />,
-    title: "We talk",
+    title: "We talk through what to fix",
     body: "Twenty minutes. You get the two or three things we'd fix first and what they'd cost, whether you hire us or not.",
   },
 ];

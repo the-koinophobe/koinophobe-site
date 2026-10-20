@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { servicePages } from "@/lib/services";
 
 /** The other service pages, for the foot of a service page. Pass the current page's href to leave it out. */
-export function MoreServices({ current, title = "Other ways I help" }: { current: string; title?: string }) {
+export function MoreServices({ current, title = "More SEO services" }: { current: string; title?: string }) {
   const others = servicePages.filter((s) => s.href !== current);
   return (
     <section className="section">
