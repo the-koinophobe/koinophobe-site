@@ -28,11 +28,11 @@ const SPOTS: { side: "left" | "right"; x: string; top: string; rot: number; dx: 
   { side: "right", x: "2%", top: "50%", rot: -7, dx: 70, dy: 20 },
 ];
 
-function Polaroid({ p, sizes, priority = false }: { p: Project; sizes: string; priority?: boolean }) {
+function Polaroid({ p, sizes }: { p: Project; sizes: string }) {
   return (
     <figure className="polaroid">
       <div className="relative aspect-[16/10] overflow-hidden rounded-[10px] bg-surface">
-        <Image src={p.image} alt={`${p.sector} website`} fill sizes={sizes} priority={priority} className="object-cover object-top" />
+        <Image src={p.image} alt={`${p.sector} website`} fill sizes={sizes} className="object-cover object-top" />
       </div>
       <figcaption className="mt-2.5 truncate px-1 text-[12.5px] font-semibold tracking-tight">{caption(p)}</figcaption>
     </figure>
@@ -91,7 +91,7 @@ export function HeroScatter() {
             style={{ [s.side]: s.x, top: s.top, ["--dx" as string]: `${s.dx}px`, ["--dy" as string]: `${s.dy}px` }}
           >
             <div className="scatter-in" style={{ ["--rot" as string]: `${s.rot}deg`, animationDelay: `${0.25 + i * 0.09}s` }}>
-              <Polaroid p={p} sizes="228px" priority={i < 2} />
+              <Polaroid p={p} sizes="228px" />
             </div>
           </div>
         );

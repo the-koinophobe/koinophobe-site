@@ -414,7 +414,6 @@ export function Header() {
                   </Link>
                 </li>
               </ul>
-              <ThemeToggle />
             </div>
 
             <div className="dd" id="hx-dd">

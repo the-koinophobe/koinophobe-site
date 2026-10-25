@@ -325,7 +325,7 @@ export default function AiSearchPage() {
             <div>
               <h2 className="t-h3 !text-[1.6rem]">{startup.name}</h2>
               <p className="mt-3 flex items-baseline gap-2">
-                <span className="tnum font-display text-[3.2rem] font-extrabold leading-none tracking-tight text-pop">{startup.price}</span>
+                <span className="tnum font-display text-[3.2rem] font-extrabold leading-none tracking-tight text-mint">{startup.price}</span>
                 <span className="text-[15px] text-muted">{startup.unit}</span>
               </p>
             </div>

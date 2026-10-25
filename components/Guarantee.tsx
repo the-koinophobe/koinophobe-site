@@ -10,7 +10,7 @@ import { guarantee } from "@/lib/pricing";
 export function GuaranteeLine({ className = "", light = false }: { className?: string; light?: boolean }) {
   return (
     <p className={`flex items-start gap-2.5 text-[15px] ${className}`}>
-      <ShieldCheck size={18} aria-hidden className={`mt-0.5 flex-none ${light ? "text-[#7ED2A5]" : "text-brand"}`} />
+      <ShieldCheck size={18} aria-hidden className={`mt-0.5 flex-none ${light ? "text-mint" : "text-brand"}`} />
       <span className={light ? "muted" : "text-muted"}>
         <span className={`font-medium ${light ? "text-white dark:text-ink" : "text-ink"}`}>{guarantee.name}.</span>{" "}
         {guarantee.short}{" "}

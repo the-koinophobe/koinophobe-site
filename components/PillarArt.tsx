@@ -38,7 +38,7 @@ export function FixArt() {
           <div className="flex-1 space-y-2.5">
             {[0, 1, 2].map((i) => (
               <div key={i} className="art-tick flex items-center gap-2" style={{ transitionDelay: `${0.5 + i * 0.18}s` }}>
-                <span className="grid h-5 w-5 flex-none place-items-center rounded-full bg-pop text-on-pop">
+                <span className="grid h-5 w-5 flex-none place-items-center rounded-full bg-brand text-white">
                   <Check size={12} strokeWidth={3} />
                 </span>
                 <span className="h-2 rounded-full bg-surface" style={{ width: `${[80, 64, 72][i]}%` }} />

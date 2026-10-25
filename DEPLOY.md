@@ -56,9 +56,6 @@ the michael@ identity.
 | `CONTACT_SMTP_PASS` | Gmail App Password | contact form SMTP auth |
 | `CONTACT_TO` | thekoinophobe@gmail.com | where leads land (optional) |
 | `NEXT_PUBLIC_GTM_ID` | GTM-XXXXXXX | loads Tag Manager (consent-gated) |
-| `GA4_PROPERTY_ID` | numeric id | live visits counter in the footer |
-| `GA_SA_CLIENT_EMAIL` | ...@...iam.gserviceaccount.com | GA4 Data API auth |
-| `GA_SA_PRIVATE_KEY` | private key from the SA JSON | GA4 Data API auth |
 
 Leave `NEXT_PUBLIC_GA_ID` unset when using GTM (GA4 loads inside the
 container; setting both is double-tracking). **Redeploy after adding vars.**
@@ -69,8 +66,6 @@ container; setting both is double-tracking). **Redeploy after adding vars.**
 2. Add a **Web** data stream for https://koinophobe.com → note the
    Measurement ID (`G-…`). You will paste it into GTM, not into the code.
 3. Admin → Data settings → Data retention → **14 months**.
-4. Note the numeric **Property ID** (Admin → Property settings) for
-   `GA4_PROPERTY_ID`.
 
 ## 6. GTM (tagmanager.google.com)
 
@@ -115,25 +110,7 @@ For individual posts/threads add another redirect entry with its own
 Read results in GA4 → Reports → Acquisition → Traffic acquisition
 (dimension: session source/medium), or filter `source = instagram`.
 
-## 9. Live visits counter (footer)
-
-The footer shows the site's own GA4 page views ("walk the talk"). Setup:
-
-1. console.cloud.google.com → New project "koinophobe" (same Google login,
-   free, no billing needed).
-2. APIs & Services → Enable **Google Analytics Data API**.
-3. IAM → Service accounts → Create ("koinophobe-site") → Keys → Add key →
-   JSON → download.
-4. GA4 → Admin → Property access management → add the service account's
-   email as **Viewer**.
-5. From the JSON, set env vars: `client_email` → `GA_SA_CLIENT_EMAIL`,
-   `private_key` → `GA_SA_PRIVATE_KEY` (paste as-is, escaped \n included),
-   plus `GA4_PROPERTY_ID`.
-6. Redeploy. The counter appears under the footer wordmark once GA4 has
-   data; it renders nothing while unconfigured, so nothing breaks meanwhile.
-   Numbers refresh hourly.
-
-## 10. Smoke test
+## 9. Smoke test
 
 - [ ] https://koinophobe.com loads with SSL, www redirects to apex
 - [ ] /sitemap.xml and /robots.txt resolve
@@ -144,7 +121,7 @@ The footer shows the site's own GA4 page views ("walk the talk"). Setup:
 - [ ] Social card looks right: paste URL into opengraph.xyz
 - [ ] Lighthouse spot-check on / (mobile)
 
-## 11. Ongoing (monthly, 15 minutes)
+## 10. Ongoing (monthly, 15 minutes)
 
 GSC: queries growing? pages indexed? GA4: sessions by source (watch the
 instagram/twitter rows), key events by landing page. That's the same review

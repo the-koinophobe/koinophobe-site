@@ -26,7 +26,7 @@ import { Faq, type FaqItem } from "@/components/Faq";
 export const revalidate = 3600;
 
 export const metadata = {
-  title: "About Koinophobe, an SEO agency for home services",
+  title: { absolute: "About Koinophobe, an SEO agency for home services" },
   description:
     "Koinophobe is an SEO agency: technical SEO, local search, call tracking and AI search for home service businesses, startups and the agencies that serve them.",
   alternates: { canonical: "/about" },
@@ -202,7 +202,7 @@ export default function AboutPage() {
                 { v: aggregate.topThree.toLocaleString("en-US"), l: "keywords in the top 3" },
               ].map((x) => (
                 <div key={x.l} className="p-5 sm:p-6 [&:nth-child(-n+2)]:border-b [&:nth-child(-n+2)]:border-white/10 [&:nth-child(odd)]:border-r [&:nth-child(odd)]:border-white/10">
-                  <p className="font-display text-[clamp(1.8rem,3.2vw,2.4rem)] font-extrabold leading-none tracking-tight text-pop">{x.v}</p>
+                  <p className="font-display text-[clamp(1.8rem,3.2vw,2.4rem)] font-extrabold leading-none tracking-tight text-mint">{x.v}</p>
                   <p className="mt-2 text-[13.5px] leading-snug text-muted">{x.l}</p>
                 </div>
               ))}

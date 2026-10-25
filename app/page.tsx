@@ -16,7 +16,6 @@ import { MobileCta } from "@/components/MobileCta";
 import { CountUp } from "@/components/CountUp";
 import { Reveal } from "@/components/Reveal";
 import { Reviews } from "@/components/Reviews";
-import { SiteWall } from "@/components/SiteWall";
 import { GuaranteeLine } from "@/components/Guarantee";
 import { NoteCard } from "@/components/NoteCard";
 import { HeroFan, HeroScatter } from "@/components/HeroScatter";
@@ -158,7 +157,7 @@ export default function HomePage() {
               { v: aggregate.impressions, l: "search impressions", n: aggregate.window },
             ].map((s, i) => (
               <div key={s.l} className={i > 0 ? "md:border-l md:border-white/10 md:pl-6" : ""}>
-                <p className="font-display text-[clamp(1.9rem,4.4vw,3.2rem)] font-extrabold leading-none tracking-tight text-pop">
+                <p className="font-display text-[clamp(1.9rem,4.4vw,3.2rem)] font-extrabold leading-none tracking-tight text-mint">
                   <CountUp value={s.v} display={s.v.toLocaleString("en-US")} />
                 </p>
                 <p className="mt-3 text-[15px] font-medium">{s.l}</p>
@@ -312,7 +311,7 @@ export default function HomePage() {
             {STEPS.map((s, i) => (
               <li key={s.n} className="stack-card" style={{ ["--i" as string]: i }}>
                 <div className={`stack-face ${i % 2 ? "card" : "card-dark"} p-7 sm:p-10`}>
-                  <span className={`font-display text-[clamp(3.5rem,9vw,5.5rem)] font-extrabold leading-none tracking-tight ${i % 2 ? "text-brand" : "text-pop"}`}>
+                  <span className={`font-display text-[clamp(3.5rem,9vw,5.5rem)] font-extrabold leading-none tracking-tight ${i % 2 ? "text-brand" : "text-mint"}`}>
                     {s.n}
                   </span>
                   <h3 className="t-h3 mt-6 !text-[clamp(1.4rem,2.6vw,1.9rem)]">{s.title}</h3>
@@ -357,7 +356,7 @@ export default function HomePage() {
                 <ul className={`mt-6 flex-1 space-y-2.5 border-t pt-6 ${p.pick ? "border-white/10" : "border-line"}`}>
                   {p.items.slice(0, 4).map((it) => (
                     <li key={it} className="flex gap-2.5 text-[15px] leading-snug">
-                      <Check size={17} aria-hidden className={`mt-0.5 flex-none ${p.pick ? "text-pop" : "text-brand"}`} />
+                      <Check size={17} aria-hidden className={`mt-0.5 flex-none ${p.pick ? "text-mint" : "text-brand"}`} />
                       {it}
                     </li>
                   ))}
@@ -392,20 +391,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── The work ────────────────────────────────────────────── */}
-      <section className="section section-tint">
-        <div className="container-pad">
-          <SiteWall />
-          <div className="mt-10 flex flex-wrap items-center gap-3">
-            <PageCta href="/work" label="See the case studies" from="home_wall" />
-            <TextCta href="/about" label="About Koinophobe" from="home_wall" />
-          </div>
-        </div>
-      </section>
-
       {/* ── Latest notes ────────────────────────────────────────── */}
       {latest.length ? (
-        <section className="section">
+        <section className="section section-tint">
           <div className="container-pad">
             <Reveal className="stage-head">
               <p className="eyebrow">Notes</p>
@@ -423,7 +411,7 @@ export default function HomePage() {
         </section>
       ) : null}
 
-      <Faq items={HOME_FAQ} title="SEO questions owners ask first" className="section section-tint" />
+      <Faq items={HOME_FAQ} title="SEO questions owners ask first" className="section" />
 
       <Availability />
       <MobileCta />

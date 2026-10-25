@@ -30,12 +30,12 @@ export function Compare() {
       <div className="container-pad">
         <Reveal className="stage-head">
           <p className="eyebrow">Compare</p>
-          <h2 className="t-h2 mt-5">Koinophobe vs an SEO agency, a freelancer or doing it yourself</h2>
+          <h2 id="compare-heading" className="t-h2 mt-5">Koinophobe vs an SEO agency, a freelancer or doing it yourself</h2>
           <p className="t-lead mt-5 max-w-[52ch]">What you get for the money, side by side.</p>
         </Reveal>
 
         <div data-anim="rise" className="mt-14">
-          <table className="cmp">
+          <table className="cmp" aria-labelledby="compare-heading">
             <colgroup>
               <col className="w-[17%]" />
               <col className="w-[29%]" />

@@ -23,8 +23,8 @@ export function Availability({ call = CALL }: { call?: string[] } = {}) {
           <Reveal>
             <span className="inline-flex items-center gap-2.5 rounded-full bg-white/10 px-3.5 py-1.5 text-[13px] font-medium">
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#7ED2A5] opacity-60 motion-reduce:animate-none" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-[#7ED2A5]" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-mint opacity-60 motion-reduce:animate-none" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-mint" />
               </span>
               Taking new clients
             </span>
@@ -50,7 +50,7 @@ export function Availability({ call = CALL }: { call?: string[] } = {}) {
               <ul className="mt-5 space-y-4">
                 {call.map((c) => (
                   <li key={c} className="flex gap-3 text-[15.5px] leading-snug">
-                    <Check size={18} aria-hidden className="mt-0.5 flex-none text-[#7ED2A5]" />
+                    <Check size={18} aria-hidden className="mt-0.5 flex-none text-mint" />
                     <span className="muted">{c}</span>
                   </li>
                 ))}

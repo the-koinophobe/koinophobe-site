@@ -24,6 +24,7 @@ const config: Config = {
         band: "rgb(var(--band) / <alpha-value>)",
         card: "rgb(var(--card) / <alpha-value>)",
         pop: "rgb(var(--pop) / <alpha-value>)",
+        mint: "rgb(var(--mint) / <alpha-value>)",
         "on-pop": "rgb(var(--on-pop) / <alpha-value>)",
       },
       fontFamily: {
