@@ -60,5 +60,29 @@ export function Anim() {
     return () => document.removeEventListener("click", onClick, { capture: true });
   }, []);
 
+  // The light under the pointer on cards: one delegated listener writes the
+  // pointer position into --mx/--my on whichever card it is over, and CSS
+  // draws the glow. Mouse only; touch has nothing to follow.
+  useEffect(() => {
+    if (!window.matchMedia("(hover: hover) and (prefers-reduced-motion: no-preference)").matches) return;
+    let frame = 0;
+    const onMove = (e: PointerEvent) => {
+      if (e.pointerType !== "mouse" || frame) return;
+      frame = requestAnimationFrame(() => {
+        frame = 0;
+        const el = (e.target as Element | null)?.closest?.<HTMLElement>(".card, .card-dark, .band.sq");
+        if (!el) return;
+        const r = el.getBoundingClientRect();
+        el.style.setProperty("--mx", `${e.clientX - r.left}px`);
+        el.style.setProperty("--my", `${e.clientY - r.top}px`);
+      });
+    };
+    document.addEventListener("pointermove", onMove, { passive: true });
+    return () => {
+      cancelAnimationFrame(frame);
+      document.removeEventListener("pointermove", onMove);
+    };
+  }, []);
+
   return null;
 }

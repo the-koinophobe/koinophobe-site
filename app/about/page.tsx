@@ -175,11 +175,12 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesLd) }}
       />
 
-      <section className="hero-bg">
-        <div className="container-pad grid items-center gap-12 pb-16 pt-14 sm:pt-20 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
+      <section className="page-hero hero-bg">
+        <div className="grid-fade pointer-events-none absolute inset-0" aria-hidden />
+        <div className="container-pad relative grid items-center gap-12 pb-16 pt-14 sm:pb-20 sm:pt-24 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
           <Reveal>
             <p className="eyebrow">About</p>
-            <h1 className="t-h1 mt-5 max-w-[18ch]">An SEO agency that shows its work</h1>
+            <h1 className="t-h1 mt-6 max-w-[18ch]">An SEO agency that shows its work</h1>
             <p className="t-lead mt-6 max-w-[58ch]">
               Koinophobe does technical SEO, local SEO, call tracking and AI search for home service businesses
               and the marketing agencies that serve them. {site.owner} founded it after years of building and
@@ -193,15 +194,15 @@ export default function AboutPage() {
             </div>
           </Reveal>
           <div className="mx-auto w-full max-w-[440px] lg:mx-0">
-            <div className="card grid grid-cols-2 gap-px overflow-hidden bg-line p-0 shadow-float">
+            <div data-anim="rise" className="card-dark grid grid-cols-2 overflow-hidden p-2">
               {[
                 { v: `${aggregate.sitesWorked}+`, l: "sites built and ranked" },
                 { v: aggregate.clicks.toLocaleString("en-US"), l: "clicks from Google, five sites" },
                 { v: aggregate.pageOne.toLocaleString("en-US"), l: "keywords on page one" },
                 { v: aggregate.topThree.toLocaleString("en-US"), l: "keywords in the top 3" },
               ].map((x) => (
-                <div key={x.l} className="bg-bg p-6">
-                  <p className="font-display text-[clamp(1.7rem,3vw,2.2rem)] leading-none tracking-tight text-brand">{x.v}</p>
+                <div key={x.l} className="p-5 sm:p-6 [&:nth-child(-n+2)]:border-b [&:nth-child(-n+2)]:border-white/10 [&:nth-child(odd)]:border-r [&:nth-child(odd)]:border-white/10">
+                  <p className="font-display text-[clamp(1.8rem,3.2vw,2.4rem)] font-extrabold leading-none tracking-tight text-pop">{x.v}</p>
                   <p className="mt-2 text-[13.5px] leading-snug text-muted">{x.l}</p>
                 </div>
               ))}
@@ -223,28 +224,28 @@ export default function AboutPage() {
 
       <section className="section">
         <div className="container-pad">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <Reveal className="max-w-3xl">
-              <p className="eyebrow">The work</p>
-              <h2 className="t-h2 mt-5">Our SEO results: judge us on these, not on this page</h2>
-            </Reveal>
-            <PageCta href="/work" label="All case studies" from="about_work" size="md" />
-          </div>
-          <div data-anim="cards" className="mt-12 grid gap-5 md:grid-cols-2">
+          <Reveal className="stage-head">
+            <p className="eyebrow">The work</p>
+            <h2 className="t-h2 mt-5">Our SEO results: judge us on these, not on this page</h2>
+            <div className="mt-8 flex justify-center">
+              <PageCta href="/work" label="All case studies" from="about_work" size="md" />
+            </div>
+          </Reveal>
+          <div data-anim="cards" className="mt-14 grid gap-5 md:grid-cols-2">
             {cases
               .filter((c) => CASE_IMG[c.slug])
               .map((c) => (
-                <Link key={c.slug} href={`/work#${c.slug}`} className="card card-hover group grid overflow-hidden sm:grid-cols-[200px_1fr]">
-                  <div className="relative aspect-[16/9] bg-surface sm:aspect-auto">
-                    <Image src={CASE_IMG[c.slug]} alt="" fill sizes="(min-width: 640px) 200px, 100vw" className="object-cover" />
+                <Link key={c.slug} href={`/work#${c.slug}`} className="card card-hover press group flex flex-col overflow-hidden p-2.5 sm:flex-row">
+                  <div className="relative aspect-[16/9] flex-none overflow-hidden rounded-2xl bg-surface sm:aspect-auto sm:w-[190px]">
+                    <Image src={CASE_IMG[c.slug]} alt="" fill sizes="(min-width: 640px) 190px, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-[1.05] motion-reduce:transform-none" />
                   </div>
-                  <div className="flex flex-col p-6">
+                  <div className="flex flex-1 flex-col p-4 sm:p-5">
                     <p className="text-[13.5px] text-muted">
                       {c.client} &middot; {c.place}
                     </p>
                     <p className="mt-2 font-display text-[1.2rem] leading-snug tracking-tight">{c.title}</p>
                     <p className="mt-auto flex items-baseline gap-2 pt-5">
-                      <span className="font-display text-[1.9rem] leading-none tracking-tight text-brand">{c.headline.value}</span>
+                      <span className="font-display text-[2rem] font-extrabold leading-none tracking-tight text-brand">{c.headline.value}</span>
                       <span className="text-[13.5px] text-muted">{c.headline.label}</span>
                     </p>
                   </div>
@@ -256,16 +257,17 @@ export default function AboutPage() {
 
       <section className="section section-tint">
         <div className="container-pad">
-          <Reveal className="max-w-3xl">
+          <Reveal className="stage-head">
             <p className="eyebrow">How we work</p>
             <h2 className="t-h2 mt-5">How our SEO agency works: four promises you can hold us to</h2>
           </Reveal>
-          <div data-anim="cards" className="mt-12 grid gap-5 md:grid-cols-2">
-            {PRINCIPLES.map((p) => (
-              <div key={p.title} className="card p-7 sm:p-8">
+          <div data-anim="cards" className="mt-14 grid gap-5 md:grid-cols-2">
+            {PRINCIPLES.map((p, i) => (
+              // A checkerboard: the first and last promise sit on dark cards.
+              <div key={p.title} className={`p-7 sm:p-10 ${i === 0 || i === 3 ? "card-dark" : "card"}`}>
                 <span className="icon-tile">{p.icon}</span>
-                <h3 className="t-h3 mt-6">{p.title}</h3>
-                <p className="mt-3 text-[15.5px] leading-relaxed text-muted">{p.body}</p>
+                <h3 className="t-h3 mt-6 !text-[1.45rem]">{p.title}</h3>
+                <p className="mt-3 text-[16px] leading-relaxed text-muted">{p.body}</p>
               </div>
             ))}
           </div>
@@ -274,20 +276,20 @@ export default function AboutPage() {
 
       <section className="section">
         <div className="container-pad">
-          <Reveal className="max-w-3xl">
+          <Reveal className="stage-head">
             <p className="eyebrow">What we do</p>
             <h2 className="t-h2 mt-5">Our SEO services: technical, measurable, and mostly in WordPress</h2>
           </Reveal>
-          <div data-anim="cards" className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div data-anim="cards" className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((s) => (
-              <div key={s.title} className="card p-7">
+              <div key={s.title} className="card p-7 sm:p-8">
                 <span className="icon-tile">{s.icon}</span>
                 <h3 className="t-h3 mt-5">{s.title}</h3>
                 <p className="mt-2.5 text-[15px] leading-relaxed text-muted">{s.body}</p>
               </div>
             ))}
           </div>
-          <div className="mt-10 flex flex-wrap items-center gap-3">
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-3">
             <PageCta href="/pricing" label="See pricing" from="about_services" />
             <PageCta href="/roofing-seo" label="Roofing SEO" from="about_services" />
             <PageCta href="/home-remodeling-seo" label="Home remodeling SEO" from="about_services" />

@@ -105,8 +105,9 @@ export default function NotePage({ params }: { params: { slug: string } }) {
       <FaqSchema items={note.faq} />
 
       <article>
-        <header className="hero-bg">
-          <div className="container-pad pb-10 pt-10 sm:pt-14">
+        <header className="page-hero hero-bg">
+          <div className="grid-fade pointer-events-none absolute inset-0" aria-hidden />
+          <div className="container-pad relative pb-12 pt-10 sm:pt-16">
             <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 text-[14px] text-muted">
               <Link href="/" className="hover:text-ink">Home</Link>
               <ChevronRight size={14} aria-hidden />
@@ -137,7 +138,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
         {note.cover ? (
           <div className="container-pad">
             <figure>
-              <div className="relative aspect-[16/9] overflow-hidden rounded-3xl bg-surface">
+              <div className="relative aspect-[16/9] overflow-hidden rounded-3xl bg-surface shadow-[var(--shadow-lg)]">
                 <Image
                   src={note.cover}
                   alt={note.coverAlt}
@@ -220,8 +221,8 @@ export default function NotePage({ params }: { params: { slug: string } }) {
                   ))}
                 </nav>
               ) : null}
-              <div className="card bg-surface p-6">
-                <p className="t-h3 !text-[1.2rem]">{isAi ? "Want your business in the answer?" : isStartup ? "Want this shipped on your site?" : "Want this done on your site?"}</p>
+              <div className="card-dark p-6 sm:p-7">
+                <p className="t-h3 !text-[1.3rem]">{isAi ? "Want your business in the answer?" : isStartup ? "Want this shipped on your site?" : "Want this done on your site?"}</p>
                 <p className="mt-2 text-[14.5px] leading-relaxed text-muted">
                   {isAi
                     ? "Run the free AI crawler check, or book 20 minutes and we\u2019ll bring what the assistants say about your category."
@@ -230,7 +231,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
                       : "Book a free 20-minute call. We\u2019ll look at your site first and tell you what we\u2019d fix."}
                 </p>
                 <div className="mt-5 flex flex-col gap-2.5">
-                  <BookCta from="note_sidebar" size="md" className="w-full" />
+                  <BookCta from="note_sidebar" size="md" tone="light" className="w-full" />
                   {isAi ? (
                     <PageCta href="/ai-search-optimization#check" label="Check your site free" from="note_sidebar_ai" size="md" className="w-full" />
                   ) : isStartup ? (
@@ -248,18 +249,18 @@ export default function NotePage({ params }: { params: { slug: string } }) {
       </article>
 
       {related.length ? (
-        <section className="section-tint py-20">
+        <section className="section section-tint">
           <div className="container-pad">
-            <div className="flex flex-wrap items-end justify-between gap-4">
+            <div className="stage-head">
               {/* lowercase the first letter only when it starts a plain word, so "AI" and "SEO" survive */}
-              <h2 className="t-h2 !text-[clamp(1.6rem,2.8vw,2.2rem)]">
+              <h2 className="t-group">
                 More notes on {/^[A-Z][a-z]/.test(topic.title) ? topic.title[0].toLowerCase() + topic.title.slice(1) : topic.title}
               </h2>
-              <Link href={`/notes/topic/${topic.key}`} className="link-arrow">
+              <Link href={`/notes/topic/${topic.key}`} className="link-arrow mt-4">
                 All notes on this topic <ArrowRight size={16} aria-hidden />
               </Link>
             </div>
-            <div className="mt-8 grid gap-5 md:grid-cols-3">
+            <div data-anim="cards" className="mt-12 grid gap-6 md:grid-cols-3">
               {related.map((r) => (
                 <NoteCard key={r.slug} note={r} />
               ))}

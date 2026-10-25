@@ -146,18 +146,18 @@ export function CtaBand({
 }) {
   return (
     <div className="container-pad">
-      <div className="card flex flex-col gap-6 bg-surface px-6 py-8 sm:px-10 md:flex-row md:items-center md:justify-between md:gap-10 md:py-10">
-        <p className="t-h3 max-w-[30ch] !text-[clamp(1.35rem,2.4vw,1.75rem)] text-balance">{line}</p>
+      <div data-anim="rise" className="card-dark flex flex-col gap-6 px-7 py-9 sm:px-12 md:flex-row md:items-center md:justify-between md:gap-10 md:py-12">
+        <p className="t-h3 max-w-[26ch] !text-[clamp(1.5rem,2.8vw,2.1rem)] text-balance">{line}</p>
         <div className="flex flex-col gap-3">
           <div className="flex flex-wrap items-center gap-3">
-            <BookCta from={from} size="md" />
+            <BookCta from={from} size="md" tone="light" />
             {secondary ? (
               <PageCta href={secondary.href} label={secondary.label} from={from} size="md" />
             ) : (
-              <EmailCta from={from} size="md" />
+              <EmailCta from={from} size="md" tone="ghost-light" />
             )}
           </div>
-          <BookNote />
+          <BookNote light />
         </div>
       </div>
     </div>

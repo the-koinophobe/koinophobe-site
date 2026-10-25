@@ -86,8 +86,9 @@ const ROOF_FAQ: FaqItem[] = [
 export default function RoofingPage() {
   return (
     <>
-      <section className="hero-bg">
-        <div className="container-pad grid items-center gap-12 pb-16 pt-14 sm:pt-20 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
+      <section className="page-hero hero-bg">
+        <div className="grid-fade pointer-events-none absolute inset-0" aria-hidden />
+        <div className="container-pad relative grid items-center gap-12 pb-16 pt-14 sm:pb-20 sm:pt-24 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
           <Reveal>
             <p className="eyebrow">SEO for roofing companies</p>
             <h1 className="t-h1 mt-5 max-w-[17ch]">Roofing SEO for contractors tired of paying for shared leads</h1>
@@ -124,20 +125,20 @@ export default function RoofingPage() {
 
       <section className="section">
         <div className="container-pad">
-          <Reveal className="max-w-3xl">
+          <Reveal className="stage-head">
             <p className="eyebrow">What we do for roofers</p>
             <h2 className="t-h2 mt-5">Roofing SEO: the six things we fix on every roofing site</h2>
           </Reveal>
           <div data-anim="cards" className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {WORK.map((w) => (
-              <div key={w.t} className="card p-7">
+              <div key={w.t} className="card p-7 sm:p-8">
                 <span className="icon-tile">{w.icon}</span>
                 <h3 className="t-h3 mt-5">{w.t}</h3>
                 <p className="mt-2.5 text-[15px] leading-relaxed text-muted">{w.b}</p>
               </div>
             ))}
           </div>
-          <div className="card mt-8 flex flex-col gap-5 bg-cream p-7 sm:p-8 md:flex-row md:items-center md:justify-between">
+          <div className="card-dark mt-8 flex flex-col gap-5 p-7 sm:p-10 md:flex-row md:items-center md:justify-between">
             <p className="max-w-[60ch] text-[16.5px]">
               The <Link href="/pricing#growth" className="font-medium underline underline-offset-4">Growth plan</Link> at
               $1,500 a month covers two new town or service pages a month plus the profile work. If your site needs
@@ -146,17 +147,19 @@ export default function RoofingPage() {
             </p>
             <PageCta href="/pricing" label="Compare plans" from="roofing_plans" size="md" />
           </div>
-          <GuaranteeLine className="mt-5" />
+          <div className="mt-6 flex justify-center">
+            <GuaranteeLine />
+          </div>
         </div>
       </section>
 
       <section className="section section-tint">
         <div className="container-pad">
-          <Reveal className="max-w-3xl">
+          <Reveal className="stage-head">
             <p className="eyebrow">One roofer, one year</p>
             <h2 className="t-h2 mt-5">Roofing SEO results in Search Console</h2>
           </Reveal>
-          <div className="card mt-10 px-5 sm:px-8">
+          <div className="card mt-12 px-5 sm:px-10">
             <CaseStudyBlock c={roofing} />
           </div>
         </div>

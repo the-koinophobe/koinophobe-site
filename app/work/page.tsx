@@ -62,11 +62,12 @@ export default function WorkPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(casesLd) }}
       />
-      <section className="hero-bg">
-        <div className="container-pad grid items-center gap-10 pb-14 pt-14 sm:pt-20 lg:grid-cols-[1.35fr_1fr] lg:gap-14">
+      <section className="page-hero hero-bg">
+        <div className="grid-fade pointer-events-none absolute inset-0" aria-hidden />
+        <div className="container-pad relative grid items-center gap-10 pb-16 pt-14 sm:pb-20 sm:pt-24 lg:grid-cols-[1.35fr_1fr] lg:gap-14">
           <Reveal>
             <p className="eyebrow">Case studies</p>
-            <h1 className="t-h1 mt-5 max-w-[20ch]">SEO case studies from real Search Console accounts</h1>
+            <h1 className="t-h1 mt-6 max-w-[20ch]">SEO case studies from real Search Console accounts</h1>
             <p className="t-lead mt-6 max-w-[60ch]">
               Thirty-plus sites in two years. Here are the five we can put the Search Console data on the table
               for: same four numbers each time, the story behind them, and what we&rsquo;d go after next. Then every
@@ -80,12 +81,12 @@ export default function WorkPage() {
               ))}
             </nav>
           </Reveal>
-          <ul className="card divide-y divide-line px-5">
+          <ul data-anim="rise" className="card-dark divide-y divide-white/10 px-6 py-2 sm:px-8">
             {READ_THIS.map((r) => (
-              <li key={r.title} className="flex items-start gap-3.5 py-4">
+              <li key={r.title} className="flex items-start gap-3.5 py-5">
                 <span className="mt-0.5 text-brand">{r.icon}</span>
-                <p className="text-[14.5px] text-muted">
-                  <b className="font-medium text-ink">{r.title}</b> {r.body}
+                <p className="text-[15px] text-muted">
+                  <b className="font-semibold text-ink">{r.title}</b> {r.body}
                 </p>
               </li>
             ))}
@@ -95,19 +96,20 @@ export default function WorkPage() {
 
       <section className="section">
         <div className="container-pad">
-          <Reveal>
-            <div>
-              <p className="eyebrow">The numbers</p>
-              <h2 className="t-h2 mt-5 max-w-[24ch]">Five SEO case studies, with the Search Console left open</h2>
-              <p className="t-lead mt-4 max-w-[52ch]">
-                The greatest hits, if you like. Same four numbers for each, the story behind them, and what
-                we&rsquo;d go after next.
-              </p>
-            </div>
+          <Reveal className="stage-head">
+            <p className="eyebrow">The numbers</p>
+            <h2 className="t-h2 mx-auto mt-5 max-w-[24ch]">Five SEO case studies, with the Search Console left open</h2>
+            <p className="t-lead mt-5 max-w-[52ch]">
+              The greatest hits, if you like. Same four numbers for each, the story behind them, and what
+              we&rsquo;d go after next.
+            </p>
           </Reveal>
-          <div className="card mt-12 px-5 sm:px-8">
+          {/* One case per card: each gets the screen to itself. */}
+          <div className="mt-14 grid gap-6">
             {cases.map((c) => (
-              <CaseStudyBlock key={c.slug} c={c} />
+              <div key={c.slug} className="card px-5 sm:px-10">
+                <CaseStudyBlock c={c} />
+              </div>
             ))}
           </div>
         </div>

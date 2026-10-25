@@ -28,29 +28,36 @@ export function FaqSchema({ items }: { items: FaqItem[] }) {
   );
 }
 
-/** The visible list: native details/summary, so it works with no JavaScript. */
+/**
+ * The visible list: native details/summary, so it works with no JavaScript.
+ * Each question is its own card; where the browser can animate to auto
+ * height the answer slides open, elsewhere it simply appears.
+ */
 export function FaqList({ items }: { items: FaqItem[] }) {
   return (
-    <div className="border-t border-line">
+    <div className="faq-list">
       {items.map((f) => (
-        <details key={f.q} className="group border-b border-line py-5">
-          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-[16.5px] font-medium text-ink [&::-webkit-details-marker]:hidden">
-            {f.q}
-            <span
-              aria-hidden
-              className="font-mono text-[18px] text-muted transition-transform duration-150 group-open:rotate-45"
-            >
-              +
+        <details key={f.q} className="faq-item group">
+          <summary className="faq-q">
+            <span>{f.q}</span>
+            <span aria-hidden className="faq-icon">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M6 1v10M1 6h10" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              </svg>
             </span>
           </summary>
-          <p className="mt-3 max-w-[60ch] text-[15.5px] leading-relaxed text-muted">{f.a}</p>
+          <p className="faq-a">{f.a}</p>
         </details>
       ))}
     </div>
   );
 }
 
-/** A full section: eyebrow, optional heading, the list and its schema. */
+/**
+ * A full section: the heading on the left, pinned while the questions scroll
+ * past on wide screens, and the list on the right. `className` is the
+ * section's spacing and background, so it always runs edge to edge.
+ */
 export function Faq({
   items,
   title,
@@ -64,19 +71,17 @@ export function Faq({
 }) {
   if (!items.length) return null;
   return (
-    <section className={`container-pad ${className}`}>
+    <section className={className}>
       <FaqSchema items={items} />
-      <Reveal className="max-w-3xl">
-        <p className="eyebrow">{eyebrow}</p>
-        {title ? (
-          <h2 className="t-h2 mt-5">
-            {title}
-          </h2>
-        ) : null}
-        <div className="mt-8">
+      <div className="container-pad grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+        <Reveal className="lg:sticky lg:top-[calc(var(--hx-h)+32px)] lg:self-start">
+          <p className="eyebrow">{eyebrow}</p>
+          {title ? <h2 className="t-h2 mt-5 max-w-[16ch]">{title}</h2> : null}
+        </Reveal>
+        <div data-anim="cards">
           <FaqList items={items} />
         </div>
-      </Reveal>
+      </div>
     </section>
   );
 }

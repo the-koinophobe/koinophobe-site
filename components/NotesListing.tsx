@@ -34,14 +34,15 @@ export function NotesListing({
   const href = (p: number) => (p === 1 ? basePath : `${basePath}/page/${p}`);
   return (
     <>
-      <section className="hero-bg">
-        <div className="container-pad pb-12 pt-14 sm:pt-20">
-          <Reveal className="max-w-3xl">
+      <section className="page-hero hero-bg">
+        <div className="grid-fade pointer-events-none absolute inset-0" aria-hidden />
+        <div className="container-pad relative pb-14 pt-14 sm:pb-16 sm:pt-24">
+          <Reveal className="stage-head">
             <p className="eyebrow">Notes</p>
-            <h1 className="t-h1 mt-5">{heading}</h1>
-            <p className="t-lead mt-5 max-w-[60ch]">{intro}</p>
+            <h1 className="t-h1 mx-auto mt-6 max-w-[20ch]">{heading}</h1>
+            <p className="t-lead mt-6 max-w-[60ch]">{intro}</p>
           </Reveal>
-          <nav aria-label="Topics" className="mt-9 flex flex-wrap gap-2">
+          <nav aria-label="Topics" className="mx-auto mt-10 flex max-w-[56rem] flex-wrap justify-center gap-2">
             <Link
               href="/notes"
               aria-current={!activeTopic ? "page" : undefined}
@@ -63,21 +64,21 @@ export function NotesListing({
         </div>
       </section>
 
-      <section className="container-pad pb-20">
+      <section className="container-pad pb-24">
         <h2 className="sr-only">{activeTopic ? `${heading}: all notes` : page > 1 ? "More SEO notes" : "Latest SEO notes"}</h2>
         {items.length === 0 ? (
           <p className="text-muted">Nothing here yet. New notes go up twice a week.</p>
         ) : featureFirst && first ? (
           <>
             <NoteCard note={first} priority large />
-            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div data-anim="cards" className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {rest.map((n) => (
                 <NoteCard key={n.slug} note={n} />
               ))}
             </div>
           </>
         ) : (
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div data-anim="cards" className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {items.map((n, i) => (
               <NoteCard key={n.slug} note={n} priority={i < 3} />
             ))}

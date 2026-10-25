@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Instrument_Sans, JetBrains_Mono, Viga } from "next/font/google";
+import { Instrument_Sans, JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Header } from "@/components/Header";
@@ -11,17 +11,18 @@ import { Anim } from "@/components/Anim";
 import { CookieConsent } from "@/components/CookieConsent";
 import { site } from "@/lib/site";
 
+// Both faces load as variable fonts, so text can sit between the usual
+// weight steps: body at 450, medium at 560.
 const sans = Instrument_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
-  weight: ["400", "500", "600"],
 });
-const display = Viga({
+// Headings: a heavy geometric grotesk, set tight. Body stays Instrument Sans.
+const display = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
-  weight: "400",
 });
 const mono = JetBrains_Mono({
   subsets: ["latin"],

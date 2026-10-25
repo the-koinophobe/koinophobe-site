@@ -26,8 +26,8 @@ export function MobileCta() {
 
   return (
     <div
-      className={`fixed inset-x-0 bottom-0 z-40 border-t border-line bg-bg/95 px-5 py-3 backdrop-blur transition-transform duration-200 md:hidden ${
-        show ? "translate-y-0" : "translate-y-full"
+      className={`fixed inset-x-3 bottom-3 z-40 rounded-full border border-line bg-card/90 p-1.5 shadow-[var(--shadow-lg)] backdrop-blur-md transition-transform duration-500 ease-[cubic-bezier(0.34,1.4,0.64,1)] md:hidden ${
+        show ? "translate-y-0" : "translate-y-[calc(100%+1.5rem)]"
       } motion-reduce:transition-none`}
       aria-hidden={!show}
     >

@@ -11,13 +11,14 @@ export function Reviews({ exclude = [] }: { exclude?: string[] }) {
   const list = reviews.filter((r) => !exclude.includes(r.name));
   return (
     <>
-      <Reveal className="max-w-3xl">
+      <Reveal className="stage-head">
         <p className="eyebrow">In their words</p>
         <h2 className="t-h2 mt-5">What SEO clients say about working with us</h2>
       </Reveal>
-      <div data-anim="cards" className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {list.map((r) => (
-          <figure key={r.name} className="card flex flex-col p-7">
+      <div data-anim="cards" className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {list.map((r, i) => (
+          // One review in four sits on a dark card, so a long wall has rhythm.
+          <figure key={r.name} className={`flex flex-col p-7 sm:p-8 ${i % 4 === 1 ? "card-dark" : "card"}`}>
             <svg width="28" height="22" viewBox="0 0 28 22" aria-hidden className="text-brand/40">
               <path fill="currentColor" d="M0 22V12.4C0 5.6 3.9 1.5 11.7 0l1.2 3C8.6 4.3 6.4 6.6 6.1 10H12v12H0zm16 0V12.4C16 5.6 19.9 1.5 27.7 0l1.2 3c-4.3 1.3-6.5 3.6-6.8 7H28v12H16z" />
             </svg>

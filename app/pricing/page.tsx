@@ -10,7 +10,7 @@ import { Reveal } from "@/components/Reveal";
 import { Stagger } from "@/components/Stagger";
 import { agency, guarantee, monthly, oneTime, startup, type Plan } from "@/lib/pricing";
 import { site } from "@/lib/site";
-import { FaqSchema } from "@/components/Faq";
+import { FaqList, FaqSchema } from "@/components/Faq";
 
 export const revalidate = 3600;
 
@@ -76,17 +76,17 @@ function PlanCard({ p }: { p: Plan }) {
   return (
     <div
       id={p.key}
-      className={`card flex h-full scroll-mt-28 flex-col gap-5 p-6 sm:p-7 ${p.pick ? "border-ink/60 shadow-float" : ""}`}
+      className={`flex h-full scroll-mt-28 flex-col gap-5 p-6 sm:p-7 ${p.pick ? "card-dark shadow-float" : "card"}`}
     >
-      <div className="flex min-h-[24px] items-center justify-between gap-3">
+      <div className="flex min-h-[28px] items-center justify-between gap-3">
         <span className="text-[14px] font-medium text-muted">{p.kicker}</span>
-        {p.pick && <span className="eyebrow !text-[12px]">Most clients</span>}
+        {p.pick && <span className="sticker rotate-[4deg]">Most clients</span>}
       </div>
       <div>
         <h3 className="t-h3 !text-[1.5rem]">{p.name}</h3>
         <p className="mt-3 flex items-baseline gap-2">
           {p.from && <span className="text-[15px] text-muted">from</span>}
-          <span className="tnum font-display text-[2.4rem] leading-none tracking-tight">
+          <span className="tnum font-display text-[2.6rem] font-extrabold leading-none tracking-tight">
             {p.price}
           </span>
           <span className="text-[14px] text-muted">{p.unit}</span>
@@ -158,19 +158,20 @@ export default function PricingPage() {
       />
       <FaqSchema items={FAQ} />
 
-      <section className="hero-bg">
-        <div className="container-pad pb-14 pt-14 sm:pt-20">
-          <Reveal className="max-w-3xl">
+      <section className="page-hero hero-bg">
+        <div className="grid-fade pointer-events-none absolute inset-0" aria-hidden />
+        <div className="container-pad relative pb-16 pt-14 text-center sm:pb-20 sm:pt-24">
+          <Reveal className="mx-auto max-w-[820px]">
             <p className="eyebrow">Pricing</p>
-            <h1 className="t-h1 mt-5 max-w-[20ch]">
+            <h1 className="t-h1 mx-auto mt-6 max-w-[20ch]">
               SEO pricing for home service businesses, before the call
             </h1>
-            <p className="t-lead mt-6 max-w-[58ch]">
+            <p className="t-lead mx-auto mt-6 max-w-[58ch]">
               Every price we charge is on this page, and your first payment on any of them is covered by a 100%
               money-back guarantee. If you&rsquo;re not sure which one fits, the intro call is free and we&rsquo;ll
               tell you.
             </p>
-            <div className="mt-9 flex flex-wrap items-center gap-3">
+            <div className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
               <BookCta from="pricing_hero" />
               <EmailCta from="pricing_hero" />
             </div>
@@ -180,41 +181,41 @@ export default function PricingPage() {
       </section>
 
       <section id="guarantee" className="container-pad scroll-mt-28 pt-6">
-        <div className="card flex flex-col gap-5 border-brand/30 bg-brand/[0.05] p-6 sm:flex-row sm:items-start sm:gap-6 sm:p-8">
+        <div data-anim="rise" className="card-dark flex flex-col gap-5 p-7 sm:flex-row sm:items-start sm:gap-7 sm:p-10">
           <span className="icon-tile flex-none">
             <ShieldCheck size={22} aria-hidden />
           </span>
           <div>
             <h2 className="t-h3 !text-[1.5rem]">{guarantee.name}</h2>
-            <p className="mt-2 max-w-[75ch] text-[16px] leading-relaxed text-ink/85">{guarantee.terms}</p>
+            <p className="muted mt-3 max-w-[75ch] text-[16px] leading-relaxed">{guarantee.terms}</p>
           </div>
         </div>
       </section>
 
-      <section className="container-pad pt-16">
-        <h2 className="t-h3">One-time SEO audits and fixes</h2>
-        <p className="mt-1.5 text-[15px] text-muted">A free call, an audit, or a one-off fix.</p>
-        <Stagger className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+      <section className="container-pad pt-24 sm:pt-32">
+        <Reveal className="stage-head">
+          <h2 className="t-group">One-time SEO audits and fixes</h2>
+          <p className="t-lead mt-3">A free call, an audit, or a one-off fix.</p>
+        </Reveal>
+        <Stagger className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {oneTime.map((p) => (
             <PlanCard key={p.key} p={p} />
           ))}
         </Stagger>
       </section>
 
-      <section id="monthly" className="container-pad scroll-mt-28 pt-20">
-        <div className="flex flex-wrap items-baseline justify-between gap-3">
-          <div>
-            <h2 className="t-h3">Monthly SEO plans</h2>
-            <p className="mt-1.5 text-[15px] text-muted">Someone on it every month, with a report you can read.</p>
-          </div>
-          <p className="text-[14px] text-muted">3-month minimum, then month to month</p>
-        </div>
-        <Stagger className="mt-6 grid gap-4 md:grid-cols-3">
+      <section id="monthly" className="container-pad scroll-mt-28 pt-24 sm:pt-32">
+        <Reveal className="stage-head">
+          <h2 className="t-group">Monthly SEO plans</h2>
+          <p className="t-lead mt-3">Someone on it every month, with a report you can read.</p>
+          <p className="mt-4 inline-flex rounded-full border border-line bg-card px-3.5 py-1.5 text-[14px] font-medium">3-month minimum, then month to month</p>
+        </Reveal>
+        <Stagger className="mt-12 grid items-stretch gap-4 md:grid-cols-3">
           {monthly.map((p) => (
             <PlanCard key={p.key} p={p} />
           ))}
         </Stagger>
-        <p className="mt-5 text-[15px] text-muted">
+        <p className="mt-6 text-center text-[15px] text-muted">
           What the plans look like for your trade:{" "}
           <Link href="/roofing-seo" className="text-ink underline underline-offset-4">
             roofing SEO
@@ -227,15 +228,13 @@ export default function PricingPage() {
         </p>
       </section>
 
-      <section id="startups" className="container-pad scroll-mt-28 pt-20">
-        <div className="flex flex-wrap items-baseline justify-between gap-3">
-          <div>
-            <h2 className="t-h3">AI search optimization</h2>
-            <p className="mt-1.5 text-[15px] text-muted">For any business that wants to be named by ChatGPT, Claude, Perplexity and Google&rsquo;s AI. Software startups get it as pull requests.</p>
-          </div>
-          <p className="text-[14px] text-muted">No contract, 30 days&rsquo; notice to stop</p>
-        </div>
-        <div id={startup.key} className="card mt-6 grid scroll-mt-28 gap-8 p-6 sm:p-8 lg:grid-cols-[0.9fr_1.4fr] lg:gap-12">
+      <section id="startups" className="container-pad scroll-mt-28 pt-24 sm:pt-32">
+        <Reveal className="stage-head">
+          <h2 className="t-group">AI search optimization</h2>
+          <p className="t-lead mt-3">For any business that wants to be named by ChatGPT, Claude, Perplexity and Google&rsquo;s AI. Software startups get it as pull requests.</p>
+          <p className="mt-4 inline-flex rounded-full border border-line bg-card px-3.5 py-1.5 text-[14px] font-medium">No contract, 30 days&rsquo; notice to stop</p>
+        </Reveal>
+        <div id={startup.key} data-anim="rise" className="card-dark mt-12 grid scroll-mt-28 gap-8 p-7 sm:p-10 lg:grid-cols-[0.9fr_1.4fr] lg:gap-12">
           <div className="flex flex-col gap-5">
             <div className="flex items-center justify-between gap-3">
               <span className="text-[14px] font-medium text-muted">{startup.kicker}</span>
@@ -246,17 +245,17 @@ export default function PricingPage() {
             <div>
               <h3 className="t-h3 !text-[1.5rem]">{startup.name}</h3>
               <p className="mt-3 flex items-baseline gap-2">
-                <span className="tnum font-display text-[2.4rem] leading-none tracking-tight">{startup.price}</span>
+                <span className="tnum font-display text-[2.8rem] font-extrabold leading-none tracking-tight text-pop">{startup.price}</span>
                 <span className="text-[14px] text-muted">{startup.unit}</span>
               </p>
             </div>
-            <div className="flex gap-3 rounded-2xl bg-cream p-4 text-ink">
+            <div className="flex gap-3 rounded-2xl bg-cream p-4">
               <CalendarClock size={19} aria-hidden className="mt-0.5 flex-none text-brand" />
               <p className="text-[14.5px] leading-relaxed">
                 <span className="font-medium">{startup.termsLead}</span> {startup.terms}
               </p>
             </div>
-            <Link href="/ai-search-optimization" data-track="cta_link" data-from="pricing_startup" className="btn btn-md btn-secondary self-start">
+            <Link href="/ai-search-optimization" data-track="cta_link" data-from="pricing_startup" className="btn btn-md btn-light self-start">
               How the plan works
               <ArrowRight size={17} aria-hidden />
             </Link>
@@ -278,7 +277,7 @@ export default function PricingPage() {
             ))}
           </div>
         </div>
-        <p className="mt-4 text-[15px] text-muted">
+        <p className="mt-6 text-center text-[15px] text-muted">
           How the AI side is measured:{" "}
           <Link href="/notes/track-ai-search-visibility" className="text-ink underline underline-offset-4">
             tracking AI search visibility
@@ -291,17 +290,19 @@ export default function PricingPage() {
         </p>
       </section>
 
-      <section id="agencies" className="container-pad scroll-mt-28 pt-20">
-        <h2 className="t-h3">White-label for agencies</h2>
-        <p className="mt-1.5 text-[15px] text-muted">Technical SEO under your brand. You keep the client relationship.</p>
-        <div className="card mt-6 px-6">
+      <section id="agencies" className="container-pad scroll-mt-28 pt-24 sm:pt-32">
+        <Reveal className="stage-head">
+          <h2 className="t-group">White-label for agencies</h2>
+          <p className="t-lead mt-3">Technical SEO under your brand. You keep the client relationship.</p>
+        </Reveal>
+        <div data-anim="rise" className="card mx-auto mt-12 max-w-[60rem] px-6 sm:px-8">
           {agency.map((a) => (
             <div
               key={a.name}
-              className="grid gap-2 border-b border-line py-5 last:border-0 sm:grid-cols-[14ch_22ch_1fr] sm:gap-6"
+              className="grid gap-2 border-b border-line py-6 last:border-0 sm:grid-cols-[14ch_22ch_1fr] sm:gap-6"
             >
               <span className="font-medium">{a.name}</span>
-              <span className="tnum font-display text-[1.2rem] leading-snug tracking-tight">
+              <span className="tnum font-display text-[1.3rem] font-extrabold leading-snug tracking-tight">
                 {a.price}
               </span>
               <span className="text-[15px] text-muted">{a.body}</span>
@@ -309,7 +310,7 @@ export default function PricingPage() {
           ))}
         </div>
         {getNote("white-label-technical-seo-for-agencies") ? (
-          <p className="mt-4 text-[15px] text-muted">
+          <p className="mt-6 text-center text-[15px] text-muted">
             How white-label works day to day:{" "}
             <Link href="/notes/white-label-technical-seo-for-agencies" className="text-ink underline underline-offset-4">
               white-label technical SEO for agencies
@@ -319,8 +320,8 @@ export default function PricingPage() {
         ) : null}
       </section>
 
-      <section className="container-pad pt-24">
-        <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
+      <section className="container-pad pb-8 pt-28 sm:pt-36">
+        <div className="grid gap-14 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           <Reveal>
             <p className="eyebrow">The terms</p>
             <h2 className="t-h2 mt-5 max-w-[18ch]">SEO contract terms you can count on</h2>
@@ -340,11 +341,11 @@ export default function PricingPage() {
                 </div>
               ))}
             </div>
-            <div className="card mt-10 bg-surface p-6">
-              <span className="text-brand">
-                <Video size={22} aria-hidden />
+            <div className="card-dark mt-10 p-7 sm:p-8">
+              <span className="icon-tile">
+                <Video size={21} aria-hidden />
               </span>
-              <p className="mt-3 text-[16.5px] font-medium">Not ready for a call?</p>
+              <p className="mt-4 text-[17px] font-semibold">Not ready for a call?</p>
               <p className="mt-1.5 max-w-[46ch] text-[15px] text-muted">
                 Email us your website and we&rsquo;ll send a free 5-minute screen recording of what
                 we&rsquo;d fix first.
@@ -361,28 +362,15 @@ export default function PricingPage() {
 
           <Reveal delay={0.1}>
             <p className="eyebrow">Questions</p>
-            <div className="mt-8 border-t border-line">
-              {FAQ.map((f) => (
-                <details key={f.q} className="group border-b border-line py-5">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-[16.5px] font-medium [&::-webkit-details-marker]:hidden">
-                    {f.q}
-                    <span
-                      aria-hidden
-                      className="font-mono text-[18px] text-muted transition-transform duration-150 group-open:rotate-45"
-                    >
-                      +
-                    </span>
-                  </summary>
-                  <p className="mt-3 max-w-[56ch] text-[15.5px] leading-relaxed text-muted">{f.a}</p>
-                </details>
-              ))}
+            <div className="mt-8">
+              <FaqList items={FAQ} />
             </div>
           </Reveal>
         </div>
       </section>
 
       <RelatedNotes
-        className="mt-24"
+        className="mt-20"
         title="Read before you choose an SEO plan"
         slugs={["how-long-does-seo-take", "hiring-an-seo-questions-to-ask", "roofing-seo-cost", "monthly-seo-report-contractors", "seo-vs-google-ads-contractors"]}
       />

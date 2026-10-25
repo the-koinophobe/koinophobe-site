@@ -18,9 +18,9 @@ export function NoteCard({ note, priority = false, large = false }: { note: Note
   return (
     <Link
       href={`/notes/${note.slug}`}
-      className={`card card-hover group flex h-full flex-col overflow-hidden ${large ? "md:grid md:grid-cols-[1.25fr_1fr]" : ""}`}
+      className={`card card-hover press group flex h-full flex-col overflow-hidden p-2.5 ${large ? "md:grid md:grid-cols-[1.25fr_1fr]" : ""}`}
     >
-      <div className={`relative aspect-[16/9] w-full overflow-hidden bg-surface ${large ? "md:aspect-auto md:min-h-[320px]" : ""}`}>
+      <div className={`relative aspect-[16/9] w-full overflow-hidden rounded-2xl bg-surface ${large ? "md:aspect-auto md:min-h-[320px]" : ""}`}>
         {img ? (
           <Image
             src={large ? note.cover || img : img}
@@ -28,11 +28,11 @@ export function NoteCard({ note, priority = false, large = false }: { note: Note
             fill
             priority={priority}
             sizes={large ? "(min-width: 768px) 60vw, 100vw" : "(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw"}
-            className="object-cover transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transform-none"
+            className="object-cover transition-transform duration-700 group-hover:scale-[1.05] motion-reduce:transform-none"
           />
         ) : null}
       </div>
-      <div className={`flex flex-1 flex-col p-6 ${large ? "md:justify-center md:p-10" : ""}`}>
+      <div className={`flex flex-1 flex-col p-4 pt-5 sm:p-5 ${large ? "md:justify-center md:p-10" : ""}`}>
         <span className="eyebrow self-start !text-[12.5px]">{topicLabel(note.topic)}</span>
         <h3 className={`mt-4 font-display tracking-tight text-balance ${large ? "text-[clamp(1.6rem,2.6vw,2.2rem)] leading-[1.12]" : "text-[1.3rem] leading-[1.22]"}`}>
           {note.title}

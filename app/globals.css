@@ -3,36 +3,45 @@
 @tailwind utilities;
 
 :root {
-  /* Neutral base, green as the accent. White page, near-black ink with a
-     green cast, the forest green reserved for primary buttons, dark bands
-     and the footer, cream kept as an occasional warm highlight. */
-  --bg: 255 255 255;        /* #FFFFFF */
-  --surface: 246 247 244;   /* #F6F7F4 section tint */
+  /* v3, Oct 2026. Off-white page, white cards, near-black ink with a green
+     cast. Forest green carries the dark cards, bands and footer; lime is the
+     one bright highlight, kept to buttons, stickers and markers. Lime is a
+     fill only, never text on a light ground: it can't be read there. */
+  --bg: 247 247 243;        /* #F7F7F3 */
+  --surface: 238 239 233;   /* #EEEFE9 section tint */
+  --card: 255 255 255;      /* cards sit white on the off-white page */
   --ink: 14 26 19;          /* #0E1A13 */
-  --muted: 84 98 90;        /* #54625A */
-  --line: 226 230 225;      /* #E2E6E1 */
+  --muted: 70 84 76;        /* #46544C */
+  --line: 223 227 219;      /* #DFE3DB */
   --brand: 18 96 61;        /* #12603D accent green, links and icons */
-  --brand-soft: 230 241 233;/* #E6F1E9 */
+  --brand-soft: 226 240 230;/* #E2F0E6 */
   --accent: 160 58 32;      /* #A03A20 flags and anomalies only */
-  --forest: 3 43 20;        /* #032B14 primary button, dark bands */
+  --forest: 3 43 20;        /* #032B14 dark cards */
   --cream: 251 247 237;     /* #FBF7ED warm highlight */
   --on-forest: 255 255 255;
+  --pop: 200 242 104;       /* #C8F268 lime highlight */
+  --on-pop: 3 43 20;
+  --pop-edge: 3 43 20;      /* hard edge and press shadow under lime buttons */
   --edge: 3 43 20;
   --deep: 18 96 61;
 }
 
 .dark {
-  --bg: 9 17 13;            /* #09110D */
-  --surface: 16 28 21;      /* #101C15 */
+  --bg: 8 14 11;            /* #080E0B */
+  --surface: 13 21 16;      /* #0D1510 */
+  --card: 17 27 21;         /* #111B15 */
   --ink: 236 241 235;       /* #ECF1EB */
-  --muted: 160 178 166;     /* #A0B2A6 */
-  --line: 34 50 41;         /* #223229 */
+  --muted: 174 192 180;     /* #AEC0B4 */
+  --line: 33 48 39;         /* #213027 */
   --brand: 126 210 165;     /* #7ED2A5 */
   --brand-soft: 20 48 32;
   --accent: 242 161 132;
-  --forest: 126 210 165;    /* primary button turns mint on dark */
+  --forest: 126 210 165;
   --cream: 22 38 28;
   --on-forest: 3 43 20;
+  --pop: 200 242 104;
+  --on-pop: 3 43 20;
+  --pop-edge: 96 140 40;
   --edge: 236 241 235;
   --deep: 126 210 165;
 }
@@ -56,6 +65,7 @@ body {
   background-color: rgb(var(--bg));
   color: rgb(var(--ink));
   font-family: var(--font-sans), system-ui, sans-serif;
+  font-weight: 450;
   -webkit-font-smoothing: antialiased;
   overflow-x: clip; /* decorative SVGs can never cause sideways scroll */
 }
@@ -248,12 +258,12 @@ html.lenis body {
    below is CSS. The `anim` class is added by an inline script in the head, so
    with JS off nothing is ever hidden. */
 .anim [data-anim] { opacity: 0; }
-.anim [data-anim="rise"] { transform: translateY(18px); }
+.anim [data-anim="rise"] { transform: translateY(28px) scale(0.98); }
 .anim [data-anim][data-in] {
   opacity: 1;
   transform: none;
   transition: opacity 0.6s cubic-bezier(0.2, 0.7, 0.3, 1),
-              transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1);
+              transform 0.85s cubic-bezier(0.34, 1.3, 0.64, 1);
 }
 .anim [data-anim="stagger"] { opacity: 1; }
 .anim [data-anim="stagger"] > * { opacity: 0; transform: translateY(18px); }
@@ -368,14 +378,28 @@ html.gbp-light .gbp-theme .gbp-logo { filter: none; }
   align-items: center;
   gap: 0.5rem;
   border-radius: 999px;
-  padding: 0.35rem 0.8rem;
-  background: rgb(var(--brand-soft));
-  color: rgb(var(--brand));
+  padding: 0.42rem 0.85rem;
+  background: rgb(var(--card));
+  border: 1px solid rgb(var(--line));
+  box-shadow: var(--shadow-sm);
+  color: rgb(var(--ink));
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2;
   letter-spacing: 0.01em;
 }
+.eyebrow::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgb(var(--pop));
+  box-shadow: 0 0 0 1.5px rgb(var(--pop-edge));
+}
+/* Eyebrows that bring their own dot skip the built-in one. */
+.eyebrow:has(> span[aria-hidden])::before { display: none; }
+.band .eyebrow,
+.card-dark .eyebrow { background: rgb(255 255 255 / 0.08); border-color: rgb(255 255 255 / 0.12); color: rgb(var(--band-ink)); box-shadow: none; }
 
 /* Flat variant for chart axis captions, which are labels, not section marks. */
 .eyebrow-flat {
@@ -722,8 +746,8 @@ html.gbp-light .gbp-theme .gbp-logo { filter: none; }
   margin-top: 2.75rem;
   font-family: var(--font-display), "Arial Black", system-ui, sans-serif;
   font-size: 1.32rem;
-  font-weight: 400;
-  letter-spacing: -0.015em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   line-height: 1.3;
   color: rgb(var(--ink));
 }
@@ -739,17 +763,17 @@ html.gbp-light .gbp-theme .gbp-logo { filter: none; }
 .prose em { color: rgb(var(--muted)); }
 .prose img { border-radius: 2px; }
 
-/* Viga ships one weight and no italic. Stop the browser faking either. */
+/* The display face has no italic. Stop the browser faking one. */
 .font-display,
 .prose h2,
 .prose h3 {
-  font-synthesis: none;
+  font-synthesis-style: none;
 }
+.prose h2 { font-weight: 800; }
 
-/* Viga is wide and heavy, so the tight tracking cut for Fraunces crowds it.
-   Ease it everywhere, and set quotes at normal spacing. */
+/* Heavy geometric headings want tight tracking. Quotes stay at normal spacing. */
 .font-display.tracking-tight {
-  letter-spacing: -0.012em;
+  letter-spacing: -0.03em;
 }
 blockquote.font-display {
   letter-spacing: 0;
@@ -757,96 +781,141 @@ blockquote.font-display {
 
 
 /* ══════════════════════════════════════════════════════════════════════
-   Design system v2, Oct 2026. One button shape (pill), one card radius
-   (16px), chip eyebrows, a neutral base with green as the accent.
+   Design system v3, Oct 2026. Heavy geometric headings, white squircle
+   cards on an off-white page, forest-green dark cards, one lime highlight,
+   and buttons that press like keys.
    ══════════════════════════════════════════════════════════════════════ */
 
 :root {
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  /* A little overshoot so things land and settle instead of just stopping. */
+  --ease-settle: cubic-bezier(0.34, 1.4, 0.64, 1);
   --morph: 0.5s;
-  --band: 3 43 20;          /* dark sections and footer */
+  --band: 3 43 20;          /* dark sections, dark cards and footer */
   --band-ink: 255 255 255;
   --band-muted: 190 214 199;
-  --shadow-lg: 0 24px 60px -28px rgb(14 26 19 / 0.28), 0 2px 8px rgb(14 26 19 / 0.05);
+  --r-card: 24px;
+  --r-lg: 32px;
+  --shadow-sm: 0 1px 2px rgb(14 26 19 / 0.05), 0 4px 14px -6px rgb(14 26 19 / 0.08);
+  --shadow-lg: 0 30px 60px -30px rgb(14 26 19 / 0.3), 0 2px 8px rgb(14 26 19 / 0.05);
 }
 .dark {
-  --band: 12 34 22;
+  --band: 14 36 24;
   --band-ink: 236 241 235;
   --band-muted: 160 190 172;
-  --shadow-lg: 0 24px 60px -28px rgb(0 0 0 / 0.7), 0 2px 8px rgb(0 0 0 / 0.3);
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.3), 0 4px 14px -6px rgb(0 0 0 / 0.5);
+  --shadow-lg: 0 30px 60px -30px rgb(0 0 0 / 0.8), 0 2px 8px rgb(0 0 0 / 0.3);
+}
+
+/* ── Squircles ─────────────────────────────────────────────────────────
+   Real superellipse corners where the browser has corner-shape, ordinary
+   rounded corners everywhere else. A squircle reads tighter than a circle
+   arc at the same radius, so the radius grows with it. */
+@supports (corner-shape: squircle) {
+  :root { --r-card: 38px; --r-lg: 50px; }
+  .sq, .card, .card-dark, .btn, .eyebrow, .icon-tile, .dd, .hx-item,
+  .hx-media, .hx-icon-btn, .hx-menu-btn, .hx-box, .hx-cta, .hx-logo, .hero-photo, .float-card, .pager a, .pager span,
+  .rounded-xl, .rounded-2xl, .rounded-3xl, .prose figure img, .wall-tile {
+    corner-shape: squircle;
+  }
+  .rounded-xl { border-radius: 1.2rem; }
+  .rounded-2xl { border-radius: 1.65rem; }
+  .rounded-3xl { border-radius: 2.4rem; }
+  .prose figure img { border-radius: 26px; }
 }
 
 /* ── Type ──────────────────────────────────────────────────────────── */
-.t-h1 {
-  font-family: var(--font-display), "Arial Black", system-ui, sans-serif;
-  font-weight: 400;
-  font-size: clamp(2.35rem, 5vw, 4.1rem);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  text-wrap: balance;
-}
-.t-h2 {
-  font-family: var(--font-display), "Arial Black", system-ui, sans-serif;
-  font-weight: 400;
-  font-size: clamp(1.85rem, 3.4vw, 2.85rem);
-  line-height: 1.1;
-  letter-spacing: -0.018em;
-  text-wrap: balance;
-}
+/* Everything a notch heavier than the stock steps. */
+.font-display { font-weight: 750; }
+.font-medium { font-weight: 560; }
+.font-semibold { font-weight: 640; }
+.t-lead { font-weight: 480; }
+.t-hero,
+.t-h1,
+.t-h2,
 .t-h3 {
   font-family: var(--font-display), "Arial Black", system-ui, sans-serif;
-  font-weight: 400;
-  font-size: 1.3rem;
-  line-height: 1.25;
-  letter-spacing: -0.01em;
+  font-weight: 800;
+  text-wrap: balance;
+}
+.t-hero {
+  font-size: clamp(2.45rem, 6.6vw, 4.85rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+.t-h1 {
+  font-size: clamp(2.3rem, 5.2vw, 4.3rem);
+  line-height: 1.03;
+  letter-spacing: -0.04em;
+}
+.t-h2 {
+  font-size: clamp(2rem, 4.4vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.038em;
+}
+.t-h3 {
+  font-weight: 800;
+  font-size: 1.32rem;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
 }
 .t-lead {
   font-size: clamp(17px, 1.45vw, 19px);
   line-height: 1.6;
   color: rgb(var(--muted));
 }
-.section { padding-block: clamp(4.5rem, 8vw, 7rem); }
+/* One idea per scroll: every section gets a full stage of air. */
+.section { padding-block: clamp(5rem, 11vw, 9.5rem); }
 .section-tint { background: rgb(var(--surface)); }
+/* Section intro, centred: the one thing each section says. */
+.stage-head { max-width: 52rem; margin-inline: auto; text-align: center; }
+.stage-head .t-lead { margin-inline: auto; }
 
-/* ── Buttons: every button on the site is one of these. ───────────── */
+/* ── Buttons: every button on the site is one of these. ─────────────
+   The primary is a key: lime cap, hard edge, a ledge underneath that it
+   sinks into when pressed. */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.55rem;
   border-radius: 999px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1;
   white-space: nowrap;
-  border: 1px solid transparent;
+  border: 1.5px solid transparent;
   transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease,
-    transform 0.18s ease, box-shadow 0.18s ease;
+    transform 0.16s var(--ease-settle), box-shadow 0.16s var(--ease-settle);
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 .btn:hover { transform: translateY(-1px); }
-.btn:active { transform: none; }
-@media (prefers-reduced-motion: reduce) { .btn:hover { transform: none; } }
-.btn-lg { height: 52px; padding: 0 1.6rem; font-size: 16px; }
-.btn-md { height: 44px; padding: 0 1.25rem; font-size: 15px; }
-.btn-sm { height: 38px; padding: 0 1rem; font-size: 14px; }
-.btn-primary {
-  background: rgb(var(--forest));
-  color: rgb(var(--on-forest));
-  box-shadow: 0 8px 20px -10px rgb(3 43 20 / 0.55);
-}
-.btn-primary:hover { background: rgb(var(--brand)); }
-.dark .btn-primary:hover { background: rgb(160 226 190); }
-.btn-secondary {
-  background: rgb(var(--bg));
-  color: rgb(var(--ink));
-  border-color: rgb(var(--ink) / 0.16);
-}
-.btn-secondary:hover { border-color: rgb(var(--ink) / 0.4); background: rgb(var(--surface)); }
+.btn:active { transform: translateY(2px); }
+@media (prefers-reduced-motion: reduce) { .btn:hover, .btn:active { transform: none; } }
+.btn-lg { height: 54px; padding: 0 1.55rem; font-size: 16px; }
+.btn-md { height: 46px; padding: 0 1.2rem; font-size: 15px; }
+.btn-sm { height: 40px; padding: 0 1rem; font-size: 14px; }
+.btn-primary,
 .btn-light {
-  background: #fff;
-  color: #032b14;
+  background: rgb(var(--pop));
+  color: rgb(var(--on-pop));
+  border-color: rgb(var(--pop-edge));
+  box-shadow: 0 3px 0 rgb(var(--pop-edge));
 }
-.btn-light:hover { background: #e6f1e9; }
+.btn-primary:hover,
+.btn-light:hover { box-shadow: 0 4px 0 rgb(var(--pop-edge)); background: rgb(214 248 140); }
+.btn-primary:active,
+.btn-light:active { box-shadow: 0 1px 0 rgb(var(--pop-edge)); }
+.band .btn-light,
+.card-dark .btn-light { border-color: rgb(var(--pop)); box-shadow: 0 3px 0 rgb(96 140 40); }
+.btn-secondary {
+  background: rgb(var(--card));
+  color: rgb(var(--ink));
+  border-color: rgb(var(--ink) / 0.14);
+  box-shadow: 0 2px 0 rgb(var(--ink) / 0.08);
+}
+.btn-secondary:hover { border-color: rgb(var(--ink) / 0.4); }
+.btn-secondary:active { box-shadow: none; }
 .btn-ghost-light {
   color: rgb(var(--band-ink));
   border-color: rgb(var(--band-ink) / 0.3);
@@ -858,7 +927,7 @@ blockquote.font-display {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-weight: 500;
+  font-weight: 600;
   color: rgb(var(--brand));
 }
 .link-arrow svg { transition: transform 0.18s ease; }
@@ -866,29 +935,60 @@ blockquote.font-display {
 
 /* ── Cards ───────────────────────────────────────────────────────────── */
 .card {
-  background: rgb(var(--bg));
+  background: rgb(var(--card));
   border: 1px solid rgb(var(--line));
-  border-radius: 16px;
+  border-radius: var(--r-card);
+  box-shadow: var(--shadow-sm);
 }
 .card-hover {
-  transition: transform 0.25s var(--ease-out), box-shadow 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.35s var(--ease-settle), box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .card-hover:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px) rotate(-0.4deg);
   box-shadow: var(--shadow-lg);
   border-color: rgb(var(--ink) / 0.14);
 }
-@media (prefers-reduced-motion: reduce) { .card-hover:hover { transform: none; } }
+/* Touch gets the press instead of the hover. */
+.press { transition: transform 0.25s var(--ease-settle); -webkit-tap-highlight-color: transparent; }
+.press:active { transform: scale(0.975); }
+@media (prefers-reduced-motion: reduce) {
+  .card-hover:hover, .press:active { transform: none; }
+}
 .shadow-float { box-shadow: var(--shadow-lg); }
+/* Dark card: the forest slab both reference layouts lean on. */
+.card-dark {
+  background: rgb(var(--band));
+  color: rgb(var(--band-ink));
+  border: 1px solid rgb(255 255 255 / 0.06);
+  border-radius: var(--r-lg);
+}
+.card-dark .muted,
+.card-dark .text-muted { color: rgb(var(--band-muted)); }
 .icon-tile {
   display: grid;
   place-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
   background: rgb(var(--brand-soft));
   color: rgb(var(--brand));
 }
+/* Lime sticker: short labels stuck on at an angle. */
+.sticker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.38rem 0.75rem;
+  border-radius: 10px;
+  background: rgb(var(--pop));
+  color: rgb(var(--on-pop));
+  border: 1.5px solid rgb(var(--pop-edge));
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.1;
+  box-shadow: 0 2px 0 rgb(var(--pop-edge));
+}
+@supports (corner-shape: squircle) { .sticker { corner-shape: squircle; border-radius: 16px; } }
 
 /* Dark band: final CTA and footer. */
 .band {
@@ -897,50 +997,80 @@ blockquote.font-display {
 }
 .band .muted { color: rgb(var(--band-muted)); }
 
-/* Hero wash: a soft green glow and a faint grid, no images to load. */
+/* Hero ground: a soft halo behind the headline and a faint grid. */
 .hero-bg {
-  background:
-    radial-gradient(60% 70% at 85% 10%, rgb(var(--brand) / 0.10), transparent 60%),
-    radial-gradient(50% 60% at 5% 0%, rgb(var(--cream) / 0.9), transparent 60%);
+  background: radial-gradient(46% 50% at 50% 44%, rgb(var(--card)) 0%, rgb(var(--card) / 0.55) 45%, transparent 75%);
 }
 .dark .hero-bg {
-  background: radial-gradient(60% 70% at 85% 10%, rgb(var(--brand) / 0.12), transparent 60%);
+  background: radial-gradient(46% 50% at 50% 44%, rgb(var(--brand) / 0.09), transparent 70%);
 }
 .grid-fade {
   background-image:
     linear-gradient(rgb(var(--ink) / 0.045) 1px, transparent 1px),
     linear-gradient(90deg, rgb(var(--ink) / 0.045) 1px, transparent 1px);
-  background-size: 48px 48px;
-  -webkit-mask-image: radial-gradient(70% 60% at 50% 0%, #000, transparent 75%);
-  mask-image: radial-gradient(70% 60% at 50% 0%, #000, transparent 75%);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(75% 65% at 50% 40%, #000, transparent 80%);
+  mask-image: radial-gradient(75% 65% at 50% 40%, #000, transparent 80%);
 }
 
-/* ── Header ─────────────────────────────────────────────────────────── */
+/* ── Header ───────────────────────────────────────────────────────────
+   After projectone.website: no bar. A transparent, click-through strip with
+   the logo floating at the left and two dark blocks at the right, a compact
+   box of links and a separate booking button with a lime arrow chip.
+   Small uppercase type, 10px corners, nothing pill-shaped.
+
+   Scrolling down folds the link box into the button (data-collapsed);
+   scrolling up or tabbing in brings it back. Once content runs under the
+   logo it gets a card behind it so it never sits on a busy background. */
+:root {
+  --hx-h: 76px;
+  --hx-ink: 14 26 19;       /* the dark blocks */
+  --hx-on: 250 250 250;
+}
+.dark {
+  --hx-ink: 24 38 30;
+}
 .hx {
   position: sticky;
   top: 0;
   z-index: 50;
+  height: var(--hx-h);
   color: rgb(var(--ink));
-  background: rgb(var(--bg) / 0.86);
-  -webkit-backdrop-filter: saturate(160%) blur(14px);
-  backdrop-filter: saturate(160%) blur(14px);
-  border-bottom: 1px solid rgb(var(--line));
+  pointer-events: none;
 }
 .hx-bar {
-  height: 72px;
-  padding: 0 clamp(20px, 3.4vw, 48px);
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 0 clamp(16px, 4.4vw, 64px);
+  display: flex;
   align-items: center;
-  max-width: 1360px;
-  margin: 0 auto;
+  justify-content: space-between;
+  gap: 16px;
 }
+.hx-bar > * { pointer-events: auto; }
 .hx-logo {
-  justify-self: start;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 9px;
+  height: 40px;
+  margin-left: -10px;
+  padding: 0 10px;
+  border-radius: 10px;
   white-space: nowrap;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+.hx[data-scrolled] .hx-logo {
+  background: rgb(var(--card) / 0.92);
+  box-shadow: 0 1px 0 rgb(var(--ink) / 0.05), 0 8px 24px -12px rgb(14 26 19 / 0.4);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+.hx-wordmark {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
 }
 /* The K mark, painted in the current text color so one file works in both themes. */
 .logo-mark {
@@ -950,10 +1080,39 @@ blockquote.font-display {
   -webkit-mask: url(/logo.png) center / contain no-repeat;
   mask: url(/logo.png) center / contain no-repeat;
 }
+.hx-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.hx-nav { position: relative; }
+.hx-box {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  max-width: 720px;
+  padding: 0 4px 0 12px;
+  border-radius: 10px;
+  background: rgb(var(--hx-ink));
+  color: rgb(var(--hx-on));
+  overflow: hidden;
+  white-space: nowrap;
+  transition: max-width 0.55s var(--ease-out), padding 0.55s var(--ease-out), opacity 0.35s ease,
+    margin 0.55s var(--ease-out);
+}
+.dark .hx-box,
+.dark .hx-cta:not(.hx-cta-pop) { box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.08); }
+.hx[data-collapsed]:not(:focus-within) .hx-box {
+  max-width: 0;
+  padding: 0;
+  margin-right: -6px;
+  opacity: 0;
+}
+.hx[data-collapsed]:not(:focus-within) .dd { opacity: 0 !important; pointer-events: none !important; }
 .hx-links {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 2px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -962,40 +1121,95 @@ blockquote.font-display {
 .hx-plain {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 0;
-  font-size: 15px;
-  font-weight: 500;
-  color: rgb(var(--ink) / 0.72);
+  gap: 5px;
+  height: 32px;
+  padding: 0 9px;
+  border-radius: 7px;
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: rgb(var(--hx-on) / 0.86);
   background: none;
   border: 0;
-  font-family: inherit;
   cursor: pointer;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
+.hx-split .hx-trigger { padding-right: 2px; }
 .hx-trigger:hover,
 .hx-plain:hover,
 .hx-plain[aria-current="page"],
-.hx-trigger[aria-expanded="true"] { color: rgb(var(--ink)); }
+.hx-trigger[aria-current="page"],
+.hx-trigger[aria-expanded="true"] { color: rgb(var(--hx-on)); }
+.hx-plain:hover,
+.hx-split:hover,
+.hx-plain[aria-current="page"] { background: rgb(255 255 255 / 0.08); }
+.hx-split { border-radius: 7px; transition: background-color 0.2s ease; }
 .hx-chev { transition: transform 0.35s var(--ease-out); }
 .hx-trigger[aria-expanded="true"] .hx-chev { transform: rotate(180deg); }
-.hx-actions {
-  justify-self: end;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.hx-box .hx-icon-btn {
+  width: 32px;
+  height: 32px;
+  margin-left: 4px;
+  border: 0;
+  border-radius: 7px;
+  color: rgb(var(--hx-on) / 0.7);
 }
-.anim .hx-logo { animation: hx-down 0.8s var(--ease-out) 0.1s backwards; }
-.anim .hx-nav { animation: hx-fade 0.8s ease 0.2s backwards; }
-.anim .hx-actions { animation: hx-down 0.8s var(--ease-out) 0.3s backwards; }
-@keyframes hx-down { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
-@keyframes hx-fade { from { opacity: 0; } }
+.hx-box .hx-icon-btn:hover { color: rgb(var(--hx-on)); background: rgb(255 255 255 / 0.08); }
+
+/* The booking button: dark block, uppercase label, lime arrow chip. */
+.hx-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  height: 40px;
+  padding: 0 8px 0 16px;
+  border-radius: 10px;
+  background: rgb(var(--hx-ink));
+  color: rgb(var(--hx-on));
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: transform 0.16s var(--ease-settle);
+  -webkit-tap-highlight-color: transparent;
+}
+.hx-chip {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  background: rgb(var(--pop));
+  color: rgb(var(--on-pop));
+  transition: transform 0.3s var(--ease-settle);
+}
+.hx-cta:hover .hx-chip { transform: translateX(2px); }
+.hx-cta:active { transform: translateY(1px) scale(0.98); }
+/* Lime version, used in the phone sheet: the chip turns dark. */
+.hx-cta-pop {
+  height: 48px;
+  padding: 0 8px 0 22px;
+  font-size: 13px;
+  background: rgb(var(--pop));
+  color: rgb(var(--on-pop));
+}
+.hx-cta-pop .hx-chip { width: 32px; height: 32px; border-radius: 7px; background: rgb(var(--on-pop)); color: rgb(var(--pop)); }
+@media (prefers-reduced-motion: reduce) {
+  .hx-box { transition: none; }
+}
+.anim .hx-logo { animation: hx-down 0.8s var(--ease-settle) 0.05s backwards; }
+.anim .hx-right { animation: hx-down 0.8s var(--ease-settle) 0.15s backwards; }
+@keyframes hx-down { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: none; } }
 
 /* The morphing dropdown. */
 .dd {
   --x: 0px; --w: 400px; --h: 300px; --s: 0.97;
   position: absolute;
-  top: 62px;
+  top: calc(100% + 10px);
   left: 0;
   width: var(--w);
   height: var(--h);
@@ -1004,7 +1218,7 @@ blockquote.font-display {
   opacity: 0;
   pointer-events: none;
   border-radius: 16px;
-  background: rgb(var(--bg) / 0.97);
+  background: rgb(var(--card));
   border: 1px solid rgb(var(--line));
   color: rgb(var(--ink));
   box-shadow: 0 30px 70px -28px rgb(14 26 19 / 0.35), 0 2px 10px rgb(14 26 19 / 0.06);
@@ -1014,7 +1228,7 @@ blockquote.font-display {
   transition: transform var(--morph) var(--ease-out), width var(--morph) var(--ease-out),
     height var(--morph) var(--ease-out), opacity 0.3s ease;
 }
-.dark .dd { background: rgb(var(--surface) / 0.97); box-shadow: 0 30px 70px -28px rgb(0 0 0 / 0.8); }
+.dark .dd { background: rgb(var(--card)); box-shadow: 0 30px 70px -28px rgb(0 0 0 / 0.8); }
 .dd.open { --s: 1; opacity: 1; pointer-events: auto; }
 .dd.instant { transition: opacity 0.3s ease, transform var(--morph) var(--ease-out); }
 .dd.instant.snap { transition: none; }
@@ -1049,7 +1263,7 @@ blockquote.font-display {
   flex-direction: column;
   justify-content: center;
   padding: 0 12px;
-  border-radius: 10px;
+  border-radius: 14px;
   transition: background-color 0.25s ease;
 }
 .hx-item.is-active,
@@ -1060,7 +1274,7 @@ blockquote.font-display {
   position: relative;
   overflow: hidden;
   margin: 8px 8px 8px 0;
-  border-radius: 12px;
+  border-radius: 18px;
   background: rgb(var(--surface));
 }
 .hx-media img {
@@ -1092,99 +1306,108 @@ blockquote.font-display {
 
 .hx-menu-btn {
   display: none;
-  width: 42px;
-  height: 38px;
-  border-radius: 999px;
-  border: 1px solid rgb(var(--ink) / 0.14);
   place-items: center;
-  color: rgb(var(--ink));
-  background: rgb(var(--bg));
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 10px;
+  background: rgb(var(--hx-ink));
+  color: rgb(var(--hx-on));
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 .hx-icon-btn {
   display: grid;
   place-items: center;
   width: 38px;
   height: 38px;
-  border-radius: 999px;
+  border-radius: 10px;
   border: 1px solid rgb(var(--ink) / 0.14);
   color: rgb(var(--ink) / 0.7);
   background: transparent;
   cursor: pointer;
-  transition: border-color 0.18s ease, color 0.18s ease;
+  transition: border-color 0.18s ease, color 0.18s ease, background-color 0.18s ease;
 }
 .hx-icon-btn:hover { border-color: rgb(var(--ink) / 0.4); color: rgb(var(--ink)); }
+
+/* Phone menu: a full-screen dark sheet under the logo and close button,
+   big uppercase rows with hairlines, the lime booking button, and the name
+   set huge and faint at the foot. */
+html.hx-locked { overflow: hidden; }
 .hx-sheet {
-  position: absolute;
-  top: 66px;
-  left: 12px;
-  right: 12px;
-  padding: 10px;
-  border-radius: 16px;
-  background: rgb(var(--bg));
-  border: 1px solid rgb(var(--line));
-  box-shadow: var(--shadow-lg);
-  max-height: calc(100svh - 86px);
-  overflow: auto;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  padding: calc(var(--hx-h) + 16px) 24px 32px;
+  background: rgb(14 22 17);
+  color: rgb(var(--hx-on));
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  pointer-events: auto;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-6px) scale(0.98);
-  transform-origin: 50% 0;
-  transition: opacity 0.3s ease, transform 0.45s var(--ease-out), visibility 0s linear 0.45s;
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.55s var(--ease-out), opacity 0.3s ease, visibility 0s linear 0.55s;
 }
 .hx-sheet.open {
   opacity: 1;
   visibility: visible;
-  transform: none;
-  transition: opacity 0.3s ease, transform 0.45s var(--ease-out), visibility 0s;
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 0.55s var(--ease-out), opacity 0.2s ease, visibility 0s;
 }
-.hx-sheet h3 {
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: rgb(var(--muted));
-  margin: 14px 12px 4px;
-}
-.hx-sheet a:not(.btn) {
-  display: block;
-  padding: 10px 12px;
-  border-radius: 10px;
-  font-size: 16px;
-}
-.hx-sheet a:not(.btn):hover { background: rgb(var(--surface)); }
+/* With the sheet open, the logo and close button sit on it in light ink. */
+.hx[data-sheet] .hx-logo { color: rgb(var(--hx-on)); background: none !important; box-shadow: none !important; }
+.hx[data-sheet] .hx-menu-btn { background: rgb(255 255 255 / 0.08); }
 .hx-sheet-foot {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin: 14px 12px 6px;
-  padding-top: 14px;
-  border-top: 1px solid rgb(var(--line));
+  margin-top: 36px;
+}
+.hx-sheet-foot .hx-icon-btn {
+  width: 48px;
+  height: 48px;
+  border-color: rgb(255 255 255 / 0.16);
+  color: rgb(var(--hx-on) / 0.8);
+}
+.hx-sheet-mark {
+  margin-top: auto;
+  padding-top: 48px;
+  margin-bottom: -0.3em;
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 23vw;
+  font-weight: 800;
+  line-height: 0.8;
+  letter-spacing: -0.06em;
+  white-space: nowrap;
+  color: rgb(255 255 255 / 0.05);
+  user-select: none;
 }
 @media (max-width: 900px) {
-  .hx-bar { grid-template-columns: 1fr auto; }
-  .hx-nav { display: none; }
+  :root { --hx-h: 68px; }
+  .hx-bar { padding: 0 16px; }
+  .hx-nav, .hx-right > .hx-cta { display: none; }
   .hx-menu-btn { display: grid; }
-  .hx-actions .hx-icon-btn { display: none; }
-}
-@media (max-width: 400px) {
-  .hx-actions > .btn { display: none; }
 }
 @media (min-width: 901px) { .hx-sheet { display: none; } }
+
 
 /* ── Hero visual ────────────────────────────────────────────────────── */
 .hero-photo {
   position: relative;
-  border-radius: 24px;
+  border-radius: var(--r-lg);
   overflow: hidden;
   background: rgb(var(--surface));
   box-shadow: var(--shadow-lg);
 }
 .float-card {
   position: absolute;
-  border-radius: 16px;
-  background: rgb(var(--bg));
+  border-radius: 20px;
+  background: rgb(var(--card));
   border: 1px solid rgb(var(--line));
   box-shadow: var(--shadow-lg);
 }
@@ -1196,8 +1419,8 @@ blockquote.font-display {
 .anim [data-anim="cards"] { opacity: 1; }
 .anim [data-anim="cards"] > * {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.7s var(--ease-out), transform 0.8s var(--ease-out);
+  transform: translateY(36px) scale(0.94) rotate(-1deg);
+  transition: opacity 0.6s var(--ease-out), transform 0.9s var(--ease-settle);
 }
 .anim [data-anim="cards"][data-in] > * { opacity: 1; transform: none; }
 .anim [data-anim="cards"][data-in] > *:nth-child(2) { transition-delay: 0.08s; }
@@ -1245,25 +1468,24 @@ blockquote.font-display {
 .hx-caret {
   display: inline-grid;
   place-items: center;
-  width: 22px;
-  height: 30px;
-  margin-left: 2px;
+  width: 20px;
+  height: 32px;
   padding: 0;
   border: 0;
   border-radius: 6px;
   background: none;
-  color: rgb(var(--ink) / 0.6);
+  color: rgb(var(--hx-on) / 0.6);
   cursor: pointer;
   transition: color 0.2s ease;
 }
 .hx-caret:hover,
-.hx-caret[aria-expanded="true"] { color: rgb(var(--ink)); }
+.hx-caret[aria-expanded="true"] { color: rgb(var(--hx-on)); }
 .hx-caret[aria-expanded="true"] .hx-chev { transform: rotate(180deg); }
-.hx-caret:focus-visible { outline: 2px solid rgb(var(--brand)); outline-offset: 2px; }
+.hx-caret:focus-visible { outline: 2px solid rgb(var(--pop)); outline-offset: 2px; }
 
 .hx-sheet nav { display: flex; flex-direction: column; }
 .hx-sgroup,
-.hx-sheet a.hx-srow { border-bottom: 1px solid rgb(var(--line)); }
+.hx-sheet a.hx-srow { border-bottom: 1px solid rgb(255 255 255 / 0.12); }
 .hx-shead { display: flex; align-items: center; }
 .hx-sheet a.hx-srow,
 .hx-sheet .hx-srow {
@@ -1272,45 +1494,556 @@ blockquote.font-display {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 14px 12px;
+  padding: 20px 0;
   border: 0;
-  border-radius: 10px;
   background: none;
-  color: rgb(var(--ink));
-  font-family: inherit;
-  font-size: 17px;
-  font-weight: 500;
+  color: rgb(var(--hx-on));
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
   text-align: left;
   cursor: pointer;
 }
-.hx-sheet .hx-srow-btn { padding-right: 0; }
+.hx-sarrow { flex: none; color: rgb(var(--hx-on) / 0.75); transition: transform 0.25s var(--ease-settle); }
+.hx-sheet a.hx-srow:active .hx-sarrow { transform: translate(2px, -2px); }
 .hx-sheet .hx-shead .hx-srow { border-bottom: 0; }
+.hx-sheet .hx-shead .hx-sarrow { display: none; }
 .hx-stoggle {
   display: grid;
   place-items: center;
   flex: none;
   width: 44px;
   height: 44px;
+  margin-right: -12px;
   border: 0;
   border-radius: 10px;
   background: none;
-  color: rgb(var(--muted));
+  color: rgb(var(--hx-on) / 0.75);
   cursor: pointer;
 }
-.hx-stoggle .hx-chev { width: 10px; height: 6px; }
+.hx-stoggle .hx-chev { width: 12px; height: 7px; }
 .hx-stoggle[aria-expanded="true"] .hx-chev,
 .hx-srow-btn[aria-expanded="true"] .hx-chev { transform: rotate(180deg); }
 .hx-ssub {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s var(--ease-out);
+  transition: grid-template-rows 0.35s var(--ease-out);
 }
 .hx-ssub.open { grid-template-rows: 1fr; }
 .hx-ssub > div { overflow: hidden; }
-.hx-ssub.open > div { padding-bottom: 8px; }
+.hx-ssub.open > div { padding-bottom: 14px; }
 .hx-sheet .hx-ssub a {
-  padding: 9px 12px 9px 24px;
-  font-size: 15.5px;
-  color: rgb(var(--ink) / 0.75);
+  display: block;
+  padding: 9px 0 9px 14px;
+  border-left: 1px solid rgb(255 255 255 / 0.14);
+  font-size: 16px;
+  color: rgb(var(--hx-on) / 0.72);
 }
-@media (prefers-reduced-motion: reduce) { .hx-ssub { transition: none; } }
+.hx-sheet .hx-ssub a:active { color: rgb(var(--pop)); }
+@media (prefers-reduced-motion: reduce) { .hx-ssub, .hx-sheet { transition: none; } }
+
+
+/* ── Home, v3 (Oct 2026) ────────────────────────────────────────────────── */
+
+/* The highlighted phrase in the hero: a lime marker swipe behind the words. */
+.hero-mark {
+  position: relative;
+  white-space: nowrap;
+  z-index: 0;
+}
+.hero-mark::before {
+  content: "";
+  position: absolute;
+  inset: 0.12em -0.12em 0.02em;
+  z-index: -1;
+  border-radius: 0.18em;
+  background: rgb(var(--pop));
+  transform: rotate(-1.5deg);
+  transform-origin: left center;
+}
+.anim .hero-mark::before { animation: mark-swipe 0.9s var(--ease-out) 0.55s backwards; }
+@keyframes mark-swipe { from { transform: rotate(-1.5deg) scaleX(0); } }
+.dark .hero-mark { color: rgb(var(--on-pop)); }
+
+/* Client sites as polaroids: white mat, photo, handwritten-size caption. */
+.polaroid {
+  padding: 9px 9px 11px;
+  border-radius: 16px;
+  background: rgb(var(--card));
+  border: 1px solid rgb(var(--line));
+  box-shadow: 0 1px 0 rgb(var(--ink) / 0.06), 0 22px 40px -22px rgb(14 26 19 / 0.45);
+}
+.stat-card {
+  padding: 16px;
+  border-radius: 20px;
+  background: rgb(var(--card));
+  border: 1px solid rgb(var(--line));
+  box-shadow: var(--shadow-lg);
+}
+@supports (corner-shape: squircle) {
+  .polaroid { corner-shape: squircle; border-radius: 26px; }
+  .stat-card { corner-shape: squircle; border-radius: 30px; }
+}
+
+/* Tilt in, overshoot, settle; straighten and lift under the pointer. */
+.scatter-in {
+  transform: rotate(var(--rot, 0deg));
+  transition: transform 0.45s var(--ease-settle);
+}
+.anim .scatter-in { animation: scatter-in 1s var(--ease-settle) backwards; }
+@keyframes scatter-in {
+  from { opacity: 0; transform: translateY(40px) rotate(calc(var(--rot, 0deg) * 2.2)) scale(0.86); }
+}
+@media (hover: hover) {
+  .scatter-in:hover { transform: rotate(0deg) translateY(-6px) scale(1.04); }
+}
+
+/* As the hero scrolls away the cards drift outward. Scroll-driven where the
+   browser supports it; elsewhere they simply stay put. */
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .scatter-drift {
+      animation: scatter-drift linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 90vh;
+    }
+    @keyframes scatter-drift {
+      to { transform: translate(var(--dx, 0), var(--dy, 0)); opacity: 0.25; }
+    }
+  }
+}
+
+/* ── Bento art ─────────────────────────────────────────────────────────── */
+.art-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 20px;
+  background: rgb(var(--surface));
+}
+@supports (corner-shape: squircle) { .art-stage { corner-shape: squircle; border-radius: 32px; } }
+.art-window {
+  width: 82%;
+  border-radius: 16px;
+  background: rgb(var(--card));
+  border: 1px solid rgb(var(--line));
+  box-shadow: var(--shadow-lg);
+  transform: rotate(-2deg);
+}
+.anim [data-anim="art"] .art-window { transform: translateY(24px) rotate(-6deg) scale(0.94); transition: transform 0.9s var(--ease-settle); }
+.anim [data-anim="art"][data-in] .art-window { transform: rotate(-2deg); }
+.anim .art-tick { opacity: 0; transform: translateX(-8px); transition: opacity 0.4s ease, transform 0.5s var(--ease-settle); }
+.anim [data-in] .art-tick { opacity: 1; transform: none; }
+
+.art-dots {
+  background-color: rgb(var(--surface));
+  background-image: radial-gradient(rgb(var(--ink) / 0.16) 1.6px, transparent 1.7px);
+  background-size: 26px 26px;
+  background-position: 13px 13px;
+}
+.art-pin {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  margin: -19px 0 0 -19px;
+  border-radius: 999px 999px 999px 4px;
+  transform: rotate(-45deg);
+  background: rgb(var(--card));
+  color: rgb(var(--brand));
+  border: 1px solid rgb(var(--line));
+  box-shadow: var(--shadow-lg);
+}
+.art-pin svg { transform: rotate(45deg); }
+.art-pin-lead {
+  width: 50px;
+  height: 50px;
+  margin: -25px 0 0 -25px;
+  background: rgb(var(--pop));
+  color: rgb(var(--on-pop));
+  border-color: rgb(var(--pop-edge));
+}
+.anim .art-pin { opacity: 0; transform: translateY(-36px) rotate(-45deg) scale(0.6); transition: opacity 0.3s ease, transform 0.7s var(--ease-settle); }
+.anim [data-in] .art-pin { opacity: 1; transform: rotate(-45deg); }
+
+.art-ring::before,
+.art-ring::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid rgb(var(--pop));
+  animation: art-ring 2.4s ease-out infinite;
+}
+.art-ring::after { animation-delay: 1.2s; }
+@keyframes art-ring { from { transform: scale(1); opacity: 0.9; } to { transform: scale(2); opacity: 0; } }
+.art-col { transform-origin: bottom; }
+.anim .art-col { transform: scaleY(0); transition: transform 0.7s var(--ease-settle); }
+.anim [data-in] .art-col { transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .art-ring::before, .art-ring::after { animation: none; opacity: 0; }
+  .art-pin, .art-col, .art-tick, .art-window { opacity: 1 !important; transition: none !important; }
+  .art-col { transform: none !important; }
+  .art-pin { transform: rotate(-45deg) !important; }
+  .scatter-in, .anim .scatter-in, .anim .hero-mark::before { animation: none; }
+}
+
+/* ── Stacking steps: one idea per screen ───────────────────────────────
+   Each step pins a little lower than the last, so the next card slides up
+   over it and the earlier ones stay visible as a stack of edges. Where the
+   browser supports view timelines, a card being covered sinks back. */
+.stack { display: grid; gap: clamp(24px, 6vh, 56px); padding-bottom: 4vh; }
+.stack-card {
+  position: sticky;
+  top: calc(96px + var(--i) * 18px);
+}
+@media (min-width: 1024px) {
+  .stack-card { top: calc(120px + var(--i) * 22px); }
+  .stack-face { min-height: clamp(280px, 46vh, 400px); }
+  .stack { gap: 18vh; }
+}
+.stack-face {
+  min-height: clamp(230px, 36vh, 400px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 -12px 40px -24px rgb(14 26 19 / 0.45);
+  transform-origin: 50% 0;
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .stack-face {
+      animation: stack-sink linear both;
+      animation-timeline: view();
+      animation-range: exit-crossing 0% exit-crossing 100%;
+    }
+    .stack-card:last-child .stack-face { animation: none; }
+    @keyframes stack-sink { to { transform: scale(0.94); filter: brightness(0.9); } }
+  }
+}
+
+/* ── Comparison table ──────────────────────────────────────────────────
+   A real table on wide screens; one card per row on phones, with each cell
+   labelled by its column. */
+.cmp {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 15px;
+  line-height: 1.45;
+}
+.cmp thead th { padding: 0 14px 16px; text-align: left; vertical-align: bottom; font-weight: 600; }
+.cmp-logo { padding: 0.5rem 0.85rem; }
+.cmp-logo .logo-mark { width: 24px; height: 24px; }
+.cmp-head { font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: rgb(var(--muted)); }
+.cmp tbody th {
+  padding: 18px 14px;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+  border-top: 1px solid rgb(var(--line));
+}
+.cmp td {
+  padding: 18px 14px;
+  vertical-align: top;
+  color: rgb(var(--muted));
+  border-top: 1px solid rgb(var(--line));
+}
+.cmp td > span:last-child { display: inline; }
+.cmp-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: -4px;
+  border-radius: 999px;
+  background: rgb(var(--ink) / 0.07);
+  color: rgb(var(--muted));
+}
+.cmp td.cmp-us { color: rgb(var(--ink)); font-weight: 500; background: rgb(var(--pop) / 0.18); }
+.cmp td.cmp-us .cmp-mark { background: rgb(var(--pop)); color: rgb(var(--on-pop)); box-shadow: 0 0 0 1.5px rgb(var(--pop-edge)); }
+.cmp tbody tr:first-child td.cmp-us { border-top-left-radius: 18px; border-top-right-radius: 18px; }
+.cmp tbody tr:last-child td.cmp-us { border-bottom-left-radius: 18px; border-bottom-right-radius: 18px; }
+.dark .cmp td.cmp-us { background: rgb(var(--pop) / 0.1); }
+
+@media (max-width: 767px) {
+  .cmp thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .cmp, .cmp tbody, .cmp tr, .cmp th, .cmp td { display: block; }
+  .cmp tbody { display: grid; gap: 12px; }
+  .cmp tbody tr {
+    padding: 8px;
+    border-radius: 24px;
+    background: rgb(var(--card));
+    border: 1px solid rgb(var(--line));
+    box-shadow: var(--shadow-sm);
+  }
+  .cmp tbody th { border: 0; padding: 10px 10px 8px; font-size: 17px; white-space: normal; }
+  .cmp td { border: 0; padding: 8px 10px 8px 38px; position: relative; font-size: 14.5px; }
+  .cmp td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgb(var(--muted));
+    margin-bottom: 2px;
+  }
+  .cmp-mark { position: absolute; left: 10px; top: 10px; margin: 0; }
+  .cmp td.cmp-us { border-radius: 16px !important; padding-top: 12px; padding-bottom: 12px; }
+  .cmp td.cmp-us .cmp-mark { top: 13px; }
+  .cmp td.cmp-us::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    margin-bottom: 6px;
+    background: rgb(var(--ink));
+    -webkit-mask: url(/logo.png) left center / contain no-repeat;
+    mask: url(/logo.png) left center / contain no-repeat;
+  }
+}
+@supports (corner-shape: squircle) {
+  @media (max-width: 767px) {
+    .cmp tbody tr { corner-shape: squircle; border-radius: 36px; }
+    .cmp td.cmp-us { corner-shape: squircle; border-radius: 24px !important; }
+  }
+}
+
+
+/* ── FAQ ───────────────────────────────────────────────────────────────
+   One squircle card per question. The plus turns to a cross and fills lime
+   when open; the answer slides open where auto-height can be animated. */
+:root { interpolate-size: allow-keywords; }
+.faq-list { display: grid; gap: 10px; }
+.faq-item {
+  border-radius: 20px;
+  background: rgb(var(--card));
+  border: 1px solid rgb(var(--line));
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.faq-item[open] { border-color: rgb(var(--ink) / 0.16); box-shadow: var(--shadow-lg); }
+@supports (corner-shape: squircle) { .faq-item { corner-shape: squircle; border-radius: 32px; } }
+.faq-q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 20px 20px 24px;
+  list-style: none;
+  cursor: pointer;
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+  color: rgb(var(--ink));
+  -webkit-tap-highlight-color: transparent;
+}
+.faq-q::-webkit-details-marker { display: none; }
+.faq-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: rgb(var(--ink) / 0.06);
+  color: rgb(var(--ink));
+  transition: transform 0.45s var(--ease-settle), background-color 0.25s ease;
+}
+.faq-q:hover .faq-icon { background: rgb(var(--ink) / 0.1); }
+.faq-item[open] .faq-icon {
+  transform: rotate(135deg);
+  background: rgb(var(--pop));
+  color: rgb(var(--on-pop));
+  box-shadow: 0 0 0 1.5px rgb(var(--pop-edge));
+}
+.faq-a {
+  margin: 0;
+  padding: 0 24px 22px;
+  max-width: 62ch;
+  font-size: 16px;
+  line-height: 1.65;
+  color: rgb(var(--muted));
+}
+.faq-item::details-content {
+  height: 0;
+  overflow: clip;
+  transition: height 0.45s var(--ease-out), content-visibility 0.45s allow-discrete;
+}
+.faq-item[open]::details-content { height: auto; }
+@media (prefers-reduced-motion: reduce) {
+  .faq-item::details-content { transition: none; }
+  .faq-icon { transition: none; }
+}
+@media (max-width: 639px) {
+  .faq-q { padding: 18px 16px 18px 20px; font-size: 16px; }
+  .faq-a { padding: 0 20px 20px; font-size: 15.5px; }
+}
+
+
+/* ── Finish ────────────────────────────────────────────────────────────
+   The small things that make it feel made rather than assembled. */
+html {
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
+::selection { background: rgb(var(--pop)); color: rgb(var(--on-pop)); }
+.font-display { font-variant-numeric: tabular-nums; }
+
+/* Film grain over the whole page, faint enough to feel rather than see.
+   Fixed and click-through, so it costs one composited layer. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.dark body::after { mix-blend-mode: screen; opacity: 0.035; filter: invert(1); }
+
+/* White cards: a lit top edge and two-layer shadow. */
+.card {
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.9), var(--shadow-sm);
+}
+.dark .card { box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.05), var(--shadow-sm); }
+.card-hover:hover { box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.9), var(--shadow-lg); }
+
+/* Dark cards and bands: a soft lime glow in the corner, a hairline top
+   highlight, and a light that follows the pointer (Anim sets --mx/--my). */
+.card-dark,
+.band.sq {
+  position: relative;
+  isolation: isolate;
+  background-image:
+    radial-gradient(60% 80% at 100% 0%, rgb(var(--pop) / 0.09), transparent 60%),
+    radial-gradient(50% 70% at 0% 100%, rgb(126 210 165 / 0.06), transparent 65%);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.08), var(--shadow-lg);
+}
+.card-dark::after,
+.band.sq::after,
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgb(var(--pop) / 0.12), transparent 60%);
+  transition: opacity 0.4s ease;
+}
+.card::after { background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 50%), rgb(var(--brand) / 0.06), transparent 60%); }
+.card { position: relative; isolation: isolate; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .card-dark:hover::after,
+  .band.sq:hover::after,
+  .card:hover::after { opacity: 1; }
+}
+@supports (corner-shape: squircle) {
+  .card-dark::after, .band.sq::after, .card::after { corner-shape: squircle; }
+}
+
+/* Lime keys get a glossy top edge. */
+.btn-primary,
+.btn-light,
+.hx-cta-pop {
+  background-image: linear-gradient(180deg, rgb(255 255 255 / 0.32), rgb(255 255 255 / 0) 55%);
+}
+.hx-chip { background-image: linear-gradient(180deg, rgb(255 255 255 / 0.35), rgb(255 255 255 / 0) 60%); }
+
+/* Photos read crisp on white with a hairline inner edge. */
+.photo-shade::before,
+.polaroid > div::after,
+.art-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgb(14 26 19 / 0.07);
+}
+
+/* The footer signs off with the name, huge and faint. */
+.foot-mark {
+  display: block;
+  overflow: hidden;
+  margin-top: 40px;
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: clamp(4rem, 17.5vw, 17rem);
+  font-weight: 800;
+  line-height: 0.78;
+  letter-spacing: -0.065em;
+  white-space: nowrap;
+  text-align: center;
+  color: transparent;
+  background: linear-gradient(180deg, rgb(var(--band-ink) / 0.12), rgb(var(--band-ink) / 0.02) 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  user-select: none;
+  padding-bottom: 0.06em;
+}
+
+
+/* ── Inner pages ───────────────────────────────────────────────────────
+   Anything written for a white card keeps working inside a dark one: muted
+   text, hairlines, brand ticks, links, icon tiles, cream boxes and the
+   secondary button all switch to their dark-ground versions. */
+.card-dark .text-ink { color: rgb(var(--band-ink)); }
+.card-dark .border-line,
+.card-dark.border-line { border-color: rgb(255 255 255 / 0.1); }
+.card-dark .text-brand { color: rgb(var(--pop)); }
+.card-dark .link-arrow { color: rgb(var(--pop)); }
+.card-dark .icon-tile { background: rgb(var(--pop)); color: rgb(var(--on-pop)); }
+.card-dark .bg-cream,
+.card-dark .bg-surface { background: rgb(255 255 255 / 0.06); color: rgb(var(--band-ink)); }
+.card-dark .btn-secondary {
+  background: rgb(255 255 255 / 0.06);
+  color: rgb(var(--band-ink));
+  border-color: rgb(255 255 255 / 0.2);
+  box-shadow: none;
+}
+.card-dark .btn-secondary:hover { border-color: rgb(255 255 255 / 0.5); }
+.card-dark a.underline { color: rgb(var(--band-ink)); }
+
+/* Page heroes run up under the floating header, like the home hero. */
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  margin-top: calc(var(--hx-h) * -1);
+  padding-top: var(--hx-h);
+}
+
+/* A group heading inside a long page (pricing tiers, case groups): smaller
+   than a section heading, still the one thing on screen. */
+.t-group {
+  font-family: var(--font-display), "Arial Black", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+/* Photos in a page hero get the polaroid mat and a slight tilt. */
+.page-hero .hero-photo {
+  border: 10px solid rgb(var(--card));
+  box-shadow: 0 0 0 1px rgb(var(--line)), var(--shadow-lg);
+  transform: rotate(1.5deg);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .anim .page-hero .hero-photo { animation: frame-in 1s var(--ease-settle) 0.15s backwards; }
+  @keyframes frame-in { from { opacity: 0; transform: translateY(30px) rotate(5deg) scale(0.94); } }
+}

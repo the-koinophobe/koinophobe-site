@@ -22,6 +22,9 @@ const config: Config = {
         "on-forest": "rgb(var(--on-forest) / <alpha-value>)",
         cream: "rgb(var(--cream) / <alpha-value>)",
         band: "rgb(var(--band) / <alpha-value>)",
+        card: "rgb(var(--card) / <alpha-value>)",
+        pop: "rgb(var(--pop) / <alpha-value>)",
+        "on-pop": "rgb(var(--on-pop) / <alpha-value>)",
       },
       fontFamily: {
         display: ["var(--font-display)", "Arial Black", "system-ui", "sans-serif"],

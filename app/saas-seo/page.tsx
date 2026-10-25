@@ -262,9 +262,9 @@ export default function SaasSeoPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }} />
 
       {/* ── Hero ─────────────────────────────────────────────────── */}
-      <section className="hero-bg relative overflow-hidden">
+      <section className="page-hero hero-bg">
         <div className="grid-fade pointer-events-none absolute inset-0" aria-hidden />
-        <div className="container-pad relative grid grid-cols-[minmax(0,1fr)] items-center gap-14 pb-16 pt-14 sm:pt-20 lg:grid-cols-[1.08fr_1fr] lg:gap-16 lg:pb-24">
+        <div className="container-pad relative grid grid-cols-[minmax(0,1fr)] items-center gap-14 pb-16 pt-14 sm:pt-24 lg:grid-cols-[1.08fr_1fr] lg:gap-16 lg:pb-24">
           <Reveal>
             <p className="eyebrow">
               <span className="h-1.5 w-1.5 rounded-full bg-brand" aria-hidden />
@@ -315,7 +315,7 @@ export default function SaasSeoPage() {
           <p className="eyebrow-flat flex-none">What we measure</p>
           <ul className="flex flex-wrap gap-2">
             {MEASURED.map((a) => (
-              <li key={a} className="rounded-full border border-line bg-bg px-3.5 py-1.5 text-[14px]">
+              <li key={a} className="rounded-full border border-line bg-card px-3.5 py-1.5 text-[14px] font-medium">
                 {a}
               </li>
             ))}
@@ -356,7 +356,7 @@ export default function SaasSeoPage() {
       {/* ── Why you're missing ──────────────────────────────────── */}
       <section className="section section-tint">
         <div className="container-pad">
-          <Reveal className="max-w-3xl">
+          <Reveal className="stage-head">
             <p className="eyebrow">Why you&rsquo;re missing from the answer</p>
             <h2 className="t-h2 mt-5">An assistant can only name you if it can read you first</h2>
             <p className="t-lead mt-4 max-w-[60ch]">
@@ -400,7 +400,7 @@ export default function SaasSeoPage() {
           <div data-anim="cards" className="grid content-start gap-4 self-center sm:grid-cols-2">
             {STUDY.map((s) => (
               <div key={s.v} className="card p-6 sm:p-7">
-                <p className="tnum font-display text-[clamp(1.9rem,3.4vw,2.5rem)] leading-none tracking-tight text-brand">
+                <p className="tnum font-display text-[clamp(1.9rem,3.4vw,2.5rem)] font-extrabold leading-none tracking-tight text-brand">
                   {s.v}
                 </p>
                 <p className="mt-3 text-[15px] leading-relaxed text-muted">{s.l}</p>
@@ -413,7 +413,7 @@ export default function SaasSeoPage() {
       {/* ── The loop ────────────────────────────────────────────── */}
       <section className="section section-tint">
         <div className="container-pad">
-          <Reveal className="max-w-3xl">
+          <Reveal className="stage-head">
             <p className="eyebrow">How a month runs</p>
             <h2 className="t-h2 mt-5">How a month of SaaS SEO runs: measure, fix, publish, measure again</h2>
             <p className="t-lead mt-4 max-w-[60ch]">
@@ -431,7 +431,7 @@ export default function SaasSeoPage() {
               </div>
             ))}
           </div>
-          <p className="mt-8 max-w-[70ch] text-[15.5px] text-muted">
+          <p className="mx-auto mt-10 max-w-[70ch] text-center text-[15.5px] text-muted">
             Every Friday you get a changelog: each pull request merged that week, with a line on why. The
             citation report lands at month end.
           </p>
@@ -468,11 +468,11 @@ export default function SaasSeoPage() {
             </p>
             <div className="mt-8 grid max-w-[520px] grid-cols-2 gap-4 border-t border-line pt-7">
               <div>
-                <p className="tnum font-display text-[2rem] leading-none tracking-tight">{aggregate.sitesWorked}+</p>
+                <p className="tnum font-display text-[2.2rem] font-extrabold leading-none tracking-tight">{aggregate.sitesWorked}+</p>
                 <p className="mt-2 text-[14px] text-muted">sites over two years</p>
               </div>
               <div>
-                <p className="tnum font-display text-[2rem] leading-none tracking-tight">
+                <p className="tnum font-display text-[2.2rem] font-extrabold leading-none tracking-tight">
                   {aggregate.impressions.toLocaleString("en-US")}
                 </p>
                 <p className="mt-2 text-[14px] text-muted">
@@ -498,12 +498,12 @@ export default function SaasSeoPage() {
       {/* ── The plan ────────────────────────────────────────────── */}
       <section id="plan" className="section section-tint scroll-mt-24">
         <div className="container-pad">
-          <Reveal className="max-w-3xl">
+          <Reveal className="stage-head">
             <p className="eyebrow">The plan</p>
             <h2 className="t-h2 mt-5">SaaS SEO pricing: {startup.price} a month, five seats</h2>
           </Reveal>
           <div className="mt-12 grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[1.05fr_1fr] lg:gap-14">
-            <div className="card flex flex-col gap-6 border-ink/60 bg-bg p-7 shadow-float sm:p-9">
+            <div data-anim="rise" className="card-dark flex flex-col gap-6 p-7 shadow-float sm:p-10">
               <div className="flex items-center justify-between gap-3">
                 <span className="text-[14px] font-medium text-muted">{startup.kicker}</span>
                 <span className="eyebrow !text-[12px]">{seatsLine}</span>
@@ -511,7 +511,7 @@ export default function SaasSeoPage() {
               <div>
                 <h3 className="t-h3 !text-[1.6rem]">{startup.name}</h3>
                 <p className="mt-3 flex items-baseline gap-2">
-                  <span className="tnum font-display text-[3rem] leading-none tracking-tight">{startup.price}</span>
+                  <span className="tnum font-display text-[3.2rem] font-extrabold leading-none tracking-tight text-pop">{startup.price}</span>
                   <span className="text-[15px] text-muted">{startup.unit}</span>
                 </p>
               </div>
@@ -531,14 +531,14 @@ export default function SaasSeoPage() {
                   </p>
                 ))}
               </div>
-              <div className="flex gap-3 rounded-2xl bg-cream p-5 text-ink">
+              <div className="flex gap-3 rounded-2xl bg-cream p-5">
                 <CalendarClock size={20} aria-hidden className="mt-0.5 flex-none text-brand" />
                 <p className="text-[15px] leading-relaxed">
                   <span className="font-medium">{startup.termsLead}</span> {startup.terms}
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-3">
-                <BookCta from="saas_plan" size="md" />
+                <BookCta from="saas_plan" size="md" tone="light" />
                 <a href="#check" data-track="cta_link" data-from="saas_plan" className="btn btn-md btn-secondary">
                   Check your site first
                 </a>
@@ -574,24 +574,24 @@ export default function SaasSeoPage() {
       {/* ── How we start ────────────────────────────────────────── */}
       <section className="section">
         <div className="container-pad">
-          <Reveal className="max-w-3xl">
+          <Reveal className="stage-head">
             <p className="eyebrow">How we start</p>
             <h2 className="t-h2 mt-5">Getting started with SaaS SEO: from your domain to a first pull request</h2>
           </Reveal>
           <div data-anim="cards" className="mt-12 grid gap-8 md:grid-cols-3">
             {START.map((s) => (
-              <div key={s.t} className="border-t border-line pt-6">
+              <div key={s.t} className="card p-7 sm:p-8">
                 <span className="icon-tile">{s.icon}</span>
-                <p className="mt-5 text-[17px] font-medium">{s.t}</p>
+                <p className="mt-5 font-display text-[1.25rem] font-extrabold tracking-tight">{s.t}</p>
                 <p className="mt-2 max-w-[38ch] text-[15px] leading-relaxed text-muted">{s.b}</p>
               </div>
             ))}
           </div>
-          <div className="mt-12 flex flex-col gap-4 rounded-2xl bg-surface p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
-            <p className="t-h3 !text-[1.35rem]">Twenty minutes, and you leave with the first fixes either way.</p>
+          <div data-anim="rise" className="card-dark mt-14 flex flex-col gap-6 p-7 sm:flex-row sm:items-center sm:justify-between sm:p-10">
+            <p className="t-h3 max-w-[30ch] !text-[clamp(1.35rem,2.4vw,1.75rem)]">Twenty minutes, and you leave with the first fixes either way.</p>
             <div className="flex-none">
-              <BookCta from="saas_start" size="md" />
-              <BookNote className="mt-2" />
+              <BookCta from="saas_start" size="md" tone="light" />
+              <BookNote light className="mt-2" />
             </div>
           </div>
         </div>

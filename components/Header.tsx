@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { site } from "@/lib/site";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -20,6 +21,12 @@ import { ThemeToggle } from "./ThemeToggle";
  * button for touch and keyboard. Services has no page of its own, so its label
  * is the button. On phones the sheet shows the same five rows, with the three
  * menus as collapsible submenus.
+ *
+ * Layout follows projectone.website: no bar. The logo floats on its own at the
+ * left; on the right sit a compact dark box of links and a separate dark
+ * booking button with a lime arrow. Scrolling down folds the link box away
+ * into the button; scrolling up, or tabbing into it, brings it back. On phones
+ * the menu is a full-screen dark sheet.
  */
 
 const WORK = [
@@ -112,6 +119,7 @@ function SheetGroup({
         <div className="hx-shead">
           <Link className="hx-srow" href={href}>
             {label}
+            <ArrowUpRight size={18} aria-hidden className="hx-sarrow" />
           </Link>
           <button
             type="button"
@@ -152,6 +160,42 @@ export function Header() {
   const [sub, setSub] = useState<MenuId | null>(null);
 
   useEffect(() => setSheetOpen(false), [pathname]);
+
+  // Scroll state lives in attributes, not React state, so scrolling never
+  // re-renders the header. `data-scrolled` backs the logo once content passes
+  // under it; `data-collapsed` folds the link box away while reading down and
+  // clears on any real scroll back up. Distance is measured from where the
+  // direction last changed, because smooth scrolling and trackpads move only
+  // a few pixels per event.
+  useEffect(() => {
+    const header = headerRef.current;
+    if (!header) return;
+    let last = window.scrollY;
+    let turn = last;
+    let dir = 0;
+    const onScroll = () => {
+      const y = window.scrollY;
+      const d = Math.sign(y - last);
+      if (d && d !== dir) {
+        dir = d;
+        turn = last;
+      }
+      header.toggleAttribute("data-scrolled", y > 24);
+      if (y < 140) header.removeAttribute("data-collapsed");
+      else if (dir > 0 && y - turn > 6) header.setAttribute("data-collapsed", "");
+      else if (dir < 0 && turn - y > 24) header.removeAttribute("data-collapsed");
+      last = y;
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // The phone sheet covers the page, so the page shouldn't scroll under it.
+  useEffect(() => {
+    document.documentElement.classList.toggle("hx-locked", sheetOpen);
+    return () => document.documentElement.classList.remove("hx-locked");
+  }, [sheetOpen]);
   useEffect(() => {
     if (!sheetOpen) setSub(null);
   }, [sheetOpen]);
@@ -326,90 +370,93 @@ export function Header() {
     <header
       ref={headerRef}
       className="hx"
+      data-sheet={sheetOpen ? "" : undefined}
     >
       <div className="hx-bar">
         <Link href="/" className="hx-logo" aria-label="Koinophobe home">
           <span className="logo-mark h-[22px] w-[22px]" aria-hidden />
-          <span className="font-display text-[19px] tracking-tight">{site.name}</span>
+          <span className="hx-wordmark">{site.name}</span>
         </Link>
 
-        <nav className="hx-nav" id="hx-nav" aria-label="Main">
-          <ul className="hx-links">
-            <li className="hx-split">
-              <Link className="hx-trigger" data-menu="work" href="/work" aria-current={pathname === "/work" ? "page" : undefined}>
-                Work
-              </Link>
-              <button type="button" className="hx-caret" data-menu="work" aria-expanded="false" aria-label="Show case studies">
-                <Chevron />
-              </button>
-            </li>
-            <li>
-              <button type="button" className="hx-trigger" data-menu="services" aria-expanded="false">
-                Services <Chevron />
-              </button>
-            </li>
-            <li>
-              <Link className="hx-plain" href="/pricing" aria-current={pathname === "/pricing" ? "page" : undefined}>
-                Pricing
-              </Link>
-            </li>
-            <li className="hx-split">
-              <Link className="hx-trigger" data-menu="notes" href="/notes" aria-current={pathname.startsWith("/notes") ? "page" : undefined}>
-                Notes
-              </Link>
-              <button type="button" className="hx-caret" data-menu="notes" aria-expanded="false" aria-label="Show note topics">
-                <Chevron />
-              </button>
-            </li>
-            <li>
-              <Link className="hx-plain" href="/about" aria-current={pathname === "/about" ? "page" : undefined}>
-                About
-              </Link>
-            </li>
-          </ul>
+        <div className="hx-right">
+          <nav className="hx-nav" id="hx-nav" aria-label="Main">
+            <div className="hx-box">
+              <ul className="hx-links">
+                <li className="hx-split">
+                  <Link className="hx-trigger" data-menu="work" href="/work" aria-current={pathname === "/work" ? "page" : undefined}>
+                    Work
+                  </Link>
+                  <button type="button" className="hx-caret" data-menu="work" aria-expanded="false" aria-label="Show case studies">
+                    <Chevron />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" className="hx-trigger" data-menu="services" aria-expanded="false">
+                    Services <Chevron />
+                  </button>
+                </li>
+                <li>
+                  <Link className="hx-plain" href="/pricing" aria-current={pathname === "/pricing" ? "page" : undefined}>
+                    Pricing
+                  </Link>
+                </li>
+                <li className="hx-split">
+                  <Link className="hx-trigger" data-menu="notes" href="/notes" aria-current={pathname.startsWith("/notes") ? "page" : undefined}>
+                    Notes
+                  </Link>
+                  <button type="button" className="hx-caret" data-menu="notes" aria-expanded="false" aria-label="Show note topics">
+                    <Chevron />
+                  </button>
+                </li>
+                <li>
+                  <Link className="hx-plain" href="/about" aria-current={pathname === "/about" ? "page" : undefined}>
+                    About
+                  </Link>
+                </li>
+              </ul>
+              <ThemeToggle />
+            </div>
 
-          <div className="dd" id="hx-dd">
-            <div className="hx-panel hx-p-work" data-panel="work">
-              <div className="hx-list">
-                {WORK.map((w, i) => (
-                  <Link key={w.href} href={w.href} className={`hx-item${i === 0 ? " is-active" : ""}`} data-img={i}>
-                    <strong>{w.title}</strong>
-                    <span>{w.desc}</span>
+            <div className="dd" id="hx-dd">
+              <div className="hx-panel hx-p-work" data-panel="work">
+                <div className="hx-list">
+                  {WORK.map((w, i) => (
+                    <Link key={w.href} href={w.href} className={`hx-item${i === 0 ? " is-active" : ""}`} data-img={i}>
+                      <strong>{w.title}</strong>
+                      <span>{w.desc}</span>
+                    </Link>
+                  ))}
+                </div>
+                <div className="hx-media" aria-hidden>
+                  {WORK.map((w, i) => (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img key={w.img} data-src={w.img} alt="" className={i === 0 ? "is-active" : ""} />
+                  ))}
+                </div>
+              </div>
+
+              <div className="hx-panel hx-p-services" data-panel="services">
+                {SERVICES.map((s) => (
+                  <Link key={s.href} href={s.href} className="hx-item">
+                    <strong>{s.title}</strong>
+                    <span>{s.desc}</span>
                   </Link>
                 ))}
               </div>
-              <div className="hx-media" aria-hidden>
-                {WORK.map((w, i) => (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img key={w.img} data-src={w.img} alt="" className={i === 0 ? "is-active" : ""} />
+
+              <div className="hx-panel hx-p-notes" data-panel="notes">
+                {NOTES.map((n) => (
+                  <Link key={n.href} href={n.href} className="hx-item">
+                    <strong>{n.title}</strong>
+                    <span>{n.desc}</span>
+                  </Link>
                 ))}
               </div>
             </div>
+          </nav>
 
-            <div className="hx-panel hx-p-services" data-panel="services">
-              {SERVICES.map((s) => (
-                <Link key={s.href} href={s.href} className="hx-item">
-                  <strong>{s.title}</strong>
-                  <span>{s.desc}</span>
-                </Link>
-              ))}
-            </div>
-
-            <div className="hx-panel hx-p-notes" data-panel="notes">
-              {NOTES.map((n) => (
-                <Link key={n.href} href={n.href} className="hx-item">
-                  <strong>{n.title}</strong>
-                  <span>{n.desc}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </nav>
-
-        <div className="hx-actions">
-          <ThemeToggle />
           <a
-            className="btn btn-sm btn-primary"
+            className="hx-cta"
             href={site.booking}
             target="_blank"
             rel="noopener"
@@ -417,6 +464,9 @@ export function Header() {
             data-from="header"
           >
             Book a free call
+            <span className="hx-chip" aria-hidden>
+              <ArrowRight size={14} strokeWidth={2.5} />
+            </span>
           </a>
           <button
             type="button"
@@ -426,8 +476,12 @@ export function Header() {
             aria-controls="hx-sheet"
             onClick={() => setSheetOpen((v) => !v)}
           >
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden>
-              <path d="M2 5.5h12M2 10.5h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden>
+              {sheetOpen ? (
+                <path d="M4.5 4.5l11 11M15.5 4.5l-11 11" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+              ) : (
+                <path d="M2.5 7h15M2.5 13h15" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+              )}
             </svg>
           </button>
         </div>
@@ -445,14 +499,20 @@ export function Header() {
             items={WORK.map((w) => ({ href: w.href, title: w.title }))} />
           <SheetGroup id="services" label="Services" open={sub === "services"} onToggle={setSub}
             items={SERVICES.map((x) => ({ href: x.href, title: x.title }))} />
-          <Link className="hx-srow" href="/pricing">Pricing</Link>
+          <Link className="hx-srow" href="/pricing">
+            Pricing
+            <ArrowUpRight size={18} aria-hidden className="hx-sarrow" />
+          </Link>
           <SheetGroup id="notes" label="Notes" href="/notes" open={sub === "notes"} onToggle={setSub}
             items={NOTES.map((n) => ({ href: n.href, title: n.title }))} />
-          <Link className="hx-srow" href="/about">About</Link>
+          <Link className="hx-srow" href="/about">
+            About
+            <ArrowUpRight size={18} aria-hidden className="hx-sarrow" />
+          </Link>
         </nav>
         <div className="hx-sheet-foot">
           <a
-            className="btn btn-md btn-primary"
+            className="hx-cta hx-cta-pop"
             href={site.booking}
             target="_blank"
             rel="noopener"
@@ -460,9 +520,15 @@ export function Header() {
             data-from="header_mobile"
           >
             Book a free call
+            <span className="hx-chip" aria-hidden>
+              <ArrowRight size={14} strokeWidth={2.5} />
+            </span>
           </a>
           <ThemeToggle />
         </div>
+        <span className="hx-sheet-mark" aria-hidden>
+          {site.name}
+        </span>
       </div>
     </header>
   );

@@ -12,14 +12,14 @@ export function WhoToCall({ topic }: { topic: string }) {
   const startup = topic === "startups";
   const digital = topic === "ai" || topic === "technical" || startup;
   return (
-    <aside className="card mt-14 max-w-[70ch] border-brand/25 bg-brand/[0.04] p-6 sm:p-7">
+    <aside className="card-dark mt-14 max-w-[70ch] p-6 sm:p-8">
       <div className="flex items-center gap-3">
         <span className="icon-tile">
           <Bot size={20} aria-hidden />
         </span>
         <p className="t-h3 !text-[1.3rem]">Want ChatGPT to recommend you?</p>
       </div>
-      <p className="mt-4 text-[16.5px] leading-relaxed text-ink/85">
+      <p className="muted mt-4 text-[16.5px] leading-relaxed">
         {site.aiPitch}{" "}
         {digital
           ? "The team fixes what stops their crawlers from reading your site, then writes the pages they quote."

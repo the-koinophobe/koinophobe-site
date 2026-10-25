@@ -258,8 +258,9 @@ export default function RemodelingPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageLd) }} />
 
       {/* ── Hero ─────────────────────────────────────────────────── */}
-      <section className="hero-bg">
-        <div className="container-pad grid grid-cols-[minmax(0,1fr)] items-center gap-12 pb-16 pt-10 sm:pt-14 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
+      <section className="page-hero hero-bg">
+        <div className="grid-fade pointer-events-none absolute inset-0" aria-hidden />
+        <div className="container-pad relative grid grid-cols-[minmax(0,1fr)] items-center gap-12 pb-16 pt-12 sm:pb-20 sm:pt-20 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
           <Reveal>
             <nav aria-label="Breadcrumb" className="mb-8 flex flex-wrap items-center gap-1.5 text-[14px] text-muted">
               <Link href="/" className="hover:text-ink">Home</Link>
@@ -328,13 +329,13 @@ export default function RemodelingPage() {
       {/* ── What we do ───────────────────────────────────────────── */}
       <section className="section section-tint">
         <div className="container-pad">
-          <Reveal className="max-w-3xl">
+          <Reveal className="stage-head">
             <p className="eyebrow">What we do for remodelers</p>
             <h2 className="t-h2 mt-5">Six things every remodeling site needs</h2>
           </Reveal>
           <div data-anim="cards" className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {WORK.map((w) => (
-              <div key={w.t} className="card p-7">
+              <div key={w.t} className="card p-7 sm:p-8">
                 <span className="icon-tile">{w.icon}</span>
                 <h3 className="t-h3 mt-5">{w.t}</h3>
                 <p className="mt-2.5 text-[15px] leading-relaxed text-muted">{w.b}</p>
@@ -415,7 +416,7 @@ export default function RemodelingPage() {
       {/* ── AI prompts ──────────────────────────────────────────── */}
       <section className="section section-tint">
         <div className="container-pad">
-          <Reveal className="max-w-3xl">
+          <Reveal className="stage-head">
             <p className="eyebrow">
               <MessageSquareQuote size={15} aria-hidden /> Showing up in ChatGPT
             </p>
@@ -446,7 +447,7 @@ export default function RemodelingPage() {
               </tbody>
             </table>
           </div>
-          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-3">
             <TextCta href="/ai-search-optimization#check" label="Check if ChatGPT can read your site" from="remodel_ai" />
             <TextCta href="/notes/get-business-recommended-by-chatgpt" label="How to get recommended by ChatGPT" from="remodel_ai" />
           </div>
@@ -456,7 +457,7 @@ export default function RemodelingPage() {
       {/* ── Why remodeling is different ─────────────────────────── */}
       <section className="section">
         <div className="container-pad">
-          <Reveal className="max-w-3xl">
+          <Reveal className="stage-head">
             <p className="eyebrow">Why remodeling is different</p>
             <h2 className="t-h2 mt-5">Why remodeling SEO is different: a remodel isn&rsquo;t an emergency call</h2>
             <p className="t-lead mt-4 max-w-[60ch]">
@@ -483,7 +484,7 @@ export default function RemodelingPage() {
       {/* ── Plans ───────────────────────────────────────────────── */}
       <section id="plans" className="section section-tint scroll-mt-24">
         <div className="container-pad">
-          <Reveal className="max-w-3xl">
+          <Reveal className="stage-head">
             <p className="eyebrow">What it costs</p>
             <h2 className="t-h2 mt-5">Remodeling SEO pricing, on the page</h2>
           </Reveal>
@@ -493,11 +494,11 @@ export default function RemodelingPage() {
               { p: sprint, href: "/pricing#sprint", line: "Tracking, speed, schema, Business Profile and fixes, done once." },
               { p: growth, href: "/pricing#monthly", line: "Two new service, town or project pages a month, plus Business Profile upkeep." },
             ].map(({ p, href, line }) => (
-              <div key={p.key} className={`card flex flex-col p-7 ${p.pick ? "border-ink/60 shadow-float" : ""}`}>
+              <div key={p.key} className={`flex flex-col p-7 sm:p-8 ${p.pick ? "card-dark shadow-float" : "card"}`}>
                 <p className="text-[14px] font-medium text-muted">{p.kicker}</p>
                 <h3 className="t-h3 mt-2 !text-[1.35rem]">{p.name}</h3>
                 <p className="mt-3 flex items-baseline gap-2">
-                  <span className="tnum font-display text-[2.2rem] leading-none tracking-tight">{p.price}</span>
+                  <span className="tnum font-display text-[2.4rem] font-extrabold leading-none tracking-tight">{p.price}</span>
                   <span className="text-[14px] text-muted">{p.unit}</span>
                 </p>
                 <p className="mt-4 flex-1 text-[15px] leading-relaxed text-muted">{line}</p>
@@ -507,21 +508,23 @@ export default function RemodelingPage() {
               </div>
             ))}
           </div>
-          <p className="mt-6 max-w-[70ch] text-[15px] text-muted">
+          <p className="mx-auto mt-8 max-w-[70ch] text-center text-[15px] text-muted">
             Want the ChatGPT side measured every month, with citation tracking across four assistants?{" "}
             <Link href="/ai-search-optimization" className="text-ink underline underline-offset-4">
               AI search optimization
             </Link>{" "}
             is {startup.price} a month, no contract. Monthly local plans have a three-month minimum.
           </p>
-          <GuaranteeLine className="mt-5" />
+          <div className="mt-5 flex justify-center">
+            <GuaranteeLine />
+          </div>
         </div>
       </section>
 
       {/* ── Proof ───────────────────────────────────────────────── */}
       <section className="section">
         <div className="container-pad">
-          <Reveal className="max-w-3xl">
+          <Reveal className="stage-head">
             <p className="eyebrow">The closest proof</p>
             <h2 className="t-h2 mt-5">The same SEO work on a roofing contractor&rsquo;s site</h2>
             <p className="t-lead mt-4 max-w-[62ch]">
@@ -532,7 +535,7 @@ export default function RemodelingPage() {
               <Link href="/work" className="text-ink underline underline-offset-4">work page</Link>.
             </p>
           </Reveal>
-          <div className="card mt-10 px-5 sm:px-8">
+          <div className="card mt-12 px-5 sm:px-10">
             <CaseStudyBlock c={roofing} />
           </div>
         </div>
@@ -541,7 +544,7 @@ export default function RemodelingPage() {
       {/* ── Guides ──────────────────────────────────────────────── */}
       <section className="section section-tint">
         <div className="container-pad">
-          <Reveal className="max-w-3xl">
+          <Reveal className="stage-head">
             <p className="eyebrow">Free guides</p>
             <h2 className="t-h2 mt-5">Free SEO guides for remodelers</h2>
             <p className="t-lead mt-4 max-w-[60ch]">Everything on this page is written up in more detail. Start with whichever problem is costing you consults.</p>
@@ -549,7 +552,7 @@ export default function RemodelingPage() {
           <div className="mt-12 grid gap-x-10 gap-y-10 md:grid-cols-2">
             {groups.map((g) => (
               <div key={g.title}>
-                <h3 className="text-[15px] font-medium text-muted">{g.title}</h3>
+                <h3 className="font-display text-[1.15rem] font-extrabold tracking-tight">{g.title}</h3>
                 <ul className="mt-4 border-t border-line">
                   {g.notes.map((n) => (
                     <li key={n.slug} className="border-b border-line">
@@ -563,11 +566,11 @@ export default function RemodelingPage() {
               </div>
             ))}
           </div>
-          <div className="mt-12 flex flex-col gap-4 rounded-2xl bg-bg p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
-            <p className="t-h3 !text-[1.3rem]">Twenty minutes, and you leave with the first pages to build either way.</p>
+          <div data-anim="rise" className="card-dark mt-14 flex flex-col gap-6 p-7 sm:flex-row sm:items-center sm:justify-between sm:p-10">
+            <p className="t-h3 max-w-[30ch] !text-[clamp(1.35rem,2.4vw,1.75rem)]">Twenty minutes, and you leave with the first pages to build either way.</p>
             <div className="flex-none">
-              <BookCta from="remodel_guides" size="md" />
-              <BookNote className="mt-2" />
+              <BookCta from="remodel_guides" size="md" tone="light" />
+              <BookNote light className="mt-2" />
             </div>
           </div>
         </div>

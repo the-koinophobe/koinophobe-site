@@ -38,14 +38,14 @@ export function CaseStudyBlock({ c }: { c: CaseStudy }) {
         {[c.client, c.place].map((t) => (
           <span
             key={t}
-            className="rounded-full border border-line px-2.5 py-1 text-[12.5px] text-muted"
+            className="rounded-full border border-line bg-surface px-3 py-1 text-[12.5px] font-medium text-muted"
           >
             {t}
           </span>
         ))}
       </div>
 
-      <h2 className="mt-4 max-w-[26ch] font-display text-[clamp(1.55rem,3vw,2.2rem)] leading-[1.09] tracking-tight text-balance">
+      <h2 className="mt-5 max-w-[26ch] font-display text-[clamp(1.6rem,3.2vw,2.4rem)] font-extrabold leading-[1.07] tracking-tight text-balance">
         {c.title}
       </h2>
       <p className="mt-2.5 font-mono text-[11.5px] text-muted">{c.meta}</p>
@@ -66,7 +66,7 @@ export function CaseStudyBlock({ c }: { c: CaseStudy }) {
             }`}
           >
             <span className="eyebrow-flat mb-1.5 block text-[10px]">{m.label}</span>
-            <span className="tnum text-xl font-medium tracking-tight">{m.value}</span>
+            <span className="tnum font-display text-[1.5rem] font-extrabold tracking-tight">{m.value}</span>
             {m.delta ? (
               <span
                 className={`ml-2 whitespace-nowrap font-mono text-[12px] ${

@@ -174,9 +174,9 @@ export default function AiSearchPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }} />
 
       {/* ── Hero ─────────────────────────────────────────────────── */}
-      <section className="hero-bg relative overflow-hidden">
+      <section className="page-hero hero-bg">
         <div className="grid-fade pointer-events-none absolute inset-0" aria-hidden />
-        <div className="container-pad relative grid grid-cols-[minmax(0,1fr)] items-center gap-14 pb-16 pt-14 sm:pt-20 lg:grid-cols-[1.08fr_1fr] lg:gap-16 lg:pb-24">
+        <div className="container-pad relative grid grid-cols-[minmax(0,1fr)] items-center gap-14 pb-16 pt-14 sm:pt-24 lg:grid-cols-[1.08fr_1fr] lg:gap-16 lg:pb-24">
           <Reveal>
             <p className="eyebrow">
               <span className="h-1.5 w-1.5 rounded-full bg-brand" aria-hidden />
@@ -225,7 +225,7 @@ export default function AiSearchPage() {
       {/* ── Who it's for ────────────────────────────────────────── */}
       <section className="section">
         <div className="container-pad">
-          <Reveal className="max-w-3xl">
+          <Reveal className="stage-head">
             <p className="eyebrow">Who it&rsquo;s for</p>
             <h2 className="t-h2 mt-5">Who AI search optimization is for</h2>
             <p className="t-lead mt-4 max-w-[60ch]">
@@ -287,7 +287,7 @@ export default function AiSearchPage() {
           <div data-anim="cards" className="grid content-start gap-4 self-center sm:grid-cols-2">
             {FACTS.map((s) => (
               <div key={s.v} className="card p-6 sm:p-7">
-                <p className="tnum font-display text-[clamp(1.9rem,3.4vw,2.5rem)] leading-none tracking-tight text-brand">{s.v}</p>
+                <p className="tnum font-display text-[clamp(1.9rem,3.4vw,2.5rem)] font-extrabold leading-none tracking-tight text-brand">{s.v}</p>
                 <p className="mt-3 text-[15px] leading-relaxed text-muted">{s.l}</p>
               </div>
             ))}
@@ -298,13 +298,13 @@ export default function AiSearchPage() {
       {/* ── The loop ────────────────────────────────────────────── */}
       <section className="section section-tint">
         <div className="container-pad">
-          <Reveal className="max-w-3xl">
+          <Reveal className="stage-head">
             <p className="eyebrow">How a month runs</p>
             <h2 className="t-h2 mt-5">How AI search optimization works: measure, fix, publish, measure again</h2>
           </Reveal>
           <div data-anim="cards" className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {LOOP.map((w) => (
-              <div key={w.t} className="card p-7">
+              <div key={w.t} className="card p-7 sm:p-8">
                 <span className="icon-tile">{w.icon}</span>
                 <h3 className="t-h3 mt-5">{w.t}</h3>
                 <p className="mt-2.5 text-[15px] leading-relaxed text-muted">{w.b}</p>
@@ -317,7 +317,7 @@ export default function AiSearchPage() {
       {/* ── The plan ────────────────────────────────────────────── */}
       <section id="plan" className="section scroll-mt-24">
         <div className="container-pad grid grid-cols-[minmax(0,1fr)] gap-10 lg:grid-cols-[1.05fr_1fr] lg:gap-14">
-          <div className="card flex flex-col gap-6 border-ink/60 p-7 shadow-float sm:p-9">
+          <div data-anim="rise" className="card-dark flex flex-col gap-6 p-7 shadow-float sm:p-10">
             <div className="flex items-center justify-between gap-3">
               <span className="text-[14px] font-medium text-muted">AI search optimization</span>
               <span className="eyebrow !text-[12px]">{seatsLine}</span>
@@ -325,7 +325,7 @@ export default function AiSearchPage() {
             <div>
               <h2 className="t-h3 !text-[1.6rem]">{startup.name}</h2>
               <p className="mt-3 flex items-baseline gap-2">
-                <span className="tnum font-display text-[3rem] leading-none tracking-tight">{startup.price}</span>
+                <span className="tnum font-display text-[3.2rem] font-extrabold leading-none tracking-tight text-pop">{startup.price}</span>
                 <span className="text-[15px] text-muted">{startup.unit}</span>
               </p>
             </div>
@@ -345,14 +345,14 @@ export default function AiSearchPage() {
                 </p>
               ))}
             </div>
-            <div className="flex gap-3 rounded-2xl bg-cream p-5 text-ink">
+            <div className="flex gap-3 rounded-2xl bg-cream p-5">
               <CalendarClock size={20} aria-hidden className="mt-0.5 flex-none text-brand" />
               <p className="text-[15px] leading-relaxed">
                 <span className="font-medium">{startup.termsLead}</span> {startup.terms}
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-3">
-              <BookCta from="ai_plan" size="md" />
+              <BookCta from="ai_plan" size="md" tone="light" />
               <a href="#check" data-track="cta_link" data-from="ai_plan" className="btn btn-md btn-secondary">
                 Check your site first
               </a>
@@ -390,7 +390,7 @@ export default function AiSearchPage() {
       {/* ── Guides ──────────────────────────────────────────────── */}
       <section className="section section-tint">
         <div className="container-pad">
-          <Reveal className="max-w-3xl">
+          <Reveal className="stage-head">
             <p className="eyebrow">Free guides</p>
             <h2 className="t-h2 mt-5">Everything we know about AI search, written down</h2>
             <p className="t-lead mt-4 max-w-[60ch]">Do it yourself with these, or hand it to us. Either way, start with the first group.</p>
@@ -398,7 +398,7 @@ export default function AiSearchPage() {
           <div className="mt-12 grid gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
             {groups.map((g) => (
               <div key={g.title}>
-                <h3 className="text-[15px] font-medium text-muted">{g.title}</h3>
+                <h3 className="font-display text-[1.15rem] font-extrabold tracking-tight">{g.title}</h3>
                 <ul className="mt-4 border-t border-line">
                   {g.notes.map((n) => (
                     <li key={n.slug} className="border-b border-line">
@@ -412,11 +412,11 @@ export default function AiSearchPage() {
               </div>
             ))}
           </div>
-          <div className="mt-12 flex flex-col gap-4 rounded-2xl bg-bg p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
-            <p className="t-h3 !text-[1.3rem]">Twenty minutes, and you leave with the first fixes either way.</p>
+          <div data-anim="rise" className="card-dark mt-14 flex flex-col gap-6 p-7 sm:flex-row sm:items-center sm:justify-between sm:p-10">
+            <p className="t-h3 max-w-[30ch] !text-[clamp(1.35rem,2.4vw,1.75rem)]">Twenty minutes, and you leave with the first fixes either way.</p>
             <div className="flex-none">
-              <BookCta from="ai_guides" size="md" />
-              <BookNote className="mt-2" />
+              <BookCta from="ai_guides" size="md" tone="light" />
+              <BookNote light className="mt-2" />
             </div>
           </div>
         </div>
