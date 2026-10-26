@@ -5,7 +5,8 @@ import type { ReactNode } from "react";
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   return (
-    <NextThemes attribute="class" defaultTheme="system" enableSystem>
+    // Light by default for everyone; dark only when a visitor picks it.
+    <NextThemes attribute="class" defaultTheme="light" enableSystem={false}>
       {children}
     </NextThemes>
   );

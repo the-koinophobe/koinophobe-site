@@ -3,7 +3,6 @@ import { Linkedin } from "lucide-react";
 import { site } from "@/lib/site";
 import { topics } from "@/lib/topics";
 import { CookieSettingsButton } from "./CookieSettingsButton";
-import { ThemeToggle } from "./ThemeToggle";
 import { XIcon } from "./Availability";
 
 const COLS: { title: string; href?: string; links: { href: string; label: string }[] }[] = [
@@ -104,7 +103,6 @@ export function Footer() {
               &copy; {year} {site.name}
             </span>
             <div className="flex flex-wrap items-center gap-5">
-              <ThemeToggle />
               <CookieSettingsButton className="hover:text-white" />
             </div>
           </div>

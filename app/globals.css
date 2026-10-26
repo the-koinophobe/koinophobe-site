@@ -934,15 +934,23 @@ blockquote.font-display {
 .hx-split { border-radius: 7px; transition: background-color 0.2s ease; }
 .hx-chev { transition: transform 0.35s var(--ease-out); }
 .hx-trigger[aria-expanded="true"] .hx-chev { transform: rotate(180deg); }
-.hx-box .hx-icon-btn {
-  width: 32px;
-  height: 32px;
-  margin-left: 4px;
+/* Theme toggle: a green square matching the link box, beside the button. */
+.hx-theme {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
   border: 0;
-  border-radius: 7px;
-  color: rgb(var(--hx-on) / 0.7);
+  border-radius: 10px;
+  background: rgb(var(--hx-ink));
+  color: rgb(var(--hx-on) / 0.85);
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.16s var(--ease-settle);
 }
-.hx-box .hx-icon-btn:hover { color: rgb(var(--hx-on)); background: rgb(255 255 255 / 0.08); }
+.hx-theme:hover { color: rgb(var(--hx-on)); }
+.hx-theme:active { transform: scale(0.94); }
+.dark .hx-theme { box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.08); }
+@supports (corner-shape: squircle) { .hx-theme { corner-shape: squircle; } }
 
 /* The booking button: dark block, uppercase label, lime arrow chip. */
 .hx-cta {
@@ -1164,7 +1172,7 @@ html.hx-locked { overflow: hidden; }
 @media (max-width: 900px) {
   :root { --hx-h: 68px; }
   .hx-bar { padding: 0 16px; }
-  .hx-nav, .hx-right > .hx-cta { display: none; }
+  .hx-nav, .hx-right > .hx-cta, .hx-right > .hx-theme { display: none; }
   .hx-menu-btn { display: grid; }
 }
 @media (min-width: 901px) { .hx-sheet { display: none; } }

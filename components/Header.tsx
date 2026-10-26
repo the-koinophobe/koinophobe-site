@@ -454,6 +454,8 @@ export function Header() {
             </div>
           </nav>
 
+          {/* Outside the link box, so it stays when the box folds away. */}
+          <ThemeToggle className="hx-theme" />
           <a
             className="hx-cta"
             href={site.booking}

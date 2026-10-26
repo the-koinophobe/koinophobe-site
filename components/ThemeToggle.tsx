@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { SunMoon } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 
-export function ThemeToggle() {
+/** Shows the mode you'd switch to: a moon in light mode, a sun in dark. */
+export function ThemeToggle({ className = "hx-icon-btn" }: { className?: string }) {
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -14,11 +15,12 @@ export function ThemeToggle() {
   return (
     <button
       type="button"
-      aria-label="Switch theme"
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      title={isDark ? "Light mode" : "Dark mode"}
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="hx-icon-btn"
+      className={className}
     >
-      <SunMoon size={16} aria-hidden />
+      {isDark ? <Sun size={16} aria-hidden /> : <Moon size={16} aria-hidden />}
     </button>
   );
 }
