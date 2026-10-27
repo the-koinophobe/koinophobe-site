@@ -21,6 +21,9 @@ import { NoteCard } from "@/components/NoteCard";
 import { HeroFan, HeroScatter } from "@/components/HeroScatter";
 import { CallsArt, FixArt, TownsArt } from "@/components/PillarArt";
 import { Compare } from "@/components/Compare";
+import { Journey } from "@/components/Journey";
+import { AiChat } from "@/components/AiChat";
+import { CaseSpark } from "@/components/CaseSpark";
 import { aggregate, cases } from "@/lib/gsc";
 import { monthly, oneTime } from "@/lib/pricing";
 import { publishedNotes } from "@/lib/notes";
@@ -279,6 +282,7 @@ export default function HomePage() {
                       <span className="font-display text-[2rem] font-extrabold leading-none tracking-tight text-brand">{c.headline.value}</span>
                       <span className="text-[13.5px] text-muted">{c.headline.label}</span>
                     </p>
+                    <CaseSpark c={c} className="mt-3" />
                   </div>
                 </Link>
               ))}
@@ -295,7 +299,7 @@ export default function HomePage() {
       </section>
 
       {/* ── How it works: one step per screen, stacking as you scroll ── */}
-      <section className="section section-tint">
+      <section className="journey-scope section section-tint">
         <div className="container-pad grid gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
           <div className="lg:sticky lg:top-[120px] lg:self-start">
             <Reveal className="text-center lg:text-left">
@@ -306,6 +310,7 @@ export default function HomePage() {
                 <PageCta href="/about" label="How we work" from="home_steps" />
               </div>
             </Reveal>
+            <Journey className="mx-auto mt-10 lg:mx-0 lg:mt-12" />
           </div>
           <ol className="stack">
             {STEPS.map((s, i) => (
@@ -368,12 +373,15 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          <div className="mt-8 flex flex-col gap-3 rounded-3xl border border-line bg-card px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-[15.5px]">
-              <span className="font-medium">Want to show up when customers ask ChatGPT?</span>{" "}
-              <span className="text-muted">There&rsquo;s a plan for Google and AI search, $1,000 a month.</span>
-            </p>
-            <TextCta href="/ai-search-optimization" label="AI search optimization" from="home_ai" />
+          <div className="card mt-8 grid items-center gap-7 p-6 sm:p-8 md:grid-cols-[1fr_1.15fr] md:gap-10">
+            <div>
+              <p className="text-[17px] leading-relaxed">
+                <span className="font-display text-[1.25rem] font-extrabold tracking-tight">Want to show up when customers ask ChatGPT?</span>{" "}
+                <span className="text-muted">There&rsquo;s a plan for Google and AI search, $1,000 a month.</span>
+              </p>
+              <TextCta href="/ai-search-optimization" label="AI search optimization" from="home_ai" className="mt-5" />
+            </div>
+            <AiChat />
           </div>
           <GuaranteeLine className="mt-6" />
         </div>

@@ -1,4 +1,4 @@
-import { Check, MapPin, PhoneCall } from "lucide-react";
+import { Check, MapPin, PhoneCall, Search } from "lucide-react";
 import { monthly as gscMonthly } from "@/lib/gsc";
 
 /*
@@ -51,25 +51,57 @@ export function FixArt() {
   );
 }
 
-/** A dot-grid map with pins dropping onto it. */
+/**
+ * A Google map pack, drawn: three listings under a search, and yours climbs
+ * from third to first as the card scrolls in. An illustration, not a
+ * screenshot; the listing is "Your business" on purpose.
+ */
 export function TownsArt() {
-  const pins = [
-    { x: 24, y: 34, d: 0.25 },
-    { x: 62, y: 22, d: 0.4 },
-    { x: 46, y: 60, d: 0.55, lead: true },
-    { x: 78, y: 66, d: 0.7 },
+  // [slot before, slot after]: yours goes 3rd to 1st, the others step down.
+  const rows = [
+    { you: true, from: 2, to: 0 },
+    { you: false, from: 0, to: 1, w: 62 },
+    { you: false, from: 1, to: 2, w: 48 },
   ];
   return (
-    <div className="art-stage art-dots" aria-hidden data-anim="art">
-      {pins.map((p, i) => (
-        <span
-          key={i}
-          className={`art-pin ${p.lead ? "art-pin-lead" : ""}`}
-          style={{ left: `${p.x}%`, top: `${p.y}%`, transitionDelay: `${p.d}s` }}
-        >
-          <MapPin size={p.lead ? 22 : 17} strokeWidth={2.4} />
+    <div className="art-stage flex-col items-stretch justify-start gap-2.5 p-4" aria-hidden data-anim="art">
+      <div className="flex items-center gap-2 self-start rounded-full border border-line bg-card px-3 py-1.5 text-[11.5px] text-muted shadow-[var(--shadow-sm)]">
+        <Search size={12} strokeWidth={2.4} />
+        roofer near me
+      </div>
+      <div className="art-dots relative h-[30%] w-full flex-none overflow-hidden rounded-xl border border-line">
+        <span className="art-pin" style={{ left: "24%", top: "52%", transitionDelay: "0.2s" }}>
+          <MapPin size={14} strokeWidth={2.4} />
         </span>
-      ))}
+        <span className="art-pin" style={{ left: "74%", top: "40%", transitionDelay: "0.3s" }}>
+          <MapPin size={14} strokeWidth={2.4} />
+        </span>
+        <span className="art-pin art-pin-lead" style={{ left: "50%", top: "58%", transitionDelay: "0.45s" }}>
+          <MapPin size={17} strokeWidth={2.4} />
+        </span>
+      </div>
+      <div className="pack relative w-full flex-1">
+        {/* The positions stay put; the listings slide past them. */}
+        {[1, 2, 3].map((n) => (
+          <span key={n} className="pack-num" style={{ ["--slot" as string]: n - 1 }}>
+            {n}
+          </span>
+        ))}
+        {rows.map((r, i) => (
+          <div
+            key={i}
+            className={`pack-row ${r.you ? "pack-you" : ""}`}
+            style={{ ["--from" as string]: r.from, ["--to" as string]: r.to }}
+          >
+            {r.you ? (
+              <span className="text-[12px] font-semibold text-ink">Your business</span>
+            ) : (
+              <span className="h-2 rounded-full bg-ink/10" style={{ width: `${r.w}%` }} />
+            )}
+            <span className="pack-stars">{r.you ? "★★★★★" : "★★★★"}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

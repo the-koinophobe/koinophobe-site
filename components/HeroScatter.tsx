@@ -2,6 +2,8 @@ import Image from "next/image";
 import { BarChart3, TrendingUp } from "lucide-react";
 import { projects, type Project } from "@/lib/content";
 import { monthly as gscMonthly } from "@/lib/gsc";
+import { CountUp } from "./CountUp";
+import { RankRow } from "./CaseSpark";
 
 /*
  * The cards around the home hero: client sites as tilted polaroids, plus the
@@ -39,14 +41,18 @@ function Polaroid({ p, sizes }: { p: Project; sizes: string }) {
   );
 }
 
+/** The roofer's average position counts down to its new figure as the dot climbs. */
 function RoofingStat() {
   return (
-    <div className="stat-card">
+    <div className="stat-card" data-anim="rank">
       <p className="flex items-center gap-2 text-[12.5px] font-medium text-muted">
         <TrendingUp size={15} aria-hidden className="text-brand" />
         Roofing contractor
       </p>
-      <p className="mt-2 font-display text-[clamp(1.3rem,4.4vw,1.65rem)] leading-none tracking-tight">47.9 &rarr; 14.9</p>
+      <p className="mt-2 font-display text-[clamp(1.3rem,4.4vw,1.65rem)] leading-none tracking-tight">
+        47.9 &rarr; <CountUp value={14.9} from={47.9} decimals={1} display="14.9" className="text-brand" />
+      </p>
+      <RankRow was={47.9} now={14.9} />
       <p className="mt-1.5 text-[12.5px] leading-snug text-muted">Average Google position, year on year</p>
     </div>
   );

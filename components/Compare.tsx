@@ -62,8 +62,9 @@ export function Compare() {
               </tr>
             </thead>
             <tbody>
-              {ROWS.map((r) => (
-                <tr key={r.label}>
+              {ROWS.map((r, ri) => (
+                // --r staggers our column's ticks, one row after the next.
+                <tr key={r.label} style={{ ["--r" as string]: ri }}>
                   <th scope="row">{r.label}</th>
                   {r.cells.map((v, i) => (
                     <td key={i} data-label={COLS[i]} className={i === 0 ? "cmp-us" : undefined}>

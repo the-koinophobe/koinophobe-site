@@ -18,6 +18,7 @@ import { MobileCta } from "@/components/MobileCta";
 import { Reveal } from "@/components/Reveal";
 import Image from "next/image";
 import Link from "next/link";
+import { CaseSpark } from "@/components/CaseSpark";
 import { aggregate, cases } from "@/lib/gsc";
 import { site } from "@/lib/site";
 import { Faq, type FaqItem } from "@/components/Faq";
@@ -248,6 +249,7 @@ export default function AboutPage() {
                       <span className="font-display text-[2rem] font-extrabold leading-none tracking-tight text-brand">{c.headline.value}</span>
                       <span className="text-[13.5px] text-muted">{c.headline.label}</span>
                     </p>
+                    <CaseSpark c={c} className="mt-3" />
                   </div>
                 </Link>
               ))}
