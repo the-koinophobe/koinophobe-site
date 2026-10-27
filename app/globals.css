@@ -119,15 +119,6 @@ body {
   transition: stroke-dashoffset 1.1s cubic-bezier(0.3, 0.8, 0.4, 1);
 }
 
-/* Word-mask rise (WordRise) — pure CSS, runs with or without JS */
-.word-rise [data-word] {
-  transform: translateY(115%);
-  animation: word-rise-up 0.9s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-  will-change: transform;
-}
-@keyframes word-rise-up {
-  to { transform: translateY(0); }
-}
 @media (prefers-reduced-motion: reduce) {
   [data-anim],
   [data-anim] > * {
@@ -139,10 +130,6 @@ body {
     stroke-dashoffset: 0 !important;
     transition: none !important;
   }
-  .word-rise [data-word] {
-    animation: none !important;
-    transform: none !important;
-  }
   html { scroll-behavior: auto; }
 }
 
@@ -150,56 +137,6 @@ body {
   /* phone gutters were too tight against the hairline rules */
   @apply mx-auto w-full max-w-content px-5 sm:px-8;
 }
-
-/* ---- Landing page palette: greens -----------------------------------------
-   Scoped to /google-business-profile. Light is the default; the page carries
-   its own toggle because it renders without the site header. `--edge` is the
-   hard border and offset-shadow color and is always the darkest green.
-   `--brand` is the lime FILL only, never text: it is unreadable on white, so
-   text that needs to be green uses `--deep`. Anything sitting on `--accent`
-   uses `text-bg`, which lands light on light mode and dark on dark. */
-.gbp-theme {
-  --bg: 8 22 15;            /* near-black forest */
-  --surface: 23 58 38;      /* card */
-  --ink: 228 245 233;       /* pale mint text */
-  --muted: 154 189 167;
-  --line: 3 12 7;
-  --edge: 3 12 7;           /* darkest green: borders + hard shadows */
-  --brand: 200 242 78;      /* acid lime, fill only */
-  --brand-soft: 20 46 30;
-  --accent: 52 211 153;     /* emerald */
-  --deep: 200 242 78;       /* lime reads fine on forest */
-}
-
-html.gbp-light .gbp-theme {
-  --bg: 228 242 204;        /* pale lime wash: the page itself carries color */
-  --surface: 255 255 255;   /* cards sit white on top of it */
-  --ink: 11 31 19;          /* deep forest text */
-  --muted: 71 98 80;
-  --line: 8 22 15;
-  --edge: 8 22 15;
-  --brand: 200 242 78;
-  --brand-soft: 216 238 176;
-  --accent: 12 102 51;      /* deep green fill */
-  --deep: 12 102 51;        /* strong green text */
-}
-
-/* Paint the overscroll area so rubber-banding never flashes the site theme. */
-body:has(.gbp-theme) { background-color: rgb(8 22 15); }
-html.gbp-light body:has(.gbp-theme) { background-color: rgb(228 242 204); }
-
-/* The site sets html.dark by default, so the landing page logo can't use the
-   `dark:` variant. It follows the page's own theme instead. */
-.gbp-theme .gbp-logo { filter: invert(1); }
-html.gbp-light .gbp-theme .gbp-logo { filter: none; }
-
-/* Decorative background stars fade out through the middle of the section, so
-   they never sit behind headlines and body copy. */
-.ghost-fade {
-  -webkit-mask-image: radial-gradient(120% 95% at 50% 45%, transparent 0%, transparent 42%, #000 82%);
-  mask-image: radial-gradient(120% 95% at 50% 45%, transparent 0%, transparent 42%, #000 82%);
-}
-
 
 /* ---- Rebuild: Search Console vernacular ---- */
 /* Section eyebrow. The filled button: ink ground, page color text. Dark
@@ -258,6 +195,11 @@ html.gbp-light .gbp-theme .gbp-logo { filter: none; }
 .wall-drift { animation: wall-drift 68s linear infinite; }
 .wall-drift-rev { animation-direction: reverse; }
 .marquee-mask:hover .wall-drift { animation-play-state: paused; }
+/* Wall polaroids tilt a little either way and straighten under the pointer. */
+.wall-drift > :nth-child(odd) { rotate: -1.4deg; }
+.wall-drift > :nth-child(even) { rotate: 1.4deg; }
+.wall-drift > * { transition: rotate 0.45s var(--ease-settle), translate 0.45s var(--ease-settle); }
+@media (hover: hover) { .wall-drift > :hover { rotate: 0deg; translate: 0 -6px; } }
 @media (prefers-reduced-motion: reduce) {
   .wall-drift { animation: none; }
   .marquee-mask { overflow-x: auto; }
@@ -407,10 +349,10 @@ html.gbp-light .gbp-theme .gbp-logo { filter: none; }
    hint keeps the scrollbar honest so nothing shifts. */
 .wall-tile {
   content-visibility: auto;
-  contain-intrinsic-size: auto 260px auto 230px;
+  contain-intrinsic-size: auto 260px auto 232px;
 }
 @media (min-width: 640px) {
-  .wall-tile { contain-intrinsic-size: auto 340px auto 260px; }
+  .wall-tile { contain-intrinsic-size: auto 320px auto 270px; }
 }
 
 /* ── Note body ───────────────────────────────────────────────────────────
@@ -450,7 +392,7 @@ html.gbp-light .gbp-theme .gbp-logo { filter: none; }
 .prose pre {
   overflow-x: auto;
   border: 1px solid rgb(var(--line));
-  border-radius: 2px;
+  border-radius: 16px;
   background: rgb(var(--surface));
   padding: 1rem 1.15rem;
   font-size: 0.85em;
@@ -464,7 +406,7 @@ html.gbp-light .gbp-theme .gbp-logo { filter: none; }
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   border: 1px solid rgb(var(--line));
-  border-radius: 2px;
+  border-radius: 20px;
   background: rgb(var(--surface) / 0.45);
 }
 .prose table {
@@ -549,7 +491,7 @@ html.gbp-light .gbp-theme .gbp-logo { filter: none; }
   color: rgb(var(--ink));
 }
 .prose em { color: rgb(var(--muted)); }
-.prose img { border-radius: 2px; }
+.prose img { border-radius: 16px; }
 
 /* The display face has no italic. Stop the browser faking one. */
 .font-display,
@@ -603,10 +545,12 @@ blockquote.font-display {
   :root { --r-card: 38px; --r-lg: 50px; }
   .sq, .card, .card-dark, .btn, .eyebrow, .icon-tile, .dd, .hx-item,
   .hx-media, .hx-icon-btn, .hx-menu-btn, .hx-box, .hx-cta, .hx-logo, .hero-photo, .float-card, .pager a, .pager span,
-  .rounded-2xl, .rounded-3xl, .prose figure img, .wall-tile {
+  .rounded-2xl, .rounded-3xl, .prose figure img, .prose pre, .prose .table-wrap, .prose img, .wall-tile {
     corner-shape: squircle;
   }
   .rounded-2xl { border-radius: 1.65rem; }
+  .btn, .pager a, .pager span { border-radius: 18px; }
+  .btn-chip { corner-shape: squircle; border-radius: 12px; }
   .rounded-3xl { border-radius: 2.4rem; }
   .prose figure img { border-radius: 26px; }
 }
@@ -666,7 +610,7 @@ blockquote.font-display {
   align-items: center;
   justify-content: center;
   gap: 0.55rem;
-  border-radius: 999px;
+  border-radius: 12px;
   font-weight: 600;
   line-height: 1;
   white-space: nowrap;
@@ -680,6 +624,19 @@ blockquote.font-display {
 .btn:active { transform: translateY(2px); }
 @media (prefers-reduced-motion: reduce) { .btn:hover, .btn:active { transform: none; } }
 .btn-lg { height: 54px; padding: 0 1.55rem; font-size: 16px; }
+.btn:has(.btn-chip) { padding-right: 9px; gap: 14px; }
+.btn-chip {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: rgb(255 255 255);
+  color: rgb(var(--pop));
+  transition: transform 0.3s var(--ease-settle);
+}
+.btn-md .btn-chip { width: 26px; height: 26px; border-radius: 7px; }
+.btn:hover .btn-chip { transform: translateX(2px); }
 .btn-md { height: 46px; padding: 0 1.2rem; font-size: 15px; }
 .btn-sm { height: 40px; padding: 0 1rem; font-size: 14px; }
 .btn-primary,
@@ -1225,7 +1182,7 @@ html.hx-locked { overflow: hidden; }
   min-width: 42px;
   height: 42px;
   padding: 0 0.9rem;
-  border-radius: 999px;
+  border-radius: 12px;
   border: 1px solid rgb(var(--line));
   font-size: 15px;
   font-weight: 500;
@@ -2166,3 +2123,47 @@ body::after {
   stroke-dashoffset: 0;
   transition: stroke-dashoffset 0.4s ease calc(var(--r) * 0.14s + 0.55s);
 }
+
+
+/* ── Designed note cover, for notes without a photo ─────────────────── */
+.note-cover {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background-color: rgb(var(--band));
+  background-image:
+    radial-gradient(60% 80% at 85% 10%, rgb(var(--mint) / 0.16), transparent 60%),
+    radial-gradient(rgb(var(--mint) / 0.16) 1.4px, transparent 1.5px);
+  background-size: 100% 100%, 22px 22px;
+  color: rgb(var(--mint));
+}
+.note-cover-icon {
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  border-radius: 22px;
+  background: rgb(var(--mint) / 0.12);
+  box-shadow: inset 0 0 0 1px rgb(var(--mint) / 0.25);
+  transition: transform 0.6s var(--ease-settle);
+}
+.group:hover .note-cover-icon { transform: rotate(-6deg) scale(1.06); }
+.note-cover-label {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: rgb(var(--band-ink) / 0.75);
+}
+.note-cover-mark {
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  width: 18px;
+  height: 18px;
+  color: rgb(var(--band-ink) / 0.4);
+}
+@supports (corner-shape: squircle) { .note-cover-icon { corner-shape: squircle; border-radius: 30px; } }

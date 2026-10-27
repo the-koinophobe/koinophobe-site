@@ -41,7 +41,7 @@ So "ranking in ChatGPT" means getting into the pool it keeps drawing from, often
 
 OpenAI's help center says any public website can appear in ChatGPT search, and the one condition it names is not blocking OAI-SearchBot. That crawler is separate from GPTBot, which collects training data. Plenty of sites block GPTBot on purpose and that's fine. The ones in trouble block OAI-SearchBot by accident, through an old robots.txt list or a CDN bot setting.
 
-Two more ways to be invisible: a page that shows no text until JavaScript runs, and a firewall that answers crawlers with a challenge page. We cover all three in [AI crawlers and robots.txt](/notes/ai-crawlers-robots-txt). The [free crawler check](/saas-seo#check) tests your site in ten seconds.
+Two more ways to be invisible: a page that shows no text until JavaScript runs, and a firewall that answers crawlers with a challenge page. We cover all three in [AI crawlers and robots.txt](/notes/ai-crawlers-robots-txt). The [free crawler check](/ai-search-optimization#check) tests your site in ten seconds.
 
 ### 2. You rank on Google for the same questions
 
@@ -79,6 +79,6 @@ Every step above also helps on Google. That's the useful part. You aren't choosi
 
 ## Next steps
 
-Run the [free AI crawler check](/saas-seo#check) on your domain. If it comes back clean, start the question list from week two today.
+Run the [free AI crawler check](/ai-search-optimization#check) on your domain. If it comes back clean, start the question list from week two today.
 
 If you'd rather hand the loop off, that's what our [AI search optimization](/ai-search-optimization) service does: the access fixes, the tracking with repeated runs, and the pages, every month, for $1,000 with no contract.

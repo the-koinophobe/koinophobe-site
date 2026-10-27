@@ -51,7 +51,7 @@ Three things stand out:
 
 ### Let PerplexityBot in
 
-Perplexity's documentation says PerplexityBot surfaces and links websites in search results and isn't used to train AI foundation models. That makes it an easy decision for most businesses: allow it. Check your robots.txt and your CDN or firewall bot rules. The [free crawler check](/saas-seo#check) reads your robots.txt for PerplexityBot and nine other crawlers.
+Perplexity's documentation says PerplexityBot surfaces and links websites in search results and isn't used to train AI foundation models. That makes it an easy decision for most businesses: allow it. Check your robots.txt and your CDN or firewall bot rules. The [free crawler check](/ai-search-optimization#check) reads your robots.txt for PerplexityBot and nine other crawlers.
 
 Its other fetcher, Perplexity-User, opens a page when a person asks about it, and Perplexity says it generally ignores robots.txt for that reason.
 
@@ -64,7 +64,7 @@ The table says it plainly: Perplexity picks companies Google ranks, then a page 
 
 ### Be specific
 
-With four seats per answer, the page that wins is usually the one that answers the exact question. "Cheapest scraping API with proxy rotation" drew citations from 13 companies across four assistants in our study. "Zyte vs Apify pricing comparison" drew from five. Specific questions narrow the field, and a page that matches one exactly has a better shot. That's why we start clients with [comparison and alternatives pages](/notes/saas-comparison-pages).
+With four seats per answer, the page that wins is usually the one that answers the exact question. "Cheapest scraping API with proxy rotation" drew citations from 13 companies across four assistants in our study. "Zyte vs Apify pricing comparison" drew from five. Specific questions narrow the field, and a page that matches one exactly has a better shot. That's why we start clients with [comparison and alternatives pages](/notes/content-ai-cites).
 
 ### Keep facts fresh
 

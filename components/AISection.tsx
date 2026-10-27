@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState, type CSSProperties } from "react";
-import { Quote, ShieldCheck, Star, Terminal } from "lucide-react";
+import { Quote, ShieldCheck, Sparkles, Star } from "lucide-react";
 
 /**
- * The answer box. A CSS-only terminal that types two real local queries and
- * shows what comes back. Zero JS beyond the observer that starts it: the
+ * The answer box: two real local queries typed into chat bubbles, and what the
+ * assistant says back, in the same bubbles as the homepage chat. Zero JS beyond the observer that starts it: the
  * typing is `steps()` on a width in `ch`, so it costs nothing at runtime.
  */
 
@@ -58,11 +58,14 @@ function Answer({
   children: React.ReactNode;
 }) {
   return (
-    <div className="term-fade mt-3 border-l-2 border-brand/40 pl-4" style={fadeStyle(at)}>
-      <p className="text-[14.5px] leading-relaxed text-ink">{children}</p>
-      <p className="mt-2.5 font-mono text-[11.5px] uppercase tracking-[0.11em] text-muted">
-        cited &middot; <span className="text-brand">{domain}</span>
-      </p>
+    <div className="term-fade mt-3 flex items-start gap-2.5" style={fadeStyle(at)}>
+      <span className="chat-avatar" aria-hidden>
+        <Sparkles size={13} strokeWidth={2.4} />
+      </span>
+      <div className="chat-bubble">
+        <p className="text-[14.5px] leading-relaxed text-ink">{children}</p>
+        <span className="chat-source">cited &middot; {domain}</span>
+      </div>
     </div>
   );
 }
@@ -95,7 +98,7 @@ export function AISection() {
     <div className="grid items-start gap-12 lg:grid-cols-[1fr_1.02fr] lg:gap-16">
       <div>
         <p className="eyebrow">The answer box</p>
-        <h2 className="mt-4 max-w-[20ch] font-display text-[clamp(1.9rem,4vw,3rem)] leading-[1.05] tracking-tight text-balance">
+        <h2 className="t-h2 mt-5 max-w-[20ch]">
           More of your customers are asking AI search now.
         </h2>
         <p className="mt-6 max-w-[54ch] text-[17.5px] text-muted">
@@ -136,20 +139,17 @@ export function AISection() {
       <div
         ref={ref}
         data-run={run ? "true" : "false"}
-        className="self-start overflow-hidden rounded-sm border border-line bg-surface lg:sticky lg:top-28"
+        className="card self-start overflow-hidden lg:sticky lg:top-28"
       >
         <div className="flex items-center gap-2.5 border-b border-line px-4 py-3 sm:px-5">
-          <Terminal size={14} aria-hidden className="text-brand" />
-          <span className="font-mono text-[11.5px] uppercase tracking-[0.13em] text-muted">
+          <Sparkles size={15} aria-hidden className="text-brand" />
+          <span className="text-[13px] font-semibold text-muted">
             What a customer gets asked back
           </span>
         </div>
 
         <div className="px-4 py-6 sm:px-6 sm:py-8">
-          <p className="font-mono text-[12px] leading-relaxed text-brand sm:text-[13px]">
-            <span aria-hidden className="select-none pr-2 text-muted">
-              &gt;
-            </span>
+          <p className="chat-q ml-auto w-fit max-w-full font-mono text-[12px] leading-relaxed sm:text-[13px]">
             <span className="term-line align-top" style={typeStyle(Q1)}>
               {Q1.text}
             </span>
@@ -163,12 +163,9 @@ export function AISection() {
           </Answer>
 
           <p
-            className="term-fade term-caret mt-8 font-mono text-[12px] leading-relaxed text-brand sm:text-[13px]"
+            className="term-fade chat-q ml-auto mt-8 w-fit max-w-full font-mono text-[12px] leading-relaxed sm:text-[13px]"
             style={fadeStyle(Q2.delay - 0.3)}
           >
-            <span aria-hidden className="select-none pr-2 text-muted">
-              &gt;
-            </span>
             <span className="term-line align-top" style={typeStyle(Q2)}>
               {Q2.text}
             </span>

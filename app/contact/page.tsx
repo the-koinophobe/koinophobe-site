@@ -72,8 +72,9 @@ const CONTACT_FAQ: FaqItem[] = [
 export default function ContactPage() {
   return (
     <>
-      <section className="hero-bg">
-        <div className="container-pad pb-6 pt-14 sm:pt-20">
+      <section className="page-hero hero-bg">
+        <div className="grid-fade pointer-events-none absolute inset-0" aria-hidden />
+        <div className="container-pad relative pb-6 pt-14 sm:pt-24">
           <div className="grid items-center gap-10 lg:grid-cols-[1.35fr_1fr] lg:gap-14">
           <Reveal>
             <p className="eyebrow">Contact</p>
@@ -213,7 +214,7 @@ export default function ContactPage() {
               </blockquote>
               <figcaption className="mt-4 flex flex-wrap items-baseline gap-x-3">
                 <span className="text-[15px] font-medium">Johnny Urena</span>
-                <span className="font-mono text-[11.5px] uppercase tracking-[0.12em] text-brand">
+                <span className="text-[13px] font-semibold text-brand">
                   Verified &middot; Upwork
                 </span>
               </figcaption>

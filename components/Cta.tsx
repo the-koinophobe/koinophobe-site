@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, CalendarCheck, Mail } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { site } from "@/lib/site";
 
 const SUBJECT = encodeURIComponent("My site");
@@ -9,7 +9,7 @@ export const mailHref = `mailto:${site.email}?subject=${SUBJECT}`;
 
 /*
  * Every call to action on the site comes from this file, so they all share
- * one shape (the pill in globals.css) and one set of analytics attributes.
+ * one shape (the rounded key in globals.css, the nav's shape) and one set of analytics attributes.
  * Click tracking runs through one delegated listener in Anim.tsx reading
  * data-track and data-from, so a button costs no JavaScript of its own.
  */
@@ -17,7 +17,7 @@ export const mailHref = `mailto:${site.email}?subject=${SUBJECT}`;
 type Size = "sm" | "md" | "lg";
 const sizeClass: Record<Size, string> = { sm: "btn-sm", md: "btn-md", lg: "btn-lg" };
 
-/** Primary button. Opens the Cal.com booking page in a new tab. */
+/** Primary button: the red key with the white arrow chip, like the nav's. Opens Cal.com in a new tab. */
 export function BookCta({
   label = "Book a free call",
   from,
@@ -40,8 +40,10 @@ export function BookCta({
       data-from={from}
       className={`btn ${sizeClass[size]} ${tone === "light" ? "btn-light" : "btn-primary"} ${className}`}
     >
-      <CalendarCheck size={size === "sm" ? 16 : 18} aria-hidden />
       {label}
+      <span className="btn-chip" aria-hidden>
+        <ArrowRight size={size === "lg" ? 16 : 14} strokeWidth={2.5} />
+      </span>
     </a>
   );
 }

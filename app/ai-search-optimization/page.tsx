@@ -3,16 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
-  Briefcase,
   CalendarClock,
   Check,
-  Code2,
   FileText,
   Gauge,
   Home,
   RefreshCw,
   ScanSearch,
-  ShoppingBag,
+  Sparkles,
   Wrench,
 } from "lucide-react";
 import { AiCheck } from "@/components/AiCheck";
@@ -30,9 +28,9 @@ import { startup } from "@/lib/pricing";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "AI search optimization for business owners",
+  title: "AI search optimization for home service businesses",
   description:
-    "Get your business named by ChatGPT, Claude, Perplexity and Google's AI Overviews. Crawler fixes, cited pages and monthly tracking. $1,000 a month, no contract.",
+    "Get your home service business named by ChatGPT, Claude, Perplexity and Google's AI Overviews. Crawler fixes, cited pages and monthly tracking. $1,000 a month, no contract.",
   alternates: { canonical: "/ai-search-optimization" },
 };
 
@@ -41,27 +39,21 @@ const STUDY = "/notes/ai-cited-vs-ranked-page";
 const WHO = [
   {
     icon: <Home size={20} aria-hidden />,
-    t: "Local and home service businesses",
-    b: "Customers ask for \"a good roofer near me\" or \"best bakery downtown.\" Listings, reviews and plain answers decide who gets named.",
+    t: "Roofers and remodelers",
+    b: "Big jobs researched for weeks. Assistants name the company whose reviews, project pages and cost pages answer the homeowner's questions.",
     link: { href: "/notes/get-business-recommended-by-chatgpt", label: "Get recommended by ChatGPT" },
   },
   {
-    icon: <Briefcase size={20} aria-hidden />,
-    t: "Dentists, lawyers, accountants, clinics",
-    b: "High-trust choices made close to booking. Credentials, cost pages and consistent profiles, written within your field's advertising rules.",
-    link: { href: "/notes/ai-search-professional-services", label: "AI search for practices" },
+    icon: <Wrench size={20} aria-hidden />,
+    t: "Plumbers, HVAC and electricians",
+    b: "Urgent calls go to whoever gets named first. A Business Profile that agrees with your site, and a page for each service and town.",
+    link: { href: "/notes/ai-search-local-business", label: "AI search for local businesses" },
   },
   {
-    icon: <ShoppingBag size={20} aria-hidden />,
-    t: "Online stores",
-    b: "ChatGPT now shows product carousels. Clean product data, buying guides and a crawlable store get you into them.",
-    link: { href: "/notes/chatgpt-shopping-products", label: "ChatGPT shopping" },
-  },
-  {
-    icon: <Code2 size={20} aria-hidden />,
-    t: "Software companies",
-    b: "Buyers ask assistants to shortlist tools. Comparison pages and fixes shipped as pull requests, on a page of its own.",
-    link: { href: "/saas-seo", label: "SaaS SEO and AI search" },
+    icon: <Sparkles size={20} aria-hidden />,
+    t: "Cleaning, lawn, pest and pool",
+    b: "Recurring services people compare on price and trust. Plain pricing pages and reviews with real sentences in them get quoted.",
+    link: { href: "/notes/how-to-appear-in-google-ai-overviews", label: "Show up in AI Overviews" },
   },
 ];
 
@@ -91,11 +83,11 @@ const GUIDES: { title: string; slugs: string[] }[] = [
   },
   {
     title: "ChatGPT, Claude, Perplexity, Copilot",
-    slugs: ["ai-crawlers-robots-txt", "perplexity-seo", "chatgpt-shopping-products", "llms-txt", "bing-copilot-ai-performance-report"],
+    slugs: ["ai-crawlers-robots-txt", "perplexity-seo", "llms-txt", "bing-copilot-ai-performance-report"],
   },
   {
     title: "What gets cited",
-    slugs: ["content-ai-cites", "saas-comparison-pages", "brand-mentions-ai-search", "reddit-ai-search", "ai-search-professional-services", "ai-search-local-business"],
+    slugs: ["content-ai-cites", "brand-mentions-ai-search", "reddit-ai-search", "ai-search-local-business"],
   },
   {
     title: "Measuring and buying",
@@ -179,7 +171,6 @@ export default function AiSearchPage() {
         <div className="container-pad relative grid grid-cols-[minmax(0,1fr)] items-center gap-14 pb-16 pt-14 sm:pt-24 lg:grid-cols-[1.08fr_1fr] lg:gap-16 lg:pb-24">
           <Reveal>
             <p className="eyebrow">
-              <span className="h-1.5 w-1.5 rounded-full bg-brand" aria-hidden />
               AI search optimization
             </p>
             <h1 className="t-h1 mt-6 max-w-[18ch]">
@@ -233,7 +224,7 @@ export default function AiSearchPage() {
               something worth quoting, and measure what they say.
             </p>
           </Reveal>
-          <div data-anim="cards" className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div data-anim="cards" className="mt-12 grid gap-5 md:grid-cols-3">
             {WHO.map((w) => (
               <div key={w.t} className="card flex flex-col p-7">
                 <span className="icon-tile">{w.icon}</span>

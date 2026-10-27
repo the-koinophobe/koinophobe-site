@@ -27,7 +27,7 @@ So we've been on the wrong side of this one. Here's how we'd work through it for
 
 Rule out the simple causes first. In WordPress, go to Settings > Reading and make sure "Discourage search engines from indexing this site" is unchecked. A developer may have ticked it while building the site and never unticked it. Then run your home page through URL Inspection in Google Search Console and check the Pages report for excluded pages.
 
-If the site isn't indexed, nothing below matters yet. The full checklist is in [why a contractor website isn't showing on Google](/notes/contractor-website-not-showing-on-google). If you've recently changed your name or domain, [changing your domain without losing traffic](/notes/change-domain-name-seo) covers how to carry the old name across.
+If the site isn't indexed, nothing below matters yet. The full checklist is in [why a contractor website isn't showing on Google](/notes/contractor-website-not-showing-on-google). If you've recently changed your name or domain, [changing your domain without losing traffic](/notes/website-migration-without-losing-rankings) covers how to carry the old name across.
 
 ## Why Google misreads a business name
 

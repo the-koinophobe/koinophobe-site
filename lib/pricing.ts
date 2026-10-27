@@ -137,49 +137,28 @@ export const monthly: Plan[] = [
   },
 ];
 
-export const agency = [
-  {
-    name: "Tracking fix",
-    price: "$250 per site",
-    amount: 250,
-    body: "GA4 and Tag Manager call and form tracking plus one Business Profile cleanup, under your brand. 5 business days.",
-  },
-  {
-    name: "Per site",
-    price: "from $850/month",
-    amount: 850,
-    body: "Technical SEO, builds and upkeep under your brand. You own the client relationship. NDA on request.",
-  },
-  {
-    name: "Hour block",
-    price: "$900 for 10 hours",
-    amount: 900,
-    body: "For builds, fixes and migrations. Hours stay good for 90 days.",
-  },
-];
-
 /**
  * The money-back guarantee. Every mention of it on the site reads from here,
  * so the promise and its terms can never say different things. Covers the
  * first payment on anything: a one-time project in full, or the first month
- * of any monthly plan, agency rates included.
+ * of any monthly plan.
  */
 export const guarantee = {
   name: "100% money-back guarantee",
   days: 30,
   short: "Not happy within 30 days of your first payment? You get all of it back.",
   terms:
-    "Ask within 30 days of your first payment and we refund 100% of it: the full price of a one-time project, or the first month of any monthly plan, agency rates included. No forms, no conditions, and no questions you have to answer. A refund ends the plan, minimum term included. Later monthly payments aren't refundable, but you can still cancel on the normal terms.",
+    "Ask within 30 days of your first payment and we refund 100% of it: the full price of a one-time project, or the first month of any monthly plan. No forms, no conditions, and no questions you have to answer. A refund ends the plan, minimum term included. Later monthly payments aren't refundable, but you can still cancel on the normal terms.",
 };
 
 /** Lowest monthly price, for "plans from" lines elsewhere on the site. */
 export const monthlyFrom = Math.min(...monthly.map((p) => p.amount));
 
 /**
- * Search + AI: the software startup plan, sold on /saas-seo. A different buyer
- * and different work from the home service plans above, so it lives on its own
- * page and keeps its own terms: no contract, and either side can stop with 30
- * days' notice. `items` is what ships every month, so every line in it must be
+ * Search + AI: Google and AI search for home service businesses, sold on
+ * /ai-search-optimization. Different work from the local plans above, so it
+ * keeps its own terms: no contract, and either side can stop with 30 days'
+ * notice. (The `startup` name is historical.) `items` is what ships every month, so every line in it must be
  * something countable that we control. Anything conditional goes in `extras`.
  *
  * `seatsOpen` is printed on the page. Only ever set it to the real number of
@@ -203,9 +182,9 @@ export const startup: Plan & {
   seatsOpen: 5,
   items: [
     "Citation tracking: your buyer questions across 4 assistants, 3 runs each",
-    "12 in-depth articles, comparison and alternatives pages included",
+    "12 in-depth articles, cost and comparison pages included",
     "50+ fixes to pages you already have",
-    "Every change sent as a pull request",
+    "Nothing that makes claims about your business goes live without your OK",
     "A Friday changelog and a month-end citation report",
   ],
   note: "Measured, fixed and written every month. Five clients at a time.",

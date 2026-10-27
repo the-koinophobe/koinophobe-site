@@ -52,7 +52,7 @@ Schema is still worth doing right, because it helps search engines understand yo
 
 - **Homepage:** Organization, or the specific LocalBusiness type that fits (Dentist, Plumber, RoofingContractor, Restaurant). Name, logo, phone, address or service area, opening hours, links to your profiles. It should match your Google Business Profile word for word. [Example for roofers](/notes/roofing-contractor-schema).
 - **Articles and guides:** Article or BlogPosting with headline, author (a real person with a bio page), datePublished and dateModified.
-- **Product pages:** Product with price, availability and reviews where you have them. Ecommerce stores should keep this consistent with their product feed, which matters for [ChatGPT shopping](/notes/chatgpt-shopping-products) too.
+- **Product pages:** Product with price, availability and reviews where you have them. Ecommerce stores should keep this consistent with their product feed, which matters for [ChatGPT shopping](/notes/get-business-recommended-by-chatgpt) too.
 - **FAQ:** FAQPage only for questions that are visible on the page. Hidden FAQ schema is against Google's guidelines.
 - **Navigation:** BreadcrumbList.
 
@@ -70,6 +70,6 @@ Paste a URL into Google's Rich Results Test or the Schema Markup Validator. Chec
 
 ## Next steps
 
-Fix the homepage block and the article markup first; they're the two that matter most for how machines understand who you are and what you've written. Then run the [free AI crawler check](/saas-seo#check), because markup on a page no crawler can reach does nothing.
+Fix the homepage block and the article markup first; they're the two that matter most for how machines understand who you are and what you've written. Then run the [free AI crawler check](/ai-search-optimization#check), because markup on a page no crawler can reach does nothing.
 
 Our [AI search optimization](/ai-search-optimization) service includes schema fixes in the 50+ page fixes each month, shipped as code you can review. $1,000 a month, no contract.

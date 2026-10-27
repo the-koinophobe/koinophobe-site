@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import { useTheme } from "next-themes";
-import { CalendarCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { site } from "@/lib/site";
 import { track } from "@/lib/analytics";
 
@@ -102,8 +102,10 @@ export function CalInline() {
             data-from="contact_inline"
             className="btn btn-lg btn-primary"
           >
-            <CalendarCheck size={19} aria-hidden />
             Show available times
+            <span className="btn-chip" aria-hidden>
+              <ArrowRight size={16} strokeWidth={2.5} />
+            </span>
           </button>
           <p className="text-[13.5px] text-muted">
             Loads the calendar from Cal.com. Or{" "}

@@ -1,4 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
 import type { CaseStudy } from "@/lib/gsc";
 import { monthly } from "@/lib/gsc";
 import { PageBars, PositionLadder, Sparkline } from "./GscCharts";
@@ -65,7 +64,7 @@ export function CaseStudyBlock({ c }: { c: CaseStudy }) {
               i > 1 ? "min-[420px]:border-t min-[420px]:border-line sm:border-t-0" : ""
             }`}
           >
-            <span className="eyebrow-flat mb-1.5 block text-[10px]">{m.label}</span>
+            <span className="mb-1.5 block text-[12.5px] font-semibold text-muted">{m.label}</span>
             <span className="tnum font-display text-[1.5rem] font-extrabold tracking-tight">{m.value}</span>
             {m.delta ? (
               <span
@@ -94,10 +93,7 @@ export function CaseStudyBlock({ c }: { c: CaseStudy }) {
             </figcaption>
           </figure>
           <div className="mt-7 border-t border-line pt-4">
-            <span className="mb-3 flex items-center gap-2.5 font-mono text-[12px] uppercase tracking-[0.14em] text-brand">
-              <ArrowUpRight size={17} aria-hidden />
-              What&rsquo;s next
-            </span>
+            <span className="eyebrow mb-4">What&rsquo;s next</span>
             <Prose text={c.next} className="text-[15.5px] text-muted" />
           </div>
         </div>

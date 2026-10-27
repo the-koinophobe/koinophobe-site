@@ -4,8 +4,9 @@ import { publishedNotes } from "@/lib/notes";
 export default function NotFound() {
   const latest = publishedNotes().slice(0, 3);
   return (
-    <section className="hero-bg">
-      <div className="container-pad flex min-h-[64vh] flex-col items-center justify-center py-20 text-center">
+    <section className="page-hero hero-bg">
+      <div className="grid-fade pointer-events-none absolute inset-0" aria-hidden />
+      <div className="container-pad relative flex min-h-[64vh] flex-col items-center justify-center py-20 text-center">
         <span className="eyebrow">404</span>
         <h1 className="t-h1 mt-5 max-w-[18ch]">That page isn&rsquo;t here</h1>
         <p className="t-lead mt-4 max-w-md">The link is broken or the page moved. These will get you where you were going.</p>

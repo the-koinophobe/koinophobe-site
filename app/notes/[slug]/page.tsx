@@ -54,15 +54,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
   const topic = topics.find((t) => t.key === note.topic)!;
   // AI search notes get calls to action for the AI search offer instead of the local plans.
   const isAi = topic.key === "ai";
-  // Startup notes point founders at the Search + AI plan on /saas-seo.
-  const isStartup = topic.key === "startups";
-  const audience = isAi
-    ? "businesses that want to show up in AI answers"
-    : isStartup
-      ? "software startups"
-      : topic.key === "technical"
-        ? "small businesses and startups"
-        : "home service businesses";
+  const audience = isAi ? "home service businesses that want to show up in AI answers" : "home service businesses";
   // The service page closest to what the note is about, so the sidebar points somewhere specific.
   const service = serviceForNote(note.slug, topic.key);
   const related = relatedNotes(note, 3);
@@ -215,27 +207,23 @@ export default function NotePage({ params }: { params: { slug: string } }) {
             <div className="sticky top-28 space-y-6">
               {note.toc.length > 1 ? (
                 <nav aria-label="On this page" className="toc">
-                  <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.06em] text-muted">On this page</p>
+                  <p className="mb-3 text-[13.5px] font-semibold text-ink">On this page</p>
                   {note.toc.map((h) => (
                     <a key={h.id} href={`#${h.id}`}>{h.text}</a>
                   ))}
                 </nav>
               ) : null}
               <div className="card-dark p-6 sm:p-7">
-                <p className="t-h3 !text-[1.3rem]">{isAi ? "Want your business in the answer?" : isStartup ? "Want this shipped on your site?" : "Want this done on your site?"}</p>
+                <p className="t-h3 !text-[1.3rem]">{isAi ? "Want your business in the answer?" : "Want this done on your site?"}</p>
                 <p className="mt-2 text-[14.5px] leading-relaxed text-muted">
                   {isAi
                     ? "Run the free AI crawler check, or book 20 minutes and we\u2019ll bring what the assistants say about your category."
-                    : isStartup
-                      ? "We fix the technical side and write the pages buyers search for, with every change sent as a pull request. $1,000 a month, no contract."
-                      : "Book a free 20-minute call. We\u2019ll look at your site first and tell you what we\u2019d fix."}
+                    : "Book a free 20-minute call. We\u2019ll look at your site first and tell you what we\u2019d fix."}
                 </p>
                 <div className="mt-5 flex flex-col gap-2.5">
                   <BookCta from="note_sidebar" size="md" tone="light" className="w-full" />
                   {isAi ? (
                     <PageCta href="/ai-search-optimization#check" label="Check your site free" from="note_sidebar_ai" size="md" className="w-full" />
-                  ) : isStartup ? (
-                    <PageCta href="/saas-seo" label="See the startup plan" from="note_sidebar_startup" size="md" className="w-full" />
                   ) : service ? (
                     <PageCta href={service.href} label={service.cta} from="note_sidebar_service" size="md" className="w-full" />
                   ) : (
@@ -277,13 +265,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
                 "You get the first few changes we'd ship, in order.",
                 "If it isn't a fit, we'll tell you that on the call.",
               ]
-            : isStartup
-              ? [
-                  "We check your rendering, indexing and the pages buyers search for before we talk.",
-                  "You get the first fixes we'd ship, in order, whether you hire us or not.",
-                  "If it isn't a fit, we'll tell you that on the call.",
-                ]
-              : undefined
+            : undefined
         }
       />
       <MobileCta />

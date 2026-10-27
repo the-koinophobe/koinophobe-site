@@ -8,8 +8,11 @@ import { projects, type Project } from "@/lib/content";
 /**
  * The wall. Every site shows its real screenshot and its real video.
  *
+ * Each site is a polaroid, like the cards around the home hero, tilted a
+ * little either way and straightened under the pointer.
+ *
  * What `named: false` withholds is the attribution, not the picture: no client
- * name, no address bar, no outbound link. The work is visible, the client list
+ * name and no outbound link. The work is visible, the client list
  * stays the agency's. Flip a project to `named: true` in lib/content.ts to give
  * it its name, its host and a link out.
  *
@@ -19,16 +22,11 @@ import { projects, type Project } from "@/lib/content";
 
 function Tile({ p, video }: { p: Project; video: boolean }) {
   const vid = useRef<HTMLVideoElement | null>(null);
-  const [live, setLive] = useState(false);
-
-  const host = p.url.replace(/^https?:\/\//, "").replace(/\/$/, "");
 
   const enter = () => {
-    setLive(true);
     vid.current?.play().catch(() => {});
   };
   const leave = () => {
-    setLive(false);
     const v = vid.current;
     if (v) {
       v.pause();
@@ -40,20 +38,9 @@ function Tile({ p, video }: { p: Project; video: boolean }) {
     <div
       onPointerEnter={enter}
       onPointerLeave={leave}
-      className="wall-tile group flex h-full w-[260px] flex-none flex-col overflow-hidden rounded-2xl border border-line bg-bg sm:w-[340px]"
+      className="wall-tile polaroid group flex h-full w-[260px] flex-none flex-col sm:w-[320px]"
     >
-      <div className="flex items-center gap-2 border-b border-line bg-surface px-3 py-2">
-        <span className="flex gap-1.5" aria-hidden>
-          <span className="h-2 w-2 rounded-full bg-muted/50" />
-          <span className="h-2 w-2 rounded-full bg-muted/35" />
-          <span className="h-2 w-2 rounded-full bg-muted/25" />
-        </span>
-        <span className="ml-1 truncate font-mono text-[11.5px] text-muted">
-          {p.named ? host : "·".repeat(22)}
-        </span>
-      </div>
-
-      <div className="relative aspect-[16/10] w-full overflow-hidden bg-surface">
+      <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[10px] bg-surface">
         {p.video && video ? (
           <video
             ref={vid}
@@ -63,9 +50,7 @@ function Tile({ p, video }: { p: Project; video: boolean }) {
             playsInline
             preload="none"
             aria-label={`${p.sector} website preview`}
-            className={`h-full w-full object-cover object-top transition-[filter] duration-500 ${
-              live ? "grayscale-0" : "grayscale"
-            }`}
+            className="h-full w-full object-cover object-top"
           >
             <source src={p.video} type="video/mp4" />
           </video>
@@ -74,20 +59,18 @@ function Tile({ p, video }: { p: Project; video: boolean }) {
             src={p.image}
             alt={`${p.sector} website`}
             fill
-            sizes="(min-width: 640px) 340px, 260px"
-            className="object-cover object-top grayscale transition-[filter] duration-500 group-hover:grayscale-0"
+            sizes="(min-width: 640px) 320px, 260px"
+            className="object-cover object-top"
           />
         )}
       </div>
 
-      <div className="flex items-start justify-between gap-3 px-3.5 py-3">
+      <div className="flex items-start justify-between gap-3 px-1 pb-0.5 pt-3">
         <span className="min-w-0">
-          <span className="block truncate text-[14px] font-medium">
+          <span className="block truncate text-[13.5px] font-semibold tracking-tight">
             {p.named ? p.name : p.sector}
           </span>
-          <span className="mt-0.5 block truncate font-mono text-[11.5px] text-muted">
-            {p.named ? p.sector : p.market}
-          </span>
+          <span className="mt-0.5 block truncate text-[12.5px] text-muted">{p.named ? p.sector : p.market}</span>
         </span>
         {p.named && (
           <ArrowUpRight
@@ -130,21 +113,21 @@ export function SiteWall() {
 
   return (
     <div>
-      <p className="eyebrow">The wall</p>
-      <h2 className="mt-4 max-w-[22ch] font-display text-[clamp(1.9rem,4vw,3rem)] leading-[1.05] tracking-tight text-balance">
-        Thirty-plus local business sites we&rsquo;ve done SEO on.
-      </h2>
-      <p className="mt-5 max-w-[58ch] text-muted">
-        {unnamed} of the {projects.length} below show without a name, most because they went out
-        under an agency&rsquo;s brand. You can see the work, not the client. If you hire us
-        white-label, your clients get the same treatment.
-      </p>
+      <div className="stage-head">
+        <p className="eyebrow">The wall</p>
+        <h2 className="t-h2 mx-auto mt-5 max-w-[22ch]">Thirty-plus local business sites we&rsquo;ve done SEO on.</h2>
+        <p className="t-lead mt-5 max-w-[58ch]">
+          {unnamed} of the {projects.length} below show without a name, most because they went out
+          under an agency&rsquo;s brand. You can see the work, not the client.
+        </p>
+      </div>
 
-      <div className="mt-12 space-y-4">
+      {/* Vertical padding leaves room for the tilt and the hover lift. */}
+      <div className="mt-12 space-y-2">
         {[rowA, rowB].map((row, i) => (
-          <div key={i} className="marquee-mask overflow-hidden">
+          <div key={i} className="marquee-mask overflow-hidden py-4">
             <div
-              className={`flex w-max gap-4 ${
+              className={`flex w-max gap-5 ${
                 i === 0 ? "wall-drift" : "wall-drift wall-drift-rev"
               }`}
             >
@@ -156,7 +139,7 @@ export function SiteWall() {
         ))}
       </div>
 
-      <p className="mt-6 font-mono text-[12px] uppercase tracking-[0.11em] text-muted">
+      <p className="mt-8 text-center text-[13.5px] text-muted">
         {projects.length} sites &middot; {named} we can put a name to &middot; hover to wake them
       </p>
     </div>

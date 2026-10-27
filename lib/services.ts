@@ -26,18 +26,6 @@ export const servicePages: ServicePage[] = [
     desc: "Get named by ChatGPT, Claude, Perplexity and Google's AI Overviews, measured every month.",
     cta: "See AI search",
   },
-  {
-    href: "/saas-seo",
-    title: "SaaS SEO and AI search",
-    desc: "Found on Google and cited by ChatGPT, with every change sent as a pull request.",
-    cta: "See the startup plan",
-  },
-  {
-    href: "/pricing#agencies",
-    title: "White-label for agencies",
-    desc: "Technical SEO and tracking under your brand, from $850 a site.",
-    cta: "See agency rates",
-  },
 ];
 
 /**
@@ -59,6 +47,5 @@ export function serviceForNote(slug: string, topic: TopicKey): ServicePage | nul
   if (REMODEL_NOTES.has(slug)) return by("/home-remodeling-seo");
   if (topic === "roofing") return by("/roofing-seo");
   if (topic === "ai") return by("/ai-search-optimization");
-  if (topic === "startups") return by("/saas-seo");
   return null;
 }

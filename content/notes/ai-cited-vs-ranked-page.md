@@ -377,7 +377,7 @@ In the order we would actually do them.
 
 ## Where this went next
 
-Three follow-up notes turn the findings into practice for software companies. [AI crawlers and robots.txt](/notes/ai-crawlers-robots-txt) covers the split between crawlers that fetch pages to cite them and crawlers that collect training data, which is the measure this study had to correct. [Comparison pages](/notes/saas-comparison-pages) looks at why head-to-head questions drew on the fewest sources. [Tracking AI search visibility](/notes/track-ai-search-visibility) turns finding 3 into a method a founder can run in a spreadsheet.
+Three follow-up notes turn the findings into practice for any business. [AI crawlers and robots.txt](/notes/ai-crawlers-robots-txt) covers the split between crawlers that fetch pages to cite them and crawlers that collect training data, which is the measure this study had to correct. [What AI assistants cite](/notes/content-ai-cites) looks at why head-to-head questions drew on the fewest sources. [Tracking AI search visibility](/notes/track-ai-search-visibility) turns finding 3 into a method an owner can run in a spreadsheet.
 
 Twenty more guides apply the findings to specific questions: [how to rank in ChatGPT](/notes/how-to-rank-in-chatgpt), [Google AI Overviews](/notes/how-to-appear-in-google-ai-overviews), [Perplexity](/notes/perplexity-seo), [schema](/notes/schema-markup-for-ai-search), [llms.txt](/notes/llms-txt) and the rest, collected on the [AI search optimization](/ai-search-optimization) page.
 

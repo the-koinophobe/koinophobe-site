@@ -53,7 +53,7 @@ So when someone asks "what's the best way to finance a new HVAC system," AI Mode
 
 **5. Keep important content in text.** Google says so directly for AI features. Tables in HTML, not images. Prices on the page, not in a PDF.
 
-We use the same structure for [comparison pages](/notes/saas-comparison-pages) and for local service sites. It's ordinary good SEO, aimed at the long list of questions instead of one keyword.
+We use the same structure for [comparison pages](/notes/content-ai-cites) and for local service sites. It's ordinary good SEO, aimed at the long list of questions instead of one keyword.
 
 ## What we wouldn't do
 

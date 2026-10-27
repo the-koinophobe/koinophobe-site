@@ -6,7 +6,7 @@ date: 2026-10-07
 draft: false
 topic: ai
 seo_title: "How to track AI search visibility in ChatGPT and Claude"
-excerpt: "Asked the same question three times, ChatGPT kept 4.5% of its cited pages. One screenshot tells you almost nothing. A tracking setup a founder can run in a spreadsheet, using the method from our citation study."
+excerpt: "Asked the same question three times, ChatGPT kept 4.5% of its cited pages. One screenshot tells you almost nothing. A tracking setup an owner can run in a spreadsheet, using the method from our citation study."
 cover: /notes/illustrations/track-ai-search-visibility.webp
 cover_alt: "Field survey plate: four rows of three runs each, dots that hold their position in one row and scatter in another"
 faq:
@@ -18,7 +18,7 @@ faq:
     a: "At least three times for the questions that matter most. One run per question mostly measures the assistant's run-to-run variation, especially on ChatGPT."
 ---
 
-A founder screenshots ChatGPT naming their product and posts it as a win. The next morning the same question names three competitors and not them. Both screenshots are real, and neither tells you much.
+An owner screenshots ChatGPT naming their business and posts it as a win. The next morning the same question names three competitors and not them. Both screenshots are real, and neither tells you much.
 
 In our [citation study](/notes/ai-cited-vs-ranked-page) We measured how much the sources behind an answer move when you ask the same question again. The short answer is: a lot, and by very different amounts depending on the assistant. That changes how you have to track AI search visibility if you want numbers you can act on.
 
@@ -55,7 +55,7 @@ That gives you two different numbers worth tracking:
 
 Report both. If mentions rise while citations stay flat, assistants know who you are and are quoting someone else's page about you, often a roundup or a forum thread. That points you at what to write next.
 
-## A setup a founder can run
+## A setup an owner can run
 
 You need a spreadsheet and about two hours a month.
 
@@ -89,6 +89,6 @@ Our study set its threshold before we looked at any data: a difference only coun
 
 ## Next steps
 
-Before tracking, make sure the assistants can read you: the [AI crawler guide](/notes/ai-crawlers-robots-txt) covers which crawlers matter, and the [free crawler check](/saas-seo#check) tests your site in ten seconds. Then give them something worth citing; head-to-head questions draw on the smallest pool of sources, which is why we start with [comparison pages](/notes/saas-comparison-pages).
+Before tracking, make sure the assistants can read you: the [AI crawler guide](/notes/ai-crawlers-robots-txt) covers which crawlers matter, and the [free crawler check](/ai-search-optimization#check) tests your site in ten seconds. Then give them something worth citing; head-to-head questions draw on the smallest pool of sources, which is why we start with [comparison pages](/notes/content-ai-cites).
 
 This tracking setup, run with three runs per question across four assistants, is the measurement half of our [AI search optimization](/ai-search-optimization) service. To see the clicks as well, [track ChatGPT traffic in GA4](/notes/track-chatgpt-traffic-ga4). Each month ends with the citation report, so you can see what the work did.

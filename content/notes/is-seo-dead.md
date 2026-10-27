@@ -58,7 +58,7 @@ So the foundation AI answers stand on is the same one SEO builds: crawlable page
 ## Where to put the money
 
 1. **SEO fundamentals first**, if they're not done: crawlable site, fast pages, service and location pages, a complete Business Profile, tracked calls and forms.
-2. **Add the AI pieces:** check AI crawler access (the [free check](/saas-seo#check) takes ten seconds), and track your key questions across assistants monthly with [repeated runs](/notes/track-ai-search-visibility).
+2. **Add the AI pieces:** check AI crawler access (the [free check](/ai-search-optimization#check) takes ten seconds), and track your key questions across assistants monthly with [repeated runs](/notes/track-ai-search-visibility).
 3. **Shift content toward questions with stakes:** costs, comparisons, "is it worth it," what to expect. Those pages win clicks on Google and citations in AI answers. [Content that AI cites](/notes/content-ai-cites).
 4. **Get talked about elsewhere.** Reviews, listings, press, roundups. Recognition is what assistants draw on. [Brand mentions](/notes/brand-mentions-ai-search).
 

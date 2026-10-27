@@ -1,5 +1,5 @@
 /**
- * The logic behind the AI crawler check on /saas-seo. Pure functions only, so
+ * The logic behind the AI crawler check on /ai-search-optimization. Pure functions only, so
  * it can be tested without the network: input cleaning, the private-address
  * guard, robots.txt parsing per RFC 9309, and a raw-HTML read of a homepage.
  * The route in app/api/ai-check does the fetching.

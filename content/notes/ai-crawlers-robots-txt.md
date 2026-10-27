@@ -6,7 +6,7 @@ date: 2026-10-05
 draft: false
 topic: ai
 seo_title: "AI crawlers and robots.txt: how to check access"
-excerpt: "Before ChatGPT, Claude or Perplexity can cite a page, a crawler has to fetch it. Which AI crawlers matter, the three ways startup sites block them by accident, and what we'd put in robots.txt."
+excerpt: "Before ChatGPT, Claude or Perplexity can cite a page, a crawler has to fetch it. Which AI crawlers matter, the three ways business sites block them by accident, and what we'd put in robots.txt."
 cover: /notes/illustrations/ai-crawlers-robots-txt.webp
 cover_alt: "Field survey plate: ten crawler lanes run toward a wall marked robots.txt, three of them stopped at a gate"
 faq:
@@ -18,9 +18,9 @@ faq:
     a: "Yes. A firewall or CDN rule can refuse the request before robots.txt matters. Cloudflare switched to blocking AI crawlers by default on July 1, 2025, so a clean robots.txt is no proof that they get in."
 ---
 
-Before an assistant can cite a page, something has to fetch it. On most startup sites we check, nobody has decided which AI crawlers get in. A template, a plugin or a CDN default decided for them.
+Before an assistant can cite a page, something has to fetch it. On most business sites we check, nobody has decided which AI crawlers get in. A template, a plugin or a CDN default decided for them.
 
-This note covers which crawlers matter, the three ways sites block them without meaning to, and what we'd put in robots.txt. If you want the answer for your own site first, the [free crawler check](/saas-seo#check) reads your robots.txt for all of them and looks at your homepage the way a crawler that doesn't run JavaScript would.
+This note covers which crawlers matter, the three ways sites block them without meaning to, and what we'd put in robots.txt. If you want the answer for your own site first, the [free crawler check](/ai-search-optimization#check) reads your robots.txt for all of them and looks at your homepage the way a crawler that doesn't run JavaScript would.
 
 ## Two kinds of AI crawler
 
@@ -45,7 +45,7 @@ Three details change what you should do:
 
 Copilot answers from Bing, so Bingbot belongs on the list too, even though it isn't an "AI crawler" by name.
 
-## Three ways startups block them by accident
+## Three ways sites block them by accident
 
 ### 1. A robots.txt nobody has read since launch
 
@@ -73,7 +73,7 @@ To check: open your homepage, view source (Ctrl+U), and search for a sentence yo
 
 ## What we'd put in robots.txt
 
-For most software companies we'd let in everything that fetches pages for answers, then decide training on its own merits. Something like this:
+For most home service businesses we'd let in everything that fetches pages for answers, then decide training on its own merits. Something like this:
 
 ```
 # Fetch pages for answers and search results
@@ -108,6 +108,6 @@ Two things to remember after you edit it. Rules apply per host, so `docs.yourapp
 
 ## Next steps
 
-Run the [crawler check](/saas-seo#check) on your main domain and your docs subdomain. If everything that fetches pages for answers is allowed and your pages have text before JavaScript runs, the next question is whether you have pages worth citing. We wrote up how we build [comparison pages that assistants cite](/notes/saas-comparison-pages), and how to [track AI search visibility](/notes/track-ai-search-visibility) without being fooled by one screenshot.
+Run the [crawler check](/ai-search-optimization#check) on your main domain and your docs subdomain. If everything that fetches pages for answers is allowed and your pages have text before JavaScript runs, the next question is whether you have pages worth citing. We wrote up how we build [comparison pages that assistants cite](/notes/content-ai-cites), and how to [track AI search visibility](/notes/track-ai-search-visibility) without being fooled by one screenshot.
 
-This is also the first week of our [AI search optimization](/ai-search-optimization) service (for software companies, [the SaaS version](/saas-seo)): crawler access and rendering get fixed before any writing starts, because nothing else works until they do.
+This is also the first week of our [AI search optimization](/ai-search-optimization) service: crawler access and rendering get fixed before any writing starts, because nothing else works until they do.

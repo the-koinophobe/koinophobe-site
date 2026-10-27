@@ -46,7 +46,7 @@ Walk away: a report with no caveats. AI answers are too unstable for that to be 
 Want: AI crawler access (robots.txt and CDN rules for OAI-SearchBot, Claude-SearchBot, PerplexityBot) and answer tracking. Everything else is SEO work, which is fine, but you shouldn't pay twice for it. [GEO vs SEO vs AEO](/notes/geo-vs-seo-vs-aeo).
 
 **5. "What's the first thing you'll check?"**
-Want: crawler access and whether your text is readable without JavaScript. It's the step that works by definition. You can [check it yourself](/saas-seo#check) before the call.
+Want: crawler access and whether your text is readable without JavaScript. It's the step that works by definition. You can [check it yourself](/ai-search-optimization#check) before the call.
 
 **6. "Who ships the technical fixes?"**
 Want: they do, or they work directly with your developer, with every change visible.
@@ -84,7 +84,7 @@ Since we're asking you to hold others to this, here are ours:
 3. Every report states sample size and what the numbers can't show.
 4. Crawler access and answer tracking, on top of the SEO.
 5. Crawler access and rendering, in week one.
-6. We do, as pull requests or in your CMS.
+6. We do, in your site or CMS.
 7. 12 in-depth pages a month, comparison and alternatives pages included.
 8. You review anything that makes claims about you.
 9. No.
@@ -96,4 +96,4 @@ The plan is on our [AI search optimization](/ai-search-optimization) page, price
 
 ## Next steps
 
-Copy these twelve questions into your notes before your next agency call. Run the [free AI crawler check](/saas-seo#check) first so you know the answer to question five before they do.
+Copy these twelve questions into your notes before your next agency call. Run the [free AI crawler check](/ai-search-optimization#check) first so you know the answer to question five before they do.

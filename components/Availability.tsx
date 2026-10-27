@@ -14,7 +14,7 @@ const CALL = [
 /**
  * The closing call to action on every page: one dark band, one job.
  */
-/** `call` swaps the call bullets for a page with a different buyer (e.g. /saas-seo). */
+/** `call` swaps the call bullets for a page with a different buyer (e.g. /ai-search-optimization). */
 export function Availability({ call = CALL }: { call?: string[] } = {}) {
   return (
     <section id="contact" className="px-2.5 pt-2.5 sm:px-4 sm:pt-4">

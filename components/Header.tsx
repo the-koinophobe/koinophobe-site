@@ -66,9 +66,7 @@ const SERVICES = [
   { href: "/pricing#audit", title: "Site Audit, $750", desc: "A ranked list of what's costing you calls." },
   { href: "/pricing#sprint", title: "Setup Sprint, $1,800", desc: "Tracking, speed, schema and fixes, done once." },
   { href: "/pricing#monthly", title: "Monthly SEO, from $600", desc: "New pages, Business Profile and a monthly report." },
-  { href: "/pricing#agencies", title: "White-label for agencies", desc: "Technical SEO under your brand, from $850 a site." },
   { href: "/ai-search-optimization", title: "AI search optimization", desc: "Get named by ChatGPT, Claude and Google's AI. $1,000 a month." },
-  { href: "/saas-seo", title: "SEO + AI search for startups", desc: "Found on Google, cited by ChatGPT. $1,000 a month." },
 ];
 
 const NOTES = [
@@ -78,7 +76,6 @@ const NOTES = [
   { href: "/notes/topic/trades", title: "By trade", desc: "Plumbing, HVAC, lawn, pest and more" },
   { href: "/notes/topic/ai", title: "AI search", desc: "ChatGPT, Claude, AI Overviews" },
   { href: "/notes/topic/technical", title: "Technical SEO", desc: "Indexing, sitemaps, canonicals" },
-  { href: "/notes/topic/startups", title: "Startups", desc: "First pages, Next.js, backlinks" },
 ];
 
 const MENUS = ["work", "services", "notes"] as const;

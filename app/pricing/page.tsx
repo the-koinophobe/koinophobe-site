@@ -3,12 +3,11 @@ import Link from "next/link";
 import { ArrowRight, Ban, CalendarClock, Check, KeyRound, Landmark, ShieldCheck, Video } from "lucide-react";
 import { Availability } from "@/components/Availability";
 import { RelatedNotes } from "@/components/RelatedNotes";
-import { getNote } from "@/lib/notes";
 import { BookCta, BookNote, EmailCta } from "@/components/Cta";
 import { MobileCta } from "@/components/MobileCta";
 import { Reveal } from "@/components/Reveal";
 import { Stagger } from "@/components/Stagger";
-import { agency, guarantee, monthly, oneTime, startup, type Plan } from "@/lib/pricing";
+import { guarantee, monthly, oneTime, startup, type Plan } from "@/lib/pricing";
 import { site } from "@/lib/site";
 import { FaqList, FaqSchema } from "@/components/Faq";
 
@@ -17,7 +16,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "SEO pricing for home service businesses",
   description:
-    "SEO agency prices: a $300 tracking fix, a $750 site audit, monthly plans from $600, AI search at $1,000 a month, and agency rates from $850 a site.",
+    "SEO agency prices: a $300 tracking fix, a $750 site audit, monthly plans from $600, and Google and AI search at $1,000 a month.",
   alternates: { canonical: "/pricing" },
 };
 
@@ -35,7 +34,7 @@ const TERMS = [
   {
     icon: <CalendarClock size={19} aria-hidden />,
     t: "3 months minimum on home service plans.",
-    b: "SEO takes that long to show up in Google. After that it's month to month, with 30 days' notice to cancel. The software startup plan has no minimum: either side can stop with 30 days' notice.",
+    b: "SEO takes that long to show up in Google. After that it's month to month, with 30 days' notice to cancel. The Search + AI plan has no minimum: either side can stop with 30 days' notice.",
   },
   {
     icon: <Landmark size={19} aria-hidden />,
@@ -45,7 +44,7 @@ const TERMS = [
   {
     icon: <Ban size={19} aria-hidden />,
     t: "Not included.",
-    b: "Ad spend and ad management. Long-form articles are only in the software startup plan. If you need something else, we'll say so up front and point you to someone.",
+    b: "Ad spend and ad management. Long-form articles are only in the Search + AI plan. If you need something else, we'll say so up front and point you to someone.",
   },
 ];
 
@@ -68,7 +67,7 @@ const FAQ = [
   },
   {
     q: "Do you only work with home service businesses?",
-    a: "Most of our work is roofers, pool deck, lawn and shutter companies, but we also work with clinics, shops and auto businesses at the same prices. Any business that wants to show up in AI answers can use the Search + AI plan, $1,000 a month.",
+    a: "Yes. Roofers, remodelers, pool deck, lawn, shutter, plumbing, HVAC and other home service companies. The Search + AI plan, $1,000 a month, is for home service businesses that want to show up in AI answers as well as on Google.",
   },
 ];
 
@@ -134,18 +133,6 @@ const pricingLd = {
     ...oneTime.map(offer),
     ...monthly.map(offer),
     offer(startup),
-    ...agency.map((a) => ({
-      "@type": "Offer",
-      name: `Agency white-label: ${a.name}`,
-      description: a.body,
-      priceCurrency: "USD",
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        priceCurrency: "USD",
-        minPrice: a.amount,
-      },
-      seller: { "@id": "https://koinophobe.com/#organization" },
-    })),
   ],
 };
 
@@ -228,10 +215,10 @@ export default function PricingPage() {
         </p>
       </section>
 
-      <section id="startups" className="container-pad scroll-mt-28 pt-24 sm:pt-32">
+      <section id="ai-search" className="container-pad scroll-mt-28 pt-24 sm:pt-32">
         <Reveal className="stage-head">
           <h2 className="t-group">AI search optimization</h2>
-          <p className="t-lead mt-3">For any business that wants to be named by ChatGPT, Claude, Perplexity and Google&rsquo;s AI. Software startups get it as pull requests.</p>
+          <p className="t-lead mt-3">For home service businesses that want to be named by ChatGPT, Claude, Perplexity and Google&rsquo;s AI.</p>
           <p className="mt-4 inline-flex rounded-full border border-line bg-card px-3.5 py-1.5 text-[14px] font-medium">No contract, 30 days&rsquo; notice to stop</p>
         </Reveal>
         <div id={startup.key} data-anim="rise" className="card-dark mt-12 grid scroll-mt-28 gap-8 p-7 sm:p-10 lg:grid-cols-[0.9fr_1.4fr] lg:gap-12">
@@ -283,41 +270,11 @@ export default function PricingPage() {
             tracking AI search visibility
           </Link>
           . Free first step:{" "}
-          <Link href="/saas-seo#check" className="text-ink underline underline-offset-4">
+          <Link href="/ai-search-optimization#check" className="text-ink underline underline-offset-4">
             the AI crawler check
           </Link>
           .
         </p>
-      </section>
-
-      <section id="agencies" className="container-pad scroll-mt-28 pt-24 sm:pt-32">
-        <Reveal className="stage-head">
-          <h2 className="t-group">White-label for agencies</h2>
-          <p className="t-lead mt-3">Technical SEO under your brand. You keep the client relationship.</p>
-        </Reveal>
-        <div data-anim="rise" className="card mx-auto mt-12 max-w-[60rem] px-6 sm:px-8">
-          {agency.map((a) => (
-            <div
-              key={a.name}
-              className="grid gap-2 border-b border-line py-6 last:border-0 sm:grid-cols-[14ch_22ch_1fr] sm:gap-6"
-            >
-              <span className="font-medium">{a.name}</span>
-              <span className="tnum font-display text-[1.3rem] font-extrabold leading-snug tracking-tight">
-                {a.price}
-              </span>
-              <span className="text-[15px] text-muted">{a.body}</span>
-            </div>
-          ))}
-        </div>
-        {getNote("white-label-technical-seo-for-agencies") ? (
-          <p className="mt-6 text-center text-[15px] text-muted">
-            How white-label works day to day:{" "}
-            <Link href="/notes/white-label-technical-seo-for-agencies" className="text-ink underline underline-offset-4">
-              white-label technical SEO for agencies
-            </Link>
-            .
-          </p>
-        ) : null}
       </section>
 
       <section className="container-pad pb-8 pt-28 sm:pt-36">

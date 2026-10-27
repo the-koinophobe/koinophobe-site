@@ -16,7 +16,7 @@ import { BOTS, THIN_TEXT, cleanHost, evaluate, isPrivateAddress, parseRobots, re
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const UA = "Mozilla/5.0 (compatible; KoinophobeAICheck/1.0; +https://koinophobe.com/saas-seo)";
+const UA = "Mozilla/5.0 (compatible; KoinophobeAICheck/1.0; +https://koinophobe.com/ai-search-optimization)";
 const TIMEOUT_MS = 7000;
 const MAX_BYTES = 600_000;
 const MAX_HOPS = 3;

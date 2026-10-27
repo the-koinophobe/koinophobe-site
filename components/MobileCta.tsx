@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { CalendarCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { site } from "@/lib/site";
 
 /**
@@ -26,7 +26,7 @@ export function MobileCta() {
 
   return (
     <div
-      className={`fixed inset-x-3 bottom-3 z-40 rounded-full border border-line bg-card/90 p-1.5 shadow-[var(--shadow-lg)] backdrop-blur-md transition-transform duration-500 ease-[cubic-bezier(0.34,1.4,0.64,1)] md:hidden ${
+      className={`fixed inset-x-3 bottom-3 z-40 rounded-[20px] border border-line bg-card/90 p-1.5 shadow-[var(--shadow-lg)] backdrop-blur-md transition-transform duration-500 ease-[cubic-bezier(0.34,1.4,0.64,1)] md:hidden ${
         show ? "translate-y-0" : "translate-y-[calc(100%+1.5rem)]"
       } motion-reduce:transition-none`}
       aria-hidden={!show}
@@ -40,8 +40,10 @@ export function MobileCta() {
         data-from="mobile_bar"
         className="btn btn-md btn-primary w-full"
       >
-        <CalendarCheck size={17} aria-hidden />
         Book a free call
+        <span className="btn-chip" aria-hidden>
+          <ArrowRight size={14} strokeWidth={2.5} />
+        </span>
       </a>
     </div>
   );

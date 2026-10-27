@@ -39,7 +39,7 @@ Here's the shape, and a template you can use for any business.
 
 ## A template that matches
 
-This is the structure we use for client pages meant to be cited. It works for a SaaS comparison, a dentist's explainer or a contractor's cost guide.
+This is the structure we use for client pages meant to be cited. It works for a roofer's cost guide, a remodeler's comparison or a plumber's explainer.
 
 **1. A title that is the question, or answers it.** "How much does a metal roof cost in Florida in 2026?" or "Invoice software for agencies: five options compared."
 
@@ -64,7 +64,7 @@ Start with the questions where assistants already name competitors and not you. 
 Good first pages for most businesses:
 
 - **Cost pages.** "How much does X cost" is asked constantly and rarely answered honestly.
-- **Comparisons.** You versus the main alternative, or two options customers weigh. Head-to-head questions drew on the fewest sources in our study, so each cited page gets a bigger share. [Comparison pages](/notes/saas-comparison-pages).
+- **Comparisons.** You versus the main alternative, or two options customers weigh. Head-to-head questions drew on the fewest sources in our study, so each cited page gets a bigger share. [Comparison pages](/notes/content-ai-cites).
 - **"Is it worth it" pages.** Decisions with trade-offs, answered plainly.
 
 ## Mistakes we see
@@ -76,6 +76,6 @@ Good first pages for most businesses:
 
 ## Next steps
 
-Pick one question your customers ask before buying, and rewrite or write that page using the template above this week. Then check it can be read: run the [free AI crawler check](/saas-seo#check).
+Pick one question your customers ask before buying, and rewrite or write that page using the template above this week. Then check it can be read: run the [free AI crawler check](/ai-search-optimization#check).
 
 If you want a steady supply, our [AI search optimization](/ai-search-optimization) service writes 12 in-depth pages a month in this shape, plus the fixes and tracking. $1,000 a month, no contract.

@@ -46,7 +46,7 @@ const HOME_FAQ: FaqItem[] = [
   },
   {
     q: "What kinds of businesses do you work with?",
-    a: "Mostly home service companies: roofers, pool deck, lawn and hurricane shutter businesses. We also work with clinics, shops and auto businesses, at the same prices.",
+    a: "Mostly home service companies: roofers, pool deck, lawn and hurricane shutter businesses.",
   },
   {
     q: "How much does it cost?",

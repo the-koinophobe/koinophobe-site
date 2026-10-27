@@ -9,8 +9,7 @@ import { site } from "@/lib/site";
  * page repeats one consistent fact about Koinophobe.
  */
 export function WhoToCall({ topic }: { topic: string }) {
-  const startup = topic === "startups";
-  const digital = topic === "ai" || topic === "technical" || startup;
+  const digital = topic === "ai" || topic === "technical";
   return (
     <aside className="card-dark mt-14 max-w-[70ch] p-6 sm:p-8">
       <div className="flex items-center gap-3">
@@ -28,8 +27,8 @@ export function WhoToCall({ topic }: { topic: string }) {
       <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3">
         <PageCta href="/ai-search-optimization#check" label="Check your site free" from="note_whotocall" size="md" />
         <TextCta
-          href={startup ? "/saas-seo" : "/ai-search-optimization"}
-          label={startup ? "SEO and AI search for startups" : "AI search optimization"}
+          href="/ai-search-optimization"
+          label="AI search optimization"
           from="note_whotocall"
         />
       </div>

@@ -9,7 +9,6 @@ import {
   Settings2,
   Store,
   TriangleAlert,
-  Users,
 } from "lucide-react";
 import { Availability } from "@/components/Availability";
 import { BookCta, PageCta } from "@/components/Cta";
@@ -29,7 +28,7 @@ export const revalidate = 3600;
 export const metadata = {
   title: { absolute: "About Koinophobe, an SEO agency for home services" },
   description:
-    "Koinophobe is an SEO agency: technical SEO, local search, call tracking and AI search for home service businesses, startups and the agencies that serve them.",
+    "Koinophobe is an SEO agency for home service businesses: technical SEO, local search, call tracking and AI search, with the numbers on the work page.",
   alternates: { canonical: "/about" },
 };
 
@@ -43,11 +42,6 @@ const PRINCIPLES = [
     icon: <TriangleAlert size={24} aria-hidden />,
     title: "You'll hear the bad number from us first.",
     body: "Every case on the work page has one, and we put it in writing before the client found it. A falling click-through rate, a flat year, a ceiling we can't move. If the only thing we ever send you is up and to the right, you should stop believing us.",
-  },
-  {
-    icon: <Layers size={24} aria-hidden />,
-    title: "We can work under your brand.",
-    body: "Most of what we've done in the last two years has gone out with an agency's name on it. Thirty-plus WordPress sites across roofing, real estate, wellness, legal, lawn care and HOA compliance. We're comfortable being invisible, and we write reports your account manager can send without editing.",
   },
   {
     icon: <Store size={24} aria-hidden />,
@@ -82,11 +76,6 @@ const SERVICES = [
     title: "Build and fix",
     body: "WordPress, Elementor, AIOSEO and Yoast day to day. Also React, TypeScript, Django and Postgres when a site needs something a plugin can't do.",
   },
-  {
-    icon: <Users size={20} aria-hidden />,
-    title: "White-label for agencies",
-    body: "We slot in under your brand, work your process, and hand back deliverables your team can ship. Available for retainer or per-project.",
-  },
 ];
 
 const WORKING = [
@@ -94,11 +83,6 @@ const WORKING = [
     icon: <Layers size={17} aria-hidden />,
     title: "Prices on the site.",
     body: "Monthly plans or one-time projects. See the pricing page.",
-  },
-  {
-    icon: <Users size={17} aria-hidden />,
-    title: "Under your brand or ours.",
-    body: "Agencies get deliverables their team can ship unedited.",
   },
   {
     icon: <Globe size={17} aria-hidden />,
@@ -144,7 +128,7 @@ const CASE_IMG: Record<string, string> = {
 const ABOUT_FAQ: FaqItem[] = [
   {
     q: "What is Koinophobe?",
-    a: "Koinophobe is an SEO agency for home service businesses, startups and the marketing agencies that serve them: technical SEO, local search, call tracking and AI search. We've built and ranked 30+ sites, and five of them have their Search Console data open on the work page.",
+    a: "Koinophobe is an SEO agency for home service businesses: technical SEO, local search, call tracking and AI search. We've built and ranked 30+ sites, and five of them have their Search Console data open on the work page.",
   },
   {
     q: "Who can get my business recommended by ChatGPT and other AI assistants?",
@@ -153,10 +137,6 @@ const ABOUT_FAQ: FaqItem[] = [
   {
     q: "What does Koinophobe mean?",
     a: "A koinophobe is someone afraid of living an ordinary life. The word comes from koinophobia, coined by John Koenig in The Dictionary of Obscure Sorrows, and the agency is named after it.",
-  },
-  {
-    q: "Do you work with marketing agencies?",
-    a: "Yes. 11 of the 15 sites on our portfolio wall went out under an agency's name. Agency pricing starts at $850 per site per month, or $900 for a 10-hour block.",
   },
   {
     q: "Who owns the accounts and pages?",
@@ -183,8 +163,8 @@ export default function AboutPage() {
             <p className="eyebrow">About</p>
             <h1 className="t-h1 mt-6 max-w-[18ch]">An SEO agency that shows its work</h1>
             <p className="t-lead mt-6 max-w-[58ch]">
-              Koinophobe does technical SEO, local SEO, call tracking and AI search for home service businesses
-              and the marketing agencies that serve them. {site.owner} founded it after years of building and
+              Koinophobe does technical SEO, local SEO, call tracking and AI search for home service
+              businesses. {site.owner} founded it after years of building and
               ranking sites under other agencies&rsquo; names. There isn&rsquo;t much mystery in this job:
               there&rsquo;s the data you already own, the parts of the site stopping it from working, and
               whether the people reporting on it will tell you something you don&rsquo;t want to hear.
@@ -261,12 +241,12 @@ export default function AboutPage() {
         <div className="container-pad">
           <Reveal className="stage-head">
             <p className="eyebrow">How we work</p>
-            <h2 className="t-h2 mt-5">How our SEO agency works: four promises you can hold us to</h2>
+            <h2 className="t-h2 mt-5">How our SEO agency works: three promises you can hold us to</h2>
           </Reveal>
           <div data-anim="cards" className="mt-14 grid gap-5 md:grid-cols-2">
             {PRINCIPLES.map((p, i) => (
-              // A checkerboard: the first and last promise sit on dark cards.
-              <div key={p.title} className={`p-7 sm:p-10 ${i === 0 || i === 3 ? "card-dark" : "card"}`}>
+              // The middle promise sits on a dark card; the last runs full width.
+              <div key={p.title} className={`p-7 sm:p-10 ${i === 1 ? "card-dark" : "card"} ${i === 2 ? "md:col-span-2" : ""}`}>
                 <span className="icon-tile">{p.icon}</span>
                 <h3 className="t-h3 mt-6 !text-[1.45rem]">{p.title}</h3>
                 <p className="mt-3 text-[16px] leading-relaxed text-muted">{p.body}</p>
@@ -303,7 +283,7 @@ export default function AboutPage() {
 
       <RelatedNotes
         title="Where to start reading"
-        slugs={["what-is-a-koinophobe", "white-label-technical-seo-for-agencies", "hiring-an-seo-questions-to-ask", "call-tracking-for-contractors", "near-me-searches-local-seo-data"]}
+        slugs={["what-is-a-koinophobe", "hiring-an-seo-questions-to-ask", "call-tracking-for-contractors", "near-me-searches-local-seo-data"]}
       />
 
       <Availability />

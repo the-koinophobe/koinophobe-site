@@ -60,7 +60,7 @@ When it's sold as the main deliverable, or priced as if it moves rankings. If an
 
 ## What to do instead
 
-1. Run the [free AI crawler check](/saas-seo#check) to confirm OAI-SearchBot, Claude-SearchBot and PerplexityBot can get in.
+1. Run the [free AI crawler check](/ai-search-optimization#check) to confirm OAI-SearchBot, Claude-SearchBot and PerplexityBot can get in.
 2. Make sure your important text is in the page's raw HTML.
 3. Publish pages that answer the questions your customers ask, in the shape assistants cite. In [our September 2026 study](/notes/ai-cited-vs-ranked-page), 41.6% of cited pages carried Article markup, against none of the pages that ranked on Google and were never cited.
 4. Measure whether it's working with [repeated runs](/notes/track-ai-search-visibility), not screenshots.

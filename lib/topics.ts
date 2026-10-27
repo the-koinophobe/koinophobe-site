@@ -3,7 +3,7 @@
  * frontmatter (the CMS has a dropdown for it). Notes without one fall back to
  * the map below, and then to "strategy".
  */
-export type TopicKey = "roofing" | "local" | "trades" | "tracking" | "technical" | "ai" | "startups" | "strategy";
+export type TopicKey = "roofing" | "local" | "trades" | "tracking" | "technical" | "ai" | "strategy";
 
 export const topics: { key: TopicKey; label: string; title: string; blurb: string }[] = [
   {
@@ -39,14 +39,8 @@ export const topics: { key: TopicKey; label: string; title: string; blurb: strin
   {
     key: "ai",
     label: "AI search",
-    title: "AI search and SaaS SEO",
-    blurb: "How ChatGPT, Claude, Perplexity and AI Overviews pick their sources, measured, and what any business can do to get named.",
-  },
-  {
-    key: "startups",
-    label: "Startups",
-    title: "SEO for startup founders",
-    blurb: "When to start, the pages to build first, Next.js and React SEO, domain changes and the first backlinks.",
+    title: "AI search for home services",
+    blurb: "How ChatGPT, Claude, Perplexity and AI Overviews pick their sources, measured, and what a home service business can do to get named.",
   },
   {
     key: "strategy",
@@ -85,7 +79,6 @@ export const TOPIC_BY_SLUG: Record<string, TopicKey> = {
   "hvac-seo": "trades",
   "pool-deck-repair-seo": "trades",
   "lawn-care-seo": "trades",
-  "mobile-detailing-seo": "trades",
   "pest-control-seo": "trades",
   "concrete-driveway-paving-seo": "trades",
   "electrician-seo": "trades",
@@ -114,14 +107,12 @@ export const TOPIC_BY_SLUG: Record<string, TopicKey> = {
   "ai-cited-vs-ranked-page": "ai",
   "ai-search-local-business": "ai",
   "ai-crawlers-robots-txt": "ai",
-  "saas-comparison-pages": "ai",
   "track-ai-search-visibility": "ai",
   // strategy and case studies
   "hiring-an-seo-questions-to-ask": "strategy",
   "how-long-does-seo-take": "strategy",
   "seo-vs-google-ads-contractors": "strategy",
   "shared-leads-vs-your-own-website": "strategy",
-  "white-label-technical-seo-for-agencies": "strategy",
   "what-is-a-koinophobe": "strategy",
   "clinic-158-to-501": "strategy",
   "charles-county-md-game-shop-seo": "strategy",

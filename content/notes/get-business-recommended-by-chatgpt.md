@@ -39,7 +39,7 @@ So the job is to make your business easy to recognize, everywhere a machine migh
 
 ### Make your website readable
 
-- **Don't block the crawlers that fetch pages for answers.** OAI-SearchBot for ChatGPT, Claude-SearchBot for Claude, PerplexityBot for Perplexity, Googlebot for Google's AI Overviews. Your web person can check robots.txt in two minutes, or run the [free crawler check](/saas-seo#check).
+- **Don't block the crawlers that fetch pages for answers.** OAI-SearchBot for ChatGPT, Claude-SearchBot for Claude, PerplexityBot for Perplexity, Googlebot for Google's AI Overviews. Your web person can check robots.txt in two minutes, or run the [free crawler check](/ai-search-optimization#check).
 - **Put your text in the page.** Some website builders load everything with JavaScript. Many AI crawlers don't run it, so they see a blank page. [More on that here](/notes/ai-crawlers-robots-txt).
 - **Say what you do and where.** A plain sentence near the top of your homepage: "Family dentist in Round Rock, Texas, open Saturdays." Assistants quote plain sentences.
 

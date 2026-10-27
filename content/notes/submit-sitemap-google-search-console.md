@@ -38,7 +38,7 @@ Most platforms make one for you. Open these in your browser to check:
 | Squarespace | `yourdomain.com/sitemap.xml` |
 | Next.js App Router | `yourdomain.com/sitemap.xml`, from `app/sitemap.ts` |
 
-If you see a page of URLs or a list of smaller sitemaps, that's it. If you get a 404, check your SEO plugin's settings, or see [our Next.js checklist](/notes/nextjs-seo-checklist) if you're on a custom build.
+If you see a page of URLs or a list of smaller sitemaps, that's it. If you get a 404, check your SEO plugin's settings, or see [our Next.js checklist](/notes/what-is-technical-seo) if you're on a custom build.
 
 ## Submit it to Google
 

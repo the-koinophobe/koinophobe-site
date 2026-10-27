@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 import { track } from "@/lib/analytics";
 
 /*
- * The AI crawler check on /saas-seo. Calls /api/ai-check, which reads the
+ * The AI crawler check on /ai-search-optimization. Calls /api/ai-check, which reads the
  * site's robots.txt and raw homepage, then shows which crawlers get in. The
  * result can be emailed to us in one click, which is the whole funnel: no
  * form backend, nothing stored.

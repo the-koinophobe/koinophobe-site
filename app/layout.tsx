@@ -3,7 +3,6 @@ import { Instrument_Sans, JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/go
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Header } from "@/components/Header";
-import { ChromeGate } from "@/components/ChromeGate";
 import { Footer } from "@/components/Footer";
 import { Analytics } from "@/components/Analytics";
 import { Analytics as VercelAnalytics } from '@vercel/analytics/next';
@@ -45,7 +44,6 @@ export const metadata: Metadata = {
     "conversion tracking",
     "GA4",
     "Google Tag Manager",
-    "white-label SEO",
     "local SEO",
     "search console",
   ],
@@ -175,13 +173,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-screen">
         <ThemeProvider>
-          <ChromeGate>
-            <Header />
-          </ChromeGate>
+          <Header />
           <main>{children}</main>
-          <ChromeGate>
-            <Footer />
-          </ChromeGate>
+          <Footer />
         </ThemeProvider>
         <Anim />
         <CookieConsent />

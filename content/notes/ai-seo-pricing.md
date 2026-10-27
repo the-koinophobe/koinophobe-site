@@ -56,12 +56,12 @@ Our [AI search optimization](/ai-search-optimization) plan is $1,000 a month. Ev
 - Citation tracking: your buyer questions across ChatGPT, Claude, Perplexity and Google AI Overviews, three runs each
 - 12 in-depth articles, comparison and alternatives pages included
 - 50+ fixes to pages you already have: crawler access, rendering, schema, titles, internal links
-- Every change sent as a pull request (or made in your CMS) so you can see exactly what changed
+- Every change made in your site or CMS and listed, so you can see exactly what changed
 - A Friday changelog and a month-end citation report
 
 Plus a free tool when your category has room for one. No contract; if you're not satisfied, tell us and we stop 30 days later. The first month is covered by a [100% money-back guarantee](/pricing#guarantee): ask within 30 days and you get all of it back. Five clients at a time, because nothing is outsourced.
 
-For local home service businesses that mainly need Google Maps and local pages, our [local plans](/pricing) start lower and may fit better. For software startups, the same plan is described on the [SaaS SEO page](/saas-seo).
+For local home service businesses that mainly need Google Maps and local pages, our [local plans](/pricing) start lower and may fit better.
 
 ## How to compare quotes
 
@@ -88,6 +88,6 @@ Fill in the blanks by asking. If a provider won't answer, that's your answer. Mo
 
 ## Next steps
 
-Start free: run the [AI crawler check](/saas-seo#check) on your site. If it's clean, you know the first item on any quote is already done. If it isn't, you know what to ask for first.
+Start free: run the [AI crawler check](/ai-search-optimization#check) on your site. If it's clean, you know the first item on any quote is already done. If it isn't, you know what to ask for first.
 
 Then, if the plan above fits, [book a call](/ai-search-optimization). It's 20 minutes, we'll have looked at your site before we talk, and you'll leave with the first fixes either way.

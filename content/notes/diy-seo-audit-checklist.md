@@ -83,7 +83,7 @@ This is the list we'd give a business owner. For each check, there's what to do 
 
 ## AI crawler access
 
-**Run the free [AI crawler check](/ai-search-optimization#check).** Good: Google's, OpenAI's, Anthropic's and Perplexity's search crawlers are allowed, and your homepage text shows up without JavaScript. Some CDN and firewall settings block AI crawlers without the site owner knowing, and sites built as a single React app often show crawlers an empty page; [JavaScript SEO for React sites](/notes/javascript-seo-react) covers that case. [Can ChatGPT read your site?](/notes/ai-crawlers-robots-txt) explains the fixes.
+**Run the free [AI crawler check](/ai-search-optimization#check).** Good: Google's, OpenAI's, Anthropic's and Perplexity's search crawlers are allowed, and your homepage text shows up without JavaScript. Some CDN and firewall settings block AI crawlers without the site owner knowing, and sites built as a single React app often show crawlers an empty page; [JavaScript SEO for React sites](/notes/what-is-technical-seo) covers that case. [Can ChatGPT read your site?](/notes/ai-crawlers-robots-txt) explains the fixes.
 
 ## Sort what you found
 
