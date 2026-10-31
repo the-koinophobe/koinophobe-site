@@ -48,6 +48,7 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  // Skip build assets and the files crawlers fetch (robots, sitemap, IndexNow key).
-  matcher: ["/((?!_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|.*\\.txt$).*)"],
+  // Skip build assets, the files crawlers fetch (robots, sitemap, IndexNow key),
+  // and email signature images, which load in recipients' inboxes anywhere.
+  matcher: ["/((?!_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|email/|.*\\.txt$).*)"],
 };
