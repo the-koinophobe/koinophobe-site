@@ -72,4 +72,4 @@ Paste a URL into Google's Rich Results Test or the Schema Markup Validator. Chec
 
 Fix the homepage block and the article markup first; they're the two that matter most for how machines understand who you are and what you've written. Then run the [free AI crawler check](/ai-search-optimization#check), because markup on a page no crawler can reach does nothing.
 
-Our [AI search optimization](/ai-search-optimization) service includes schema fixes in the 50+ page fixes each month, shipped as code you can review. $1,000 a month, no contract.
+Our [AI search optimization](/ai-search-optimization) service includes schema fixes in the 20+ page fixes each month, shipped as code you can review. It's a $300-a-month add-on to our SEO plan.

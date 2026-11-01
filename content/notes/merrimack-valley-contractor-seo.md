@@ -75,4 +75,4 @@ Mark form submissions and phone taps as key events in GA4, then check Engagement
 
 For a storefront example in another state, with a product page and near-me numbers, see [Charles County small business SEO](/notes/charles-county-md-small-business-seo).
 
-If you work around Lawrence and want town pages, service areas and tracking set up, the Setup Sprint and Growth plan are on our [pricing page](/pricing). Growth includes 2 new town or service pages a month.
+If you work around Lawrence and want town pages, service areas and tracking set up, our $500-a-month SEO plan is on our [pricing page](/pricing). It includes 2 new town or service pages a month.

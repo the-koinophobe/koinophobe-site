@@ -80,4 +80,4 @@ Some publishers want out. Google's controls are the snippet controls: `nosnippet
 
 Pick your five most valuable searches and check them in incognito today: is there an Overview, and who's cited? Then look at [Google AI Mode](/notes/google-ai-mode-seo), which uses the same fan-out at a bigger scale.
 
-If you want it handled, our [AI search optimization](/ai-search-optimization) service tracks AI Overviews alongside ChatGPT, Claude and Perplexity every month and builds the pages that get cited. $1,000 a month, no contract.
+If you want it handled, our [AI search optimization](/ai-search-optimization) service tracks AI Overviews alongside ChatGPT, Claude and Perplexity every month and builds the pages that get cited. It's a $300-a-month add-on to our SEO plan.

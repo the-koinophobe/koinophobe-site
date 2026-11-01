@@ -4,7 +4,6 @@ import {
   ArrowRight,
   Check,
   FileSearch,
-  Gauge,
   MapPin,
   PhoneCall,
   TrendingUp,
@@ -25,7 +24,7 @@ import { Journey } from "@/components/Journey";
 import { AiChat } from "@/components/AiChat";
 import { CaseSpark } from "@/components/CaseSpark";
 import { aggregate, cases } from "@/lib/gsc";
-import { monthly, oneTime } from "@/lib/pricing";
+import { free, plan, startup } from "@/lib/pricing";
 import { publishedNotes } from "@/lib/notes";
 import { site } from "@/lib/site";
 import { Faq, type FaqItem } from "@/components/Faq";
@@ -33,28 +32,35 @@ import { Faq, type FaqItem } from "@/components/Faq";
 export const revalidate = 3600;
 
 export const metadata = {
-  title: { absolute: "Koinophobe · SEO for home services, measured in calls" },
+  title: { absolute: "Koinophobe · SEO for service businesses, measured in calls" },
   description:
-    "SEO agency for home service businesses: technical SEO, call tracking and AI search. 30+ sites built and ranked, prices on the site, a free 20-minute call.",
+    "SEO for roofers, remodelers and other service businesses: more calls from Google, and every call counted. $500 a month, free audit.",
   alternates: { canonical: "/" },
 };
+
+/*
+ * Copy on this page is written for a busy owner, not another marketer: short
+ * sentences, everyday words, and an outcome in place of every SEO term
+ * (no "schema", "indexing", "GA4" or "impressions" above the fold). First
+ * person throughout: one person does the work, so the page says "I".
+ */
 
 const HOME_FAQ: FaqItem[] = [
   {
     q: "What does Koinophobe do?",
-    a: "Koinophobe is an SEO agency for home service businesses. We fix what stops a site from ranking, set up tracking so you can see the calls and forms Google sends, and build the town and service pages that bring in local searches.",
+    a: "I help service businesses get more calls from Google. I fix what keeps your site from showing up. I build a page for each service and each town you work in. And I count every call and form, so you can see what's working.",
   },
   {
     q: "What kinds of businesses do you work with?",
-    a: "Mostly home service companies: roofers, pool deck, lawn and hurricane shutter businesses.",
+    a: "Local service businesses people find on Google: roofers, remodelers, pool and lawn care, plumbing and HVAC, auto detailing and window tint, clinics and more.",
   },
   {
     q: "How much does it cost?",
-    a: "Every price is on the pricing page, and your first payment on any plan is covered by a 100% money-back guarantee for 30 days. The Site Audit is $750, the Setup Sprint is a one-time $1,800, and monthly plans start at $600.",
+    a: `One plan, ${plan.price} a month. The audit is free. Not happy within 30 days of your first payment? You get all of it back. Want to show up in ChatGPT too? That's $${startup.amount} more a month.`,
   },
   {
     q: "How long does SEO take to work?",
-    a: "Tracking starts counting calls and forms as soon as it's set up. New pages usually take weeks to months to rank, which is why monthly plans have a three-month minimum.",
+    a: "Call tracking works the day I set it up. New pages take a few weeks to a few months to climb on Google. SEO is a slog, not a quick fix. That's why the plan starts with three months.",
   },
 ];
 
@@ -70,50 +76,57 @@ const PILLARS = [
   {
     icon: <Wrench size={20} aria-hidden />,
     art: <FixArt />,
-    title: "Fix what's holding the site back",
-    body: "Indexing problems, slow pages, broken forms, missing schema, messy redirects. The technical work most agencies skip.",
-    points: ["Speed and Core Web Vitals", "Schema for your trade", "Indexing and site structure"],
-    link: { href: "/notes/core-web-vitals-contractor-websites", label: "How we approach speed" },
+    title: "Fix what's holding your site back",
+    body: "Some sites are slow. Some have pages Google can't find. Some have a contact form that quietly stopped working. I find these problems and fix them. Most agencies skip this part; I don't.",
+    points: ["Pages that load fast on a phone", "Every page Google can find", "Contact forms that work"],
+    link: { href: "/notes/core-web-vitals-contractor-websites", label: "How I speed up sites" },
   },
   {
     icon: <MapPin size={20} aria-hidden />,
     art: <TownsArt />,
     title: "Get found in every town you serve",
-    body: "A real page for each service and each town you want work in, a Google Business Profile that's set up right, and reviews within the rules.",
-    points: ["Service and town pages", "Google Business Profile", "Titles that earn the click"],
+    body: "You get a real page for each service and each town you want work in. I set up your Google Business Profile, the listing people see on the map. And I help you get more reviews, the way Google allows.",
+    points: ["A page for each service and town", "Your listing on Google Maps", "Search results people click"],
     link: { href: "/notes/roofing-service-area-pages", label: "How town pages work" },
   },
   {
     icon: <PhoneCall size={20} aria-hidden />,
     art: <CallsArt />,
     title: "Count every call and form",
-    body: "Calls, forms and bookings tracked in GA4 and Tag Manager, form delivery tested every month, and one plain report you can read in five minutes.",
-    points: ["Call and form tracking", "Monthly form checks", "A one-page monthly report"],
+    body: "I count every call, form and booking your site brings in. I test your forms every month, because finding a broken form three months late is a tad expensive. You get one short report you can read in five minutes.",
+    points: ["Every call and form counted", "Forms tested every month", "A one-page monthly report"],
     link: { href: "/notes/call-tracking-for-contractors", label: "How call tracking works" },
   },
 ];
 
 const STEPS = [
-  { n: "01", title: "Free 20-minute call", body: "We look at your site and Business Profile first, then tell you the two or three things we'd fix." },
-  { n: "02", title: "A fixed price", body: "Straight from the pricing page. Three-month minimum on monthly plans, then month to month." },
-  { n: "03", title: "The work, in your accounts", body: "Fixes, pages, profile and tracking. You own every account and keep everything if you leave." },
-  { n: "04", title: "A report you can read", body: "Calls, forms, clicks and what's next, on one page every month." },
+  { n: "01", title: "A free call and audit", body: "I look at your website and Google listing before we talk. Then I tell you the two or three things I'd fix first." },
+  { n: "02", title: "One fixed price", body: `${plan.price} a month. The first three months are the minimum. After that, it's month to month.` },
+  { n: "03", title: "The work, in your accounts", body: "I fix the site, build pages, update your listing and set up call tracking. You own every account. If you leave, you keep it all." },
+  { n: "04", title: "A report you can read", body: "Once a month: your calls, forms and visits, and what I'll do next. All on one page." },
 ];
 
+/* Service businesses first; the game shop, a retailer, goes last. */
 const CASE_IMG: Record<string, string> = {
-  "myofascial-clinic": "/notes/photos/clinic-158-to-501-cover-sm.webp",
   "roofing-contractor": "/notes/photos/roofing-keywords-cover-sm.webp",
+  "myofascial-clinic": "/notes/photos/clinic-158-to-501-cover-sm.webp",
   "tint-lordz": "/notes/photos/lawrence-ma-window-tint-seo-cover-sm.webp",
   "over-the-table-top": "/notes/photos/charles-county-md-game-shop-seo-cover-sm.webp",
 };
+const CASE_ORDER = Object.keys(CASE_IMG);
+
+/* Notes that aren't about a service business (a retail shop, the name of the agency). */
+const OFF_TOPIC = new Set([
+  "charles-county-md-game-shop-seo",
+  "charles-county-md-small-business-seo",
+  "what-is-a-koinophobe",
+]);
 
 export default function HomePage() {
-  const latest = publishedNotes().slice(0, 3);
-  const plans = [
-    oneTime.find((p) => p.key === "audit")!,
-    oneTime.find((p) => p.key === "sprint")!,
-    monthly.find((p) => p.key === "growth")!,
-  ];
+  const latest = publishedNotes()
+    .filter((n) => !OFF_TOPIC.has(n.slug))
+    .slice(0, 3);
+  const plans = [free.find((p) => p.key === "audit")!, plan];
 
   return (
     <>
@@ -123,13 +136,13 @@ export default function HomePage() {
         <HeroScatter />
         <div className="container-pad relative pb-16 pt-12 text-center sm:pb-20 sm:pt-16 xl:flex xl:min-h-[calc(100svh-var(--hx-h))] xl:flex-col xl:justify-center xl:pb-36 xl:pt-6">
           <div className="hero-in mx-auto max-w-[780px] xl:max-w-[760px]">
-            <p className="eyebrow">SEO agency for home service businesses</p>
+            <p className="eyebrow">SEO agency for service businesses</p>
             <h1 className="t-hero mx-auto mt-6 max-w-[19ch]">
-              SEO that gets home service businesses <span className="hero-mark">more calls</span> from Google.
+              SEO that gets service businesses <span className="hero-mark">more calls</span> from Google.
             </h1>
             <p className="t-lead mx-auto mt-6 max-w-[58ch]">
-              Koinophobe is an SEO agency for roofers, pool, lawn and other home service companies. We fix what&rsquo;s holding your site back, build the pages that rank in
-              the towns you serve, and track every call so you can see exactly what Google sends you.
+              I help local service businesses, from roofers to clinics to auto shops, show up on Google in
+              the towns they serve. Then I count every call, so you can see what Google sends you.
             </p>
             <div className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
               <BookCta from="hero" label="Book a free 20-minute call" />
@@ -137,7 +150,7 @@ export default function HomePage() {
             </div>
             <BookNote className="mt-4" />
             <ul className="mt-8 flex flex-wrap justify-center gap-2 text-[14px]">
-              {["Prices on the site, from $600 a month", "100% money-back guarantee", "30+ sites built and ranked"].map((t) => (
+              {[`${plan.price} a month, audit free`, "100% money-back guarantee", "30+ websites built and ranked"].map((t) => (
                 <li key={t} className="inline-flex items-center gap-2 rounded-full border border-line bg-card px-3.5 py-2 font-medium shadow-[var(--shadow-sm)]">
                   <Check size={15} aria-hidden className="flex-none text-brand" />
                   <span>{t}</span>
@@ -154,10 +167,10 @@ export default function HomePage() {
         <div data-anim="rise" className="card-dark px-6 py-10 sm:px-10 sm:py-12">
           <div className="grid grid-cols-2 gap-x-6 gap-y-9 md:grid-cols-4">
             {[
-              { v: aggregate.clicks, l: "clicks from Google", n: "spam traffic stripped out" },
-              { v: aggregate.pageOne, l: "keywords on page one", n: "position 10 or better" },
-              { v: aggregate.topThree, l: "keywords in the top 3", n: "across five sites" },
-              { v: aggregate.impressions, l: "search impressions", n: aggregate.window },
+              { v: aggregate.clicks, l: "visits from Google", n: "fake traffic taken out" },
+              { v: aggregate.pageOne, l: "searches on page one", n: "in the top 10 results" },
+              { v: aggregate.topThree, l: "searches in the top 3", n: "across five sites" },
+              { v: aggregate.impressions, l: "times shown on Google", n: aggregate.window },
             ].map((s, i) => (
               <div key={s.l} className={i > 0 ? "md:border-l md:border-white/10 md:pl-6" : ""}>
                 <p className="font-display text-[clamp(1.9rem,4.4vw,3.2rem)] font-extrabold leading-none tracking-tight text-mint">
@@ -169,7 +182,7 @@ export default function HomePage() {
             ))}
           </div>
           <p className="muted mt-10 border-t border-white/10 pt-6 text-[13.5px]">
-            Five client sites with their Search Console data open, {aggregate.window}. Every number is on the{" "}
+            From five client sites that let me share their Google numbers, {aggregate.window}. Every number is on the{" "}
             <Link href="/work" className="text-white underline underline-offset-4 dark:text-ink">work page</Link>.
           </p>
         </div>
@@ -180,10 +193,11 @@ export default function HomePage() {
         <div className="container-pad">
           <Reveal className="stage-head">
             <p className="eyebrow">Who it&rsquo;s for</p>
-            <h2 className="t-h2 mt-5">Local SEO for roofers, remodelers and other trades</h2>
+            <h2 className="t-h2 mt-5">Local SEO for roofers, remodelers and other service businesses</h2>
             <p className="t-lead mt-5 max-w-[60ch]">
-              If your customers search &ldquo;near me&rdquo;, look at the map and call the first company that
-              looks right, your website and Business Profile are doing the selling. We make sure they do it well.
+              Most customers search &ldquo;near me,&rdquo; look at the map, and call the first company that looks
+              right. Your website and Google listing do the selling before you ever pick up the phone. I make sure
+              they do it well.
             </p>
           </Reveal>
           {/* Phones swipe through the trades; wider screens see all five at once. */}
@@ -220,11 +234,11 @@ export default function HomePage() {
       <section className="section section-tint">
         <div className="container-pad">
           <Reveal className="stage-head">
-            <p className="eyebrow">What we do</p>
+            <p className="eyebrow">What I do</p>
             <h2 className="t-h2 mt-5">Three SEO services, done properly, in your accounts</h2>
             <p className="t-lead mt-5 max-w-[60ch]">
-              Most SEO is hard to see. Ours shows up as pages you can open, rankings you can check and calls
-              you can count.
+              Most SEO is hard to see. Mine isn&rsquo;t: pages you can open, rankings you can check, and calls you
+              can count.
             </p>
           </Reveal>
           <div data-anim="cards" className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -256,10 +270,10 @@ export default function HomePage() {
         <div className="container-pad">
           <Reveal className="stage-head">
             <p className="eyebrow">Results</p>
-            <h2 className="t-h2 mt-5">SEO results from real Search Console accounts</h2>
+            <h2 className="t-h2 mt-5">SEO results, straight from my clients&rsquo; Google data</h2>
             <p className="t-lead mt-5 max-w-[58ch]">
-              Thirty-plus sites over two years. These are the ones whose data we can show you, with what&rsquo;s
-              still left to win.
+              I&rsquo;ve worked on over 30 websites in two years. These are the ones whose numbers I&rsquo;m
+              allowed to show you, plus what&rsquo;s still left to win.
             </p>
             <div className="mt-8 flex justify-center">
               <PageCta href="/work" label="All case studies" from="home_results" size="md" />
@@ -268,6 +282,7 @@ export default function HomePage() {
           <div data-anim="cards" className="mt-14 grid gap-5 md:grid-cols-2">
             {cases
               .filter((c) => CASE_IMG[c.slug])
+              .sort((a, b) => CASE_ORDER.indexOf(a.slug) - CASE_ORDER.indexOf(b.slug))
               .map((c) => (
                 <Link key={c.slug} href={`/work#${c.slug}`} className="card card-hover press group flex flex-col overflow-hidden p-2.5 sm:flex-row">
                   <div className="relative aspect-[16/9] flex-none overflow-hidden rounded-2xl bg-surface sm:aspect-auto sm:w-[190px]">
@@ -307,7 +322,7 @@ export default function HomePage() {
               <h2 className="t-h2 mt-5">How it works, from a free SEO call to a monthly report</h2>
               <div className="mt-9 hidden flex-wrap items-center gap-3 lg:flex">
                 <BookCta from="home_steps" />
-                <PageCta href="/about" label="How we work" from="home_steps" />
+                <PageCta href="/about" label="How I work" from="home_steps" />
               </div>
             </Reveal>
             <Journey className="mx-auto mt-10 lg:mx-0 lg:mt-12" />
@@ -327,7 +342,7 @@ export default function HomePage() {
           </ol>
           <div className="flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center lg:hidden">
             <BookCta from="home_steps" />
-            <PageCta href="/about" label="How we work" from="home_steps" />
+            <PageCta href="/about" label="How I work" from="home_steps" />
           </div>
         </div>
       </section>
@@ -337,21 +352,20 @@ export default function HomePage() {
         <div className="container-pad">
           <Reveal className="stage-head">
             <p className="eyebrow">Pricing</p>
-            <h2 className="t-h2 mt-5">SEO pricing: every price is on the site</h2>
+            <h2 className="t-h2 mt-5">SEO pricing: one plan, {plan.price} a month</h2>
             <p className="t-lead mt-5 max-w-[56ch]">
-              No long contracts, and you own everything we build. Start with an audit, fix it
-              once, or hand it over every month.
+              The audit is free, so you see what&rsquo;s wrong before you pay anything. After that, one plan covers
+              all of it. No long contracts, and you own everything I build.
             </p>
             <div className="mt-8 flex justify-center">
-              <PageCta href="/pricing" label="Compare all plans" from="home_pricing" size="md" />
+              <PageCta href="/pricing" label="See full pricing" from="home_pricing" size="md" />
             </div>
           </Reveal>
-          <div data-anim="cards" className="mt-14 grid items-stretch gap-5 lg:grid-cols-3">
+          <div data-anim="cards" className="mx-auto mt-14 grid max-w-[880px] items-stretch gap-5 md:grid-cols-2">
             {plans.map((p) => (
               <div key={p.key} className={`relative flex flex-col p-7 sm:p-8 ${p.pick ? "card-dark shadow-float lg:-my-4 lg:py-12" : "card"}`}>
                 <div className="flex items-center justify-between gap-3">
                   <span className={`text-[14px] font-medium ${p.pick ? "muted" : "text-muted"}`}>{p.kicker}</span>
-                  {p.pick ? <span className="sticker rotate-[4deg]">Most clients</span> : null}
                 </div>
                 <h3 className="t-h3 mt-4 !text-[1.5rem]">{p.name}</h3>
                 <p className="mt-3 flex items-baseline gap-2">
@@ -359,15 +373,15 @@ export default function HomePage() {
                   <span className={`text-[14.5px] ${p.pick ? "muted" : "text-muted"}`}>{p.unit}</span>
                 </p>
                 <ul className={`mt-6 flex-1 space-y-2.5 border-t pt-6 ${p.pick ? "border-white/10" : "border-line"}`}>
-                  {p.items.slice(0, 4).map((it) => (
+                  {p.items.map((it) => (
                     <li key={it} className="flex gap-2.5 text-[15px] leading-snug">
                       <Check size={17} aria-hidden className={`mt-0.5 flex-none ${p.pick ? "text-mint" : "text-brand"}`} />
                       {it}
                     </li>
                   ))}
                 </ul>
-                <Link href={`/pricing#${p.key === "growth" ? "monthly" : p.key}`} className={`btn btn-md mt-8 w-full ${p.pick ? "btn-light" : "btn-secondary"}`}>
-                  {p.key === "audit" ? <FileSearch size={17} aria-hidden /> : p.key === "sprint" ? <Gauge size={17} aria-hidden /> : <TrendingUp size={17} aria-hidden />}
+                <Link href={`/pricing#${p.monthly ? "monthly" : p.key}`} className={`btn btn-md mt-8 w-full ${p.pick ? "btn-light" : "btn-secondary"}`}>
+                  {p.monthly ? <TrendingUp size={17} aria-hidden /> : <FileSearch size={17} aria-hidden />}
                   See what&rsquo;s included
                 </Link>
               </div>
@@ -376,8 +390,8 @@ export default function HomePage() {
           <div className="card mt-8 grid items-center gap-7 p-6 sm:p-8 md:grid-cols-[1fr_1.15fr] md:gap-10">
             <div>
               <p className="text-[17px] leading-relaxed">
-                <span className="font-display text-[1.25rem] font-extrabold tracking-tight">Want to show up when customers ask ChatGPT?</span>{" "}
-                <span className="text-muted">There&rsquo;s a plan for Google and AI search, $1,000 a month.</span>
+                <span className="font-display text-[1.25rem] font-extrabold tracking-tight">Want ChatGPT to recommend you too?</span>{" "}
+                <span className="text-muted">Add AI search to your plan for ${startup.amount} more a month.</span>
               </p>
               <TextCta href="/ai-search-optimization" label="AI search optimization" from="home_ai" className="mt-5" />
             </div>
@@ -405,7 +419,7 @@ export default function HomePage() {
           <div className="container-pad">
             <Reveal className="stage-head">
               <p className="eyebrow">Notes</p>
-              <h2 className="t-h2 mt-5">Free SEO guides, from the work we do every day</h2>
+              <h2 className="t-h2 mt-5">Free SEO guides, from the work I do every day</h2>
               <div className="mt-8 flex justify-center">
                 <PageCta href="/notes" label="All notes" from="home_notes" size="md" />
               </div>

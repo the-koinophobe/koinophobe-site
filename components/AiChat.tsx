@@ -3,7 +3,8 @@ import { Sparkles } from "lucide-react";
 /*
  * A buyer asks an assistant who to call, and the answer names the business
  * and cites its site. Pure CSS: the question types, three dots wait, the
- * answer settles in. An illustration, so the business is "Your business".
+ * answer settles in. An illustration, so the business is a bracketed
+ * placeholder that reads as one, not a name in the middle of a sentence.
  * With no JS or reduced motion, everything shows at once.
  */
 
@@ -28,10 +29,10 @@ export function AiChat() {
             <i />
           </span>
           <p className="chat-body">
-            Homeowners nearby most often recommend <b>Your business</b>. Its reviews mention quick repair
+            People nearby most often recommend <b>[your business]</b>. Its reviews mention quick repair
             visits and clear quotes, and its site lists every service and town it covers.
           </p>
-          <span className="chat-source">Source &middot; yourbusiness.com</span>
+          <span className="chat-source">Source &middot; your website</span>
         </div>
       </div>
     </div>

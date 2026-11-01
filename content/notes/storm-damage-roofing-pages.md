@@ -65,4 +65,4 @@ On a Florida roofing site we work on, part of the work was a set of articles aim
 
 Now. Hurricane season ends on November 30, which makes the off-season the right time to build. Pages published over the winter have months to get indexed and start ranking before June. Add a short note on each page after a big storm, with photos from that week. It keeps the page current and gives Google a reason to look again.
 
-If you want these built for you, the Growth plan on the [pricing page](/pricing) covers two pages a month, which is the full storm set by spring. The roofing results are on the [roofing SEO page](/roofing-seo).
+If you want these built for you, the $500-a-month SEO plan on the [pricing page](/pricing) covers two pages a month, which is the full storm set by spring. The roofing results are on the [roofing SEO page](/roofing-seo).

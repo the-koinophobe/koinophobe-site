@@ -70,4 +70,4 @@ Average position for the whole site went from 47.9 to 14.9 over the same period.
 
 Pick your top three services and your top five towns. Check Search Console for what already shows up. Build or fix the pages that match, one at a time.
 
-If you'd like us to build these pages for you, the Growth plan adds two new town or service pages a month; details are on [our pricing page](/pricing). Or [send us your site](/contact) with the towns and jobs you want more of.
+If you'd like us to build these pages for you, our $500-a-month SEO plan adds two new town or service pages a month; details are on [our pricing page](/pricing). Or [send us your site](/contact) with the towns and jobs you want more of.

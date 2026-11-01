@@ -67,4 +67,4 @@ Reviews matter a lot here because lawn care is a trust purchase: someone is goin
 
 When spring hits, you'll want to know which pages are working. Track calls and form submissions from the start, as in [call tracking for contractors](/notes/call-tracking-for-contractors).
 
-If you want this built over the winter, the Growth plan on the [pricing page](/pricing) covers two new pages a month, which gets most of this done by March. Or [book a free call](/contact) and we'll tell you where your site stands.
+If you want this built over the winter, the $500-a-month SEO plan on the [pricing page](/pricing) covers two new pages a month, which gets most of this done by March. Or [book a free call](/contact) and we'll tell you where your site stands.

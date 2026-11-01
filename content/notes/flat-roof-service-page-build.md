@@ -72,4 +72,4 @@ A new page with no links pointing to it is hard for Google and visitors to find.
 
 Then check that Google can see it. Inspect the new URL in Search Console with **URL Inspection** and request indexing. After a few weeks, look at which searches it shows for in the Performance report, and check whether those match the [roofing keywords](/notes/roofing-keywords) you'd want it to win.
 
-If you have job photos sitting in a folder and no page to put them on, [send us a note](/contact). New service pages are part of the Growth plan on [our pricing page](/pricing).
+If you have job photos sitting in a folder and no page to put them on, [send us a note](/contact). New service pages are part of the $500-a-month SEO plan on [our pricing page](/pricing).

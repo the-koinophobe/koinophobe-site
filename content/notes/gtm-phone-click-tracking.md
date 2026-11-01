@@ -92,4 +92,4 @@ It also misses:
 
 For completed calls, and for hand-dialed calls from your site, you need a call tracking number. That's a separate layer. Taps are still worth having, because they show which pages make people reach for the phone, and they cost nothing to collect.
 
-Phone taps are one of the [three events worth tracking on a local business site](/notes/three-events-local-business), along with forms and bookings. Without them, [rankings don't tell you much](/notes/rankings-without-tracking). Tracking setup in GA4 is part of the Setup Sprint on [our pricing page](/pricing). If you'd like us to check what your site records now, [send us the address](/contact).
+Phone taps are one of the [three events worth tracking on a local business site](/notes/three-events-local-business), along with forms and bookings. Without them, [rankings don't tell you much](/notes/rankings-without-tracking). Tracking setup in GA4 is part of the $500-a-month SEO plan on [our pricing page](/pricing). If you'd like us to check what your site records now, [send us the address](/contact).

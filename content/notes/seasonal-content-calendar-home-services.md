@@ -81,4 +81,4 @@ Each trade has its own seasonal pages worth planning:
 
 Pick your trade's busy months, count back three to four months, and put a publish date on the calendar for each page. Two pages a month gives you 24 by this time next year.
 
-That's the pace on our Growth plan: 2 new town or service pages a month, plus Business Profile posts and a monthly call. Details are on the [pricing page](/pricing).
+That's the pace on our $500-a-month SEO plan: 2 new town or service pages a month, plus Business Profile posts and a monthly call. Details are on the [pricing page](/pricing).

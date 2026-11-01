@@ -79,4 +79,4 @@ Least exposed:
 
 Open Search Console, compare the last three months with the previous period, and sort pages by click change. If the top losers are informational and their positions held, you're looking at answers on the results page, not a penalty. Then pick the five buying-intent pages that matter most and improve them first.
 
-Our [AI search optimization](/ai-search-optimization) service runs this diagnosis, tracks AI Overviews alongside ChatGPT, Claude and Perplexity monthly, and builds the pages that get cited. $1,000 a month, no contract.
+Our [AI search optimization](/ai-search-optimization) service runs this diagnosis, tracks AI Overviews alongside ChatGPT, Claude and Perplexity monthly, and builds the pages that get cited. It's a $300-a-month add-on to our SEO plan.

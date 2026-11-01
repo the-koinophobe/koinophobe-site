@@ -70,4 +70,4 @@ If all six pass, your site is in better shape than most we see.
 
 Small sites usually need a technical check once, then after any big change: a redesign, a new platform, a domain change, a new developer. The problems that need someone with experience are the ones you can't see from the outside, such as redirect chains, canonicals pointing the wrong way, or JavaScript that hides content from crawlers.
 
-That's what our Site Audit covers. It's $750, delivered in five business days, ranked by what affects calls, and it's credited in full if you start a monthly plan within 30 days. Details are on the [pricing page](/pricing). If you'd rather start free, the [AI crawler check](/ai-search-optimization#check) tests whether search and AI crawlers can read your homepage.
+That's what our Site Audit covers. It's free, delivered in five business days and ranked by what affects calls. Details are on the [pricing page](/pricing). For an instant check, the [AI crawler check](/ai-search-optimization#check) tests whether search and AI crawlers can read your homepage.

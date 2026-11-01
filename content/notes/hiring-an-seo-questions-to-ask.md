@@ -33,7 +33,7 @@ You should keep your website, your pages, your tracking setup and your history. 
 
 ## 3. What will you do this month?
 
-Ask for specifics. "Two new town pages, a rewrite of the roof repair page's title and meta description, and Business Profile posts" is an answer. "Ongoing optimization" is a placeholder. On our Growth plan, for example, that means 2 new town or service pages a month, Business Profile posts and upkeep, on-page work and internal linking, and a monthly call.
+Ask for specifics. "Two new town pages, a rewrite of the roof repair page's title and meta description, and Business Profile posts" is an answer. "Ongoing optimization" is a placeholder. On our SEO plan, for example, that means 2 new town or service pages a month, Business Profile posts and upkeep, on-page work and internal linking, and a monthly call.
 
 ## 4. How will I see calls?
 
@@ -71,4 +71,4 @@ If you only remember two of these, make them number 1 and number 5. A provider w
 
 ## Next step
 
-Our prices, plans and terms are all on the [pricing page](/pricing), including the $750 Site Audit that's credited in full if a monthly plan starts within 30 days. If you want to know what SEO usually costs elsewhere, start with [what roofing SEO costs](/notes/roofing-seo-cost). Then [ask us any of these ten](/contact) and judge the answers yourself.
+Our prices, plans and terms are all on the [pricing page](/pricing), including the free Site Audit. If you want to know what SEO usually costs elsewhere, start with [what roofing SEO costs](/notes/roofing-seo-cost). Then [ask us any of these ten](/contact) and judge the answers yourself.

@@ -69,9 +69,9 @@ export default function WorkPage() {
             <p className="eyebrow">Case studies</p>
             <h1 className="t-h1 mt-6 max-w-[20ch]">SEO case studies from real Search Console accounts</h1>
             <p className="t-lead mt-6 max-w-[60ch]">
-              Thirty-plus sites in two years. Here are the five we can put the Search Console data on the table
-              for: same four numbers each time, the story behind them, and what we&rsquo;d go after next. Then every
-              site we kept a screenshot of.
+              I&rsquo;ve done SEO on over 30 sites in two years. These are the five whose Google data I can show
+              you: the same four numbers each time, the story behind them, and what I&rsquo;d go after next. Then
+              every site I kept a screenshot of.
             </p>
             <nav aria-label="Case studies" className="mt-8 flex flex-wrap gap-2">
               {cases.map((c) => (
@@ -101,7 +101,7 @@ export default function WorkPage() {
             <h2 className="t-h2 mx-auto mt-5 max-w-[24ch]">Five SEO case studies, with the Search Console left open</h2>
             <p className="t-lead mt-5 max-w-[52ch]">
               The greatest hits, if you like. Same four numbers for each, the story behind them, and what
-              we&rsquo;d go after next.
+              I&rsquo;d go after next.
             </p>
           </Reveal>
           {/* One case per card: each gets the screen to itself. */}

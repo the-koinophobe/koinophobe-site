@@ -80,4 +80,4 @@ Also ask new customers how they found you, and add "ChatGPT or another AI assist
 
 Set up the AI assistants channel today and look at the last 90 days. If you see visits, look at which pages they land on: those are the pages assistants already cite, and they deserve updating first.
 
-If you'd like help reading it, our [AI search optimization](/ai-search-optimization) service sets up this tracking, measures the answers themselves monthly, and builds the pages that get cited. $1,000 a month, no contract.
+If you'd like help reading it, our [AI search optimization](/ai-search-optimization) service sets up this tracking, measures the answers themselves monthly, and builds the pages that get cited. It's a $300-a-month add-on to our SEO plan.

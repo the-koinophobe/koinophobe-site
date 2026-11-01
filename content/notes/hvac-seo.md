@@ -65,4 +65,4 @@ HVAC is a phone business, so measure calls. Track website phone taps as a GA4 ke
 
 ## Your next step
 
-Pick the season that's coming next and check whether its service pages exist and are indexed (URL Inspection in Search Console tells you). If they aren't, that's this month's job. If you'd like it done for you, the Setup Sprint on our [pricing page](/pricing) covers tracking, schema and Business Profile cleanup.
+Pick the season that's coming next and check whether its service pages exist and are indexed (URL Inspection in Search Console tells you). If they aren't, that's this month's job. If you'd like it done for you, the $500-a-month SEO plan on our [pricing page](/pricing) covers tracking, schema and Business Profile cleanup.

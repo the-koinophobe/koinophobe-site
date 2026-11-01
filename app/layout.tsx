@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description:
-    "SEO agency for home service businesses: technical SEO, local search, call tracking and AI search. 30+ sites, with live Search Console data opened up on five of them. Prices on the site.",
+    "SEO agency for service businesses: technical SEO, local search, call tracking and AI search. 30+ sites, with live Search Console data opened up on five of them. Prices on the site.",
   keywords: [
     "SEO agency",
     "technical SEO",
@@ -55,13 +55,13 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: "Koinophobe · Technical SEO that shows up in the numbers",
     description:
-      "Technical SEO for home service businesses, with the Search Console data to back it up and the prices on the site.",
+      "Technical SEO for service businesses, with the Search Console data to back it up and the prices on the site.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Koinophobe · Technical SEO that shows up in the numbers",
     description:
-      "Technical SEO for home service businesses. Every figure from a live export.",
+      "Technical SEO for service businesses. Every figure from a live export.",
   },
   robots: { index: true, follow: true },
 };
@@ -104,7 +104,7 @@ const jsonLd = {
       image: "https://koinophobe.com/opengraph-image",
       email: site.email,
       description:
-        "SEO agency for home service and local businesses: technical SEO, local search, call tracking and AI search, proven with the client's own Search Console and analytics data.",
+        "SEO agency for service and local businesses: technical SEO, local search, call tracking and AI search, proven with the client's own Search Console and analytics data.",
       slogan: "Technical SEO that shows up in the numbers",
       sameAs: [site.linkedin, site.x],
       areaServed: site.areaServed,

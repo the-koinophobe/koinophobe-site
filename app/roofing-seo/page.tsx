@@ -51,7 +51,7 @@ const WORK = [
   {
     icon: <FileCode2 size={20} aria-hidden />,
     t: "Service and FAQ schema",
-    b: "Structured data that tells Google what you do, where, and what homeowners ask before they hire.",
+    b: "Hidden labels in your page code that tell Google what you do, where you work, and what homeowners ask before they hire.",
   },
   {
     icon: <Gauge size={20} aria-hidden />,
@@ -63,23 +63,23 @@ const WORK = [
 const ROOF_FAQ: FaqItem[] = [
   {
     q: "How long does roofing SEO take to work?",
-    a: "Plan on a few months before judging it. On the roofing site on this page, average position went from 47.9 to 14.9, comparing October 2025 to August 2026 with the eleven months before.",
+    a: "Give it a few months before you judge it. On the roofing site on this page, the average Google position went from 47.9 to 14.9. That compares October 2025 to August 2026 with the eleven months before.",
   },
   {
     q: "Does a roofing company need a page for every town?",
-    a: "A page for each town you want work in, with real jobs from that town on it, does better than one county page. Near-copies with only the town name swapped can be treated as doorway pages by Google.",
+    a: "A page for each town you want work in, with real jobs from that town on it, does better than one county page. Copies with only the town name swapped can get ignored by Google, so I don't build those.",
   },
   {
     q: "How much does roofing SEO cost?",
-    a: "The Growth plan is $1,500 a month and covers two new town or service pages a month plus Business Profile work. If the site needs fixing first, the Setup Sprint is a one-time $1,800. The first payment on either is covered by a 100% money-back guarantee for 30 days.",
+    a: "One plan, $500 a month. It covers fixes to your site, call and form tracking, two new town or service pages a month and Business Profile work. The audit is free, and your first payment is covered by a 100% money-back guarantee for 30 days.",
   },
   {
     q: "Should a roofer run Local Services Ads or do SEO?",
-    a: "They do different jobs. Local Services Ads charge per lead and stop when the budget does; SEO builds pages and rankings you keep. If you run both, track calls from each so you can compare.",
+    a: "They do different jobs. Local Services Ads charge per lead and stop when the budget runs out. SEO builds pages and rankings you keep. If you run both, I track the calls from each so you can compare.",
   },
   {
     q: "Do you work with roofers who also do remodeling?",
-    a: "Yes. Remodeling gets its own service and project pages, because homeowners search for it differently and research it for longer. The home remodeling SEO page covers how that work is set up.",
+    a: "Yes. Remodeling gets its own pages, because homeowners search for it differently and research it for longer. My home remodeling SEO page shows how I set that up.",
   },
 ];
 
@@ -94,8 +94,8 @@ export default function RoofingPage() {
             <h1 className="t-h1 mt-5 max-w-[17ch]">Roofing SEO for contractors tired of paying for shared leads</h1>
             <p className="t-lead mt-6 max-w-[58ch]">
               A lead from a lead site gets sold to three other contractors. A homeowner who finds you on Google
-              calls you. We&rsquo;ve done the SEO on {roofSites} roofing sites in Brevard County, Florida. One of
-              them is below with its Search Console open.
+              calls you, and only you. I&rsquo;ve done the SEO on {roofSites} roofing sites in Brevard County,
+              Florida. One of them is below, with its Google data open.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <BookCta from="roofing_hero" />
@@ -126,8 +126,8 @@ export default function RoofingPage() {
       <section className="section">
         <div className="container-pad">
           <Reveal className="stage-head">
-            <p className="eyebrow">What we do for roofers</p>
-            <h2 className="t-h2 mt-5">Roofing SEO: the six things we fix on every roofing site</h2>
+            <p className="eyebrow">What I do for roofers</p>
+            <h2 className="t-h2 mt-5">Roofing SEO: the six things I fix on every roofing site</h2>
           </Reveal>
           <div data-anim="cards" className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {WORK.map((w) => (
@@ -140,12 +140,12 @@ export default function RoofingPage() {
           </div>
           <div className="card-dark mt-8 flex flex-col gap-5 p-7 sm:p-10 md:flex-row md:items-center md:justify-between">
             <p className="max-w-[60ch] text-[16.5px]">
-              The <Link href="/pricing#growth" className="font-medium underline underline-offset-4">Growth plan</Link> at
-              $1,500 a month covers two new town or service pages a month plus the profile work. If your site needs
-              fixing first, the <Link href="/pricing#sprint" className="font-medium underline underline-offset-4">Setup Sprint</Link> is
-              a one-time $1,800.
+              The <Link href="/pricing#monthly" className="font-medium underline underline-offset-4">SEO plan</Link> is
+              $500 a month. I fix your site first, then add two new town or service pages a month, plus the
+              profile work. The <Link href="/pricing#audit" className="font-medium underline underline-offset-4">audit</Link> is
+              free.
             </p>
-            <PageCta href="/pricing" label="Compare plans" from="roofing_plans" size="md" />
+            <PageCta href="/pricing" label="See pricing" from="roofing_plans" size="md" />
           </div>
           <div className="mt-6 flex justify-center">
             <GuaranteeLine />

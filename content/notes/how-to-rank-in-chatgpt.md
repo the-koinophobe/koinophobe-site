@@ -81,4 +81,4 @@ Every step above also helps on Google. That's the useful part. You aren't choosi
 
 Run the [free AI crawler check](/ai-search-optimization#check) on your domain. If it comes back clean, start the question list from week two today.
 
-If you'd rather hand the loop off, that's what our [AI search optimization](/ai-search-optimization) service does: the access fixes, the tracking with repeated runs, and the pages, every month, for $1,000 with no contract.
+If you'd rather hand the loop off, that's what our [AI search optimization](/ai-search-optimization) service does: the access fixes, the tracking with repeated runs, and the pages, every month, as a $300-a-month add-on to our SEO plan.

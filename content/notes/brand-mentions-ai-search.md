@@ -83,4 +83,4 @@ Ask assistants about your category without naming yourself: "best [what you do] 
 
 List every place your business is mentioned today, then the ten places your best competitor is mentioned that you aren't. That gap list is your plan.
 
-Our [AI search optimization](/ai-search-optimization) service works on both halves: the pages assistants cite, and monthly tracking of whether they name you. $1,000 a month, no contract.
+Our [AI search optimization](/ai-search-optimization) service works on both halves: the pages assistants cite, and monthly tracking of whether they name you. It's a $300-a-month add-on to our SEO plan.

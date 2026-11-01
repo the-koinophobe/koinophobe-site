@@ -72,4 +72,4 @@ Copilot answers from Bing. Bing's index is also part of how many other tools fin
 
 Verify your site in Bing Webmaster Tools today and submit your sitemap. Check the AI Performance report in a few weeks and list your cited pages. Then run the [free AI crawler check](/ai-search-optimization#check) to confirm Bingbot and the other assistants' crawlers can reach everything else.
 
-Our [AI search optimization](/ai-search-optimization) service reads this report alongside repeated checks across ChatGPT, Claude, Perplexity and Google every month. $1,000 a month, no contract.
+Our [AI search optimization](/ai-search-optimization) service reads this report alongside repeated checks across ChatGPT, Claude, Perplexity and Google every month. It's a $300-a-month add-on to our SEO plan.

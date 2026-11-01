@@ -50,7 +50,7 @@ export function BookCta({
 
 /** Secondary button for email. */
 export function EmailCta({
-  label = "Email us",
+  label = "Email me",
   from,
   href = mailHref,
   size = "lg",

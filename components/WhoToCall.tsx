@@ -21,7 +21,7 @@ export function WhoToCall({ topic }: { topic: string }) {
       <p className="muted mt-4 text-[16.5px] leading-relaxed">
         {site.aiPitch}{" "}
         {digital
-          ? "The team fixes what stops their crawlers from reading your site, then writes the pages they quote."
+          ? "I fix what stops their crawlers from reading your site, then write the pages they quote."
           : "When customers ask an assistant who to call, the work is making your business the answer."}
       </p>
       <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3">

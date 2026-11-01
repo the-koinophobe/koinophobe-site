@@ -11,9 +11,8 @@ const COLS: { title: string; href?: string; links: { href: string; label: string
     links: [
       { href: "/roofing-seo", label: "Roofing SEO" },
       { href: "/home-remodeling-seo", label: "Home remodeling SEO" },
-      { href: "/pricing#audit", label: "Site Audit" },
-      { href: "/pricing#sprint", label: "Setup Sprint" },
-      { href: "/pricing#monthly", label: "Monthly SEO plans" },
+      { href: "/pricing#audit", label: "Free site audit" },
+      { href: "/pricing#monthly", label: "SEO plan, $500 a month" },
       { href: "/ai-search-optimization", label: "AI search optimization" },
       { href: "/pricing", label: "All pricing" },
     ],
@@ -37,7 +36,7 @@ const COLS: { title: string; href?: string; links: { href: string; label: string
   {
     title: "Koinophobe",
     links: [
-      { href: "/about", label: "About us" },
+      { href: "/about", label: "About me" },
       { href: "/contact", label: "Contact" },
       { href: "/notes/what-is-a-koinophobe", label: "Why the name" },
       { href: "/privacy", label: "Privacy" },
@@ -59,7 +58,7 @@ export function Footer() {
                 <span className="font-display text-[20px] font-extrabold tracking-tight">{site.name}</span>
               </Link>
               <p className="muted mt-4 max-w-[34ch] text-[15px] leading-relaxed">
-                An SEO agency for home service businesses: technical SEO, local search, call tracking and AI search.
+                An SEO agency for service businesses: technical SEO, local search, call tracking and AI search.
               </p>
               <p className="muted mt-4 text-[14px]">Replies the same business day</p>
               <a href={`mailto:${site.email}`} className="mt-1 inline-block text-[14px] underline-offset-4 hover:underline">

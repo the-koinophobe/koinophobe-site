@@ -10,9 +10,9 @@ import { site } from "@/lib/site";
 import { Faq, type FaqItem } from "@/components/Faq";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Book a free SEO call or audit",
   description:
-    "Book a free 20-minute call or email us your website. We look at your site before we talk and tell you what we'd fix first, or that nothing needs fixing.",
+    "Book a free 20-minute call or email me your website. I look at your site before we talk and tell you what I'd fix first, or that nothing needs fixing.",
   alternates: { canonical: "/contact" },
 };
 
@@ -20,22 +20,22 @@ const STEPS = [
   {
     icon: <CalendarCheck size={22} aria-hidden />,
     title: "You book a free SEO call",
-    body: "Pick a time and tell us your website and what you want more of. Calls, bookings, quotes, foot traffic.",
+    body: "Pick a time and tell me your website and what you want more of. Calls, bookings, quotes, foot traffic.",
   },
   {
     icon: <Search size={22} aria-hidden />,
-    title: "We look at your site",
+    title: "I look at your site",
     body: "Before we speak. Rankings, structure, speed, tracking, and whether the pages that should exist do.",
   },
   {
     icon: <Target size={22} aria-hidden />,
     title: "We talk through what to fix",
-    body: "Twenty minutes. You get the two or three things we'd fix first and what they'd cost, whether you hire us or not.",
+    body: "Twenty minutes. You get the two or three things I'd fix first and what they'd cost, whether you hire me or not.",
   },
 ];
 
 const ASK = [
-  { icon: <Link2 size={19} aria-hidden />, t: "Your website.", b: "That's enough for us to start." },
+  { icon: <Link2 size={19} aria-hidden />, t: "Your website.", b: "That's enough for me to start." },
   {
     icon: <MapPin size={19} aria-hidden />,
     t: "What you sell and where.",
@@ -53,7 +53,7 @@ const videoHref = `mailto:${site.email}?subject=${encodeURIComponent("Video revi
 const CONTACT_FAQ: FaqItem[] = [
   {
     q: "What happens on the free call?",
-    a: "It's twenty minutes. We look at your site before we talk, then tell you the two or three things we'd fix first and what they'd cost, whether you hire us or not.",
+    a: "It's twenty minutes. I look at your site before we talk. Then I tell you the two or three things I'd fix first and what they'd cost, whether you hire me or not.",
   },
   {
     q: "What should I send before the call?",
@@ -61,7 +61,7 @@ const CONTACT_FAQ: FaqItem[] = [
   },
   {
     q: "Can I email instead of booking a call?",
-    a: "Yes. Email us your website and we'll reply the same business day. If you'd rather not talk at all, ask for a video review and we'll record what we'd fix first.",
+    a: "Yes. Email me your website and I'll reply the same business day. If you'd rather not talk at all, ask for a video review and I'll record what I'd fix first.",
   },
   {
     q: "How fast do you reply?",
@@ -78,11 +78,11 @@ export default function ContactPage() {
           <div className="grid items-center gap-10 lg:grid-cols-[1.35fr_1fr] lg:gap-14">
           <Reveal>
             <p className="eyebrow">Contact</p>
-            <h1 className="t-h1 mt-5 max-w-[17ch]">Book a free SEO call, or send us your site</h1>
+            <h1 className="t-h1 mt-5 max-w-[17ch]">Book a free SEO call, or send me your site</h1>
             <p className="t-lead mt-6 max-w-[58ch]">
-              Book a free 20-minute call, or email us if you&rsquo;d rather write. Either way
-              we&rsquo;ll look at your site before we talk, and if there&rsquo;s nothing worth paying
-              for, we&rsquo;ll tell you.
+              Book a free 20-minute call, or email me if you&rsquo;d rather write. Either way
+              I&rsquo;ll look at your site before we talk, and if there&rsquo;s nothing worth paying
+              for, I&rsquo;ll tell you straight.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <a href="#book" className="btn btn-lg btn-primary" data-track="cta_link" data-from="contact_hero">
@@ -126,8 +126,8 @@ export default function ContactPage() {
         <div className="container-pad">
           <p className="eyebrow">Book a call</p>
           <p className="mt-4 max-w-[60ch] text-[15.5px] text-muted">
-            Pick a time that suits you. We look at your site before the call, so you leave with the first
-            fixes whether you hire us or not.
+            Pick a time that suits you. I look at your site before the call, so you leave with the first
+            fixes whether you hire me or not.
           </p>
           <div className="mt-6">
             <CalInline />
@@ -138,7 +138,7 @@ export default function ContactPage() {
       <section className="mt-20 section-tint">
         <div className="container-pad grid gap-12 py-16 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
           <Reveal>
-            <p className="eyebrow">Or email us</p>
+            <p className="eyebrow">Or email me</p>
             <a
               href={`mailto:${site.email}?subject=My%20site`}
               data-track="cta_email"
@@ -175,8 +175,8 @@ export default function ContactPage() {
                 Rather not get on a call?
               </h2>
               <p className="mt-2.5 max-w-[46ch] text-[15.5px] text-muted">
-                Email us your website with &ldquo;Video review&rdquo; in the subject. We&rsquo;ll
-                send back a 5-minute screen recording of what we&rsquo;d fix first. Free, no call
+                Email me your website with &ldquo;Video review&rdquo; in the subject. I&rsquo;ll
+                send back a 5-minute screen recording of what I&rsquo;d fix first. Free, no call
                 needed.
               </p>
               <EmailCta

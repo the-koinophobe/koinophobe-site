@@ -80,4 +80,4 @@ Then compare with ChatGPT and Google's AI Overviews. In our data, Perplexity agr
 
 Allow PerplexityBot, then pick the three questions where a competitor is in Perplexity's source rail and you aren't. Build the page that answers each one better. [Content that AI cites](/notes/content-ai-cites) has the structure.
 
-Our [AI search optimization](/ai-search-optimization) service tracks Perplexity alongside ChatGPT, Claude and Google every month and writes the pages. $1,000 a month, no contract.
+Our [AI search optimization](/ai-search-optimization) service tracks Perplexity alongside ChatGPT, Claude and Google every month and writes the pages. It's a $300-a-month add-on to our SEO plan.

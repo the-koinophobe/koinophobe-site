@@ -16,10 +16,10 @@ import { BookCta } from "./Cta";
 const COLS = ["Koinophobe", "Typical SEO agency", "Freelancer", "Doing it yourself"] as const;
 
 const ROWS: { label: string; cells: [string, string, string, string] }[] = [
-  { label: "Price", cells: ["On the site, from $600 a month", "A quote after a sales call", "Varies by person", "Your time"] },
+  { label: "Price", cells: ["$500 a month, audit free", "A quote after a sales call", "Varies by person", "Your time"] },
   { label: "Contract", cells: ["Three-month minimum, then month to month", "Often 6 to 12 months", "Varies", "None"] },
   { label: "Who owns the accounts", cells: ["You, and you keep everything if you leave", "Often the agency", "Depends who set them up", "You"] },
-  { label: "Call and form tracking", cells: ["GA4 and Tag Manager, forms tested monthly", "Sometimes, often extra", "Rarely included", "If you set it up"] },
+  { label: "Call and form tracking", cells: ["Every call and form counted, forms tested monthly", "Sometimes, often extra", "Rarely included", "If you set it up"] },
   { label: "Reporting", cells: ["One page a month: calls, forms, clicks", "Long dashboards", "Varies", "Whatever you check"] },
   { label: "Guarantee", cells: ["100% of your first payment back within 30 days", "Rare", "Rare", "None"] },
 ];

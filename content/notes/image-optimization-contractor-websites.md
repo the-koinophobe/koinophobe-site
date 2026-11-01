@@ -71,4 +71,4 @@ Run the page through PageSpeed Insights before and after. It flags images that a
 
 If you're planning a redesign, carry your renamed files and alt text over with the content; our [website redesign checklist](/notes/website-migration-without-losing-rankings) covers the rest. And if you add a speed plugin to compress images for you, test your forms afterward. One [speed plugin setting broke a client's contact form](/notes/speed-plugin-broke-contact-form).
 
-Speed work, including images, is part of the Setup Sprint on [our pricing page](/pricing). If you want us to look at what's slowing your site down, [send us the link](/contact).
+Speed work, including images, is part of the $500-a-month SEO plan on [our pricing page](/pricing). If you want us to look at what's slowing your site down, [send us the link](/contact).

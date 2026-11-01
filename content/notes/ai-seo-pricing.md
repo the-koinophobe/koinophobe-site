@@ -5,21 +5,21 @@ date: 2026-10-03
 draft: false
 topic: ai
 seo_title: "How much does AI SEO (GEO) cost?"
-seo_description: "AI SEO and GEO quotes vary wildly. What drives the price, what any plan should include, and the full breakdown of what $1,000 a month gets you here."
-excerpt: "AI SEO and GEO quotes run from a few hundred dollars to tens of thousands a month. What actually drives the price, what you should get at each level, and the full breakdown of what our $1,000 a month covers."
+seo_description: "AI SEO and GEO quotes vary wildly. What drives the price, what any plan should include, and the full breakdown of what our $300 add-on gets you."
+excerpt: "AI SEO and GEO quotes run from a few hundred dollars to tens of thousands a month. What actually drives the price, what you should get at each level, and the full breakdown of what our $300-a-month add-on covers."
 cover: /notes/photos/ai-seo-pricing-cover.webp
 cover_alt: "A person at a laptop holding a payment card"
 cover_credit: "Photo: rupixen on Unsplash"
 faq:
   - q: "How much does AI SEO cost per month?"
-    a: "Quotes vary widely, and we don't know of a trustworthy market average. What you should look at is the monthly deliverables: how many pages, how many fixes, which assistants are tracked and how. Our own AI search optimization plan is $1,000 a month with no contract and the deliverables listed on the page."
+    a: "Quotes vary widely, and we don't know of a trustworthy market average. What you should look at is the monthly deliverables: how many pages, how many fixes, which assistants are tracked and how. Our own AI search optimization is a $300-a-month add-on to our SEO plan, with no extra contract and the deliverables listed on the page."
   - q: "Is AI SEO more expensive than regular SEO?"
     a: "It shouldn't be much more. Most AI SEO work is SEO work. The additions are AI crawler checks and measuring answers across assistants, which take time each month but not a separate team."
   - q: "What should a monthly AI SEO retainer include?"
     a: "At minimum: an AI crawler access check, a fixed list of buyer questions tracked across several assistants with repeated runs, a set number of new or improved pages each month, technical fixes, and a report that shows what changed and what the measurement can't tell you."
 ---
 
-![Every monthly deliverable laid out beside the $1,000 price](/notes/illustrations/ai-seo-pricing.webp)
+
 
 "How much should AI SEO cost?" is a fair question with a frustrating answer: anywhere from a few hundred dollars to tens of thousands a month, for services with the same name. We can't give you a market average we'd trust, and we'd be suspicious of anyone who claims one.
 
@@ -51,17 +51,17 @@ If a provider can't say yes to these, the price doesn't matter:
 
 ## What ours includes, in full
 
-Our [AI search optimization](/ai-search-optimization) plan is $1,000 a month. Every month:
+Our [AI search optimization](/ai-search-optimization) is an add-on to our [SEO plan](/pricing#monthly), $300 more a month. Every month:
 
 - Citation tracking: your buyer questions across ChatGPT, Claude, Perplexity and Google AI Overviews, three runs each
-- 12 in-depth articles, comparison and alternatives pages included
-- 50+ fixes to pages you already have: crawler access, rendering, schema, titles, internal links
+- 4 in-depth articles, comparison and alternatives pages included
+- 20+ fixes to pages you already have: crawler access, rendering, schema, titles, internal links
 - Every change made in your site or CMS and listed, so you can see exactly what changed
 - A Friday changelog and a month-end citation report
 
-Plus a free tool when your category has room for one. No contract; if you're not satisfied, tell us and we stop 30 days later. The first month is covered by a [100% money-back guarantee](/pricing#guarantee): ask within 30 days and you get all of it back. Five clients at a time, because nothing is outsourced.
+Plus a free tool when your category has room for one. No extra contract; if you're not satisfied, tell us and we stop the add-on 30 days later. The first month is covered by a [100% money-back guarantee](/pricing#guarantee): ask within 30 days and you get all of it back. Five clients at a time, because nothing is outsourced.
 
-For local home service businesses that mainly need Google Maps and local pages, our [local plans](/pricing) start lower and may fit better.
+For local home service businesses that mainly need Google Maps and local pages, the [SEO plan](/pricing) on its own, at $500 a month, may be all you need.
 
 ## How to compare quotes
 
@@ -69,13 +69,13 @@ Put every quote in the same table:
 
 | | Quote A | Quote B | Ours |
 | --- | --- | --- | --- |
-| Monthly price | | | $1,000 |
-| New pages a month | | | 12 |
-| Fixes a month | | | 50+ |
+| Monthly price | | | $300, on top of the $500 SEO plan |
+| New pages a month | | | 4 |
+| Fixes a month | | | 20+ |
 | Who ships the fixes | | | we do |
 | Assistants tracked | | | 4 |
 | Runs per question | | | 3 |
-| Minimum term | | | None |
+| Minimum term | | | None for the add-on |
 | Placement guarantee | | | None, by design |
 
 Fill in the blanks by asking. If a provider won't answer, that's your answer. More questions to ask in [how to hire an AI SEO agency](/notes/hire-ai-seo-agency).

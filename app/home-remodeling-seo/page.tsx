@@ -23,7 +23,7 @@ import { GuaranteeLine } from "@/components/Guarantee";
 import { Reveal } from "@/components/Reveal";
 import { cases } from "@/lib/gsc";
 import { getNote } from "@/lib/notes";
-import { monthly, oneTime, startup } from "@/lib/pricing";
+import { free, plan, startup } from "@/lib/pricing";
 import { site } from "@/lib/site";
 
 // Guides appear on their publish date without a deploy.
@@ -50,9 +50,7 @@ export const metadata: Metadata = {
 };
 
 const roofing = cases.find((c) => c.slug === "roofing-contractor")!;
-const growth = monthly.find((p) => p.key === "growth")!;
-const sprint = oneTime.find((p) => p.key === "sprint")!;
-const tracking = oneTime.find((p) => p.key === "tracking")!;
+const audit = free.find((p) => p.key === "audit")!;
 
 const WHO = [
   "Kitchen and bath remodelers",
@@ -67,32 +65,32 @@ const WORK = [
   {
     icon: <LayoutGrid size={20} aria-hidden />,
     t: "A page for each kind of remodel",
-    b: "Kitchens, bathrooms, basements, additions and whole-home work are different searches by different homeowners. One \"Services\" page can't rank for all of them.",
+    b: "A kitchen and a basement are different searches, by different homeowners. One \"Services\" page can't rank for all of them, so I build one page each.",
   },
   {
     icon: <Camera size={20} aria-hidden />,
     t: "Project pages, not a gallery",
-    b: "One page per finished job: the town, the scope, how long it took, a budget range, and before and after photos with captions. That's what ranks and what gets forwarded to a spouse.",
+    b: "One page per finished job: the town, the work, how long it took, a price range, and before and after photos. That's what ranks, and what gets sent to a spouse.",
   },
   {
     icon: <ClipboardList size={20} aria-hidden />,
     t: "Cost, timeline and permit pages",
-    b: "The questions homeowners ask for weeks before they call. Answer them with your own numbers and you're the remodeler they've already read.",
+    b: "Homeowners ask these for weeks before they call. Answer them with your own numbers, and you're the remodeler they already trust.",
   },
   {
     icon: <MapPin size={20} aria-hidden />,
     t: "Business Profile and reviews",
-    b: "The right primary category, service areas, project photos, and review replies. For \"bathroom remodeler near me\", the map is most of the page.",
+    b: "The right category, the towns you serve, project photos and review replies. For \"bathroom remodeler near me\", the map is most of the page.",
   },
   {
     icon: <Bot size={20} aria-hidden />,
     t: "Named by ChatGPT and AI Overviews",
-    b: "AI crawlers let in, schema that says what you do and where, and mentions on the sites assistants read before they recommend anyone.",
+    b: "I let AI tools read your site, label what you do and where, and get you mentioned on the sites they read before they recommend anyone.",
   },
   {
     icon: <PhoneCall size={20} aria-hidden />,
     t: "Consults counted, not guessed",
-    b: "Calls, consult requests and design appointments tracked in GA4, including visits from ChatGPT and Perplexity, so you see which ones came from search.",
+    b: "I count every call, consult request and design appointment, even the ones from ChatGPT and Perplexity, so you see which came from search.",
   },
 ];
 
@@ -113,12 +111,12 @@ const DIFFERENT = [
   },
   {
     t: "Sold with photos",
-    b: "Photos close the job, and full-size photos slow the site on a phone. Every image gets resized, compressed to WebP and captioned with the job and the town.",
-    link: { href: "/notes/image-optimization-contractor-websites", label: "How we optimize images" },
+    b: "Photos close the job, but big photos make a site slow on a phone. I shrink every image so it loads fast, and caption it with the job and the town.",
+    link: { href: "/notes/image-optimization-contractor-websites", label: "How I make images load fast" },
   },
   {
     t: "Won at the consult",
-    b: "The number that matters is booked consults, not traffic. Tracking counts the consult form and the calls, and shows which came from Google or an AI assistant.",
+    b: "The number that matters is booked consults, not visits. I count the consult form and the calls, and show you which came from Google or from AI.",
     link: { href: "/notes/track-chatgpt-traffic-ga4", label: "ChatGPT traffic in GA4" },
   },
   {
@@ -149,42 +147,42 @@ const GUIDES: { title: string; slugs: string[] }[] = [
 const FAQ: FaqItem[] = [
   {
     q: "What is home remodeling SEO?",
-    a: "It's the work of getting a remodeling company found when homeowners search for a kitchen, bathroom, basement or whole-home remodel in the towns it serves, and named when they ask AI assistants like ChatGPT who to hire. In practice that means a page for each remodel type and town, project pages built from real jobs, a well-run Google Business Profile, and tracking that ties booked consults back to search.",
+    a: "It gets a remodeling company found when homeowners search for a kitchen, bathroom, basement or whole-home remodel near them. It also gets you named when they ask ChatGPT who to hire. In practice, that's a page for each kind of remodel and each town, pages for real finished jobs, a strong Google Business Profile, and tracking that counts every consult.",
   },
   {
     q: "How do I get ChatGPT to recommend my remodeling company?",
-    a: "Make sure AI crawlers can read your site, rank on Google for the same questions, publish pages that answer cost, timeline and permit questions with your own numbers, and get mentioned on the sites assistants read, such as Google reviews, Houzz, the BBB and local news. In our 96-run citation study, a third to half of the companies AI assistants named also ranked in Google's top ten. Nobody can guarantee a recommendation, so we measure the answers every month with repeated runs.",
+    a: "First, make sure AI tools can read your site. Then rank on Google for the same questions. Write pages that answer cost, timeline and permit questions with your own numbers. And get mentioned on sites AI reads, like Google reviews, Houzz, the BBB and local news. In my 96-run study, a third to half of the companies AI named also ranked in Google's top ten. Nobody can promise a recommendation, so I check the answers every month.",
   },
   {
     q: "Should a remodeler put prices on the website?",
-    a: "Ranges, yes. Homeowners and AI assistants both look for a cost answer, and a page that gives ranges from your own finished jobs, with what moves the number, gets read and quoted. It doesn't have to be a quote.",
+    a: "Price ranges, yes. Homeowners and AI tools both look for a cost answer. A page with ranges from your own finished jobs, and what makes the price go up or down, gets read and quoted. It doesn't have to be an exact quote.",
   },
   {
     q: "Does a remodeling company need separate kitchen and bathroom pages?",
-    a: "Yes. They're different searches with different budgets and different questions. Build one page per remodel type, then town pages where you want work, each with real projects from that town. Near-copies with only the town name swapped can be treated as doorway pages by Google.",
+    a: "Yes. They're different searches with different budgets and different questions. Build one page per remodel type, then town pages where you want work, each with real projects from that town. Copies with only the town name swapped can get ignored by Google, so I don't build those.",
   },
   {
     q: "Which Google Business Profile category should a remodeler use?",
-    a: "Pick the most specific category that matches most of your revenue as the primary, such as Kitchen remodeler, Bathroom remodeler or Remodeler, and add the others you genuinely do as additional categories. The primary category carries the most weight for the map pack.",
+    a: "Pick the one that matches most of your work as your main category, like Kitchen remodeler, Bathroom remodeler or Remodeler. Then add the others you really do as extra categories. The main one matters most for the map.",
   },
   {
     q: "How long does SEO take for a remodeling company?",
-    a: "Tracking counts calls and consult requests as soon as it's set up. New service and project pages usually take weeks to months to rank. Remodeling also has a long sales cycle, so judge it over a few months, on consults booked rather than traffic.",
+    a: "Tracking counts calls and consult requests the day I set it up. New pages take a few weeks to a few months to rank. Remodels are bought slowly too, so judge it over a few months, on consults booked, not visits.",
   },
   {
     q: "Is SEO better than buying leads from Angi or HomeAdvisor?",
-    a: "They do different jobs. Lead sites can fill the calendar quickly, but a shared lead is often sent to several contractors. Your own pages bring homeowners who already picked you, and they keep working when you stop paying. If you run both, track each so you can compare cost per signed job.",
+    a: "They do different jobs. Lead sites can fill the calendar quickly, but a shared lead is often sent to several contractors. Your own pages bring homeowners who already picked you, and they keep working when you stop paying. If you run both, I track each one so you can compare what a signed job costs.",
   },
   {
     q: "How much does SEO cost for a remodeler?",
-    a: `The Growth plan is ${growth.price} a month and covers two new service, town or project pages a month plus Business Profile work. If the site needs fixing first, the Setup Sprint is a one-time ${sprint.price}. If you only need calls and consult forms counted, the Tracking Fix is ${tracking.price}, paid after you see it working. The first payment on any of them is covered by a 100% money-back guarantee for 30 days.`,
+    a: `One plan, ${plan.price} a month. It covers fixes to your site, call and consult-form tracking, two new service, town or project pages a month and Business Profile work. The audit is free, and your first payment is covered by a 100% money-back guarantee for 30 days.`,
   },
 ];
 
 const CALL = [
-  "We look at your site, your Business Profile and what ChatGPT says about remodelers in your area before we talk.",
-  "You get the first few pages we'd build, in order.",
-  "If it isn't a fit, we'll tell you that on the call.",
+  "I look at your site, your Business Profile and what ChatGPT says about remodelers near you before we talk.",
+  "You get the first few pages I'd build, in order.",
+  "If it isn't a fit, I'll tell you on the call.",
 ];
 
 const serviceLd = {
@@ -203,13 +201,13 @@ const serviceLd = {
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Home remodeling SEO plans",
-    itemListElement: [tracking, sprint, growth].map((p) => ({
+    itemListElement: [audit, plan].map((p) => ({
       "@type": "Offer",
       name: p.name,
       description: p.items.join(". "),
       price: p.amount,
       priceCurrency: "USD",
-      url: `https://koinophobe.com/pricing#${p.key === "growth" ? "monthly" : p.key}`,
+      url: `https://koinophobe.com/pricing#${p.monthly ? "monthly" : p.key}`,
       seller: { "@id": "https://koinophobe.com/#organization" },
       ...(p.monthly
         ? {
@@ -271,8 +269,8 @@ export default function RemodelingPage() {
             <h1 className="t-h1 mt-5 max-w-[18ch]">Home remodeling SEO, for Google and for ChatGPT</h1>
             <p className="t-lead mt-6 max-w-[58ch]">
               A kitchen or bathroom remodel gets researched for weeks before anyone calls. Homeowners search costs,
-              look at photos, read reviews, and more of them now ask ChatGPT who to hire. We build the pages they find
-              along the way, run your Business Profile, and count the consults so you can see which came from search.
+              look at photos, read reviews, and more of them now ask ChatGPT who to hire. I build the pages they find
+              along the way, run your Business Profile, and count every consult, so you can see which ones came from search.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <BookCta from="remodel_hero" />
@@ -294,7 +292,7 @@ export default function RemodelingPage() {
             <div className="float-card float-in bottom-[-6%] left-0 w-[250px] p-4 sm:left-[-8%]" style={{ animationDelay: "0.4s" }}>
               <p className="font-mono text-[12px] text-muted">Companies AI names that rank on Google</p>
               <p className="mt-2 font-display text-[1.65rem] leading-none tracking-tight">34% to 54%</p>
-              <p className="mt-1.5 text-[12.5px] leading-snug text-muted">From our 96-run citation study</p>
+              <p className="mt-1.5 text-[12.5px] leading-snug text-muted">From my 96-run AI search study</p>
             </div>
           </div>
         </div>
@@ -309,11 +307,10 @@ export default function RemodelingPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="text-[17.5px] leading-relaxed">
-              Home remodeling SEO gets a remodeling company found when homeowners search for a kitchen, bathroom,
-              basement or whole-home remodel in the towns it serves, and named when they ask an AI assistant who to
-              hire. It comes down to four things: a page for each kind of remodel and each town you want work in,
-              project pages built from real jobs, a Google Business Profile that&rsquo;s set up right, and tracking
-              that ties booked consults back to the search that started them.
+              Home remodeling SEO gets your company found when homeowners search for a kitchen, bathroom, basement
+              or whole-home remodel near them. It also gets you named when they ask AI who to hire. It comes down to
+              four things: a page for each kind of remodel and each town, pages for real finished jobs, a Google
+              Business Profile that&rsquo;s set up right, and tracking that counts every consult.
             </p>
             <ul className="mt-7 flex flex-wrap gap-2" aria-label="Who it's for">
               {WHO.map((w) => (
@@ -330,7 +327,7 @@ export default function RemodelingPage() {
       <section className="section section-tint">
         <div className="container-pad">
           <Reveal className="stage-head">
-            <p className="eyebrow">What we do for remodelers</p>
+            <p className="eyebrow">What I do for remodelers</p>
             <h2 className="t-h2 mt-5">Six things every remodeling site needs</h2>
           </Reveal>
           <div data-anim="cards" className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -352,8 +349,8 @@ export default function RemodelingPage() {
             <p className="eyebrow">The pages</p>
             <h2 className="t-h2 mt-5 max-w-[20ch]">Remodeling website pages: one per remodel, per town, per finished job</h2>
             <p className="t-lead mt-5 max-w-[56ch]">
-              Most remodeling sites have a homepage, a services page and a gallery. Homeowners search for something
-              more specific than that, and so do the assistants answering them.
+              Most remodeling sites have a homepage, a services page and a gallery. That&rsquo;s it. Homeowners search
+              for something more specific, and so does AI.
             </p>
             <ul className="mt-8 border-t border-line">
               {[
@@ -422,8 +419,8 @@ export default function RemodelingPage() {
             </p>
             <h2 className="t-h2 mt-5">What homeowners ask AI before they hire a remodeler</h2>
             <p className="t-lead mt-4 max-w-[62ch]">
-              ChatGPT, Claude, Perplexity and Google&rsquo;s AI Overviews answer these from pages they can read and
-              businesses other sites mention. Each question below needs a page on your site that answers it plainly.
+              ChatGPT, Claude, Perplexity and Google&rsquo;s AI answer these using pages they can read, and businesses
+              other sites mention. Each question below needs a page on your site with a plain answer.
             </p>
           </Reveal>
           <div className="card mt-10 overflow-hidden">
@@ -488,11 +485,10 @@ export default function RemodelingPage() {
             <p className="eyebrow">What it costs</p>
             <h2 className="t-h2 mt-5">Remodeling SEO pricing, on the page</h2>
           </Reveal>
-          <div data-anim="cards" className="mt-10 grid gap-5 md:grid-cols-3">
+          <div data-anim="cards" className="mx-auto mt-10 grid max-w-[880px] gap-5 md:grid-cols-2">
             {[
-              { p: tracking, href: "/pricing#tracking", line: "Calls and consult forms counted in GA4. You pay after you see it working." },
-              { p: sprint, href: "/pricing#sprint", line: "Tracking, speed, schema, Business Profile and fixes, done once." },
-              { p: growth, href: "/pricing#monthly", line: "Two new service, town or project pages a month, plus Business Profile upkeep." },
+              { p: audit, href: "/pricing#audit", line: "A written list of what's costing you consults, worst first, with a recorded walkthrough." },
+              { p: plan, href: "/pricing#monthly", line: "Site fixes, call and consult tracking, two new service, town or project pages a month, plus Business Profile upkeep." },
             ].map(({ p, href, line }) => (
               <div key={p.key} className={`flex flex-col p-7 sm:p-8 ${p.pick ? "card-dark shadow-float" : "card"}`}>
                 <p className="text-[14px] font-medium text-muted">{p.kicker}</p>
@@ -513,7 +509,7 @@ export default function RemodelingPage() {
             <Link href="/ai-search-optimization" className="text-ink underline underline-offset-4">
               AI search optimization
             </Link>{" "}
-            is {startup.price} a month, no contract. Monthly local plans have a three-month minimum.
+            is an add-on to the SEO plan, ${startup.amount} more a month, with no extra contract. The SEO plan has a three-month minimum.
           </p>
           <div className="mt-5 flex justify-center">
             <GuaranteeLine />
@@ -528,9 +524,9 @@ export default function RemodelingPage() {
             <p className="eyebrow">The closest proof</p>
             <h2 className="t-h2 mt-5">The same SEO work on a roofing contractor&rsquo;s site</h2>
             <p className="t-lead mt-4 max-w-[62ch]">
-              We don&rsquo;t have a remodeler&rsquo;s Search Console to open up for you yet. The nearest match is this
-              roofer: a homeowner making a big decision about their house, and the same town pages, Business Profile
-              work and tracking. More on the{" "}
+              I don&rsquo;t have a remodeler&rsquo;s Google data to show you yet. The closest match is this roofer:
+              a homeowner making a big decision about their house, and the same town pages, Business Profile work and
+              tracking. More on the{" "}
               <Link href="/roofing-seo" className="text-ink underline underline-offset-4">roofing SEO page</Link> and the{" "}
               <Link href="/work" className="text-ink underline underline-offset-4">work page</Link>.
             </p>

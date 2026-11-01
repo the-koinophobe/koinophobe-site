@@ -1,24 +1,24 @@
 import Image from "next/image";
-import { BarChart3, TrendingUp } from "lucide-react";
+import { TrendingUp } from "lucide-react";
 import { projects, type Project } from "@/lib/content";
-import { monthly as gscMonthly } from "@/lib/gsc";
 import { CountUp } from "./CountUp";
 import { RankRow } from "./CaseSpark";
 
 /*
  * The cards around the home hero: client sites as tilted polaroids, plus the
- * two Search Console figures that used to float over the hero photo.
+ * roofer's Search Console figure.
  *
  * Two layouts from one list. From xl up the cards hang off both sides of the
  * centred headline and drift outward as the page scrolls. Below that there's
  * no room at the sides, so they gather into a fan under the buttons and the
- * two stat cards sit side by side beneath it.
+ * stat card sits beneath it.
  *
  * Captions follow the same rule as the wall: a client we can't name shows its
  * trade, never its name.
  */
 
-const PICKS = ["Over The Table Top", "HH Roofing & Repairs", "Tint Lordz Auto Spa", "Brevard Pool Deck Repair"];
+// Service businesses only: the hero promises service businesses, so its proof should match.
+const PICKS = ["HH Roofing & Repairs", "Tint Lordz Auto Spa", "Brevard Pool Deck Repair", "Pro Star Lawn Service"];
 const shown = PICKS.map((n) => projects.find((p) => p.name === n)).filter(Boolean) as Project[];
 const caption = (p: Project) => (p.named ? p.name : p.sector);
 
@@ -58,32 +58,6 @@ function RoofingStat() {
   );
 }
 
-function ClinicStat() {
-  const clinic = gscMonthly.myofascial;
-  const max = Math.max(...clinic.map(([, v]) => v));
-  return (
-    <div className="stat-card">
-      <p className="flex items-center gap-2 text-[12.5px] font-medium text-muted">
-        <BarChart3 size={15} aria-hidden className="flex-none text-brand" />
-        Pain clinic, clicks per month
-      </p>
-      <div className="mt-3 flex h-[46px] items-end gap-[3px]" aria-hidden>
-        {clinic.map(([m, v], i) => (
-          <span
-            key={i}
-            className="flex-1 rounded-t-[2px] bg-brand"
-            style={{ height: `${Math.max(4, (v / max) * 100)}%`, opacity: i === clinic.length - 1 ? 0.35 : 0.35 + (v / max) * 0.65 }}
-            title={`${m}: ${v}`}
-          />
-        ))}
-      </div>
-      <p className="mt-2 text-[12.5px] text-muted">
-        <span className="font-medium text-ink">4 to 104</span> a month, from its own Search Console
-      </p>
-    </div>
-  );
-}
-
 /** xl and up: cards hung around the headline. Only one of the two layouts is ever displayed. */
 export function HeroScatter() {
   return (
@@ -105,11 +79,6 @@ export function HeroScatter() {
       <div className="scatter-drift pointer-events-auto absolute bottom-[4%] left-[17%] w-[236px]" style={{ ["--dx" as string]: "-30px", ["--dy" as string]: "40px" }}>
         <div className="scatter-in" style={{ ["--rot" as string]: "-3deg", animationDelay: "0.7s" }}>
           <RoofingStat />
-        </div>
-      </div>
-      <div className="scatter-drift pointer-events-auto absolute bottom-[3%] right-[16%] w-[256px]" style={{ ["--dx" as string]: "30px", ["--dy" as string]: "40px" }}>
-        <div className="scatter-in" style={{ ["--rot" as string]: "3deg", animationDelay: "0.8s" }}>
-          <ClinicStat />
         </div>
       </div>
     </div>
@@ -135,12 +104,9 @@ export function HeroFan() {
           </div>
         ))}
       </div>
-      <div className="mx-auto mt-8 grid max-w-[640px] gap-3 text-left sm:grid-cols-2">
+      <div className="mx-auto mt-8 max-w-[320px] text-left">
         <div className="scatter-in" style={{ ["--rot" as string]: "-1.5deg", animationDelay: "0.6s" }}>
           <RoofingStat />
-        </div>
-        <div className="scatter-in" style={{ ["--rot" as string]: "1.5deg", animationDelay: "0.7s" }}>
-          <ClinicStat />
         </div>
       </div>
     </div>

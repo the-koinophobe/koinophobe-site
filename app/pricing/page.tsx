@@ -7,16 +7,16 @@ import { BookCta, BookNote, EmailCta } from "@/components/Cta";
 import { MobileCta } from "@/components/MobileCta";
 import { Reveal } from "@/components/Reveal";
 import { Stagger } from "@/components/Stagger";
-import { guarantee, monthly, oneTime, startup, type Plan } from "@/lib/pricing";
+import { free, guarantee, plan, startup, withAi, type Plan } from "@/lib/pricing";
 import { site } from "@/lib/site";
 import { FaqList, FaqSchema } from "@/components/Faq";
 
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "SEO pricing for home service businesses",
+  title: "SEO pricing for service businesses",
   description:
-    "SEO agency prices: a $300 tracking fix, a $750 site audit, monthly plans from $600, and Google and AI search at $1,000 a month.",
+    "SEO for service businesses: one plan at $500 a month, free audits, and Google and AI search for $300 more. Money-back guarantee.",
   alternates: { canonical: "/pricing" },
 };
 
@@ -33,25 +33,33 @@ const TERMS = [
   },
   {
     icon: <CalendarClock size={19} aria-hidden />,
-    t: "3 months minimum on home service plans.",
-    b: "SEO takes that long to show up in Google. After that it's month to month, with 30 days' notice to cancel. The Search + AI plan has no minimum: either side can stop with 30 days' notice.",
+    t: "3 months minimum on the SEO plan.",
+    b: "SEO takes that long to show up in Google. After that it's month to month, with 30 days' notice to cancel. The AI search add-on has no extra minimum: stop it any time with 30 days' notice.",
   },
   {
     icon: <Landmark size={19} aria-hidden />,
     t: "Simple invoicing.",
-    b: "Pay by ACH bank transfer. One-time projects are invoiced up front, monthly plans at the start of each month.",
+    b: "Pay by ACH bank transfer, at the start of each month. The audit and the intro call are never invoiced.",
   },
   {
     icon: <Ban size={19} aria-hidden />,
     t: "Not included.",
-    b: "Ad spend and ad management. Long-form articles are only in the Search + AI plan. If you need something else, we'll say so up front and point you to someone.",
+    b: "Ad spend and ad management. Long-form articles are only in the AI search add-on. If you need something else, I'll say so up front and point you to someone good.",
   },
 ];
 
 const FAQ = [
   {
-    q: "Which one do I need?",
-    a: "If you just want your calls and forms counted, the $300 Tracking Fix. If you don't know what else is wrong, start with the audit. If you know what's broken and want it fixed once, the Setup Sprint. If you want someone on it every month, Growth. The intro call is free if you'd rather ask us.",
+    q: "What do I get for $500 a month?",
+    a: `Everything, every month. I fix your site and count every call and form. I build 2 new service or town pages. I keep your Google Business Profile up to date. And you get a one-page report and a short call. There's only one plan, so there's nothing to choose. Want to show up in ChatGPT too? Add AI search for $${startup.amount} more a month, $${withAi.toLocaleString("en-US")} in total.`,
+  },
+  {
+    q: "Is the audit really free?",
+    a: "Yes. In 5 business days you get a written list of what's costing you calls, a check of your tracking and Business Profile, and a recorded video walkthrough. You keep it whether you hire me or not.",
+  },
+  {
+    q: "Why does it cost less than most agencies?",
+    a: "No account managers, no sales team and no office. You pay for the work, and I'm the one doing it. You can see every change in your own accounts. If you're not happy within 30 days of your first payment, you get all of it back.",
   },
   {
     q: "Is there a money-back guarantee?",
@@ -59,15 +67,15 @@ const FAQ = [
   },
   {
     q: "Do you guarantee rankings?",
-    a: "No, and be careful with anyone who does. Nobody controls Google. What we guarantee is your money: if you're not happy within 30 days of your first payment, you get all of it back. After that you get the work in your plan done every month, and a report that shows what changed and what it did to your clicks and calls.",
+    a: "No, and be careful with anyone who does. Nobody controls Google. What I guarantee is your money: if you're not happy within 30 days of your first payment, you get all of it back. After that you get the work in your plan done every month, and a report that shows what changed and what it did to your clicks and calls.",
   },
   {
     q: "What happens if I cancel?",
-    a: "You keep everything: the accounts, the pages, the tracking. Give us 30 days' notice after the first three months and we'll hand it all over in order.",
+    a: "You keep everything: the accounts, the pages, the tracking. Give me 30 days' notice after the first three months and I'll hand it all over, neat and tidy.",
   },
   {
-    q: "Do you only work with home service businesses?",
-    a: "Yes. Roofers, remodelers, pool deck, lawn, shutter, plumbing, HVAC and other home service companies. The Search + AI plan, $1,000 a month, is for home service businesses that want to show up in AI answers as well as on Google.",
+    q: "What kinds of businesses do you work with?",
+    a: `Local service businesses that customers find on Google: roofers, remodelers, pool and lawn care, plumbing and HVAC, auto detailing and window tint, clinics and more. The AI search add-on, $${startup.amount} more a month on top of the SEO plan, is for service businesses that want to show up in AI answers as well as on Google.`,
   },
 ];
 
@@ -79,12 +87,10 @@ function PlanCard({ p }: { p: Plan }) {
     >
       <div className="flex min-h-[28px] items-center justify-between gap-3">
         <span className="text-[14px] font-medium text-muted">{p.kicker}</span>
-        {p.pick && <span className="sticker rotate-[4deg]">Most clients</span>}
       </div>
       <div>
         <h3 className="t-h3 !text-[1.5rem]">{p.name}</h3>
         <p className="mt-3 flex items-baseline gap-2">
-          {p.from && <span className="text-[15px] text-muted">from</span>}
           <span className="tnum font-display text-[2.6rem] font-extrabold leading-none tracking-tight">
             {p.price}
           </span>
@@ -114,7 +120,7 @@ const offer = (p: Plan) => ({
         priceSpecification: {
           "@type": "UnitPriceSpecification",
           priceCurrency: "USD",
-          ...(p.from ? { minPrice: p.amount } : { price: p.amount }),
+          price: p.amount,
           unitCode: "MON",
           referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" },
         },
@@ -130,8 +136,8 @@ const pricingLd = {
   name: "Koinophobe pricing",
   url: "https://koinophobe.com/pricing",
   itemListElement: [
-    ...oneTime.map(offer),
-    ...monthly.map(offer),
+    ...free.map(offer),
+    offer(plan),
     offer(startup),
   ],
 };
@@ -151,12 +157,11 @@ export default function PricingPage() {
           <Reveal className="mx-auto max-w-[820px]">
             <p className="eyebrow">Pricing</p>
             <h1 className="t-h1 mx-auto mt-6 max-w-[20ch]">
-              SEO pricing for home service businesses, before the call
+              SEO pricing for service businesses, before the call
             </h1>
             <p className="t-lead mx-auto mt-6 max-w-[58ch]">
-              Every price we charge is on this page, and your first payment on any of them is covered by a 100%
-              money-back guarantee. If you&rsquo;re not sure which one fits, the intro call is free and we&rsquo;ll
-              tell you.
+              One plan, {plan.price} a month. The audit is free. Your first payment is covered by a 100%
+              money-back guarantee. Not sure it fits? The intro call is free, and I&rsquo;ll tell you straight.
             </p>
             <div className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
               <BookCta from="pricing_hero" />
@@ -181,11 +186,11 @@ export default function PricingPage() {
 
       <section className="container-pad pt-24 sm:pt-32">
         <Reveal className="stage-head">
-          <h2 className="t-group">One-time SEO audits and fixes</h2>
-          <p className="t-lead mt-3">A free call, an audit, or a one-off fix.</p>
+          <h2 className="t-group">Free SEO audit and intro call</h2>
+          <p className="t-lead mt-3">Find out what&rsquo;s wrong before you pay anything.</p>
         </Reveal>
-        <Stagger className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {oneTime.map((p) => (
+        <Stagger className="mx-auto mt-12 grid max-w-[880px] gap-4 md:grid-cols-2">
+          {free.map((p) => (
             <PlanCard key={p.key} p={p} />
           ))}
         </Stagger>
@@ -193,15 +198,13 @@ export default function PricingPage() {
 
       <section id="monthly" className="container-pad scroll-mt-28 pt-24 sm:pt-32">
         <Reveal className="stage-head">
-          <h2 className="t-group">Monthly SEO plans</h2>
-          <p className="t-lead mt-3">Someone on it every month, with a report you can read.</p>
+          <h2 className="t-group">The monthly SEO plan</h2>
+          <p className="t-lead mt-3">One plan with everything in it, and a report you can read.</p>
           <p className="mt-4 inline-flex rounded-full border border-line bg-card px-3.5 py-1.5 text-[14px] font-medium">3-month minimum, then month to month</p>
         </Reveal>
-        <Stagger className="mt-12 grid items-stretch gap-4 md:grid-cols-3">
-          {monthly.map((p) => (
-            <PlanCard key={p.key} p={p} />
-          ))}
-        </Stagger>
+        <div data-anim="rise" className="mx-auto mt-12 max-w-[560px]">
+          <PlanCard p={plan} />
+        </div>
         <p className="mt-6 text-center text-[15px] text-muted">
           What the plans look like for your trade:{" "}
           <Link href="/roofing-seo" className="text-ink underline underline-offset-4">
@@ -217,9 +220,9 @@ export default function PricingPage() {
 
       <section id="ai-search" className="container-pad scroll-mt-28 pt-24 sm:pt-32">
         <Reveal className="stage-head">
-          <h2 className="t-group">AI search optimization</h2>
-          <p className="t-lead mt-3">For home service businesses that want to be named by ChatGPT, Claude, Perplexity and Google&rsquo;s AI.</p>
-          <p className="mt-4 inline-flex rounded-full border border-line bg-card px-3.5 py-1.5 text-[14px] font-medium">No contract, 30 days&rsquo; notice to stop</p>
+          <h2 className="t-group">AI search optimization add-on</h2>
+          <p className="t-lead mt-3">Add it to the SEO plan to get named by ChatGPT, Claude, Perplexity and Google&rsquo;s AI.</p>
+          <p className="mt-4 inline-flex rounded-full border border-line bg-card px-3.5 py-1.5 text-[14px] font-medium">No extra contract, 30 days&rsquo; notice to stop</p>
         </Reveal>
         <div id={startup.key} data-anim="rise" className="card-dark mt-12 grid scroll-mt-28 gap-8 p-7 sm:p-10 lg:grid-cols-[0.9fr_1.4fr] lg:gap-12">
           <div className="flex flex-col gap-5">
@@ -304,8 +307,8 @@ export default function PricingPage() {
               </span>
               <p className="mt-4 text-[17px] font-semibold">Not ready for a call?</p>
               <p className="mt-1.5 max-w-[46ch] text-[15px] text-muted">
-                Email us your website and we&rsquo;ll send a free 5-minute screen recording of what
-                we&rsquo;d fix first.
+                Email me your website and I&rsquo;ll send a free 5-minute screen recording of what
+                I&rsquo;d fix first.
               </p>
               <EmailCta
                 label="Ask for a video review"

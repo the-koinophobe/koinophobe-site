@@ -69,4 +69,4 @@ When it's sold as the main deliverable, or priced as if it moves rankings. If an
 
 If you already have an llms.txt, leave it. If you don't, don't rush. Read [how to rank in ChatGPT](/notes/how-to-rank-in-chatgpt) for the steps that have evidence behind them.
 
-Our [AI search optimization](/ai-search-optimization) service starts with the access fixes that work by definition and measures everything after. $1,000 a month, no contract.
+Our [AI search optimization](/ai-search-optimization) service starts with the access fixes that work by definition and measures everything after. It's a $300-a-month add-on to our SEO plan.

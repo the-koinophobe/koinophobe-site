@@ -92,7 +92,7 @@ export default async function OgImage() {
             letterSpacing: -3,
           }}
         >
-          <div style={{ display: "flex" }}>For home service businesses</div>
+          <div style={{ display: "flex" }}>For service businesses</div>
           <div style={{ display: "flex" }}>tired of SEO they</div>
           {/* Satori strips leading and trailing whitespace inside text nodes,
               so the spaces around the colored words come from flex gap. */}
@@ -110,7 +110,7 @@ export default async function OgImage() {
 
         <div style={{ display: "flex", alignItems: "center", gap: 14, fontFamily: small, fontSize: 24, color: MUTED }}>
           <div style={{ display: "flex", width: 12, height: 12, borderRadius: 99, backgroundColor: RED }} />
-          SEO agency for home services &middot; 30+ sites &middot; koinophobe.com
+          SEO agency for service businesses &middot; 30+ sites &middot; koinophobe.com
         </div>
       </div>
     ),

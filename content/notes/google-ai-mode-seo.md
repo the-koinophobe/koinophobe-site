@@ -69,4 +69,4 @@ Search Console counts AI Mode clicks under the Web search type without separatin
 
 Take your most important service and write down every question a buyer asks before paying for it. If your site answers fewer than half, that's your content plan for the quarter. [Content that AI cites](/notes/content-ai-cites) covers how to write each page.
 
-Our [AI search optimization](/ai-search-optimization) service builds exactly this: the question map, 12 in-depth pages a month, and tracking across Google's AI features and the chat assistants. $1,000 a month, no contract.
+Our [AI search optimization](/ai-search-optimization) service builds exactly this: the question map, 4 in-depth pages a month, and tracking across Google's AI features and the chat assistants. It's a $300-a-month add-on to our SEO plan.

@@ -87,4 +87,4 @@ Every profile you control (Facebook, LinkedIn, Instagram, Yelp, Business Profile
 
 In Search Console, open the Performance report, filter queries containing your name, and compare the last three months with the three before. Watch average position and clicks. We can't promise how long Google takes to change how it reads a name, so check it monthly and leave the changes in place.
 
-If you want someone to check all of this on your site, start with the Site Audit on our [pricing page](/pricing). The $750 is credited in full if a monthly plan starts within 30 days.
+If you want someone to check all of this on your site, start with the Site Audit on our [pricing page](/pricing). It's free.

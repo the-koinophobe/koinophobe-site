@@ -66,4 +66,4 @@ Where speed earns its keep is with the visitor. Someone standing in a driveway, 
 
 So fix the big problems first, usually oversized images and scripts you don't need. Then put the time into your pages and your tracking.
 
-Speed fixes are part of the Setup Sprint on [our pricing page](/pricing). If your site fails Core Web Vitals and you're not sure why, [send us the URL](/contact) and we'll tell you what's weighing it down.
+Speed fixes are part of the $500-a-month SEO plan on [our pricing page](/pricing). If your site fails Core Web Vitals and you're not sure why, [send us the URL](/contact) and we'll tell you what's weighing it down.

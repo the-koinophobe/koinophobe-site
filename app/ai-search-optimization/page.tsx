@@ -29,9 +29,9 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   // Absolute: with " · Koinophobe" on the end it runs past what Google shows.
-  title: { absolute: "AI search optimization for home service businesses" },
+  title: { absolute: "AI search optimization for service businesses" },
   description:
-    "Get your home service business named by ChatGPT, Perplexity and Google's AI Overviews. Crawler fixes, cited pages, tracking. $1,000 a month, no contract.",
+    "Get your service business named by ChatGPT, Perplexity and Google's AI Overviews. Crawler fixes, cited pages, tracking. $300 a month on top of SEO.",
   alternates: { canonical: "/ai-search-optimization" },
 };
 
@@ -67,8 +67,8 @@ const FACTS = [
 
 const LOOP = [
   { icon: <Gauge size={20} aria-hidden />, t: "Measure", b: "Your customers' questions, asked across ChatGPT, Claude, Perplexity and Google AI Overviews, three runs each, every source logged." },
-  { icon: <Wrench size={20} aria-hidden />, t: "Fix", b: "50+ fixes a month: AI crawler access, text hidden behind JavaScript, schema, titles, listings, internal links." },
-  { icon: <FileText size={20} aria-hidden />, t: "Publish", b: "12 in-depth pages a month answering what customers ask: costs, comparisons, what to expect, is it worth it." },
+  { icon: <Wrench size={20} aria-hidden />, t: "Fix", b: "20+ fixes a month: AI crawler access, text hidden behind JavaScript, schema, titles, listings, internal links." },
+  { icon: <FileText size={20} aria-hidden />, t: "Publish", b: "4 in-depth pages a month answering what customers ask: costs, comparisons, what to expect, is it worth it." },
   { icon: <RefreshCw size={20} aria-hidden />, t: "Measure again", b: "Same questions, same method, at month end. You see who got named and cited, against last month." },
 ];
 
@@ -97,19 +97,19 @@ const GUIDES: { title: string; slugs: string[] }[] = [
 ];
 
 const CALL = [
-  "We check your robots.txt, your rendering and what the assistants say about your business before we talk.",
-  "You get the first few changes we'd make, in order.",
-  "If it isn't a fit, we'll tell you that on the call.",
+  "I check whether AI tools can read your site, and what they say about your business, before we talk.",
+  "You get the first few changes I'd make, in order.",
+  "If it isn't a fit, I'll tell you on the call.",
 ];
 
 const FAQ: FaqItem[] = [
   {
     q: "What is AI search optimization?",
-    a: "It's the work of getting your business named and linked when customers ask AI assistants like ChatGPT, Claude, Perplexity and Google's AI Overviews for a recommendation. It's also called GEO, AEO or AI SEO. Most of it builds on SEO; the new parts are AI crawler access and measuring the answers.",
+    a: "It gets your business named when customers ask AI tools like ChatGPT, Claude, Perplexity or Google's AI Overviews who to hire. People also call it GEO, AEO or AI SEO. Most of it is regular SEO. The new parts are making sure AI tools can read your site, and checking what they say.",
   },
   {
     q: "Can you guarantee ChatGPT will recommend my business?",
-    a: "No, and nobody honest can. In our own study, ChatGPT kept only 4.5% of its cited pages across three runs of the same question. What we can do is make sure assistants can read your site, that you rank, and that you have pages worth quoting, then measure the answers every month with repeated runs.",
+    a: "No, and nobody honest can. In my own study, ChatGPT kept only 4.5% of its cited pages when I asked the same question three times. What I can do is make sure AI tools can read your site, that you rank on Google, and that you have pages worth quoting. Then I check the answers every month.",
   },
   {
     q: "How long does AI search optimization take to work?",
@@ -117,15 +117,15 @@ const FAQ: FaqItem[] = [
   },
   {
     q: "Do I still need regular SEO?",
-    a: "Yes. A third to half of the companies AI assistants cited in our study also ranked in Google's top ten for the same question. The plan includes the SEO work, so you aren't paying twice.",
+    a: "Yes. A third to half of the companies AI assistants cited in my study also ranked in Google's top ten for the same question. The plan includes the SEO work, so you aren't paying twice.",
   },
   {
     q: "How much does it cost?",
-    a: "$1,000 a month, no contract, and the first month is covered by a 100% money-back guarantee for 30 days. If you're not satisfied later on, tell us and we stop 30 days later. Every month includes citation tracking across four assistants with three runs each, 12 in-depth pages, 50+ fixes, a Friday changelog and a month-end report.",
+    a: "It's an add-on to the $500 SEO plan: $300 more a month, $800 for both. There's no extra contract, and the first month is covered by a 100% money-back guarantee for 30 days. If you're not happy later on, tell me and I stop the add-on 30 days later. Every month includes citation tracking across four assistants with three runs each, 4 in-depth pages, 20+ fixes, a Friday changelog and a month-end report.",
   },
   {
-    q: "What if I run a local home service business?",
-    a: "This plan works for you, and so do our local plans, which focus on Google Maps, town pages and call tracking. The intro call is free and we'll tell you which fits.",
+    q: "What if I run a local service business?",
+    a: "Yes, that's who it's for. The SEO plan covers Google Maps, town pages and call tracking, and the add-on covers AI answers. The audit and the intro call are free, and I'll tell you straight whether the add-on is worth it for you yet.",
   },
 ];
 
@@ -178,10 +178,9 @@ export default function AiSearchPage() {
               AI search optimization for businesses whose customers ask ChatGPT <span className="text-brand">before they call</span>.
             </h1>
             <p className="t-lead mt-6 max-w-[58ch]">
-              Koinophobe is an SEO agency that gets businesses named and cited by ChatGPT, Claude, Perplexity, Gemini and
-              Google&rsquo;s AI Overviews, and readable by AI agents like Manus. We fix what keeps assistants from
-              reading your site, write the pages they quote, and measure the answers every month with a method
-              we&rsquo;ve published.
+              I get businesses named by ChatGPT, Claude, Perplexity, Gemini and Google&rsquo;s AI Overviews, and
+              readable by AI agents like Manus. I fix what keeps AI tools from reading your site, write the pages
+              they quote, and check the answers every month. My method is published, so you can check it too.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <BookCta from="ai_hero" />
@@ -191,7 +190,7 @@ export default function AiSearchPage() {
               </a>
             </div>
             <p className="mt-4 text-[13.5px] text-muted">
-              {startup.price} a month &middot; no contract &middot; 100% money-back guarantee &middot; {seatsLine}
+              ${startup.amount} more a month on the SEO plan &middot; no extra contract &middot; 100% money-back guarantee &middot; {seatsLine}
             </p>
           </Reveal>
           <div className="relative mx-auto w-full max-w-[560px] lg:mx-0">
@@ -208,7 +207,7 @@ export default function AiSearchPage() {
             <div className="float-card float-in bottom-[-6%] left-0 w-[250px] p-4 sm:left-[-8%]" style={{ animationDelay: "0.4s" }}>
               <p className="font-mono text-[12px] text-muted">Companies AI cites that rank on Google</p>
               <p className="mt-2 font-display text-[1.65rem] leading-none tracking-tight">34% to 54%</p>
-              <p className="mt-1.5 text-[12.5px] leading-snug text-muted">From our 96-run citation study</p>
+              <p className="mt-1.5 text-[12.5px] leading-snug text-muted">From my 96-run AI search study</p>
             </div>
           </div>
         </div>
@@ -248,8 +247,8 @@ export default function AiSearchPage() {
               <p className="eyebrow">Free check</p>
               <h2 className="t-h2 mt-5">Can ChatGPT read your website?</h2>
               <p className="t-lead mt-4 max-w-[60ch]">
-                Type your domain. We read your robots.txt for ten search and AI crawlers, then look at your homepage
-                the way a crawler that doesn&rsquo;t run JavaScript sees it. Ten seconds, nothing stored.
+                Type your website. My checker sees whether ten search and AI bots are allowed in, then reads your
+                homepage the way those bots do. Ten seconds, nothing stored.
               </p>
             </Reveal>
             <div className="mt-9">
@@ -263,11 +262,11 @@ export default function AiSearchPage() {
       <section className="section">
         <div className="container-pad grid grid-cols-[minmax(0,1fr)] gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
           <Reveal>
-            <p className="eyebrow">What we measured</p>
+            <p className="eyebrow">What I measured</p>
             <h2 className="t-h2 mt-5 max-w-[20ch]">Built on 96 AI searches, not on guesses</h2>
             <p className="t-lead mt-5 max-w-[56ch]">
-              On September 11, 2026 we asked ChatGPT, Claude, Perplexity and Google AI Overviews twelve buyer
-              questions, recorded every page they cited, and compared those pages with what Google ranked for the
+              On September 11, 2026 I asked ChatGPT, Claude, Perplexity and Google AI Overviews twelve buyer
+              questions. I saved every page they cited, then compared those pages with what Google ranked for the
               same questions. Every recommendation on this page comes from that, or from what the platforms
               document themselves.
             </p>
@@ -357,7 +356,7 @@ export default function AiSearchPage() {
                 ["No placement promises.", "Nobody controls what ChatGPT or Google shows. You get the work every month and a report that says what it did, limits included."],
                 ["Your rules apply.", "Anything that makes claims about your business goes to you before it publishes. Regulated fields get the same review as an ad."],
                 ["You own everything.", "Site, pages, accounts and the tracking sheet stay yours if we stop."],
-                ["Five seats.", "Nothing is outsourced, so we take five clients at a time."],
+                ["Five seats.", "I don't outsource anything, so I take five clients at a time."],
               ].map(([t, b]) => (
                 <div key={t} className="border-b border-line py-5">
                   <p className="text-[16.5px] font-medium">{t}</p>
@@ -384,8 +383,8 @@ export default function AiSearchPage() {
         <div className="container-pad">
           <Reveal className="stage-head">
             <p className="eyebrow">Free guides</p>
-            <h2 className="t-h2 mt-5">Everything we know about AI search, written down</h2>
-            <p className="t-lead mt-4 max-w-[60ch]">Do it yourself with these, or hand it to us. Either way, start with the first group.</p>
+            <h2 className="t-h2 mt-5">Everything I know about AI search, written down</h2>
+            <p className="t-lead mt-4 max-w-[60ch]">Do it yourself with these, or hand it to me. Either way, start with the first group.</p>
           </Reveal>
           <div className="mt-12 grid gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
             {groups.map((g) => (

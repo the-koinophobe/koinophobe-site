@@ -62,4 +62,4 @@ Use your real business name with no keywords added. "Smith Roofing" is fine; "Sm
 
 ## Where to start
 
-Open your profile and check three settings: the address (hidden if customers don't visit), the service areas (where you take jobs, within two hours), and the business name (your real one). The full setup is in our [Business Profile guide](/notes/google-business-profile-for-roofers). If you'd like it done for you along with the town pages, that's part of the Growth plan on our [pricing page](/pricing).
+Open your profile and check three settings: the address (hidden if customers don't visit), the service areas (where you take jobs, within two hours), and the business name (your real one). The full setup is in our [Business Profile guide](/notes/google-business-profile-for-roofers). If you'd like it done for you along with the town pages, that's part of the $500-a-month SEO plan on our [pricing page](/pricing).

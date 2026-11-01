@@ -6,9 +6,9 @@ import { notesPage, publishedNotes } from "@/lib/notes";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "SEO notes for home service businesses",
+  title: "SEO notes for service businesses",
   description:
-    "SEO notes for home service businesses: local SEO, technical SEO, AI search and call tracking, trade by trade.",
+    "SEO notes for service businesses: local SEO, technical SEO, AI search and call tracking, trade by trade.",
   alternates: { canonical: "/notes" },
 };
 
@@ -34,8 +34,8 @@ export default function NotesPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogLd) }} />
       <NotesListing
-        heading="SEO notes for home service businesses"
-        intro="What we'd tell you on the call anyway: how to get found on Google and in AI answers, how to count the leads it sends, and what's worth paying for. Written for owners, with real numbers where we have them."
+        heading="SEO notes for service businesses"
+        intro="What I'd tell you on a call anyway: how to get found on Google and in AI answers, how to count the calls it sends, and what's worth paying for. Written for owners, with real numbers where I have them."
         items={items}
         page={1}
         pages={pages}

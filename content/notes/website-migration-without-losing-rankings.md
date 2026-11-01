@@ -72,4 +72,4 @@ Do all of the above, plus:
 
 Before you launch, set up [the tracking that shows whether leads held up](/notes/rankings-without-tracking), since rankings alone won't tell you.
 
-If a redesign is coming up, we can build the redirect map and run the launch checks with your developer. [Get in touch](/contact), or see the Site Audit and Setup Sprint on [our pricing page](/pricing).
+If a redesign is coming up, we can build the redirect map and run the launch checks with your developer. [Get in touch](/contact), or see the free Site Audit and the SEO plan on [our pricing page](/pricing).

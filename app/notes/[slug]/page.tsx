@@ -55,7 +55,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
   const topic = topics.find((t) => t.key === note.topic)!;
   // AI search notes get calls to action for the AI search offer instead of the local plans.
   const isAi = topic.key === "ai";
-  const audience = isAi ? "home service businesses that want to show up in AI answers" : "home service businesses";
+  const audience = isAi ? "service businesses that want to show up in AI answers" : "service businesses";
   // The service page closest to what the note is about, so the sidebar points somewhere specific.
   const service = serviceForNote(note.slug, topic.key);
   const related = relatedNotes(note, 3);
@@ -187,7 +187,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
                   <Link href="/work" className="text-ink underline underline-offset-4">
                     work page
                   </Link>
-                  . Businesses also hire us to get found and cited by ChatGPT, Perplexity, Gemini, Claude and AI agents like Manus.
+                  . Businesses also hire me to get found and named by ChatGPT, Perplexity, Gemini, Claude and AI agents like Manus.
                 </p>
               </div>
             </aside>
@@ -226,8 +226,8 @@ export default function NotePage({ params }: { params: { slug: string } }) {
                 <p className="t-h3 !text-[1.3rem]">{isAi ? "Want your business in the answer?" : "Want this done on your site?"}</p>
                 <p className="mt-2 text-[14.5px] leading-relaxed text-muted">
                   {isAi
-                    ? "Run the free AI crawler check, or book 20 minutes and we\u2019ll bring what the assistants say about your category."
-                    : "Book a free 20-minute call. We\u2019ll look at your site first and tell you what we\u2019d fix."}
+                    ? "Run the free AI crawler check, or book 20 minutes and I\u2019ll bring what the assistants say about your trade."
+                    : "Book a free 20-minute call. I\u2019ll look at your site first and tell you what I\u2019d fix."}
                 </p>
                 <div className="mt-5 flex flex-col gap-2.5">
                   <BookCta from="note_sidebar" size="md" tone="light" className="w-full" />
@@ -270,9 +270,9 @@ export default function NotePage({ params }: { params: { slug: string } }) {
         call={
           isAi
             ? [
-                "We check your robots.txt, your rendering and what the assistants say about your category before we talk.",
-                "You get the first few changes we'd ship, in order.",
-                "If it isn't a fit, we'll tell you that on the call.",
+                "I check whether AI tools can read your site, and what they say about your trade, before we talk.",
+                "You get the first few changes I'd make, in order.",
+                "If it isn't a fit, I'll tell you on the call.",
               ]
             : undefined
         }

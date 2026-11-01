@@ -39,8 +39,8 @@ export const topics: { key: TopicKey; label: string; title: string; blurb: strin
   {
     key: "ai",
     label: "AI search",
-    title: "AI search for home services",
-    blurb: "How ChatGPT, Claude, Perplexity and AI Overviews pick their sources, measured, and what a home service business can do to get named.",
+    title: "AI search for service businesses",
+    blurb: "How ChatGPT, Claude, Perplexity and AI Overviews pick their sources, measured, and what a service business can do to get named.",
   },
   {
     key: "strategy",

@@ -85,14 +85,14 @@ Since we're asking you to hold others to this, here are ours:
 4. Crawler access and answer tracking, on top of the SEO.
 5. Crawler access and rendering, in week one.
 6. We do, in your site or CMS.
-7. 12 in-depth pages a month, comparison and alternatives pages included.
+7. 4 in-depth pages a month, comparison and alternatives pages included.
 8. You review anything that makes claims about you.
 9. No.
 10. Harmless, not a priority.
 11. None. If you're not satisfied, tell us and we stop 30 days later.
 12. You own all of it.
 
-The plan is on our [AI search optimization](/ai-search-optimization) page, priced at $1,000 a month. [What that price covers](/notes/ai-seo-pricing).
+The plan is on our [AI search optimization](/ai-search-optimization) page, a $300-a-month add-on to our SEO plan. [What that price covers](/notes/ai-seo-pricing).
 
 ## Next steps
 

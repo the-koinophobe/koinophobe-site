@@ -115,7 +115,7 @@ export function SiteWall() {
     <div>
       <div className="stage-head">
         <p className="eyebrow">The wall</p>
-        <h2 className="t-h2 mx-auto mt-5 max-w-[22ch]">Thirty-plus local business sites we&rsquo;ve done SEO on.</h2>
+        <h2 className="t-h2 mx-auto mt-5 max-w-[22ch]">Thirty-plus local business sites I&rsquo;ve done SEO on.</h2>
         <p className="t-lead mt-5 max-w-[58ch]">
           {unnamed} of the {projects.length} below show without a name, most because they went out
           under an agency&rsquo;s brand. You can see the work, not the client.
@@ -140,7 +140,7 @@ export function SiteWall() {
       </div>
 
       <p className="mt-8 text-center text-[13.5px] text-muted">
-        {projects.length} sites &middot; {named} we can put a name to &middot; hover to wake them
+        {projects.length} sites &middot; {named} I can put a name to &middot; hover to wake them
       </p>
     </div>
   );

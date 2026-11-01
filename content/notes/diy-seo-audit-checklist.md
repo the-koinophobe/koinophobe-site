@@ -97,4 +97,4 @@ Then work from the top.
 
 ## When to get help
 
-If your list is short and the fixes are clear, you may not need anyone. If it's long, or the problems are technical (redirects, canonicals, rendering), that's where an audit pays for itself. Our Site Audit is $750, delivered in five business days, ranked by what affects calls, and credited in full if you start a monthly plan within 30 days. It's on the [pricing page](/pricing), and [what is technical SEO](/notes/what-is-technical-seo) covers the background for the checks above.
+If your list is short and the fixes are clear, you may not need anyone. If it's long, or the problems are technical (redirects, canonicals, rendering), that's where an audit pays for itself. Our Site Audit is free, delivered in five business days and ranked by what affects calls. It's on the [pricing page](/pricing), and [what is technical SEO](/notes/what-is-technical-seo) covers the background for the checks above.

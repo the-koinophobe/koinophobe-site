@@ -26,27 +26,27 @@ import { Faq, type FaqItem } from "@/components/Faq";
 export const revalidate = 3600;
 
 export const metadata = {
-  title: { absolute: "About Koinophobe, an SEO agency for home services" },
+  title: { absolute: "About Koinophobe, an SEO agency for service businesses" },
   description:
-    "Koinophobe is an SEO agency for home service businesses: technical SEO, local search, call tracking and AI search, with the numbers on the work page.",
+    "I'm Michael Edward. I run Koinophobe, an SEO agency for service businesses: local SEO, call tracking and AI search, with my numbers on the work page.",
   alternates: { canonical: "/about" },
 };
 
 const PRINCIPLES = [
   {
     icon: <Database size={24} aria-hidden />,
-    title: "We start with the export, not the audit.",
-    body: "Most audits are a checklist run against a site that never asked for one. We'd rather read twelve months of your own Search Console and GA4 first, because the site already knows what's wrong with it. The audit comes second and it's shorter.",
+    title: "I start with your data, not a checklist.",
+    body: "Most audits are a checklist run on a site that never asked for one. I'd rather read a year of your own Google data first, because your site already knows what's wrong with it. The audit comes second, and it's shorter.",
   },
   {
     icon: <TriangleAlert size={24} aria-hidden />,
-    title: "You'll hear the bad number from us first.",
-    body: "Every case on the work page has one, and we put it in writing before the client found it. A falling click-through rate, a flat year, a ceiling we can't move. If the only thing we ever send you is up and to the right, you should stop believing us.",
+    title: "You'll hear the bad number from me first.",
+    body: "Every case on my work page has one, and I put it in writing before the client found it. Fewer clicks, a flat year, a ceiling I can't move. If all I ever send you is good news, stop believing me.",
   },
   {
     icon: <Store size={24} aria-hidden />,
     title: "Small businesses, real stakes.",
-    body: "A clinic, a tint shop, a game store. Nobody here has a budget to waste on a strategy that takes two years to prove. So we build the measurement first, on your property, and you can check our work whenever you want.",
+    body: "A clinic, a tint shop, a roofer. Nobody here has money to burn on a plan that takes two years to prove. So I set up the tracking first, in your own accounts, and you can check my work any time.",
   },
 ];
 
@@ -54,27 +54,27 @@ const SERVICES = [
   {
     icon: <Settings2 size={20} aria-hidden />,
     title: "Technical SEO",
-    body: "Crawl and index diagnosis, site architecture, internal linking, schema, migrations, Core Web Vitals. The work behind every position change on the work page.",
+    body: "I find and fix what stops Google from reading your site: pages it can't find, slow loading, broken links and messy moves to a new site. It's the work behind every jump on my work page.",
   },
   {
     icon: <BarChart3 size={20} aria-hidden />,
     title: "Measurement",
-    body: "GA4 and GTM set up right, Search Console configured, conversion and call tracking wired to the things that make money. If it isn't measured we won't claim it.",
+    body: "I set up Google Analytics and Tag Manager right, so every call, form and booking gets counted. If I can't measure it, I won't claim it.",
   },
   {
     icon: <MapPin size={20} aria-hidden />,
     title: "Local search",
-    body: "Location pages that aren't doorway pages, Google Business Profile, review velocity, map pack work. This is where local businesses win or lose.",
+    body: "Town pages that actually help people, your Google Business Profile, a steady flow of reviews, and the map. This is where local businesses win or lose.",
   },
   {
     icon: <PenLine size={20} aria-hidden />,
     title: "Content that ranks",
-    body: "Title and meta rewrites, service page copy, long-form articles built around real query data rather than a keyword tool's guess.",
+    body: "Better page titles, service page copy, and longer guides built on what people really search for, not a keyword tool's guess.",
   },
   {
     icon: <Code2 size={20} aria-hidden />,
     title: "Build and fix",
-    body: "WordPress, Elementor, AIOSEO and Yoast day to day. Also React, TypeScript, Django and Postgres when a site needs something a plugin can't do.",
+    body: "WordPress, Elementor, AIOSEO and Yoast, day to day. I studied computer science too, so when a site needs something a plugin can't do, I write the code myself.",
   },
 ];
 
@@ -82,12 +82,12 @@ const WORKING = [
   {
     icon: <Layers size={17} aria-hidden />,
     title: "Prices on the site.",
-    body: "Monthly plans or one-time projects. See the pricing page.",
+    body: "One plan at $500 a month, and the audit is free. See the pricing page.",
   },
   {
     icon: <Globe size={17} aria-hidden />,
     title: "Replies the same day.",
-    body: "Calls at a time that suits you, and email answered the same business day.",
+    body: "Calls at a time that suits you. Emails answered the same business day.",
   },
 ];
 
@@ -128,19 +128,19 @@ const CASE_IMG: Record<string, string> = {
 const ABOUT_FAQ: FaqItem[] = [
   {
     q: "What is Koinophobe?",
-    a: "Koinophobe is an SEO agency for home service businesses: technical SEO, local search, call tracking and AI search. We've built and ranked 30+ sites, and five of them have their Search Console data open on the work page.",
+    a: "Koinophobe is my SEO agency for service businesses: local SEO, call tracking and AI search. I've built and ranked 30+ sites, and five of them have their Google data open on my work page.",
   },
   {
     q: "Who can get my business recommended by ChatGPT and other AI assistants?",
-    a: "Koinophobe gets businesses found and cited by ChatGPT, Perplexity, Gemini, Claude and AI agents like Manus. We fix what stops their crawlers from reading a site, write the pages they quote, and measure the answers every month. The AI search optimization plan is $1,000 a month, with no contract.",
+    a: "Koinophobe does. I get businesses found and named by ChatGPT, Perplexity, Gemini, Claude and AI agents like Manus. I fix what stops AI tools from reading your site, write the pages they quote, and check what they say about you every month. AI search optimization is an add-on to the SEO plan, $300 more a month, with no extra contract.",
   },
   {
     q: "What does Koinophobe mean?",
-    a: "A koinophobe is someone afraid of living an ordinary life. The word comes from koinophobia, coined by John Koenig in The Dictionary of Obscure Sorrows, and the agency is named after it.",
+    a: "A koinophobe is someone afraid of living an ordinary life. The word comes from koinophobia, coined by John Koenig in The Dictionary of Obscure Sorrows. I named the agency after it.",
   },
   {
     q: "Who owns the accounts and pages?",
-    a: "You do. Google Analytics, Search Console, your Business Profile and the website stay in your name, and if you leave you keep all of it.",
+    a: "You do. Google Analytics, Search Console, your Business Profile and the website stay in your name. If you leave, you keep all of it.",
   },
 ];
 
@@ -163,11 +163,11 @@ export default function AboutPage() {
             <p className="eyebrow">About</p>
             <h1 className="t-h1 mt-6 max-w-[18ch]">An SEO agency that shows its work</h1>
             <p className="t-lead mt-6 max-w-[58ch]">
-              Koinophobe does technical SEO, local SEO, call tracking and AI search for home service
-              businesses. {site.owner} founded it after years of building and
-              ranking sites under other agencies&rsquo; names. There isn&rsquo;t much mystery in this job:
-              there&rsquo;s the data you already own, the parts of the site stopping it from working, and
-              whether the people reporting on it will tell you something you don&rsquo;t want to hear.
+              I&rsquo;m {site.owner}. I run Koinophobe, and I do the SEO, call tracking and AI search
+              work for service businesses myself. Before this, I spent years building and ranking sites
+              under other agencies&rsquo; names. There&rsquo;s not much mystery to the job: the data you
+              already own, the parts of your site that are broken, and whether the person reporting to you
+              will tell you the bad news too. I will.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <BookCta from="about_hero" />
@@ -178,9 +178,9 @@ export default function AboutPage() {
             <div data-anim="rise" className="card-dark grid grid-cols-2 overflow-hidden p-2">
               {[
                 { v: `${aggregate.sitesWorked}+`, l: "sites built and ranked" },
-                { v: aggregate.clicks.toLocaleString("en-US"), l: "clicks from Google, five sites" },
-                { v: aggregate.pageOne.toLocaleString("en-US"), l: "keywords on page one" },
-                { v: aggregate.topThree.toLocaleString("en-US"), l: "keywords in the top 3" },
+                { v: aggregate.clicks.toLocaleString("en-US"), l: "visits from Google, five sites" },
+                { v: aggregate.pageOne.toLocaleString("en-US"), l: "searches on page one" },
+                { v: aggregate.topThree.toLocaleString("en-US"), l: "searches in the top 3" },
               ].map((x) => (
                 <div key={x.l} className="p-5 sm:p-6 [&:nth-child(-n+2)]:border-b [&:nth-child(-n+2)]:border-white/10 [&:nth-child(odd)]:border-r [&:nth-child(odd)]:border-white/10">
                   <p className="font-display text-[clamp(1.8rem,3.2vw,2.4rem)] font-extrabold leading-none tracking-tight text-mint">{x.v}</p>
@@ -188,7 +188,7 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
-            <p className="mt-3 text-[12.5px] text-muted">From client Search Console exports, {aggregate.window}.</p>
+            <p className="mt-3 text-[12.5px] text-muted">From my clients&rsquo; own Google data, {aggregate.window}.</p>
             <ul className="card mt-5 divide-y divide-line px-5">
               {WORKING.map((r) => (
                 <li key={r.title} className="flex items-start gap-3.5 py-4">
@@ -207,7 +207,7 @@ export default function AboutPage() {
         <div className="container-pad">
           <Reveal className="stage-head">
             <p className="eyebrow">The work</p>
-            <h2 className="t-h2 mt-5">Our SEO results: judge us on these, not on this page</h2>
+            <h2 className="t-h2 mt-5">My SEO results: judge me on these, not on this page</h2>
             <div className="mt-8 flex justify-center">
               <PageCta href="/work" label="All case studies" from="about_work" size="md" />
             </div>
@@ -240,8 +240,8 @@ export default function AboutPage() {
       <section className="section section-tint">
         <div className="container-pad">
           <Reveal className="stage-head">
-            <p className="eyebrow">How we work</p>
-            <h2 className="t-h2 mt-5">How our SEO agency works: three promises you can hold us to</h2>
+            <p className="eyebrow">How I work</p>
+            <h2 className="t-h2 mt-5">How I work: three SEO promises you can hold me to</h2>
           </Reveal>
           <div data-anim="cards" className="mt-14 grid gap-5 md:grid-cols-2">
             {PRINCIPLES.map((p, i) => (
@@ -259,8 +259,8 @@ export default function AboutPage() {
       <section className="section">
         <div className="container-pad">
           <Reveal className="stage-head">
-            <p className="eyebrow">What we do</p>
-            <h2 className="t-h2 mt-5">Our SEO services: technical, measurable, and mostly in WordPress</h2>
+            <p className="eyebrow">What I do</p>
+            <h2 className="t-h2 mt-5">My SEO services: technical, measurable, and mostly in WordPress</h2>
           </Reveal>
           <div data-anim="cards" className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((s) => (

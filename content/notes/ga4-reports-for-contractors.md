@@ -67,4 +67,4 @@ Realtime shows the last 30 minutes. Use it as a test bench. Open your site on yo
 
 ## Next step
 
-Do the Realtime test this week. If calls or forms don't show up, tracking in GA4 is part of the Setup Sprint on our [pricing page](/pricing), along with the Business Profile cleanup, speed and schema work.
+Do the Realtime test this week. If calls or forms don't show up, tracking in GA4 is part of the $500-a-month SEO plan on our [pricing page](/pricing), along with the Business Profile cleanup, speed and schema work.

@@ -63,10 +63,9 @@ const WORK = [
 const SERVICES = [
   { href: "/roofing-seo", title: "Roofing SEO", desc: "Town pages, storm pages and call tracking for roofers." },
   { href: "/home-remodeling-seo", title: "Home remodeling SEO", desc: "Project pages, cost pages and ChatGPT for remodelers." },
-  { href: "/pricing#audit", title: "Site Audit, $750", desc: "A ranked list of what's costing you calls." },
-  { href: "/pricing#sprint", title: "Setup Sprint, $1,800", desc: "Tracking, speed, schema and fixes, done once." },
-  { href: "/pricing#monthly", title: "Monthly SEO, from $600", desc: "New pages, Business Profile and a monthly report." },
-  { href: "/ai-search-optimization", title: "AI search optimization", desc: "Get named by ChatGPT, Claude and Google's AI. $1,000 a month." },
+  { href: "/pricing#audit", title: "Free site audit", desc: "A list of what's costing you calls, at no cost." },
+  { href: "/pricing#monthly", title: "SEO plan, $500 a month", desc: "Fixes, new pages, Business Profile and a monthly report." },
+  { href: "/ai-search-optimization", title: "AI search optimization", desc: "Get named by ChatGPT, Claude and Google's AI. $300 more a month." },
 ];
 
 const NOTES = [

@@ -1,5 +1,5 @@
 ---
-title: "Affordable roofing SEO: what a small roofer can get for $600 to $1,500 a month"
+title: "Affordable roofing SEO: what a small roofer can get for $500 to $1,500 a month"
 slug: affordable-roofing-seo
 date: 2027-02-01
 draft: false
@@ -9,7 +9,7 @@ excerpt: "Small roofing companies don't need a $3,000 retainer to compete locall
 seo_description: "Small roofers don't need a $3,000 retainer to compete locally. What a smaller budget should cover, what to cut, and the cheap offers that cost more later."
 faq:
   - q: "How much should a small roofing company spend on SEO?"
-    a: "Enough to cover tracking, the Business Profile and steady new pages for your towns and services. For many small roofers that's in the range of $600 to $1,500 a month. Below that, very little real work fits."
+    a: "Enough to cover tracking, the Business Profile and steady new pages for your towns and services. For many small roofers that's in the range of $500 to $1,500 a month. Below that, very little real work fits."
   - q: "Is cheap roofing SEO worth it?"
     a: "Usually not if it's under a few hundred dollars a month with no list of what's done. That price can only buy automated reports and low-quality links, which can do harm."
   - q: "What should affordable roofing SEO include?"
@@ -47,7 +47,7 @@ More in [questions to ask before hiring an SEO](/notes/hiring-an-seo-questions-t
 
 ## Fix it once, then go monthly
 
-If your site has problems, a one-time project to fix them can be cheaper than paying a monthly retainer to slowly get to them. On our [pricing page](/pricing), the Setup Sprint is a one-time $1,800, and monthly plans start at $600 a month after that, with prices listed up front.
+If your site has problems, fix them before you pay for anything new. On our [pricing page](/pricing) there's one plan, $500 a month, and it starts with the fixes. The audit that finds them is free.
 
 ## What a small roofer can expect
 

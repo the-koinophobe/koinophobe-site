@@ -102,10 +102,10 @@ export function AISection() {
           More of your customers are asking AI search now.
         </h2>
         <p className="mt-6 max-w-[54ch] text-[17.5px] text-muted">
-          Nobody needs a separate &ldquo;AI strategy&rdquo; for this. Assistants build those
-          answers out of the same raw material the map pack has always run on: a Business
-          Profile that agrees with itself, reviews with real sentences in them, and pages that
-          answer the question in plain words.
+          You don&rsquo;t need a separate &ldquo;AI strategy&rdquo; for this. AI builds those answers
+          from the same things the map has always used: a Business Profile with no mixed-up
+          details, reviews with real sentences in them, and pages that answer the question in
+          plain words.
         </p>
         <p className="mt-5 max-w-[54ch] text-[17.5px] text-muted">
           It&rsquo;s the same work you see on this page. The answer just gets read out instead of

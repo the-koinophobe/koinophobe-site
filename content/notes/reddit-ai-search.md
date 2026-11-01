@@ -73,4 +73,4 @@ Forums are one input among several. Assistants mostly name companies the web alr
 
 Search Reddit and the main forum in your industry for your business name today. Note what people say about you and about competitors. If a common question has no good answer anywhere, that's your next page.
 
-Our [AI search optimization](/ai-search-optimization) service includes monthly tracking of what assistants say about you, and the pages that answer the gaps. $1,000 a month, no contract.
+Our [AI search optimization](/ai-search-optimization) service includes monthly tracking of what assistants say about you, and the pages that answer the gaps. It's a $300-a-month add-on to our SEO plan.

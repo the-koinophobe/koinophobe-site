@@ -75,4 +75,4 @@ Pick one pattern and use it for every town. Link each town page from your servic
 
 Pick your best town. Write down the last five jobs you did there and what was different about each one. That's most of your first page.
 
-If you want help building the set, the Growth plan on the [pricing page](/pricing) includes two new town or service pages a month. The full roofing case is on the [roofing SEO page](/roofing-seo).
+If you want help building the set, the $500-a-month SEO plan on the [pricing page](/pricing) includes two new town or service pages a month. The full roofing case is on the [roofing SEO page](/roofing-seo).

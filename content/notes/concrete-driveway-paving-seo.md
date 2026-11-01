@@ -76,4 +76,4 @@ Paving jobs are large tickets, so each lead matters. Mark form submissions and p
 
 Then test the forms yourself. One client's form submissions dropped for four months, March to July 2026, because an email address change broke the site's mail connection, and nobody caught it, us included. Since then we test form delivery on every site once a month. The wider setup is in [call tracking for contractors](/notes/call-tracking-for-contractors).
 
-If you want schema and tracking set up together, the Setup Sprint covers both in 3 to 4 weeks, and the Growth plan adds two new service or town pages a month. Both are on our [pricing page](/pricing).
+If you want schema and tracking set up together, our $500-a-month SEO plan covers both, then adds two new service or town pages a month. It's on our [pricing page](/pricing).

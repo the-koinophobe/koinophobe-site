@@ -77,4 +77,4 @@ Keep the rest consistent with that choice. On other directories, hide the street
 
 Your schema markup should carry the same details as everything else; we cover that in the [roofing contractor schema note](/notes/roofing-contractor-schema). If you're also changing domains, update the website link on every listing as part of your [website redesign checklist](/notes/website-migration-without-losing-rankings). And once the number is the same everywhere, [track the taps on it in Tag Manager](/notes/gtm-phone-click-tracking).
 
-Business Profile cleanup is part of the Setup Sprint on [our pricing page](/pricing). If you want us to run the listing audit for you, [send us your business name and number](/contact).
+Business Profile cleanup is part of the $500-a-month SEO plan on [our pricing page](/pricing). If you want us to run the listing audit for you, [send us your business name and number](/contact).

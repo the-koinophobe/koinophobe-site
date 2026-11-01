@@ -91,4 +91,4 @@ Run every page through two tools after you publish:
 
 Fix errors first. Warnings about optional properties are worth a look but rarely urgent.
 
-If you're rebuilding your site soon, add schema to your checklist, since it's easy to drop during a move. Our notes on [keeping rankings through a migration](/notes/website-migration-without-losing-rankings) cover the rest of that list. Schema setup is part of the Setup Sprint on [our pricing page](/pricing), and you can see how it fits with everything else on [the roofing SEO page](/roofing-seo). If you'd like us to check what your site has now, [send us the URL](/contact).
+If you're rebuilding your site soon, add schema to your checklist, since it's easy to drop during a move. Our notes on [keeping rankings through a migration](/notes/website-migration-without-losing-rankings) cover the rest of that list. Schema setup is part of the $500-a-month SEO plan on [our pricing page](/pricing), and you can see how it fits with everything else on [the roofing SEO page](/roofing-seo). If you'd like us to check what your site has now, [send us the URL](/contact).
