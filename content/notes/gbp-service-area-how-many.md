@@ -6,6 +6,7 @@ draft: false
 topic: local
 seo_title: "Google Business Profile service areas: how many to add"
 excerpt: "Google lets a service business list up to 20 service areas. Why adding all 20 rarely helps, how far your area should reach, and what actually decides where you show up on the map."
+seo_description: "Google allows 20 service areas, but adding all 20 rarely helps. How far your area should reach, and what really decides where you show on the map."
 faq:
   - q: "How many service areas can I add to my Google Business Profile?"
     a: "Up to 20. Google's guidelines also say the area shouldn't extend further than about two hours' drive from where you're based."

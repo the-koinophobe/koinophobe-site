@@ -6,6 +6,7 @@ draft: false
 topic: local
 seo_title: "Google Business Profile services vs categories, explained"
 excerpt: "Categories say what kind of business you are. Services list what you do. How they work together on a contractor's Google Business Profile, and the common mistakes with each."
+seo_description: "Categories say what kind of business you are; services list what you do. How they work together on a contractor's profile, and the common mistakes."
 faq:
   - q: "What's the difference between categories and services on Google Business Profile?"
     a: "Categories describe what kind of business you are and carry more weight in which searches you appear for. Services are the specific jobs you do, listed under those categories, and they help Google and customers understand the details."

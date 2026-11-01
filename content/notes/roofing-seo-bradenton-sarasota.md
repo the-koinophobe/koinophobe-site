@@ -6,6 +6,7 @@ draft: false
 topic: roofing
 seo_title: "Roofing SEO in Bradenton, Sarasota and Lakewood Ranch"
 excerpt: "Manatee and Sarasota counties mix older coastal homes with big planned communities, and homeowners search very differently in each. How a roofer here should split pages and profile work."
+seo_description: "Manatee and Sarasota mix older coastal homes with planned communities, and homeowners search differently in each. How a roofer should split pages here."
 faq:
   - q: "Is roofing SEO in Sarasota different from Bradenton?"
     a: "The method is the same, but the homes and searches differ. Older coastal neighborhoods bring repair and replacement searches; large planned communities bring questions about HOA rules, roof colors and materials. Each deserves its own pages."

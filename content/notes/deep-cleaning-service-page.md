@@ -6,6 +6,7 @@ draft: false
 topic: trades
 seo_title: "Deep cleaning service page: what to put on it"
 excerpt: "Deep cleaning is the most searched one-off cleaning job and the easiest to explain badly. What a deep cleaning page needs so it ranks locally and turns a visit into a booking."
+seo_description: "Deep cleaning is the most searched one-off cleaning job. What a deep cleaning page needs to rank locally and turn a visit into a booking."
 faq:
   - q: "What should a deep cleaning service page include?"
     a: "What's included room by room, what isn't, how long it takes, a starting price or what changes the price, how to prepare, photos of real jobs, reviews that mention deep cleans, and a clear way to book."

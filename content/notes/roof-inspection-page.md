@@ -6,6 +6,7 @@ draft: false
 topic: roofing
 seo_title: "Roof inspection service page: what to put on it"
 excerpt: "Roof inspection searches come from buyers, sellers, insurers and worried homeowners. How a roofer's inspection page serves each, ranks locally and leads to honest repair work."
+seo_description: "Roof inspection searches come from buyers, sellers, insurers and worried owners. How an inspection page serves each, ranks locally and leads to work."
 faq:
   - q: "Should a roofer have a dedicated roof inspection page?"
     a: "Yes. Inspection searches come from several kinds of customers, including home buyers, sellers, insurance and homeowners after storms, and they're often the first contact. A dedicated page ranks for them and explains what's included."

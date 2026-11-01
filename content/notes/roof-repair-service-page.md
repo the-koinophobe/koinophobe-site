@@ -6,6 +6,7 @@ draft: false
 topic: roofing
 seo_title: "Roof repair service page: what to put on it"
 excerpt: "Roof repair searches come from homeowners with a problem today. What a repair page needs so it ranks in your towns and gets the call, from leak symptoms to response times."
+seo_description: "Roof repair searches come from homeowners with a problem today. What a repair page needs to rank in your towns and get the call."
 faq:
   - q: "Should roof repair and roof replacement be separate pages?"
     a: "Yes. They're different searches from different homeowners. Someone with a leak wants a fast repair; someone pricing a replacement is planning. One combined page usually ranks for neither."

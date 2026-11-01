@@ -6,6 +6,7 @@ draft: false
 topic: roofing
 seo_title: "Google Business Profile management for roofers, monthly"
 excerpt: "Setting up a roofer's Business Profile is a one-time job. Keeping it winning calls is monthly. The checklist we run every month for roofing profiles, in about an hour."
+seo_description: "Setting up a roofer's Business Profile is a one-time job; keeping it winning calls is monthly. The hour-long checklist we run every month."
 faq:
   - q: "How often should a roofer update their Google Business Profile?"
     a: "Monthly at least, with new photos, a post or two, replies to every review, and a check that hours, services and details are still right. More often during storm season."

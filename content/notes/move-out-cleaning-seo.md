@@ -6,6 +6,7 @@ draft: false
 topic: trades
 seo_title: "Move-out cleaning SEO for cleaning companies"
 excerpt: "Move-out cleaning is booked on a deadline by people who need a deposit back. What a move-out page needs, who else is searching for it, and how to win those jobs locally."
+seo_description: "Move-out cleaning is booked on a deadline by people who want a deposit back. What a move-out page needs, and how to win those jobs locally."
 faq:
   - q: "Is move-out cleaning worth its own page?"
     a: "Yes. It's searched separately from regular cleaning, often on short notice, and the questions are different: deposits, checklists, empty homes. A dedicated page answers them and ranks for them."

@@ -6,6 +6,7 @@ draft: false
 topic: trades
 seo_title: "Window and door replacement SEO for local installers"
 excerpt: "Window and door replacement is researched for weeks and compared on brands and energy savings. How a local installer gets found during that research and chosen at the end."
+seo_description: "Window and door replacement is researched for weeks on brands and energy savings. How a local installer gets found during that research and chosen."
 faq:
   - q: "How do window replacement companies get leads from Google?"
     a: "Pages for each product type and material, honest cost and energy-savings explainers, a gallery of local installs, town pages, and a Business Profile with real photos and reviews from homeowners."

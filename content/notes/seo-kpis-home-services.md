@@ -6,6 +6,7 @@ draft: false
 topic: tracking
 seo_title: "SEO KPIs for home service businesses"
 excerpt: "Most SEO dashboards track thirty numbers. A home service business needs six, and one of them matters more than the rest combined. Which six, and how to read them together."
+seo_description: "Most SEO dashboards track thirty numbers. A home service business needs six, and one matters more than the rest. Which six, and how to read them."
 faq:
   - q: "What is the most important SEO KPI for a contractor?"
     a: "Leads from organic search: calls, forms and bookings that came from Google. Every other number is useful only as an explanation of why leads went up or down."

@@ -6,6 +6,7 @@ draft: false
 topic: trades
 seo_title: "Gutter company SEO: get found for gutter work"
 excerpt: "Gutter searches are seasonal, local and split between cleaning, repair and installation. The pages and Business Profile setup that get a gutter company the calls, season after season."
+seo_description: "Gutter searches are seasonal, local and split between cleaning, repair and install. The pages and profile setup that bring a gutter company calls."
 faq:
   - q: "How do gutter companies get more leads from Google?"
     a: "Separate pages for gutter cleaning, repair, installation and guards, town pages for the areas you serve, a Business Profile with the right categories, and pages published before the busy season rather than during it."

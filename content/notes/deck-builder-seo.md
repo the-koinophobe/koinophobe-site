@@ -6,6 +6,7 @@ draft: false
 topic: trades
 seo_title: "Deck builder SEO: get found for deck projects"
 excerpt: "Deck buyers research materials and costs for weeks and choose from photos. The pages, galleries and profile setup that get a deck builder found and chosen in its area."
+seo_description: "Deck buyers research materials and costs for weeks and choose from photos. The pages, galleries and profile setup that get a deck builder chosen."
 faq:
   - q: "How do deck builders get more leads from Google?"
     a: "Pages for each material and project type, an honest cost page, a gallery of local projects captioned with materials and towns, town pages, and a Business Profile with real photos and reviews."

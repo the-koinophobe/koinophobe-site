@@ -6,6 +6,7 @@ draft: false
 topic: local
 seo_title: "How to ask customers for Google reviews (with a script)"
 excerpt: "Most happy customers will leave a review if you ask at the right moment and make it easy. When to ask, what to say, and what Google doesn't allow, for any home service trade."
+seo_description: "Most happy customers will review you if you ask at the right moment. When to ask, what to say, and what Google doesn't allow, for any home service trade."
 faq:
   - q: "When is the best time to ask for a Google review?"
     a: "Right after the job is finished and the customer is happy, while you're still there or within a day. The longer you wait, the less likely they are to do it."

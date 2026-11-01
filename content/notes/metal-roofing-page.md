@@ -6,6 +6,7 @@ draft: false
 topic: roofing
 seo_title: "Metal roofing service page: what to put on it"
 excerpt: "Metal roof buyers ask about cost, noise, heat, hail and lifespan before anything else. What a roofer's metal roofing page should answer to rank and win the quote."
+seo_description: "Metal roof buyers ask about cost, noise, heat, hail and lifespan first. What a roofer's metal roofing page should answer to rank and win the quote."
 faq:
   - q: "Should a roofer have a separate metal roofing page?"
     a: "Yes, if you install metal. Metal roof buyers search differently from shingle buyers, compare more, and ask specific questions. A dedicated page ranks for those searches; a line on a general page doesn't."

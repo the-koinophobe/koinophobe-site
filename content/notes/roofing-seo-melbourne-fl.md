@@ -6,6 +6,7 @@ draft: false
 topic: roofing
 seo_title: "Roofing SEO in Melbourne, FL"
 excerpt: "Melbourne, Florida is one of the most crowded roofing markets in Brevard County. What we did for a roofer here, the numbers from its Search Console, and what we'd still do next."
+seo_description: "Melbourne, FL is one of Brevard's most crowded roofing markets. What we did for a roofer here, its Search Console numbers, and what we'd do next."
 faq:
   - q: "How competitive is roofing SEO in Melbourne, FL?"
     a: "Very. Melbourne sits in a hurricane-prone county with a lot of roofers, storm chasers after every big storm, and lead sites buying the same searches. It takes town pages, a strong Business Profile and time."

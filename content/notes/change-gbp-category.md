@@ -6,6 +6,7 @@ draft: false
 topic: local
 seo_title: "How to change your Google Business Profile category safely"
 excerpt: "Changing your primary category can move you into the right searches, or knock you out of the ones that pay. When to change it, how to do it safely, and what to watch afterwards."
+seo_description: "Changing your primary category can win the right searches or lose the ones that pay. When to change it, how to do it safely, and what to watch after."
 faq:
   - q: "Will changing my Google Business Profile category affect my ranking?"
     a: "It can, in either direction. A better-matched primary category can help you show up for the searches that matter. A change can also trigger a review of the profile and a temporary dip while Google re-evaluates it."

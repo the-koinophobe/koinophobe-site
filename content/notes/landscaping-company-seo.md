@@ -6,6 +6,7 @@ draft: false
 topic: trades
 seo_title: "Landscaping company SEO: get found for landscape projects"
 excerpt: "Landscaping mixes big design projects with recurring maintenance, and they're found through very different searches. How a landscaping company structures pages, galleries and its profile for both."
+seo_description: "Landscaping mixes design projects with recurring maintenance, found through different searches. How to structure pages, galleries and a profile for both."
 faq:
   - q: "How do landscaping companies get more clients from Google?"
     a: "Separate pages for design and installation, hardscaping, and maintenance, a project gallery with real local jobs, town pages, and a Business Profile with the right categories and steady photos and reviews."

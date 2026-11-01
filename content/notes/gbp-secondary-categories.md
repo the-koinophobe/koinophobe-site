@@ -6,6 +6,7 @@ draft: false
 topic: local
 seo_title: "Google Business Profile secondary categories, explained"
 excerpt: "Google lets you add up to nine extra categories to your Business Profile. When they help a contractor, when they hurt, and how to test whether one is earning its place."
+seo_description: "Google allows up to nine extra Business Profile categories. When they help a contractor, when they hurt, and how to test whether one earns its place."
 faq:
   - q: "How many secondary categories should I add to my Google Business Profile?"
     a: "As many as match work you really do every month, up to Google's limit of nine additional categories. For most contractors that ends up being two to five, not nine."

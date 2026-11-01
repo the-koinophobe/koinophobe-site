@@ -15,6 +15,9 @@ const nextConfig = {
   async redirects() {
     return [
       { source: "/approach", destination: "/about", permanent: true },
+      // The clinic case study moved into the notes; Search Console still shows
+      // impressions on the old URL.
+      { source: "/work/wellness-clinic", destination: "/notes/clinic-158-to-501", permanent: true },
       // Oct 2026: the site sells to home service businesses only. Pages and
       // notes written for startups, SaaS, agencies and other trades send their
       // visitors (and any ranking they earned) to the closest page that's left.

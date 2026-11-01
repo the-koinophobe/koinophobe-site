@@ -6,6 +6,7 @@ draft: false
 topic: technical
 seo_title: "Contractor website hosting: does it affect SEO?"
 excerpt: "A slow, overcrowded host can make a contractor's site lose rankings and calls. How to tell whether your hosting is the problem, and what good hosting for a small business site looks like."
+seo_description: "Slow, crowded hosting can cost a contractor rankings and calls. How to tell if your host is the problem, and what good small business hosting looks like."
 faq:
   - q: "Does web hosting affect SEO?"
     a: "It can. A slow or unreliable host makes pages load slowly and sometimes not at all, which hurts both rankings and the number of visitors who call. Fast, reliable hosting won't make you rank on its own, but bad hosting can hold you back."

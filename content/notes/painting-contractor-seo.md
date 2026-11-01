@@ -6,6 +6,7 @@ draft: false
 topic: trades
 seo_title: "Painting contractor SEO: get found locally"
 excerpt: "Painting is bought on trust and photos. The pages, profile setup and project galleries that get a painting company found for interior, exterior and cabinet work in its towns."
+seo_description: "Painting is bought on trust and photos. The pages, profile setup and galleries that get a painter found for interior, exterior and cabinet work."
 faq:
   - q: "How do painting contractors get more leads from Google?"
     a: "Separate pages for interior, exterior, cabinet and commercial painting, a project gallery with real local jobs, a Business Profile set up as a painter, and reviews that describe the job and the crew."

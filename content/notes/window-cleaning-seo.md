@@ -6,6 +6,7 @@ draft: false
 topic: trades
 seo_title: "Window cleaning SEO for local window cleaners"
 excerpt: "Window cleaning is seasonal, route-based and easy to compare on price. How a window cleaning business gets found in its towns, and turns one-off cleans into recurring routes."
+seo_description: "Window cleaning is seasonal, route-based and compared on price. How a window cleaner gets found in its towns and turns one-off cleans into routes."
 faq:
   - q: "How do window cleaning businesses get more customers online?"
     a: "A Business Profile set up as a window cleaning service, separate pages for residential, commercial and add-on services, clear pricing, town pages for your routes, and reviews that mention the result."

@@ -6,6 +6,7 @@ draft: false
 topic: trades
 seo_title: "Water damage restoration SEO for local companies"
 excerpt: "Restoration searches are urgent, expensive and full of lead sellers. How a local water damage company gets found first, and earns the trust a homeowner needs at 2 a.m."
+seo_description: "Restoration searches are urgent, costly and full of lead sellers. How a local water damage company gets found first and earns trust at 2 a.m."
 faq:
   - q: "How do water damage restoration companies get more calls from Google?"
     a: "A Business Profile that's accurate about hours and response times, a page for each type of damage you handle, town pages for your service area, fast mobile pages with a tappable number, and reviews that mention real emergencies handled well."

@@ -6,6 +6,7 @@ draft: false
 topic: trades
 seo_title: "Pool service SEO: get found for pool cleaning and repair"
 excerpt: "Pool service customers sign up for years and call urgently when something breaks. The pages and profile setup that get a pool company found for both, in the neighborhoods it routes through."
+seo_description: "Pool customers sign up for years and call urgently when something breaks. The pages and profile setup that get a pool company found for both."
 faq:
   - q: "How do pool service companies get more customers from Google?"
     a: "A Business Profile with the right pool categories, separate pages for weekly service, repairs and equipment, neighborhood pages for your routes, clear pricing, and reviews that mention reliability."

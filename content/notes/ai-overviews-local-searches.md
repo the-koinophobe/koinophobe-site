@@ -6,6 +6,7 @@ draft: false
 topic: ai
 seo_title: "AI Overviews and home service searches: what shows up"
 excerpt: "Google's AI Overviews appear on some home service searches and not others. Which kinds of searches get them, what they pull from, and what a contractor should change."
+seo_description: "AI Overviews show on some home service searches and not others. Which searches get them, what they pull from, and what a contractor should change."
 faq:
   - q: "Do AI Overviews appear for 'near me' searches?"
     a: "Searches with clear local intent, like 'plumber near me', usually lead with the map pack rather than an AI Overview. Questions about cost, process and problems, like 'why is my AC blowing warm air', are where AI Overviews show up most."

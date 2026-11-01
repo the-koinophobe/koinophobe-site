@@ -6,6 +6,7 @@ draft: false
 topic: local
 seo_title: "Brevard County SEO for contractors"
 excerpt: "Brevard is a long county with very different towns, and homeowners search town by town. How contractors here should split their pages and profile, from someone who has done the SEO on Brevard sites."
+seo_description: "Brevard is a long county and homeowners search town by town. How contractors here should split their pages and Business Profile, from real Brevard work."
 faq:
   - q: "Do I need a page for every town in Brevard County?"
     a: "Only for the towns you want work in. For most contractors that's five to ten pages, each with jobs, photos and reviews from that town. One 'Brevard County' page won't rank for searches in each town."

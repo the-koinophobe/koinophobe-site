@@ -6,6 +6,7 @@ draft: false
 topic: technical
 seo_title: "WordPress SEO settings for contractor websites"
 excerpt: "Most contractor sites run on WordPress, and most have the same handful of settings wrong. What to check in WordPress and your SEO plugin, and what to leave alone."
+seo_description: "Most contractor sites run WordPress, and most have the same settings wrong. What to check in WordPress and your SEO plugin, and what to leave alone."
 faq:
   - q: "What is the best SEO plugin for a contractor's WordPress site?"
     a: "The well-known SEO plugins all handle the basics. What matters more is that one plugin is set up properly, not which one you choose. Don't run two SEO plugins at once."

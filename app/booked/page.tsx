@@ -6,6 +6,8 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "You're booked",
   description: "Your call is booked.",
+  // Without this it inherits the root layout's canonical, which is the homepage.
+  alternates: { canonical: "/booked" },
   robots: { index: false, follow: false },
 };
 

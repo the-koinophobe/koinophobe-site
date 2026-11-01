@@ -8,6 +8,8 @@ export type Note = {
   slug: string;
   title: string;
   date: string; // ISO
+  /** Set when a note is materially rewritten. Empty means never updated. */
+  updated: string;
   excerpt: string;
   draft: boolean;
   /** Optional shorter title for the <title> tag and link previews. */
@@ -224,6 +226,7 @@ const all: Note[] = (fs.existsSync(DIR) ? fs.readdirSync(DIR) : [])
       slug: file.replace(/\.md$/, ""),
       title: String(data.title ?? ""),
       date: isoDate(data.date),
+      updated: isoDate(data.updated),
       excerpt: String(data.excerpt ?? ""),
       draft: data.draft === true,
       seoTitle: String(data.seo_title ?? ""),
@@ -262,6 +265,15 @@ export function publishedNotes(): Note[] {
       return !Number.isNaN(at) && at <= now;
     })
     .sort((a, b) => b.date.localeCompare(a.date));
+}
+
+/**
+ * When the note last changed: the update date if it's set and later than the
+ * publish date, otherwise the publish date. Feeds dateModified and the sitemap,
+ * so it only moves when the content does.
+ */
+export function modifiedDate(note: Note): string {
+  return note.updated > note.date ? note.updated : note.date;
 }
 
 export function getNote(slug: string): Note | undefined {

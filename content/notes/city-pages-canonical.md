@@ -6,6 +6,7 @@ draft: false
 topic: technical
 seo_title: "Town pages and duplicate canonical errors, fixed"
 excerpt: "When a contractor's town pages are near-copies, Google picks one and ignores the rest. How to spot it in Search Console, and how to make each town page different enough to stand on its own."
+seo_description: "When town pages are near-copies, Google indexes one and ignores the rest. How to spot it in Search Console and make each town page stand on its own."
 faq:
   - q: "Why does Search Console say Google chose a different canonical for my city page?"
     a: "Google decided the page is a duplicate of another one and is showing that other page instead. With town pages, it usually means the pages are nearly identical apart from the town name."

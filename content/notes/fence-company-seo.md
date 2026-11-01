@@ -6,6 +6,7 @@ draft: false
 topic: trades
 seo_title: "Fence company SEO: get found for fence installation"
 excerpt: "Fence buyers search by material, by purpose and by town, and most of them ask about permits and property lines. The pages and profile setup that get a fence company the calls."
+seo_description: "Fence buyers search by material, purpose and town, and ask about permits and property lines. The pages and profile setup that win a fence company calls."
 faq:
   - q: "How do fence companies get more customers from Google?"
     a: "Pages for each material and purpose you install (vinyl, wood, aluminum, chain link, privacy, pool fencing), town pages with real jobs, a Business Profile set up as a fence contractor, and clear answers about permits and timelines."

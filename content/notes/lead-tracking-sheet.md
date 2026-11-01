@@ -6,6 +6,7 @@ draft: false
 topic: tracking
 seo_title: "Lead tracking spreadsheet for home service businesses"
 excerpt: "GA4 tells you a call happened. Only your own records say whether it became a job. A simple lead sheet that connects the two, so you know what your marketing is really worth."
+seo_description: "GA4 says a call happened; only your records say if it became a job. A simple lead sheet that connects the two, so you know what marketing is worth."
 faq:
   - q: "Do I need a CRM to track leads?"
     a: "Not to start. A shared spreadsheet with a row per lead covers most small home service businesses. A CRM makes sense once several people handle leads or you need automated follow-up."

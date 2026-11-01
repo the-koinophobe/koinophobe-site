@@ -6,6 +6,7 @@ draft: false
 topic: tracking
 seo_title: "Monthly SEO report template: one page, six numbers"
 excerpt: "A one-page monthly SEO report a roofer or plumber can read in five minutes: the six numbers, the order to put them in, and the two sentences every report should end with."
+seo_description: "A one-page monthly SEO report a roofer or plumber can read in five minutes: the six numbers, their order, and the two sentences every report needs."
 faq:
   - q: "What should a monthly SEO report include?"
     a: "Calls and forms from Google, clicks from Search Console, Business Profile calls and direction requests, the main keywords and where they rank, what was done this month, and what happens next month. Anything else belongs in an appendix."

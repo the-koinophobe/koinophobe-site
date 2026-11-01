@@ -57,6 +57,16 @@ collections:
           hint: 'A future date holds the note back until that day.',
         }
       - {
+          name: updated,
+          label: Last updated (optional),
+          widget: datetime,
+          date_format: 'YYYY-MM-DD',
+          time_format: false,
+          picker_utc: true,
+          required: false,
+          hint: 'Set only after a real rewrite: new facts, new sections, corrected advice. Not for typo fixes.',
+        }
+      - {
           name: draft,
           label: Draft,
           widget: boolean,

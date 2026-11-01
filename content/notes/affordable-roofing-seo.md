@@ -6,6 +6,7 @@ draft: false
 topic: roofing
 seo_title: "Affordable roofing SEO: what small budgets buy"
 excerpt: "Small roofing companies don't need a $3,000 retainer to compete locally. What a smaller budget should cover, what to cut, and the cheap offers that cost you more later."
+seo_description: "Small roofers don't need a $3,000 retainer to compete locally. What a smaller budget should cover, what to cut, and the cheap offers that cost more later."
 faq:
   - q: "How much should a small roofing company spend on SEO?"
     a: "Enough to cover tracking, the Business Profile and steady new pages for your towns and services. For many small roofers that's in the range of $600 to $1,500 a month. Below that, very little real work fits."

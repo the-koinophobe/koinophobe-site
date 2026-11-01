@@ -10,7 +10,7 @@ import { MobileCta } from "@/components/MobileCta";
 import { FaqList, FaqSchema } from "@/components/Faq";
 import { WhoToCall } from "@/components/WhoToCall";
 import { NoteCard, fmtDate } from "@/components/NoteCard";
-import { adjacentNotes, getNote, publishedNotes, relatedNotes } from "@/lib/notes";
+import { adjacentNotes, getNote, modifiedDate, publishedNotes, relatedNotes } from "@/lib/notes";
 import { serviceForNote } from "@/lib/services";
 import { site } from "@/lib/site";
 import { topicLabel, topics } from "@/lib/topics";
@@ -39,6 +39,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       description,
       type: "article",
       publishedTime: note.date,
+      modifiedTime: modifiedDate(note),
       authors: ["Koinophobe"],
       section: topicLabel(note.topic),
       ...(images ? { images } : {}),
@@ -68,7 +69,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
     headline: note.title,
     description: note.excerpt,
     datePublished: note.date,
-    dateModified: note.date,
+    dateModified: modifiedDate(note),
     inLanguage: "en-US",
     articleSection: topic.label,
     wordCount: words,
@@ -120,6 +121,14 @@ export default function NotePage({ params }: { params: { slug: string } }) {
                 </Link>
                 <span aria-hidden>&middot;</span>
                 <time dateTime={note.date}>{fmtDate(note.date, "long")}</time>
+                {modifiedDate(note) !== note.date ? (
+                  <>
+                    <span aria-hidden>&middot;</span>
+                    <span>
+                      Updated <time dateTime={modifiedDate(note)}>{fmtDate(modifiedDate(note), "long")}</time>
+                    </span>
+                  </>
+                ) : null}
                 <span aria-hidden>&middot;</span>
                 <span>{note.minutes} min read</span>
               </div>

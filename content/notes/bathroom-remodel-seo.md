@@ -6,6 +6,7 @@ draft: false
 topic: trades
 seo_title: "Bathroom remodel SEO for remodeling companies"
 excerpt: "Bathroom remodels are researched for weeks through photos, costs and ideas. The pages, project write-ups and profile setup that get a remodeler found during that research and booked at the end."
+seo_description: "Bathroom remodels get researched for weeks. The pages, project write-ups and profile setup that get a remodeler found during that research and booked."
 faq:
   - q: "How do bathroom remodelers get more leads from Google?"
     a: "A dedicated bathroom remodeling page, project pages for real local bathrooms, an honest cost page, pages for specific projects such as walk-in showers and tub-to-shower conversions, and a Business Profile with photos and reviews."

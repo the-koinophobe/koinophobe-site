@@ -6,6 +6,7 @@ draft: false
 topic: trades
 seo_title: "Flooring company SEO: get found for flooring installation"
 excerpt: "Flooring buyers compare materials, prices and installers, and many want samples first. How a flooring company gets found for each material and turns searches into quotes."
+seo_description: "Flooring buyers compare materials, prices and installers. How a flooring company gets found for each material and turns searches into quotes."
 faq:
   - q: "How do flooring companies get more customers from Google?"
     a: "Pages for each material you sell and install, honest price ranges, a gallery of local installs, town pages, and a Business Profile with photos of real work and of the showroom if you have one."

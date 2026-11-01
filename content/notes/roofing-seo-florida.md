@@ -6,6 +6,7 @@ draft: false
 topic: roofing
 seo_title: "Roofing SEO in Florida: a guide for Florida roofers"
 excerpt: "Florida roofers compete in a market shaped by storms, insurance and code. What that does to the searches homeowners make, and the pages and profile work that win them."
+seo_description: "Florida roofing is shaped by storms, insurance and code. What that does to homeowner searches, and the pages and profile work that win them."
 faq:
   - q: "Is roofing SEO different in Florida?"
     a: "The basics are the same everywhere, but Florida homeowners search around storms, insurance claims, permits and the building code far more than most states. A Florida roofing site needs pages for those searches and a Business Profile that stays accurate when demand spikes after a storm."

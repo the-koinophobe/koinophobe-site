@@ -6,6 +6,7 @@ draft: false
 topic: tracking
 seo_title: "Google Business Profile performance report, explained"
 excerpt: "Your Google Business Profile counts the calls, direction requests and website clicks it sends you. Where to find them, what each number means, and how to compare months properly."
+seo_description: "Your Business Profile counts the calls, direction requests and clicks it sends. Where to find them, what each means, and how to compare months."
 faq:
   - q: "Where do I see calls from my Google Business Profile?"
     a: "Search your business name on Google while signed in to the account that manages the profile, or open it in the Business Profile manager, and open Performance. Calls made from the profile are listed by month."

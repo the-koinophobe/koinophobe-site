@@ -6,6 +6,7 @@ draft: false
 topic: roofing
 seo_title: "Why local SEO is important for roofers"
 excerpt: "Roofing jobs are expensive, infrequent and found through local searches, often under pressure. Why that makes local SEO worth more to a roofer than to most trades, and what to put first."
+seo_description: "Roofing jobs are costly, rare and found through local searches under pressure. Why local SEO is worth more to a roofer than most trades, and what's first."
 faq:
   - q: "Why is local SEO important for roofers?"
     a: "Because roofing jobs are high in value and found through local searches. Most homeowners only hire a roofer once every many years, they rarely have a roofer they know, and they search when they need one. Showing up in those searches decides who gets the job."

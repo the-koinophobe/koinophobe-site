@@ -6,6 +6,7 @@ draft: false
 topic: trades
 seo_title: "Cleaning company SEO: get found by local homeowners"
 excerpt: "Cleaning is a trust purchase people make close to home. The pages, Business Profile work and reviews that get a cleaning company into the map pack and on page one."
+seo_description: "Cleaning is a trust purchase made close to home. The pages, Business Profile work and reviews that get a cleaning company into the map pack."
 faq:
   - q: "How do cleaning companies get more customers from Google?"
     a: "A Google Business Profile set up as a house cleaning service, a page for each service you offer and each area you cover, steady reviews that mention the service and the town, and prices or price ranges on the site so people can decide before they call."

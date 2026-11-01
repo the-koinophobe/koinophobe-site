@@ -28,9 +28,10 @@ import { startup } from "@/lib/pricing";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "AI search optimization for home service businesses",
+  // Absolute: with " · Koinophobe" on the end it runs past what Google shows.
+  title: { absolute: "AI search optimization for home service businesses" },
   description:
-    "Get your home service business named by ChatGPT, Claude, Perplexity and Google's AI Overviews. Crawler fixes, cited pages and monthly tracking. $1,000 a month, no contract.",
+    "Get your home service business named by ChatGPT, Perplexity and Google's AI Overviews. Crawler fixes, cited pages, tracking. $1,000 a month, no contract.",
   alternates: { canonical: "/ai-search-optimization" },
 };
 

@@ -6,6 +6,7 @@ draft: false
 topic: roofing
 seo_title: "Roof insurance claim page for roofers: what to say"
 excerpt: "After a storm, homeowners search for how roof insurance claims work. How a roofer can write a page that helps them, ranks, and stays on the right side of what a contractor should promise."
+seo_description: "After a storm, homeowners search how roof claims work. How a roofer writes a page that helps them, ranks, and promises only what a contractor should."
 faq:
   - q: "Should a roofer have a page about insurance claims?"
     a: "Yes, if you help homeowners through claims. Claim searches spike after storms, and a clear explanation of the process builds trust. Keep it to what you do and what the process generally looks like."

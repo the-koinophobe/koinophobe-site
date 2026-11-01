@@ -6,6 +6,7 @@ draft: false
 topic: tracking
 seo_title: "Call tracking software for contractors: do you need it?"
 excerpt: "Free tracking counts taps on your phone number. Paid call tracking counts every call and where it came from. How to tell which one your business needs, and what to set up either way."
+seo_description: "Free tracking counts taps on your number. Paid call tracking counts every call and its source. Which one your business needs, and how to set it up."
 faq:
   - q: "Do contractors need paid call tracking software?"
     a: "Not at first. Free tap-to-call tracking in GA4 plus the calls shown in your Business Profile cover most small contractors. Paid call tracking earns its cost when you run several marketing channels and need to know which one made each call."

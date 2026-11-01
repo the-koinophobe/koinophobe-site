@@ -6,6 +6,7 @@ draft: false
 topic: trades
 seo_title: "Carpet cleaning SEO: get found and booked locally"
 excerpt: "Carpet cleaning is searched by room count, by stain and by price. The pages, profile setup and reminders that get a carpet cleaner found and booked again next year."
+seo_description: "Carpet cleaning is searched by room count, stain and price. The pages, profile setup and reminders that get a carpet cleaner found and booked again."
 faq:
   - q: "How do carpet cleaning companies get more customers from Google?"
     a: "A Business Profile set up as a carpet cleaning service, pages for each service (carpet, upholstery, tile and grout, pet stains), clear pricing by room, town pages and reviews that mention results."

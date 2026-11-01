@@ -6,6 +6,7 @@ draft: false
 topic: roofing
 seo_title: "Hiring a roofing SEO expert: the first 30 days"
 excerpt: "Anyone can call themselves a roofing SEO expert. What a real one should find, fix and tell you in the first month, so you can judge the work before the contract renews."
+seo_description: "Anyone can call themselves a roofing SEO expert. What a real one should find, fix and tell you in the first month, before the contract renews."
 faq:
   - q: "What should a roofing SEO company do in the first month?"
     a: "Set up call and form tracking, audit the site and Business Profile, fix the problems that cost calls, and give you a ranked plan for the next few months. You should be able to see all of it."

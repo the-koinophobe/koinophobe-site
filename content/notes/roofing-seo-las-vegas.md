@@ -6,6 +6,7 @@ draft: false
 topic: roofing
 seo_title: "Roofing SEO in Las Vegas: what changes in the desert"
 excerpt: "Las Vegas roofers deal with heat, tile, flat roofs and planned communities, not hurricanes. How those differences change what homeowners search, and the pages a Vegas roofer should build."
+seo_description: "Las Vegas roofers deal with heat, tile and flat roofs, not hurricanes. How that changes what homeowners search, and the pages a Vegas roofer needs."
 faq:
   - q: "Is roofing SEO in Las Vegas different from other cities?"
     a: "The method is the same: service pages, town pages, a strong Business Profile and tracking. What changes is the content: heat damage, tile and foam roofs, flat roofs and HOA rules come up far more than storm damage."

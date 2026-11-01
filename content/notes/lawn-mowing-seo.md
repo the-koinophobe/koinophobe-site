@@ -6,6 +6,7 @@ draft: false
 topic: trades
 seo_title: "Lawn mowing SEO: get weekly mowing customers"
 excerpt: "Mowing customers sign up in early spring and stay for years. How a lawn care company gets found for mowing searches in its neighborhoods, with pages and a profile that answer price and schedule."
+seo_description: "Mowing customers sign up in early spring and stay for years. How a lawn company gets found for mowing searches with pages that answer price and schedule."
 faq:
   - q: "How do lawn mowing companies get customers from Google?"
     a: "A Business Profile set up as a lawn care service, a dedicated mowing page with prices or price ranges and schedules, pages for the neighborhoods you route through, and reviews that mention reliability."
