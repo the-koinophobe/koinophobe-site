@@ -175,7 +175,7 @@ const FAQ: FaqItem[] = [
   },
   {
     q: "How much does SEO cost for a remodeler?",
-    a: `One plan, ${plan.price} a month. It covers fixes to your site, call and consult-form tracking, two new service, town or project pages a month and Business Profile work. The audit is free, and your first payment is covered by a 100% money-back guarantee for 30 days.`,
+    a: `One plan, ${plan.price} a month. It covers fixes to your site, call and consult-form tracking, two new service, town or project pages a month and Business Profile work. The audit is free, and if I don't finish the month-one list within 30 days, you get your first payment back.`,
   },
 ];
 

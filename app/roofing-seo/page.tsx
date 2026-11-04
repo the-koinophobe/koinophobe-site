@@ -71,7 +71,7 @@ const ROOF_FAQ: FaqItem[] = [
   },
   {
     q: "How much does roofing SEO cost?",
-    a: "One plan, $500 a month. It covers fixes to your site, call and form tracking, two new town or service pages a month and Business Profile work. The audit is free, and your first payment is covered by a 100% money-back guarantee for 30 days.",
+    a: "One plan, $500 a month. It covers fixes to your site, call and form tracking, two new town or service pages a month and Business Profile work. The audit is free, and if I don't finish the month-one list within 30 days, you get your first payment back.",
   },
   {
     q: "Should a roofer run Local Services Ads or do SEO?",

@@ -21,7 +21,7 @@ const ROWS: { label: string; cells: [string, string, string, string] }[] = [
   { label: "Who owns the accounts", cells: ["You, and you keep everything if you leave", "Often the agency", "Depends who set them up", "You"] },
   { label: "Call and form tracking", cells: ["Every call and form counted, forms tested monthly", "Sometimes, often extra", "Rarely included", "If you set it up"] },
   { label: "Reporting", cells: ["One page a month: calls, forms, clicks", "Long dashboards", "Varies", "Whatever you check"] },
-  { label: "Guarantee", cells: ["100% of your first payment back within 30 days", "Rare", "Rare", "None"] },
+  { label: "Guarantee", cells: ["First payment back if month one isn't done in 30 days", "Rare", "Rare", "None"] },
 ];
 
 export function Compare() {

@@ -80,16 +80,30 @@ export const plan: Plan = {
 };
 
 /**
- * The money-back guarantee. Every mention of it on the site reads from here,
- * so the promise and its terms can never say different things. Covers the
- * first month of the plan and of the AI search add-on.
+ * The delivery guarantee. Every mention of it on the site reads from here,
+ * so the promise and its terms can never say different things. It covers the
+ * work, not results: the first payment comes back only if the month-one list
+ * isn't finished in 30 days. Nov 2026: replaced the no-questions refund, which
+ * let a client keep a full month of fixes and still take the money back.
+ * Every line in the lists must be something I control and can show as done.
  */
 export const guarantee = {
-  name: "100% money-back guarantee",
+  name: "Delivery guarantee",
   days: 30,
-  short: "Not happy within 30 days of your first payment? You get all of it back.",
+  short: "If I don't finish the month-one list within 30 days, you get your first payment back.",
   terms:
-    "Ask within 30 days of your first payment and I refund 100% of it: your first month of the SEO plan, and of the AI search add-on if you have it. No forms, no conditions, and no questions you have to answer. A refund ends the plan, minimum term included. Later monthly payments aren't refundable, but you can still cancel on the normal terms.",
+    "Your first month has a fixed list of work. If any of it isn't finished within 30 days of your first payment, email me and I refund that payment in full. You keep whatever I did finish. Days I spend waiting on you for a login or an OK don't count toward the 30. Once the list is done, the payment isn't refundable, because the work is already on your site. You can still cancel on the normal terms. A refund ends the plan, minimum term included.",
+  monthOne: [
+    "Call and form tracking set up and tested",
+    "Your Google Business Profile updated: services, service areas, hours, photos and a first post",
+    "The site fixes marked \"fix first\" in your free audit",
+    "2 new service or town pages live on your site",
+  ],
+  aiMonthOne: [
+    "Citation tracking set up, with the first run across 4 assistants",
+    "4 in-depth articles written and sent to you for your OK",
+    "20+ fixes to pages you already have",
+  ],
 };
 
 /**
@@ -127,7 +141,7 @@ export const startup: Plan & {
   note: "Added to the SEO plan. Measured, fixed and written every month. Five clients at a time.",
   extras: ["A free tool when your category has room for one"],
   termsLead: "Added to the SEO plan, no extra contract.",
-  terms: "Stop the add-on any time with 30 days' notice. Its first month is covered by the 100% money-back guarantee.",
+  terms: "Stop the add-on any time with 30 days' notice. Its first month is covered by the delivery guarantee.",
 };
 
 /** The plan plus the add-on, for "both together" lines. */

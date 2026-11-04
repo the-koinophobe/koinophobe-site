@@ -121,7 +121,7 @@ const FAQ: FaqItem[] = [
   },
   {
     q: "How much does it cost?",
-    a: "It's an add-on to the $500 SEO plan: $300 more a month, $800 for both. There's no extra contract, and the first month is covered by a 100% money-back guarantee for 30 days. If you're not happy later on, tell me and I stop the add-on 30 days later. Every month includes citation tracking across four assistants with three runs each, 4 in-depth pages, 20+ fixes, a Friday changelog and a month-end report.",
+    a: "It's an add-on to the $500 SEO plan: $300 more a month, $800 for both. There's no extra contract, and the first month is covered by the delivery guarantee: if I don't finish its month-one list within 30 days, you get that payment back. If you're not happy later on, tell me and I stop the add-on 30 days later. Every month includes citation tracking across four assistants with three runs each, 4 in-depth pages, 20+ fixes, a Friday changelog and a month-end report.",
   },
   {
     q: "What if I run a local service business?",
@@ -190,7 +190,7 @@ export default function AiSearchPage() {
               </a>
             </div>
             <p className="mt-4 text-[13.5px] text-muted">
-              ${startup.amount} more a month on the SEO plan &middot; no extra contract &middot; 100% money-back guarantee &middot; {seatsLine}
+              ${startup.amount} more a month on the SEO plan &middot; no extra contract &middot; delivery guarantee &middot; {seatsLine}
             </p>
           </Reveal>
           <div className="relative mx-auto w-full max-w-[560px] lg:mx-0">

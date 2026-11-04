@@ -56,7 +56,7 @@ const HOME_FAQ: FaqItem[] = [
   },
   {
     q: "How much does it cost?",
-    a: `One plan, ${plan.price} a month. The audit is free. Not happy within 30 days of your first payment? You get all of it back. Want to show up in ChatGPT too? That's $${startup.amount} more a month.`,
+    a: `One plan, ${plan.price} a month. The audit is free. If I don't finish the month-one list within 30 days, you get your first payment back. Want to show up in ChatGPT too? That's $${startup.amount} more a month.`,
   },
   {
     q: "How long does SEO take to work?",
@@ -150,7 +150,7 @@ export default function HomePage() {
             </div>
             <BookNote className="mt-4" />
             <ul className="mt-8 flex flex-wrap justify-center gap-2 text-[14px]">
-              {[`${plan.price} a month, audit free`, "100% money-back guarantee", "30+ websites built and ranked"].map((t) => (
+              {[`${plan.price} a month, audit free`, "Month one done or money back", "30+ websites built and ranked"].map((t) => (
                 <li key={t} className="inline-flex items-center gap-2 rounded-full border border-line bg-card px-3.5 py-2 font-medium shadow-[var(--shadow-sm)]">
                   <Check size={15} aria-hidden className="flex-none text-brand" />
                   <span>{t}</span>

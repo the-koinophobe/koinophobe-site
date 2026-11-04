@@ -3,7 +3,7 @@ import { ShieldCheck } from "lucide-react";
 import { guarantee } from "@/lib/pricing";
 
 /**
- * One line naming the money-back guarantee, linked to its full terms on the
+ * One line naming the delivery guarantee, linked to its full terms on the
  * pricing page. Every mention of the guarantee outside that page uses this, so
  * the promise and its terms never drift apart.
  */

@@ -59,7 +59,7 @@ Our [AI search optimization](/ai-search-optimization) is an add-on to our [SEO p
 - Every change made in your site or CMS and listed, so you can see exactly what changed
 - A Friday changelog and a month-end citation report
 
-Plus a free tool when your category has room for one. No extra contract; if you're not satisfied, tell us and we stop the add-on 30 days later. The first month is covered by a [100% money-back guarantee](/pricing#guarantee): ask within 30 days and you get all of it back. Five clients at a time, because nothing is outsourced.
+Plus a free tool when your category has room for one. No extra contract; if you're not satisfied, tell us and we stop the add-on 30 days later. The first month is covered by a [delivery guarantee](/pricing#guarantee): if its month-one list isn't finished within 30 days, you get that payment back. Five clients at a time, because nothing is outsourced.
 
 For local home service businesses that mainly need Google Maps and local pages, the [SEO plan](/pricing) on its own, at $500 a month, may be all you need.
 

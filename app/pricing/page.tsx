@@ -16,7 +16,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "SEO pricing for service businesses",
   description:
-    "SEO for service businesses: one plan at $500 a month, free audits, and Google and AI search for $300 more. Money-back guarantee.",
+    "SEO for service businesses: one plan at $500 a month, free audits, and Google and AI search for $300 more. Delivery guarantee on month one.",
   alternates: { canonical: "/pricing" },
 };
 
@@ -59,15 +59,15 @@ const FAQ = [
   },
   {
     q: "Why does it cost less than most agencies?",
-    a: "No account managers, no sales team and no office. You pay for the work, and I'm the one doing it. You can see every change in your own accounts. If you're not happy within 30 days of your first payment, you get all of it back.",
+    a: "No account managers, no sales team and no office. You pay for the work, and I'm the one doing it. You can see every change in your own accounts. And if I don't finish the month-one list within 30 days, you get your first payment back.",
   },
   {
-    q: "Is there a money-back guarantee?",
+    q: "Is there a guarantee?",
     a: `Yes. ${guarantee.terms}`,
   },
   {
     q: "Do you guarantee rankings?",
-    a: "No, and be careful with anyone who does. Nobody controls Google. What I guarantee is your money: if you're not happy within 30 days of your first payment, you get all of it back. After that you get the work in your plan done every month, and a report that shows what changed and what it did to your clicks and calls.",
+    a: "No, and be careful with anyone who does. Nobody controls Google. What I guarantee is the work: if I don't finish the month-one list within 30 days, you get your first payment back. After that you get the work in your plan done every month, and a report that shows what changed and what it did to your clicks and calls.",
   },
   {
     q: "What happens if I cancel?",
@@ -160,8 +160,8 @@ export default function PricingPage() {
               SEO pricing for service businesses, before the call
             </h1>
             <p className="t-lead mx-auto mt-6 max-w-[58ch]">
-              One plan, {plan.price} a month. The audit is free. Your first payment is covered by a 100%
-              money-back guarantee. Not sure it fits? The intro call is free, and I&rsquo;ll tell you straight.
+              One plan, {plan.price} a month. The audit is free. If I don&rsquo;t finish the month-one list
+              within 30 days, you get your first payment back. Not sure it fits? The intro call is free, and I&rsquo;ll tell you straight.
             </p>
             <div className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
               <BookCta from="pricing_hero" />
@@ -180,6 +180,24 @@ export default function PricingPage() {
           <div>
             <h2 className="t-h3 !text-[1.5rem]">{guarantee.name}</h2>
             <p className="muted mt-3 max-w-[75ch] text-[16px] leading-relaxed">{guarantee.terms}</p>
+            <div className="mt-6 grid gap-6 sm:grid-cols-2">
+              {[
+                { h: "SEO plan, month one", items: guarantee.monthOne },
+                { h: "AI search add-on, month one", items: guarantee.aiMonthOne },
+              ].map((l) => (
+                <div key={l.h}>
+                  <h3 className="text-[15px] font-semibold">{l.h}</h3>
+                  <ul className="mt-3 grid gap-2">
+                    {l.items.map((i) => (
+                      <li key={i} className="muted flex items-start gap-2.5 text-[15px] leading-relaxed">
+                        <Check size={17} aria-hidden className="mt-1 flex-none text-mint" />
+                        <span>{i}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
