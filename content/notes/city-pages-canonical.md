@@ -1,7 +1,7 @@
 ---
 title: "City pages and \"Google chose different canonical\": why your town pages vanish"
 slug: city-pages-canonical
-date: 2027-01-17
+date: 2026-11-17
 draft: false
 topic: technical
 seo_title: "Town pages and duplicate canonical errors, fixed"

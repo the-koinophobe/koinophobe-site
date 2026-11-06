@@ -1,7 +1,7 @@
 ---
 title: "Changing your Business Profile category without losing calls"
 slug: change-gbp-category
-date: 2027-03-18
+date: 2026-11-25
 draft: false
 topic: local
 seo_title: "How to change your Google Business Profile category safely"

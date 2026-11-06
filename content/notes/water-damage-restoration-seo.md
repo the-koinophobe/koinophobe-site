@@ -1,7 +1,7 @@
 ---
 title: "Water damage restoration SEO: getting the emergency call"
 slug: water-damage-restoration-seo
-date: 2027-01-29
+date: 2026-11-18
 draft: false
 topic: trades
 seo_title: "Water damage restoration SEO for local companies"

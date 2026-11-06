@@ -1,7 +1,7 @@
 ---
 title: "The Business Profile performance report: reading calls, directions and website clicks"
 slug: google-business-profile-performance-report
-date: 2027-01-11
+date: 2026-11-16
 draft: false
 topic: tracking
 seo_title: "Google Business Profile performance report, explained"

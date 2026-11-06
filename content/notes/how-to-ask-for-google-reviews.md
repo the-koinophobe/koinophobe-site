@@ -1,7 +1,7 @@
 ---
 title: "How to ask for Google reviews: a script for home service businesses"
 slug: how-to-ask-for-google-reviews
-date: 2027-03-06
+date: 2026-11-23
 draft: false
 topic: local
 seo_title: "How to ask customers for Google reviews (with a script)"

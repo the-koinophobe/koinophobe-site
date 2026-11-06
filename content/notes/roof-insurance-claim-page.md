@@ -1,7 +1,7 @@
 ---
 title: "Roof insurance claim pages: helpful without making promises"
 slug: roof-insurance-claim-page
-date: 2027-04-23
+date: 2026-12-01
 draft: false
 topic: roofing
 seo_title: "Roof insurance claim page for roofers: what to say"

@@ -1,7 +1,7 @@
 ---
 title: "How to read a monthly SEO report in five minutes"
 slug: how-to-read-monthly-seo-report
-date: 2026-12-24
+date: 2026-11-13
 draft: false
 topic: tracking
 seo_title: "How to read a monthly SEO report (in five minutes)"

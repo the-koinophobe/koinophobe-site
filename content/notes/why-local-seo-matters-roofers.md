@@ -1,7 +1,7 @@
 ---
 title: "Why local SEO matters more for roofers than almost any other trade"
 slug: why-local-seo-matters-roofers
-date: 2027-04-05
+date: 2026-11-28
 draft: false
 topic: roofing
 seo_title: "Why local SEO is important for roofers"

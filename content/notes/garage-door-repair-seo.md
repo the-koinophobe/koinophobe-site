@@ -1,7 +1,7 @@
 ---
 title: "Garage door repair SEO: winning the broken spring call"
 slug: garage-door-repair-seo
-date: 2026-11-27
+date: 2026-11-10
 draft: false
 seo_title: "Garage door repair SEO: the broken spring call"
 excerpt: "Garage door repair SEO for urgent calls: the map pack, click-to-call, job and product pages, clear pricing, reviews and the lead-gen listings nearby."

@@ -1,7 +1,7 @@
 ---
 title: "A contractor website homepage that converts: a checklist, top to bottom"
 slug: contractor-homepage-that-converts
-date: 2026-11-15
+date: 2026-11-08
 draft: false
 seo_title: "Contractor website homepage that converts"
 excerpt: "A contractor website homepage checklist: what the first screen must say, the proof that earns a call, services, towns, the estimate form, speed and tracking."

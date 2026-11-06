@@ -1,7 +1,7 @@
 ---
 title: "Roof inspection pages: the offer that ranks and starts the relationship"
 slug: roof-inspection-page
-date: 2027-04-17
+date: 2026-11-30
 draft: false
 topic: roofing
 seo_title: "Roof inspection service page: what to put on it"

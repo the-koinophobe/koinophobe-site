@@ -1,7 +1,7 @@
 ---
 title: "Pool service SEO: weekly cleaning, repairs and the spring rush"
 slug: pool-service-seo
-date: 2027-04-02
+date: 2026-11-28
 draft: false
 topic: trades
 seo_title: "Pool service SEO: get found for pool cleaning and repair"

@@ -1,7 +1,7 @@
 ---
 title: "Deck builder SEO: materials, cost pages and project galleries"
 slug: deck-builder-seo
-date: 2027-04-08
+date: 2026-11-29
 draft: false
 topic: trades
 seo_title: "Deck builder SEO: get found for deck projects"

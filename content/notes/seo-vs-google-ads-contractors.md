@@ -1,7 +1,7 @@
 ---
 title: "SEO vs Google Ads for contractors: how each one gets you calls"
 slug: seo-vs-google-ads-contractors
-date: 2026-11-12
+date: 2026-11-07
 draft: false
 seo_title: "SEO vs Google Ads for contractors"
 excerpt: "SEO vs Google Ads for contractors: how the ad auction charges you, why SEO builds over time, where Local Services Ads fit, and how to track both side by side."
@@ -66,4 +66,4 @@ After three or four months you'll have an answer for your own market.
 
 ## Where to start
 
-If you're running ads now, open the search terms report and export the last 90 days. If website calls aren't tracked yet, fix that before you change any budget. When you want to see what the SEO side costs, every plan is listed on our [pricing page](/pricing).
+If you're running ads now, open the search terms report and export the last 90 days. If website calls aren't tracked yet, fix that before you change any budget. When you want to see what the SEO side costs, the plan and its price are on my [pricing page](/pricing).

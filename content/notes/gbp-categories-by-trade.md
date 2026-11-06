@@ -1,7 +1,7 @@
 ---
 title: "Google Business Profile categories by trade: roofers, plumbers, HVAC and more"
 slug: gbp-categories-by-trade
-date: 2026-12-09
+date: 2026-11-06
 draft: false
 topic: local
 seo_title: "Google Business Profile categories for contractors, by trade"

@@ -1,7 +1,7 @@
 ---
 title: "Business Profile services vs categories: what each one does"
 slug: gbp-services-vs-categories
-date: 2027-02-13
+date: 2026-11-20
 draft: false
 topic: local
 seo_title: "Google Business Profile services vs categories, explained"

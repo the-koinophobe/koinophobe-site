@@ -1,7 +1,7 @@
 ---
 title: "Lawn mowing SEO: winning weekly mowing customers before spring"
 slug: lawn-mowing-seo
-date: 2027-03-03
+date: 2026-11-23
 draft: false
 topic: trades
 seo_title: "Lawn mowing SEO: get weekly mowing customers"

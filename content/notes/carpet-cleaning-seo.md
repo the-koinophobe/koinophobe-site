@@ -1,7 +1,7 @@
 ---
 title: "Carpet cleaning SEO: from one-time cleans to repeat customers"
 slug: carpet-cleaning-seo
-date: 2027-03-15
+date: 2026-11-25
 draft: false
 topic: trades
 seo_title: "Carpet cleaning SEO: get found and booked locally"

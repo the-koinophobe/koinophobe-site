@@ -1,7 +1,7 @@
 ---
 title: "Landscaping company SEO: design, install and maintenance searches"
 slug: landscaping-company-seo
-date: 2027-03-09
+date: 2026-11-24
 draft: false
 topic: trades
 seo_title: "Landscaping company SEO: get found for landscape projects"

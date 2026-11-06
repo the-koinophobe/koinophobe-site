@@ -1,7 +1,7 @@
 ---
 title: "Form tracking in GA4 for contractor websites"
 slug: ga4-form-tracking-contractors
-date: 2027-02-22
+date: 2026-11-21
 draft: false
 topic: tracking
 seo_title: "GA4 form tracking for contractor websites"

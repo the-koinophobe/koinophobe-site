@@ -1,7 +1,7 @@
 ---
 title: "What a roofing SEO expert should find in the first 30 days"
 slug: roofing-seo-expert-first-30-days
-date: 2027-03-12
+date: 2026-11-24
 draft: false
 topic: roofing
 seo_title: "Hiring a roofing SEO expert: the first 30 days"

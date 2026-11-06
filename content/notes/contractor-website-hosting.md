@@ -1,7 +1,7 @@
 ---
 title: "Cheap hosting and contractor SEO: when your host is the problem"
 slug: contractor-website-hosting
-date: 2027-02-10
+date: 2026-11-20
 draft: false
 topic: technical
 seo_title: "Contractor website hosting: does it affect SEO?"

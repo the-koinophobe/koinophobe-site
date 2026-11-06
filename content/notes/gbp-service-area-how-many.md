@@ -1,7 +1,7 @@
 ---
 title: "How many service areas should a Google Business Profile have?"
 slug: gbp-service-area-how-many
-date: 2027-01-26
+date: 2026-11-18
 draft: false
 topic: local
 seo_title: "Google Business Profile service areas: how many to add"

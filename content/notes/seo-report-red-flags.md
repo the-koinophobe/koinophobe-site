@@ -1,7 +1,7 @@
 ---
 title: "SEO report red flags: nine signs the numbers are hiding something"
 slug: seo-report-red-flags
-date: 2027-01-23
+date: 2026-11-17
 draft: false
 topic: tracking
 seo_title: "SEO report red flags for home service businesses"

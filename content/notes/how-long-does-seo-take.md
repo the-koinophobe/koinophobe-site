@@ -14,7 +14,7 @@ faq:
   - q: "Can anyone guarantee SEO results by a certain date?"
     a: "No. Google decides when to recrawl pages and how to rank them. An SEO can tell you what work happens each month and show you the numbers as they move, but a guaranteed ranking date is a promise nobody can keep."
   - q: "Why do SEO plans have a minimum term?"
-    a: "The first month is mostly setup and fixes, and Google needs time to recrawl and re-rank the changed pages. Our plans have a 3-month minimum, then run month to month with 30 days' notice."
+    a: "The first month is mostly setup and fixes, and Google needs time to recrawl and re-rank the changed pages. My SEO plan has a 3-month minimum, then run month to month with 30 days' notice."
 ---
 
 Every owner asks this on the first call, and we won't give a date. Google decides when it recrawls your pages and how it ranks them, and anyone who promises page one by a certain month is guessing.
@@ -77,7 +77,7 @@ Once phone taps and form submissions are tracked, you know how many leads the si
 
 That's why tracking is the first thing we set up. We wrote about how in [call tracking for contractors](/notes/call-tracking-for-contractors), and the map side of the timeline is in [how to rank in the Google map pack](/notes/google-map-pack-ranking).
 
-## Why our plans have a 3-month minimum
+## Why my plan has a 3-month minimum
 
 Month one is setup. Google needs time after that to recrawl and re-rank what changed. If you judge the work at week six, you're mostly judging the setup. A 3-month minimum gives the changes time to show up in Search Console, then the plan runs month to month with 30 days' notice. You own every account the whole time.
 

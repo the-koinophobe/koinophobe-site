@@ -1,7 +1,7 @@
 ---
 title: "Google Business Profile management for roofers: a monthly checklist"
 slug: roofer-google-business-profile-management
-date: 2027-04-29
+date: 2026-12-02
 draft: false
 topic: roofing
 seo_title: "Google Business Profile management for roofers, monthly"
@@ -52,4 +52,4 @@ Write down every edit with a date. When calls move, the log explains why. If the
 
 ## Next step
 
-Block one hour on the first Monday of each month for this checklist, and do the first one this week. Profile upkeep is part of every plan on our [roofing SEO page](/roofing-seo), if you'd rather hand it over.
+Block one hour on the first Monday of each month for this checklist, and do the first one this week. Profile upkeep is part of the $500-a-month plan on my [roofing SEO page](/roofing-seo), if you'd rather hand it over.

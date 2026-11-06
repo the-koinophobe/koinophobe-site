@@ -14,7 +14,7 @@ faq:
   - q: "Who should own my Google accounts when I hire an SEO?"
     a: "You should own your Google Analytics, Search Console, Business Profile, Tag Manager, domain and hosting. Your SEO gets added as a user and you keep everything if you leave."
   - q: "How long should an SEO contract be?"
-    a: "A short minimum followed by month to month is fair. Our plans have a 3-month minimum, then run month to month with 30 days' notice."
+    a: "A short minimum followed by month to month is fair. My SEO plan has a 3-month minimum, then run month to month with 30 days' notice."
 ---
 
 ![A checklist of ten questions, two of them failed](/notes/illustrations/hiring-an-seo-questions-to-ask.webp)
@@ -59,7 +59,7 @@ Ask to see a real one with the client details removed. It should fit on a page: 
 
 ## 9. How long is the contract?
 
-Long lock-ins protect the provider. A short minimum makes sense, because the first months go into setup and SEO takes time to show up in the numbers. After that, month to month is fair. Our plans have a 3-month minimum, then run month to month with 30 days' notice.
+Long lock-ins protect the provider. A short minimum makes sense, because the first months go into setup and SEO takes time to show up in the numbers. After that, month to month is fair. My SEO plan has a 3-month minimum, then run month to month with 30 days' notice.
 
 ## 10. What do you need from me?
 

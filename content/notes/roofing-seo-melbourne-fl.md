@@ -1,7 +1,7 @@
 ---
 title: "Roofing SEO in Melbourne, FL: what moved one roofer from page eight to page two"
 slug: roofing-seo-melbourne-fl
-date: 2026-12-21
+date: 2026-11-13
 draft: false
 topic: roofing
 seo_title: "Roofing SEO in Melbourne, FL"

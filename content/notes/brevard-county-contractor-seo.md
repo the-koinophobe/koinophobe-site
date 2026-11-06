@@ -1,7 +1,7 @@
 ---
 title: "Brevard County SEO for contractors: Palm Bay, Melbourne, Titusville and the beaches"
 slug: brevard-county-contractor-seo
-date: 2027-01-05
+date: 2026-11-15
 draft: false
 topic: local
 seo_title: "Brevard County SEO for contractors"

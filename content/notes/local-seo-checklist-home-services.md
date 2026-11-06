@@ -1,7 +1,7 @@
 ---
 title: "A local SEO checklist for home service businesses"
 slug: local-seo-checklist-home-services
-date: 2026-11-18
+date: 2026-11-06
 draft: false
 seo_title: "Local SEO checklist for home service businesses"
 excerpt: "A local SEO checklist for home service businesses: Business Profile, service and town pages, reviews, citations, tracking, speed and the monthly upkeep."
@@ -100,4 +100,4 @@ Big photos are a common cause of slow pages. On our own site, photos went from a
 
 ## Next step
 
-Fix the section with the fewest ticks first. If you'd like us to run the whole list on your site, the Site Audit on our [pricing page](/pricing) covers it, and the fee is credited in full if a monthly plan starts within 30 days.
+Fix the section with the fewest ticks first. If you'd like us to run the whole list on your site, the free audit on my [pricing page](/pricing) covers it.

@@ -1,7 +1,7 @@
 ---
 title: "Bathroom remodel SEO: the pages that turn research into consultations"
 slug: bathroom-remodel-seo
-date: 2027-04-26
+date: 2026-12-02
 draft: false
 topic: trades
 seo_title: "Bathroom remodel SEO for remodeling companies"

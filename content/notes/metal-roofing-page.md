@@ -1,7 +1,7 @@
 ---
 title: "A metal roofing page that ranks: what homeowners want to know first"
 slug: metal-roofing-page
-date: 2027-04-11
+date: 2026-11-29
 draft: false
 topic: roofing
 seo_title: "Metal roofing service page: what to put on it"

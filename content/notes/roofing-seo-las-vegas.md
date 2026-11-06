@@ -1,7 +1,7 @@
 ---
 title: "Roofing SEO in Las Vegas: desert roofs, different searches"
 slug: roofing-seo-las-vegas
-date: 2027-02-19
+date: 2026-11-06
 draft: false
 topic: roofing
 seo_title: "Roofing SEO in Las Vegas: what changes in the desert"

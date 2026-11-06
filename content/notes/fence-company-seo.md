@@ -1,7 +1,7 @@
 ---
 title: "Fence company SEO: material pages, town pages and the permit question"
 slug: fence-company-seo
-date: 2027-02-25
+date: 2026-11-22
 draft: false
 topic: trades
 seo_title: "Fence company SEO: get found for fence installation"

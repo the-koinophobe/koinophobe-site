@@ -1,7 +1,7 @@
 ---
 title: "Electrician SEO: pages for emergency calls and planned jobs"
 slug: electrician-seo
-date: 2026-11-21
+date: 2026-11-09
 draft: false
 seo_title: "Electrician SEO: emergency calls and big jobs"
 excerpt: "Electrician SEO for both kinds of search: urgent calls from the map, and planned jobs like panel upgrades, EV chargers and generators that need a page."

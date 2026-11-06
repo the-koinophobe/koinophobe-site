@@ -1,7 +1,7 @@
 ---
 title: "A monthly SEO report template for home service businesses"
 slug: monthly-seo-report-template
-date: 2026-12-06
+date: 2026-11-06
 draft: false
 topic: tracking
 seo_title: "Monthly SEO report template: one page, six numbers"
@@ -71,4 +71,4 @@ Domain authority scores, backlink counts with no context, "visibility" indexes f
 
 ## Next step
 
-Fill in the table for last month using your own accounts. If the first row is blank because nothing tracks calls, fix that before anything else. The [monthly SEO report guide](/notes/monthly-seo-report-contractors) covers what a good agency report looks like, and every plan on our [pricing page](/pricing) comes with this one page every month.
+Fill in the table for last month using your own accounts. If the first row is blank because nothing tracks calls, fix that before anything else. The [monthly SEO report guide](/notes/monthly-seo-report-contractors) covers what a good agency report looks like, and the SEO plan on my [pricing page](/pricing) comes with this one page every month, plus a short call to go through it.

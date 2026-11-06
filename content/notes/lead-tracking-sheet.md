@@ -1,7 +1,7 @@
 ---
 title: "A lead tracking sheet for home service businesses that takes five minutes a week"
 slug: lead-tracking-sheet
-date: 2027-03-30
+date: 2026-11-27
 draft: false
 topic: tracking
 seo_title: "Lead tracking spreadsheet for home service businesses"

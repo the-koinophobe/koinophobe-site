@@ -1,7 +1,7 @@
 ---
 title: "Call tracking software for contractors: when the free setup isn't enough"
 slug: call-tracking-software-contractors
-date: 2026-12-12
+date: 2026-11-11
 draft: false
 topic: tracking
 seo_title: "Call tracking software for contractors: do you need it?"

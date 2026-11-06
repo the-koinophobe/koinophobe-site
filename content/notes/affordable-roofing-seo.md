@@ -1,7 +1,7 @@
 ---
 title: "Affordable roofing SEO: what a small roofer can get for $500 to $1,500 a month"
 slug: affordable-roofing-seo
-date: 2027-02-01
+date: 2026-11-06
 draft: false
 topic: roofing
 seo_title: "Affordable roofing SEO: what small budgets buy"

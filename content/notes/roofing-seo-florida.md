@@ -1,7 +1,7 @@
 ---
 title: "Roofing SEO in Florida: what changes in hurricane country"
 slug: roofing-seo-florida
-date: 2026-12-03
+date: 2026-11-06
 draft: false
 topic: roofing
 seo_title: "Roofing SEO in Florida: a guide for Florida roofers"

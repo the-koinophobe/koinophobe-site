@@ -1,7 +1,7 @@
 ---
 title: "Pressure washing SEO: pages, photos and quotes that win local jobs"
 slug: pressure-washing-seo
-date: 2026-11-30
+date: 2026-11-10
 draft: false
 seo_title: "Pressure washing SEO: pages, photos and quotes"
 excerpt: "Pressure washing SEO that books jobs: a page per service, before and after photos, town pages, a quote form with photo upload, reviews and seasonal timing."

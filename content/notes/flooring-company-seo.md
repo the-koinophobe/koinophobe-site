@@ -1,7 +1,7 @@
 ---
 title: "Flooring company SEO: material pages, showroom visits and installs"
 slug: flooring-company-seo
-date: 2027-04-14
+date: 2026-11-30
 draft: false
 topic: trades
 seo_title: "Flooring company SEO: get found for flooring installation"

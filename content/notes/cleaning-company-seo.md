@@ -1,7 +1,7 @@
 ---
 title: "Cleaning company SEO: how a maid or cleaning service gets found locally"
 slug: cleaning-company-seo
-date: 2026-12-15
+date: 2026-11-12
 draft: false
 topic: trades
 seo_title: "Cleaning company SEO: get found by local homeowners"

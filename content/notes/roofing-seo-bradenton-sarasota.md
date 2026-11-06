@@ -1,7 +1,7 @@
 ---
 title: "Roofing SEO in Bradenton, Sarasota and Lakewood Ranch"
 slug: roofing-seo-bradenton-sarasota
-date: 2027-01-20
+date: 2026-11-06
 draft: false
 topic: roofing
 seo_title: "Roofing SEO in Bradenton, Sarasota and Lakewood Ranch"

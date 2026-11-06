@@ -1,7 +1,7 @@
 ---
 title: "Painting contractor SEO: interior, exterior and cabinet painting searches"
 slug: painting-contractor-seo
-date: 2027-02-07
+date: 2026-11-19
 draft: false
 topic: trades
 seo_title: "Painting contractor SEO: get found locally"

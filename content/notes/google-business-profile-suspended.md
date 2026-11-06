@@ -1,7 +1,7 @@
 ---
 title: "Google Business Profile suspended? Why it happens and how to appeal"
 slug: google-business-profile-suspended
-date: 2026-11-09
+date: 2026-11-07
 draft: false
 seo_title: "Business Profile suspended? How to appeal"
 excerpt: "Google Business Profile suspended? The common reasons from Google's own guidelines, how to check the status, how the appeals tool works and what not to do."

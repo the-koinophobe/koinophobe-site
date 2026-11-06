@@ -1,7 +1,7 @@
 ---
 title: "SEO KPIs for home service businesses: the six numbers that matter"
 slug: seo-kpis-home-services
-date: 2027-01-02
+date: 2026-11-15
 draft: false
 topic: tracking
 seo_title: "SEO KPIs for home service businesses"

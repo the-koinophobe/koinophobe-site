@@ -1,7 +1,7 @@
 ---
 title: "Window cleaning SEO: residential, commercial and recurring routes"
 slug: window-cleaning-seo
-date: 2027-03-27
+date: 2026-11-27
 draft: false
 topic: trades
 seo_title: "Window cleaning SEO for local window cleaners"

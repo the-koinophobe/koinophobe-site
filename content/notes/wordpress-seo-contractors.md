@@ -1,7 +1,7 @@
 ---
 title: "WordPress SEO for contractor websites: the settings that matter"
 slug: wordpress-seo-contractors
-date: 2027-03-24
+date: 2026-11-26
 draft: false
 topic: technical
 seo_title: "WordPress SEO settings for contractor websites"

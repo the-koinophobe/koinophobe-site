@@ -1,7 +1,7 @@
 ---
 title: "Junk removal SEO: same-day searches, clear pricing and local trust"
 slug: junk-removal-seo
-date: 2027-04-20
+date: 2026-12-01
 draft: false
 topic: trades
 seo_title: "Junk removal SEO: get found for same-day pickups"

@@ -1,7 +1,7 @@
 ---
 title: "Secondary categories on Google Business Profile: how many, and which"
 slug: gbp-secondary-categories
-date: 2026-12-27
+date: 2026-11-14
 draft: false
 topic: local
 seo_title: "Google Business Profile secondary categories, explained"

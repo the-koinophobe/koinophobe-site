@@ -1,7 +1,7 @@
 ---
 title: "Month-by-month SEO: what should happen in the first six months"
 slug: month-by-month-seo
-date: 2027-02-28
+date: 2026-11-22
 draft: false
 topic: strategy
 seo_title: "Month-by-month SEO plan for home service businesses"
@@ -77,4 +77,4 @@ A one-page report with leads, profile actions, clicks, positions, work done and 
 
 ## Next step
 
-Compare this timeline with what's actually been done on your site. If month one's tracking isn't in place, start there. If you'd like it done for you, every plan on our [pricing page](/pricing) follows this order.
+Compare this timeline with what's actually been done on your site. If month one's tracking isn't in place, start there. If you'd like it done for you, the SEO plan on my [pricing page](/pricing) follows this order.

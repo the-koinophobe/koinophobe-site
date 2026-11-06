@@ -1,7 +1,7 @@
 ---
 title: "Window and door replacement SEO: winning a long, expensive decision"
 slug: window-door-replacement-seo
-date: 2027-03-21
+date: 2026-11-26
 draft: false
 topic: trades
 seo_title: "Window and door replacement SEO for local installers"

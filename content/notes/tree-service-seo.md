@@ -1,7 +1,7 @@
 ---
 title: "Tree service SEO: catching storm calls and planned work"
 slug: tree-service-seo
-date: 2026-11-24
+date: 2026-11-09
 draft: false
 seo_title: "Tree service SEO: storm calls and planned work"
 excerpt: "Tree service SEO for both kinds of demand: storm cleanup calls that spike overnight, and the planned removal, trimming and stump grinding people research."

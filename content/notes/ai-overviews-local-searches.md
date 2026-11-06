@@ -1,7 +1,7 @@
 ---
 title: "Do AI Overviews show up for home service searches?"
 slug: ai-overviews-local-searches
-date: 2026-12-18
+date: 2026-11-12
 draft: false
 topic: ai
 seo_title: "AI Overviews and home service searches: what shows up"

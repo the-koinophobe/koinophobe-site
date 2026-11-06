@@ -2,17 +2,22 @@
 title: "Duplicate, Google chose different canonical than user: what to do"
 slug: google-chose-different-canonical
 date: 2026-10-19
+updated: 2026-11-06
 draft: false
 topic: technical
 seo_title: "Google chose different canonical than user: how to fix it"
 seo_description: "Your canonical tag says one URL and Google picked another. How to see which one Google chose, why it overrides you, and how to line up the signals."
-excerpt: "You told Google which URL to index and it picked a different one. How to see Google's choice, the reasons it overrides a canonical tag, when Google is right, and how to line up redirects, canonicals, sitemaps and internal links so it agrees with you."
+excerpt: "You told Google which URL to index and it picked a different one. What a Google canonical is, the three canonical statuses in Search Console, why Google overrides your tag, when Google is right, and how to line up redirects, canonicals, sitemaps and internal links so it agrees with you."
 cover: /notes/photos/google-chose-different-canonical-cover.webp
 cover_alt: "A stack of papers"
 cover_credit: "Photo: ron dyar on Unsplash"
 faq:
   - q: "What does duplicate, Google chose different canonical than user mean?"
     a: "The page has a canonical tag pointing to one URL, but Google decided another URL is the better version to index. The URL Inspection tool shows both: the user-declared canonical and the Google-selected canonical."
+  - q: "What is a canonical URL in Google?"
+    a: "When Google finds several URLs with the same or very similar content, it picks one to show in search results. That one is the canonical. You suggest it with a rel=canonical tag, redirects, your sitemap and internal links; Google makes the final call."
+  - q: "What is the difference between duplicate without user-selected canonical and Google chose different canonical than user?"
+    a: "Without user-selected canonical means Google saw no canonical on the page and grouped it with another URL. Google chose different canonical means you did set one and Google overrode it. Alternate page with proper canonical tag means you pointed to another URL and Google agreed, so nothing needs fixing."
   - q: "Why does Google ignore my canonical tag?"
     a: "A canonical tag is a strong signal, and Google weighs it against redirects, internal links, sitemaps, HTTPS and how similar the pages are. If those point elsewhere, or the pages are near-identical, Google can pick a different URL."
   - q: "Is Google chose different canonical bad?"
@@ -21,9 +26,23 @@ faq:
 
 ![Three near-identical pages with the user's canonical arrow pointing one way and Google's choice pointing another](/notes/illustrations/google-chose-different-canonical.webp)
 
-This status in Search Console's Page indexing report means you told Google which URL to index, and Google picked a different one. Your canonical tag points to page A; Google decided page B is the better version of the same content.
+**The short answer:** you told Google which URL to index, and Google picked a different one. Open URL Inspection, compare the user-declared canonical with the Google-selected one, and decide whether Google is right. If it isn't, point your redirects, sitemap and internal links at the URL you want, then request indexing.
 
-Sometimes Google is right and nothing needs fixing. Sometimes it's grouping pages that shouldn't be grouped. The first step is finding out which.
+Sometimes Google is right and nothing needs fixing. Sometimes it's grouping pages that shouldn't be grouped. The first job is finding out which.
+
+## What a canonical is, in Google's terms
+
+When Google finds several URLs with the same or nearly the same content, it shows one of them in search. That one is the canonical. Your `rel="canonical"` tag is a suggestion; Google's documentation calls it "a strong signal", not an order. Redirects, your sitemap, your internal links and HTTPS all get a vote too.
+
+## The three canonical statuses in Search Console
+
+| Status in the Page indexing report | What it means | What to do |
+|---|---|---|
+| Alternate page with proper canonical tag | This page points to another URL as canonical, and Google agrees | Nothing |
+| Duplicate without user-selected canonical | Google didn't see a canonical on this page and grouped it with another URL | Check the page has a self-referencing canonical, then request indexing |
+| Duplicate, Google chose different canonical than user | You set a canonical and Google chose another URL | The rest of this note |
+
+The middle one happened on my own site in October 2026. Search Console listed four of my pages as duplicates without a user-selected canonical, including my AI search and home remodeling service pages. Every one of them had a correct self-referencing canonical, and had since the day it went live. The catch: Google crawled each of them on launch day, while I was still pushing fixes, and hadn't been back. The status was describing a version of the page that no longer existed. If the live page checks out, request indexing and move on.
 
 ## See what Google chose
 
@@ -34,7 +53,7 @@ Open the URL Inspection tool and enter one of the affected URLs. Under **Page in
 
 Open both and compare them. You'll usually land in one of three cases.
 
-**They're the same page at two addresses.** `http` and `https`, `www` and non-`www`, with and without a trailing slash, with a tracking parameter. Google chose one version; you need to make every signal agree on it.
+**They're the same page at two addresses.** `http` and `https`, `www` and non-`www`, with and without a trailing slash, with a tracking parameter. Google chose one version; every signal has to agree on it.
 
 **They're different pages with nearly the same content.** Two town pages with the same text, a product in two colors, a blog post and its printer version. Google treats them as duplicates and keeps one.
 
@@ -42,7 +61,7 @@ Open both and compare them. You'll usually land in one of three cases.
 
 ## Why Google overrides a canonical tag
 
-Google's documentation calls `rel="canonical"` "a strong signal." Google weighs it against everything else:
+Google weighs the tag against everything else:
 
 - **Redirects**, the strongest signal. If A redirects to B, Google will pick B.
 - **Sitemaps**, a weak signal. If your sitemap lists B while your canonical says A, you're contradicting yourself.
@@ -56,24 +75,24 @@ Google's documentation calls `rel="canonical"` "a strong signal." Google weighs 
 
 Pick the URL you want, then make every signal point to it:
 
-1. **Redirect true duplicates.** `http` to `https`, one host version to the other, one trailing slash style to the other, all with a single 301.
+1. **Redirect true duplicates.** `http` to `https`, one host version to the other, one trailing slash style to the other, each with a single permanent redirect.
 2. **Use absolute URLs in the canonical tag,** and put a self-referencing canonical on every canonical page. Google recommends both.
 3. **List only canonical URLs in the sitemap.**
 4. **Point internal links at the canonical URL.** Menus, footers and in-text links.
-5. **Keep JavaScript away from the canonical.** If a script changes the canonical tag after load, Google may see two values. Our [Next.js checklist](/notes/what-is-technical-seo) shows how to set it in the server response.
+5. **Keep JavaScript away from the canonical.** If a script changes the canonical tag after load, Google may see two values. Set it in the HTML the server sends; [what technical SEO covers](/notes/what-is-technical-seo) goes through how.
 
-Two things not to use for this: robots.txt, which can leave blocked URLs indexed without their content, and `noindex`, which removes a page from Search completely.
+Two things not to use for this: robots.txt, which can leave blocked URLs indexed without their content, and `noindex`, which removes a page from search completely.
 
 ## When the pages are distinct but too similar
 
-If Google is grouping two pages you want indexed separately, the fix is the content. Two town pages that differ only in the town name will keep getting folded together. Add what's true about each place: jobs you've done there, photos, the problems common to that area, how quickly you get there. [Service area pages](/notes/roofing-service-area-pages) shows how.
+If Google is grouping two pages you want indexed separately, the fix is the content. Two town pages that differ only in the town name will keep getting folded together. Add what's true about each place: jobs you've done there, photos, the problems common to that area, how quickly you get there. [Service area pages](/notes/roofing-service-area-pages) shows how I build them.
 
-If the pages don't have enough to say separately, merge them into one stronger page and redirect the other. That's often the better result.
+If the pages don't have enough to say separately, merge them into one stronger page and redirect the other. Often that's the better result anyway.
 
 ## After you fix it
 
-Request indexing for the URL you want in URL Inspection, then use **Validate fix** in the Page indexing report. Expect a few weeks before the status updates across the site. [Crawled, currently not indexed](/notes/crawled-currently-not-indexed) and [discovered, currently not indexed](/notes/discovered-currently-not-indexed) cover the two statuses that often show up alongside this one.
+Request indexing for the URL you want in URL Inspection, then use **Validate fix** in the Page indexing report. Expect a few weeks before the status updates across the site. [Crawled, currently not indexed](/notes/crawled-currently-not-indexed) and [discovered, currently not indexed](/notes/discovered-currently-not-indexed) cover the two statuses that often turn up alongside this one.
 
 ## Where to start
 
-Inspect three affected URLs today and sort them into the three cases above. If they're all the same-page-two-addresses case, the fix is a redirect rule and a sitemap update. If you'd like the full indexing review done for you, it's part of our Site Audit on the [pricing page](/pricing).
+Inspect three affected URLs today and sort them into the three cases above. If they're all the same-page-two-addresses case, the fix is a redirect rule and a sitemap update. If you'd rather hand the whole indexing review to someone, it's part of the free audit on my [pricing page](/pricing).

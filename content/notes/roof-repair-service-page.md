@@ -1,7 +1,7 @@
 ---
 title: "A roof repair page that ranks: what to put on it"
 slug: roof-repair-service-page
-date: 2027-01-08
+date: 2026-11-06
 draft: false
 topic: roofing
 seo_title: "Roof repair service page: what to put on it"
