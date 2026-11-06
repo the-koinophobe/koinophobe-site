@@ -31,7 +31,7 @@ Build a page for each service, written for the person who needs it:
 
 - **Standard recurring cleaning.** What a regular visit covers, how often you can come (weekly, biweekly, monthly) and whether it's the same cleaner each time.
 - **Deep cleaning.** What you do beyond a standard clean: baseboards, inside appliances, behind furniture. A room-by-room checklist answers the first question people ask.
-- **Move-in and move-out cleaning.** Who books it (tenants trying to get a deposit back, landlords, sellers), what's included, and whether you work to a landlord's checklist.
+- **Move-in and move-out cleaning.** Who books it (tenants trying to get a deposit back, landlords, sellers), what's included, and whether you work to a landlord's checklist. These customers are hiring [movers](/notes/moving-company-seo) the same week, so a local moving company is a good partner for referrals.
 - **Specialty work you take on.** Short-term rental turnovers, post-construction cleanup, offices. Only the ones you want more of.
 
 Each page needs a title tag with the service and your main town, a booking button near the top, and the questions customers ask before they book. Then each page links to your recurring service, with a line about how a one-time clean turns into a schedule.

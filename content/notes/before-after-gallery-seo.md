@@ -25,7 +25,7 @@ The photos are some of the best proof you have. The fix is to move them to where
 
 ## Why a gallery page doesn't rank
 
-Google matches pages to searches mostly through text: the title tag, headings, body copy, file names and alt text. A homeowner searching `paver patio before and after [town]` or `roof replacement [town]` needs a page that says those things. A grid of `IMG_4512.jpg` files says none of them.
+Google matches pages to searches mostly through text: the title tag, headings, body copy, file names and alt text. A homeowner searching `paver patio before and after [town]` or `roof replacement [town]` needs a page that says those things. That's why we put job photos on the job pages themselves, as in [concrete driveway SEO](/notes/concrete-driveway-paving-seo) and the [roof replacement page](/notes/roof-replacement-service-page). A grid of `IMG_4512.jpg` files says none of them.
 
 Big image files cause a second problem. Dozens of full-size photos make the page heavy on a phone, and if the first big photo loads slowly it drags out Largest Contentful Paint, which Google wants at 2.5 seconds or less. We covered the thresholds in [Core Web Vitals for contractor websites](/notes/core-web-vitals-contractor-websites).
 

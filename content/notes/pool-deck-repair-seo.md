@@ -36,7 +36,7 @@ People search for the specific job, so each job needs its own page:
 - sealing and cleaning
 - coatings for concrete decks
 
-Each page should explain what the job involves, how long it takes, how long it lasts, and what it looks like done, with your own photos. A page that tries to cover all six ranks for none of them.
+Each page should explain what the job involves, how long it takes, how long it lasts, and what it looks like done, with your own photos. A page that tries to cover all six ranks for none of them. If you pour driveways and patios too, those get their own pages; [concrete driveway SEO](/notes/concrete-driveway-paving-seo) covers how to build them.
 
 ## Answer the questions people ask
 

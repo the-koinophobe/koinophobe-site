@@ -48,7 +48,7 @@ The name on the profile should be the name on your truck, your invoices and your
 
 ## Fill in services, in your customers' words
 
-Under Services, list each job separately: roof replacement, roof repair, leak repair, storm damage inspection, emergency tarping, gutter installation. Add a one or two sentence description to each. Use the words people search with, which are usually plainer than the words contractors use.
+Under Services, list each job separately: roof replacement, roof repair, leak repair, storm damage inspection, emergency tarping, gutter installation. Add a one or two sentence description to each, and link each one to its own page on your site, like a [roof replacement page](/notes/roof-replacement-service-page). Use the words people search with, which are usually plainer than the words contractors use. Our list of [roofing keywords worth building a page for](/notes/roofing-keywords) shows what those are.
 
 ## Phone number and call tracking
 

@@ -141,8 +141,9 @@ export default function RoofingPage() {
           <div className="card-dark mt-8 flex flex-col gap-5 p-7 sm:p-10 md:flex-row md:items-center md:justify-between">
             <p className="max-w-[60ch] text-[16.5px]">
               The <Link href="/pricing#monthly" className="font-medium underline underline-offset-4">SEO plan</Link> is
-              $500 a month. I fix your site first, then add two new town or service pages a month, plus the
-              profile work. The <Link href="/pricing#audit" className="font-medium underline underline-offset-4">audit</Link> is
+              $500 a month. I fix your site first, then add two new town or service pages a month, chosen from
+              the <Link href="/notes/roofing-keywords" className="font-medium underline underline-offset-4">roofing
+              keywords worth building a page for</Link>, plus the profile work. The <Link href="/pricing#audit" className="font-medium underline underline-offset-4">audit</Link> is
               free.
             </p>
             <PageCta href="/pricing" label="See pricing" from="roofing_plans" size="md" />
@@ -171,6 +172,7 @@ export default function RoofingPage() {
         title="Roofing SEO notes"
         more={{ href: "/notes/topic/roofing", label: "All roofing notes" }}
         slugs={["roofing-service-area-pages", "storm-damage-roofing-pages", "google-business-profile-for-roofers", "roofing-keywords", "roof-replacement-service-page", "roofing-seo-cost", "google-reviews-for-roofers"]}
+        max={6}
       />
 
       <MoreServices current="/roofing-seo" />
