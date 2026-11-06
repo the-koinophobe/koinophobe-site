@@ -20,6 +20,8 @@ export function NotesListing({
   activeTopic,
   featureFirst = false,
   basePath = "/notes",
+  sort,
+  sortNote,
 }: {
   heading: string;
   intro: string;
@@ -29,6 +31,10 @@ export function NotesListing({
   activeTopic?: TopicKey;
   featureFirst?: boolean;
   basePath?: string;
+  /** Shows the Newest / Popular switch above the grid, with this one selected. */
+  sort?: "newest" | "popular";
+  /** One line under the switch saying where the order comes from. */
+  sortNote?: string;
 }) {
   const [first, ...rest] = items;
   const href = (p: number) => (p === 1 ? basePath : `${basePath}/page/${p}`);
@@ -65,7 +71,29 @@ export function NotesListing({
       </section>
 
       <section className="container-pad pb-24">
-        <h2 className="sr-only">{activeTopic ? `${heading}: all notes` : page > 1 ? "More SEO notes" : "Latest SEO notes"}</h2>
+        <h2 className="sr-only">
+          {activeTopic ? `${heading}: all notes` : sort === "popular" ? "Most popular SEO notes" : page > 1 ? "More SEO notes" : "Latest SEO notes"}
+        </h2>
+        {sort ? (
+          <div className="mb-8 flex flex-wrap items-center justify-between gap-3">
+            <nav aria-label="Sort notes" className="flex gap-2">
+              {([
+                ["newest", "Newest", "/notes"],
+                ["popular", "Popular", "/notes/popular"],
+              ] as const).map(([key, label, to]) => (
+                <Link
+                  key={key}
+                  href={to}
+                  aria-current={sort === key ? "page" : undefined}
+                  className={`btn btn-sm ${sort === key ? "btn-primary" : "btn-secondary"}`}
+                >
+                  {label}
+                </Link>
+              ))}
+            </nav>
+            {sortNote ? <p className="text-sm text-muted">{sortNote}</p> : null}
+          </div>
+        ) : null}
         {items.length === 0 ? (
           <p className="text-muted">Nothing here yet. New notes go up twice a week.</p>
         ) : featureFirst && first ? (

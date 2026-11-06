@@ -3,6 +3,7 @@ import path from "node:path";
 import matter from "gray-matter";
 import { marked } from "marked";
 import { TOPIC_BY_SLUG, type TopicKey } from "./topics";
+import { popularity } from "./note-popularity";
 
 export type Note = {
   slug: string;
@@ -307,6 +308,19 @@ export function adjacentNotes(note: Note): { newer?: Note; older?: Note } {
   const list = publishedNotes();
   const i = list.findIndex((x) => x.slug === note.slug);
   return { newer: i > 0 ? list[i - 1] : undefined, older: i >= 0 ? list[i + 1] : undefined };
+}
+
+/**
+ * Every published note, most popular first: clicks from Google, then how often
+ * Google showed it, then newest. Notes with no data yet keep date order at the end.
+ */
+export function popularNotes(): Note[] {
+  const score = (n: Note) => popularity[n.slug] ?? { clicks: 0, impressions: 0 };
+  return publishedNotes().sort((a, b) => {
+    const x = score(a);
+    const y = score(b);
+    return y.clicks - x.clicks || y.impressions - x.impressions || b.date.localeCompare(a.date);
+  });
 }
 
 export const NOTES_PER_PAGE = 12;

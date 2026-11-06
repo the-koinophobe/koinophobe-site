@@ -32,6 +32,8 @@ export default function NotesPageN({ params }: { params: { n: string } }) {
       items={items}
       page={n}
       pages={pages}
+      sort="newest"
+      sortNote="Newest first."
     />
   );
 }

@@ -39,6 +39,8 @@ export default function NotesPage() {
         items={items}
         page={1}
         pages={pages}
+        sort="newest"
+        sortNote="Newest first."
         featureFirst
       />
     </>
