@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Linkedin } from "lucide-react";
 import { site } from "@/lib/site";
 import { topics } from "@/lib/topics";
+import { publishedNotes } from "@/lib/notes";
 import { CookieSettingsButton } from "./CookieSettingsButton";
 import { XIcon } from "./Availability";
 
@@ -45,8 +46,27 @@ const COLS: { title: string; href?: string; links: { href: string; label: string
   },
 ];
 
+/**
+ * Linked from every page. These are notes Google already shows but ranks low
+ * (Search Console, Nov 6, 2026), plus two that feed the service pages, so the
+ * sitewide links go where they can move something. Swap them as rankings change.
+ */
+const FEATURED: { slug: string; label: string }[] = [
+  { slug: "google-chose-different-canonical", label: "Google chose a different canonical" },
+  { slug: "ai-crawlers-robots-txt", label: "Can ChatGPT read your site?" },
+  { slug: "monthly-seo-report-contractors", label: "What a monthly SEO report should include" },
+  { slug: "track-chatgpt-traffic-ga4", label: "Track ChatGPT traffic in GA4" },
+  { slug: "how-to-appear-in-google-ai-overviews", label: "How to appear in Google AI Overviews" },
+  { slug: "website-traffic-dropped", label: "Why did my website traffic drop?" },
+  { slug: "google-business-profile-categories", label: "Google Business Profile categories" },
+  { slug: "local-seo-checklist-home-services", label: "Local SEO checklist for home services" },
+  { slug: "roofing-keywords", label: "Roofing keywords worth a page" },
+];
+
 export function Footer() {
   const year = new Date().getFullYear();
+  const live = new Set(publishedNotes().map((n) => n.slug));
+  const featured = FEATURED.filter((f) => live.has(f.slug));
   return (
     <footer className="p-2.5 sm:p-4">
       <div className="band sq overflow-hidden rounded-[var(--r-lg)]">
@@ -94,6 +114,21 @@ export function Footer() {
               </nav>
             ))}
           </div>
+
+          {featured.length ? (
+            <nav aria-label="Featured notes" className="mt-14 border-t border-white/10 pt-10">
+              <p className="text-[14px] font-medium">Featured notes</p>
+              <ul className="mt-4 grid gap-x-10 gap-y-2.5 sm:grid-cols-2 lg:grid-cols-3">
+                {featured.map((f) => (
+                  <li key={f.slug}>
+                    <Link href={`/notes/${f.slug}`} className="muted text-[14.5px] transition-colors hover:text-white dark:hover:text-ink">
+                      {f.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ) : null}
 
           <div className="muted mt-14 flex flex-wrap items-center justify-between gap-x-6 gap-y-3 border-t border-white/10 pt-6 text-[13.5px]">
             <span>

@@ -13,6 +13,7 @@ import { Reveal } from "@/components/Reveal";
 import { cases } from "@/lib/gsc";
 import { projects } from "@/lib/content";
 import { Faq, type FaqItem } from "@/components/Faq";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 // Related notes appear on their publish date without a deploy.
 export const revalidate = 3600;
@@ -90,6 +91,7 @@ export default function RoofingPage() {
         <div className="grid-fade pointer-events-none absolute inset-0" aria-hidden />
         <div className="container-pad relative grid items-center gap-12 pb-16 pt-14 sm:pb-20 sm:pt-24 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
           <Reveal>
+            <Breadcrumbs items={[{ name: "Roofing SEO", href: "/roofing-seo" }]} className="mb-8" />
             <p className="eyebrow">SEO for roofing companies</p>
             <h1 className="t-h1 mt-5 max-w-[17ch]">Roofing SEO for contractors tired of paying for shared leads</h1>
             <p className="t-lead mt-6 max-w-[58ch]">

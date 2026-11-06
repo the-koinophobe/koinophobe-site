@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import type { Note } from "@/lib/notes";
 import { topics, type TopicKey } from "@/lib/topics";
 import { NoteCard } from "./NoteCard";
+import { Breadcrumbs } from "./Breadcrumbs";
 import { Availability } from "./Availability";
 import { MobileCta } from "./MobileCta";
 import { Reveal } from "./Reveal";
@@ -44,6 +45,20 @@ export function NotesListing({
         <div className="grid-fade pointer-events-none absolute inset-0" aria-hidden />
         <div className="container-pad relative pb-14 pt-14 sm:pb-16 sm:pt-24">
           <Reveal className="stage-head">
+            <Breadcrumbs
+              center
+              className="mb-8"
+              items={[
+                { name: "Notes", href: "/notes" },
+                ...(activeTopic
+                  ? [{ name: topics.find((t) => t.key === activeTopic)?.label ?? heading, href: `/notes/topic/${activeTopic}` }]
+                  : sort === "popular"
+                    ? [{ name: "Popular", href: "/notes/popular" }]
+                    : page > 1
+                      ? [{ name: `Page ${page}`, href: href(page) }]
+                      : []),
+              ]}
+            />
             <p className="eyebrow">Notes</p>
             <h1 className="t-h1 mx-auto mt-6 max-w-[20ch]">{heading}</h1>
             <p className="t-lead mt-6 max-w-[60ch]">{intro}</p>

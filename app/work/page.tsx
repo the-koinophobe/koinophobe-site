@@ -8,6 +8,7 @@ import { SiteWall } from "@/components/SiteWall";
 import { CaseStudyBlock } from "@/components/CaseStudyBlock";
 import { RelatedNotes } from "@/components/RelatedNotes";
 import { cases, EXPORT_DATE } from "@/lib/gsc";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 // Related notes appear on their publish date without a deploy.
 export const revalidate = 3600;
@@ -66,6 +67,7 @@ export default function WorkPage() {
         <div className="grid-fade pointer-events-none absolute inset-0" aria-hidden />
         <div className="container-pad relative grid items-center gap-10 pb-16 pt-14 sm:pb-20 sm:pt-24 lg:grid-cols-[1.35fr_1fr] lg:gap-14">
           <Reveal>
+            <Breadcrumbs items={[{ name: "Case studies", href: "/work" }]} className="mb-8" />
             <p className="eyebrow">Case studies</p>
             <h1 className="t-h1 mt-6 max-w-[20ch]">SEO case studies from real Search Console accounts</h1>
             <p className="t-lead mt-6 max-w-[60ch]">

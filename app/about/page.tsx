@@ -21,6 +21,7 @@ import { CaseSpark } from "@/components/CaseSpark";
 import { aggregate, cases } from "@/lib/gsc";
 import { site } from "@/lib/site";
 import { Faq, type FaqItem } from "@/components/Faq";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 // Related notes appear on their publish date without a deploy.
 export const revalidate = 3600;
@@ -160,6 +161,7 @@ export default function AboutPage() {
         <div className="grid-fade pointer-events-none absolute inset-0" aria-hidden />
         <div className="container-pad relative grid items-center gap-12 pb-16 pt-14 sm:pb-20 sm:pt-24 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
           <Reveal>
+            <Breadcrumbs items={[{ name: "About", href: "/about" }]} className="mb-8" />
             <p className="eyebrow">About</p>
             <h1 className="t-h1 mt-6 max-w-[18ch]">An SEO agency that shows its work</h1>
             <p className="t-lead mt-6 max-w-[58ch]">

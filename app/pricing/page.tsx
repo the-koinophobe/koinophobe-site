@@ -10,6 +10,7 @@ import { Stagger } from "@/components/Stagger";
 import { free, guarantee, plan, startup, withAi, type Plan } from "@/lib/pricing";
 import { site } from "@/lib/site";
 import { FaqList, FaqSchema } from "@/components/Faq";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export const revalidate = 3600;
 
@@ -155,6 +156,7 @@ export default function PricingPage() {
         <div className="grid-fade pointer-events-none absolute inset-0" aria-hidden />
         <div className="container-pad relative pb-16 pt-14 text-center sm:pb-20 sm:pt-24">
           <Reveal className="mx-auto max-w-[820px]">
+            <Breadcrumbs items={[{ name: "Pricing", href: "/pricing" }]} className="mb-8" center />
             <p className="eyebrow">Pricing</p>
             <h1 className="t-h1 mx-auto mt-6 max-w-[20ch]">
               SEO pricing for service businesses, before the call

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CookieSettingsButton } from "@/components/CookieSettingsButton";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Cookie Policy",
@@ -15,6 +16,7 @@ export default function CookiesPage() {
   return (
     <section className="container-pad pb-16 pt-14 sm:pb-20 sm:pt-20">
       <div className="mx-auto max-w-3xl">
+        <Breadcrumbs items={[{ name: "Cookie Policy", href: "/cookies" }]} className="mb-8" />
         <h1 className="t-h1">
           Cookie Policy
         </h1>

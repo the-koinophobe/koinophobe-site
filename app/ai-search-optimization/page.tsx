@@ -23,6 +23,7 @@ import { Reveal } from "@/components/Reveal";
 import { getNote } from "@/lib/notes";
 import { site } from "@/lib/site";
 import { startup } from "@/lib/pricing";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 // Guides appear on their publish date without a deploy.
 export const revalidate = 3600;
@@ -171,6 +172,7 @@ export default function AiSearchPage() {
         <div className="grid-fade pointer-events-none absolute inset-0" aria-hidden />
         <div className="container-pad relative grid grid-cols-[minmax(0,1fr)] items-center gap-14 pb-16 pt-14 sm:pt-24 lg:grid-cols-[1.08fr_1fr] lg:gap-16 lg:pb-24">
           <Reveal>
+            <Breadcrumbs items={[{ name: "AI search optimization", href: "/ai-search-optimization" }]} className="mb-8" />
             <p className="eyebrow">
               AI search optimization
             </p>

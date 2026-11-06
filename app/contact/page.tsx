@@ -8,6 +8,7 @@ import { CalInline } from "@/components/CalInline";
 import { EmailCta } from "@/components/Cta";
 import { site } from "@/lib/site";
 import { Faq, type FaqItem } from "@/components/Faq";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Book a free SEO call or audit",
@@ -77,6 +78,7 @@ export default function ContactPage() {
         <div className="container-pad relative pb-6 pt-14 sm:pt-24">
           <div className="grid items-center gap-10 lg:grid-cols-[1.35fr_1fr] lg:gap-14">
           <Reveal>
+            <Breadcrumbs items={[{ name: "Contact", href: "/contact" }]} className="mb-8" />
             <p className="eyebrow">Contact</p>
             <h1 className="t-h1 mt-5 max-w-[17ch]">Book a free SEO call, or send me your site</h1>
             <p className="t-lead mt-6 max-w-[58ch]">
