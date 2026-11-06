@@ -277,7 +277,21 @@ export function modifiedDate(note: Note): string {
 }
 
 export function getNote(slug: string): Note | undefined {
-  return publishedNotes().find((n) => n.slug === slug);
+  const live = publishedNotes();
+  const note = live.find((n) => n.slug === slug);
+  return note && { ...note, html: unlinkScheduled(note.html, new Set(live.map((n) => n.slug))) };
+}
+
+/**
+ * A note can link to one scheduled after it. Until that one is out the link
+ * would 404, so it renders as plain text, and becomes a link on the target's
+ * publish date with no edit to this note. Links to slugs that aren't notes at
+ * all (old URLs that now redirect) are left alone.
+ */
+function unlinkScheduled(html: string, live: Set<string>): string {
+  return html.replace(/<a href="\/notes\/([a-z0-9-]+)"[^>]*>([\s\S]*?)<\/a>/g, (link, slug: string, text: string) =>
+    live.has(slug) || !all.some((n) => n.slug === slug) ? link : text,
+  );
 }
 
 /** Up to `n` notes worth reading next: same topic first, then the newest others. */

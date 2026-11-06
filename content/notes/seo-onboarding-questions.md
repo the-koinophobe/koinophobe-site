@@ -56,7 +56,7 @@ If you're hiring an SEO, answer these yourself first. You'll walk into the first
 
 ## The access questions
 
-**Who owns the domain, the website, the Business Profile, Search Console and GA4?** It should be you, the business, on every one. I get added as a user. If a past agency or web designer owns any of them, getting that back is job one, because whoever owns the accounts owns the history.
+**Who owns the domain, the website, the Business Profile, Search Console and GA4?** It should be you, the business, on every one. I get added as a user. If a past agency or web designer owns any of them, getting that back is job one, because whoever owns the accounts owns the history. [Who owns your Google Business Profile](/notes/google-business-profile-ownership) shows how to check and take it back.
 
 The access list:
 

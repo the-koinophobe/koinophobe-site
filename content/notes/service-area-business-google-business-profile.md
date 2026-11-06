@@ -25,7 +25,7 @@ If you drive to your customers (roofers, plumbers, cleaners, lawn crews, mobile 
 
 ## Hide the address if customers don't visit
 
-Google's rule is simple: if customers don't come to your location, don't show the address. Remove it from the profile and add service areas instead. Your home address stays private, and Google still keeps it on file to verify the business.
+Google's rule is simple: if customers don't come to your location, don't show the address. Remove it from the profile and add service areas instead. Your home address stays private, and Google still keeps it on file to verify the business. If verification is where you're stuck, see [video verification for service businesses](/notes/google-business-profile-verification).
 
 If you have a shop or office that's staffed during your posted hours and customers do visit, you're a hybrid. Show the address and add service areas for the jobs you travel to.
 

@@ -21,7 +21,7 @@ faq:
 
 ![A map pack with real businesses and two fake pins, one flagged with evidence attached](/notes/illustrations/report-fake-google-business-listings.webp)
 
-In some trades, the map pack is crowded with listings that shouldn't be there: lead generators posing as local companies, the same business listed three times under different names, and profile names stuffed with keywords like "Best Roof Repair Orlando FL." Locksmiths and garage door repair are well known for it. Real companies with honest profiles get pushed down.
+In some trades, the map pack is crowded with listings that shouldn't be there: lead generators posing as local companies, the same business listed three times under different names, and profile names stuffed with keywords like "Best Roof Repair Orlando FL." Locksmiths and garage door repair are well known for it; [locksmith SEO](/notes/locksmith-seo) covers how a real locksmith competes. Real companies with honest profiles get pushed down.
 
 You can report them. Done with evidence, it sometimes works. Done as a ranking tactic against competitors you don't like, it wastes your time.
 
