@@ -63,7 +63,7 @@ Long lock-ins protect the provider. A short minimum makes sense, because the fir
 
 ## 10. What do you need from me?
 
-A good provider will ask for things: access to your accounts, a list of the towns and services you want more of, and photos from real jobs. When we built a flat roof repair page for a roofing client, it was built from the client's own job photos, compressed, renamed and converted to WebP. If a provider needs nothing from you, ask where the content will come from.
+A good provider will ask for things: access to your accounts, a list of the towns and services you want more of, and photos from real jobs. When we built a flat roof repair page for a roofing client, it was built from the client's own job photos, compressed, renamed and converted to WebP. If a provider needs nothing from you, ask where the content will come from. The [onboarding questions I ask every new client](/notes/seo-onboarding-questions) show what a proper first call covers.
 
 ## Two answers that should end it
 

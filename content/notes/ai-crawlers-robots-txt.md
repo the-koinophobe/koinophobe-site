@@ -104,7 +104,7 @@ Disallow: /api/
 
 Whether to block training is a business call. Opting out keeps your content out of future training sets, and none of the three companies documents any effect on search visibility from doing it. What we wouldn't do is block the citation crawlers to make a point about training, because those are the ones that put a link to you in an answer.
 
-Two things to remember after you edit it. Rules apply per host, so `docs.yourapp.com` needs its own robots.txt. And robots.txt only matters if the request gets past your firewall in the first place.
+Two things to remember after you edit it. Rules apply per host, so `docs.yourapp.com` needs its own robots.txt. And robots.txt only matters if the request gets past your firewall in the first place. To see whether the crawlers actually come, and which pages they read, [check your logs for AI crawlers](/notes/check-ai-crawlers-visiting-your-site).
 
 ## Next steps
 
