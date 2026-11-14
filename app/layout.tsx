@@ -106,7 +106,7 @@ const jsonLd = {
       description:
         "SEO agency for service and local businesses: technical SEO, local search, call tracking and AI search, proven with the client's own Search Console and analytics data.",
       slogan: "Technical SEO that shows up in the numbers",
-      sameAs: [site.linkedin, site.x],
+      sameAs: [site.linkedin, site.x, site.substack],
       areaServed: site.areaServed,
       knowsAbout: [
         "Technical SEO",

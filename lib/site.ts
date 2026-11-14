@@ -7,6 +7,9 @@ export const site = {
   linkedinHandle: "linkedin.com/in/airdward",
   x: "https://x.com/con610t",
   xHandle: "@con610t",
+  /** The newsletter: Calls, Not Clicks. */
+  substack: "https://callsnotclicks.substack.com",
+  github: "https://github.com/airdward",
   /**
    * Cal.com. `calLink` is the username/event slug, used by the inline embed on
    * /contact. `booking` is the same page as a plain link for every other CTA,

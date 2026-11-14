@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Linkedin } from "lucide-react";
+import { Linkedin, Newspaper } from "lucide-react";
 import { site } from "@/lib/site";
 import { topics } from "@/lib/topics";
 import { publishedNotes } from "@/lib/notes";
@@ -90,6 +90,9 @@ export function Footer() {
                 </a>
                 <a href={site.x} aria-label="X" className="grid h-9 w-9 place-items-center rounded-full border border-white/15 hover:border-white/40">
                   <XIcon />
+                </a>
+                <a href={site.substack} aria-label="Newsletter on Substack" className="grid h-9 w-9 place-items-center rounded-full border border-white/15 hover:border-white/40">
+                  <Newspaper size={16} aria-hidden />
                 </a>
               </div>
             </div>

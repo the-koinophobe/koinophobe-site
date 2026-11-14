@@ -116,6 +116,23 @@ const pageLd = {
   name: "About Koinophobe",
   about: { "@id": "https://koinophobe.com/#organization" },
   isPartOf: { "@id": "https://koinophobe.com/#website" },
+  mainEntity: { "@id": "https://koinophobe.com/#founder" },
+};
+
+/**
+ * The founder, declared only here (the owner is named on this page alone).
+ * sameAs ties his profiles to one entity so search and AI tools treat them
+ * as the same person behind Koinophobe.
+ */
+const personLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://koinophobe.com/#founder",
+  name: site.owner,
+  url: "https://koinophobe.com/about",
+  jobTitle: "Local SEO and conversion tracking specialist",
+  worksFor: { "@id": "https://koinophobe.com/#organization" },
+  sameAs: [site.linkedin, site.x, site.substack, site.github],
 };
 
 /** The case studies with a cover, for the work strip under the hero. */
@@ -151,6 +168,10 @@ export default function AboutPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}
       />
       <script
         type="application/ld+json"
