@@ -50,6 +50,12 @@ const nextConfig = {
   },
   async headers() {
     return [
+      // Post images for X, LinkedIn and Substack. CORS lets the browser-side
+      // posting flow fetch them from another origin and attach them as files.
+      {
+        source: "/social/:path*",
+        headers: [{ key: "Access-Control-Allow-Origin", value: "*" }],
+      },
       {
         source: "/:path*",
         headers: [
