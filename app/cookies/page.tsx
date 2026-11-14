@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CookieSettingsButton } from "@/components/CookieSettingsButton";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Cookie Policy",
   description: "What cookies this site uses and how to control them.",
-  alternates: { canonical: "/cookies" },
   robots: { index: true, follow: true },
-};
+  path: "/cookies",
+});
 
 const updated = "June 2026";
 

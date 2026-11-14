@@ -28,7 +28,10 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   if (!note) return {};
   const title = note.seoTitle || note.title;
   const description = note.seoDescription || note.excerpt;
-  const images = note.cover ? [{ url: note.cover, width: 1600, height: 900, alt: note.coverAlt }] : undefined;
+  // Without a cover, fall back to the site card; setting openGraph drops the inherited one.
+  const images = note.cover
+    ? [{ url: note.cover, width: 1600, height: 900, alt: note.coverAlt }]
+    : [{ url: "/opengraph-image", width: 1200, height: 630, alt: title }];
   return {
     // Google shows about 60 characters; keep the words that matter over the brand suffix.
     title: title.length + ` · ${site.name}`.length > 60 ? { absolute: title } : title,
@@ -38,13 +41,15 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       title,
       description,
       type: "article",
+      url: `https://koinophobe.com/notes/${note.slug}`,
+      siteName: site.name,
       publishedTime: note.date,
       modifiedTime: modifiedDate(note),
       authors: ["Koinophobe"],
       section: topicLabel(note.topic),
-      ...(images ? { images } : {}),
+      images,
     },
-    twitter: { card: "summary_large_image", title, description, ...(images ? { images: [note.cover] } : {}) },
+    twitter: { card: "summary_large_image", title, description, images: [images[0].url] },
   };
 }
 

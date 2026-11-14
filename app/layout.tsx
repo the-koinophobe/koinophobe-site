@@ -51,7 +51,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    url: "https://koinophobe.com",
     siteName: site.name,
     title: "Koinophobe · Technical SEO that shows up in the numbers",
     description:

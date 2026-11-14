@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 import { NotesListing } from "@/components/NotesListing";
 import { notesPage, publishedNotes } from "@/lib/notes";
+import { pageMeta } from "@/lib/meta";
 
 // Re-render hourly so a scheduled note publishes itself.
 export const revalidate = 3600;
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "SEO notes for service businesses",
   description:
     "SEO notes for service businesses: local SEO, technical SEO, AI search and call tracking, trade by trade.",
-  alternates: { canonical: "/notes" },
-};
+  path: "/notes",
+});
 
 export default function NotesPage() {
   const { items, pages } = notesPage(1);

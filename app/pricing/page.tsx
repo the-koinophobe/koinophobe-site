@@ -11,15 +11,16 @@ import { free, guarantee, plan, startup, withAi, type Plan } from "@/lib/pricing
 import { site } from "@/lib/site";
 import { FaqList, FaqSchema } from "@/components/Faq";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { pageMeta } from "@/lib/meta";
 
 export const revalidate = 3600;
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "SEO pricing for service businesses",
   description:
     "SEO for service businesses: one plan at $500 a month, free audits, and Google and AI search for $300 more. Delivery guarantee on month one.",
-  alternates: { canonical: "/pricing" },
-};
+  path: "/pricing",
+});
 
 const TERMS = [
   {

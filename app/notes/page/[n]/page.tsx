@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import { NotesListing } from "@/components/NotesListing";
 import { notesPage } from "@/lib/notes";
+import { pageMeta } from "@/lib/meta";
 
 export const revalidate = 3600;
 
@@ -12,11 +13,11 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: { params: { n: string } }): Metadata {
   const n = Number(params.n);
-  return {
+  return pageMeta({
     title: `SEO notes, page ${n}`,
     description: `SEO notes for service businesses: local SEO, technical SEO, AI search and call tracking, page ${n}.`,
-    alternates: { canonical: `/notes/page/${n}` },
-  };
+    path: `/notes/page/${n}`,
+  });
 }
 
 export default function NotesPageN({ params }: { params: { n: string } }) {

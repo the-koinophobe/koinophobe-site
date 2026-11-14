@@ -24,17 +24,18 @@ import { getNote } from "@/lib/notes";
 import { site } from "@/lib/site";
 import { startup } from "@/lib/pricing";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { pageMeta } from "@/lib/meta";
 
 // Guides appear on their publish date without a deploy.
 export const revalidate = 3600;
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   // Absolute: with " · Koinophobe" on the end it runs past what Google shows.
   title: { absolute: "AI search optimization for service businesses" },
   description:
     "Get your service business named by ChatGPT, Perplexity and Google's AI Overviews. Crawler fixes, cited pages, tracking. $300 a month on top of SEO.",
-  alternates: { canonical: "/ai-search-optimization" },
-};
+  path: "/ai-search-optimization",
+});
 
 const STUDY = "/notes/ai-cited-vs-ranked-page";
 

@@ -2,17 +2,18 @@ import type { Metadata } from "next";
 import { NotesListing } from "@/components/NotesListing";
 import { popularNotes } from "@/lib/notes";
 import { POPULARITY_SOURCE } from "@/lib/note-popularity";
+import { pageMeta } from "@/lib/meta";
 
 export const revalidate = 3600;
 
 // The same notes as /notes in a different order, so it stays out of the index
 // but its links are still followed.
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Most popular SEO notes",
   description: "The SEO notes Google shows most often, from local SEO to AI search, for service businesses.",
-  alternates: { canonical: "/notes/popular" },
   robots: { index: false, follow: true },
-};
+  path: "/notes/popular",
+});
 
 export default function PopularNotesPage() {
   return (

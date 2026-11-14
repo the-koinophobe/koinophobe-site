@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Privacy Policy",
   description: "How Koinophobe collects, uses and protects your personal data.",
-  alternates: { canonical: "/privacy" },
   robots: { index: true, follow: true },
-};
+  path: "/privacy",
+});
 
 const updated = "September 2026";
 

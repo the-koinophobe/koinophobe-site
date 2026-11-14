@@ -22,16 +22,17 @@ import { aggregate, cases } from "@/lib/gsc";
 import { site } from "@/lib/site";
 import { Faq, type FaqItem } from "@/components/Faq";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { pageMeta } from "@/lib/meta";
 
 // Related notes appear on their publish date without a deploy.
 export const revalidate = 3600;
 
-export const metadata = {
+export const metadata = pageMeta({
   title: { absolute: "About Koinophobe, an SEO agency for service businesses" },
   description:
     "I'm Michael Edward. I run Koinophobe, an SEO agency for service businesses: local SEO, call tracking and AI search, with my numbers on the work page.",
-  alternates: { canonical: "/about" },
-};
+  path: "/about",
+});
 
 const PRINCIPLES = [
   {

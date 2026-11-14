@@ -1,28 +1,15 @@
-import type { Metadata } from "next";
 import { BookCta, BookNote, EmailCta } from "@/components/Cta";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { MissedCallCalc } from "@/components/MissedCallCalc";
 import { Reveal } from "@/components/Reveal";
-import { site } from "@/lib/site";
+import { pageMeta } from "@/lib/meta";
 
-const TITLE = "Missed call calculator for service businesses";
-const DESCRIPTION =
-  "Put in your calls, your missed rate and your average job. See what unanswered calls cost you a month, then check where your calls actually go.";
-
-export const metadata: Metadata = {
-  title: TITLE,
-  description: DESCRIPTION,
-  alternates: { canonical: "/missed-call-calculator" },
-  openGraph: {
-    type: "website",
-    url: "https://koinophobe.com/missed-call-calculator",
-    siteName: site.name,
-    title: TITLE,
-    description: DESCRIPTION,
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: TITLE }],
-  },
-  twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION, images: ["/opengraph-image"] },
-};
+export const metadata = pageMeta({
+  title: "Missed call calculator for service businesses",
+  description:
+    "Put in your calls, your missed rate and your average job. See what unanswered calls cost you a month, then check where your calls actually go.",
+  path: "/missed-call-calculator",
+});
 
 const CHECKS = [
   "Call your own number from a cell phone and time how long it takes a person to pick up.",

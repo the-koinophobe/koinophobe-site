@@ -9,16 +9,17 @@ import { CaseStudyBlock } from "@/components/CaseStudyBlock";
 import { RelatedNotes } from "@/components/RelatedNotes";
 import { cases, EXPORT_DATE } from "@/lib/gsc";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { pageMeta } from "@/lib/meta";
 
 // Related notes appear on their publish date without a deploy.
 export const revalidate = 3600;
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "SEO case studies for local businesses",
   description:
     "Five Search Console case studies from 30+ local business sites: a pain clinic, a roofer, a tint shop, a game store and an agency, with what comes next.",
-  alternates: { canonical: "/work" },
-};
+  path: "/work",
+});
 
 const READ_THIS = [
   {

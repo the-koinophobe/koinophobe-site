@@ -14,16 +14,17 @@ import { cases } from "@/lib/gsc";
 import { projects } from "@/lib/content";
 import { Faq, type FaqItem } from "@/components/Faq";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { pageMeta } from "@/lib/meta";
 
 // Related notes appear on their publish date without a deploy.
 export const revalidate = 3600;
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Roofing SEO: more calls, no shared leads",
   description:
     "Roofing SEO for contractors: city pages, storm content, Business Profile and call tracking. One roofer went from position 77 to 12.9.",
-  alternates: { canonical: "/roofing-seo" },
-};
+  path: "/roofing-seo",
+});
 
 const roofing = cases.find((c) => c.slug === "roofing-contractor")!;
 const roofSites = projects.filter((p) => p.sector.toLowerCase().includes("roof")).length;

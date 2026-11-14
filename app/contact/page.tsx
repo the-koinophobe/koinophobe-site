@@ -9,13 +9,14 @@ import { EmailCta } from "@/components/Cta";
 import { site } from "@/lib/site";
 import { Faq, type FaqItem } from "@/components/Faq";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Book a free SEO call or audit",
   description:
     "Book a free 20-minute call or email me your website. I look at your site before we talk and tell you what I'd fix first, or that nothing needs fixing.",
-  alternates: { canonical: "/contact" },
-};
+  path: "/contact",
+});
 
 const STEPS = [
   {

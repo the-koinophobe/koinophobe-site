@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import { BookedTrack } from "@/components/BookedTrack";
 import { TextCta } from "@/components/Cta";
 import { site } from "@/lib/site";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "You're booked",
   description: "Your call is booked.",
   // Without this it inherits the root layout's canonical, which is the homepage.
-  alternates: { canonical: "/booked" },
+  path: "/booked",
   robots: { index: false, follow: false },
-};
+});
 
 /**
  * Cal.com redirects here after a booking (set under the event's

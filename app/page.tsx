@@ -28,15 +28,16 @@ import { free, plan, startup } from "@/lib/pricing";
 import { publishedNotes } from "@/lib/notes";
 import { site } from "@/lib/site";
 import { Faq, type FaqItem } from "@/components/Faq";
+import { pageMeta } from "@/lib/meta";
 
 export const revalidate = 3600;
 
-export const metadata = {
+export const metadata = pageMeta({
   title: { absolute: "Koinophobe · SEO for service businesses, measured in calls" },
   description:
     "SEO for roofers, remodelers and other service businesses: more calls from Google, and every call counted. $500 a month, free audit.",
-  alternates: { canonical: "/" },
-};
+  path: "/",
+});
 
 /*
  * Copy on this page is written for a busy owner, not another marketer: short

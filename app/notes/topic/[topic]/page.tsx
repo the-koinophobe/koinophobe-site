@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { NotesListing } from "@/components/NotesListing";
 import { publishedNotes } from "@/lib/notes";
 import { topics } from "@/lib/topics";
+import { pageMeta } from "@/lib/meta";
 
 export const revalidate = 3600;
 
@@ -13,12 +14,12 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { topic: string } }): Metadata {
   const t = topics.find((x) => x.key === params.topic);
   if (!t) return {};
-  return {
+  return pageMeta({
     title: t.title,
     // The blurb alone when the brand line would push it past what Google shows.
     description: t.blurb.length + 33 <= 158 ? `${t.blurb} Notes from the Koinophobe team.` : t.blurb,
-    alternates: { canonical: `/notes/topic/${t.key}` },
-  };
+    path: `/notes/topic/${t.key}`,
+  });
 }
 
 export default function TopicPage({ params }: { params: { topic: string } }) {
