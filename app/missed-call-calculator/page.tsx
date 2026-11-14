@@ -3,12 +3,25 @@ import { BookCta, BookNote, EmailCta } from "@/components/Cta";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { MissedCallCalc } from "@/components/MissedCallCalc";
 import { Reveal } from "@/components/Reveal";
+import { site } from "@/lib/site";
+
+const TITLE = "Missed call calculator for service businesses";
+const DESCRIPTION =
+  "Put in your calls, your missed rate and your average job. See what unanswered calls cost you a month, then check where your calls actually go.";
 
 export const metadata: Metadata = {
-  title: "Missed call calculator for service businesses",
-  description:
-    "Put in your calls, your missed rate and your average job. See what unanswered calls cost you a month, then check where your calls actually go.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/missed-call-calculator" },
+  openGraph: {
+    type: "website",
+    url: "https://koinophobe.com/missed-call-calculator",
+    siteName: site.name,
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: TITLE }],
+  },
+  twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION, images: ["/opengraph-image"] },
 };
 
 const CHECKS = [
