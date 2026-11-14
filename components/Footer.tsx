@@ -15,6 +15,7 @@ const COLS: { title: string; href?: string; links: { href: string; label: string
       { href: "/pricing#audit", label: "Free site audit" },
       { href: "/pricing#monthly", label: "SEO plan, $500 a month" },
       { href: "/ai-search-optimization", label: "AI search optimization" },
+      { href: "/missed-call-calculator", label: "Missed call calculator" },
       { href: "/pricing", label: "All pricing" },
     ],
   },
