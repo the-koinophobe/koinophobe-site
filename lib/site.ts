@@ -16,8 +16,8 @@ export const site = {
    * channel URL is confirmed: every YouTube link, embed and sameAs entry on the
    * site reads from here and stays hidden while it is "".
    */
-  youtube: "",
-  youtubeHandle: "@koinophobe",
+  youtube: "https://www.youtube.com/@koino_phobe",
+  youtubeHandle: "@koino_phobe",
   /**
    * Cal.com. `calLink` is the username/event slug, used by the inline embed on
    * /contact. `booking` is the same page as a plain link for every other CTA,

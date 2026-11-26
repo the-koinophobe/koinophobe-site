@@ -32,13 +32,13 @@ export type Video = {
 export const videos: Video[] = [
   {
     note: "chatgpt-business-profiles",
-    id: "",
+    id: "vIZuazHmqgM",
     title: "ChatGPT Now Lists Businesses. Here's Who Decides If It Names Yours",
     description:
       "Case File 001. OpenAI now lets businesses claim a profile inside ChatGPT, but its own answers still come from your file: your site, reviews, listings and what others wrote. Four anonymised client files, and four steps to open yours this week.",
     duration: "PT6M22S",
     length: "6:22",
-    uploadDate: "",
+    uploadDate: "2026-11-26T04:01:40-08:00",
     thumbnail: "/video/case001-thumb.webp",
     series: "Case Files",
     chapters: [
