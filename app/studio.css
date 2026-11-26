@@ -212,9 +212,9 @@
 @media (min-width: 1024px) { .pgrid { grid-template-columns: 360px minmax(0, 1fr); gap: 40px; align-items: start; } .pgrid > nav { position: sticky; top: 112px; } }
 .plist .grp { font-size: 11.5px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: rgb(var(--ink) / 0.62); margin: 24px 0 8px; }
 .plist .grp:first-child { margin-top: 0; }
-.plist a { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 14px 16px; border: 1px solid rgb(var(--line)); margin-top: -1px; font-weight: 500; }
-.plist a:hover { background: rgb(var(--surface)); }
-.plist a span:last-child { font-family: var(--font-serif), sans-serif; font-weight: 600; letter-spacing: -0.01em; }
+.plist > a { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 14px 16px; border: 1px solid rgb(var(--line)); margin-top: -1px; font-weight: 500; }
+.plist > a:hover { background: rgb(var(--surface)); }
+.plist > a span:last-child { font-family: var(--font-serif), sans-serif; font-weight: 600; letter-spacing: -0.01em; }
 .plist .tag { font-size: 11px; font-weight: 500; background: rgb(var(--ink)); color: rgb(var(--bg)); padding: 2px 6px; border-radius: 2px; margin-left: 8px; letter-spacing: 0.02em; }
 .plan { border: 1px solid rgb(var(--line)); scroll-margin-top: 120px; }
 .plan + .plan { margin-top: 24px; }
@@ -299,4 +299,42 @@ main:focus { outline: none; }
 @media (prefers-reduced-motion: reduce) {
   .close-glow { animation: none; }
   .ft-giant span, .anim [data-anim="letters"] span { transform: none !important; transition: none; }
+}
+
+/* ── phone audit, 26 Nov 2026 ─────────────────────────────────────────── */
+/* case cards stack: studio.css set two columns after house.css's phone rule */
+@media (max-width: 860px) {
+  .case { grid-template-columns: minmax(0, 1fr); }
+  .case .case-media { order: -1; }
+}
+@media (max-width: 767px) {
+  /* one left edge on phones: centred section heads drifted from the
+     left-aligned content under them */
+  .head-c { text-align: left; margin-inline: 0; }
+  .head-c .t-lead { margin-inline: 0; }
+  .head-c .flex.justify-center { justify-content: flex-start; }
+  .section .text-center:has(> .btn) { text-align: left; }
+  .pair6 > div { text-align: left; align-items: flex-start; padding: 36px 24px; }
+  .pair6 .tiles6 { justify-content: flex-start; }
+
+  /* trade cells: every cell boxed, an odd last cell spans the row */
+  .cells { border: 0; border-top: 1px solid rgb(var(--line)); border-left: 1px solid rgb(var(--line)); }
+  .cells > * { height: 60px; border-left: 0; border-right: 1px solid rgb(var(--line)); border-bottom: 1px solid rgb(var(--line)); font-size: 15.5px; padding-inline: 8px; }
+  .cells > *:last-child:nth-child(odd) { grid-column: span 2; }
+
+  /* accordion: room between a wrapped title and the plus */
+  .acc summary { column-gap: 12px; padding: 22px 0; }
+  .acc .n, .acc .t { font-size: 1.6rem; }
+
+  /* cards that were sized for desktop rows */
+  .trust6 > div { min-height: 0; }
+  .stats6 > div { padding: 20px; }
+  .meet-stats > div { grid-template-columns: 96px minmax(0, 1fr); }
+  .close6 h2 { font-size: clamp(2.3rem, 11vw, 3rem); }
+  .close6 .container-pad { text-align: left; }
+  .close6 h2, .close6 p { margin-inline: 0; }
+  .ft-giant { margin-top: 48px; }
+  .plan-top .btn, .plan-top a.btn { width: 100%; }
+  .tcard { min-height: 340px; padding: 24px; }
+  .motions > div { padding: 18px 0; }
 }

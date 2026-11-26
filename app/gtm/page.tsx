@@ -240,7 +240,7 @@ export default function GtmPage() {
                 { label: "Python", icon: "/icons/python.svg" },
                 { label: "Next.js", icon: "/icons/nextjs.svg" },
                 { label: "Claude", icon: "/icons/claude.svg" },
-                { label: "Google Analytics", icon: "/icons/google-analytics.svg" },
+                { label: "Analytics", icon: "/icons/google-analytics.svg" },
                 { label: "Tag Manager", icon: "/icons/google-tag-manager.svg" },
                 { label: "ChatGPT", icon: "/icons/openai.svg" },
               ]}
