@@ -81,6 +81,7 @@ export function Header() {
               <ArrowRight size={18} aria-hidden />
             </Link>
           ))}
+          <ThemeToggle className="row theme-row" label />
           <a href={site.booking} target="_blank" rel="noopener" data-track="cta_book" data-from="menu" className="btn btn-lg btn-primary mt-6 w-full">
             Book a free call
           </a>

@@ -2,7 +2,6 @@ import { Eye, Search, Sparkles } from "lucide-react";
 import { AISection } from "@/components/AISection";
 import { Availability } from "@/components/Availability";
 import { CtaBand } from "@/components/Cta";
-import { MobileCta } from "@/components/MobileCta";
 import { Reveal } from "@/components/Reveal";
 import { SiteWall } from "@/components/SiteWall";
 import { CaseStudyBlock } from "@/components/CaseStudyBlock";
@@ -145,7 +144,6 @@ export default function WorkPage() {
       />
 
       <Availability />
-      <MobileCta />
     </>
   );
 }

@@ -5,7 +5,6 @@ import { topics, type TopicKey } from "@/lib/topics";
 import { NoteCard } from "./NoteCard";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { Availability } from "./Availability";
-import { MobileCta } from "./MobileCta";
 import { Reveal } from "./Reveal";
 
 /**
@@ -156,7 +155,6 @@ export function NotesListing({
       </section>
 
       <Availability />
-      <MobileCta />
     </>
   );
 }

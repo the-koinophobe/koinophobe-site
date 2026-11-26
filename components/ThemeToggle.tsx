@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 
 /** Shows the mode you'd switch to: a moon in light mode, a sun in dark. */
-export function ThemeToggle({ className = "hx-icon-btn" }: { className?: string }) {
+export function ThemeToggle({ className = "hx-icon-btn", label = false }: { className?: string; label?: boolean }) {
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -20,7 +20,8 @@ export function ThemeToggle({ className = "hx-icon-btn" }: { className?: string 
       onClick={() => setTheme(isDark ? "light" : "dark")}
       className={className}
     >
-      {isDark ? <Sun size={16} aria-hidden /> : <Moon size={16} aria-hidden />}
+      {label ? <span>{isDark ? "Light mode" : "Dark mode"}</span> : null}
+      {isDark ? <Sun size={label ? 18 : 16} aria-hidden /> : <Moon size={label ? 18 : 16} aria-hidden />}
     </button>
   );
 }

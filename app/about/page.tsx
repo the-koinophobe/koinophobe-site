@@ -13,7 +13,6 @@ import {
 import { Availability } from "@/components/Availability";
 import { BookCta, PageCta } from "@/components/Cta";
 import { RelatedNotes } from "@/components/RelatedNotes";
-import { MobileCta } from "@/components/MobileCta";
 import { Reveal } from "@/components/Reveal";
 import Image from "next/image";
 import Link from "next/link";
@@ -311,7 +310,6 @@ export default function AboutPage() {
       />
 
       <Availability />
-      <MobileCta />
     </>
   );
 }

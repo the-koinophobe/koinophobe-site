@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { RelatedNotes } from "@/components/RelatedNotes";
-import { MobileCta } from "@/components/MobileCta";
 import { Testimonials } from "@/components/Testimonials";
 import { faqJsonLd } from "@/components/Faq";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -263,7 +262,6 @@ export default function PricingPage() {
         title="Read before you hire anyone"
         slugs={["how-long-does-seo-take", "hiring-an-seo-questions-to-ask", "roofing-seo-cost", "monthly-seo-report-contractors", "seo-vs-google-ads-contractors"]}
       />
-      <MobileCta />
     </>
   );
 }

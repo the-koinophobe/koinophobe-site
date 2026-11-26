@@ -4,7 +4,6 @@ import { ArrowRight } from "lucide-react";
 import { Reel } from "@/components/Reel";
 import { CaseCards } from "@/components/CaseCards";
 import { Testimonials } from "@/components/Testimonials";
-import { MobileCta } from "@/components/MobileCta";
 import { AccGroup } from "@/components/AccGroup";
 import { faqJsonLd } from "@/components/Faq";
 import { aggregate } from "@/lib/gsc";
@@ -267,7 +266,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <MobileCta />
     </>
   );
 }

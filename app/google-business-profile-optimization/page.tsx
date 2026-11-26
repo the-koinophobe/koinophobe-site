@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedNotes } from "@/components/RelatedNotes";
-import { MobileCta } from "@/components/MobileCta";
 import { faqJsonLd } from "@/components/Faq";
 import { monthly, sprint } from "@/lib/pricing";
 import { site } from "@/lib/site";
@@ -142,7 +141,6 @@ export default function GbpPage() {
         title="Google Business Profile guides"
         slugs={["google-map-pack-ranking", "service-area-business-google-business-profile", "gbp-secondary-categories", "google-reviews-for-roofers", "google-business-profile-suspended"]}
       />
-      <MobileCta />
     </>
   );
 }

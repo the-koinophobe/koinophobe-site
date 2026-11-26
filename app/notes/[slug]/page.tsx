@@ -8,7 +8,6 @@ import { ArrowLeft, ArrowRight, ChevronRight } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { Availability } from "@/components/Availability";
 import { BookCta, PageCta } from "@/components/Cta";
-import { MobileCta } from "@/components/MobileCta";
 import { FaqList, FaqSchema } from "@/components/Faq";
 import { WhoToCall } from "@/components/WhoToCall";
 import { NoteCard, fmtDate } from "@/components/NoteCard";
@@ -297,7 +296,6 @@ export default async function NotePage(props: { params: Promise<{ slug: string }
             : undefined
         }
       />
-      <MobileCta />
     </>
   );
 }

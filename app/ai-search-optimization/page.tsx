@@ -17,7 +17,6 @@ import { AiCheck } from "@/components/AiCheck";
 import { Availability } from "@/components/Availability";
 import { BookCta, BookNote, TextCta } from "@/components/Cta";
 import { Faq, type FaqItem } from "@/components/Faq";
-import { MobileCta } from "@/components/MobileCta";
 import { MoreServices } from "@/components/MoreServices";
 import { Reveal } from "@/components/Reveal";
 import { getNote } from "@/lib/notes";
@@ -403,7 +402,6 @@ export default function AiSearchPage() {
       <MoreServices current="/ai-search-optimization" />
 
       <Availability call={CALL} />
-      <MobileCta />
     </>
   );
 }

@@ -6,7 +6,6 @@ import { CaseStudyBlock } from "@/components/CaseStudyBlock";
 import Image from "next/image";
 import { BookCta, BookNote, PageCta } from "@/components/Cta";
 import { RelatedNotes } from "@/components/RelatedNotes";
-import { MobileCta } from "@/components/MobileCta";
 import { MoreServices } from "@/components/MoreServices";
 import { Reveal } from "@/components/Reveal";
 import { cases } from "@/lib/gsc";
@@ -175,7 +174,6 @@ export default function RoofingPage() {
       <MoreServices current="/roofing-seo" />
 
       <Availability />
-      <MobileCta />
     </>
   );
 }

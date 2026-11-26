@@ -152,7 +152,17 @@
 .ft h3 { text-transform: uppercase; letter-spacing: 0.06em; font-size: 11.5px; }
 .ft ul a { font-weight: 500; }
 @media (max-width: 639px) { .bar a { font-size: 12.5px; } .bar a span:nth-child(2) { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 70vw; } }
-@media (max-width: 639px) { .hd .hd-tool:not(.hd-menu) { display: none; } .hd-in { gap: 12px; } }
+/* phones: keep the mode button, make room for it */
+@media (max-width: 639px) {
+  .hd .container-pad { padding-inline: 16px; }
+  .hd-in { gap: 8px; }
+  .hd-logo .wordmark { font-size: 21px; }
+  .hd .ml-auto { gap: 4px; }
+  .hd .hd-tool { width: 40px; height: 40px; }
+  .hd .btn-sm { padding: 0 0.75rem; font-size: 14px; }
+}
+/* the labelled switch in the phone menu, styled like the menu rows */
+.hd-sheet .theme-row { display: flex; width: 100%; justify-content: space-between; align-items: center; min-height: 56px; border-bottom: 1px solid rgb(var(--line)); font-family: var(--font-serif), sans-serif; font-weight: 400; font-size: 1.4rem; color: rgb(var(--ink)); background: none; text-align: left; }
 
 /* ── v6.1, 26 Nov 2026 ─────────────────────────────────────────────────── */
 /* Dark theme. The :root block above is declared after house.css's .dark, so
