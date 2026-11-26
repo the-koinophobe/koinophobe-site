@@ -14,7 +14,6 @@ import {
   Wrench,
 } from "lucide-react";
 import { AiCheck } from "@/components/AiCheck";
-import { Availability } from "@/components/Availability";
 import { BookCta, BookNote, TextCta } from "@/components/Cta";
 import { Faq, type FaqItem } from "@/components/Faq";
 import { MoreServices } from "@/components/MoreServices";
@@ -95,12 +94,6 @@ const GUIDES: { title: string; slugs: string[] }[] = [
     title: "Measuring and buying",
     slugs: ["ai-cited-vs-ranked-page", "track-ai-search-visibility", "track-chatgpt-traffic-ga4", "ai-seo-pricing", "hire-ai-seo-agency"],
   },
-];
-
-const CALL = [
-  "I check whether AI tools can read your site, and what they say about your business, before we talk.",
-  "You get the first few changes I'd make, in order.",
-  "If it isn't a fit, I'll tell you on the call.",
 ];
 
 const FAQ: FaqItem[] = [
@@ -400,8 +393,6 @@ export default function AiSearchPage() {
       <Faq items={FAQ} title="AI search optimization questions" className="section" />
 
       <MoreServices current="/ai-search-optimization" />
-
-      <Availability call={CALL} />
     </>
   );
 }

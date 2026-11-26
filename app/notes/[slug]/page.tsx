@@ -6,7 +6,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, ChevronRight } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
-import { Availability } from "@/components/Availability";
 import { BookCta, PageCta } from "@/components/Cta";
 import { FaqList, FaqSchema } from "@/components/Faq";
 import { WhoToCall } from "@/components/WhoToCall";
@@ -284,18 +283,6 @@ export default async function NotePage(props: { params: Promise<{ slug: string }
           </div>
         </section>
       ) : null}
-
-      <Availability
-        call={
-          isAi
-            ? [
-                "I check whether AI tools can read your site, and what they say about your trade, before we talk.",
-                "You get the first few changes I'd make, in order.",
-                "If it isn't a fit, I'll tell you on the call.",
-              ]
-            : undefined
-        }
-      />
     </>
   );
 }

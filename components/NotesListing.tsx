@@ -4,7 +4,6 @@ import type { Note } from "@/lib/notes";
 import { topics, type TopicKey } from "@/lib/topics";
 import { NoteCard } from "./NoteCard";
 import { Breadcrumbs } from "./Breadcrumbs";
-import { Availability } from "./Availability";
 import { Reveal } from "./Reveal";
 
 /**
@@ -153,8 +152,6 @@ export function NotesListing({
           </nav>
         ) : null}
       </section>
-
-      <Availability />
     </>
   );
 }

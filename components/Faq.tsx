@@ -60,7 +60,7 @@ export function FaqList({ items }: { items: FaqItem[] }) {
  */
 export function Faq({
   items,
-  title,
+  title = "Common questions",
   eyebrow = "Questions",
   className = "",
 }: {

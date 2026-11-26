@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { site } from "@/lib/site";
-import { topics } from "@/lib/topics";
 import { CookieSettingsButton } from "./CookieSettingsButton";
 
 /*
@@ -13,12 +12,11 @@ const COLS: { title: string; links: { href: string; label: string; external?: bo
   {
     title: "Services",
     links: [
+      { href: "/google-business-profile-optimization", label: "Google Business Profile" },
+      { href: "/ai-search-optimization", label: "AI search" },
       { href: "/pricing#fix", label: "The Google fix" },
       { href: "/pricing#monthly", label: "Monthly growth" },
       { href: "/pricing#free", label: "Free site audit" },
-      { href: "/google-business-profile-optimization", label: "Google Business Profile" },
-      { href: "/ai-search-optimization", label: "AI search" },
-      { href: "/gtm", label: "GTM for startups" },
       { href: "/missed-call-calculator", label: "Missed call calculator" },
     ],
   },
@@ -38,7 +36,7 @@ const COLS: { title: string; links: { href: string; label: string; external?: bo
       { href: "/work", label: "Case studies" },
       { href: "/about", label: "About" },
       { href: "/notes", label: "Notes" },
-      ...topics.slice(0, 3).map((t) => ({ href: `/notes/topic/${t.key}`, label: t.label })),
+      { href: "/gtm", label: "GTM for startups" },
       { href: "/contact", label: "Contact" },
     ],
   },

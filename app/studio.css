@@ -355,3 +355,16 @@ main:focus { outline: none; }
 .stack-phase h3 { font-weight: 600; font-size: 16px; }
 .stack-phase li p { margin-top: 4px; font-size: 14.5px; line-height: 1.55; color: rgb(var(--ink) / 0.72); }
 .stack-phase .tools { display: block; margin-top: 8px; font-size: 12.5px; color: rgb(var(--ink) / 0.62); }
+
+/* video chapters: two columns that read top to bottom, title and time on one dotted line */
+.chapters { display: grid; column-gap: 32px; }
+@media (min-width: 640px) { .chapters { grid-auto-flow: column; grid-template-rows: repeat(var(--rows), auto); grid-template-columns: 1fr 1fr; } }
+.chapters li { border-top: 1px solid rgb(var(--line)); }
+.chapters .leader { display: flex; align-items: baseline; gap: 10px; }
+.chapters .leader .dots { flex: 1; border-bottom: 1px dotted rgb(var(--ink) / 0.3); transform: translateY(-4px); }
+.chapters .tnum { font-variant-numeric: tabular-nums; font-weight: 600; }
+.chapters { list-style: none; padding: 0; margin-left: 0; }
+
+/* older section heads are left-aligned: their buttons follow the same edge */
+.stage-head .justify-center { justify-content: flex-start; }
+.section .mt-12.flex.justify-center:has(> a.btn) { justify-content: flex-start; }

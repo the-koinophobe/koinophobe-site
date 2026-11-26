@@ -18,7 +18,7 @@ import { seconds, watchUrl, type Video } from "@/lib/videos";
 export function CaseVideo({ v }: { v: Video }) {
   const [start, setStart] = useState<number | null>(null);
   const live = Boolean(v.id);
-  const poster = v.id ? `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg` : v.thumbnail;
+  const poster = v.id ? `https://i.ytimg.com/vi/${v.id}/maxresdefault.jpg` : v.thumbnail;
 
   return (
     <figure className="not-prose my-10">
@@ -54,7 +54,7 @@ export function CaseVideo({ v }: { v: Video }) {
         {v.series === "Case Files" ? "Watch the case file" : "Watch the short version"} ({v.length})
       </figcaption>
       {live ? (
-        <ol className="mt-3 grid gap-x-8 sm:grid-cols-2">
+        <ol className="chapters mt-3" style={{ ["--rows" as string]: Math.ceil(v.chapters.length / 2) }}>
           {v.chapters.map((c) => (
             <li key={c.at} className="border-t border-ink/25">
               <a

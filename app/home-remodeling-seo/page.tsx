@@ -13,7 +13,6 @@ import {
   MessageSquareQuote,
   PhoneCall,
 } from "lucide-react";
-import { Availability } from "@/components/Availability";
 import { CaseStudyBlock } from "@/components/CaseStudyBlock";
 import { BookCta, BookNote, PageCta, TextCta } from "@/components/Cta";
 import { Faq, type FaqItem } from "@/components/Faq";
@@ -174,12 +173,6 @@ const FAQ: FaqItem[] = [
     q: "How much does SEO cost for a remodeler?",
     a: `The Google fix is ${sprint.price}, done in ${sprint.weeks} weeks: your Business Profile, the listings AI tools read, Local Services Ads, your homepage and service pages, and a local link-building campaign. Then ${monthly.price} a month if you want it kept current. The audit is free.`,
   },
-];
-
-const CALL = [
-  "I look at your site, your Business Profile and what ChatGPT says about remodelers near you before we talk.",
-  "You get the first few pages I'd build, in order.",
-  "If it isn't a fit, I'll tell you on the call.",
 ];
 
 const serviceLd = {
@@ -547,8 +540,6 @@ export default function RemodelingPage() {
       <Faq items={FAQ} title="Home remodeling SEO questions" className="section" />
 
       <MoreServices current="/home-remodeling-seo" />
-
-      <Availability call={CALL} />
     </>
   );
 }

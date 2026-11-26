@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Building2, CloudLightning, FileCode2, Gauge, MapPin, PhoneCall } from "lucide-react";
-import { Availability } from "@/components/Availability";
 import { CaseStudyBlock } from "@/components/CaseStudyBlock";
 import Image from "next/image";
 import { BookCta, BookNote, PageCta } from "@/components/Cta";
@@ -172,8 +171,6 @@ export default function RoofingPage() {
       />
 
       <MoreServices current="/roofing-seo" />
-
-      <Availability />
     </>
   );
 }

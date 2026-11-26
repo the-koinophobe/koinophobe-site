@@ -6,11 +6,11 @@ import {
   Layers,
   MapPin,
   PenLine,
-  Settings2,
+  Link2,
+  Sparkles,
   Store,
   TriangleAlert,
 } from "lucide-react";
-import { Availability } from "@/components/Availability";
 import { BookCta, PageCta } from "@/components/Cta";
 import { RelatedNotes } from "@/components/RelatedNotes";
 import { Reveal } from "@/components/Reveal";
@@ -53,29 +53,34 @@ const PRINCIPLES = [
 
 const SERVICES = [
   {
-    icon: <Settings2 size={20} aria-hidden />,
-    title: "Technical SEO",
-    body: "I find and fix what stops Google from reading your site: pages it can't find, slow loading, broken links and messy moves to a new site. It's the work behind every jump on my work page.",
+    icon: <MapPin size={20} aria-hidden />,
+    title: "Google Business Profile",
+    body: "Categories, services, towns, photos and a steady flow of reviews. Most local calls start in the map, so this comes first.",
+  },
+  {
+    icon: <Link2 size={20} aria-hidden />,
+    title: "Local link building",
+    body: "Suppliers, trade groups, sponsorships, local news. Every link listed with the page it sits on; none bought from a network.",
+  },
+  {
+    icon: <Sparkles size={20} aria-hidden />,
+    title: "AI search",
+    body: "Your listings, reviews and pages cleaned up so ChatGPT, Gemini, Claude and Perplexity get your business right. Then checked every month.",
+  },
+  {
+    icon: <PenLine size={20} aria-hidden />,
+    title: "Pages that win the call",
+    body: "Homepage and service pages rewritten to say why you, with schema so Google reads them properly.",
   },
   {
     icon: <BarChart3 size={20} aria-hidden />,
     title: "Measurement",
-    body: "I set up Google Analytics and Tag Manager right, so every call, form and booking gets counted. If I can't measure it, I won't claim it.",
-  },
-  {
-    icon: <MapPin size={20} aria-hidden />,
-    title: "Local search",
-    body: "Town pages that actually help people, your Google Business Profile, a steady flow of reviews, and the map. This is where local businesses win or lose.",
-  },
-  {
-    icon: <PenLine size={20} aria-hidden />,
-    title: "Content that ranks",
-    body: "Better page titles, service page copy, and longer guides built on what people really search for, not a keyword tool's guess.",
+    body: "Analytics, Tag Manager and call tracking, set up so every call, form and booking gets counted. If I can't measure it, I won't claim it.",
   },
   {
     icon: <Code2 size={20} aria-hidden />,
     title: "Build and fix",
-    body: "WordPress, Elementor, AIOSEO and Yoast, day to day. I studied computer science too, so when a site needs something a plugin can't do, I write the code myself.",
+    body: "WordPress and Next.js. I studied computer science, so when a plugin can't do it, I write the code.",
   },
 ];
 
@@ -130,7 +135,7 @@ const personLd = {
   "@id": "https://koinophobe.com/#founder",
   name: site.owner,
   url: "https://koinophobe.com/about",
-  jobTitle: "Local SEO and conversion tracking specialist",
+  jobTitle: "Founder, digital growth for local trades",
   worksFor: { "@id": "https://koinophobe.com/#organization" },
   sameAs: [site.linkedin, site.x, site.substack, site.github, site.instagram, site.youtube].filter(Boolean),
 };
@@ -186,11 +191,11 @@ export default function AboutPage() {
             <p className="eyebrow">About</p>
             <h1 className="t-h1 mt-6 max-w-[18ch]">A digital growth agency that shows its work</h1>
             <p className="t-lead mt-6 max-w-[58ch]">
-              I&rsquo;m {site.owner}. I run Koinophobe, and I do the SEO, call tracking and AI search
-              work for service businesses myself. Before this, I spent years building and ranking sites
-              under other agencies&rsquo; names. There&rsquo;s not much mystery to the job: the data you
-              already own, the parts of your site that are broken, and whether the person reporting to you
-              will tell you the bad news too. I will.
+              I&rsquo;m {site.owner}. I run Koinophobe and do the work myself: your Google profile, local
+              links, Local Services Ads, AI search, and the tracking that shows whether any of it paid off.
+              Before this, I spent years building and ranking sites under other agencies&rsquo; names. The job
+              isn&rsquo;t mysterious. It&rsquo;s the data you already own, the parts of your setup that are
+              broken, and whether the person reporting to you will tell you the bad news too. I will.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <BookCta from="about_hero" />
@@ -230,7 +235,7 @@ export default function AboutPage() {
         <div className="container-pad">
           <Reveal className="stage-head">
             <p className="eyebrow">The work</p>
-            <h2 className="t-h2 mt-5">My SEO results: judge me on these, not on this page</h2>
+            <h2 className="t-h2 mt-5">Judge me on these results, not on this page</h2>
             <div className="mt-8 flex justify-center">
               <PageCta href="/work" label="All case studies" from="about_work" size="md" />
             </div>
@@ -264,7 +269,7 @@ export default function AboutPage() {
         <div className="container-pad">
           <Reveal className="stage-head">
             <p className="eyebrow">How I work</p>
-            <h2 className="t-h2 mt-5">How I work: three SEO promises you can hold me to</h2>
+            <h2 className="t-h2 mt-5">Three promises you can hold me to</h2>
           </Reveal>
           <div data-anim="cards" className="mt-14 grid gap-5 md:grid-cols-2">
             {PRINCIPLES.map((p, i) => (
@@ -283,7 +288,7 @@ export default function AboutPage() {
         <div className="container-pad">
           <Reveal className="stage-head">
             <p className="eyebrow">What I do</p>
-            <h2 className="t-h2 mt-5">My SEO services: technical, measurable, and mostly in WordPress</h2>
+            <h2 className="t-h2 mt-5">What I do, day to day</h2>
           </Reveal>
           <div data-anim="cards" className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((s) => (
@@ -296,20 +301,18 @@ export default function AboutPage() {
           </div>
           <div className="mt-12 flex flex-wrap items-center justify-center gap-3">
             <PageCta href="/pricing" label="See pricing" from="about_services" />
-            <PageCta href="/roofing-seo" label="Roofing SEO" from="about_services" />
+            <PageCta href="/google-business-profile-optimization" label="Google Business Profile" from="about_services" />
             <PageCta href="/home-remodeling-seo" label="Home remodeling SEO" from="about_services" />
           </div>
         </div>
       </section>
 
-      <Faq items={ABOUT_FAQ} className="section" />
+      <Faq items={ABOUT_FAQ} title="Questions about Koinophobe" className="section" />
 
       <RelatedNotes
         title="Where to start reading"
         slugs={["what-is-a-koinophobe", "hiring-an-seo-questions-to-ask", "call-tracking-for-contractors", "near-me-searches-local-seo-data"]}
       />
-
-      <Availability />
     </>
   );
 }

@@ -1,6 +1,5 @@
 import { Eye, Search, Sparkles } from "lucide-react";
 import { AISection } from "@/components/AISection";
-import { Availability } from "@/components/Availability";
 import { CtaBand } from "@/components/Cta";
 import { Reveal } from "@/components/Reveal";
 import { SiteWall } from "@/components/SiteWall";
@@ -142,8 +141,6 @@ export default function WorkPage() {
         title="The SEO case studies, written up"
         slugs={["clinic-4-to-104-clicks", "charles-county-md-game-shop-seo", "lawrence-ma-window-tint-seo", "near-me-searches-local-seo-data", "zero-click-rankings-title-tags", "ai-cited-vs-ranked-page"]}
       />
-
-      <Availability />
     </>
   );
 }

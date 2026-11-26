@@ -5,6 +5,8 @@ import { Reel } from "@/components/Reel";
 import { CaseCards } from "@/components/CaseCards";
 import { Testimonials } from "@/components/Testimonials";
 import { AccGroup } from "@/components/AccGroup";
+import { CaseVideo } from "@/components/CaseVideo";
+import { videos } from "@/lib/videos";
 import { faqJsonLd } from "@/components/Faq";
 import { aggregate } from "@/lib/gsc";
 import { site } from "@/lib/site";
@@ -91,7 +93,7 @@ const CASES = [
 
 const FAQ = [
   { q: "Who is the best fit?", a: "Local service businesses customers find on Google: roofers, remodelers, pool and lawn care, plumbing and HVAC, auto detailing, clinics. Anywhere in the US." },
-  { q: "What does a digital growth agency do for a trade business?", a: "Everything that decides whether a nearby customer finds you and calls: your Google profile, the listings and links Google trusts, Local Services Ads, the pages people land on, and what AI assistants say about you. Run as one plan, not five vendors." },
+  { q: "What does a digital growth agency do for a trade business?", a: "Everything between a nearby customer searching and your phone ringing: your Google profile, the listings and links Google trusts, Local Services Ads, the pages people land on, and what AI assistants say about you. One person runs all of it, so nothing falls between vendors." },
   { q: "Are Google rankings guaranteed?", a: "No, and be careful with anyone who does. Nobody controls Google. I guarantee the work on the list, done on the dates we agree." },
   { q: "Who owns the accounts?", a: "You do. I work inside your Google profile, ad account and site, and nothing is held back if you leave." },
   { q: "What do you need from me?", a: "Access to your Google profile and website, your license and insurance for the ads, and photos of your work." },
@@ -144,7 +146,7 @@ export default function HomePage() {
           <div className="head-c">
             <p className="kicker">How I help</p>
             <h2 className="t-h2 mt-4">Found, named, booked</h2>
-            <p className="t-lead mt-5">Five pieces of one plan. Each one moves calls, and each one shows up in the numbers you already have.</p>
+            <p className="t-lead mt-5">Five jobs, one plan. You&rsquo;ll see each of them in your own call log and Google profile.</p>
           </div>
           <AccGroup className="acc mt-16">
             {SERVICES.map((s, i) => (
@@ -207,6 +209,26 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── Case File 001 on YouTube ───────────────────────────── */}
+      {videos[0].id ? (
+        <section id="video" className="section !pt-0 scroll-mt-20">
+          <div className="container-pad">
+            <div className="head-c">
+              <p className="kicker">Case File 001 &middot; on YouTube</p>
+              <h2 className="t-h2 mt-4">ChatGPT now lists businesses. Who decides if it names yours?</h2>
+              <p className="t-lead mt-5">Four anonymised client files, and four steps to open yours this week. {videos[0].length}.</p>
+            </div>
+            <div className="mx-auto max-w-[960px]">
+              <CaseVideo v={videos[0]} />
+              <div className="flex flex-wrap gap-x-8 gap-y-3">
+                <Link href={`/notes/${videos[0].note}`} className="link-u inline-flex items-center gap-1.5">Read the note <ArrowRight size={15} aria-hidden /></Link>
+                <a href={site.youtube} target="_blank" rel="noopener" className="link-u inline-flex items-center gap-1.5">The channel, {site.youtubeHandle} <ArrowRight size={15} aria-hidden /></a>
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       {/* ── Reviews ────────────────────────────────────────────── */}
       <section className="section !pt-0">
