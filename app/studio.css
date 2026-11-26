@@ -338,3 +338,20 @@ main:focus { outline: none; }
   .tcard { min-height: 340px; padding: 24px; }
   .motions > div { padding: 18px 0; }
 }
+
+/* /gtm: the twelve-layer stack, three phases side by side */
+.stack12 { display: grid; gap: 16px; }
+@media (min-width: 1024px) { .stack12 { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; } }
+.stack-phase { border: 1px solid rgb(var(--line)); }
+.stack-phase:first-child { border-color: rgb(var(--ink) / 0.5); }
+.stack-head { padding: 18px 20px; border-bottom: 1px solid rgb(var(--line)); background: rgb(var(--surface)); }
+.stack-phase:first-child .stack-head { background: rgb(var(--ink)); color: rgb(var(--bg)); }
+.stack-phase:first-child .stack-head .text-muted { color: rgb(var(--bg) / 0.72); }
+.stack-phase ol { list-style: none; margin: 0; padding: 0; }
+.stack-phase li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 8px; padding: 18px 20px; border-bottom: 1px solid rgb(var(--line)); transition: background 0.2s; }
+.stack-phase li:last-child { border-bottom: 0; }
+.stack-phase li:hover { background: rgb(var(--surface)); }
+.stack-phase .ix { font-family: var(--font-serif), sans-serif; font-weight: 600; font-size: 14px; color: rgb(var(--ink) / 0.55); padding-top: 2px; }
+.stack-phase h3 { font-weight: 600; font-size: 16px; }
+.stack-phase li p { margin-top: 4px; font-size: 14.5px; line-height: 1.55; color: rgb(var(--ink) / 0.72); }
+.stack-phase .tools { display: block; margin-top: 8px; font-size: 12.5px; color: rgb(var(--ink) / 0.62); }

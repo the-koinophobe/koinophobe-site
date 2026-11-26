@@ -40,6 +40,44 @@ const MOTIONS = [
   { t: "Community", b: "Slack, Discord or events; trust first, sale later.", fit: "Developer tools and niche professions" },
 ];
 
+/*
+ * The GTM engineering stack, twelve layers grouped by when a startup needs
+ * them. Structure prompted by a public list of GTM engineering skills (Nov
+ * 2026); the wording and the grouping are Michael's.
+ */
+const STACK: { phase: string; when: string; layers: { t: string; b: string; tools: string }[] }[] = [
+  {
+    phase: "Build now",
+    when: "Pre-seed to seed, founder still selling",
+    layers: [
+      { t: "One source of truth", b: "Every account, contact and deal in one warehouse, matched to one record, then pushed back into the CRM.", tools: "BigQuery, Snowflake, dbt, Hightouch" },
+      { t: "Signals and routing", b: "Who's on the pricing page, who just raised, who's hiring for the problem. Routed to the right person the same hour.", tools: "Webhooks, intent data, Slack alerts" },
+      { t: "Personal outbound at scale", b: "Research and enrichment done by machine, the first line written for one person, sequences that stop when they reply.", tools: "Clay, Apollo, scraping, an LLM" },
+      { t: "Attribution and RevOps", b: "Where pipeline came from, where it leaks, and what each channel costs per closed deal.", tools: "SQL, cohorts, multi-touch models" },
+      { t: "Public teardowns", b: "Pricing pages, funnels and benchmarks taken apart in public. The fastest proof that you think clearly.", tools: "Writing, benchmarks" },
+    ],
+  },
+  {
+    phase: "Once people use the product",
+    when: "Seed to Series A, usage data exists",
+    layers: [
+      { t: "Product-qualified leads", b: "The usage pattern that predicts a buyer, and an alert to sales the moment an account hits it.", tools: "Segment, RudderStack, PQL scoring" },
+      { t: "Usage-based pricing", b: "A price that grows with the value the customer gets: metering, credits and billing that match.", tools: "Stripe metered billing, API metering" },
+      { t: "Integrations as a channel", b: "Marketplace listings, templates and co-selling, so other platforms bring you buyers.", tools: "OAuth, Zapier, Make, app marketplaces" },
+    ],
+  },
+  {
+    phase: "Once there are customers to keep",
+    when: "Series A and after",
+    layers: [
+      { t: "Sales coaching from calls", b: "Call transcripts searched, summarised and turned into battlecards the team actually reads.", tools: "Gong, Chorus, vector search" },
+      { t: "Churn and net revenue retention", b: "Health scores, usage drop-off alerts and expansion signals, before the renewal call.", tools: "Health scoring, NRR models" },
+      { t: "The automated QBR", b: "The quarterly review deck built from the data, with the ROI already worked out.", tools: "Reporting, ROI frameworks" },
+      { t: "Dark social and community", b: "The word of mouth no tracker sees, measured by asking and by watching what it correlates with.", tools: "Surveys, Slack and Discord communities" },
+    ],
+  },
+];
+
 const WEEKS = [
   { t: "Week 1", b: "Your last 20 wins and losses, read for patterns. Who bought, why, and how long it took." },
   { t: "Week 2", b: "The buyer and the message, on one page. A target list with a source for every row." },
@@ -162,6 +200,52 @@ export default function GtmPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── The stack ──────────────────────────────────────────── */}
+      <section id="stack" className="section !pt-0 scroll-mt-20">
+        <div className="container-pad">
+          <div className="max-w-[48rem]">
+            <p className="kicker">The GTM engineering stack</p>
+            <h2 className="t-h2 mt-4">Twelve layers, built in the order you need them</h2>
+            <p className="t-lead mt-5">
+              GTM engineering is the plumbing under the strategy: data, signals, outreach, measurement. Nobody needs all twelve at
+              once. A seed-stage team that builds churn models before it has a list is solving next year&rsquo;s problem.
+            </p>
+          </div>
+          <div className="stack12 mt-12">
+            {(() => {
+              let n = 0;
+              return STACK.map((g) => (
+                <div key={g.phase} className="stack-phase">
+                  <div className="stack-head">
+                    <p className="font-semibold">{g.phase}</p>
+                    <p className="text-[13.5px] text-muted">{g.when}</p>
+                  </div>
+                  <ol>
+                    {g.layers.map((l) => {
+                      n += 1;
+                      return (
+                        <li key={l.t}>
+                          <span className="ix">{String(n).padStart(2, "0")}</span>
+                          <div>
+                            <h3>{l.t}</h3>
+                            <p>{l.b}</p>
+                            <span className="tools">{l.tools}</span>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ol>
+                </div>
+              ));
+            })()}
+          </div>
+          <p className="mt-8 max-w-[62ch] text-[15px] text-muted">
+            Where I&rsquo;d start with you: the first column. A clean list, signals that reach a person fast, outreach that reads like it was
+            written for one reader, and numbers that say what worked.
+          </p>
         </div>
       </section>
 
