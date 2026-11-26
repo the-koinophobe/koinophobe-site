@@ -58,7 +58,8 @@ export function Header() {
         </nav>
         <div className="ml-auto flex items-center gap-2.5">
           <ThemeToggle className="hd-tool" />
-          <a href={site.booking} target="_blank" rel="noopener" data-track="cta_book" data-from="header" className="btn btn-sm btn-primary hidden sm:inline-flex">
+          <span className="hd-hint" aria-hidden>Free, 20 min</span>
+          <a href={site.booking} target="_blank" rel="noopener" data-track="cta_book" data-from="header" className="btn btn-sm btn-primary hidden sm:inline-flex" aria-label="Book a free 20-minute call">
             Book a call
           </a>
           <button

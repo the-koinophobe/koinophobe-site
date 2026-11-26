@@ -51,6 +51,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/home-remodeling-seo`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/ai-search-optimization`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/google-business-profile-optimization`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/plumbing-hvac-marketing`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/lawn-care-marketing`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/gtm`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/missed-call-calculator`, changeFrequency: "yearly", priority: 0.7 },
     { url: `${base}/about`, changeFrequency: "yearly", priority: 0.6 },

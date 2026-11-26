@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { CookieSettingsButton } from "./CookieSettingsButton";
@@ -25,8 +26,8 @@ const COLS: { title: string; links: { href: string; label: string; external?: bo
     links: [
       { href: "/roofing-seo", label: "Roofing" },
       { href: "/home-remodeling-seo", label: "Home remodeling" },
-      { href: "/notes/topic/trades", label: "Plumbing, HVAC and more" },
-      { href: "/notes/lawn-care-seo", label: "Lawn and landscaping" },
+      { href: "/plumbing-hvac-marketing", label: "Plumbing and HVAC" },
+      { href: "/lawn-care-marketing", label: "Lawn and landscaping" },
       { href: "/notes/pool-deck-repair-seo", label: "Pool and deck" },
     ],
   },
@@ -57,7 +58,11 @@ export function Footer() {
       <section className="close6" aria-labelledby="close-h">
         <div className="close-glow" aria-hidden />
         <div className="container-pad relative py-28 sm:py-36" data-anim="stagger">
-          <p className="kicker">Still reading? Good sign</p>
+          <p className="close-me">
+            <Image src="/site/michael-edward.jpg" alt="" width={44} height={44} />
+            <span>Michael Edward<span>Replies the same day</span></span>
+          </p>
+          <p className="kicker mt-8">Still reading? Good sign</p>
           <h2 id="close-h" className="mx-auto mt-5 max-w-[14ch]">Tell me about your business.</h2>
           <p className="mx-auto mt-6 max-w-[40ch] text-[18px] font-medium leading-relaxed">
             I&rsquo;ll look at your Google profile before we talk, then tell you the two or three things I&rsquo;d fix first.

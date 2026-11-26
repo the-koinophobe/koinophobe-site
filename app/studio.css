@@ -368,3 +368,106 @@ main:focus { outline: none; }
 /* older section heads are left-aligned: their buttons follow the same edge */
 .stage-head .justify-center { justify-content: flex-start; }
 .section .mt-12.flex.justify-center:has(> a.btn) { justify-content: flex-start; }
+
+/* ── UX round, 26 Nov 2026 ─────────────────────────────────────────────── */
+/* analytics choice: a small chip in the corner, never over the hero buttons */
+.cookie-chip { position: fixed; left: 12px; bottom: 12px; z-index: 70; display: flex; align-items: center; gap: 12px; max-width: calc(100vw - 24px); padding: 8px 8px 8px 14px; background: rgb(var(--bg)); border: 1px solid rgb(var(--line)); box-shadow: 0 8px 24px -12px rgb(0 0 0 / 0.25); font-size: 13px; color: rgb(var(--ink) / 0.72); border-radius: 2px; }
+.cookie-btn { height: 30px; padding: 0 12px; font-size: 13px; font-weight: 500; background: rgb(var(--surface)); color: rgb(var(--ink)); border-radius: 2px; }
+.cookie-btn:hover { background: rgb(var(--line)); }
+.cookie-yes { background: rgb(var(--ink)); color: rgb(var(--bg)); }
+.cookie-yes:hover { background: rgb(var(--ink) / 0.85); }
+
+/* header hint beside the button */
+.hd-hint { display: none; font-size: 12.5px; color: rgb(var(--ink) / 0.62); margin-right: 4px; }
+@media (min-width: 1100px) { .hd-hint { display: inline; } }
+
+/* reel caption on phones: one line, name and link */
+@media (max-width: 639px) {
+  .reel-meta { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+  .reel-meta .reel-tags, .reel-now > span { display: none; }
+  .reel-now { font-size: 15px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+}
+
+/* home: the free site check */
+.check6 { display: grid; gap: 28px; padding: clamp(24px, 4vw, 48px); background: rgb(var(--surface)); }
+@media (min-width: 1024px) { .check6 { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 48px; align-items: center; } }
+.check-box input { border-radius: 2px !important; }
+.check-box .rounded-2xl { border-radius: 2px !important; }
+
+/* after you book: four steps */
+.steps4 { list-style: none; padding: 0; display: grid; gap: 16px; counter-reset: s; }
+@media (min-width: 768px) { .steps4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .steps4 { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.steps4 li { position: relative; border-top: 2px solid rgb(var(--ink)); padding-top: 18px; }
+.steps4 li:first-child { border-top-color: rgb(var(--pop)); }
+.steps4 .ix { font-family: var(--font-serif), sans-serif; font-weight: 600; font-size: 14px; color: rgb(var(--ink) / 0.55); }
+.steps4 h3 { margin-top: 10px; font-weight: 600; font-size: 18px; letter-spacing: -0.01em; }
+.steps4 p { margin-top: 6px; font-size: 15px; line-height: 1.6; color: rgb(var(--ink) / 0.72); }
+
+/* case cards: the one number first */
+.case-stat { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; margin: 6px 0 12px; }
+.case-stat .from { font-family: var(--font-serif), sans-serif; font-weight: 600; font-size: clamp(1.6rem, 2.4vw, 2.1rem); color: rgb(var(--ink) / 0.4); letter-spacing: -0.02em; }
+.case-stat .arr { color: rgb(var(--ink) / 0.4); font-size: 1.3rem; }
+.case-stat .to { font-family: var(--font-serif), sans-serif; font-weight: 600; font-size: clamp(2.2rem, 3.4vw, 3rem); letter-spacing: -0.03em; line-height: 1; }
+.case-stat .lbl { flex-basis: 100%; font-size: 13.5px; color: rgb(var(--ink) / 0.62); }
+
+/* closing band: a face on the offer */
+.close-me { display: inline-flex; align-items: center; gap: 12px; text-align: left; font-size: 14.5px; font-weight: 600; }
+.close-me img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid rgb(var(--band-ink) / 0.2); }
+.close-me span span { display: block; font-weight: 400; font-size: 13px; color: rgb(var(--band-ink) / 0.62); }
+
+/* footer wordmark: quieter */
+.ft-giant { color: rgb(var(--band-ink) / 0.07); }
+
+/* pricing: the four weeks at a glance */
+.weeks4 { list-style: none; padding: 0; display: grid; gap: 12px; }
+@media (min-width: 768px) { .weeks4 { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; } }
+.weeks4 li { display: grid; gap: 8px; }
+.weeks4 .wk-n { font-size: 12px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+.weeks4 .wk-bar { height: 6px; background: rgb(var(--ink) / 0.14); position: relative; overflow: hidden; }
+.weeks4 .wk-bar::after { content: ""; position: absolute; inset: 0; background: rgb(var(--ink)); transform-origin: left; transform: scaleX(0); transition: transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.weeks4 li:last-child .wk-bar::after { background: rgb(var(--pop)); }
+html:not(.anim) .weeks4 .wk-bar::after, .weeks4[data-in] .wk-bar::after { transform: scaleX(1); }
+.anim [data-anim="weeks"] { opacity: 1; }
+.weeks4 li:nth-child(2) .wk-bar::after { transition-delay: 0.12s; }
+.weeks4 li:nth-child(3) .wk-bar::after { transition-delay: 0.24s; }
+.weeks4 li:nth-child(4) .wk-bar::after { transition-delay: 0.36s; }
+.weeks4 .wk-t { font-size: 14px; line-height: 1.5; color: rgb(var(--ink) / 0.72); }
+@media (prefers-reduced-motion: reduce) { .weeks4 .wk-bar::after { transform: scaleX(1); transition: none; } }
+
+/* trade pages: the searches this is built for */
+.trade-searches { padding: 24px; background: rgb(var(--surface)); }
+.trade-searches ul { list-style: none; padding: 0; margin-top: 14px; display: grid; gap: 8px; }
+.trade-searches li { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: rgb(var(--bg)); font-size: 15px; font-weight: 500; border: 1px solid rgb(var(--line)); }
+.trade-searches li span { color: rgb(var(--ink) / 0.45); font-size: 14px; }
+
+/* ── one look: the older pages (about, work, roofing, remodeling, AI search,
+   contact, notes) take the studio grid's flat cards, square corners,
+   small-caps labels and weights ──────────────────────────────────────── */
+.eyebrow { display: block !important; font-size: 11.5px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: rgb(var(--ink) / 0.62); background: none !important; border: 0 !important; padding: 0 !important; box-shadow: none !important; }
+.eyebrow::before, .eyebrow > span[aria-hidden] { display: none !important; }
+.eyebrow + h1, .eyebrow + h2, .eyebrow + .t-h2, .eyebrow + .t-h1 { margin-top: 1rem !important; }
+.card-dark .eyebrow, .inverse .eyebrow { color: rgb(var(--band-ink) / 0.62); }
+.card { border-radius: 2px !important; box-shadow: none !important; border: 1px solid rgb(var(--line)); background: rgb(var(--bg)); }
+.card-dark { border-radius: 2px !important; box-shadow: none !important; }
+.icon-tile { border-radius: 2px !important; width: 40px; height: 40px; display: inline-grid; place-items: center; background: rgb(var(--surface)); color: rgb(var(--ink)); }
+.card-dark .icon-tile { background: rgb(var(--band-ink) / 0.1); color: rgb(var(--band-ink)); }
+main .rounded-2xl, main .rounded-3xl, main .rounded-xl, main .rounded-\[20px\], main .rounded-\[24px\] { border-radius: 2px !important; }
+main .font-extrabold { font-weight: 600 !important; }
+.text-mint { color: rgb(var(--band-ink)) !important; }
+.faq-item { border-radius: 2px !important; background: rgb(var(--surface)); border: 0 !important; box-shadow: none !important; }
+.faq-icon { border-radius: 2px !important; }
+.btn-light { border-radius: 2px !important; box-shadow: none !important; }
+.card-hover:hover { border-color: rgb(var(--ink) / 0.35); }
+
+/* notes: reading progress and the contents list */
+.note-progress { position: fixed; left: 0; right: 0; top: 0; height: 3px; z-index: 60; pointer-events: none; }
+.note-progress span { display: block; height: 100%; background: rgb(var(--pop)); transform-origin: left; transform: scaleX(0); transition: transform 0.1s linear; }
+.toc a { border-radius: 0; }
+.toc a[aria-current="true"] { color: rgb(var(--ink)); border-left-color: rgb(var(--pop)); font-weight: 500; }
+.toc-fold { margin-bottom: 28px; border: 1px solid rgb(var(--line)); padding: 0 16px; max-width: 70ch; }
+.toc-fold summary { cursor: pointer; padding: 14px 0; font-weight: 600; font-size: 15px; list-style: none; display: flex; justify-content: space-between; }
+.toc-fold summary::after { content: "+"; color: rgb(var(--pop)); font-size: 18px; line-height: 1; }
+.toc-fold[open] summary::after { content: "\2212"; }
+.toc-fold summary::-webkit-details-marker { display: none; }
+.toc-fold[open] { padding-bottom: 12px; }

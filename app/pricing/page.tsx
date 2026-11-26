@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { RelatedNotes } from "@/components/RelatedNotes";
 import { Testimonials } from "@/components/Testimonials";
+import { NextSteps } from "@/components/NextSteps";
 import { faqJsonLd } from "@/components/Faq";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { aggregate } from "@/lib/gsc";
@@ -121,7 +122,16 @@ export default function PricingPage() {
               </div>
               <div className="plan-sec">
                 <p className="kicker">Week by week</p>
-                <ul className="plan-items">
+                <ol className="weeks4" data-anim="weeks" aria-label="The four weeks at a glance">
+                  {[1, 2, 3, 4].map((w) => (
+                    <li key={w}>
+                      <span className="wk-n">Week {w}</span>
+                      <span className="wk-bar" aria-hidden />
+                      <span className="wk-t">{sprint.steps.filter((s) => s.week === w).map((s) => s.name).join(", ")}</span>
+                    </li>
+                  ))}
+                </ol>
+                <ul className="plan-items mt-10">
                   {sprint.steps.map((s) => (
                     <li key={s.name}><span className="wk">Week {s.week}</span><b>{s.name}</b><span>{s.what}</span></li>
                   ))}
@@ -230,6 +240,8 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
+
+      <NextSteps from="pricing_steps" />
 
       {/* ── FAQ ────────────────────────────────────────────────── */}
       <section id="questions" className="section !pt-0 scroll-mt-20">

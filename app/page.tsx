@@ -6,6 +6,8 @@ import { CaseCards } from "@/components/CaseCards";
 import { Testimonials } from "@/components/Testimonials";
 import { AccGroup } from "@/components/AccGroup";
 import { CaseVideo } from "@/components/CaseVideo";
+import { AiCheck } from "@/components/AiCheck";
+import { NextSteps } from "@/components/NextSteps";
 import { videos } from "@/lib/videos";
 import { faqJsonLd } from "@/components/Faq";
 import { aggregate } from "@/lib/gsc";
@@ -38,15 +40,15 @@ const TRADES = [
   { label: "Roofing", href: "/roofing-seo" },
   { label: "Remodeling", href: "/home-remodeling-seo" },
   { label: "Pool and deck", href: "/notes/pool-deck-repair-seo" },
-  { label: "Lawn care", href: "/notes/lawn-care-seo" },
-  { label: "Plumbing and HVAC", href: "/notes/topic/trades" },
+  { label: "Lawn care", href: "/lawn-care-marketing" },
+  { label: "Plumbing and HVAC", href: "/plumbing-hvac-marketing" },
 ];
 
 const SERVICES = [
   {
     n: "01",
     t: "Get found on Google",
-    big: "Your Google Business Profile rebuilt, your listings made to match, and Local Services Ads set up so you pay per lead. Done as one four-week sprint, and every account stays yours.",
+    big: "Your Google profile rebuilt and Local Services Ads set up, in accounts you own.",
     list: ["Starting numbers and a competitor teardown", "Business Profile and listings", "Local Services Ads", "Call and form tracking you can trust"],
     link: { href: "/google-business-profile-optimization", label: "Google Business Profile optimization" },
     media: { video: "/work/tintlordz.mp4", poster: "/work/tintlordz.webp" },
@@ -54,7 +56,7 @@ const SERVICES = [
   {
     n: "02",
     t: "Local link building",
-    big: "Google trusts the businesses other local sites vouch for. Suppliers, trade groups, sponsorships and local news, each link listed with the page it sits on.",
+    big: "Local sites vouching for you: suppliers, trade groups, sponsorships, local news.",
     list: ["Links from places your customers know", "No paid link farms or networks", "A list of every link won"],
     link: { href: "/pricing#fix", label: "How the campaign works" },
     media: { video: "/work/hhroofing.mp4", poster: "/work/hhroofing.webp" },
@@ -62,7 +64,7 @@ const SERVICES = [
   {
     n: "03",
     t: "Named by AI",
-    big: "When customers ask ChatGPT, Gemini, Claude or Perplexity who to call, they answer from your listings, reviews and site. I clean those up, then check what they say every month.",
+    big: "So ChatGPT, Gemini and Perplexity name you when someone asks who to call.",
     list: ["Listings AI tools read, cleaned up", "Free AI crawler check for your site", "A monthly check across four assistants"],
     link: { href: "/ai-search-optimization", label: "How AI search works" },
     media: { video: "/work/myofascial.mp4", poster: "/work/myofascial.webp" },
@@ -70,7 +72,7 @@ const SERVICES = [
   {
     n: "04",
     t: "Pages that win the call",
-    big: "Your homepage and service pages rewritten to say why you, with a new service or town page every month after. Written for the owner reading on a phone, and for Google.",
+    big: "Homepage and service pages that say why you, written for someone on a phone.",
     list: ["Homepage and three service pages", "Schema so Google and AI read them right", "A new page each month on the monthly plan"],
     link: { href: "/pricing#monthly", label: "See the monthly plan" },
     media: { video: "/work/overthetabletop.mp4", poster: "/work/overthetabletop.webp" },
@@ -78,7 +80,7 @@ const SERVICES = [
   {
     n: "05",
     t: "Free site audit",
-    big: "A written list of what's costing you calls, worst first, with a recorded walkthrough. Yours to keep whether you hire me or not.",
+    big: "What's costing you calls, worst first, with a recorded walkthrough. Yours to keep.",
     list: ["Done in 5 business days", "Calls and forms checked", "Google Business Profile reviewed"],
     link: { href: "/pricing#free", label: "Ask for the audit" },
     media: { video: "/work/tintlordz.mp4", poster: "/work/tintlordz.webp" },
@@ -86,9 +88,9 @@ const SERVICES = [
 ];
 
 const CASES = [
-  { slug: "tint-lordz", name: "Tint Lordz Auto Spa", tags: ["Window tint", "Lawrence, MA"], headline: "Every spelling of the shop's name found at position 1.98 on average", body: "A new site and a cleaned-up Google profile. The brand searches are won; “window tinting near me” is the next job.", video: "/work/tintlordz.mp4", poster: "/work/tintlordz.webp", quote: { text: "Good guy to work with. Attention to detail.", who: "Tint Lordz Auto Spa", role: "review on Upwork" } },
-  { slug: "myofascial-clinic", name: "Pain clinic", tags: ["Clinic", "Brevard County, FL"], headline: "From 4 Google clicks a month to 104, and it held there", body: "Moved the old site without losing anything, rebuilt it, gave every treatment its own page, then the basics and tracking.", video: "/work/myofascial.mp4", poster: "/work/myofascial.webp" },
-  { slug: "over-the-table-top", name: "Over The Table Top", tags: ["Game shop", "Charles County, MD"], headline: "614 searches that show a one-location shop on Google's first page", body: "A small retailer with one door, found on page one for 614 searches in its own Search Console.", video: "/work/overthetabletop.mp4", poster: "/work/overthetabletop.webp", quote: { text: "He's been on top of things, not only what I asked, but also outside the scope.", who: "Daniel Folks", role: "owner, Over The Table Top" } },
+  { slug: "tint-lordz", name: "Tint Lordz Auto Spa", tags: ["Window tint", "Lawrence, MA"], headline: "Every spelling of the shop's name, at the top of Google", body: "A new site and a cleaned-up Google profile. The brand searches are won; “window tinting near me” is the next job.", video: "/work/tintlordz.mp4", poster: "/work/tintlordz.webp", stat: { to: "1.98", label: "average Google position for the shop’s name" }, quote: { text: "Good guy to work with. Attention to detail.", who: "Tint Lordz Auto Spa", role: "review on Upwork" } },
+  { slug: "myofascial-clinic", name: "Pain clinic", tags: ["Clinic", "Brevard County, FL"], headline: "Moved, rebuilt, a page per treatment, and the climb held", body: "Moved the old site without losing anything, rebuilt it, gave every treatment its own page, then the basics and tracking.", video: "/work/myofascial.mp4", poster: "/work/myofascial.webp", stat: { from: "4", to: "104", label: "Google clicks a month" } },
+  { slug: "over-the-table-top", name: "Over The Table Top", tags: ["Game shop", "Charles County, MD"], headline: "A one-location shop on Google's first page", body: "A small retailer with one door, found on page one for 614 searches in its own Search Console.", video: "/work/overthetabletop.mp4", poster: "/work/overthetabletop.webp", stat: { to: "614", label: "searches with the shop on page one" }, quote: { text: "He's been on top of things, not only what I asked, but also outside the scope.", who: "Daniel Folks", role: "owner, Over The Table Top" } },
 ];
 
 const FAQ = [
@@ -139,6 +141,22 @@ export default function HomePage() {
           ))}
         </nav>
       </div>
+
+      {/* ── Free check: the hook from the outreach, on the site ── */}
+      <section id="check" className="section scroll-mt-20 !pb-0">
+        <div className="container-pad">
+          <div className="check6">
+            <div>
+              <p className="kicker">Free check, about 10 seconds</p>
+              <h2 className="t-h2 mt-4 !text-[clamp(1.8rem,3vw,2.6rem)]">Can ChatGPT and Google read your site?</h2>
+              <p className="t-lead mt-4 max-w-[46ch]">Type your website. I&rsquo;ll check which AI and search crawlers your site lets in, and whether your homepage has enough text for them to read.</p>
+            </div>
+            <div className="check-box">
+              <AiCheck />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ── How I help: numbered list, first open ──────────────── */}
       <section id="services" className="section scroll-mt-20">
@@ -260,6 +278,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <NextSteps from="home_steps" />
 
       {/* ── FAQ ─────────────────────────────────────────────────── */}
       <section id="questions" className="section !pt-0 scroll-mt-20">

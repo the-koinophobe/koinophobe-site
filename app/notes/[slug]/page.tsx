@@ -9,6 +9,7 @@ import { Reveal } from "@/components/Reveal";
 import { BookCta, PageCta } from "@/components/Cta";
 import { FaqList, FaqSchema } from "@/components/Faq";
 import { WhoToCall } from "@/components/WhoToCall";
+import { NoteProgress } from "@/components/NoteProgress";
 import { NoteCard, fmtDate } from "@/components/NoteCard";
 import { adjacentNotes, getNote, modifiedDate, publishedNotes, relatedNotes } from "@/lib/notes";
 import { serviceForNote } from "@/lib/services";
@@ -174,6 +175,15 @@ export default async function NotePage(props: { params: Promise<{ slug: string }
               <div className="max-w-[70ch]">
                 <CaseVideo v={video} />
               </div>
+            ) : null}
+            <NoteProgress />
+            {note.toc.length > 1 ? (
+              <details className="toc toc-fold lg:hidden">
+                <summary>On this page</summary>
+                {note.toc.map((h) => (
+                  <a key={h.id} href={`#${h.id}`}>{h.text}</a>
+                ))}
+              </details>
             ) : null}
             <div className="prose max-w-[70ch] text-[17.5px] leading-[1.75] text-ink/85">
               <div dangerouslySetInnerHTML={{ __html: note.html }} />

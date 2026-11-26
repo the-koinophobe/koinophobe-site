@@ -13,6 +13,8 @@ export type CaseCard = {
   video: string;
   poster: string;
   quote?: { text: string; who: string; role: string };
+  /** The one number, shown big: optional before, the after, and what it counts. */
+  stat?: { from?: string; to: string; label: string };
 };
 
 /*
@@ -47,6 +49,13 @@ export function CaseCards({ cards }: { cards: CaseCard[] }) {
                 <span key={t} className="tag">{t}</span>
               ))}
             </p>
+            {c.stat ? (
+              <p className="case-stat">
+                {c.stat.from ? <><span className="from">{c.stat.from}</span><span className="arr" aria-hidden>&rarr;</span><span className="sr-only">to</span></> : null}
+                <span className="to">{c.stat.to}</span>
+                <span className="lbl">{c.stat.label}</span>
+              </p>
+            ) : null}
             <h3 className="case-h">{c.headline}</h3>
             <p className="mt-3 text-[16px] leading-relaxed text-muted">{c.body}</p>
             <Link href={`/work#${c.slug}`} className="link-arrow mt-5 inline-flex items-center gap-1.5">

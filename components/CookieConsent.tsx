@@ -37,30 +37,20 @@ export function CookieConsent() {
   if (!show) return null;
 
   return (
-    <div className="fixed inset-x-3 bottom-3 z-[70] mx-auto max-w-2xl rounded-2xl border border-line bg-bg shadow-float sm:inset-x-6">
-      <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 px-5 py-4">
-        <p className="text-[14px] text-muted">
-          Anonymous analytics only, nothing loads until you choose.{" "}
-          <Link href="/cookies" className="underline hover:text-ink">
-            Details
-          </Link>
-        </p>
-        <div className="flex shrink-0 gap-2">
-          <button
-            type="button"
-            onClick={() => choose("denied")}
-            className="btn btn-sm btn-secondary"
-          >
-            Reject
-          </button>
-          <button
-            type="button"
-            onClick={() => choose("granted")}
-            className="btn btn-sm btn-primary"
-          >
-            Accept
-          </button>
-        </div>
+    <div role="region" aria-label="Analytics choice" className="cookie-chip">
+      <p>
+        Anonymous analytics?{" "}
+        <Link href="/cookies" className="underline hover:text-ink">
+          Details
+        </Link>
+      </p>
+      <div className="flex shrink-0 gap-1.5">
+        <button type="button" onClick={() => choose("denied")} className="cookie-btn">
+          No
+        </button>
+        <button type="button" onClick={() => choose("granted")} className="cookie-btn cookie-yes">
+          OK
+        </button>
       </div>
     </div>
   );
