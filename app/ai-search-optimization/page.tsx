@@ -22,7 +22,7 @@ import { MoreServices } from "@/components/MoreServices";
 import { Reveal } from "@/components/Reveal";
 import { getNote } from "@/lib/notes";
 import { site } from "@/lib/site";
-import { startup } from "@/lib/pricing";
+import { monthly, sprint } from "@/lib/pricing";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { pageMeta } from "@/lib/meta";
 
@@ -33,7 +33,7 @@ export const metadata = pageMeta({
   // Absolute: with " · Koinophobe" on the end it runs past what Google shows.
   title: { absolute: "AI search optimization for service businesses" },
   description:
-    "Get your service business named by ChatGPT, Perplexity and Google's AI Overviews. Crawler fixes, cited pages, tracking. $300 a month on top of SEO.",
+    "AI SEO services for local businesses: get named by ChatGPT, Perplexity and Google's AI Overviews. I clean up what they read, then check what they say each month.",
   path: "/ai-search-optimization",
 });
 
@@ -68,10 +68,10 @@ const FACTS = [
 ];
 
 const LOOP = [
-  { icon: <Gauge size={20} aria-hidden />, t: "Measure", b: "Your customers' questions, asked across ChatGPT, Claude, Perplexity and Google AI Overviews, three runs each, every source logged." },
-  { icon: <Wrench size={20} aria-hidden />, t: "Fix", b: "20+ fixes a month: AI crawler access, text hidden behind JavaScript, schema, titles, listings, internal links." },
-  { icon: <FileText size={20} aria-hidden />, t: "Publish", b: "4 in-depth pages a month answering what customers ask: costs, comparisons, what to expect, is it worth it." },
-  { icon: <RefreshCw size={20} aria-hidden />, t: "Measure again", b: "Same questions, same method, at month end. You see who got named and cited, against last month." },
+  { icon: <Gauge size={20} aria-hidden />, t: "Measure", b: "Day 1 of the Google fix: what ChatGPT says about you today, and your map position for three searches." },
+  { icon: <Wrench size={20} aria-hidden />, t: "Fix", b: "The same name, services and towns on your site, Google, Bing, BBB and Yelp, the listings AI tools read." },
+  { icon: <FileText size={20} aria-hidden />, t: "Say why you", b: "Your homepage headline and profile description rewritten, so an assistant has a reason to name you." },
+  { icon: <RefreshCw size={20} aria-hidden />, t: "Check monthly", b: `On the ${monthly.price}-a-month plan: what ChatGPT, Gemini, Claude and Perplexity say about you, every month.` },
 ];
 
 /** The guide hub. Grouped by what an owner is trying to do. */
@@ -119,15 +119,15 @@ const FAQ: FaqItem[] = [
   },
   {
     q: "Do I still need regular SEO?",
-    a: "Yes. A third to half of the companies AI assistants cited in my study also ranked in Google's top ten for the same question. The plan includes the SEO work, so you aren't paying twice.",
+    a: "Yes. A third to half of the companies AI assistants cited in my study also ranked in Google's top ten for the same question. The Google fix covers the profile and listings that both Google and AI tools read, so you aren't paying twice.",
   },
   {
     q: "How much does it cost?",
-    a: "It's an add-on to the $500 SEO plan: $300 more a month, $800 for both. There's no extra contract, and the first month is covered by the delivery guarantee: if I don't finish its month-one list within 30 days, you get that payment back. If you're not happy later on, tell me and I stop the add-on 30 days later. Every month includes citation tracking across four assistants with three runs each, 4 in-depth pages, 20+ fixes, a Friday changelog and a month-end report.",
+    a: `The Google fix is ${sprint.price}, done in ${sprint.weeks} weeks, half up front. It rebuilds your profile, cleans up the listings AI tools read, rewrites the pages that say why you and runs a local link-building campaign. Then ${monthly.price} a month, month to month, checks what ChatGPT, Gemini, Claude and Perplexity say about you.`,
   },
   {
     q: "What if I run a local service business?",
-    a: "Yes, that's who it's for. The SEO plan covers Google Maps, town pages and call tracking, and the add-on covers AI answers. The audit and the intro call are free, and I'll tell you straight whether the add-on is worth it for you yet.",
+    a: "Yes, that's who it's for. The Google fix covers Google Maps, Local Services Ads, the listings AI tools read and local links in one sprint. The audit and the intro call are free, and I'll tell you straight whether it's worth it for you yet.",
   },
 ];
 
@@ -140,25 +140,13 @@ const serviceLd = {
   url: "https://koinophobe.com/ai-search-optimization",
   provider: { "@id": "https://koinophobe.com/#organization" },
   areaServed: site.areaServed,
-  offers: {
-    "@type": "Offer",
-    name: startup.name,
-    description: startup.items.join(". "),
-    priceCurrency: "USD",
-    priceSpecification: {
-      "@type": "UnitPriceSpecification",
-      priceCurrency: "USD",
-      price: startup.amount,
-      unitCode: "MON",
-      referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" },
-    },
-    seller: { "@id": "https://koinophobe.com/#organization" },
-  },
+  offers: [
+    { "@type": "Offer", name: sprint.name, price: sprint.amount, priceCurrency: "USD", seller: { "@id": "https://koinophobe.com/#organization" } },
+    { "@type": "Offer", name: monthly.name, priceCurrency: "USD", seller: { "@id": "https://koinophobe.com/#organization" }, priceSpecification: { "@type": "UnitPriceSpecification", priceCurrency: "USD", price: monthly.amount, unitCode: "MON" } },
+  ],
 };
 
 export default function AiSearchPage() {
-  const seatsLine =
-    startup.seatsOpen > 0 ? `${startup.seatsOpen} of ${startup.seats} seats open` : "All seats taken, ask to join the waitlist";
   const groups = GUIDES.map((g) => ({
     title: g.title,
     notes: g.slugs.map((s) => getNote(s)).filter(Boolean) as NonNullable<ReturnType<typeof getNote>>[],
@@ -182,8 +170,8 @@ export default function AiSearchPage() {
             </h1>
             <p className="t-lead mt-6 max-w-[58ch]">
               I get businesses named by ChatGPT, Claude, Perplexity, Gemini and Google&rsquo;s AI Overviews, and
-              readable by AI agents like Manus. I fix what keeps AI tools from reading your site, write the pages
-              they quote, and check the answers every month. My method is published, so you can check it too.
+              readable by AI agents like Manus. I fix what keeps AI tools from reading your site, clean up the
+              listings they quote, and check the answers every month. My method is published, so you can check it too.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <BookCta from="ai_hero" />
@@ -193,7 +181,7 @@ export default function AiSearchPage() {
               </a>
             </div>
             <p className="mt-4 text-[13.5px] text-muted">
-              ${startup.amount} more a month on the SEO plan &middot; no extra contract &middot; delivery guarantee &middot; {seatsLine}
+              The Google fix, {sprint.price} &middot; then {monthly.price} a month &middot; month to month
             </p>
           </Reveal>
           <div className="relative mx-auto w-full max-w-[560px] lg:mx-0">
@@ -311,39 +299,33 @@ export default function AiSearchPage() {
       {/* ── The plan ────────────────────────────────────────────── */}
       <section id="plan" className="section scroll-mt-24">
         <div className="container-pad grid grid-cols-[minmax(0,1fr)] gap-10 lg:grid-cols-[1.05fr_1fr] lg:gap-14">
-          <div data-anim="rise" className="card-dark flex flex-col gap-6 p-7 shadow-float sm:p-10">
-            <div className="flex items-center justify-between gap-3">
-              <span className="text-[14px] font-medium text-muted">AI search optimization</span>
-              <span className="eyebrow !text-[12px]">{seatsLine}</span>
-            </div>
+          <div className="card-dark flex flex-col gap-6 p-7 sm:p-10">
             <div>
-              <h2 className="t-h3 !text-[1.6rem]">{startup.name}</h2>
-              <p className="mt-3 flex items-baseline gap-2">
-                <span className="tnum font-display text-[3.2rem] font-extrabold leading-none tracking-tight text-mint">{startup.price}</span>
-                <span className="text-[15px] text-muted">{startup.unit}</span>
+              <h2 className="t-h3 !text-[1.6rem]">{sprint.name}, then monthly</h2>
+              <p className="mt-3 flex items-baseline gap-3">
+                <span className="price">{sprint.price}</span>
+                <span className="text-[15px] muted">then {monthly.price} a month</span>
               </p>
             </div>
-            <div className="border-t border-line pt-6">
-              <p className="text-[14px] font-medium text-muted">Every month:</p>
+            <div className="border-t pt-6" style={{ borderColor: "rgb(var(--band-ink) / 0.2)" }}>
+              <p className="text-[14px] font-medium muted">In the {sprint.weeks}-week sprint:</p>
               <ul className="mt-4 flex flex-col gap-3">
-                {startup.items.map((it) => (
-                  <li key={it} className="grid grid-cols-[18px_1fr] gap-2.5 text-[15.5px]">
-                    <Check size={16} aria-hidden className="mt-1 text-brand" />
-                    <span>{it}</span>
+                {sprint.steps.map((it) => (
+                  <li key={it.name} className="grid grid-cols-[18px_1fr] gap-2.5 text-[15.5px]">
+                    <Check size={16} aria-hidden className="mt-1" />
+                    <span>{it.name}</span>
                   </li>
                 ))}
               </ul>
-              {startup.extras.map((x) => (
-                <p key={x} className="mt-3 pl-[28px] text-[14.5px] text-muted">
-                  Plus, when it fits: {x.charAt(0).toLowerCase() + x.slice(1)}.
-                </p>
-              ))}
-            </div>
-            <div className="flex gap-3 rounded-2xl bg-cream p-5">
-              <CalendarClock size={20} aria-hidden className="mt-0.5 flex-none text-brand" />
-              <p className="text-[15px] leading-relaxed">
-                <span className="font-medium">{startup.termsLead}</span> {startup.terms}
-              </p>
+              <p className="mt-5 text-[14px] font-medium muted">Every month after, if you want it:</p>
+              <ul className="mt-3 flex flex-col gap-3">
+                {monthly.items.map((it) => (
+                  <li key={it.name} className="grid grid-cols-[18px_1fr] gap-2.5 text-[15.5px]">
+                    <Check size={16} aria-hidden className="mt-1" />
+                    <span>{it.name}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
             <div className="flex flex-wrap items-center gap-3">
               <BookCta from="ai_plan" size="md" tone="light" />

@@ -77,4 +77,4 @@ A one-page report with leads, profile actions, clicks, positions, work done and 
 
 ## Next step
 
-Compare this timeline with what's actually been done on your site. If month one's tracking isn't in place, start there. If you'd like it done for you, the SEO plan on my [pricing page](/pricing) follows this order.
+Compare this timeline with what's actually been done on your site. If month one's tracking isn't in place, start there. If you'd like it done for you, [book a free call](https://cal.com/koinophobe/intro) and I'll tell you what it would take.

@@ -66,4 +66,4 @@ Track calls, booking-form submissions and online bookings separately, so you can
 
 ## Where to start
 
-Search "home inspection [your town]" and open the top three inspector sites. If they show prices and a sample report and you don't, that's your first page. If you'd like it built for you, the audit is free and the plan is $500 a month; details are on my [pricing page](/pricing).
+Search "home inspection [your town]" and open the top three inspector sites. If they show prices and a sample report and you don't, that's your first page. If you'd like it done for you, the audit is free and the $2,500 Google fix is on my [pricing page](/pricing).

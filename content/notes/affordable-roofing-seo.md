@@ -47,7 +47,7 @@ More in [questions to ask before hiring an SEO](/notes/hiring-an-seo-questions-t
 
 ## Fix it once, then go monthly
 
-If your site has problems, fix them before you pay for anything new. On our [pricing page](/pricing) there's one plan, $500 a month, and it starts with the fixes. The audit that finds them is free.
+If your site has problems, fix them before you pay for anything new. On our [pricing page](/pricing) the Google fix is $2,500, the monthly plan is $1,000, and the audit is free. The audit that finds them is free.
 
 ## What a small roofer can expect
 

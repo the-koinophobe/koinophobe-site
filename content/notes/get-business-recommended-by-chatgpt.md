@@ -23,7 +23,7 @@ faq:
 
 A customer opens ChatGPT and types: "Who's a good family dentist in Round Rock?" or "Best place for a birthday cake near downtown Tampa?" A few businesses get named. Yours either is one of them or it isn't.
 
-Owners ask us how to be one of them. Nobody outside OpenAI knows the exact formula, and anyone who claims to is guessing. But a lot is known, from OpenAI's own documentation, from Google's, and from [the citation study we ran in September](/notes/ai-cited-vs-ranked-page). This checklist sticks to that.
+Owners ask us how to be one of them. Nobody outside OpenAI knows the exact formula, and anyone who claims to is guessing. But a lot is known, from OpenAI's own documentation, from Google's, and from [the citation study we ran in September](/notes/ai-cited-vs-ranked-page). This checklist sticks to that. For OpenAI's new business profiles, and what they do and don't change, see [ChatGPT business profiles: who decides if ChatGPT names your business](/notes/chatgpt-business-profiles).
 
 ## How assistants pick businesses, as far as anyone can show
 
@@ -70,4 +70,4 @@ Do this in a fresh chat with memory off, three times. In our study, ChatGPT's ci
 
 Run the three test questions above this week and write down who gets named. Then work through the checklist in order: crawler access first, then consistency, then reviews and pages.
 
-If you'd like it done for you, our [AI search optimization](/ai-search-optimization) service covers the access fixes, the listing cleanup, the pages, and monthly tracking across ChatGPT, Claude, Perplexity and Google, as a $300-a-month add-on to our SEO plan. Local home service businesses can also start with just the [SEO plan](/pricing), and there are pages on how the work runs for [roofing companies](/roofing-seo) and [home remodelers](/home-remodeling-seo).
+If you'd rather hand this off, see [AI search optimization](/ai-search-optimization). The $2,500 Google fix cleans up the listings AI tools read, and the $1,000-a-month plan checks what ChatGPT, Gemini, Claude and Perplexity say about you every month. Local home service businesses can also start with just the [$2,500 Google fix](/pricing), and there are pages on how the work runs for [roofing companies](/roofing-seo) and [home remodelers](/home-remodeling-seo).

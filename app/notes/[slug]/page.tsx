@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { CaseVideo } from "@/components/CaseVideo";
+import { videoForNote, videoJsonLd } from "@/lib/videos";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -23,7 +25,8 @@ export function generateStaticParams() {
   return publishedNotes().map((n) => ({ slug: n.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const note = getNote(params.slug);
   if (!note) return {};
   const title = note.seoTitle || note.title;
@@ -53,7 +56,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function NotePage({ params }: { params: { slug: string } }) {
+export default async function NotePage(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   const note = getNote(params.slug);
   if (!note) notFound();
 
@@ -67,6 +71,8 @@ export default function NotePage({ params }: { params: { slug: string } }) {
   const { newer, older } = adjacentNotes(note);
   const url = `https://koinophobe.com/notes/${note.slug}`;
   const words = note.html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
+  const video = videoForNote(note.slug);
+  const videoLd = video ? videoJsonLd(video, url) : null;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -79,10 +85,11 @@ export default function NotePage({ params }: { params: { slug: string } }) {
     articleSection: topic.label,
     wordCount: words,
     image: note.cover ? `https://koinophobe.com${note.cover}` : "https://koinophobe.com/opengraph-image",
-    author: { "@id": "https://koinophobe.com/#organization" },
+    author: { "@type": "Person", name: "Michael Edward", url: "https://koinophobe.com/about" },
     publisher: { "@id": "https://koinophobe.com/#organization" },
     isPartOf: { "@id": "https://koinophobe.com/#website" },
     mainEntityOfPage: url,
+    ...(videoLd ? { video: { "@id": videoLd["@id"] } } : {}),
   };
 
   const breadcrumbJsonLd = {
@@ -100,6 +107,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      {videoLd ? <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoLd) }} /> : null}
       <FaqSchema items={note.faq} />
 
       <article>
@@ -161,8 +169,14 @@ export default function NotePage({ params }: { params: { slug: string } }) {
           </div>
         ) : null}
 
+        <div className="white-pages mt-10">
         <div className="container-pad grid gap-14 pb-20 pt-12 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-16">
           <div className="min-w-0">
+            {video ? (
+              <div className="max-w-[70ch]">
+                <CaseVideo v={video} />
+              </div>
+            ) : null}
             <div className="prose max-w-[70ch] text-[17.5px] leading-[1.75] text-ink/85">
               <div dangerouslySetInnerHTML={{ __html: note.html }} />
             </div>
@@ -188,7 +202,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
                   <Link href="/about" className="text-ink underline underline-offset-4">
                     Koinophobe
                   </Link>{" "}
-                  is an SEO agency for {audience}. 30+ sites built and ranked, with the numbers on the{" "}
+                  is a digital growth agency for {audience}. 30+ sites built and ranked, with the numbers on the{" "}
                   <Link href="/work" className="text-ink underline underline-offset-4">
                     work page
                   </Link>
@@ -247,6 +261,7 @@ export default function NotePage({ params }: { params: { slug: string } }) {
               </div>
             </div>
           </aside>
+        </div>
         </div>
       </article>
 

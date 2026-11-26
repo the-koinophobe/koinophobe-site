@@ -79,4 +79,4 @@ Those are website rankings, which sit below the map. Plenty of near-me searches 
 
 Open your Business Profile and check four things: the primary category, the services list, the service areas, and whether the name is your real name. Then search your main service plus your town on your phone and note who's in the top three and what category shows under each name.
 
-If you'd like us to go through the profile and the website together, the [Site Audit on our pricing page](/pricing) covers both and ends with a list of what we'd fix first.
+If you'd like us to go through the profile and the website together, the [Site Audit on our pricing page](/pricing) covers both and ends with a list of what we'd fix first. Or see how our [Google Business Profile optimization](/google-business-profile-optimization) works.

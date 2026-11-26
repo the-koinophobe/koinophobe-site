@@ -62,4 +62,6 @@ Use your real business name with no keywords added. "Smith Roofing" is fine; "Sm
 
 ## Where to start
 
-Open your profile and check three settings: the address (hidden if customers don't visit), the service areas (where you take jobs, within two hours), and the business name (your real one). The full setup is in our [Business Profile guide](/notes/google-business-profile-for-roofers). If you'd like it done for you along with the town pages, that's part of the $500-a-month SEO plan on our [pricing page](/pricing).
+Open your profile and check three settings: the address (hidden if customers don't visit), the service areas (where you take jobs, within two hours), and the business name (your real one). The full setup is in our [Business Profile guide](/notes/google-business-profile-for-roofers). If you'd like it done for you, that's our [Google Business Profile optimization](/google-business-profile-optimization), part of the $2,500 Google fix on our [pricing page](/pricing).
+
+Not on the map at all? [Why a service area business doesn't show up on Google Maps](https://callsnotclicks.substack.com/p/why-is-my-service-area-business-not) goes through six reasons in order, on our newsletter.

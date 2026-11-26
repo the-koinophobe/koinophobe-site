@@ -91,7 +91,26 @@ export function isPrivateAddress(ip: string): boolean {
       return (n & mask) === (v4ToInt(base) & mask);
     });
   }
+  // IPv4 embedded in IPv6 in hex form: ::ffff:7f00:1 (mapped), ::7f00:1
+  // (compatible), 64:ff9b::7f00:1 (NAT64). Judge the IPv4 inside.
+  const hexEmbedded = v.match(/^(?:::ffff:|::|64:ff9b::)([0-9a-f]{1,4}):([0-9a-f]{1,4})$/);
+  if (hexEmbedded) {
+    const hi = parseInt(hexEmbedded[1], 16);
+    const lo = parseInt(hexEmbedded[2], 16);
+    return isPrivateAddress(`${hi >> 8}.${hi & 255}.${lo >> 8}.${lo & 255}`);
+  }
+  const dottedEmbedded = v.match(/^(?:::|64:ff9b::)(\d+\.\d+\.\d+\.\d+)$/);
+  if (dottedEmbedded) return isPrivateAddress(dottedEmbedded[1]);
+  // 6to4 (2002::/16) carries an IPv4 in the next 32 bits.
+  const sixToFour = v.match(/^2002:([0-9a-f]{1,4}):([0-9a-f]{1,4}):/);
+  if (sixToFour) {
+    const hi = parseInt(sixToFour[1], 16);
+    const lo = parseInt(sixToFour[2], 16);
+    return isPrivateAddress(`${hi >> 8}.${hi & 255}.${lo >> 8}.${lo & 255}`);
+  }
   if (v === "::" || v === "::1") return true;
+  if (/^64:ff9b:1:/.test(v)) return true; // local-use NAT64
+  if (/^100::/.test(v)) return true; // discard-only
   if (/^f[cd][0-9a-f]{2}:/.test(v)) return true; // fc00::/7 unique local
   if (/^fe[89ab][0-9a-f]:/.test(v)) return true; // fe80::/10 link local
   if (/^ff[0-9a-f]{2}:/.test(v)) return true; // multicast

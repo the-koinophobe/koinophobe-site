@@ -62,4 +62,4 @@ It's slow, unglamorous work, and it moves you up the map pack without changing a
 
 ## Where to start
 
-Search your main lockout terms from your phone tonight, and count how many of the top results are real businesses you recognize. Then make sure your profile name, phone and hours are exactly right. If you'd like the pages, profile and tracking handled, the audit is free and the plan is $500 a month; details are on my [pricing page](/pricing).
+Search your main lockout terms from your phone tonight, and count how many of the top results are real businesses you recognize. Then make sure your profile name, phone and hours are exactly right. If you'd like the profile handled, the audit is free and the $2,500 Google fix is on my [pricing page](/pricing).

@@ -73,4 +73,4 @@ Foundation leads take weeks to close, so track the inspection requests and calls
 
 ## Where to start
 
-List the five warning signs your customers mention most on the first call. If your site doesn't have a page answering each one, start there. If you'd like help, the audit is free and the plan is $500 a month for fixes, tracking and two new pages a month; details are on my [pricing page](/pricing).
+List the five warning signs your customers mention most on the first call. If your site doesn't have a page answering each one, start there. If you'd like help, the audit is free and the $2,500 Google fix is on my [pricing page](/pricing).

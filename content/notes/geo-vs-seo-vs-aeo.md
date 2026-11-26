@@ -74,4 +74,4 @@ If you already have decent SEO, add the GEO pieces: an AI crawler check and a tr
 
 Run the [free AI crawler check](/ai-search-optimization#check) on your site. It covers the first new piece of GEO in ten seconds.
 
-Our [AI search optimization](/ai-search-optimization) service bundles all of it, SEO and the GEO additions, as a $300-a-month add-on to our SEO plan: crawler access, tracking across four assistants with repeated runs, and the pages that get cited.
+If you'd rather hand this off, see [AI search optimization](/ai-search-optimization).

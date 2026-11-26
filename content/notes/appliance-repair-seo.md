@@ -60,4 +60,4 @@ Appliance repair runs on the phone. Without call tracking, you can't tell whethe
 
 ## Where to start
 
-Search "appliance repair [your town]" from your phone and note where you appear. Then read your homepage title in the browser tab: if it doesn't say what you do and where, that's the first fix. If you'd like the whole list done, the audit is free and the $500-a-month plan covers the fixes and two new pages a month; both are on my [pricing page](/pricing).
+Search "appliance repair [your town]" from your phone and note where you appear. Then read your homepage title in the browser tab: if it doesn't say what you do and where, that's the first fix. If you'd like the whole list done, the audit is free; [book a free call](https://cal.com/koinophobe/intro) and I'll tell you what it would take.

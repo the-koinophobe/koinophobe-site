@@ -62,4 +62,4 @@ If you help with insurance claims, say what that help looks like: documenting da
 
 ## Next step
 
-Read your current repair page on your phone as if your ceiling were leaking. Can you find the phone number, the response time and proof you've fixed this before, without scrolling? If not, rebuild the top of the page first. This is the kind of page we build on our [roofing SEO plans](/roofing-seo).
+Read your current repair page on your phone as if your ceiling were leaking. Can you find the phone number, the response time and proof you've fixed this before, without scrolling? If not, rebuild the top of the page first. This is the kind of page we build for [roofing companies](/roofing-seo).

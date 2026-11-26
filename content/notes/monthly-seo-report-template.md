@@ -71,4 +71,4 @@ Domain authority scores, backlink counts with no context, "visibility" indexes f
 
 ## Next step
 
-Fill in the table for last month using your own accounts. If the first row is blank because nothing tracks calls, fix that before anything else. The [monthly SEO report guide](/notes/monthly-seo-report-contractors) covers what a good agency report looks like, and the SEO plan on my [pricing page](/pricing) comes with this one page every month, plus a short call to go through it.
+Fill in the table for last month using your own accounts. If the first row is blank because nothing tracks calls, fix that before anything else. The [monthly SEO report guide](/notes/monthly-seo-report-contractors) covers what a good agency report looks like, and the $1,000-a-month plan on my [pricing page](/pricing) comes with this one page every month.

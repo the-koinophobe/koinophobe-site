@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { CalendarCheck, Link2, Linkedin, MapPin, Search, Target, Video } from "lucide-react";
+import { CalendarCheck, Link2, Linkedin, MapPin, Search, Target, Video, Youtube } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { Stagger } from "@/components/Stagger";
 import { XIcon } from "@/components/Availability";
@@ -168,6 +168,15 @@ export default function ContactPage() {
                 <XIcon />
                 {site.xHandle}
               </a>
+              {site.youtube ? (
+                <a
+                  href={site.youtube}
+                  className="inline-flex items-center gap-2 font-mono text-[11.5px] text-muted transition-colors duration-100 hover:text-ink"
+                >
+                  <Youtube size={16} aria-hidden />
+                  {site.youtubeHandle}
+                </a>
+              ) : null}
             </div>
 
             <div id="video" className="mt-12 scroll-mt-24 border-t border-line pt-8">

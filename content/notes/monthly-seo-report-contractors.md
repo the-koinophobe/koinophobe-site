@@ -70,4 +70,4 @@ It didn't. Impressions grew 25.8 times. Of the 1,099 searches the site now shows
 
 ## Next step
 
-Ask your SEO provider for one page with those four numbers and two lists. If they can't produce calls and forms, fix tracking first. My plan is one price, $500 a month, and the one-page report and a short call come with it every month; it's all on the [pricing page](/pricing).
+Ask your SEO provider for one page with those four numbers and two lists. If they can't produce calls and forms, fix tracking first. The $1,000-a-month plan comes with a report and a short call every month; it's all on the [pricing page](/pricing).

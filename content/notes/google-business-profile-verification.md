@@ -64,4 +64,4 @@ If the profile was verified before and has now been suspended, that's a differen
 
 ## Where to start
 
-Before you film, check three things: the profile name matches your paperwork exactly, the address and service area settings fit how you actually work, and you've got your van, tools and documents ready to show in one take. If you'd like a hand with the whole profile, it's part of the $500-a-month plan on my [pricing page](/pricing).
+Before you film, check three things: the profile name matches your paperwork exactly, the address and service area settings fit how you actually work, and you've got your van, tools and documents ready to show in one take. If you'd like a hand with the whole profile, it's part of the $2,500 Google fix on my [pricing page](/pricing).

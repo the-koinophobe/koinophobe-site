@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { NotesListing } from "@/components/NotesListing";
+import { CaseFiles } from "@/components/CaseFiles";
 import { notesPage, publishedNotes } from "@/lib/notes";
 import { pageMeta } from "@/lib/meta";
 
@@ -44,6 +45,7 @@ export default function NotesPage() {
         sortNote="Newest first."
         featureFirst
       />
+      <CaseFiles />
     </>
   );
 }

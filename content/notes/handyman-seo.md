@@ -68,4 +68,4 @@ If you can't see which pages bring calls, you can't tell whether to build more o
 
 ## Where to start
 
-Write down the ten jobs you did most this year. Check whether each has its own page with a price and photos. Build the top three first. If you'd like it done for you, the audit is free and the plan covers two new pages a month at $500; it's on my [pricing page](/pricing).
+Write down the ten jobs you did most this year. Check whether each has its own page with a price and photos. Build the top three first. If you'd like it done for you, the audit is free; [book a free call](https://cal.com/koinophobe/intro) and I'll tell you what it would take.

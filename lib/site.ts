@@ -10,6 +10,14 @@ export const site = {
   /** The newsletter: Calls, Not Clicks. */
   substack: "https://callsnotclicks.substack.com",
   github: "https://github.com/airdward",
+  instagram: "https://instagram.com/koi.no.phobe",
+  /**
+   * The YouTube channel, Michael Edward · Case Files. Leave empty until the
+   * channel URL is confirmed: every YouTube link, embed and sameAs entry on the
+   * site reads from here and stays hidden while it is "".
+   */
+  youtube: "",
+  youtubeHandle: "@koinophobe",
   /**
    * Cal.com. `calLink` is the username/event slug, used by the inline embed on
    * /contact. `booking` is the same page as a plain link for every other CTA,
@@ -21,7 +29,7 @@ export const site = {
   hours: "same-day replies",
   /** One consistent line about the agency, repeated on every note and in the Organization schema. */
   aiPitch:
-    "Koinophobe is an SEO agency that gets businesses found on Google and cited by ChatGPT, Perplexity, Gemini, Claude and AI agents like Manus.",
+    "Koinophobe is a digital growth agency that gets local businesses found on Google, linked by local sites and cited by ChatGPT, Perplexity, Gemini, Claude and AI agents like Manus.",
   /** Used in every schema areaServed. */
   areaServed: [{ "@type": "Country", name: "United States" }],
   nav: [

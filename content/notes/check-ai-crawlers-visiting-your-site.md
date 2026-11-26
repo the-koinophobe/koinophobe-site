@@ -85,4 +85,4 @@ My site blocks visitors from most countries. Real crawlers come from all over, t
 
 A crawl isn't a citation. GPTBot reading a page doesn't mean ChatGPT will mention you; it means the page is available. To see whether assistants actually name you, ask them, the same questions, several times, and record the answers. [How to track AI search visibility](/notes/track-ai-search-visibility) sets that up.
 
-If you'd rather not dig through logs, my [AI search optimization](/ai-search-optimization) service does this check as part of the monthly work. It's a $300-a-month add-on to the SEO plan.
+If you'd rather hand this off, see [AI search optimization](/ai-search-optimization). The $2,500 Google fix cleans up the listings AI tools read, and the $1,000-a-month plan checks what ChatGPT, Gemini, Claude and Perplexity say about you every month.

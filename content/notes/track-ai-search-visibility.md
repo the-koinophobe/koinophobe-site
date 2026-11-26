@@ -91,4 +91,4 @@ Our study set its threshold before we looked at any data: a difference only coun
 
 Before tracking, make sure the assistants can read you: the [AI crawler guide](/notes/ai-crawlers-robots-txt) covers which crawlers matter, and the [free crawler check](/ai-search-optimization#check) tests your site in ten seconds. Then give them something worth citing; head-to-head questions draw on the smallest pool of sources, which is why we start with [comparison pages](/notes/content-ai-cites).
 
-This tracking setup, run with three runs per question across four assistants, is the measurement half of our [AI search optimization](/ai-search-optimization) service. To see the clicks as well, [track ChatGPT traffic in GA4](/notes/track-chatgpt-traffic-ga4). Each month ends with the citation report, so you can see what the work did.
+If you'd rather hand this off, see [AI search optimization](/ai-search-optimization). To see the clicks as well, [track ChatGPT traffic in GA4](/notes/track-chatgpt-traffic-ga4). Each month ends with the citation report, so you can see what the work did.

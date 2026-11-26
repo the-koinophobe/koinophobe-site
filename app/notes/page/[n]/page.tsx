@@ -11,7 +11,8 @@ export function generateStaticParams() {
   return Array.from({ length: Math.max(0, pages - 1) }, (_, i) => ({ n: String(i + 2) }));
 }
 
-export function generateMetadata({ params }: { params: { n: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ n: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const n = Number(params.n);
   return pageMeta({
     title: `SEO notes, page ${n}`,
@@ -20,7 +21,8 @@ export function generateMetadata({ params }: { params: { n: string } }): Metadat
   });
 }
 
-export default function NotesPageN({ params }: { params: { n: string } }) {
+export default async function NotesPageN(props: { params: Promise<{ n: string }> }) {
+  const params = await props.params;
   const n = Number(params.n);
   if (!Number.isInteger(n) || n < 1) notFound();
   if (n === 1) redirect("/notes");

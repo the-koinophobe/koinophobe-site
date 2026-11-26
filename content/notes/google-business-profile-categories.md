@@ -75,4 +75,4 @@ Check for new categories every few months, too. Google adds them, and a better f
 
 ## Where to start
 
-Open your profile, read your primary category, and search your main service in your home town. If the top three use something different, look closely at why. My [Business Profile setup guide](/notes/google-business-profile-for-roofers) covers the other settings, and [service area businesses on Google](/notes/service-area-business-google-business-profile) covers the address and service areas. If you'd like the profile handled for you, it's part of the $500-a-month SEO plan on my [pricing page](/pricing).
+Open your profile, read your primary category, and search your main service in your home town. If the top three use something different, look closely at why. My [Business Profile setup guide](/notes/google-business-profile-for-roofers) covers the other settings, and [service area businesses on Google](/notes/service-area-business-google-business-profile) covers the address and service areas. If you'd like the profile handled for you, it's part of the $2,500 Google fix on my [pricing page](/pricing).

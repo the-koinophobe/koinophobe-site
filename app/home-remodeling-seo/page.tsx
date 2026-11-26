@@ -19,11 +19,10 @@ import { BookCta, BookNote, PageCta, TextCta } from "@/components/Cta";
 import { Faq, type FaqItem } from "@/components/Faq";
 import { MobileCta } from "@/components/MobileCta";
 import { MoreServices } from "@/components/MoreServices";
-import { GuaranteeLine } from "@/components/Guarantee";
 import { Reveal } from "@/components/Reveal";
 import { cases } from "@/lib/gsc";
 import { getNote } from "@/lib/notes";
-import { free, plan, startup } from "@/lib/pricing";
+import { monthly, sprint } from "@/lib/pricing";
 import { site } from "@/lib/site";
 
 // Guides appear on their publish date without a deploy.
@@ -50,7 +49,6 @@ export const metadata: Metadata = {
 };
 
 const roofing = cases.find((c) => c.slug === "roofing-contractor")!;
-const audit = free.find((p) => p.key === "audit")!;
 
 const WHO = [
   "Kitchen and bath remodelers",
@@ -175,7 +173,7 @@ const FAQ: FaqItem[] = [
   },
   {
     q: "How much does SEO cost for a remodeler?",
-    a: `One plan, ${plan.price} a month. It covers fixes to your site, call and consult-form tracking, two new service, town or project pages a month and Business Profile work. The audit is free, and if I don't finish the month-one list within 30 days, you get your first payment back.`,
+    a: `The Google fix is ${sprint.price}, done in ${sprint.weeks} weeks: your Business Profile, the listings AI tools read, Local Services Ads, your homepage and service pages, and a local link-building campaign. Then ${monthly.price} a month if you want it kept current. The audit is free.`,
   },
 ];
 
@@ -201,25 +199,10 @@ const serviceLd = {
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Home remodeling SEO plans",
-    itemListElement: [audit, plan].map((p) => ({
-      "@type": "Offer",
-      name: p.name,
-      description: p.items.join(". "),
-      price: p.amount,
-      priceCurrency: "USD",
-      url: `https://koinophobe.com/pricing#${p.monthly ? "monthly" : p.key}`,
-      seller: { "@id": "https://koinophobe.com/#organization" },
-      ...(p.monthly
-        ? {
-            priceSpecification: {
-              "@type": "UnitPriceSpecification",
-              price: p.amount,
-              priceCurrency: "USD",
-              unitCode: "MON",
-            },
-          }
-        : {}),
-    })),
+    itemListElement: [
+      { "@type": "Offer", name: sprint.name, price: sprint.amount, priceCurrency: "USD", url: "https://koinophobe.com/pricing#fix", seller: { "@id": "https://koinophobe.com/#organization" } },
+      { "@type": "Offer", name: monthly.name, priceCurrency: "USD", url: "https://koinophobe.com/pricing#monthly", seller: { "@id": "https://koinophobe.com/#organization" }, priceSpecification: { "@type": "UnitPriceSpecification", price: monthly.amount, priceCurrency: "USD", unitCode: "MON" } },
+    ],
   },
 };
 
@@ -485,35 +468,25 @@ export default function RemodelingPage() {
             <p className="eyebrow">What it costs</p>
             <h2 className="t-h2 mt-5">Remodeling SEO pricing, on the page</h2>
           </Reveal>
-          <div data-anim="cards" className="mx-auto mt-10 grid max-w-[880px] gap-5 md:grid-cols-2">
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
             {[
-              { p: audit, href: "/pricing#audit", line: "A written list of what's costing you consults, worst first, with a recorded walkthrough." },
-              { p: plan, href: "/pricing#monthly", line: "Site fixes, call and consult tracking, two new service, town or project pages a month, plus Business Profile upkeep." },
-            ].map(({ p, href, line }) => (
-              <div key={p.key} className={`flex flex-col p-7 sm:p-8 ${p.pick ? "card-dark shadow-float" : "card"}`}>
-                <p className="text-[14px] font-medium text-muted">{p.kicker}</p>
-                <h3 className="t-h3 mt-2 !text-[1.35rem]">{p.name}</h3>
+              { key: "fix", name: sprint.name, price: sprint.price, unit: `one time, ${sprint.weeks} weeks`, href: "/pricing#fix", line: "Your Business Profile, the listings AI tools read, Local Services Ads, your key pages and at least 10 local links." },
+              { key: "monthly", name: monthly.name, price: monthly.price, unit: "a month, month to month", href: "/pricing#monthly", line: "Four new local links, a new page, weekly profile posts, an AI search check and a report with a call." },
+            ].map((p) => (
+              <div key={p.key} className="card flex flex-col p-7 sm:p-8">
+                <h3 className="t-h3">{p.name}</h3>
                 <p className="mt-3 flex items-baseline gap-2">
-                  <span className="tnum font-display text-[2.4rem] font-extrabold leading-none tracking-tight">{p.price}</span>
+                  <span className="price !text-[2.6rem]">{p.price}</span>
                   <span className="text-[14px] text-muted">{p.unit}</span>
                 </p>
-                <p className="mt-4 flex-1 text-[15px] leading-relaxed text-muted">{line}</p>
-                <Link href={href} data-track="cta_link" data-from="remodel_plans" className="btn btn-md btn-secondary mt-6 self-start">
-                  What&rsquo;s included <ArrowRight size={16} aria-hidden />
+                <p className="mt-4 flex-1 text-[15.5px] leading-relaxed">{p.line}</p>
+                <Link href={p.href} data-track="cta_link" data-from="remodel_plans" className="btn btn-md btn-secondary mt-6 self-start">
+                  See what&rsquo;s included <ArrowRight size={16} aria-hidden />
                 </Link>
               </div>
             ))}
           </div>
-          <p className="mx-auto mt-8 max-w-[70ch] text-center text-[15px] text-muted">
-            Want the ChatGPT side measured every month, with citation tracking across four assistants?{" "}
-            <Link href="/ai-search-optimization" className="text-ink underline underline-offset-4">
-              AI search optimization
-            </Link>{" "}
-            is an add-on to the SEO plan, ${startup.amount} more a month, with no extra contract. The SEO plan has a three-month minimum.
-          </p>
-          <div className="mt-5 flex justify-center">
-            <GuaranteeLine />
-          </div>
+          <p className="mt-8 max-w-[70ch] text-[15px] text-muted">The audit is free, and you keep it whether you hire me or not.</p>
         </div>
       </section>
 

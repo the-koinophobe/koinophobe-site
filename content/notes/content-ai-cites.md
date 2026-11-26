@@ -78,4 +78,4 @@ Good first pages for most businesses:
 
 Pick one question your customers ask before buying, and rewrite or write that page using the template above this week. Then check it can be read: run the [free AI crawler check](/ai-search-optimization#check).
 
-If you want a steady supply, our [AI search optimization](/ai-search-optimization) service writes 4 in-depth pages a month in this shape, plus the fixes and tracking. It's a $300-a-month add-on to our SEO plan.
+If you'd rather hand this off, see [AI search optimization](/ai-search-optimization). The $2,500 Google fix cleans up the listings AI tools read, and the $1,000-a-month plan checks what ChatGPT, Gemini, Claude and Perplexity say about you every month.

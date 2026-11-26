@@ -8,7 +8,6 @@ import { BookCta, BookNote, PageCta } from "@/components/Cta";
 import { RelatedNotes } from "@/components/RelatedNotes";
 import { MobileCta } from "@/components/MobileCta";
 import { MoreServices } from "@/components/MoreServices";
-import { GuaranteeLine } from "@/components/Guarantee";
 import { Reveal } from "@/components/Reveal";
 import { cases } from "@/lib/gsc";
 import { projects } from "@/lib/content";
@@ -73,7 +72,7 @@ const ROOF_FAQ: FaqItem[] = [
   },
   {
     q: "How much does roofing SEO cost?",
-    a: "One plan, $500 a month. It covers fixes to your site, call and form tracking, two new town or service pages a month and Business Profile work. The audit is free, and if I don't finish the month-one list within 30 days, you get your first payment back.",
+    a: "The Google fix is $2,500, done in four weeks: your Business Profile, the listings AI tools read, Local Services Ads, your homepage and service pages, and a local link-building campaign. Then $1,000 a month for new links, new pages and upkeep. The audit is free.",
   },
   {
     q: "Should a roofer run Local Services Ads or do SEO?",
@@ -143,16 +142,11 @@ export default function RoofingPage() {
           </div>
           <div className="card-dark mt-8 flex flex-col gap-5 p-7 sm:p-10 md:flex-row md:items-center md:justify-between">
             <p className="max-w-[60ch] text-[16.5px]">
-              The <Link href="/pricing#monthly" className="font-medium underline underline-offset-4">SEO plan</Link> is
-              $500 a month. I fix your site first, then add two new town or service pages a month, chosen from
-              the <Link href="/notes/roofing-keywords" className="font-medium underline underline-offset-4">roofing
-              keywords worth building a page for</Link>, plus the profile work. The <Link href="/pricing#audit" className="font-medium underline underline-offset-4">audit</Link> is
-              free.
+              The <Link href="/pricing#fix" className="font-medium underline underline-offset-4">Google fix</Link> is $2,500,
+              done in four weeks: your Business Profile, the listings AI tools read, Local Services Ads, local links and your
+              key pages. Then $1,000 a month for new links, new pages and upkeep. The <Link href="/pricing#audit" className="font-medium underline underline-offset-4">audit</Link> is free.
             </p>
             <PageCta href="/pricing" label="See pricing" from="roofing_plans" size="md" />
-          </div>
-          <div className="mt-6 flex justify-center">
-            <GuaranteeLine />
           </div>
         </div>
       </section>

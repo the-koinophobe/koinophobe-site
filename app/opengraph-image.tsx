@@ -6,7 +6,7 @@ import { ogFonts } from "@/lib/og-fonts";
 // library was built for.
 export const runtime = "edge";
 
-export const alt = "Koinophobe · Technical SEO that shows up in the numbers";
+export const alt = "Koinophobe · Digital growth agency for local trades";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -110,7 +110,7 @@ export default async function OgImage() {
 
         <div style={{ display: "flex", alignItems: "center", gap: 14, fontFamily: small, fontSize: 24, color: MUTED }}>
           <div style={{ display: "flex", width: 12, height: 12, borderRadius: 99, backgroundColor: RED }} />
-          SEO agency for service businesses &middot; 30+ sites &middot; koinophobe.com
+          Digital growth for local trades &middot; 30+ sites &middot; koinophobe.com
         </div>
       </div>
     ),

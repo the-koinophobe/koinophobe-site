@@ -56,4 +56,4 @@ Big projects take weeks or months from first call to signed contract. Track call
 
 ## Where to start
 
-Write down the two or three project types you want more of next year. Check whether each has its own page with real projects on it. If not, build those first. If you'd like help, the audit is free and the plan is $500 a month for fixes, tracking and two new pages a month; details are on my [pricing page](/pricing).
+Write down the two or three project types you want more of next year. Check whether each has its own page with real projects on it. If not, build those first. If you'd like help, the audit is free and the $2,500 Google fix is on my [pricing page](/pricing).

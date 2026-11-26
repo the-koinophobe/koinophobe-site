@@ -55,7 +55,7 @@ Speed is where shared leads win. Sign up today and you can have leads this week.
 
 Cost per lead is easy to measure, which is why lead services sell on it. The number we'd watch is cost per booked job. If you buy ten leads and close one, that job cost you ten leads plus the hours spent chasing the other nine. Track that for three months before you decide anything.
 
-SEO doesn't have a clean cost per lead in month one. It has a monthly cost and a slow curve. Our SEO plan is $500 a month, and everything is listed on [our pricing page](/pricing). What you're paying for is pages and a Business Profile that keep working after the invoice is paid.
+SEO doesn't have a clean cost per lead in month one. It has a monthly cost and a slow curve. The Google fix is $2,500, and everything is listed on [our pricing page](/pricing). What you're paying for is pages and a Business Profile that keep working after the invoice is paid.
 
 You can only judge either option if calls and forms are tracked. That's why [phone click tracking in Tag Manager](/notes/gtm-phone-click-tracking) should go in before anything else, and why [rankings mean little without tracking](/notes/rankings-without-tracking).
 

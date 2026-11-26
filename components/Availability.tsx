@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { Check, Linkedin } from "lucide-react";
+import { Check, Linkedin, Youtube } from "lucide-react";
 import { site } from "@/lib/site";
 import { Reveal } from "./Reveal";
 import { BookCta, BookNote, EmailCta } from "./Cta";
-import { GuaranteeLine } from "./Guarantee";
 
 const CALL = [
   "I look at your site and your Google listing before we talk.",
@@ -41,7 +40,6 @@ export function Availability({ call = CALL }: { call?: string[] } = {}) {
               <EmailCta from="availability" tone="ghost-light" />
             </div>
             <BookNote light className="mt-4" />
-            <GuaranteeLine light className="mt-6 max-w-[52ch]" />
           </Reveal>
 
           <Reveal delay={0.1}>
@@ -66,6 +64,12 @@ export function Availability({ call = CALL }: { call?: string[] } = {}) {
                 <a href={site.x} className="muted inline-flex items-center gap-2 hover:text-white">
                   <XIcon />X
                 </a>
+                {site.youtube ? (
+                  <a href={site.youtube} className="muted inline-flex items-center gap-2 hover:text-white">
+                    <Youtube size={15} aria-hidden />
+                    YouTube
+                  </a>
+                ) : null}
               </div>
             </div>
           </Reveal>

@@ -1728,10 +1728,7 @@ body::after {
   letter-spacing: -0.065em;
   white-space: nowrap;
   text-align: center;
-  color: transparent;
-  background: linear-gradient(180deg, rgb(var(--band-ink) / 0.12), rgb(var(--band-ink) / 0.02) 85%);
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: rgb(var(--band-ink) / 0.08);
   user-select: none;
   padding-bottom: 0.06em;
 }

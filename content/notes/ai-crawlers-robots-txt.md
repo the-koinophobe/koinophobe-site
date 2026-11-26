@@ -110,4 +110,4 @@ Two things to remember after you edit it. Rules apply per host, so `docs.yourapp
 
 Run the [crawler check](/ai-search-optimization#check) on your main domain and your docs subdomain. If everything that fetches pages for answers is allowed and your pages have text before JavaScript runs, the next question is whether you have pages worth citing. We wrote up how we build [comparison pages that assistants cite](/notes/content-ai-cites), and how to [track AI search visibility](/notes/track-ai-search-visibility) without being fooled by one screenshot.
 
-This is also the first week of our [AI search optimization](/ai-search-optimization) service: crawler access and rendering get fixed before any writing starts, because nothing else works until they do.
+If you'd rather hand this off, see [AI search optimization](/ai-search-optimization).

@@ -51,7 +51,7 @@ export const popularity: Record<string, { clicks: number; impressions: number }>
   "google-business-profile-for-roofers": { clicks: 0, impressions: 3 },
   "chatgpt-shopping-products": { clicks: 0, impressions: 2 },
   "flat-roof-service-page-build": { clicks: 0, impressions: 2 },
-  "clinic-158-to-501": { clicks: 0, impressions: 2 },
+  "clinic-4-to-104-clicks": { clicks: 0, impressions: 2 },
   "moving-company-seo": { clicks: 0, impressions: 2 },
   "image-optimization-contractor-websites": { clicks: 0, impressions: 2 },
   "google-map-pack-ranking": { clicks: 0, impressions: 2 },

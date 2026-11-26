@@ -14,7 +14,7 @@ faq:
   - q: "Who should own my Google accounts when I hire an SEO?"
     a: "You should own your Google Analytics, Search Console, Business Profile, Tag Manager, domain and hosting. Your SEO gets added as a user and you keep everything if you leave."
   - q: "How long should an SEO contract be?"
-    a: "A short minimum followed by month to month is fair. My SEO plan has a 3-month minimum, then run month to month with 30 days' notice."
+    a: "A short minimum followed by month to month is fair. My monthly plan runs month to month with 30 days' notice."
 ---
 
 ![A checklist of ten questions, two of them failed](/notes/illustrations/hiring-an-seo-questions-to-ask.webp)
@@ -33,7 +33,7 @@ You should keep your website, your pages, your tracking setup and your history. 
 
 ## 3. What will you do this month?
 
-Ask for specifics. "Two new town pages, a rewrite of the roof repair page's title and meta description, and Business Profile posts" is an answer. "Ongoing optimization" is a placeholder. On our SEO plan, for example, that means 2 new town or service pages a month, Business Profile posts and upkeep, on-page work and internal linking, and a monthly call.
+Ask for specifics. "Two new town pages, a rewrite of the roof repair page's title and meta description, and Business Profile posts" is an answer. "Ongoing optimization" is a placeholder. On our $1,000-a-month plan, for example, that means four new local links, one new page, weekly Business Profile posts, a monthly AI search check, form and call tests, and a report with a short call.
 
 ## 4. How will I see calls?
 
@@ -59,7 +59,7 @@ Ask to see a real one with the client details removed. It should fit on a page: 
 
 ## 9. How long is the contract?
 
-Long lock-ins protect the provider. A short minimum makes sense, because the first months go into setup and SEO takes time to show up in the numbers. After that, month to month is fair. My SEO plan has a 3-month minimum, then run month to month with 30 days' notice.
+Long lock-ins protect the provider. A short minimum makes sense, because the first months go into setup and SEO takes time to show up in the numbers. After that, month to month is fair. My monthly plan runs month to month with 30 days' notice.
 
 ## 10. What do you need from me?
 

@@ -1,362 +1,268 @@
-import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Ban, CalendarClock, Check, KeyRound, Landmark, ShieldCheck, Video } from "lucide-react";
-import { Availability } from "@/components/Availability";
+import { ArrowRight } from "lucide-react";
 import { RelatedNotes } from "@/components/RelatedNotes";
-import { BookCta, BookNote, EmailCta } from "@/components/Cta";
 import { MobileCta } from "@/components/MobileCta";
-import { Reveal } from "@/components/Reveal";
-import { Stagger } from "@/components/Stagger";
-import { free, guarantee, plan, startup, withAi, type Plan } from "@/lib/pricing";
-import { site } from "@/lib/site";
-import { FaqList, FaqSchema } from "@/components/Faq";
+import { Testimonials } from "@/components/Testimonials";
+import { faqJsonLd } from "@/components/Faq";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { aggregate } from "@/lib/gsc";
+import { fixAreas, free, monthly, sprint } from "@/lib/pricing";
+import { site } from "@/lib/site";
 import { pageMeta } from "@/lib/meta";
 
 export const revalidate = 3600;
 
 export const metadata = pageMeta({
-  title: "SEO pricing for service businesses",
+  title: "Local SEO pricing: the Google fix and monthly plan",
   description:
-    "SEO for service businesses: one plan at $500 a month, free audits, and Google and AI search for $300 more. Delivery guarantee on month one.",
+    "Every price in full. The Google fix: $2,500, a four-week sprint with local link building. Monthly growth: $1,000 a month. The audit and intro call are free.",
   path: "/pricing",
 });
 
-const TERMS = [
-  {
-    icon: <ShieldCheck size={19} aria-hidden />,
-    t: `${guarantee.name}.`,
-    b: guarantee.terms,
-  },
-  {
-    icon: <KeyRound size={19} aria-hidden />,
-    t: "You own every account.",
-    b: "Google Analytics, Search Console, your Business Profile, the site. If we stop working together, nothing is held back.",
-  },
-  {
-    icon: <CalendarClock size={19} aria-hidden />,
-    t: "3 months minimum on the SEO plan.",
-    b: "SEO takes that long to show up in Google. After that it's month to month, with 30 days' notice to cancel. The AI search add-on has no extra minimum: stop it any time with 30 days' notice.",
-  },
-  {
-    icon: <Landmark size={19} aria-hidden />,
-    t: "Simple invoicing.",
-    b: "Pay by ACH bank transfer, at the start of each month. The audit and the intro call are never invoiced.",
-  },
-  {
-    icon: <Ban size={19} aria-hidden />,
-    t: "Not included.",
-    b: "Ad spend and ad management. Long-form articles are only in the AI search add-on. If you need something else, I'll say so up front and point you to someone good.",
-  },
-];
+/*
+ * Laid out like a studio pricing page: the plan list on the left, every plan in
+ * full on the right, then proof, reviews, what owners ask before they sign, and
+ * the questions. Every figure comes from lib/pricing.ts and lib/gsc.ts.
+ */
 
 const FAQ = [
-  {
-    q: "What do I get for $500 a month?",
-    a: `Everything, every month. I fix your site and count every call and form. I build 2 new service or town pages. I keep your Google Business Profile up to date. And you get a one-page report and a short call. There's only one plan, so there's nothing to choose. Want to show up in ChatGPT too? Add AI search for $${startup.amount} more a month, $${withAi.toLocaleString("en-US")} in total.`,
-  },
-  {
-    q: "Is the audit really free?",
-    a: "Yes. In 5 business days you get a written list of what's costing you calls, a check of your tracking and Business Profile, and a recorded video walkthrough. You keep it whether you hire me or not.",
-  },
-  {
-    q: "Why does it cost less than most agencies?",
-    a: "No account managers, no sales team and no office. You pay for the work, and I'm the one doing it. You can see every change in your own accounts. And if I don't finish the month-one list within 30 days, you get your first payment back.",
-  },
-  {
-    q: "Is there a guarantee?",
-    a: `Yes. ${guarantee.terms}`,
-  },
-  {
-    q: "Do you guarantee rankings?",
-    a: "No, and be careful with anyone who does. Nobody controls Google. What I guarantee is the work: if I don't finish the month-one list within 30 days, you get your first payment back. After that you get the work in your plan done every month, and a report that shows what changed and what it did to your clicks and calls.",
-  },
-  {
-    q: "What happens if I cancel?",
-    a: "You keep everything: the accounts, the pages, the tracking. Give me 30 days' notice after the first three months and I'll hand it all over, neat and tidy.",
-  },
-  {
-    q: "What kinds of businesses do you work with?",
-    a: `Local service businesses that customers find on Google: roofers, remodelers, pool and lawn care, plumbing and HVAC, auto detailing and window tint, clinics and more. The AI search add-on, $${startup.amount} more a month on top of the SEO plan, is for service businesses that want to show up in AI answers as well as on Google.`,
-  },
+  { q: `What's in the ${sprint.price} Google fix?`, a: `${sprint.steps.map((s) => s.name).join(", ")}. Done in ${sprint.weeks} weeks, ${sprint.upfront} up front and ${sprint.onHandover} on handover.` },
+  { q: "Why $2,500?", a: "It is four weeks of work across six areas, including a link-building campaign that wins at least 10 local links. Most agencies charge that for links alone. You pay for the work, not for account managers or a sales team." },
+  { q: "What counts as a local link?", a: "A link to your site from a real local or trade website: a supplier's dealer page, a trade association, a sponsorship, a local news story or a directory people use. No paid link networks, nothing that could get you penalized." },
+  { q: "Is the audit really free?", a: "Yes. In 5 business days you get a written list of what's costing you calls, a check of your tracking and Business Profile, and a recorded walkthrough. You keep it whether you hire me or not." },
+  { q: "Do you guarantee rankings?", a: "No, and be careful with anyone who does. Nobody controls Google. What I guarantee is the work on the list, done on the dates we agree." },
+  { q: `Do I need the ${monthly.price} monthly plan?`, a: "No. The sprint stands on its own. The monthly plan is for owners who want the links, the pages and the profile to keep growing." },
+  { q: "Can I start with the monthly plan?", a: "Only after the sprint, or after an audit shows your profile, listings and tracking are already in shape. Monthly work on a broken base is money wasted." },
+  { q: "What happens if I stop the monthly plan?", a: "You keep everything: the accounts, the profile, the listings, the pages and every link. Give me 30 days' notice and I hand it all over." },
+  { q: "How do I pay?", a: "ACH bank transfer. The audit and the intro call are never invoiced." },
 ];
 
-function PlanCard({ p }: { p: Plan }) {
+const TRUST = [
+  { t: "Your accounts, your links", b: "I work inside your Google profile, ad account and site. Every link and page stays yours if you leave." },
+  { t: "Half up front", b: `${sprint.upfront} to start the sprint, ${sprint.onHandover} on handover, when you've seen the report.` },
+  { t: "Month to month", b: "The monthly plan has no contract. Give 30 days' notice and it stops." },
+  { t: "No shortcuts", b: "No paid link networks, fake reviews or keyword stuffing. Nothing that puts your profile at risk." },
+  { t: "Numbers you can check", b: "Every report uses your own Search Console, Analytics and call tracking. Nothing you can't open yourself." },
+  { t: "Same-day replies", b: "One person does the work and answers the email. Calls at a time that suits you." },
+];
+
+const offers = [
+  { "@type": "Offer", name: sprint.name, price: sprint.amount, priceCurrency: "USD", url: "https://koinophobe.com/pricing#fix", description: sprint.steps.map((s) => s.name).join(". ") },
+  {
+    "@type": "Offer",
+    name: monthly.name,
+    priceCurrency: "USD",
+    url: "https://koinophobe.com/pricing#monthly",
+    description: monthly.items.map((i) => i.name).join(". "),
+    priceSpecification: { "@type": "UnitPriceSpecification", priceCurrency: "USD", price: monthly.amount, unitCode: "MON" },
+  },
+  ...free.map((f) => ({ "@type": "Offer", name: f.name, price: 0, priceCurrency: "USD", url: `https://koinophobe.com/pricing#${f.key}` })),
+].map((o) => ({ ...o, seller: { "@id": "https://koinophobe.com/#organization" }, areaServed: site.areaServed }));
+
+function BookBtn({ from, label = "Book a call" }: { from: string; label?: string }) {
   return (
-    <div
-      id={p.key}
-      className={`flex h-full scroll-mt-28 flex-col gap-5 p-6 sm:p-7 ${p.pick ? "card-dark shadow-float" : "card"}`}
-    >
-      <div className="flex min-h-[28px] items-center justify-between gap-3">
-        <span className="text-[14px] font-medium text-muted">{p.kicker}</span>
-      </div>
-      <div>
-        <h3 className="t-h3 !text-[1.5rem]">{p.name}</h3>
-        <p className="mt-3 flex items-baseline gap-2">
-          <span className="tnum font-display text-[2.6rem] font-extrabold leading-none tracking-tight">
-            {p.price}
-          </span>
-          <span className="text-[14px] text-muted">{p.unit}</span>
-        </p>
-      </div>
-      <ul className="flex flex-1 flex-col gap-2.5 border-t border-line pt-5">
-        {p.items.map((it) => (
-          <li key={it} className="grid grid-cols-[18px_1fr] gap-2.5 text-[15px]">
-            <Check size={16} aria-hidden className="mt-1 text-brand" />
-            <span>{it}</span>
-          </li>
-        ))}
-      </ul>
-      <p className="text-[14px] text-muted">{p.note}</p>
-    </div>
+    <a href={site.booking} target="_blank" rel="noopener" data-track="cta_book" data-from={from} className="btn btn-lg btn-primary">
+      {label}
+    </a>
   );
 }
-
-const offer = (p: Plan) => ({
-  "@type": "Offer",
-  name: p.name,
-  description: p.items.join(". "),
-  priceCurrency: "USD",
-  ...(p.monthly
-    ? {
-        priceSpecification: {
-          "@type": "UnitPriceSpecification",
-          priceCurrency: "USD",
-          price: p.amount,
-          unitCode: "MON",
-          referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" },
-        },
-      }
-    : { price: p.amount }),
-  seller: { "@id": "https://koinophobe.com/#organization" },
-  areaServed: site.areaServed,
-});
-
-const pricingLd = {
-  "@context": "https://schema.org",
-  "@type": "OfferCatalog",
-  name: "Koinophobe pricing",
-  url: "https://koinophobe.com/pricing",
-  itemListElement: [
-    ...free.map(offer),
-    offer(plan),
-    offer(startup),
-  ],
-};
 
 export default function PricingPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingLd) }}
-      />
-      <FaqSchema items={FAQ} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "OfferCatalog", name: "Koinophobe prices", url: "https://koinophobe.com/pricing", itemListElement: offers }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ)) }} />
 
-      <section className="page-hero hero-bg">
-        <div className="grid-fade pointer-events-none absolute inset-0" aria-hidden />
-        <div className="container-pad relative pb-16 pt-14 text-center sm:pb-20 sm:pt-24">
-          <Reveal className="mx-auto max-w-[820px]">
-            <Breadcrumbs items={[{ name: "Pricing", href: "/pricing" }]} className="mb-8" center />
-            <p className="eyebrow">Pricing</p>
-            <h1 className="t-h1 mx-auto mt-6 max-w-[20ch]">
-              SEO pricing for service businesses, before the call
-            </h1>
-            <p className="t-lead mx-auto mt-6 max-w-[58ch]">
-              One plan, {plan.price} a month. The audit is free. If I don&rsquo;t finish the month-one list
-              within 30 days, you get your first payment back. Not sure it fits? The intro call is free, and I&rsquo;ll tell you straight.
-            </p>
-            <div className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-              <BookCta from="pricing_hero" />
-              <EmailCta from="pricing_hero" />
-            </div>
-            <BookNote className="mt-4" />
-          </Reveal>
+      {/* ── Head ───────────────────────────────────────────────── */}
+      <section className="container-pad pb-12 pt-10 sm:pt-14">
+        <Breadcrumbs items={[{ name: "Pricing", href: "/pricing" }]} className="mb-8" />
+        <div className="head-c">
+          <p className="kicker">Pricing</p>
+          <h1 className="t-h1 mt-5">Every price, written out in full</h1>
+          <p className="t-lead mt-6 max-w-[52ch]">
+            One sprint to fix how you&rsquo;re found, one monthly plan to keep growing, and two things that cost nothing. Pick one to see exactly what you get.
+          </p>
         </div>
       </section>
 
-      <section id="guarantee" className="container-pad scroll-mt-28 pt-6">
-        <div data-anim="rise" className="card-dark flex flex-col gap-5 p-7 sm:flex-row sm:items-start sm:gap-7 sm:p-10">
-          <span className="icon-tile flex-none">
-            <ShieldCheck size={22} aria-hidden />
-          </span>
+      {/* ── Plans: list left, plans right ──────────────────────── */}
+      <section className="container-pad pb-24">
+        <div className="pgrid">
+          <nav className="plist" aria-label="Plans">
+            <p className="grp">One time</p>
+            <a href="#fix"><span>{sprint.name}<span className="tag">Start here</span></span><span>{sprint.price}</span></a>
+            <p className="grp">Every month</p>
+            <a href="#monthly"><span>{monthly.name}</span><span>{monthly.price}/mo</span></a>
+            <p className="grp">Free</p>
+            {free.map((f) => (
+              <a key={f.key} href={`#${f.key}`}><span>{f.name}</span><span>$0</span></a>
+            ))}
+            <div className="ask mt-8">
+              <p className="kicker">For B2B startups</p>
+              <p className="mt-3 text-[17px] font-semibold tracking-[-0.01em]">Growth and GTM strategy for founders</p>
+              <p className="mt-2 text-[14.5px] text-muted">A newer line of work: who to sell to, which motion fits your deal size, and the system that runs it.</p>
+              <Link href="/gtm" className="link-u mt-4 inline-flex items-center gap-1.5 text-[15px]">See the GTM page <ArrowRight size={15} aria-hidden /></Link>
+            </div>
+          </nav>
+
           <div>
-            <h2 className="t-h3 !text-[1.5rem]">{guarantee.name}</h2>
-            <p className="muted mt-3 max-w-[75ch] text-[16px] leading-relaxed">{guarantee.terms}</p>
-            <div className="mt-6 grid gap-6 sm:grid-cols-2">
-              {[
-                { h: "SEO plan, month one", items: guarantee.monthOne },
-                { h: "AI search add-on, month one", items: guarantee.aiMonthOne },
-              ].map((l) => (
-                <div key={l.h}>
-                  <h3 className="text-[15px] font-semibold">{l.h}</h3>
-                  <ul className="mt-3 grid gap-2">
-                    {l.items.map((i) => (
-                      <li key={i} className="muted flex items-start gap-2.5 text-[15px] leading-relaxed">
-                        <Check size={17} aria-hidden className="mt-1 flex-none text-mint" />
-                        <span>{i}</span>
-                      </li>
-                    ))}
+            {/* The Google fix */}
+            <article id="fix" className="plan">
+              <div className="plan-top">
+                <div>
+                  <h2 className="t-h3 !text-[1.6rem]">{sprint.name}</h2>
+                  <p className="mt-2 max-w-[46ch] text-muted">
+                    A {sprint.weeks}-week sprint that rebuilds how you&rsquo;re found: your profile, listings, ads, pages, tracking and a local link-building campaign.
+                  </p>
+                  <p className="amt mt-6">{sprint.price}<small>one time</small></p>
+                  <p className="mt-2 text-[14.5px] text-muted">{sprint.upfront} to start, {sprint.onHandover} on handover.</p>
+                </div>
+                <BookBtn from="pricing_fix" />
+              </div>
+              <div className="plan-sec">
+                <p className="kicker">Week by week</p>
+                <ul className="plan-items">
+                  {sprint.steps.map((s) => (
+                    <li key={s.name}><span className="wk">Week {s.week}</span><b>{s.name}</b><span>{s.what}</span></li>
+                  ))}
+                </ul>
+              </div>
+              <div className="plan-sec">
+                <p className="kicker">What it covers</p>
+                <ul className="plan-items">
+                  {fixAreas.map((a) => (
+                    <li key={a.name}><b>{a.name}</b><span>{a.says}</span></li>
+                  ))}
+                </ul>
+              </div>
+              <div className="plan-sec">
+                <p className="kicker">Terms</p>
+                <ul className="plan-items">
+                  {sprint.terms.map((t) => (<li key={t}><span className="!mt-0 !text-[15px]">{t}</span></li>))}
+                </ul>
+              </div>
+            </article>
+
+            {/* Monthly growth */}
+            <article id="monthly" className="plan">
+              <div className="plan-top">
+                <div>
+                  <h2 className="t-h3 !text-[1.6rem]">{monthly.name}</h2>
+                  <p className="mt-2 max-w-[46ch] text-muted">After the sprint. The links keep coming, a new page goes up each month, and someone watches what Google and AI say about you.</p>
+                  <p className="amt mt-6">{monthly.price}<small>a month</small></p>
+                  <p className="mt-2 text-[14.5px] text-muted">{monthly.terms}</p>
+                </div>
+                <BookBtn from="pricing_monthly" />
+              </div>
+              <div className="plan-sec">
+                <p className="kicker">Every month</p>
+                <ul className="plan-items">
+                  {monthly.items.map((i) => (
+                    <li key={i.name}><b>{i.name}</b><span>{i.what}</span></li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+
+            {/* Free */}
+            <article id="free" className="plan">
+              <div className="plan-top">
+                <div>
+                  <h2 className="t-h3 !text-[1.6rem]">The intro call and audit</h2>
+                  <p className="mt-2 max-w-[46ch] text-muted">Find out what&rsquo;s wrong before you pay anything. Both are yours to keep whether you hire me or not.</p>
+                  <p className="amt mt-6">$0</p>
+                </div>
+                <BookBtn from="pricing_free" label="Book the free call" />
+              </div>
+              {free.map((f) => (
+                <div key={f.key} id={f.key} className="plan-sec scroll-mt-28">
+                  <p className="kicker">{f.name}, {f.unit}</p>
+                  <ul className="plan-items">
+                    {f.items.map((it) => (<li key={it}><span className="!mt-0 !text-[15px]">{it}</span></li>))}
                   </ul>
                 </div>
               ))}
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <section className="container-pad pt-24 sm:pt-32">
-        <Reveal className="stage-head">
-          <h2 className="t-group">Free SEO audit and intro call</h2>
-          <p className="t-lead mt-3">Find out what&rsquo;s wrong before you pay anything.</p>
-        </Reveal>
-        <Stagger className="mx-auto mt-12 grid max-w-[880px] gap-4 md:grid-cols-2">
-          {free.map((p) => (
-            <PlanCard key={p.key} p={p} />
-          ))}
-        </Stagger>
-      </section>
-
-      <section id="monthly" className="container-pad scroll-mt-28 pt-24 sm:pt-32">
-        <Reveal className="stage-head">
-          <h2 className="t-group">The monthly SEO plan</h2>
-          <p className="t-lead mt-3">One plan with everything in it, and a report you can read.</p>
-          <p className="mt-4 inline-flex rounded-full border border-line bg-card px-3.5 py-1.5 text-[14px] font-medium">3-month minimum, then month to month</p>
-        </Reveal>
-        <div data-anim="rise" className="mx-auto mt-12 max-w-[560px]">
-          <PlanCard p={plan} />
-        </div>
-        <p className="mt-6 text-center text-[15px] text-muted">
-          What the plans look like for your trade:{" "}
-          <Link href="/roofing-seo" className="text-ink underline underline-offset-4">
-            roofing SEO
-          </Link>{" "}
-          and{" "}
-          <Link href="/home-remodeling-seo" className="text-ink underline underline-offset-4">
-            home remodeling SEO
-          </Link>
-          .
-        </p>
-      </section>
-
-      <section id="ai-search" className="container-pad scroll-mt-28 pt-24 sm:pt-32">
-        <Reveal className="stage-head">
-          <h2 className="t-group">AI search optimization add-on</h2>
-          <p className="t-lead mt-3">Add it to the SEO plan to get named by ChatGPT, Claude, Perplexity and Google&rsquo;s AI.</p>
-          <p className="mt-4 inline-flex rounded-full border border-line bg-card px-3.5 py-1.5 text-[14px] font-medium">No extra contract, 30 days&rsquo; notice to stop</p>
-        </Reveal>
-        <div id={startup.key} data-anim="rise" className="card-dark mt-12 grid scroll-mt-28 gap-8 p-7 sm:p-10 lg:grid-cols-[0.9fr_1.4fr] lg:gap-12">
-          <div className="flex flex-col gap-5">
-            <div className="flex items-center justify-between gap-3">
-              <span className="text-[14px] font-medium text-muted">{startup.kicker}</span>
-              <span className="eyebrow !text-[12px]">
-                {startup.seatsOpen > 0 ? `${startup.seatsOpen} of ${startup.seats} seats open` : "Waitlist"}
-              </span>
-            </div>
-            <div>
-              <h3 className="t-h3 !text-[1.5rem]">{startup.name}</h3>
-              <p className="mt-3 flex items-baseline gap-2">
-                <span className="tnum font-display text-[2.8rem] font-extrabold leading-none tracking-tight text-mint">{startup.price}</span>
-                <span className="text-[14px] text-muted">{startup.unit}</span>
-              </p>
-            </div>
-            <div className="flex gap-3 rounded-2xl bg-cream p-4">
-              <CalendarClock size={19} aria-hidden className="mt-0.5 flex-none text-brand" />
-              <p className="text-[14.5px] leading-relaxed">
-                <span className="font-medium">{startup.termsLead}</span> {startup.terms}
-              </p>
-            </div>
-            <Link href="/ai-search-optimization" data-track="cta_link" data-from="pricing_startup" className="btn btn-md btn-light self-start">
-              How the plan works
-              <ArrowRight size={17} aria-hidden />
-            </Link>
+      {/* ── Proof ──────────────────────────────────────────────── */}
+      <section className="section !pt-0">
+        <div className="container-pad">
+          <div className="head-c">
+            <p className="kicker">Proof</p>
+            <h2 className="t-h2 mt-4">Results from client Search Console</h2>
+            <p className="t-lead mt-5">{aggregate.window}, across {aggregate.sitesWorked} sites. Every figure from a live export.</p>
           </div>
-          <div className="border-t border-line pt-6 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
-            <p className="text-[14px] font-medium text-muted">Every month:</p>
-            <ul className="mt-4 grid gap-x-8 gap-y-2.5 sm:grid-cols-2">
-              {startup.items.map((it) => (
-                <li key={it} className="grid grid-cols-[18px_1fr] gap-2.5 text-[15px]">
-                  <Check size={16} aria-hidden className="mt-1 text-brand" />
-                  <span>{it}</span>
-                </li>
-              ))}
-            </ul>
-            {startup.extras.map((x) => (
-              <p key={x} className="mt-3 text-[14px] text-muted">
-                Plus, when it fits: {x.charAt(0).toLowerCase() + x.slice(1)}.
-              </p>
+          <div className="stats6 mt-12">
+            <div><b>{(aggregate.impressions / 1e6).toFixed(1)}M</b><span>times client sites were shown on Google</span></div>
+            <div><b>{aggregate.pageOne.toLocaleString("en-US")}</b><span>searches with a client on page one</span></div>
+            <div><b>{aggregate.topThree.toLocaleString("en-US")}</b><span>searches with a client in the top three</span></div>
+          </div>
+          <div className="mt-10 text-center">
+            <Link href="/work" className="btn btn-lg btn-secondary">See the case studies</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section !pt-0">
+        <div className="container-pad">
+          <Testimonials heading="What owners say about the work" />
+        </div>
+      </section>
+
+      {/* ── Before you sign ────────────────────────────────────── */}
+      <section className="section !pt-0">
+        <div className="container-pad">
+          <div className="head-c">
+            <p className="kicker">Before you sign</p>
+            <h2 className="t-h2 mt-4">What owners ask about money and access</h2>
+          </div>
+          <div className="trust6 mt-12">
+            {TRUST.map((x, i) => (
+              <div key={x.t}>
+                <h3>{x.t}</h3>
+                <p>{x.b}</p>
+                <span className="ix">{String(i + 1).padStart(2, "0")} / {String(TRUST.length).padStart(2, "0")}</span>
+              </div>
             ))}
           </div>
         </div>
-        <p className="mt-6 text-center text-[15px] text-muted">
-          How the AI side is measured:{" "}
-          <Link href="/notes/track-ai-search-visibility" className="text-ink underline underline-offset-4">
-            tracking AI search visibility
-          </Link>
-          . Free first step:{" "}
-          <Link href="/ai-search-optimization#check" className="text-ink underline underline-offset-4">
-            the AI crawler check
-          </Link>
-          .
-        </p>
       </section>
 
-      <section className="container-pad pb-8 pt-28 sm:pt-36">
-        <div className="grid gap-14 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
-          <Reveal>
-            <p className="eyebrow">The terms</p>
-            <h2 className="t-h2 mt-5 max-w-[18ch]">SEO contract terms you can count on</h2>
-            <div className="mt-8 border-t border-line">
-              {TERMS.map((x) => (
-                <div
-                  key={x.t}
-                  className="grid grid-cols-[24px_1fr] items-start gap-4 border-b border-line py-5"
-                >
-                  <span className="mt-0.5 text-brand">{x.icon}</span>
-                  <p>
-                    <span className="block text-[16.5px] font-medium">{x.t}</span>
-                    <span className="mt-1 block max-w-[48ch] text-[15px] leading-relaxed text-muted">
-                      {x.b}
-                    </span>
-                  </p>
-                </div>
-              ))}
+      {/* ── FAQ ────────────────────────────────────────────────── */}
+      <section id="questions" className="section !pt-0 scroll-mt-20">
+        <div className="container-pad faq6">
+          <div>
+            <p className="kicker">FAQ</p>
+            <h2 className="t-h2 mt-4">Questions about prices</h2>
+            <div className="ask mt-8">
+              <div className="relative h-[72px] w-[72px] overflow-hidden bg-surface">
+                <Image src="/site/michael-edward.jpg" alt="" fill sizes="72px" className="object-cover object-top" />
+              </div>
+              <p className="mt-6 text-[22px] font-semibold tracking-[-0.01em]">Still deciding?</p>
+              <p className="mt-2 text-muted">I&rsquo;ll look at your profile first and tell you which plan fits, or that you need neither.</p>
+              <div className="mt-6"><BookBtn from="pricing_faq" /></div>
+              <p className="mt-5 text-[14.5px] text-muted">Or email <a href={`mailto:${site.email}`} className="link-u text-ink">{site.email}</a></p>
             </div>
-            <div className="card-dark mt-10 p-7 sm:p-8">
-              <span className="icon-tile">
-                <Video size={21} aria-hidden />
-              </span>
-              <p className="mt-4 text-[17px] font-semibold">Not ready for a call?</p>
-              <p className="mt-1.5 max-w-[46ch] text-[15px] text-muted">
-                Email me your website and I&rsquo;ll send a free 5-minute screen recording of what
-                I&rsquo;d fix first.
-              </p>
-              <EmailCta
-                label="Ask for a video review"
-                href={`mailto:${site.email}?subject=${encodeURIComponent("Video review")}`}
-                from="pricing_video"
-                size="md"
-                className="mt-5"
-              />
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <p className="eyebrow">Questions</p>
-            <div className="mt-8">
-              <FaqList items={FAQ} />
-            </div>
-          </Reveal>
+          </div>
+          <div className="qrows">
+            {FAQ.map((f) => (
+              <details key={f.q}>
+                <summary><span className="box" aria-hidden />{f.q}</summary>
+                <p>{f.a}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 
       <RelatedNotes
-        className="mt-20"
-        title="Read before you choose an SEO plan"
+        title="Read before you hire anyone"
         slugs={["how-long-does-seo-take", "hiring-an-seo-questions-to-ask", "roofing-seo-cost", "monthly-seo-report-contractors", "seo-vs-google-ads-contractors"]}
       />
-
-      <Availability />
       <MobileCta />
     </>
   );

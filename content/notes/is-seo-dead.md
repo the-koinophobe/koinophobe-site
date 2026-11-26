@@ -70,4 +70,4 @@ SEO isn't dead. The informational-traffic part of it is shrinking, the customer-
 
 Look at where your customers come from today: Google organic, Maps, referrals, AI assistants. Put your effort where the customers are, and add AI tracking so you see the shift when it comes.
 
-Our [AI search optimization](/ai-search-optimization) service covers both: the SEO foundation and the AI additions, tracked monthly, as a $300-a-month add-on to our SEO plan. The [SEO plan is on our pricing page](/pricing).
+If you'd rather hand this off, see [AI search optimization](/ai-search-optimization). The $2,500 Google fix cleans up the listings AI tools read, and the $1,000-a-month plan checks what ChatGPT, Gemini, Claude and Perplexity say about you every month. The [prices are on our pricing page](/pricing).

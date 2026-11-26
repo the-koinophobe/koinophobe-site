@@ -62,4 +62,6 @@ Quote forms are the other half. Count them when they're actually submitted, not 
 
 One page with four numbers: calls from the website, calls from the profile, calls to the tracking number, and form submissions. Compare it to the jobs you booked and you'll know what search is worth to you, which makes every other marketing decision easier.
 
-If you want this set up, the $500-a-month SEO plan on the [pricing page](/pricing) includes call and form tracking in GA4. If you'd rather start with a check of what's already there, [book a free call](/contact).
+If you want this set up, [book a free call](https://cal.com/koinophobe/intro) and I'll tell you what it would take. If you'd rather start with a check of what's already there, [book a free call](/contact).
+
+Getting visits but the phone's quiet? [Why is my website getting traffic but no calls](https://callsnotclicks.substack.com/p/why-is-my-website-getting-traffic) has five checks to run in order, on our newsletter.

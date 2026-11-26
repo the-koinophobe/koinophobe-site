@@ -11,7 +11,8 @@ export function generateStaticParams() {
   return topics.map((t) => ({ topic: t.key }));
 }
 
-export function generateMetadata({ params }: { params: { topic: string } }): Metadata {
+export async function generateMetadata(props: { params: Promise<{ topic: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const t = topics.find((x) => x.key === params.topic);
   if (!t) return {};
   return pageMeta({
@@ -22,7 +23,8 @@ export function generateMetadata({ params }: { params: { topic: string } }): Met
   });
 }
 
-export default function TopicPage({ params }: { params: { topic: string } }) {
+export default async function TopicPage(props: { params: Promise<{ topic: string }> }) {
+  const params = await props.params;
   const t = topics.find((x) => x.key === params.topic);
   if (!t) notFound();
   const items = publishedNotes().filter((n) => n.topic === t.key);

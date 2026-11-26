@@ -1,442 +1,272 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowRight,
-  Check,
-  FileSearch,
-  MapPin,
-  PhoneCall,
-  TrendingUp,
-  Wrench,
-} from "lucide-react";
-import { Availability } from "@/components/Availability";
-import { BookCta, BookNote, PageCta, TextCta } from "@/components/Cta";
+import { ArrowRight } from "lucide-react";
+import { Reel } from "@/components/Reel";
+import { CaseCards } from "@/components/CaseCards";
+import { Testimonials } from "@/components/Testimonials";
 import { MobileCta } from "@/components/MobileCta";
-import { CountUp } from "@/components/CountUp";
-import { Reveal } from "@/components/Reveal";
-import { Reviews } from "@/components/Reviews";
-import { GuaranteeLine } from "@/components/Guarantee";
-import { NoteCard } from "@/components/NoteCard";
-import { HeroFan, HeroScatter } from "@/components/HeroScatter";
-import { CallsArt, FixArt, TownsArt } from "@/components/PillarArt";
-import { Compare } from "@/components/Compare";
-import { Journey } from "@/components/Journey";
-import { AiChat } from "@/components/AiChat";
-import { CaseSpark } from "@/components/CaseSpark";
-import { aggregate, cases } from "@/lib/gsc";
-import { free, plan, startup } from "@/lib/pricing";
-import { publishedNotes } from "@/lib/notes";
+import { AccGroup } from "@/components/AccGroup";
+import { faqJsonLd } from "@/components/Faq";
+import { aggregate } from "@/lib/gsc";
 import { site } from "@/lib/site";
-import { Faq, type FaqItem } from "@/components/Faq";
 import { pageMeta } from "@/lib/meta";
 
 export const revalidate = 3600;
 
 export const metadata = pageMeta({
-  title: { absolute: "Koinophobe · SEO for service businesses, measured in calls" },
+  title: { absolute: "Koinophobe · Digital growth agency for local trades" },
   description:
-    "SEO for roofers, remodelers and other service businesses: more calls from Google, and every call counted. $500 a month, free audit.",
+    "Digital growth and local SEO agency for roofers, remodelers and trades: Google Business Profile, local links, Local Services Ads and AI search, in accounts you own.",
   path: "/",
 });
 
 /*
- * Copy on this page is written for a busy owner, not another marketer: short
- * sentences, everyday words, and an outcome in place of every SEO term
- * (no "schema", "indexing", "GA4" or "impressions" above the fold). First
- * person throughout: one person does the work, so the page says "I".
+ * Copy is written for a busy owner, first person because one person does the
+ * work. Every figure comes from lib/gsc.ts, every price from lib/pricing.ts,
+ * every quote from lib/content.ts.
  */
 
-const HOME_FAQ: FaqItem[] = [
+const REEL = [
+  { slug: "tint-lordz", label: "Tint Lordz Auto Spa", tags: "Website, Google profile, local search", video: "/work/tintlordz.mp4", poster: "/work/tintlordz.webp", alt: "The Tint Lordz Auto Spa website" },
+  { slug: "myofascial-clinic", label: "A pain clinic, Florida", tags: "Rebuild, a page per treatment, tracking", video: "/work/myofascial.mp4", poster: "/work/myofascial.webp", alt: "A pain clinic's website, rebuilt with a page for every treatment" },
+  { slug: "roofing-contractor", label: "A roofer, Florida", tags: "Search, town pages, storm content", video: "/work/hhroofing.mp4", poster: "/work/hhroofing.webp", alt: "A roofing contractor's website" },
+  { slug: "over-the-table-top", label: "Over The Table Top", tags: "Website, local search", video: "/work/overthetabletop.mp4", poster: "/work/overthetabletop.webp", alt: "The Over The Table Top website" },
+];
+
+const TRADES = [
+  { label: "Roofing", href: "/roofing-seo" },
+  { label: "Remodeling", href: "/home-remodeling-seo" },
+  { label: "Pool and deck", href: "/notes/pool-deck-repair-seo" },
+  { label: "Lawn care", href: "/notes/lawn-care-seo" },
+  { label: "Plumbing and HVAC", href: "/notes/topic/trades" },
+];
+
+const SERVICES = [
   {
-    q: "What does Koinophobe do?",
-    a: "I help service businesses get more calls from Google. I fix what keeps your site from showing up. I build a page for each service and each town you work in. And I count every call and form, so you can see what's working.",
+    n: "01",
+    t: "Get found on Google",
+    big: "Your Google Business Profile rebuilt, your listings made to match, and Local Services Ads set up so you pay per lead. Done as one four-week sprint, and every account stays yours.",
+    list: ["Starting numbers and a competitor teardown", "Business Profile and listings", "Local Services Ads", "Call and form tracking you can trust"],
+    link: { href: "/google-business-profile-optimization", label: "Google Business Profile optimization" },
+    media: { video: "/work/tintlordz.mp4", poster: "/work/tintlordz.webp" },
   },
   {
-    q: "What kinds of businesses do you work with?",
-    a: "Local service businesses people find on Google: roofers, remodelers, pool and lawn care, plumbing and HVAC, auto detailing and window tint, clinics and more.",
+    n: "02",
+    t: "Local link building",
+    big: "Google trusts the businesses other local sites vouch for. Suppliers, trade groups, sponsorships and local news, each link listed with the page it sits on.",
+    list: ["Links from places your customers know", "No paid link farms or networks", "A list of every link won"],
+    link: { href: "/pricing#fix", label: "How the campaign works" },
+    media: { video: "/work/hhroofing.mp4", poster: "/work/hhroofing.webp" },
   },
   {
-    q: "How much does it cost?",
-    a: `One plan, ${plan.price} a month. The audit is free. If I don't finish the month-one list within 30 days, you get your first payment back. Want to show up in ChatGPT too? That's $${startup.amount} more a month.`,
+    n: "03",
+    t: "Named by AI",
+    big: "When customers ask ChatGPT, Gemini, Claude or Perplexity who to call, they answer from your listings, reviews and site. I clean those up, then check what they say every month.",
+    list: ["Listings AI tools read, cleaned up", "Free AI crawler check for your site", "A monthly check across four assistants"],
+    link: { href: "/ai-search-optimization", label: "How AI search works" },
+    media: { video: "/work/myofascial.mp4", poster: "/work/myofascial.webp" },
   },
   {
-    q: "How long does SEO take to work?",
-    a: "Call tracking works the day I set it up. New pages take a few weeks to a few months to climb on Google. SEO is a slog, not a quick fix. That's why the plan starts with three months.",
+    n: "04",
+    t: "Pages that win the call",
+    big: "Your homepage and service pages rewritten to say why you, with a new service or town page every month after. Written for the owner reading on a phone, and for Google.",
+    list: ["Homepage and three service pages", "Schema so Google and AI read them right", "A new page each month on the monthly plan"],
+    link: { href: "/pricing#monthly", label: "See the monthly plan" },
+    media: { video: "/work/overthetabletop.mp4", poster: "/work/overthetabletop.webp" },
+  },
+  {
+    n: "05",
+    t: "Free site audit",
+    big: "A written list of what's costing you calls, worst first, with a recorded walkthrough. Yours to keep whether you hire me or not.",
+    list: ["Done in 5 business days", "Calls and forms checked", "Google Business Profile reviewed"],
+    link: { href: "/pricing#free", label: "Ask for the audit" },
+    media: { video: "/work/tintlordz.mp4", poster: "/work/tintlordz.webp" },
   },
 ];
 
-const SECTORS = [
-  { title: "Roofing companies", href: "/roofing-seo", img: "/site/home-roofing.webp", alt: "A roofer standing on a roof during a tear-off on a brick house" },
-  { title: "Home remodelers", href: "/home-remodeling-seo", img: "/site/home-remodeling.webp", alt: "A remodeling contractor cutting tile with an angle grinder" },
-  { title: "Pool and deck", href: "/notes/pool-deck-repair-seo", img: "/site/home-pool.webp", alt: "A backyard pool with a clean deck" },
-  { title: "Lawn and landscaping", href: "/notes/lawn-care-seo", img: "/site/home-lawn.webp", alt: "A lawn care worker mowing a lawn" },
-  { title: "Plumbing, HVAC and more", href: "/notes/topic/trades", img: "/site/home-plumbing.webp", alt: "A plumber fixing pipes under a sink" },
+const CASES = [
+  { slug: "tint-lordz", name: "Tint Lordz Auto Spa", tags: ["Window tint", "Lawrence, MA"], headline: "Every spelling of the shop's name found at position 1.98 on average", body: "A new site and a cleaned-up Google profile. The brand searches are won; “window tinting near me” is the next job.", video: "/work/tintlordz.mp4", poster: "/work/tintlordz.webp", quote: { text: "Good guy to work with. Attention to detail.", who: "Tint Lordz Auto Spa", role: "review on Upwork" } },
+  { slug: "myofascial-clinic", name: "Pain clinic", tags: ["Clinic", "Brevard County, FL"], headline: "From 4 Google clicks a month to 104, and it held there", body: "Moved the old site without losing anything, rebuilt it, gave every treatment its own page, then the basics and tracking.", video: "/work/myofascial.mp4", poster: "/work/myofascial.webp" },
+  { slug: "over-the-table-top", name: "Over The Table Top", tags: ["Game shop", "Charles County, MD"], headline: "614 searches that show a one-location shop on Google's first page", body: "A small retailer with one door, found on page one for 614 searches in its own Search Console.", video: "/work/overthetabletop.mp4", poster: "/work/overthetabletop.webp", quote: { text: "He's been on top of things, not only what I asked, but also outside the scope.", who: "Daniel Folks", role: "owner, Over The Table Top" } },
 ];
 
-const PILLARS = [
-  {
-    icon: <Wrench size={20} aria-hidden />,
-    art: <FixArt />,
-    title: "Fix what's holding your site back",
-    body: "Some sites are slow. Some have pages Google can't find. Some have a contact form that quietly stopped working. I find these problems and fix them. Most agencies skip this part; I don't.",
-    points: ["Pages that load fast on a phone", "Every page Google can find", "Contact forms that work"],
-    link: { href: "/notes/core-web-vitals-contractor-websites", label: "How I speed up sites" },
-  },
-  {
-    icon: <MapPin size={20} aria-hidden />,
-    art: <TownsArt />,
-    title: "Get found in every town you serve",
-    body: "You get a real page for each service and each town you want work in. I set up your Google Business Profile, the listing people see on the map. And I help you get more reviews, the way Google allows.",
-    points: ["A page for each service and town", "Your listing on Google Maps", "Search results people click"],
-    link: { href: "/notes/roofing-service-area-pages", label: "How town pages work" },
-  },
-  {
-    icon: <PhoneCall size={20} aria-hidden />,
-    art: <CallsArt />,
-    title: "Count every call and form",
-    body: "I count every call, form and booking your site brings in. I test your forms every month, because finding a broken form three months late is a tad expensive. You get one short report you can read in five minutes.",
-    points: ["Every call and form counted", "Forms tested every month", "A one-page monthly report"],
-    link: { href: "/notes/call-tracking-for-contractors", label: "How call tracking works" },
-  },
+const FAQ = [
+  { q: "Who is the best fit?", a: "Local service businesses customers find on Google: roofers, remodelers, pool and lawn care, plumbing and HVAC, auto detailing, clinics. Anywhere in the US." },
+  { q: "What does a digital growth agency do for a trade business?", a: "Everything that decides whether a nearby customer finds you and calls: your Google profile, the listings and links Google trusts, Local Services Ads, the pages people land on, and what AI assistants say about you. Run as one plan, not five vendors." },
+  { q: "Are Google rankings guaranteed?", a: "No, and be careful with anyone who does. Nobody controls Google. I guarantee the work on the list, done on the dates we agree." },
+  { q: "Who owns the accounts?", a: "You do. I work inside your Google profile, ad account and site, and nothing is held back if you leave." },
+  { q: "What do you need from me?", a: "Access to your Google profile and website, your license and insurance for the ads, and photos of your work." },
+  { q: "Where are the prices?", a: "On the pricing page, in full. There are two plans, a one-time sprint and a monthly plan, and the audit and intro call are free." },
 ];
 
-const STEPS = [
-  { n: "01", title: "A free call and audit", body: "I look at your website and Google listing before we talk. Then I tell you the two or three things I'd fix first." },
-  { n: "02", title: "One fixed price", body: `${plan.price} a month. The first three months are the minimum. After that, it's month to month.` },
-  { n: "03", title: "The work, in your accounts", body: "I fix the site, build pages, update your listing and set up call tracking. You own every account. If you leave, you keep it all." },
-  { n: "04", title: "A report you can read", body: "Once a month: your calls, forms and visits, and what I'll do next. All on one page." },
-];
-
-/* Service businesses first; the game shop, a retailer, goes last. */
-const CASE_IMG: Record<string, string> = {
-  "roofing-contractor": "/notes/photos/roofing-keywords-cover-sm.webp",
-  "myofascial-clinic": "/notes/photos/clinic-158-to-501-cover-sm.webp",
-  "tint-lordz": "/notes/photos/lawrence-ma-window-tint-seo-cover-sm.webp",
-  "over-the-table-top": "/notes/photos/charles-county-md-game-shop-seo-cover-sm.webp",
-};
-const CASE_ORDER = Object.keys(CASE_IMG);
-
-/* Notes that aren't about a service business (a retail shop, the name of the agency). */
-const OFF_TOPIC = new Set([
-  "charles-county-md-game-shop-seo",
-  "charles-county-md-small-business-seo",
-  "what-is-a-koinophobe",
-]);
+const TOOLS = ["google-icon", "google-maps", "google-ads", "google-analytics", "openai", "claude"];
 
 export default function HomePage() {
-  const latest = publishedNotes()
-    .filter((n) => !OFF_TOPIC.has(n.slug))
-    .slice(0, 3);
-  const plans = [free.find((p) => p.key === "audit")!, plan];
-
   return (
     <>
-      {/* ── Hero ─────────────────────────────────────────────────── */}
-      <section className="hero-bg relative -mt-[var(--hx-h)] overflow-hidden pt-[var(--hx-h)]">
-        <div className="grid-fade pointer-events-none absolute inset-0" aria-hidden />
-        <HeroScatter />
-        <div className="container-pad relative pb-16 pt-12 text-center sm:pb-20 sm:pt-16 xl:flex xl:min-h-[calc(100svh-var(--hx-h))] xl:flex-col xl:justify-center xl:pb-36 xl:pt-6">
-          <div className="hero-in mx-auto max-w-[780px] xl:max-w-[760px]">
-            <p className="eyebrow">SEO agency for service businesses</p>
-            <h1 className="t-hero mx-auto mt-6 max-w-[19ch]">
-              SEO that gets service businesses <span className="hero-mark">more calls</span> from Google.
-            </h1>
-            <p className="t-lead mx-auto mt-6 max-w-[58ch]">
-              I help local service businesses, from roofers to clinics to auto shops, show up on Google in
-              the towns they serve. Then I count every call, so you can see what Google sends you.
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ)) }} />
+
+      {/* ── Hero ───────────────────────────────────────────────── */}
+      <section className="container-pad pb-16">
+        <div className="hero6">
+          <div>
+            <p className="kicker">Digital growth agency for local trades</p>
+            <h1 className="t-hero mt-5 max-w-[15ch]">More calls from Google, the map and AI</h1>
+            <p className="t-lead mt-6 max-w-[50ch]">
+              Your Google profile, local links, Local Services Ads and AI search, run as one growth plan for roofers,
+              remodelers and home service businesses. In accounts you own.
             </p>
-            <div className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-              <BookCta from="hero" label="Book a free 20-minute call" />
-              <PageCta href="/pricing" label="See pricing" from="hero" />
+            <div className="mt-8 flex flex-wrap gap-2">
+              <a href={site.booking} target="_blank" rel="noopener" data-track="cta_book" data-from="hero" className="btn btn-lg btn-primary">Book a call</a>
+              <Link href="#work" className="btn btn-lg btn-secondary">See the work</Link>
             </div>
-            <BookNote className="mt-4" />
-            <ul className="mt-8 flex flex-wrap justify-center gap-2 text-[14px]">
-              {[`${plan.price} a month, audit free`, "Month one done or money back", "30+ websites built and ranked"].map((t) => (
-                <li key={t} className="inline-flex items-center gap-2 rounded-full border border-line bg-card px-3.5 py-2 font-medium shadow-[var(--shadow-sm)]">
-                  <Check size={15} aria-hidden className="flex-none text-brand" />
-                  <span>{t}</span>
-                </li>
-              ))}
-            </ul>
           </div>
-          <HeroFan />
-        </div>
-      </section>
-
-      {/* ── Proof numbers ───────────────────────────────────────── */}
-      <section className="container-pad">
-        <div data-anim="rise" className="card-dark px-6 py-10 sm:px-10 sm:py-12">
-          <div className="grid grid-cols-2 gap-x-6 gap-y-9 md:grid-cols-4">
-            {[
-              { v: aggregate.clicks, l: "visits from Google", n: "fake traffic taken out" },
-              { v: aggregate.pageOne, l: "searches on page one", n: "in the top 10 results" },
-              { v: aggregate.topThree, l: "searches in the top 3", n: "across five sites" },
-              { v: aggregate.impressions, l: "times shown on Google", n: aggregate.window },
-            ].map((s, i) => (
-              <div key={s.l} className={i > 0 ? "md:border-l md:border-white/10 md:pl-6" : ""}>
-                <p className="font-display text-[clamp(1.9rem,4.4vw,3.2rem)] font-extrabold leading-none tracking-tight text-mint">
-                  <CountUp value={s.v} display={s.v.toLocaleString("en-US")} />
-                </p>
-                <p className="mt-3 text-[15px] font-medium">{s.l}</p>
-                <p className="muted text-[13.5px]">{s.n}</p>
-              </div>
-            ))}
-          </div>
-          <p className="muted mt-10 border-t border-white/10 pt-6 text-[13.5px]">
-            From five client sites that let me share their Google numbers, {aggregate.window}. Every number is on the{" "}
-            <Link href="/work" className="text-white underline underline-offset-4 dark:text-ink">work page</Link>.
-          </p>
-        </div>
-      </section>
-
-      {/* ── Who it is for ───────────────────────────────────────── */}
-      <section className="section">
-        <div className="container-pad">
-          <Reveal className="stage-head">
-            <p className="eyebrow">Who it&rsquo;s for</p>
-            <h2 className="t-h2 mt-5">Local SEO for roofers, remodelers and other service businesses</h2>
-            <p className="t-lead mt-5 max-w-[60ch]">
-              Most customers search &ldquo;near me,&rdquo; look at the map, and call the first company that looks
-              right. Your website and Google listing do the selling before you ever pick up the phone. I make sure
-              they do it well.
-            </p>
-          </Reveal>
-          {/* Phones swipe through the trades; wider screens see all five at once. */}
-          <div
-            data-anim="cards"
-            className="-mx-5 mt-14 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-2 [scrollbar-width:none] sm:-mx-8 sm:px-8 lg:mx-0 lg:grid lg:grid-cols-5 lg:gap-5 lg:overflow-visible lg:px-0 lg:pb-0"
-          >
-            {SECTORS.map((s) => (
-              <Link
-                key={s.title}
-                href={s.href}
-                className="press group relative block aspect-[4/5] w-[68vw] max-w-[300px] flex-none snap-center overflow-hidden rounded-3xl bg-surface photo-shade lg:w-auto lg:max-w-none"
-              >
-                <Image
-                  src={s.img}
-                  alt={s.alt}
-                  fill
-                  sizes="(min-width: 1024px) 240px, 68vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-[1.05] motion-reduce:transform-none"
-                />
-                <span className="absolute inset-x-4 bottom-4 z-10 flex items-end justify-between gap-3 text-white sm:inset-x-5 sm:bottom-5">
-                  <span className="font-display text-[1.25rem] font-extrabold leading-tight tracking-tight sm:text-[1.35rem]">{s.title}</span>
-                  <span className="grid h-10 w-10 flex-none place-items-center rounded-full bg-white/15 backdrop-blur transition-colors group-hover:bg-pop group-hover:text-on-pop">
-                    <ArrowRight size={17} aria-hidden />
-                  </span>
-                </span>
-              </Link>
-            ))}
+          <div className="reel6">
+            <Reel items={REEL} />
           </div>
         </div>
+        <p className="proof6 mt-20">
+          <span><b>{aggregate.sitesWorked}+</b>sites built</span>
+          <span><b>{aggregate.impressions.toLocaleString("en-US")}</b>times shown on Google</span>
+          <span><b>6</b>client reviews</span>
+        </p>
       </section>
-
-      {/* ── What we do ───────────────────────────────────────────── */}
-      <section className="section section-tint">
-        <div className="container-pad">
-          <Reveal className="stage-head">
-            <p className="eyebrow">What I do</p>
-            <h2 className="t-h2 mt-5">Three SEO services, done properly, in your accounts</h2>
-            <p className="t-lead mt-5 max-w-[60ch]">
-              Most SEO is hard to see. Mine isn&rsquo;t: pages you can open, rankings you can check, and calls you
-              can count.
-            </p>
-          </Reveal>
-          <div data-anim="cards" className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {PILLARS.map((p, i) => (
-              <div key={p.title} className={`card flex flex-col p-3 ${i === 2 ? "md:col-span-2 lg:col-span-1" : ""}`}>
-                {p.art}
-                <div className="flex flex-1 flex-col px-4 pb-5 pt-6 sm:px-5">
-                  <span className="icon-tile">{p.icon}</span>
-                  <h3 className="t-h3 mt-5">{p.title}</h3>
-                  <p className="mt-3 text-[15.5px] leading-relaxed text-muted">{p.body}</p>
-                  <ul className="mt-6 space-y-2.5 border-t border-line pt-6">
-                    {p.points.map((pt) => (
-                      <li key={pt} className="flex items-center gap-2.5 text-[15px]">
-                        <Check size={17} aria-hidden className="flex-none text-brand" />
-                        {pt}
-                      </li>
-                    ))}
-                  </ul>
-                  <TextCta href={p.link.href} label={p.link.label} from="home_pillar" className="mt-auto pt-7" />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Results ─────────────────────────────────────────────── */}
-      <section className="section">
-        <div className="container-pad">
-          <Reveal className="stage-head">
-            <p className="eyebrow">Results</p>
-            <h2 className="t-h2 mt-5">SEO results, straight from my clients&rsquo; Google data</h2>
-            <p className="t-lead mt-5 max-w-[58ch]">
-              I&rsquo;ve worked on over 30 websites in two years. These are the ones whose numbers I&rsquo;m
-              allowed to show you, plus what&rsquo;s still left to win.
-            </p>
-            <div className="mt-8 flex justify-center">
-              <PageCta href="/work" label="All case studies" from="home_results" size="md" />
-            </div>
-          </Reveal>
-          <div data-anim="cards" className="mt-14 grid gap-5 md:grid-cols-2">
-            {cases
-              .filter((c) => CASE_IMG[c.slug])
-              .sort((a, b) => CASE_ORDER.indexOf(a.slug) - CASE_ORDER.indexOf(b.slug))
-              .map((c) => (
-                <Link key={c.slug} href={`/work#${c.slug}`} className="card card-hover press group flex flex-col overflow-hidden p-2.5 sm:flex-row">
-                  <div className="relative aspect-[16/9] flex-none overflow-hidden rounded-2xl bg-surface sm:aspect-auto sm:w-[190px]">
-                    <Image src={CASE_IMG[c.slug]} alt="" fill sizes="(min-width: 640px) 190px, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-[1.05] motion-reduce:transform-none" />
-                  </div>
-                  <div className="flex flex-1 flex-col p-4 sm:p-5">
-                    <p className="text-[13.5px] text-muted">
-                      {c.client} &middot; {c.place}
-                    </p>
-                    <p className="mt-2 font-display text-[1.2rem] leading-snug tracking-tight">{c.title}</p>
-                    <p className="mt-auto flex flex-wrap items-baseline gap-x-2 pt-5">
-                      <span className="font-display text-[2rem] font-extrabold leading-none tracking-tight text-brand">{c.headline.value}</span>
-                      <span className="text-[13.5px] text-muted">{c.headline.label}</span>
-                    </p>
-                    <CaseSpark c={c} className="mt-3" />
-                  </div>
-                </Link>
-              ))}
-          </div>
-          <figure data-anim="rise" className="card-dark relative mt-8 overflow-hidden p-8 sm:p-12">
-            <blockquote className="font-display text-[clamp(1.4rem,3vw,2.2rem)] font-bold leading-[1.25] tracking-tight sm:max-w-[30ch]">
-              &ldquo;He&rsquo;s been on top of things, not only what I asked, but also outside the scope.&rdquo;
-            </blockquote>
-            <figcaption className="muted mt-6 text-[14.5px]">
-              <span className="font-medium text-white dark:text-ink">Daniel Folks</span>, owner, Over The Table Top &middot; Charles County, MD
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
-      {/* ── How it works: one step per screen, stacking as you scroll ── */}
-      <section className="journey-scope section section-tint">
-        <div className="container-pad grid gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
-          <div className="lg:sticky lg:top-[120px] lg:self-start">
-            <Reveal className="text-center lg:text-left">
-              <p className="eyebrow">How it works</p>
-              <h2 className="t-h2 mt-5">How it works, from a free SEO call to a monthly report</h2>
-              <div className="mt-9 hidden flex-wrap items-center gap-3 lg:flex">
-                <BookCta from="home_steps" />
-                <PageCta href="/about" label="How I work" from="home_steps" />
-              </div>
-            </Reveal>
-            <Journey className="mx-auto mt-10 lg:mx-0 lg:mt-12" />
-          </div>
-          <ol className="stack">
-            {STEPS.map((s, i) => (
-              <li key={s.n} className="stack-card" style={{ ["--i" as string]: i }}>
-                <div className={`stack-face ${i % 2 ? "card" : "card-dark"} p-7 sm:p-10`}>
-                  <span className={`font-display text-[clamp(3.5rem,9vw,5.5rem)] font-extrabold leading-none tracking-tight ${i % 2 ? "text-brand" : "text-mint"}`}>
-                    {s.n}
-                  </span>
-                  <h3 className="t-h3 mt-6 !text-[clamp(1.4rem,2.6vw,1.9rem)]">{s.title}</h3>
-                  <p className={`mt-3 max-w-[40ch] text-[16px] leading-relaxed ${i % 2 ? "text-muted" : "muted"}`}>{s.body}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-          <div className="flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center lg:hidden">
-            <BookCta from="home_steps" />
-            <PageCta href="/about" label="How I work" from="home_steps" />
-          </div>
-        </div>
-      </section>
-
-      {/* ── Pricing preview ─────────────────────────────────────── */}
-      <section className="section">
-        <div className="container-pad">
-          <Reveal className="stage-head">
-            <p className="eyebrow">Pricing</p>
-            <h2 className="t-h2 mt-5">SEO pricing: one plan, {plan.price} a month</h2>
-            <p className="t-lead mt-5 max-w-[56ch]">
-              The audit is free, so you see what&rsquo;s wrong before you pay anything. After that, one plan covers
-              all of it. No long contracts, and you own everything I build.
-            </p>
-            <div className="mt-8 flex justify-center">
-              <PageCta href="/pricing" label="See full pricing" from="home_pricing" size="md" />
-            </div>
-          </Reveal>
-          <div data-anim="cards" className="mx-auto mt-14 grid max-w-[880px] items-stretch gap-5 md:grid-cols-2">
-            {plans.map((p) => (
-              <div key={p.key} className={`relative flex flex-col p-7 sm:p-8 ${p.pick ? "card-dark shadow-float lg:-my-4 lg:py-12" : "card"}`}>
-                <div className="flex items-center justify-between gap-3">
-                  <span className={`text-[14px] font-medium ${p.pick ? "muted" : "text-muted"}`}>{p.kicker}</span>
-                </div>
-                <h3 className="t-h3 mt-4 !text-[1.5rem]">{p.name}</h3>
-                <p className="mt-3 flex items-baseline gap-2">
-                  <span className="font-display text-[2.8rem] font-extrabold leading-none tracking-tight">{p.price}</span>
-                  <span className={`text-[14.5px] ${p.pick ? "muted" : "text-muted"}`}>{p.unit}</span>
-                </p>
-                <ul className={`mt-6 flex-1 space-y-2.5 border-t pt-6 ${p.pick ? "border-white/10" : "border-line"}`}>
-                  {p.items.map((it) => (
-                    <li key={it} className="flex gap-2.5 text-[15px] leading-snug">
-                      <Check size={17} aria-hidden className={`mt-0.5 flex-none ${p.pick ? "text-mint" : "text-brand"}`} />
-                      {it}
-                    </li>
-                  ))}
-                </ul>
-                <Link href={`/pricing#${p.monthly ? "monthly" : p.key}`} className={`btn btn-md mt-8 w-full ${p.pick ? "btn-light" : "btn-secondary"}`}>
-                  {p.monthly ? <TrendingUp size={17} aria-hidden /> : <FileSearch size={17} aria-hidden />}
-                  See what&rsquo;s included
-                </Link>
-              </div>
-            ))}
-          </div>
-          <div className="card mt-8 grid items-center gap-7 p-6 sm:p-8 md:grid-cols-[1fr_1.15fr] md:gap-10">
-            <div>
-              <p className="text-[17px] leading-relaxed">
-                <span className="font-display text-[1.25rem] font-extrabold tracking-tight">Want ChatGPT to recommend you too?</span>{" "}
-                <span className="text-muted">Add AI search to your plan for ${startup.amount} more a month.</span>
-              </p>
-              <TextCta href="/ai-search-optimization" label="AI search optimization" from="home_ai" className="mt-5" />
-            </div>
-            <AiChat />
-          </div>
-          <GuaranteeLine className="mt-6" />
-        </div>
-      </section>
-
-      {/* ── Compare ─────────────────────────────────────────────── */}
-      <div className="section-tint">
-        <Compare />
+      <div className="container-pad">
+        <nav className="cells" aria-label="Trades">
+          {TRADES.map((t) => (
+            <Link key={t.href} href={t.href}>{t.label}</Link>
+          ))}
+        </nav>
       </div>
 
-      {/* ── Reviews ─────────────────────────────────────────────── */}
-      <section className="section">
+      {/* ── How I help: numbered list, first open ──────────────── */}
+      <section id="services" className="section scroll-mt-20">
         <div className="container-pad">
-          <Reviews exclude={["Daniel Folks"]} />
+          <div className="head-c">
+            <p className="kicker">How I help</p>
+            <h2 className="t-h2 mt-4">Found, named, booked</h2>
+            <p className="t-lead mt-5">Five pieces of one plan. Each one moves calls, and each one shows up in the numbers you already have.</p>
+          </div>
+          <AccGroup className="acc mt-16">
+            {SERVICES.map((s, i) => (
+              <details key={s.n} open={i === 0}>
+                <summary>
+                  <span className="n">{s.n}</span>
+                  <span className="t">{s.t}</span>
+                  <span className="pm" aria-hidden />
+                </summary>
+                <div className="body">
+                  <div className="media">
+                    <video src={s.media.video} poster={s.media.poster} width={1000} height={498} muted playsInline loop autoPlay={i === 0} preload={i === 0 ? "metadata" : "none"} aria-hidden />
+                  </div>
+                  <div className="copy flex flex-col lg:pl-4">
+                    <p className="big">{s.big}</p>
+                    <ul>{s.list.map((l) => <li key={l}>{l}</li>)}</ul>
+                    <Link href={s.link.href} className="link-u mt-auto inline-flex items-center gap-1.5 self-start pt-8">
+                      {s.link.label} <ArrowRight size={15} aria-hidden />
+                    </Link>
+                  </div>
+                </div>
+              </details>
+            ))}
+          </AccGroup>
+
+          <div className="pair6 mt-16">
+            <div>
+              <p className="kicker">By trade</p>
+              <h3 className="t-h2 mt-4 !text-[clamp(1.8rem,2.6vw,2.3rem)]">Guides for your trade</h3>
+              <p className="t-lead mt-4 max-w-[38ch]">Roofing, remodeling, pool, lawn and HVAC: what to fix first, written from real client data.</p>
+              <Link href="/notes" className="link-u mt-auto inline-flex items-center gap-1.5 pt-10">Read the notes <ArrowRight size={15} aria-hidden /></Link>
+            </div>
+            <div>
+              <p className="kicker">The tools</p>
+              <h3 className="t-h2 mt-4 !text-[clamp(1.8rem,2.6vw,2.3rem)]">Where the work happens</h3>
+              <p className="t-lead mt-4 max-w-[38ch]">Your Google profile, Maps, Local Services Ads and Analytics, and the AI tools your customers ask.</p>
+              <div className="tiles6" aria-label="Google Business Profile, Google Maps, Google Ads, Google Analytics, ChatGPT and Claude" role="img">
+                {TOOLS.map((t) => (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <span key={t}><img src={`/icons/${t}.svg`} alt="" /></span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* ── Latest notes ────────────────────────────────────────── */}
-      {latest.length ? (
-        <section className="section section-tint">
-          <div className="container-pad">
-            <Reveal className="stage-head">
-              <p className="eyebrow">Notes</p>
-              <h2 className="t-h2 mt-5">Free SEO guides, from the work I do every day</h2>
-              <div className="mt-8 flex justify-center">
-                <PageCta href="/notes" label="All notes" from="home_notes" size="md" />
+      {/* ── Case studies ───────────────────────────────────────── */}
+      <section id="work" className="section scroll-mt-20 !pt-0">
+        <div className="container-pad">
+          <div className="head-c">
+            <p className="kicker">Selected work</p>
+            <h2 className="t-h2 mt-4">Case studies</h2>
+          </div>
+          <div className="mt-14">
+            <CaseCards cards={CASES} />
+          </div>
+          <div className="mt-10 text-center">
+            <Link href="/work" className="btn btn-lg btn-secondary">See all case studies</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Reviews ────────────────────────────────────────────── */}
+      <section className="section !pt-0">
+        <div className="container-pad">
+          <Testimonials heading="Words from the owners I've worked with" />
+        </div>
+      </section>
+
+      {/* ── Meet: one person ───────────────────────────────────── */}
+      <section className="section !pt-0">
+        <div className="container-pad">
+          <div className="meet6">
+            <div className="meet-photo">
+              <Image src="/site/michael-edward.jpg" alt="Michael Edward, who runs Koinophobe" fill sizes="(min-width: 1024px) 560px, 100vw" className="object-cover" />
+            </div>
+            <div className="flex flex-col">
+              <p className="kicker">One person, start to finish</p>
+              <h2 className="t-h2 mt-4">Meet Michael</h2>
+              <p className="t-lead mt-5 max-w-[46ch]">No account managers and no sales team. You talk to me, I make the changes, and every login stays in your name.</p>
+              <dl className="meet-stats mt-10">
+                <div><dt>{aggregate.sitesWorked}+</dt><dd>websites built and ranked</dd></div>
+                <div><dt>{(aggregate.impressions / 1e6).toFixed(1)}M</dt><dd>times client sites were shown on Google</dd></div>
+                <div><dt>{aggregate.pageOne.toLocaleString("en-US")}</dt><dd>searches with a client on page one</dd></div>
+              </dl>
+              <div className="mt-10">
+                <Link href="/about" className="btn btn-lg btn-primary">About Michael</Link>
               </div>
-            </Reveal>
-            <div className="mt-14 grid gap-6 md:grid-cols-3">
-              {latest.map((n) => (
-                <NoteCard key={n.slug} note={n} />
-              ))}
             </div>
           </div>
-        </section>
-      ) : null}
+        </div>
+      </section>
 
-      <Faq items={HOME_FAQ} title="SEO questions owners ask first" className="section" />
+      {/* ── FAQ ─────────────────────────────────────────────────── */}
+      <section id="questions" className="section !pt-0 scroll-mt-20">
+        <div className="container-pad faq6">
+          <div>
+            <p className="kicker">Still got questions?</p>
+            <h2 className="t-h2 mt-4">Read the questions</h2>
+            <div className="ask mt-8">
+              <div className="relative h-[72px] w-[72px] overflow-hidden bg-surface">
+                <Image src="/site/michael-edward.jpg" alt="" fill sizes="72px" className="object-cover object-top" />
+              </div>
+              <p className="mt-6 text-[22px] font-semibold tracking-[-0.01em]">Can&rsquo;t find your answer?</p>
+              <p className="mt-2 text-muted">Book a call and ask me directly.</p>
+              <a href={site.booking} target="_blank" rel="noopener" data-track="cta_book" data-from="faq" className="btn btn-lg btn-primary mt-6">Book a call</a>
+              <p className="mt-5 text-[14.5px] text-muted">Or email <a href={`mailto:${site.email}`} className="link-u text-ink">{site.email}</a></p>
+            </div>
+          </div>
+          <div className="qrows">
+            {FAQ.map((f) => (
+              <details key={f.q}>
+                <summary><span className="box" aria-hidden />{f.q}</summary>
+                <p>{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      <Availability />
       <MobileCta />
     </>
   );

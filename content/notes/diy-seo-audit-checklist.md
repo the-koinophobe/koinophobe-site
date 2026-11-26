@@ -98,3 +98,5 @@ Then work from the top.
 ## When to get help
 
 If your list is short and the fixes are clear, you may not need anyone. If it's long, or the problems are technical (redirects, canonicals, rendering), that's where an audit pays for itself. Our Site Audit is free, delivered in five business days and ranked by what affects calls. It's on the [pricing page](/pricing), and [what is technical SEO](/notes/what-is-technical-seo) covers the background for the checks above.
+
+Built the site with an AI tool like Lovable, Bolt or Claude Code? Run these [seven SEO audit prompts for vibe coded sites](https://callsnotclicks.substack.com/p/vibe-coded-your-business-site-7-prompts) first. They're on our newsletter, Calls, Not Clicks.

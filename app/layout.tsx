@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { Instrument_Sans, JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Inter_Tight, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import "./house.css";
+import "./studio.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -10,19 +12,9 @@ import { Anim } from "@/components/Anim";
 import { CookieConsent } from "@/components/CookieConsent";
 import { site } from "@/lib/site";
 
-// Both faces load as variable fonts, so text can sit between the usual
-// weight steps: body at 450, medium at 560.
-const sans = Instrument_Sans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-});
-// Headings: a heavy geometric grotesk, set tight. Body stays Instrument Sans.
-const display = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-});
+// Inter for everything people read, Inter Tight at 600 for headlines.
+const sans = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
+const serif = Inter_Tight({ subsets: ["latin"], variable: "--font-serif", display: "swap", weight: ["500", "600"] });
 const mono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
@@ -33,13 +25,16 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://koinophobe.com"),
   title: {
-    default: "Koinophobe · Technical SEO that shows up in the numbers",
+    default: "Koinophobe · Digital growth agency for local trades",
     template: `%s · ${site.name}`,
   },
   description:
-    "SEO agency for service businesses: technical SEO, local search, call tracking and AI search. 30+ sites, with live Search Console data opened up on five of them. Prices on the site.",
+    "Digital growth agency for roofers, remodelers and local service businesses: Google Business Profile, local link building, Local Services Ads, AI search and tracking. Prices on the site.",
   keywords: [
-    "SEO agency",
+    "digital growth agency",
+    "local SEO agency",
+    "link building",
+    "AI search optimization",
     "technical SEO",
     "conversion tracking",
     "GA4",
@@ -52,15 +47,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: site.name,
-    title: "Koinophobe · Technical SEO that shows up in the numbers",
+    title: "Koinophobe · Digital growth agency for local trades",
     description:
-      "Technical SEO for service businesses, with the Search Console data to back it up and the prices on the site.",
+      "Found on Google, named by AI, booked by phone. Digital growth for local trades, with the Search Console data to back it up and the prices on the site.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Koinophobe · Technical SEO that shows up in the numbers",
+    title: "Koinophobe · Digital growth agency for local trades",
     description:
-      "Technical SEO for service businesses. Every figure from a live export.",
+      "Digital growth for local trades. Every figure from a live export.",
   },
   robots: { index: true, follow: true },
 };
@@ -79,9 +74,14 @@ const ORG_ID = "https://koinophobe.com/#organization";
 const SITE_ID = "https://koinophobe.com/#website";
 
 const SERVICES = [
-  "Technical SEO",
+  "Digital growth for local businesses",
   "Local SEO",
+  "Local link building",
+  "AI search optimization",
   "Google Business Profile management",
+  "Local Services Ads management",
+  "Go-to-market strategy for B2B startups",
+  "Technical SEO",
   "Conversion tracking and analytics implementation",
   "Website migration",
   "Core Web Vitals optimization",
@@ -94,7 +94,7 @@ const jsonLd = {
       "@type": "Organization",
       "@id": ORG_ID,
       name: "Koinophobe",
-      alternateName: ["Koinophobe SEO", "koinophobe.com"],
+      alternateName: ["Koinophobe Digital Growth", "koinophobe.com"],
       url: "https://koinophobe.com",
       logo: {
         "@type": "ImageObject",
@@ -103,11 +103,14 @@ const jsonLd = {
       image: "https://koinophobe.com/opengraph-image",
       email: site.email,
       description:
-        "SEO agency for service and local businesses: technical SEO, local search, call tracking and AI search, proven with the client's own Search Console and analytics data.",
-      slogan: "Technical SEO that shows up in the numbers",
-      sameAs: [site.linkedin, site.x, site.substack],
+        "Digital growth agency for service and local businesses: Google Business Profile, local link building, Local Services Ads, AI search and tracking, proven with the client's own Search Console and analytics data.",
+      slogan: "Found on Google, named by AI, booked by phone",
+      sameAs: [site.linkedin, site.x, site.substack, site.instagram, site.youtube].filter(Boolean),
       areaServed: site.areaServed,
       knowsAbout: [
+        "Digital marketing",
+        "Link building",
+        "Go-to-market strategy",
         "Technical SEO",
         "On-page SEO",
         "Local SEO",
@@ -126,7 +129,7 @@ const jsonLd = {
       ],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
-        name: "Search and analytics services",
+        name: "Digital growth services",
         itemListElement: SERVICES.map((name) => ({
           "@type": "Offer",
           itemOffered: {
@@ -143,7 +146,7 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": SITE_ID,
       name: site.name,
-      alternateName: ["Koinophobe SEO", "koinophobe.com"],
+      alternateName: ["Koinophobe Digital Growth", "koinophobe.com"],
       url: "https://koinophobe.com",
       inLanguage: "en-US",
       publisher: { "@id": ORG_ID },
@@ -156,7 +159,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="en-US"
       suppressHydrationWarning
-      className={`${sans.variable} ${display.variable} ${mono.variable}`}
+      className={`${sans.variable} ${serif.variable} ${mono.variable}`}
     >
       <head>
         <script
@@ -171,9 +174,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-screen">
+        <a href="#main" className="skip">Skip to content</a>
         <ThemeProvider>
           <Header />
-          <main>{children}</main>
+          <main id="main" tabIndex={-1}>{children}</main>
           <Footer />
         </ThemeProvider>
         <Anim />

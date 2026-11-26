@@ -52,4 +52,4 @@ Write down every edit with a date. When calls move, the log explains why. If the
 
 ## Next step
 
-Block one hour on the first Monday of each month for this checklist, and do the first one this week. Profile upkeep is part of the $500-a-month plan on my [roofing SEO page](/roofing-seo), if you'd rather hand it over.
+Block one hour on the first Monday of each month for this checklist, and do the first one this week. [Google Business Profile management](/google-business-profile-optimization) is part of the $1,000-a-month plan on my [pricing page](/pricing), if you'd rather hand it over.

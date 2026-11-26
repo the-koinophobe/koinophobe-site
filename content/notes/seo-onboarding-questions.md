@@ -74,4 +74,4 @@ If Search Console or GA4 doesn't exist yet, I set them up in the business's name
 
 The money and place answers become the page plan: which services and towns get pages, in what order. The phone answers become the tracking setup and the definition of a lead in the [monthly report](/notes/monthly-seo-report-contractors). The history and access answers become the month-one fix list.
 
-That fix list is what my delivery guarantee covers: if I don't finish it within 30 days, you get your first payment back. The plan is $500 a month and the audit before it is free; both are on the [pricing page](/pricing).
+The Google fix is $2,500 and the audit before it is free; both are on the [pricing page](/pricing).

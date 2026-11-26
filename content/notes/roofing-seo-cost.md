@@ -14,7 +14,7 @@ faq:
   - q: "What are the red flags when hiring a roofing SEO company?"
     a: "A promise of first place on Google, the provider owning your accounts, twelve-month lock-ins, reports with rankings and no calls, and no one who can tell you what they'll do this month."
   - q: "What do you charge for roofing SEO?"
-    a: "One plan at $500 a month, and the audit is free. That's less than this work usually costs because there are no account managers, sales team or office in the price. You own every account, the minimum is three months, and after that it's month to month. The first payment on any plan is covered by a delivery guarantee: if the month-one list isn't finished within 30 days, you get it back."
+    a: "The Google fix is $2,500, done in four weeks, and the monthly plan after it is $1,000, month to month. The audit is free. That's less than this work usually costs because there are no account managers, sales team or office in the price, and you own every account."
 ---
 
 ![Average monthly SEO retainers in the US: freelancers $1,349, local SEO $1,557, local agencies $1,819, all agencies $3,209](/notes/illustrations/roofing-seo-cost.webp)
@@ -62,8 +62,8 @@ That last part matters. If you can't tell which calls came from Google, you can'
 
 ## What we charge
 
-Our prices are on the [pricing page](/pricing): one plan at $500 a month, and the audit is free. That's less than this work usually costs because there are no account managers, sales team or office in the price. You own every account, the minimum is three months, and after that it's month to month. The first payment on any plan is covered by a [delivery guarantee](/pricing#guarantee): if the month-one list isn't finished within 30 days, you get it back.
+Our prices are on the [pricing page](/pricing): the Google fix is $2,500, the monthly plan is $1,000, and the audit is free. That's less than this work usually costs because there are no account managers, sales team or office in the price. You own every account, and the monthly plan runs month to month.
 
-The plan is built for roofers: site fixes first, then two new town or service pages a month, Business Profile upkeep and a monthly call on what moved. The roofing results behind it are on the [roofing SEO page](/roofing-seo).
+The fix is built for roofers: your Google profile, Local Services Ads, the listings AI tools read and a local link-building campaign, then $1,000 a month for new links, a new page and a check on what moved. The roofing results behind it are on the [roofing SEO page](/roofing-seo).
 
 If you're comparing quotes, send them to us on a [free call](/contact) and we'll tell you what we think each one actually includes.

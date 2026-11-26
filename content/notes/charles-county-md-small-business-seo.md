@@ -14,7 +14,7 @@ faq:
   - q: "Does product schema help a local store?"
     a: "It marks up each product's name, price and availability so Google can read your inventory. Over The Table Top has product schema on its inventory. Keep prices and stock current or the markup works against you."
   - q: "How much does local SEO cost for a small business?"
-    a: "Our prices are on our pricing page: one plan at $500 a month, and the audit is free. An Ahrefs survey of 439 providers put the average local SEO retainer at $1,557 a month."
+    a: "Our prices are on our pricing page: the Google fix is $2,500, the monthly plan is $1,000, and the audit is free. An Ahrefs survey of 439 providers put the average local SEO retainer at $1,557 a month."
 ---
 
 ![Charles County towns as survey points: Waldorf, St. Charles, La Plata, Indian Head](/notes/illustrations/charles-county-md-small-business-seo.webp)

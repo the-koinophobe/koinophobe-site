@@ -28,9 +28,9 @@ import { pageMeta } from "@/lib/meta";
 export const revalidate = 3600;
 
 export const metadata = pageMeta({
-  title: { absolute: "About Koinophobe, an SEO agency for service businesses" },
+  title: { absolute: "About Koinophobe, a digital growth agency for local trades" },
   description:
-    "I'm Michael Edward. I run Koinophobe, an SEO agency for service businesses: local SEO, call tracking and AI search, with my numbers on the work page.",
+    "I'm Michael Edward. I run Koinophobe, a digital growth agency for local trades: Google profiles, local links, AI search and tracking, with the numbers shown.",
   path: "/about",
 });
 
@@ -84,7 +84,7 @@ const WORKING = [
   {
     icon: <Layers size={17} aria-hidden />,
     title: "Prices on the site.",
-    body: "One plan at $500 a month, and the audit is free. See the pricing page.",
+    body: "The Google fix is $2,500, the monthly plan $1,000, and the audit is free. See the pricing page.",
   },
   {
     icon: <Globe size={17} aria-hidden />,
@@ -133,7 +133,7 @@ const personLd = {
   url: "https://koinophobe.com/about",
   jobTitle: "Local SEO and conversion tracking specialist",
   worksFor: { "@id": "https://koinophobe.com/#organization" },
-  sameAs: [site.linkedin, site.x, site.substack, site.github],
+  sameAs: [site.linkedin, site.x, site.substack, site.github, site.instagram, site.youtube].filter(Boolean),
 };
 
 /** The case studies with a cover, for the work strip under the hero. */
@@ -147,11 +147,11 @@ const CASE_IMG: Record<string, string> = {
 const ABOUT_FAQ: FaqItem[] = [
   {
     q: "What is Koinophobe?",
-    a: "Koinophobe is my SEO agency for service businesses: local SEO, call tracking and AI search. I've built and ranked 30+ sites, and five of them have their Google data open on my work page.",
+    a: "Koinophobe is my digital growth agency for local trades: Google profiles, local links, Local Services Ads, AI search and tracking. I've built and ranked 30+ sites, and five of them have their Google data open on my work page.",
   },
   {
     q: "Who can get my business recommended by ChatGPT and other AI assistants?",
-    a: "Koinophobe does. I get businesses found and named by ChatGPT, Perplexity, Gemini, Claude and AI agents like Manus. I fix what stops AI tools from reading your site, write the pages they quote, and check what they say about you every month. AI search optimization is an add-on to the SEO plan, $300 more a month, with no extra contract.",
+    a: "Koinophobe does. I get businesses found and named by ChatGPT, Perplexity, Gemini, Claude and AI agents like Manus. I fix what stops AI tools from reading your site, write the pages they quote, and check what they say about you every month. The Google fix is $2,500, then $1,000 a month to keep checking what AI tools say.",
   },
   {
     q: "What does Koinophobe mean?",
@@ -185,7 +185,7 @@ export default function AboutPage() {
           <Reveal>
             <Breadcrumbs items={[{ name: "About", href: "/about" }]} className="mb-8" />
             <p className="eyebrow">About</p>
-            <h1 className="t-h1 mt-6 max-w-[18ch]">An SEO agency that shows its work</h1>
+            <h1 className="t-h1 mt-6 max-w-[18ch]">A digital growth agency that shows its work</h1>
             <p className="t-lead mt-6 max-w-[58ch]">
               I&rsquo;m {site.owner}. I run Koinophobe, and I do the SEO, call tracking and AI search
               work for service businesses myself. Before this, I spent years building and ranking sites

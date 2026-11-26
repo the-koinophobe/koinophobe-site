@@ -89,7 +89,7 @@ The audit steps are in [NAP and citations for contractors](/notes/nap-citations-
 
 Big photos are a common cause of slow pages. On our own site, photos went from about 3 MB JPEGs to WebP files of 93 to 200 KB at 1200 pixels.
 
-## Monthly upkeep
+## Monthly growth
 
 1. Submit every form and confirm the email arrives. In July 2026 we found a client's form submissions had been dropping since March because of an email setting, and nobody noticed for four months, us included.
 2. Tap the phone number on your own phone.

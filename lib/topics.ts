@@ -114,7 +114,7 @@ export const TOPIC_BY_SLUG: Record<string, TopicKey> = {
   "seo-vs-google-ads-contractors": "strategy",
   "shared-leads-vs-your-own-website": "strategy",
   "what-is-a-koinophobe": "strategy",
-  "clinic-158-to-501": "strategy",
+  "clinic-4-to-104-clicks": "strategy",
   "charles-county-md-game-shop-seo": "strategy",
   "lawrence-ma-window-tint-seo": "strategy",
   "lawrence-ma-free-estimate-page": "strategy",

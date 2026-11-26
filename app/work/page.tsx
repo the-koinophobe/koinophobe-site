@@ -141,7 +141,7 @@ export default function WorkPage() {
       <RelatedNotes
         className="!bg-bg"
         title="The SEO case studies, written up"
-        slugs={["clinic-158-to-501", "charles-county-md-game-shop-seo", "lawrence-ma-window-tint-seo", "near-me-searches-local-seo-data", "zero-click-rankings-title-tags", "ai-cited-vs-ranked-page"]}
+        slugs={["clinic-4-to-104-clicks", "charles-county-md-game-shop-seo", "lawrence-ma-window-tint-seo", "near-me-searches-local-seo-data", "zero-click-rankings-title-tags", "ai-cited-vs-ranked-page"]}
       />
 
       <Availability />

@@ -76,4 +76,4 @@ Reviews are the other half of ranking on the map. Ask every customer, reply to e
 
 Open your profile and check: primary category, address hidden or shown correctly, service areas, real name, services filled in, website link going to the right page, photos added in the last month. If any of those are off, fix them today. Most take a minute.
 
-If you'd like us to go through it with you, the [Site Audit](/pricing) covers the profile and the website together. More on how we work with roofers is on the [roofing SEO page](/roofing-seo).
+If you'd like us to go through it with you, the [Site Audit](/pricing) covers the profile and the website together. More on how we work with roofers is on the [roofing SEO page](/roofing-seo). What we change on a profile is listed on our [Google Business Profile optimization](/google-business-profile-optimization) page.

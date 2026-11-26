@@ -70,4 +70,4 @@ For most businesses, GEO is SEO with two additions: checking crawler access for 
 
 Start with the part that works by definition: run the [free AI crawler check](/ai-search-optimization#check). Then read [how to rank in ChatGPT](/notes/how-to-rank-in-chatgpt) for the month-one plan.
 
-If you want GEO done with the measurement attached, our [AI search optimization](/ai-search-optimization) service runs the full loop every month: access fixes, tracking with repeated runs, and the pages. It's a $300-a-month add-on to our SEO plan.
+If you'd rather hand this off, see [AI search optimization](/ai-search-optimization). The $2,500 Google fix cleans up the listings AI tools read, and the $1,000-a-month plan checks what ChatGPT, Gemini, Claude and Perplexity say about you every month.
