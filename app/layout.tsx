@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Inter_Tight, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import "./house.css";
 import "./studio.css";
@@ -12,14 +12,26 @@ import { Anim } from "@/components/Anim";
 import { CookieConsent } from "@/components/CookieConsent";
 import { site } from "@/lib/site";
 
-// Inter for everything people read, Inter Tight at 600 for headlines.
-const sans = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
-const serif = Inter_Tight({ subsets: ["latin"], variable: "--font-serif", display: "swap", weight: ["500", "600"] });
-const mono = JetBrains_Mono({
-  subsets: ["latin"],
+// Inter for everything people read, Inter Tight at 600 for headlines. Self-
+// hosted from the Fontsource packages: next/font/google can't parse the font
+// URLs Google now serves, so builds on a clean machine failed.
+const inter = localFont({
+  src: "../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2",
+  variable: "--font-sans",
+  display: "swap",
+  weight: "100 900",
+});
+const interTight = localFont({
+  src: "../node_modules/@fontsource-variable/inter-tight/files/inter-tight-latin-wght-normal.woff2",
+  variable: "--font-serif",
+  display: "swap",
+  weight: "100 900",
+});
+const jetbrainsMono = localFont({
+  src: "../node_modules/@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2",
   variable: "--font-mono",
   display: "swap",
-  weight: ["400", "500"],
+  weight: "100 800",
 });
 
 export const metadata: Metadata = {
@@ -159,7 +171,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="en-US"
       suppressHydrationWarning
-      className={`${sans.variable} ${serif.variable} ${mono.variable}`}
+      className={`${inter.variable} ${interTight.variable} ${jetbrainsMono.variable}`}
     >
       <head>
         <script
