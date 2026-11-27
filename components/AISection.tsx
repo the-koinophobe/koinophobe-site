@@ -182,7 +182,8 @@ export function AISection() {
             style={fadeStyle(A2_AT + 1.1)}
           >
             Neither client did anything special for AI. The basics were right, and the assistant
-            read the same pages everyone else does.
+            read the same pages everyone else does. That&rsquo;s why the Google fix starts with the
+            basics, and the monthly plan checks what the assistants say.
           </p>
         </div>
       </div>

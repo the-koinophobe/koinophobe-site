@@ -12,7 +12,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { pageMeta } from "@/lib/meta";
 
 export const metadata = pageMeta({
-  title: "Book a free SEO call or audit",
+  title: "Book a free call or audit",
   description:
     "Book a free 20-minute call or email me your website. I look at your site before we talk and tell you what I'd fix first, or that nothing needs fixing.",
   path: "/contact",
@@ -21,7 +21,7 @@ export const metadata = pageMeta({
 const STEPS = [
   {
     icon: <CalendarCheck size={22} aria-hidden />,
-    title: "You book a free SEO call",
+    title: "You book a free call",
     body: "Pick a time and tell me your website and what you want more of. Calls, bookings, quotes, foot traffic.",
   },
   {
@@ -81,7 +81,7 @@ export default function ContactPage() {
           <Reveal>
             <Breadcrumbs items={[{ name: "Contact", href: "/contact" }]} className="mb-8" />
             <p className="eyebrow">Contact</p>
-            <h1 className="t-h1 mt-5 max-w-[17ch]">Book a free SEO call, or send me your site</h1>
+            <h1 className="t-h1 mt-5 max-w-[17ch]">Book a free call, or send me your site</h1>
             <p className="t-lead mt-6 max-w-[58ch]">
               Book a free 20-minute call, or email me if you&rsquo;d rather write. Either way
               I&rsquo;ll look at your site before we talk, and if there&rsquo;s nothing worth paying
@@ -96,18 +96,18 @@ export default function ContactPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <figure className="mx-auto w-full max-w-[300px] lg:mr-0 lg:max-w-[340px]">
-              <div className="relative aspect-square w-full rotate-[1.5deg] overflow-hidden rounded-3xl shadow-float motion-reduce:rotate-0">
+              <div className="relative aspect-square w-full overflow-hidden rounded-3xl shadow-float motion-reduce:rotate-0">
                 <Image
-                  src="/work/tintlordz.webp"
-                  alt="Homepage of Tint Lordz Auto Spa, a site Koinophobe rebuilt"
+                  src="/site/michael-edward.jpg"
+                  alt="Michael Edward, who answers every call and email"
                   fill
                   priority
                   sizes="(max-width: 1024px) 300px, 340px"
-                  className="object-cover object-top"
+                  className="object-cover"
                 />
               </div>
               <figcaption className="mt-4 text-center text-[13.5px] text-muted">
-                Tint Lordz Auto Spa: every version of its name at position 2 or better.
+                Michael Edward. Replies the same business day, on US Eastern hours.
               </figcaption>
             </figure>
           </Reveal>

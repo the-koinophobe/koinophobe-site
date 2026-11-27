@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { CookieSettingsButton } from "./CookieSettingsButton";
+import { CloseCopy } from "./CloseCopy";
 
 /*
  * Every page ends the same way: a dark closing band with the one action, then
@@ -18,7 +19,7 @@ const COLS: { title: string; links: { href: string; label: string; external?: bo
       { href: "/pricing#fix", label: "The Google fix" },
       { href: "/pricing#monthly", label: "Monthly growth" },
       { href: "/pricing#free", label: "Free site audit" },
-      { href: "/missed-call-calculator", label: "Missed call calculator" },
+      { href: "/tools", label: "Free tools" },
     ],
   },
   {
@@ -60,13 +61,10 @@ export function Footer() {
         <div className="container-pad relative py-28 sm:py-36" data-anim="stagger">
           <p className="close-me">
             <Image src="/site/michael-edward.jpg" alt="" width={44} height={44} />
-            <span>Michael Edward<span>Replies the same day</span></span>
+            <span>Michael Edward<span>Replies the same day, US Eastern hours</span></span>
           </p>
           <p className="kicker mt-8">Still reading? Good sign</p>
-          <h2 id="close-h" className="mx-auto mt-5 max-w-[14ch]">Tell me about your business.</h2>
-          <p className="mx-auto mt-6 max-w-[40ch] text-[18px] font-medium leading-relaxed">
-            I&rsquo;ll look at your Google profile before we talk, then tell you the two or three things I&rsquo;d fix first.
-          </p>
+          <CloseCopy />
           <a href={site.booking} target="_blank" rel="noopener" data-track="cta_book" data-from="close" className="btn btn-lg btn-primary close-btn mt-9">
             Book a call <span className="close-arrow" aria-hidden>&rarr;</span>
           </a>
@@ -123,7 +121,7 @@ export function Footer() {
           </p>
 
           <div className="rule mt-6 flex flex-wrap items-center justify-between gap-x-6 gap-y-3 pt-6 text-[13px] opacity-75">
-            <span>&copy; {year} {site.name}. One person, US clients, same-day replies.</span>
+            <span>&copy; {year} {site.name}. One person, US clients, same-day replies on US Eastern hours.</span>
             <div className="flex flex-wrap items-center gap-5">
               <Link href="/privacy">Privacy</Link>
               <Link href="/cookies">Cookies</Link>

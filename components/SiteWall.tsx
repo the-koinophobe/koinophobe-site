@@ -131,16 +131,24 @@ export function SiteWall() {
                 i === 0 ? "wall-drift" : "wall-drift wall-drift-rev"
               }`}
             >
-              {(ready ? [...row, ...row] : row).map((p, j) => (
+              {row.map((p, j) => (
                 <Tile key={`${p.name}-${j}`} p={p} video={video} />
               ))}
+              {/* the second copy only makes the loop seamless: hidden from screen readers and the tab order */}
+              {ready ? (
+                <div className="flex gap-5" aria-hidden="true" inert>
+                  {row.map((p, j) => (
+                    <Tile key={`clone-${p.name}-${j}`} p={p} video={video} />
+                  ))}
+                </div>
+              ) : null}
             </div>
           </div>
         ))}
       </div>
 
       <p className="mt-8 text-center text-[13.5px] text-muted">
-        {projects.length} sites &middot; {named} I can put a name to &middot; hover to wake them
+        {projects.length} sites &middot; {named} I can put a name to &middot; {video ? "hover to play them" : "tap one to open the site"}
       </p>
     </div>
   );
